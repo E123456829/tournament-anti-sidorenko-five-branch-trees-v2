@@ -20,7 +20,7 @@ input_order,file,kind,first_actual_label,first_printed_number,complete_page,sour
 19,five-proofs/q5-c096.tex,original-module,proof:Q5-C096,M.18,222,49,3f305846e42ca1c59f0e5c6bf97b483885c98eb6053aaca0aa64c05bcf3ff857
 20,five-proofs/q5-c079.tex,original-module,proof:Q5-C079,M.19,223,487,0e5319d4ac795c61a3cb2a64aecb23cffa7fdd578510a5579bfb26f190cf385e
 21,five-proofs/q5-c100.tex,original-module,proof:Q5-C100,M.20,229,409,a9cd651e02c98370235e83c4ec04b0f15d5f52ceb8fc218f44c8d4dbb1016985
-22,five-proofs/q5-c164.tex,original-module,proof:Q5-C164,M.21,235,335,09558fac1ac7640e3c7443ce774bd654bf16bcf61986d0ec7f99fb0e321fc644
+22,five-proofs/q5-c164.tex,original-module,proof:Q5-C164,M.21,235,335,82ef9ce6ca15c001ae547a3ec919528967051b2cc8a8b6f7b18e4804a7e642ea
 23,five-proofs/q5-c072-bare.tex,original-module,proof:Q5-C072-bare,M.22,240,167,e915a0e93f72191aca3b1e96c5d1afeb311ef2999696942fe0700f8b3bfc8e90
 24,five-proofs/q5-c029.tex,original-module,proof:Q5-C029,N.1,242,212,94480fbe089b73863506f63f9721ee2864d3daca50cf91465aa11bfb724d9f35
 25,five-proofs/q5-c032.tex,original-module,proof:Q5-C032,N.2,245,187,08fce38a038c87895c4dd2a45baed4ba0c5394b13fee9dda0c53706cf58d1d57
@@ -66,7 +66,7 @@ input_order,file,kind,first_actual_label,first_printed_number,complete_page,sour
 65,five-proofs/r2-c034.tex,original-module,proof:R2-C034,N.42,480,1490,71ed876a9e4969081f247708fab0ebe85b0249e6221fb97a9cfd72550e8a4f6c
 66,five-proofs/r2-c009-directory.tex,original-module,proof:R2-C009,N.43,501,71,e8d63b662ab2eb0b99d06de7e3ec9837f5e0e4de4c275ce4c019f8ca7c66c990
 67,five-proofs/q5-c071.tex,original-module,proof:Q5-C071,O.1,502,371,3914cf28fc1ae3bf47b055942c8f8edffe9b6880c325aafd971d5e3e8a9e1287
-68,five-proofs/q5-c075.tex,original-module,proof:Q5-C075,O.2,506,611,1aa7ccc8cbe6bc19edb37a6cbcabc36e1e4b7bf93a1836306842c93dc619456c
+68,five-proofs/q5-c075.tex,original-module,proof:Q5-C075,O.2,506,611,8a7dfd745afd4a6186b54938458ddf41b27f83ecd55e7842b76310ca08579770
 69,five-proofs/q5-c078.tex,original-module,proof:Q5-C078,O.3,515,607,1af9c8e37eff60c0a709334fc17f2eff6d56d8d0c3ff13aa880327f8fe4ff90b
 70,five-proofs/q5-c080.tex,original-module,proof:Q5-C080,O.4,522,701,2a1c58c1b407b84170b75362d0db9e5557164058fcb6c646a929af282f33c4d4
 71,five-proofs/q5-c106.tex,original-module,proof:Q5-C106,O.5,532,284,8dcd4b2af94d35fed30651ab2df443d8135de5597547aa4e29929fe8a24110b2
@@ -146,5 +146,5 @@ input_order,file,kind,first_actual_label,first_printed_number,complete_page,sour
 145,five-proofs/r2-c042.tex,original-module,proof:R2-C042,R.3,985,300,ed3a21d7feb3e6dc384aa478cf5d4606b5747222b44f6cf60a760aa04bb20b3b
 146,five-proofs/r2-c044.tex,original-module,proof:R2-C044,R.4,989,499,89b9e3e0de5983e249741f09b6c54fa17a90e0dee54d6a386f4f97796113923c
 147,five-proofs/r2-c045.tex,original-module,proof:R2-C045,R.5,996,581,2af81ed3a78f9682b1ebd93890c0bcea6a6f588c36d5fdc84e97c3b6d4c1f511
-148,five-proofs/r2-c047.tex,original-module,proof:R2-C047,R.6,1005,495,7fa6582dd68d9b71e4e70b135ad23ab5cf4012fa7565bc325103e4e700fbe720
+148,five-proofs/r2-c047.tex,original-module,proof:R2-C047,R.6,1005,495,8bc734c65e0b66ce4ad6743d5dfc05d6da12becd5fe1d6c52829a5b73942211a
 149,five-proofs/r2-c048.tex,original-module,proof:R2-C048,R.7,1013,1042,6aecb4b10ee29316066fbe1913588bc4393a55d35e87edaf5ec16d38575c6601

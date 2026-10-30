@@ -1,6 +1,6 @@
 {
   "title": "Tournament anti-Sidorenko orientations of trees with at most five branch vertices",
-  "version": "2026.10.30-r2",
+  "version": "2026.10.30-r3",
   "publication_status": "Unpublished manuscript and research-compendium release",
   "authors": [
     {
@@ -25,11 +25,11 @@
   "description": "Editable English manuscript, necessary technical appendices, vector figures, rational certificate data, exact-arithmetic verifier and portable PDF build tools.",
   "abstract": "A finite tree with at most five vertices of degree at least three admits an orientation whose homomorphism density into any tournament is at most the random-tournament benchmark. Degrees, arm multiplicities and positive subdivision lengths are unrestricted, and a single orientation, chosen from the tree alone, satisfies the stronger kernel inequality for every finite probability space and every real skew kernel of absolute value at most one. For four branch vertices we convert terminal fourth moments into weighted second moments across a connector; for five we allocate reference arms in the star and fork skeletons and join the two halves of the path skeleton through compatible fractional moments. Separate arguments cover a central singleton arm and a unit outer connector. The kernel inequality also yields an entropy bound that holds for arbitrarily correlated vertex labels.",
   "repository_url": "https://github.com/E123456829/tournament-anti-sidorenko-five-branch-trees-v2",
-  "version_url": "https://github.com/E123456829/tournament-anti-sidorenko-five-branch-trees-v2/releases/tag/v2026.10.30-r2",
+  "version_url": "https://github.com/E123456829/tournament-anti-sidorenko-five-branch-trees-v2/releases/tag/v2026.10.30-r3",
   "doi": null,
   "license": null,
-  "deposit_status": "GitHub research-compendium release, version v2026.10.30-r2",
-  "previous_version_url": "https://github.com/E123456829/tournament-anti-sidorenko-five-branch-trees/releases/tag/v2026.10.30-r1",
+  "deposit_status": "GitHub research-compendium release, version v2026.10.30-r3",
+  "previous_version_url": "https://github.com/E123456829/tournament-anti-sidorenko-five-branch-trees-v2/releases/tag/v2026.10.30-r2",
   "original_archive_url": "https://github.com/E123456829/tournament-anti-sidorenko-five-branch-trees/releases/tag/v2026.10.30",
   "ai_assistance": "AI assistance was used during symbolic exploration and manuscript preparation: OpenAI Codex assisted with merging, translation and typesetting; DeepSeek assisted with language editing and with language polishing and typesetting of the final manuscript. The authors are responsible for the content of this manuscript."
 }

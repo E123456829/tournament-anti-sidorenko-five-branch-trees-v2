@@ -219,7 +219,7 @@
       "first_printed_number": "M.21",
       "complete_page": 235,
       "source_lines": 335,
-      "source_lf_sha256": "09558fac1ac7640e3c7443ce774bd654bf16bcf61986d0ec7f99fb0e321fc644"
+      "source_lf_sha256": "82ef9ce6ca15c001ae547a3ec919528967051b2cc8a8b6f7b18e4804a7e642ea"
     },
     {
       "input_order": 23,
@@ -679,7 +679,7 @@
       "first_printed_number": "O.2",
       "complete_page": 506,
       "source_lines": 611,
-      "source_lf_sha256": "1aa7ccc8cbe6bc19edb37a6cbcabc36e1e4b7bf93a1836306842c93dc619456c"
+      "source_lf_sha256": "8a7dfd745afd4a6186b54938458ddf41b27f83ecd55e7842b76310ca08579770"
     },
     {
       "input_order": 69,
@@ -1479,7 +1479,7 @@
       "first_printed_number": "R.6",
       "complete_page": 1005,
       "source_lines": 495,
-      "source_lf_sha256": "7fa6582dd68d9b71e4e70b135ad23ab5cf4012fa7565bc325103e4e700fbe720"
+      "source_lf_sha256": "8bc734c65e0b66ce4ad6743d5dfc05d6da12becd5fe1d6c52829a5b73942211a"
     },
     {
       "input_order": 149,
