@@ -1,0 +1,10 @@
+\begin{tikzpicture}[scale=.85,every node/.style={font=\small},v/.style={circle,fill,inner sep=1.6pt}]
+\foreach \i in {1,2,3,4,5}{\node[v] (p\i) at ({.8*(\i-1)},0) {};}
+\draw (p1)--(p2)--(p3)--(p4)--(p5);\node at (1.6,-.8) {$P_5$};
+\node[v] (s) at (6.4,0) {};
+\foreach \i/\a in {1/0,2/90,3/180,4/270}{\node[v] (s\i) at ({6.4+cos(\a)},{sin(\a)}) {};\draw(s)--(s\i);}
+\node at (6.4,-1.6) {$K_{1,4}$};
+\node[v] (c) at (11,0) {};\node[v] (a) at (10,1) {};\node[v] (b) at (10,-1) {};
+\node[v] (r) at (12,0) {};\node[v] (t) at (13,0) {};
+\draw(a)--(c)--(b);\draw(c)--(r)--(t);\node at (11.5,-1.6) {$T_5$};
+\end{tikzpicture}

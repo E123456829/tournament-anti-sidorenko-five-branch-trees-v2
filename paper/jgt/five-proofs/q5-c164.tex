@@ -1,0 +1,335 @@
+\subsection{Finite path caps and the sharper fourth-moment outlet}\label{proof:Q5-C164}
+\paragraph{Q164.0 Original goal and exact new scope}
+
+For every nonempty finite original tree U with at most five original
+vertices of degree at least three, we seek an orientation fixed
+from U alone before the host, for which every original finite probability
+measure and every real skew pointwise kernel \(|K|\le 1\) satisfy \(Z_D\le 1.\)
+All original arms, equal multiplicities, subdivisions, four independent
+positive core lengths, original e(U), arbitrary joint-label KL laws and
+noninjective maps must remain. The operator outlet gives the conditional tree application below.
+
+% Replace a pure model-definition block only; keep local root/terminal data.
+Use the original finite-space model and arm messages of
+Section~\ref{sec:odd-common-calculus}.
+When the original \(K\)-notation is used, \(K=-B\) and
+\(g=K\one=-u\); in either notation
+\(\delta_j=\|B^j\one\|_2^2=\|K^j\one\|_2^2\).
+All means, norms, adjoints and spectral integrals use the same
+original probability measure.
+Zero-mass atoms alone may be removed. On positive-mass atoms p, q are
+strictly positive, since K(x, \(x)=0\) and p(x), \(q(x)\ge \mu(x).\)
+
+
+The new actual path-row bounds are
+\fitdisplay{
+\boxed{E[\bar f_4^4/q]\le e^{7d},\qquad
+ E[\bar f_{M}^4/q]\le e^{6d}\quad(M\ge5).}
+}{Q164.0.1}
+Combined with the exact short-length outlet and the original
+operator estimate specified in \mbox{\hyperref[part:Q164.1]{part Q164.1}}, this gives for every real H
+and every original integer \(M\ge 1\)
+\fitdisplay{
+\boxed{I_q(T^M H)^3\le e^{c(M)d}(E|H|^4)^2,\qquad
+ I_q(Y)=E[q^{-1/3}|Y|^{8/3}],}
+}{Q164.0.2}
+where the structure-only cost table is
+\fitdisplay{
+c(1)=204/19,\quad c(2)=10,\quad c(3)=0,\quad
+ c(4)=7,\quad c(M)=6\ (M\ge5).
+}{Q164.0.3}
+In particular, the uniform coefficient \(204/19\) is valid for every \(M\ge 1.\)
+No reference arm is inserted into (Q164.0.2). It is an ordinary fourth-moment
+outlet, not a same-reference fourth-moment theorem.
+
+\paragraph{Q164.1 Exact inputs and finite path identities}\label{part:Q164.1}
+
+Use Section~\ref{sec:odd-common-calculus} with \(K=-B\) and \(g=-u\).
+The reversed form of \eqref{eq:Q188:conv} is
+\fitdisplay{
+ 1+G_n(K)g=f_n+\sum_{j=3}^n\beta_jf_{n-j},\qquad
+ \tau\le\beta_j\le d\quad(j\ge3).
+}{Q164.1.1}
+The same formula with \(B,u\) gives \(\bar f_n\).
+Besides \(0\le f_n,\bar f_n\le2\) and
+\(0\le\E f_n=\E\bar f_n\le1\), the path means give
+\fitdisplay{
+ \E f_2=\E\bar f_2=1-d,\qquad
+ \E f_n=\E\bar f_n\le1-2d\quad(n\ge3).
+}{Q164.1.2}
+Also \(\bar f_n\le2\E\bar f_{n-1}\), since the kernel of \(T\) is at most two.
+
+Section~\ref{proof:Q5-C084} supplies
+\fitdisplay{
+ \|T^M\|_{2\to2}\le1\quad(M\ge3),
+}{Q164.1.3}
+and its real-input outlet costs \(204/19,10,0\) at \(M=1,2,3\).
+The following argument proves the new costs \(7,6\) for \(M=4\)
+and \(M\ge5\), respectively.
+The finite spectral coordinates and moments are
+Lemma~\ref{lem:odd-common:spectral}, retaining \(|G_2|^2=1+x\).
+
+\paragraph{Q164.2 The exact path caps}\label{part:Q164.2}
+
+For \(M=4,\allowbreak \) (Q164.1.2) and positivity give
+\fitdisplay{
+\bar f_3=T \bar f_{2}\le 2E\bar f_2=2(1-d),\qquad
+ \bar f_4=T \bar f_{3}\le2(1-d)q.
+}{Q164.2.1}
+For every \(M\ge 5,\allowbreak  M-2\ge 3\) and hence
+\fitdisplay{
+\bar f_{M-1}\le2E\bar f_{M-2}\le2(1-2d),\qquad
+ \bar f_{M}\le2(1-2d)q.
+}{Q164.2.2}
+Thus define the actual upper cap
+\fitdisplay{
+c_4=2(1-d)\in[4/3,2],\qquad
+ c_{\ge5}=2(1-2d)\in[2/3,2].
+}{}
+The endpoint \(2/3\) is an allowed closed-domain upper-bound calculation;
+no positive-mass host is required to attain \(d=1/3.\)
+
+For all c in [\(2/3,\allowbreak \) 2] and all \(s\ge -1,\allowbreak \)
+\fitdisplay{
+\boxed{\min\{1+s,c\}^4\le1+4s+(c^2+2c+3)s^2.}
+}{Q164.2.3}
+Indeed, on [-1, c-1] expand (\(1+s)^4\) and use that
+\(s^2+4s+6\) is increasing for \(s\ge -1.\) At \(s=c-1\) its value is
+\(c^2+2c+3.\) On [c-1, infinity), the quadratic on the right
+has derivative at its left endpoint
+\fitdisplay{
+4+2(c^2+2c+3)(c-1)=2(c^3+c^2+c-1)>0.
+}{}
+The last polynomial increases for \(c\ge 0\) and at \(c=2/3\) is \(11/27.\)
+The quadratic derivative then only increases. Its value at c-1
+equals \(c^4,\allowbreak \) proving the second range. Both boundary points are included.
+
+Consequently the relevant quadratic coefficients are
+\fitdisplay{
+a_4(d)=11-12d+4d^2,\qquad
+ a_{\ge5}(d)=11-24d+16d^2.
+}{Q164.2.4}
+They are positive throughout the entire host domain.
+
+\paragraph{Q164.3 Same-kernel finite row moments}
+
+Fix \(M\ge 4.\) The finite convolution (Q164.1.1), with the actual sign reversal,
+gives
+\fitdisplay{
+0<\bar f_{M}\le U=q+R-\beta_M,\qquad
+ R=K G_{M-1}(-K)g.
+}{Q164.3.1}
+U is nonnegative because it dominates \(\bar f_{M}.\) Put \(\beta=\beta_M.\)
+The polynomial index M-1 is at least three, so all uses of \(|G|\le 1\)
+are within the valid finite range.
+
+The exact same-measure identities imply
+\fitdisplay{
+-d\le ER\le-\tau,\quad
+ \kappa \delta_2\le E(gR)\le \delta_2,\quad
+ ER^2\le \delta_2,\quad |R|\le\sqrt d.
+}{Q164.3.2}
+To check the signs directly, at \(z=-K\) and \(G(z)=a+zc,\allowbreak  R=-zG(z)g\) has real coefficient xc and imaginary coefficient -a.
+Thus \(\E R=-\int a\,d\nu\) and \(\E(gR)=\int xc\,d\nu\).
+The bounds \(1-x\le a,c\le1\) give the first two inequalities, using
+\(\delta_3\le \theta \delta_2\) for the lower bound on E(gR).
+Also \(ER^2=\int  x|G|^2 d\nu\le \delta_2.\) The original row bound applied
+to \(KG(-K)g\) gives \(|R|\le\|G(-K)g\|_2\le\sqrt d\).
+
+Because \(\tau\le \beta\le d\) and \(Eg=0,\allowbreak \)
+\fitdisplay{
+E[q^2(R-\beta)]
+ \le-2\tau-2\kappa \delta_2+d\sqrt d-\tau d.
+}{Q164.3.3}
+Expanding \(q^2=1-2g+g^2\), the first term satisfies
+\(\E R-\beta\le-2\tau\), the next is
+\(-2\E(gR)\le-2\kappa\delta_2\), and
+\(\E(g^2R)-\beta d\le d\sqrt d-\tau d\).
+
+The same actual cross terms give
+\fitdisplay{
+E[q(R-\beta)^2]
+ \le \delta_2+3d^2+d\sqrt{\delta_2}+2d\delta_2.
+}{Q164.3.4}
+The expansion is
+\fitdisplay{
+ER^2-2\beta ER+\beta^2-E(gR^2)+2\beta E(gR).
+}{}
+The five upper bounds are respectively \(\delta_2,\allowbreak  2d^2,\allowbreak  d^2,\allowbreak \)
+d \(\sqrt{\delta_2},\allowbreak \) and \(2d\delta_2.\) For the fourth use
+\fitdisplay{
+|E(gR^2)|\le\sqrt{d\,ER^4}
+ \le d\sqrt{ER^2}\le d\sqrt{\delta_2},
+}{}
+where \(R^2\le d\) is the same pointwise row bound. No independent copies
+of R or of the spectral measure have been introduced.
+Finally
+\fitdisplay{
+Eq^3=1+3d-Eg^3\le1+4d
+}{Q164.3.5}
+because \(|g|\le 1\) and \(|Eg^3|\le d.\)
+
+\paragraph{Q164.4 The common scalar row upper bound}
+
+Put \(s=(R-\beta)/q.\) By (Q164.3.1), \(s\ge -1.\) The two simultaneous actual
+pointwise bounds are \(\bar f_{M}\le q(1+s)\) and \(\bar f_{M}\le c\) q.
+Since these quantities are nonnegative, (Q164.2.3) gives
+\fitdisplay{
+\bar f_{M}^4/q\le q^3+4q^2(R-\beta)+a(d)q(R-\beta)^2.
+}{Q164.4.1}
+Apply the scalar majorant at the actual s.
+
+Combining (Q164.3.3)--(Q164.3.5), and only then using \(\delta_2\le \theta\) d, yields
+\fitdisplay{
+E[\bar f_{M}^4/q]\le1+d\,B_a(t),\qquad t=\sqrt d,
+}{}
+\fitdisplay{
+B_a(t)=-4+8\theta^2+a\theta
+       +(4+2a/3)t+(-19/8+61a/16)t^2.
+}{Q164.4.2}
+Here \(\sqrt{\theta}<2/3\) was used in d \(\sqrt{\delta_2},\allowbreak \) and all coefficients
+multiplying the replaced \(\delta_2\) and \(d\delta_2\) are positive.
+Equivalently, before this replacement the nonconstant upper bound is
+\fitdisplay{
+-4d+(8\theta+a)\delta_2+4d\sqrt d
+ +(3a-4)d^2+(4+2a)d\delta_2+a d\sqrt{\delta_2}.
+}{}
+This records all constant and cross contributions.
+
+For \(M\ge 5,\allowbreak \) insertion of \(a=11-24t^2+16t^4\) gives
+\fitdisplay{
+B_5(t)=\frac{229}{128}+\frac{34}{3}t+\frac{477}{16}t^2
+ -16t^3-85t^4+\frac{32}{3}t^5+61t^6.
+}{Q164.4.3}
+For \(M=4,\allowbreak  a=11-12t^2+4t^4\) instead gives
+\fitdisplay{
+B_4(t)=\frac{229}{128}+\frac{34}{3}t+\frac{555}{16}t^2
+ -8t^3-\frac{353}{8}t^4+\frac83t^5+\frac{61}{4}t^6.
+}{Q164.4.4}
+These are finite exact rational expansions, obtained by handwritten
+multiplication of (Q164.4.2). No polynomial was generated or checked by code.
+
+\paragraph{Q164.5 One continuous quartic certificate}
+
+The following explicit quartic is positive on the whole interval
+\(0\le t\le 1/\sqrt{3}:\)
+\fitdisplay{
+R_0(t)=\frac{539}{128}-\frac{34}{3}t
+             -\frac{189}{16}t^2+\frac{1414}{15}t^4>0.
+}{Q164.5.1}
+
+On [0, \(1/3\)], \(t^3\le t/9,\allowbreak \) so
+\fitdisplay{
+R_0'(t)\le-\frac{34}{3}+\frac{19733}{1080}t
+ \le-\frac{16987}{3240}<0.
+}{}
+The endpoint is
+\fitdisplay{
+R_0(1/3)=\frac{44237}{155520}>\frac14.
+}{}
+This proves the first whole interval.
+
+On [\(1/3,\allowbreak  1/\sqrt{3}\)],
+\fitdisplay{
+R_0''(t)=-\frac{189}{8}+\frac{5656}{5}t^2
+ \ge\frac{36743}{360}>100.
+}{}
+Take the fixed rational point \(c=3/8,\allowbreak \) which lies in this interval.
+Direct handwritten substitution gives
+\fitdisplay{
+R_0(c)=\frac{1679}{10240}>\frac4{25},\qquad
+ R_0'(c)=-\frac{37}{120},\quad |R_0'(c)|<\frac13.
+}{}
+Taylor's integral formula, or integrating \(R_0\)''\ensuremath{\ge}100 in either
+direction between c and t, gives
+\fitdisplay{
+R_0(t)\ge R_0(c)+R_0'(c)(t-c)+50(t-c)^2
+ \ge R_0(c)-R_0'(c)^2/200
+ >\frac4{25}-\frac1{1800}=\frac{287}{1800}>\frac18.
+}{}
+This proves (Q164.5.1) continuously, with no finite sampling of t.
+
+\paragraph{Q164.6 All \(M\ge 5:\) the coefficient six}
+
+For \(0\le t\le 1/\sqrt{3},\allowbreak \) use \(t\le 3/5\) and \(t^2\le 1/3.\) The exact difference is
+\fitdisplay{
+6+18t^2+36t^4-B_5(t)
+ =\frac{539}{128}-\frac{34}{3}t-\frac{189}{16}t^2
+   +16t^3+121t^4-\frac{32}{3}t^5-61t^6.
+}{}
+The last two adverse terms have the rigorous lower bounds
+\fitdisplay{
+-\frac{32}{3}t^5\ge-\frac{32}{5}t^4,\qquad
+ -61t^6\ge-\frac{61}{3}t^4.
+}{}
+Since \(121-32/5-61/3=1414/15,\allowbreak \) the whole difference is at least
+\(R_0(t)+16t^3>0.\) Therefore
+\fitdisplay{
+1+d B_5(\sqrt d)\le1+6d+18d^2+36d^3\le e^{6d}.
+}{}
+The last comparison is the positive Taylor lower bound for \(e^{6d}.\)
+Together with (Q164.4.2), it proves the \(M\ge 5\) part of (Q164.0.1).
+No d-dependent orientation has been selected.
+
+\paragraph{Q164.7 The exceptional \(M=4:\) the coefficient seven}
+
+For the same whole interval,
+\fitdisplay{
+7+\frac{49}{2}t^2+\frac{343}{6}t^4-B_4(t)
+ =\frac{667}{128}-\frac{34}{3}t-\frac{163}{16}t^2
+   +8t^3+\frac{2431}{24}t^4-\frac83t^5-\frac{61}{4}t^6.
+}{}
+The fifth and sixth terms are bounded below using \(t\le 3/5,\allowbreak  t^2\le 1/3.\) Their combined fourth-power coefficient is at least
+\fitdisplay{
+\frac{2431}{24}-\frac85-\frac{61}{12}
+ =\frac{11353}{120}
+ =\frac{1414}{15}+\frac{41}{120}.
+}{}
+Hence the difference is at least
+\fitdisplay{
+R_0(t)+1+\frac{13}{8}t^2+8t^3+\frac{41}{120}t^4>0.
+}{}
+Thus
+\fitdisplay{
+E[\bar f_4^4/q]\le1+7d+\frac{49}{2}d^2+\frac{343}{6}d^3
+ \le e^{7d}.
+}{}
+This explicitly uses the weaker but valid \(M=4\) cap from (Q164.2.1).
+
+
+\paragraph{Q164.8 Real inputs, every outer length, and uniform specialization}
+
+The positive-kernel outlet is elementary. If B0 is
+any positive original operator with \(h=B0\) 1, row Cauchy gives
+|B0 \(H|^2\le h B0(|H|^2).\) Hölder with exponents 3 and \(3/2\) then gives
+\fitdisplay{
+I_q(B0H)^3
+ \le E[h^4/q]\,\bigl(E[(B0(|H|^2))^2]\bigr)^2
+ \le E[h^4/q]\,\|B0\|_{2\to2}^4(E|H|^4)^2.
+}{Q164.8.1}
+The expectation in the middle factor is the original second moment.
+This argument permits arbitrary real H.
+
+For \(M\ge 4\) set \(B0=T^M,\allowbreak \) apply (Q164.1.3) and parts Q164.6--7.
+For \(M=1,\allowbreak \) 2, 3 use the exact C084 costs stated in \mbox{\hyperref[part:Q164.1]{part Q164.1}}.
+This proves the complete table (Q164.0.3) and (Q164.0.2).
+Since \(10<204/19\) and 7, 6, \(0<204/19,\allowbreak \) the uniform version is
+\fitdisplay{
+\boxed{I_q(T^M H)^3
+ \le e^{204d/19}(E|H|^4)^2\quad(M\ge1).}
+}{Q164.8.2}
+
+If a separately proved actual nonnegative half-tree has
+\(EH^4\le \exp(-\lambda\) d), the exact outlet is
+\fitdisplay{
+I_q(T^M H)^3\le\exp\{-[2\lambda-c(M)]d\}.
+}{Q164.8.3}
+For example the already specified value \(\lambda=45/8\) gives the uniform
+loss \(39/76,\allowbreak \) while \(\lambda=705/128\) gives \(339/1216.\)
+These are substitutions into a conditional statement; they are not
+new claims that an arbitrary actual half-tree has either input moment.
+
+All \(d=0\) cases are valid. Then \(g=0,\allowbreak  q=1\) and \(\bar f_{M}=1,\allowbreak \) though K can be nonzero.
+The real-input estimate also follows from (Q164.8.1) and the short
+operator facts. Actual finite tree messages equal one by original leaf
+integration. 

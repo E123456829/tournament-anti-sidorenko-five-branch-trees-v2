@@ -1,0 +1,21 @@
+cff-version: 1.2.0
+message: "Please cite this versioned research compendium using the metadata below."
+type: dataset
+title: "Tournament anti-Sidorenko orientations of trees with at most five branch vertices: research compendium"
+version: "2026.10.30-r2"
+date-released: "2026-10-30"
+authors:
+  - family-names: Qiao
+    given-names: Yanbin
+    orcid: "https://orcid.org/0009-0005-2476-208X"
+  - family-names: Yao
+    given-names: Liwei
+    orcid: "https://orcid.org/0009-0005-6990-9372"
+keywords:
+  - tournaments
+  - anti-Sidorenko inequality
+  - oriented trees
+  - skew kernels
+  - weighted moments
+url: "https://github.com/E123456829/tournament-anti-sidorenko-five-branch-trees-v2/releases/tag/v2026.10.30-r2"
+repository-code: "https://github.com/E123456829/tournament-anti-sidorenko-five-branch-trees-v2"

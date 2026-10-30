@@ -1,0 +1,368 @@
+\subsection{One retained vector for the two short-arm sums}
+\label{sec:unit-retained-square}
+Use the original finite kernel, with $B=-K$, $u=B\one$, and
+$\mathsf X=-B^2$, and write $g=K\one=-u$. The path coefficients $\beta_j$ are those in
+\eqref{eq:Q188:conv}; put $\tau=d-\delta_2$, $\theta=13/32$,
+and $\kappa=1-\theta$.
+
+\begin{lemma}[A retained pair of arm sums]
+\label{lem:unit-retained-pair}
+Let $n\ge5$. Take either $\sigma=2$, $0\le d\le1/3$, or
+$\sigma=9/4$, $0\le d\le1/5$, and set $m=1-\sigma d/2$.
+For $n=5$ put
+\[
+ a_1=d,\qquad a_2=(\sigma-2)d+\delta_2,\qquad a_3=0.
+\]
+For $n\ge6$ put
+\[
+ \lambda=\frac{\sigma d-\beta_n-\beta_{n-1}}
+                    {\beta_{n-2}+(1-d)\beta_{n-3}},\qquad
+ a_1=\beta_{n-1},\quad a_2=\lambda\beta_{n-2},\quad
+ a_3=\lambda\beta_{n-3}.
+\]
+At $d=0$ all $a_i$ are zero. These are genuine retained coefficients:
+$0\le a_i\le\beta_{n-i}$. Define
+\[
+ C_0=a_1+a_2+a_3,\quad D_0=a_2+a_3,\quad E_0=a_3,\qquad
+ U=\sum_{j=3}^{n}K^j\one-C_0g-D_0Kg-E_0K^2g.
+\]
+The same actual vector gives both comparisons
+\begin{equation}\label{eq:unit-retained:dual-sums}
+ h_2+f_n\le2m+U,\qquad f_2+h_n\le2m-U.
+\end{equation}
+Each right side is nonnegative. In particular
+$h_2f_n\le(m+U/2)^2$ and $f_2h_n\le(m-U/2)^2$.
+
+Write $U=[a(\mathsf X)-b(\mathsf X)B]u$. At $n=5$ its exact
+coordinates are
+\[
+ a=(\sigma-1)d+\delta_2+x-x^2,\qquad
+ b=(\sigma-2)d+\delta_2+x.
+\]
+For $n\ge6$, writing $G_{n-2}(i\sqrt x)=a_N+i\sqrt x\,b_N$,
+they are
+\begin{equation}\label{eq:unit-retained:coordinates}
+ a=C_0+x(a_N-E_0),\qquad b=D_0+xb_N,
+ \qquad a-(1-x)b\ge a_1+a_2x\ge\tau.
+\end{equation}
+All statements retain the global $d,\delta_2,E_0$ while $x$ varies.
+\end{lemma}
+\begin{proof}
+For $d>0$ the denominator defining $\lambda$ is at least
+$(2-d)\tau>0$. Its numerator is nonnegative. The full available
+constant loss is at least $(4-d)\tau$: it exceeds $2d$ on
+$[0,1/3]$, since $209/96>2$, and exceeds $9d/4$ on $[0,1/5]$,
+since $361/160>9/4$. Thus $0\le\lambda\le1$.
+For $n=5$, $a_2\le(21/32)d\le\beta_3$ even at $\sigma=9/4$;
+$a_3=0$ takes nothing from $\beta_2=0$.
+In both cases
+\[
+ \beta_n+a_1+a_2+(1-d)a_3=\sigma d,
+ \quad C_0=\sigma d-\beta_n+dE_0,
+ \quad D_0=\sigma d-\beta_n-\beta_{n-1}+dE_0.
+\]
+Retain $\beta_n\one,a_1f_1,a_2f_2,a_3f_3$ in the positive
+convolution for $f_n$. Since $h_2+\sum_{j=0}^nK^j\one
+=2+\sum_{j=3}^nK^j\one$, this proves the first sum.
+Applying $T$ to the convolution for $f_{n-1}$ gives exactly
+\[
+ f_2+h_n=2-\beta_n-\sum_{j=3}^nK^j\one
+             -\sum_{j=1}^{n-3}\beta_{n-j}h_j.
+\]
+Retaining $a_1h_1,a_2h_2,a_3h_3$ proves the second sum, with
+the opposite sign of the same $U$.
+The finite geometric identity gives the displayed coordinates.
+For $N\ge4$, alternating sums give
+$1-x\le a_N,b_N\le1-x+x^2$ and $a_N\ge(1-x)b_N$.
+The last inequality in \eqref{eq:unit-retained:coordinates} follows
+after inserting $C_0-D_0=a_1$ and $D_0-E_0=a_2$;
+the $n=5$ formula verifies the same assertion directly.
+\end{proof}
+
+\begin{lemma}[The two retained first-row packets]
+\label{lem:reference-retained-packet}
+Take the actual vector $U=[a(\mathsf X)-b(\mathsf X)B]u$ of
+Lemma~\ref{lem:unit-retained-pair}, with $n=c\ge5$. The following
+two rows hold for $0<d\le d_{\max}$:
+\[
+\begin{array}{c|c|c|c|c|c}
+ \sigma&d_{\max}&\ell&a\text{ upper}&b\text{ upper}&D\\\hline
+ 2&1/4&2&7/10&3/5&d/2\\
+ 9/4&1/5&15/7&16/25&9/16&2d/5.
+\end{array}
+\]
+In each row, with $m=1-\sigma d/2$, $k=m^{-1}$ and $R=-kU$, one has
+\begin{equation}\label{eq:reference-retained:coefficient}
+ \ell(a^2+xb^2)\le a+b,\qquad
+ T(qf_2h_c)\le m^2(\bar f_2+BR+D\one).
+\end{equation}
+The same coefficients satisfy $a,b\ge x(1-x)$ and
+$ka\ge k\tau+(1-x)kb$.
+Let $D_i=\E B^iR$ and $\gamma_j=\beta_j-D_{j-2}$. Their exact signs and
+the bounds needed at every later finite index are
+\begin{equation}\label{eq:reference-retained:signed-moments}
+\begin{aligned}
+ D_{4j+1}&=k\int x^{2j}a\,d\nu,&
+ D_{4j+2}&=k\int x^{2j+1}b\,d\nu,\\
+ D_{4j+3}&=-k\int x^{2j+1}a\,d\nu,&
+ D_{4j+4}&=-k\int x^{2j+2}b\,d\nu,\\
+ D_1&<d,&D_2&<d/3,\\
+ \gamma_3&\ge0,&\gamma_4&\ge2d/3,\\
+ \gamma_5&\ge\tau,&\gamma_j&\ge41d/96\quad(j\ge5).
+\end{aligned}
+\end{equation}
+Every positive $D_i$ with $i\ge3$ is less than $d/6$. In the $9/4$ row,
+also $D_1+D_2<5d/4$. The $2d$ row retains its own original vector;
+it is available through $d=1/4$ independently of the $9d/4$ row.
+In the $9d/4$ row, the displayed coordinate cap further gives
+$D_1<128d/155$, hence $\gamma_3>27d/155>d/8$.
+At $d=0$, $U=R=0$ and all non-strict bounds extend directly.
+\end{lemma}
+\begin{proof}
+Write $E=a_3$, $C=a_1+a_2+a_3$ and $v(x)=x-x^2$, $w(x)=x-x^2+x^3$.
+The actual retained coefficients give
+\[
+ (\sigma-1)d+dE\le C\le(\sigma-\kappa)d+dE,
+ \quad 0\le E\le d,\quad
+ a\le C+w(x)-xE,\quad b\ge C-d+v(x)\ge0.
+\]
+The last two comparisons also hold at $c=5$, using its explicit
+coordinates. For $c=5$, its explicit coordinates are increasing in $x$ and give
+\[
+ a\le\theta-\theta^2+(\sigma-1+\theta)d,\qquad
+ b\le\theta+(\sigma-2+\theta)d.
+\]
+At the respective $d_{\max}$ these bounds are
+$(607/1024,65/128)$ for $\sigma=2$, and
+$(2931/5120,43/80)$ for $\sigma=9/4$; they are strictly below
+the four coordinate caps in the table.
+For $c\ge6$, first increase $x$ to $\theta$, keeping the original
+$d,E$ fixed. This is legitimate since
+$w'(x)-E\ge2/3-E>0$. Because $d<\theta$,
+\[
+ a\le w(\theta)+(\sigma-\kappa)d,\qquad
+ b\le w(\theta)+(\sigma-2\kappa)d+d^2.
+\]
+At $d=d_{\max}$ the respective bounding pairs are
+\[
+\begin{aligned}
+ \sigma=2 &: \quad(21621/32768,18805/32768),\\
+ \sigma=9/4 &: \quad(104777/163840,459373/819200).
+\end{aligned}
+\]
+They imply the displayed coordinate bounds and $0\le ka,kb<1$.
+Also $b\ge x(1-x)$, while the lower bound for $a$ exceeds
+$x(1-x)+d(\sigma-1)+E(d-x)\ge x(1-x)$.
+The relation between $ka$ and $kb$ follows from
+\eqref{eq:unit-retained:coordinates}.
+
+Put $\Phi(a,b)=\ell(a^2+xb^2)-a-b$. The displayed bounds imply
+$2\ell xb<1$, so $\Phi$ decreases in $b$ and is convex in $a$.
+The endpoint $a=0$ is nonpositive. At the other endpoint put
+$A=C+w(x)-xE$, and decrease $b$ to $B_*=C-d+v(x)$. For fixed
+original $C,d,E$, the exact second derivative is
+\[
+ 2\ell\bigl[(1-E-2x+3x^2)^2
+ +(6x-2)(d-Ex+x^3)+x(1-2x)^2\bigr]+4-6x.
+\]
+For $x\le1/3$, the square is at least $25/144$, the $d$ term at least
+$-1/2$, and the $-Ex$ term is nonnegative. The remaining terms combine as
+$x(1-4x+2x^2+6x^3)\ge0$; its parenthesis decreases to $1/9$.
+Thus this derivative is at least $101/168>0$ for both rows.
+For $x\ge1/3$ the bracket is nonnegative. It suffices to check
+$x=0,\theta$.
+
+At zero, $\Phi=\ell C^2-2C+d$ decreases in $C$, since
+$C\le53/128$ and $(15/7)(53/128)<1$.
+Substituting $C\ge(\sigma-1)d$ proves the required sign.
+At $x=\theta$, convexity reduces $C$ to
+$\alpha d+dE$, where $\alpha=\sigma-1,\sigma-\kappa$, and then
+$E$ to $0,d$. The $E=0$ expressions are convex in $d$.
+For $E=d$ the coordinates are
+\[
+ A=w(\theta)+(\alpha-\theta)d+d^2,\qquad
+ B_*=v(\theta)+(\alpha-1)d+d^2.
+\]
+Their second $d$ derivative is
+$2\ell[(A')^2+2A+\theta((B_*')^2+2B_*)]-4>0$, because
+$\kappa^2+2w(\theta)+2\theta v(\theta)>1$ and $\alpha\ge1$.
+Only $d=0,d_{\max}$ remain. At zero use
+$w(\theta)<5/16$, $v(\theta)<1/4$ and
+$w(\theta)+v(\theta)>1/2$.
+For $d=d_{\max}$, in the order
+$(\alpha,E)=(\sigma-1,0),(\sigma-\kappa,0),
+(\sigma-1,d),(\sigma-\kappa,d)$, exact substitution gives
+\[
+ \begin{aligned}
+ -536870912\,\Phi\big|_{\sigma=2}
+   &\in\{69198055,19544295,112116455,65444583\},\\
+ -187904819200\,\Phi\big|_{\sigma=9/4}
+   &\in\{20259598945,2787865185,33811712609,17975757409\}.
+ \end{aligned}
+\]
+This proves the coefficient inequality on the full continuous domains.
+
+Let $V=\E U^2=\int(a^2+xb^2)\,d\nu$.
+Expanding the original positive square gives
+\[
+ \frac{T(qf_2h_c)}{m^2}
+ \le\bar f_2+BR+\delta\one,\qquad
+ \delta=-k\int(a+b)\,d\nu+k\sqrt{dV}+k^2V.
+\]
+Here the linear row error is bounded by $\E|uR|$, and the quadratic
+term by $\E R^2$, using the original kernel row bound and $q\le2$.
+For $\sigma=2$, use
+$\sqrt{dV}\le3d/8+(2/3)V$ and $k+2/3\le2$ to get
+$\delta\le3kd/8\le d/2$.
+For $\sigma=9/4$, use
+$\sqrt{dV}\le3d/10+(5/6)V$ and $k+5/6\le15/7$ to get
+$\delta\le3kd/10\le12d/31<2d/5$.
+
+Skew adjunction gives the four exact sign classes in
+\eqref{eq:reference-retained:signed-moments}. The coordinate caps in
+the table imply $D_1<d$, $D_2<d/3$ and, in the second row,
+$D_1+D_2<5d/4$. The later positive classes cost at most
+$k\theta^2(\sup a)d$ and $k\theta^3(\sup b)d$, both less than $d/6$.
+Combining them with $\beta_j\ge\tau\ge\kappa d$ proves all the
+$\gamma$ bounds. At $d=0$ the retained vectors vanish.
+\end{proof}
+
+\begin{lemma}[Positive continuation of a retained square]
+\label{lem:reference-retained:continuation}
+For either row above, let $F=qf_2h_c$ and use its same actual $R,D$.
+For every finite $L\ge1$,
+\begin{equation}\label{eq:reference-retained:continuation}
+\begin{aligned}
+ T^LF&\le m^2Y_L,\\
+ Y_L&=\bar f_{L+1}+B^LR+D\bar f_{L-1}
+             +\sum_{i=1}^{L-1}D_i\bar f_{L-1-i}\\
+ &=\one+G_{L+1}(B)u+B^LR+D\bar f_{L-1}
+             -\sum_{j=3}^{L+1}\gamma_j\bar f_{L+1-j}.
+\end{aligned}
+\end{equation}
+Every loss in the last sum is nonnegative.
+\end{lemma}
+\begin{proof}
+Apply $T^{L-1}$ to the original first row and use $T=J+B$.
+The identity
+$T^{L-1}(BR)=B^LR+\sum_{i=1}^{L-1}(\E B^iR)\bar f_{L-1-i}$
+follows by finite induction. Substituting the positive path convolution
+for $\bar f_{L+1}$ gives the second expression.
+\end{proof}
+
+\begin{lemma}[Strong norms for the $9d/4$ packet]
+\label{lem:reference-retained:strong-norm}
+For the actual $\sigma=9/4$ coefficients of
+Lemma~\ref{lem:unit-retained-pair}, for every finite $c\ge5$ and
+$0\le d\le1/5$, one has
+\begin{equation}\label{eq:reference-retained:strong-norm}
+ \sqrt{a^2+xb^2}\le u_0=3/8+9d/5\le147/200,
+ \qquad b\le z_0=\theta+13d/16\le91/160.
+\end{equation}
+\end{lemma}
+\begin{proof}
+For $c=5$ the coordinates increase in $x$. First set $x=\theta$
+with the original $d,\delta_2$ fixed, then use $\delta_2\le\theta d$.
+The resulting vector is bounded coordinatewise by
+\[
+ (\theta-\theta^2,\sqrt\theta\,\theta)
+   +d(53/32,\sqrt\theta\,21/32).
+\]
+Its constant and linear squared norms are
+$131313/1048576<9/64$ and $95621/32768<81/25$.
+The triangle inequality proves the norm bound;
+$b\le\theta+21d/32\le z_0$ gives the second assertion.
+
+For $c\ge6$ put $w(x)=x-x^2+x^3$. The actual global moment gives
+\[
+ a\le w(x)+5d/4+\delta_2+E(d-x),\qquad
+ b\le w(x)+d/4+2\delta_2+dE.
+\]
+Both upper functions increase in $x$: their derivatives are at least
+$2/3-E\ge7/15$ and $2/3$. Set $x=\theta$, then
+$\delta_2\le\theta d$. With $w_\theta=10101/32768<5/16$,
+the bounding coordinates are
+\[
+ a_*=w_\theta+(53/32)d+E(d-\theta),\qquad
+ b_*=w_\theta+(17/16)d+dE.
+\]
+Their squared norm is convex in $E\in[0,d]$.
+At $E=0$ the constant norm is below $3/8$ and the linear
+squared norm is $26229/8192<81/25$.
+At $E=d$ the linear squared norm is $16557/8192<100/49$ and
+the quadratic vector has norm $\sqrt{45/32}<6/5$. Thus
+\[
+ \sqrt{a_*^2+\theta b_*^2}
+ \le3/8+(10/7)d+(6/5)d^2
+ \le3/8+(10/7+6/25)d<3/8+9d/5.
+\]
+Finally $b\le5/16+(17/16)d+d^2$, whose excess above $z_0$ is
+$-3/32+d/4+d^2\le-3/800$. All frequency maximizations kept the
+original $d,\delta_2,E$ fixed.
+\end{proof}
+
+\begin{lemma}[The two short retained polynomials]
+\label{lem:reference-retained:short-norms}
+For the same $\sigma=9/4$ packet, put $t=ka$, $s=kb$ and
+\[
+ Q_2=1-sx+z(1-t),\qquad
+ Q_3=1-x+tx+z(1-sx).
+\]
+For every actual finite $c\ge5$ and every $x\in[0,\theta]$,
+\begin{equation}\label{eq:retained-reference:Q2-tight}
+ |Q_2|^2\le1+8/63<8/7,
+\end{equation}
+\begin{equation}\label{eq:retained-reference:Q3-tight}
+ |Q_3|^2\le8/7.
+\end{equation}
+\end{lemma}
+\begin{proof}
+Both normalized imaginary coordinates are nonnegative since
+$0\le t,s\le1$. Using $a,b\ge x(1-x)$ and $k\ge1$ gives
+\[
+ |Q_2|^2\le1+x-4x^2+5x^3-x^4-x^5+x^6
+ \le1+x-(63/32)x^2\le1+8/63.
+\]
+Indeed $4-5x+x^2+x^3-x^4$ decreases to
+$2279183/1048576>63/32$.
+
+For $Q_3$, first suppose $x\le d$.
+Then $a\le(53/32)d+dE+x(1-E)\le85d/32$, hence
+$ka\le85/124<3/4$. Thus
+$|Q_3|^2\le(1-x/4)^2+x\le441/400<8/7$.
+For $x\ge d$, increase $a$ to $C+w(x)-xE$ and decrease
+$b$ to $C-d+v(x)$, with $v=x-x^2$, $w=x-x^2+x^3$.
+This increases both nonnegative coordinates. Their squared norm
+increases in $C$ for $x>0$, because its derivative is
+$2kx[\operatorname{Re}Q_3-x\operatorname{Im}Q_3/\sqrt x]>0$;
+the parenthesis is at least $1-2x>0$.
+The case $x=0$ is direct.
+Take $C=53d/32+dE$. Increasing $E$ now decreases both coordinates,
+so take $E=0$. At fixed $x$ the coordinates are affine in
+$d/m\in[0,8/31]$, and the squared norm is convex. It suffices to
+use $d=0,1/5$, allowing the whole rectangle for this last bound.
+At zero it is at most $(1-x+x^2)^2+x\le1$.
+At $1/5$, the coordinates are
+\[
+ 1-(71/124)x+(40/31)x^2-(40/31)x^3+(40/31)x^4,
+ \quad 1-(21/124)x-(40/31)x^2+(40/31)x^3.
+\]
+In their squared norm $P(x)=1+\sum_{j=1}^8 a_jx^j$,
+\[
+\begin{aligned}
+ (a_1,\ldots,a_5)
+ &=(-9/62,39513/15376,-101639/15376,\\
+ &\hspace{2em}134400/15376,-55040/15376),\\
+ (a_6,a_7,a_8)&=(k^2,-k^2,k^2),\qquad k=40/31.
+\end{aligned}
+\]
+Thus $P''\ge5-40x+104x^2-72x^3>0$; the remaining term is
+$k^2x^4(30-42x+56x^2)>0$.
+For $y=x-1/4\le5/32$, the cubic lower bound is
+$3/8-(3/2)y+50y^2-72y^3
+\ge3/8-(3/2)y+(155/4)y^2>0$.
+At $x=0$ the norm is one; at $\theta$ the two coordinates are
+less than $93/100,81/100$, giving
+$P(\theta)<362061/320000<8/7$.
+Convexity proves the bound on the entire frequency interval.
+\end{proof}

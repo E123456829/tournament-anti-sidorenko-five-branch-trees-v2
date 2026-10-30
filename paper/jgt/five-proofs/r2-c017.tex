@@ -1,0 +1,200 @@
+\subsection{Every bare input path of length at least five}\label{proof:R2-C017}
+For all independent finite integers $a\ge3$, $n\ge5$, the actual
+outward receiving arm and inward input path satisfy
+\begin{equation}\tag{R17.1.1}\label{eq:R17:claim}
+\E[f_a\bar f_n^4]\le1-d/2,\qquad
+\E[E_of_a\{T^n(E_t)\}^4]\le1-d/2.
+\end{equation}
+Use Module R2-C007's coordinates, receiving upper bounds, and spectral
+measure. In particular $\kappa=19/32$, $\tau=d-\delta_2$,
+$\kappa d\le\tau\le d-d^2\le2/9$,
+$\E C_a\le1-57d/32$, and
+$C_a\le(1-d)p+(6/5)\sqrt d$.
+For every nonnegative $Z=c+Q(B)u$, $Q=Q_e+zQ_o$, $m=\E Z$,
+the exact original-measure identities are
+\begin{equation}\tag{R17.2.3}\label{eq:R17:covariance}
+\operatorname{Cov}(C_a,Z)
+=-\int\operatorname{Re}(G_aQ)\,d\nu
++\beta_{a-1}\int Q_e\,d\nu-\beta_{a+1}\int Q_o\,d\nu
+\end{equation}
+and
+\begin{equation}\tag{R17.2.4}\label{eq:R17:taylor}
+\E[C_aZ^4]=(\E C_a)m^4+4m^3\operatorname{Cov}(C_a,Z)
++\E[C_a(Z-m)^2\{(Z+m)^2+2m^2\}].
+\end{equation}
+They include $a=3$ by setting $\beta_{a-1}=0$, $\beta_{a+1}=d$.
+The final term of \eqref{eq:R17:covariance} is the actual mean-product
+correction. All covariance upper bounds used below are nonnegative.
+The elementary continuous cubic inequality \eqref{eq:R12:cubic},
+whose full proof was given there, implies
+\begin{equation}\tag{R17.3.2}\label{eq:R17:cubic}
+C_a+Z+m\le D,\quad m\le1,\quad D\ge3
+\ \Longrightarrow\
+C_a[(Z+m)^2+2m^2]\le4D^3/27+2D/3+1/2.
+\end{equation}
+
+For every finite $n\ge6$, the positive convolution
+$S'_n=1+G_n(B)u=\bar f_n+\sum_{r=3}^n\beta_r\bar f_{n-r}$
+permits retention of four original terms:
+\begin{equation}\tag{R17.4.1}\label{eq:R17:fourterms}
+\begin{gathered}
+0\le\bar f_n\le Z=S'_n-\tau(\bar f_0+\bar f_1+\bar f_2+\bar f_3),\\
+\bar f_0+\bar f_1+\bar f_2+\bar f_3=4-d+3u+2Bu+B^2u,\\
+Z=1-\tau(4-d)+Q_n(B)u,\qquad Q_n=G_n-\tau(3+2z+z^2).
+\end{gathered}
+\end{equation}
+All four convolution indices are at least three. The finite alternating
+coordinates of $G_n$ belong to $[1-x,1-x+x^2]$, including $n=6$.
+Thus $Q_e\ge1-x-\tau(3-x)$ and $Q_o\ge1-x-2\tau$, which are at
+least $1/108$ and $5/36$, using $x\le\theta<5/12$, $\tau\le2/9$.
+With $a_0=1-3\tau$, the coordinate upper bounds give
+\[
+|Q_n|^2-a_0^2\le x\{-1+4\tau-2\tau^2+(1-4\tau+\tau^2)x
++(1-2\tau)x^2-x^3+x^4\}.
+\]
+The bracket's $\tau$ derivative is
+$4(1-x)-\tau(4-2x)-2x^2\ge79/72>0$ on the full rectangle.
+At $\tau=2/9$, it is at most
+$-17/81+(13/81)x+(5/9)x^2-x^3+x^4\le-181/3888<0$,
+using $-x^3+x^4\le0$ and $x\le5/12$.
+Hence $\|Q_n(B)u\|_2\le(1-3\tau)\sqrt d$.
+The actual mean and variance satisfy
+\begin{equation}\tag{R17.4.3}\label{eq:R17:longmoments}
+\begin{gathered}
+m=1-4\tau-\beta_{n+1}+3\tau d\le1-4\kappa d=:m_0=1-19d/8,\\
+\operatorname{Var}Z\le(1-3\tau)^2d-\tau^2(1-2d)^2
+\le w(d):=d-(6\kappa+\kappa^2)d^2+13\kappa^2d^3-4\kappa^2d^4.
+\end{gathered}
+\end{equation}
+Here $\E Q_n(B)u=-\beta_{n+1}+2\tau d\le-\tau(1-2d)$;
+the variance bound decreases in $\tau$, with derivative
+$-6d(1-3\tau)-2\tau(1-2d)^2<0$. Thus $\tau=\kappa d$ is legal.
+$m\ge0$ by positivity and $m_0\ge5/24$.
+
+Put $\phi=1-3x+2x^2-x^3$, $\psi=3-6x+x^2$.
+Coordinate positivity gives
+\[
+\begin{gathered}
+\operatorname{Re}(G_aQ_n)\ge\phi-\tau\psi,\qquad
+\int Q_e\,d\nu\le d-\delta_2+\delta_3-\tau(3d-\delta_2),\\
+\int Q_o\,d\nu=\beta_{n+1}-2\tau d\ge\tau(1-2d)>0.
+\end{gathered}
+\]
+In \eqref{eq:R17:covariance}, use $\beta_{a-1}\le d$,
+$\beta_{a+1}\ge\tau$. The covariance is at most
+\[
+-\int\phi\,d\nu+\tau\int\psi\,d\nu
++d[d-\delta_2+\delta_3-\tau(3d-\delta_2)]-\tau^2(1-2d).
+\]
+For the global ratios $v=\delta_2/d$, $w_3=\delta_3/d$, use
+$v\in[d,\theta]$, $w_3\ge v^2$, $\delta_4\le\theta\delta_3$ and
+$\tau=d(1-v)$. After division by $d$ the bound is
+\[
+-1+3v-(2-\theta)w_3+d[3-8v+5v^2+(2-v)w_3]-d^2(1-v^2).
+\]
+Its $w_3$ coefficient is negative, so insert $w_3=v^2$.
+The resulting $v$ derivative is
+$3-2(2-\theta)v+d(-8+14v-3v^2)+2d^2v
+\ge1/3+(2/3+2\theta)v-v^2>0$.
+The comparison uses that the bracket multiplying $d$ is negative and
+$d\le1/3$. At $v=\theta$ the result is
+$[-1451+27467d-27360d^2]/32768$, increasing on $[0,1/3]$
+and at most $6997/49152<3/20$. Thus
+$\operatorname{Cov}(C_a,Z)\le(3/20)d$ for every $a\ge3,n\ge6$.
+
+Discarding only the extra nonnegative $\bar f_2,\bar f_3$ terms in
+\eqref{eq:R17:fourterms}, and using
+$S'_n=q+BG_{n-1}(B)u$, gives
+$Z\le(1-\tau)q-\tau+\sqrt d$.
+Combining with the receiving and mean bounds yields
+\[
+C_a+Z+m\le3-7\kappa d+(11/5)\sqrt d\le33/10.
+\]
+The full real quadratic maximum of the increment is
+$968/3325<3/10$. Equation \eqref{eq:R17:cubic} gives the curvature
+coefficient $1003/125<81/10$. Therefore
+\[
+\E[f_a\bar f_n^4]\le(1-57d/32)(1-19d/8)^4
++(3/5)d(1-19d/8)^3+(81/10)w(d).
+\]
+Its normalized excess is exactly
+\[
+-413/160+(30267/2048)d-(681929/10240)d^2
++(551969/5120)d^3-(7428297/131072)d^4.
+\]
+Using $d^3\le d^2/3$ gives quadratic coefficient
+$-941849/30720<-30$; the positive linear coefficient is below $15$.
+Discarding the negative quartic and completing the square gives the
+bound $-413/160+15d-30d^2\le-113/160<-1/2$.
+This covers every finite $n\ge6$ on the whole $0<d\le1/3$.
+
+For $n=5$ the actual finite expansion is
+\begin{equation}\tag{R17.7.1}\label{eq:R17:five}
+\bar f_5=1-3d+\delta_2+P_5(B)u,\quad
+P_5=G_5-d(2+z),\quad
+(P_{5,e},P_{5,o})=(1-x+x^2-2d,1-x-d).
+\end{equation}
+Both coordinates are positive. Their exact square gives
+\[
+|P_5|^2-(1-2d)^2
+=x[-1+2d+d^2+(1-2d)x-x^2+x^3]\le0.
+\]
+The bracket increases in $d$ and at $d=1/3$ is at most
+$-2/9+\theta/3<0$. Thus $\|P_5(B)u\|_2\le(1-2d)\sqrt d$.
+Its mean is
+$m=1-4d+2\delta_2+d^2\le1-137d/48\le1-11d/4=:m_5$.
+Since $\E P_5(B)u=-\tau+d^2$ and
+$\tau-d^2\ge d(\kappa-d)>0$,
+\[
+\operatorname{Var}\bar f_5\le(1-2d)^2d-(\tau-d^2)^2
+\le v_5(d):=d-(4+\kappa^2)d^2+(4+2\kappa)d^3-d^4.
+\]
+Also
+$\operatorname{Re}(G_aP_5)\ge(1-x)^3-d(2-3x)$,
+$\int P_{5,e}=\tau+\delta_3-2d^2\ge0$,
+$\int P_{5,o}=\tau-d^2>0$.
+Equation \eqref{eq:R17:covariance} gives
+\[
+\operatorname{Cov}(C_a,\bar f_5)
+\le-\int(1-x)^3\,d\nu+d(2d-3\delta_2)
++d(\tau+\delta_3-2d^2)-\tau(\tau-d^2).
+\]
+For the same global ratios its normalized upper bound is
+$-1+3v-(3-\theta)w_3+d(2-2v+w_3-v^2)-d^2(1+v)$.
+The $w_3$ coefficient is negative. At $w_3=v^2$ the $v$ derivative
+is $3-2(3-\theta)v-2d-d^2\ge529/4608>0$.
+Insert $v=\theta$ to get $-\kappa^3+2\kappa d-(1+\theta)d^2$,
+increasing up to $d=1/3$ and there equal to
+$2975/98304<1/32$. Hence the covariance is at most $d/32$.
+The alternative correct recurrence is
+$\bar f_5=(1-2d)q-\tau+B(G_4-d)u$.
+The squared coordinate difference for $\|G_4-d\|\le1-d$ is
+$x[-1+2d-x+x^2]\le0$. Thus
+\[
+\bar f_5\le(1-2d)q-\tau+(1-d)\sqrt d,\qquad
+C_a+\bar f_5+m\le3-(523/96)d+(11/5)\sqrt d\le13/4.
+\]
+The full quadratic maximum is $2904/13075<1/4$.
+Equation \eqref{eq:R17:cubic} gives coefficient $3349/432<8$, so
+\[
+\E[f_a\bar f_5^4]\le(1-57d/32)(1-11d/4)^4
++(1/8)d(1-11d/4)^3+8v_5(d).
+\]
+Its normalized excess is
+\[
+-149/32+(3727/128)d-(30637/256)d^2
++(49861/256)d^3-(834537/8192)d^4.
+\]
+Using $d^3\le d^2/3$ gives coefficient
+$-21025/384<-54$, and $3727/128<117/4$. Completing the square gives
+$-149/32+(117/4)d-54d^2\le-89/128<-1/2$.
+This completes \eqref{eq:R17:claim} for $d>0$.
+For $d=0$, positivity, decorations, and simultaneous full reversal,
+use the original leaf-integration argument in Module R2-C007.
+Combining this module with the three-step Module R2-C012
+and the four-step assertion \eqref{eq:R14:bare} gives
+\begin{equation}\tag{R17.10.1}\label{eq:R17:union}
+\E[E_of_a\{T^n(E_t)\}^4]\le1-3d/40\quad(a\ge3,n\ge3).
+\end{equation}
+The union combines those two estimates with the proof for
+$n\ge5$ above.

@@ -1,0 +1,266 @@
+\subsection{All positive connectors from an odd terminal starting with two and three}\label{proof:R2-C018}
+For the actual terminal
+$F=\bar f_2f_3h_c\prod_{i=2}^jh_{s_i}f_{t_i}$ with
+$4\le c<s_2<t_2<\cdots<s_j<t_j$ and every finite $j\ge1$,
+orient all $L$ connector edges toward the receiving root and the
+receiving arm outward. For every independent $a\ge3,L\ge1$,
+\begin{equation}\tag{R18.1.1}\label{eq:R18:claim}
+\E[f_a(T^LF)^4]\le1-d/5.
+\end{equation}
+The $L=1$ assertion is exactly Module R2-C013, and
+$L=2$ is \eqref{eq:R14:terminal}. We prove $L\ge3$ here, using the
+independent $n\ge5$ assertion of Module R2-C017 only in the high range.
+Equal-arm decorations may be restored at their original vertices.
+
+Use the original finite receiving definitions of Module R2-C007,
+$\sigma(C_a)\le(1+d)\sqrt d$, and the exact covariance and Taylor
+identities \eqref{eq:R17:covariance}--\eqref{eq:R17:taylor}.
+The continuous cubic inequality \eqref{eq:R12:cubic} gives curvature
+coefficient $1081/128<17/2$ when $C_a+Y+m\le27/8$, and
+$683/54<13$ when $C_a+Y+m\le4$, provided $m=\E Y\le1$.
+We also use \eqref{eq:R14:exponential}: if
+$\E[f_aX^4]\le e^{-Ad}+Bde^{-Cd}$, $C\ge A/2$, $A>B\ge0$,
+then the deficit is at least $(A-B)de^{-Ad/2}$.
+All rows below have $d\le1/8$, $Ad/2<2$, so this is greater than
+$(A-B)d/9$.
+
+We give the complete finite terminal input from Q5-C181, Sections
+4--6. On $0<d\le1/8$, write
+$m_c=c-3\ge1$, $\beta=\beta_{c-1}$,
+$G_{m_c}(-z)=U-zV$, and
+$R_0=\mathfrak r_0(B)u$,
+$\mathfrak r_0=-\beta+x^2V+zxU$.
+For $m_c=1$, $(U,V)=(1,0)$; otherwise $U,V\in[1-x,1]$.
+For $j=1$,
+\[
+\begin{gathered}
+\Gamma_0=d+\beta_c+\beta\ge35d/16,\quad
+F\le\bar f_2e^{R_0-\Gamma_0},\quad\|R_0\|_2<(9/20)\sqrt d,
+\quad D=3d/5,\\
+D_i=\E B^iR_0,\quad -\delta_3\le D_1\le d^2,
+\quad0\le D_2\le\delta_3,\quad D_3\le\delta_4,
+\quad D_i\le d/36\ (i\ge4).
+\end{gathered}
+\]
+For all finite $j\ge2$, the complete disjoint interval mask $S$ gives
+$R=R_0+S=\mathfrak r(B)u$ and
+\[
+\begin{gathered}
+F\le\bar f_2e^{R-\Gamma},\quad
+\Gamma\ge[431/80+(16/5)(j-2)]d,\quad
+\|S\|_2<(3/20)\sqrt d,\quad\|R\|_2<(3/5)\sqrt d,\\
+D=3d/2,\quad D_i=\E B^iR,\quad
+-19d/60\le D_1\le19d/120,\quad D_2\le d/4,\\
+D_3\le d/6,\quad D_i\le d/9\ (i\ge4).
+\end{gathered}
+\]
+In both cases finite positive propagation gives
+\begin{equation}\tag{R18.3.1}\label{eq:R18:old}
+e^\Gamma T^LF\le Y_L^{\rm old}
+=\bar f_{L+2}+B^LR+D\bar f_{L-1}
++\sum_{i=1}^{L-1}D_i\bar f_{L-1-i}\ge0,
+\end{equation}
+using $\Gamma_0,R_0$ when $j=1$. The exact $L=3$ form is
+\begin{equation}\tag{R18.3.2}\label{eq:R18:three}
+\begin{gathered}
+Y_3=Cq+BV-\tau+D_2,\quad C=1-2d+D+D_1,\quad
+V=[G_4-d+D+z^2\mathfrak r](B)u,\\
+m=1-2d-2\tau+D+D_1+D_2+D_3+d^2-Dd.
+\end{gathered}
+\end{equation}
+For all $L\ge4$, retain short finite convolution tails to obtain a
+nonnegative upper bound $Y\ge Y_L^{\rm old}$:
+\begin{equation}\tag{R18.3.3}\label{eq:R18:longsingle}
+\begin{gathered}
+j=1:\quad h=2d/5,\quad
+Y=(1-3h)q+BV-h(1-d),\\
+V=[G_{L+1}+z^{L-1}\mathfrak r_0-h(2+z)](B)u,
+\qquad\E BV\le-h+2hd;
+\end{gathered}
+\end{equation}
+\begin{equation}\tag{R18.3.4}\label{eq:R18:longmulti}
+\begin{gathered}
+j\ge2:\quad h=d/3,\quad
+Y=(1-2h)q+BV+d-h,\\
+V=[G_{L+1}+z^{L-1}\mathfrak r-h](B)u,
+\qquad\E BV\le-h+hd.
+\end{gathered}
+\end{equation}
+In the latter case $d-D=-d/2$ is not treated as nonnegative: the
+positive remainder $(D-d)\bar f_{L-1}$ was paid using the actual
+$\bar f_{L-1}\le2$, producing the displayed $d$.
+
+For $j=1,L=3$, $C=1-7d/5+D_1\le1-51d/40\le1-d$.
+The exact mean in \eqref{eq:R18:three} gives $m\le1-2d$:
+the loss is at least $49/40+19/16-\theta^2-\theta^3>2$,
+using $\theta^2<1/6$, $\theta^3<1/12$.
+The core $G_4-2d/5$ only lowers a positive real coordinate, and
+$\theta(9/20)=117/640<3/16$, so $\|V\|_2<(19/16)\sqrt d$.
+As $-\tau+D_2<0$,
+\[
+Y_3\le(1-d)q+(19/16)\sqrt d,\quad
+C_a+Y_3+m\le3-4d+(191/80)\sqrt d\le27/8.
+\]
+The completed-square increment is $36481/102400<3/8$.
+The exact nonconstant polynomial is
+$P=G_5-a_0-(2/5)dz+z^3\mathfrak r_0$,
+where $a_0=7d/5-D_1\in[(51/40)d,(7/5+\theta^2)d]$.
+Its core has positive coordinates bounded by those of $G_5$, hence
+norm at most one. The tail satisfies
+$\|B^3R_0\|_2<(3/25)\sqrt d<\sqrt d/8$, so
+$\operatorname{Var}Y_3\le(81/64)d$.
+For the covariance, $\operatorname{Re}(G_aG_5)\ge(1-x)^3\ge\kappa^3$;
+subtracting $(2/5)dz$ is favorable. The actual scalar correction is
+at most $d^2-\tau^2$, because
+$-a_0d^2+(2/5)\tau d^2\le0$.
+Thus the core covariance is at most
+$-\kappa^3d+(177/80)d^2$, where
+$7/5+\theta^2+1-\kappa^2=177/80$.
+The tail costs at most $(9/8)(3/25)d=27d/200$.
+Since $\kappa^3>1/5$, the normalized sum is below
+$177/640+27/200-1/5=677/3200<1/4$.
+Use covariance bound $d/4$ and curvature $17/2$ in Taylor expansion.
+After restoring $e^{-4\Gamma_0}$ the mean exponent is
+$35/4+57/32+8=593/32$, which may be lowered to $A=35/2$.
+The remaining constants are $B=(17/2)(81/64)+1=1505/128$,
+$C=35/4$, $A-B=735/128$, and $Ad/2\le35/32<2$.
+The deficit is therefore greater than $735d/1152>d/5$.
+
+For every finite $j\ge2,L=3$, the exact data give
+$C\le1-41d/120$ and
+$m\le1-(89/80)d-d^2/2\le1-d$, with
+$89/80=1/2+2\kappa-19/120-1/4-1/6$.
+Now $V=[G_4+d/2+z^2\mathfrak r]u$, so
+$\|V\|_2\le[1+1/16+(3/5)\theta]\sqrt d<(21/16)\sqrt d$.
+Since $-\tau+D_2\le-11d/32<0$,
+\[
+Y_3\le q+(21/16)\sqrt d,\quad
+C_a+Y_3+m\le3-d-dp+(201/80)\sqrt d<4.
+\]
+The exact polynomial is
+$P=G_5-a_0+(d/2)z+z^3\mathfrak r$,
+$a_0=d/2-D_1\in[(41/120)d,(49/60)d]$.
+$G_5-a_0$ lowers a positive real coordinate and has norm at most one;
+$(d/2)\sqrt\theta<1/24$ and $(3/5)\theta^{3/2}<4/25$.
+Hence $\|P(B)u\|_2\le(721/600)\sqrt d<(5/4)\sqrt d$ and
+$\operatorname{Var}Y_3\le(25/16)d$.
+Retaining actual scalar means, the core covariance is at most
+\[
+-\kappa^3d+[49/60+\theta/2+1-\kappa^2]d^2
+=-\kappa^3d+(25609/15360)d^2
+\le-(449/491520)d<0.
+\]
+The scalar correction is $\le d^2-\tau^2$ and the added positive
+imaginary coordinate costs $\le\theta d^2/2$.
+The complete tail costs at most $(9/8)(4/25)d=9d/50$; use covariance
+bound $d/5$ and curvature $13$.
+The exponential payment has
+\[
+A=431/20+57/32+4=4373/160,\quad
+B=13(25/16)+4/5=1689/80,\quad C=431/20.
+\]
+$C\ge A/2$, $A-B=199/32$, $Ad/2\le4373/2560<2$, giving deficit
+greater than $199d/288>d/5$.
+
+For unbounded finite $L$ we need two finite polynomial bounds:
+\begin{equation}\tag{R18.6.1}\label{eq:R18:shiftfour}
+\|G_N-h(3+2z+z^2)\|\le1-3h\quad(N\ge6,0\le h\le2/9),
+\end{equation}
+\begin{equation}\tag{R18.6.2}\label{eq:R18:shifttwo}
+\|G_N-h(2+z)\|\le1-2h\quad(N\ge5,0\le h\le2/9).
+\end{equation}
+All finite $G_N$ coordinates lie between $1-x$ and $1-x+x^2$ in
+these ranges, and shifted coordinates remain positive.
+For \eqref{eq:R18:shiftfour}, after subtracting $(1-3h)^2$ and
+dividing the square bound by $x$, one obtains
+$-1+4h-2h^2+(1-4h+h^2)x+(1-2h)x^2-x^3+x^4$.
+Its $h$ derivative is at least $79/72$; at $h=2/9$, $x\le5/12$,
+it is at most $-181/3888<0$, as in Module R2-C017.
+For \eqref{eq:R18:shifttwo}, the corresponding expression is
+$-1+2h+h^2+(1-2h)(x+x^2)-x^3+x^4$.
+Its derivative $2+2h-2(x+x^2)>0$; at $h=2/9$ use
+$x+x^2\le85/144$ to get
+$-41/81+(5/9)(85/144)=-231/1296<0$.
+$x=0$ is included by continuity.
+
+For $j=1,L\ge4$, use \eqref{eq:R18:longsingle}, $h=2d/5$.
+Its mean is $m\le1-5h+3hd\le1-(37/20)d$.
+The nonconstant polynomial is
+$P=G_{L+2}-h(3+2z+z^2)+z^L\mathfrak r_0$.
+By \eqref{eq:R18:shiftfour} its core norm is at most $1-3h$;
+the tail norm is at most $(9/20)\theta^2\sqrt d<(3/40)\sqrt d$.
+Thus $\operatorname{Var}Y\le(1849/1600)d$.
+The $V$ bound in \eqref{eq:R18:longsingle} is
+\[
+\|V\|_2/\sqrt d\le1+(9/20)\theta^{3/2}+h\sqrt{4+\theta}
+<1+3/25+21/200=49/40<5/4.
+\]
+Together with the receiving bound this gives
+$C_a+Y+m\le3-(21/5)d+(49/20)\sqrt d\le27/8$,
+whose completed-square increment is $2401/6720<3/8$.
+For the covariance core,
+$\operatorname{Re}(G_aG_{L+2})\ge\phi$,
+$\operatorname{Re}[G_a(3+2z+z^2)]\le3$, and the actual scalar
+correction is at most $d^2-\tau^2+2hd^2$;
+indeed $\int Q_e\le d$ and
+$\int Q_o=\beta_{L+3}-2hd\ge\tau-2hd>0$.
+The resulting core covariance is at most
+\[
+-\phi(\theta)d+(11/5-\kappa^2)d^2+(4/5)d^3<d/5,
+\]
+with normalized upper bound $32629/163840<1/5$ on the full low range.
+The tail costs at most $27d/320$, so use total covariance $3d/10$.
+Taylor expansion gives the exponential payment with
+\[
+\begin{gathered}
+A=35/2\le35/4+57/32+37/5=2869/160,\\
+B=(17/2)(1849/1600)+6/5=35273/3200,\quad C=35/4.
+\end{gathered}
+\]
+Here $A-B=20727/3200$ and $Ad/2\le35/32<2$, giving a deficit
+greater than $20727d/28800>d/5$ for every finite $L\ge4$.
+
+For all finite $j\ge2,L\ge4$, use \eqref{eq:R18:longmulti}, $h=d/3$.
+Its actual mean is $m\le1+d-4h+hd\le1-(7/24)d$.
+The nonconstant polynomial is
+$P=G_{L+2}-h(2+z)+z^L\mathfrak r$.
+Its core norm is at most $1-2h$ by \eqref{eq:R18:shifttwo}; the
+complete tail norm is at most $(3/5)\theta^2\sqrt d<\sqrt d/10$.
+Thus $\operatorname{Var}Y\le(121/100)d$.
+$G_{L+1}-h$ only lowers a positive real coordinate, and
+$(3/5)\theta^{3/2}<4/25<1/5$, so $\|V\|_2\le(6/5)\sqrt d$.
+Consequently $C_a+Y+m\le3-(23/24)d+(12/5)\sqrt d<4$.
+The core covariance uses
+$\operatorname{Re}(G_aG_{L+2})\ge\phi$ and
+$\operatorname{Re}[G_a(2+z)]\le2$.
+Its actual scalar correction is at most $d^2-\tau^2$, since
+$-2hd^2+h\tau d\le0$.
+Including the tail cost $9d/80$, the normalized covariance is at most
+\[
+-1451/32768+(2/3+1-\kappa^2)/8+9/80
+=114271/491520<1/4.
+\]
+With curvature $13$, the payment constants are
+\[
+A=431/20+57/32+7/6=11759/480,\quad
+B=13(121/100)+1=1673/100,\quad C=431/20.
+\]
+$C\ge A/2$, $A-B=18643/2400$, and $Ad/2\le11759/7680<2$,
+so the deficit is greater than $18643d/21600>d/5$.
+Every subsequent pair is included in the one finite mask, without a
+bound on $j,L$, gaps, or the largest arm.
+
+For $1/8\le d\le1/3$, Q5-C181, Section 6, gives in the same direction
+$F\le e^{-(2j-1)d}\bar f_2$.
+For $L\ge3$, the $n=L+2\ge5$ part of Module R2-C017 yields
+\[
+\E[f_a(T^LF)^4]\le e^{-4(2j-1)d}\E[f_a\bar f_{L+2}^4]
+\le e^{-4d}(1-d/2)\le e^{-4d}
+\le1-\frac{4d}{1+4d}\le1-12d/7\le1-d/5.
+\]
+This joins the low range at $d=1/8$. The disjoint integer cases
+$L=1$, $L=2$, and $L\ge3$ give all positive-connector ranges and prove
+\eqref{eq:R18:claim}. Decorations follow from positivity of $T^L$;
+$d=0$ gives equality by original leaf integration; full reversal
+changes every original edge, including the reference arm and all
+decorations, together.

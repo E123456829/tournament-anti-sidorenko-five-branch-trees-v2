@@ -1,0 +1,190 @@
+\subsection{The retained actual square for every unit terminal $(2,b)$ with $b\ge6$}\label{proof:Q5-C073}
+We use the square calculation from Q5-C073, Sections 1.1 and
+3.1--3.5, for the direction $h_2f_b$.
+For $0<d\le1/5$ put $m=1-9d/8$, $N=b-2\ge4$, and
+\begin{equation}\tag{L73.3.retained}\label{eq:L73:retained}
+\begin{gathered}
+\lambda=\frac{9d/4-\beta_b-\beta_{b-1}}
+{\beta_{b-2}+(1-d)\beta_{b-3}},\qquad
+C_1=\beta_{b-1},\ C_2=\lambda\beta_{b-2},\ C_3=\lambda\beta_{b-3},\\
+C=C_1+C_2+C_3,\quad D=C_2+C_3,\quad E=C_3,\qquad
+R=\sum_{j=3}^bK^j\one-Cg-Dr-Es.
+\end{gathered}
+\end{equation}
+Here $r=Kg$, $s=K^2g$. The denominator is at least
+$(2-d)\tau>0$, the numerator is nonnegative, and the four available
+constant portions sum to at least
+$(4-d)\tau\ge361d/160>9d/4$. Thus $0\le\lambda\le1$ and these
+are actual retained portions of the finite positive convolution.
+It gives $0\le h_2+f_b\le2m+R$, so
+$F_b=h_2f_b\le(m+R/2)^2$ without any change of actual orientation.
+
+On the original $g$ spectral measure put
+$G_N(i\sqrt\xi)=a+i\sqrt\xi\,b_0$.
+The finite alternating sums give
+$1-\xi\le a,b_0\le1-\xi+\xi^2$ and
+$a\ge(1-\xi)b_0$ for every finite $N\ge4$.
+The multiplier of $R$ at $g$ is $-A-i\sqrt\xi B$, with
+$A=C+\xi(a-E)$, $B=D+\xi b_0$, both nonnegative.
+For $V=\E R^2$, $D_0=\E R$, $a_1=\E KR$,
+$\rho_0=-\E(rR)$, the exact spectral data are
+\begin{equation}\tag{L73.3.1}\label{eq:L73:spectral}
+\begin{gathered}
+V=\int(A^2+\xi B^2)\,d\nu,\quad D_0=\int B\,d\nu,
+\quad a_1=\int A\,d\nu,\quad\rho_0=\int\xi B\,d\nu,\\
+(1-\xi)B-A\le-C_1-C_2\xi,\quad
+a_1\ge\kappa D_0+\tau d,\quad D_0^2-2D_0a_1\le0.
+\end{gathered}
+\end{equation}
+If $N$ is even, $a=b_0$; for $N=2j+1\ge5$,
+$a-b_0=(-\xi)^j$. Thus all finite parities satisfy
+\begin{align*}
+I:=\int(1-\xi)(B-A)\,d\nu
+&\le-\tau^2+d(\delta_2-\delta_3)
++\int\xi^4(1-\xi)\,d\nu\\
+&\le-(57/512)d^2+d/60.
+\end{align*}
+The global relation $d\delta_3\ge\delta_2^2$ bounds the first two
+terms by $-(d-\delta_2)(d-2\delta_2)$;
+$\xi^4(1-\xi)$ increases to
+$\theta^4\kappa=542659/33554432<1/60$.
+
+Put $v=(3/8+9d/5)^2$, $z_0=5/16+17d/16+d^2$.
+The full frequency bounds are
+\begin{equation}\tag{L73.3.3}\label{eq:L73:vector}
+A^2+\xi B^2\le v,\quad B\le z_0,\quad V\le dv,
+\quad D_0\le dz_0,\quad\rho_0\le\theta dz_0.
+\end{equation}
+To prove them write $u_0=\theta-\theta^2+\theta^3<5/16$ and use
+$C=9d/4-\beta_b+dE$,
+$D=9d/4-\beta_b-\beta_{b-1}+dE$.
+The increasing frequency upper bounds for $A,B$ are
+$u_0+(5/4+\theta)d+E(d-\theta)$ and
+$u_0+(1/4+2\theta)d+dE$.
+Their frequency derivatives before endpoint substitution are at least
+$2/3-E>0$ and $2/3$, so $\xi=\theta$ is legal.
+Their squared sum is convex in $E\in[0,d]$.
+For $E=0$ the squared linear-$d$ vector norm is
+$26229/8192<(9/5)^2$; for $E=d$ it is
+$16557/8192<(10/7)^2$, its quadratic-$d$ vector norm is at most
+$6/5$, and $10/7+(6/5)(1/5)<9/5$.
+The constant vector has norm $u_0\sqrt{1+\theta}<3/8$.
+This proves the square bound; the scalar $B$ bound is exactly $z_0$.
+
+Use the actual square notation \eqref{eq:L69:square}.
+The exact second moment is
+\[
+\E w_0^2=m^4d+2m^3\rho_0
++m^2\{\E(KR)^2+D_0^2-2D_0a_1\}\le m^2dH,
+\]
+where
+\begin{equation}\tag{L73.3.4}\label{eq:L73:H}
+H=m^2+2m\theta z_0+\theta v
+=2685/2048-(11509/10240)d+(124067/51200)d^2-(117/128)d^3.
+\end{equation}
+The exact reference identity
+$\E[f_2w_0]=-m^2d+mI-mdD_0$ gives
+\begin{equation}\tag{L73.3.5}\label{eq:L73:first}
+\E[f_2(w_0+e)]\le-m^2d+(m/60)d+V/2.
+\end{equation}
+Only the nonpositive terms $-(57m/512)d^2-mdD_0$ were dropped.
+The cross term with the actual $e=T(R^2)/4$ is
+\begin{equation}\tag{L73.1.6}\label{eq:L73:cross}
+2\E(w_0e)=\frac{mV}{2}(D_0-a_1)
+-\frac{m^2}{2}\E(rR^2)+\frac{mD_0}{2}\E(gR^2)
+-\frac m2\E[(K^2R)R^2].
+\end{equation}
+The second-row inequality is
+$|K^2v(x)|^2\le\|v\|_2^2/3$.
+For any legal skew kernel $L$, the three-variable inequality
+$1+ab+bc+ca\ge0$, with
+$a=L(x,y),b=L(y,z),c=L(z,x)$, follows by expanding the two products
+of three nonnegative factors and averaging.
+Independent integration gives $\|L\one\|_2^2\le1/3$.
+For a sign vector $v$, $v(x)K(x,y)v(y)$ is legal, hence
+$\|Kv\|_2^2\le1/3$; finite convex mixtures of sign vectors give
+the same for $|v|\le1$.
+For the original row $k_x(y)=K(x,y)$, skew-adjointness gives
+$K^2v(x)=-\langle Kk_x,v\rangle$, proving the stated inequality.
+This gives the row bound for the kernel.
+Use it in \eqref{eq:L73:cross}, along with
+$D_0-a_1\le\theta D_0-\tau d$ and $|g|\le1$, to get
+\[
+2\E(w_0e)\le(49/80)md^{3/2}v+(2/5)md^2v.
+\]
+The coefficients follow from
+$m/2+\sqrt v/(2\sqrt3)\le49/80-9d/400\le49/80$,
+using $1/\sqrt3<3/5$, and
+$(1+\theta)z_0/2\le1017/2560<2/5$.
+Thus
+\begin{equation}\tag{L73.3.6}\label{eq:L73:variance}
+\E(w_0+e)^2\le m^2dH+(49/80)md^{3/2}v
++(2/5)md^2v+d^2v^2/4.
+\end{equation}
+
+For the original-$f_2$ curvature, the row upper bound gives
+$Y\le m^2q+B_0$, $B_0/m=D_0+\sqrt V+V/(2m)$.
+With $x=\sqrt d<9/20$, $z_0\le113/200$, $V/(2m)\le7d/20$,
+this is at most $3x/8+(69/40)x^2$.
+Put $m_0=1-d$, $C_0=3x/8+(109/64)d$.
+Since $69/40-109/64=7/320<1/8$ and $q+1\ge1$,
+$m(q+1)+B_0/m\le m_0(q+1)+C_0$, $m\le m_0$.
+The complete scalar rectangle certificate proved in
+\eqref{eq:L69:fivecurvature}, using the displayed derivative and
+tangent-polynomial coefficients there, is exactly
+\[
+(2+x-q)\{[m_0(q+1)+C_0]^2+2m_0^2\}\le35/4
+\quad(0\le x\le1/2,0\le q\le2).
+\]
+Consequently $f_2(Y^2+2m^2Y+3m^4)\le(35/4)m^2$.
+The exact fourth expansion bounds the reference target by
+\begin{align*}
+U={}&m^8(1-5d)+m^7d/15+2m^6dv+(35/4)m^4dH\\
+&+(343/64)m^3d^{3/2}v+(7/2)m^3d^2v+(35/16)m^2d^2v^2.
+\end{align*}
+The positive Taylor series gives
+\[
+\frac{m^{-4}-m^4(1-5d)}d\ge14-(279/16)d
++(4617/64)d^2+(53217/2048)d^3+(111537/1024)d^4.
+\]
+Discard the favorable nonconstant part of $-m^3/15$ and combine
+$-2m^2v-35H/4$; the resulting constant through quartic coefficients
+are $267943/122880,\allowbreak -396097/40960,\allowbreak 10276211/204800,\allowbreak 
+2311461/51200,\allowbreak 2578473/25600$.
+With $m^{-1}\le1+3d/2$, $m^{-2}\le5/3$, the square-root cost has
+$x,x^3,x^5,x^7$ coefficients at most
+$3087/4096,\allowbreak 342657/40960,\allowbreak 361179/12800,\allowbreak 83349/3200$.
+The $-(7/2)(d/m)v$ cost has $d$ through $d^4$ coefficients
+$63/128,6993/1280,7371/400,1701/100$.
+The remaining $-(35/16)(d/m^2)v^2$ cost has $d$ through $d^5$
+coefficients $4725/65536,\allowbreak 2835/2048,\allowbreak 5103/512,\allowbreak 5103/160,\allowbreak 15309/400$.
+Using $d^5\le d^4/5$, the full normalized deficit is at least
+\[
+\begin{gathered}
+109/50-(19/25)x-(41/4)x^2-(42/5)x^3+(433/10)x^4
+\\-(113/4)x^5+(67/4)x^6-(261/10)x^7+44x^8.
+\end{gathered}
+\]
+Absorb the fifth and seventh powers using $x\le9/20$ to get
+$Q(x)=109/50-(19/25)x-(41/4)x^2-(42/5)x^3+(61/2)x^4$.
+Its derivative is at most
+$-19/25-(41/2)x+(297/10)x^2$; this convex quadratic is negative
+at both endpoints of $[0,9/20]$.
+Thus $Q$ decreases and $Q(9/20)=79237/320000>6/25$.
+Since $(6/25)(31/40)^4>1/12$, the entire low range gives
+\begin{equation}\tag{L73.3.low}\label{eq:L73:low}
+\E[f_2\{T(h_2f_b)\}^4]\le1-d/12\quad(b\ge6,d\le1/5).
+\end{equation}
+For the high range the same actual terminal mean, supplied by the
+finite Q4-C128, Section 8, calculation retained in
+Section~\ref{loc:S25}, is
+\begin{equation}\tag{L73.3.5mean}\label{eq:L73:mean}
+\E(h_2f_b)\le1-L(d),\qquad
+L(d)=d(2871-1463d-608d^2)/1024\quad(b\ge6).
+\end{equation}
+$L$ increases on $[0,1/3]$ and $L(1/5)=15963/32000>99/200$.
+For $d\ge1/5$, $TF_b\le101/100$ and
+$\E[f_2(TF_b)^4]\le(4/5)(101/100)^4<9/10<1-d/12$.
+The low and high ranges overlap at $1/5$, with the same actual
+orientation for every finite $b$. Equal-pair decorations and full
+reversal follow by positivity; $d=0$ by original leaf integration.

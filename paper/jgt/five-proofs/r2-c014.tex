@@ -1,0 +1,236 @@
+\subsection{Four bare steps and two steps from an odd terminal}\label{proof:R2-C014}
+In the notation of Module R2-C007 put $\kappa=19/32$.
+The two assertions are
+\begin{equation}\tag{R14.1.1}\label{eq:R14:bare}
+ \E[f_a\bar f_4^4]\le1-d/2\quad(a\ge3)
+\end{equation}
+and, for the fixed terminal orientation and length list of Module
+R2-C013, $F=\bar f_2f_3h_c\prod_{i=2}^jh_{s_i}f_{t_i}$,
+\begin{equation}\tag{R14.1.2}\label{eq:R14:terminal}
+ \E[f_a(T^2F)^4]\le1-d/5.
+\end{equation}
+Both connector edges in the second assertion point from the terminal
+toward the receiving root. All original lengths are independent finite
+integers, with $a\ge3$ and $4\le c<s_2<t_2<\cdots<s_j<t_j$.
+The exact receiving data are \eqref{eq:R07:receiving} and
+$\E C_a\le1-57d/32$, $\sigma(C_a)\le(1+d)\sqrt d$.
+The latter follows for $a\ge4$ from the nonconstant vector
+$[-G_a(-B)+\beta_{a-1}]u$, and for $a=3$ from $G_3$.
+
+The correct finite recurrences are
+\begin{equation}\tag{R14.2.1}\label{eq:R14:recurrence}
+\bar f_3=q-d+B(u+Bu),\qquad
+\bar f_4=(1-d)q-d+BG_3(B)u
+=1-2d+[G_4(B)-d]u.
+\end{equation}
+Thus $\mu=\E\bar f_4=1-3d+\delta_2\le1-(5/2)d$.
+The exact variance supplied in Q5-C101, Section 2, is
+\begin{equation}\tag{R14.2.2}\label{eq:R14:variance}
+\operatorname{Var}\bar f_4
+=(1-d)^2d-(1-2d)\delta_2-\delta_3+\delta_4-\tau^2
+\le v_4(d):=d-4d^2+(141/32)d^3-d^4.
+\end{equation}
+Put $v=\delta_2/d\in[d,\theta]$ when $d>0$.
+Using $\delta_4\le\theta\delta_3$ and $\delta_3\ge v^2d$, the
+normalized variance is at most
+$(1-d)^2-(1-2d)v-\kappa v^2-d(1-v)^2$.
+Its derivative in $v$ is at most
+$-1+(45/16)d-2d^2\le-41/144<0$, so its maximum is at the legal
+global endpoint $v=d$, giving \eqref{eq:R14:variance}.
+At $a=3$ cancellation of actual means gives
+\[
+\operatorname{Cov}(f_3,\bar f_4)
+=-\int(1-x)(1-2x)\,d\nu\le0;
+\]
+indeed $\operatorname{Re}[G_3(G_4-d)]=(1-x)(1-2x-d)$ and the
+mean-product correction is $-d\tau$.
+For $a\ge4$, with $\beta=\beta_{a-1}$, the exact covariance is
+\[
+-\int\operatorname{Re}(G_aG_4)\,d\nu+d\int E_a\,d\nu
++\beta(\tau-d^2)-\beta_{a+1}\tau.
+\]
+Since $\operatorname{Re}(G_aG_4)=(1-x)(E_a-xD_a)
+\ge(1-x)(1-2x)\ge57/512$,
+$\beta-\beta_{a+1}\le\delta_2$, $\int E_a\le d$, and $\tau\le d$,
+\begin{equation}\tag{R14.2.4}\label{eq:R14:covariance}
+\operatorname{Cov}(C_a,\bar f_4)
+\le-57d/512+(45/32)d^2\le(45/32)d^2.
+\end{equation}
+The final nonnegative bound also covers $a=3$.
+
+Here is the full continuous curvature certificate for $0\le d\le1/4$.
+Write $t=\sqrt d$, $\alpha=1-t^2$, $c=6t/5$. The correct recurrence
+and $\|G_3u\|_2\le\sqrt d$ give
+\[
+\bar f_4+\mu\le\alpha(q+1)+t-(5/2)d
+\le\alpha(q+1)+c-2d,\qquad0\le\mu\le\alpha.
+\]
+For $h=(c-2t^2)/\alpha$, $0\le h\le1/5$ because
+$\alpha/5-c+2t^2=(3t-1)^2/5$.
+The curvature divided by $\alpha^2$ is therefore at most
+$[\alpha p+c][(16/5-p)^2+2]$.
+For fixed $p$, completing the square in $t$, or using its endpoint,
+gives
+\[
+\alpha p+c\le\begin{cases}3p/4+3/5,&0\le p\le6/5,\\
+p+9/(25p),&6/5\le p\le2.\end{cases}
+\]
+On the first interval the resulting cubic is
+$F(p)=(3/4)p^3-(21/5)p^2+(267/50)p+918/125$.
+It has $F''\le-3$, $F(4/5)=1164/125$, $F'(4/5)=3/50$, and
+$F\le1164/125+(3/50)^2/6=46563/5000<19/2$.
+On the second interval put
+$H=(p+9/(25p))[(16/5-p)^2+2]$. Then
+\[
+p^2H'=N=3p^4-(64/5)p^3+(63/5)p^2-2754/625,
+\quad N'=12p[p^2-(16/5)p+21/10].
+\]
+The bracket is convex with endpoint values $-3/10$, hence negative;
+$N(6/5)=-54/25<0$, so $H$ decreases and $H(6/5)=9<19/2$.
+Consequently throughout the low range
+\begin{equation}\tag{R14.3.2}\label{eq:R14:curvature}
+C_a[(\bar f_4+\mu)^2+2\mu^2]\le(19/2)(1-d)^2.
+\end{equation}
+Taylor expansion about the actual mean $\mu$, using the displayed
+variance and covariance, bounds $\E[C_a\bar f_4^4]$ by
+\[
+(1-57d/32)(1-5d/2)^4+(45/8)d^2
++(19/2)(1-d)^2[d-4d^2+(141/32)d^3-d^4].
+\]
+Its excess above one, divided by $d$, is exactly
+\[
+\begin{gathered}
+-73/32+(63/16)d-(31/16)d^2+(1227/64)d^3
+-(4465/512)d^4-(19/2)d^5\\
+\le-73/32+63/64+1227/4096=-4085/4096<-1/2.
+\end{gathered}
+\]
+For $d\ge1/4$, $\bar f_4=T\bar f_3\le2\E\bar f_3
+=2(1-2d)\le1$, and $\E f_a\le1-2d$. This proves
+\eqref{eq:R14:bare} on the full range with unchanged directions.
+
+For \eqref{eq:R14:terminal} first take $0<d\le1/8$, $j=1$.
+Use $\mathfrak r_0,\allowbreak R_0,\allowbreak U,\allowbreak V,\allowbreak \beta=\beta_{c-1}$ from
+\eqref{eq:R13:terminal}, including the $c=4$ case $U=1,V=0$.
+Q5-C181, Section 4, gives the two-step envelope
+\begin{equation}\tag{R14.5.1}\label{eq:R14:envelope}
+\begin{gathered}
+\Gamma_0=d+\beta_c+\beta\ge35d/16,\quad D=3d/5,
+\quad D_1=\E BR_0\in[-\delta_3,d^2],\quad
+0\le D_2=\E B^2R_0\le\delta_3,\\
+e^{\Gamma_0}T^2F\le
+Y=(1-d+D)q+B[G_3+z\mathfrak r_0](B)u+D_1-d\ge0.
+\end{gathered}
+\end{equation}
+The proof in Module R2-C013 gives, for
+$Q=G_3+z\mathfrak r_0$,
+$Q_e=1-x-x^2U$, $Q_o=1-\beta+x^2V$, and $|Q|^2\le1$
+on the entire original spectrum. The nonconstant polynomial of $Y$ is
+\[
+P=G_4+z^2\mathfrak r_0-(2/5)d,\quad
+P_e=1-x+\beta x-x^3V-(2/5)d,\quad P_o=1-x-x^2U.
+\]
+Both coordinates are positive. For $x\le2/5$,
+$\beta x-(2/5)d\le0$ so $|P|^2\le(1-x)^2(1+x)\le1$.
+For $2/5\le x\le\theta$,
+$P_e\le3/5+d/160<5/8$, $P_o\le3/5$, so
+$|P|^2<25/64+3/20<1$. Thus $\operatorname{Var}Y\le d$.
+The actual mean is
+\[
+m=1-2d+D+D_1-\tau+D_2
+\le1-(8723/5120)d\le1-(17/10)d,
+\]
+because $D_1\le d^2\le d/8$, $D_2\le\theta^2d$ and
+$2-3/5-1/8+\kappa-\theta^2=8723/5120>17/10$.
+Using $U\ge1-x$, we have $P_o\le(1-x)(1-x^2)$,
+$P_e\ge1-x-x^3-(2/5)d$, hence
+$\operatorname{Re}(G_aP)\ge(1-x)[1-2x-(2/5)d]\ge209/2560$.
+Also $\int P_e\le\tau+d^2/160$ and
+$\int P_o=\tau-D_2>0$.
+For $a\ge4$, the actual covariance is
+\[
+-\int\operatorname{Re}(G_aP)\,d\nu
++\beta_{a-1}\int P_e\,d\nu-\beta_{a+1}\int P_o\,d\nu.
+\]
+Its scalar correction is at most
+$d(\tau+d^2/160)-\tau(\tau-D_2)
+\le(\theta+\theta^2)d^2+d^3/160\le(2929/40960)d$.
+Since $209/2560=3344/40960$, the covariance is at most
+$-83d/8192<0$. For $a=3$ it is
+$-\int\operatorname{Re}(G_3P)\,\allowbreak d\nu-d\int P_o\,\allowbreak d\nu\le0$.
+The row bound in \eqref{eq:R14:envelope} gives
+$Y\le(1-2d/5)q+\sqrt d+D_1-d\le q+\sqrt d$.
+Thus
+\[
+C_a[(Y+m)^2+2m^2]\le(p+9/20)[(27/8-p)^2+2]\le12.
+\]
+This cubic has $F''=6p-63/5\le-3/5$,
+$F(1)=14181/1280<111/10$, and $F'(1)=241/320<4/5$.
+The strong concavity bound is $111/10+8/15=349/30<12$.
+Taylor expansion yields
+\[
+\E[f_a(T^2F)^4]\le e^{-A_0d}+12de^{-C_0d},
+\quad A_0=2773/160,\ C_0=35/4\ge A_0/2.
+\]
+Here $A_0=4\Gamma_0/d+57/32+4(17/10)$ with the lower bound for
+$\Gamma_0/d$. In general, for $A\ge B\ge0$, $C\ge A/2$,
+\begin{equation}\tag{R14.7.3}\label{eq:R14:exponential}
+1-e^{-Ad}-Bde^{-Cd}\ge(A-B)de^{-Ad/2}.
+\end{equation}
+Since $A_0-12=853/160$, $A_0d/2\le2773/2560<2$, and $e^2<9$,
+the deficit exceeds $853d/1440>d/5$.
+
+For any finite $j\ge2$ retain Q5-C181's single complete mask $S$,
+$R=R_0+S$. Section 5 gives
+\[
+\begin{gathered}
+\|S\|_2<(3/20)\sqrt d,\quad
+\Gamma\ge431d/80+(16/5)(j-2)d,\quad D=3d/2,\\
+D_1=\E BR\le19d/120,\quad D_2=\E B^2R\le d/4,\\
+e^\Gamma T^2F\le
+Y=(1-d+D)q+B[G_3+z\mathfrak r](B)u+D_1-d\ge0,\quad
+R=\mathfrak r(B)u.
+\end{gathered}
+\]
+Its mean is $m\le1-(329/480)d\le1-2d/3$.
+Relative to the single-terminal nonconstant vector the addition is
+$(9/10)du+B^2S$. Since $\|B^2S\|_2<\sqrt d/16$,
+\[
+\operatorname{Var}Y\le[1+1/16+(9/10)d]^2d\le(2209/1600)d.
+\]
+The added $q$ term has nonpositive covariance: for $a\ge4$,
+$\operatorname{Cov}(C_a,\allowbreak q)=-\int E_a\,\allowbreak d\nu+\beta_{a-1}d
+\le-\tau+d^2<0$, and for $a=3$ it is $-\tau$.
+The other added term costs at most
+$(9/8)\sqrt d\,\sqrt d/16=9d/128$ in covariance.
+Further $\|Q(B)u+BS\|_2<(11/10)\sqrt d$ and $q\le2$ give
+$Y\le q+(11/10)\sqrt d+(19/120)d\le q+83/192$.
+Since $3+83/192<299/80$, the full curvature is at most
+$(p+9/20)[(299/80-p)^2+2]\le16$, with the continuous certificate
+already proved in Module R2-C013.
+Taylor expansion gives
+\[
+\E[f_a(T^2F)^4]\le e^{-A_1d}+B_1de^{-C_1d},\quad
+A_1=12479/480,\ B_1=17897/800,\ C_1=431/20.
+\]
+Here $A_1=431/20+57/32+8/3$ and
+$B_1=16(2209/1600)+9/32$.
+$C_1\ge A_1/2$, $A_1-B_1=272/75$, and
+$A_1d/2\le12479/7680<2$, so \eqref{eq:R14:exponential} gives
+a deficit greater than $272d/675>d/5$ for every finite mask.
+
+On $1/8\le d\le1/3$, Q5-C181, Section 6, gives the same actual
+$F\le e^{-(2j-1)d}\bar f_2$ and hence
+$T^2F\le e^{-(2j-1)d}\bar f_4$.
+By \eqref{eq:R14:bare},
+\[
+\E[f_a(T^2F)^4]\le e^{-4(2j-1)d}(1-d/2)
+\le e^{-4d}\le1-\frac{4d}{1+4d}\le1-12d/7\le1-d/5.
+\]
+This joins at $d=1/8$. Decorations follow by positivity, including
+$T^4E_t\le\bar f_4$ in the bare assertion. At $d=0$ original leaf
+integration gives equality, without requiring $K=0$. Full reversal
+changes the receiving arm, terminal, both connector edges, and all
+decorations. The terminal edge count is
+$a+2+2+3+c+\sum_{i\ge2}(s_i+t_i)$ plus all equal-arm edges.
+The estimates apply to the stated four-step bare path and two-step terminal connector.

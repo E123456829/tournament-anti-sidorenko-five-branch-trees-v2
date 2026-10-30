@@ -1,0 +1,244 @@
+\subsection{Even terminal packets at the two remaining root types}
+\label{sec:odd-even:roots}
+
+Use the root and input conventions of
+Section~\ref{sec:odd-complete:comparison}. The actual even terminal is
+$F=\prod_{i=1}^j h_{a_i}f_{b_i}$, with its original strict ordering.
+Every pair keeps this direction in every host interval.
+
+\begin{proposition}\label{prop:odd-even:roots}
+For either root $pW_a\bar f_b$, $3\le a<b$, or
+$f_a h_bf_c$, $3\le a<b<c$, and every even terminal residual of
+size at least four, the actual complete message has fourth loss
+at least $11d/2$. The same holds for a terminal single pair whose
+minimum is at least four.
+On $0<d\le1/64$ the proof retains a pointwise complete certificate
+whose full vector has norm below $(7/2)\sqrt d$.
+\end{proposition}
+\begin{proof}
+\paragraph{One finite propagation, including its constants.}
+Use the bare-exponent parameters
+\eqref{eq:odd-even:rows}--\eqref{eq:odd-complete:bare-means}
+for the actual mask $R=r(B)u$ of each terminal. The scalar,
+complete constant and signed means are kept in the chosen convention.
+
+\paragraph{The five smaller-minimum finite packets.}
+Use the actual masks of Section~\ref{proof:Q5-C182}.
+Their original scalar is increased by $16(j-2)d/5$ for every extra
+terminal pair, while the same disjoint mask bounds all coordinates.
+The data needed here are
+\[
+\begin{array}{c|c|c|c|c|c}
+ \text{packet}&\Gamma/d\text{ lower}&\delta/d\text{ range}
+       &\epsilon/d\text{ range}&h&\text{actual finite coordinates of }r\\\hline
+ E2&607/160&[-1/5,91/100]&[-7/10,7/10]&1/2
+       &\begin{gathered}x/2\le A_r\le6x/5,\\-6x/5\le D_r\le x/2\end{gathered}\\
+ E3&767/160&[-1/5,2/3]&[-7/8,7/8]&1/2
+       &\begin{gathered}|A_r|\le C_\beta x^2,\\|D_r|\le C_\beta x\end{gathered}\\
+ I&607/160&[-6/5,3/4]&[-17/10,3/4]&3/8
+       &\begin{gathered}r=xV+zU,\\1/2<U,V<6/5\end{gathered}\\
+ II&16/5&[-6/5,1/25]&[-13/10,6/25]&3/8
+       &\begin{gathered}r=xV+zU,\\11/12\le U\le6/5\end{gathered}\\
+ III&3-2\delta_2/d&[-1,3/20]&[-4/3,7/20]&1/2
+       &\begin{gathered}r=\tau+xV+zU,\\1-C_\beta x\le U\le1-x/3\end{gathered}.
+\end{array}
+\]
+Here $C_\beta=(1-\theta^2)^{-1}=1024/855$;
+II and III retain $-C_\beta x\le V\le C_\beta x^2$.
+The packets are respectively minimum two, minimum at least three,
+$(1,b_1)$ with $b_1\ge3$, $(1,2,a_2)$ with $a_2\ge4$, and
+$(1,2,3,\ldots)$. Their forced missing exponents, original means
+and all-index losses are those of the actual masks, not freely
+chosen parameters. In III, $\tau$ is the original global moment.
+
+At the auxiliary root use the curved convention. Complete baseline
+losses, in the four windows of \eqref{eq:odd-even:rows}, are
+\begin{equation}\label{eq:odd-even:baselines}
+\begin{array}{c|cccc}
+ &1&2&3&\ge4\\\hline
+ E2&185/24&101/12&12&49/5\\
+ E3&12&11&12&14\\
+ I&10&10&821/90&42/5\\
+ II&12&9&10181/900&10\\
+ III&15/2&7&109/15&697/100.
+\end{array}
+\end{equation}
+All but three entries are the same complete calculations in
+Section~\ref{proof:Q5-C182}, with the actual $v=3$ pair envelope.
+The three specializations are short.
+
+For E2 at $L=2$, the actual nonconstant vector is
+$(1-B)u+BR$, with squared norm below $5d/2$ since
+$\|BR\|<(37/100)\sqrt d$.
+Its curvature coefficient is $\delta$, not $\beta+\delta$;
+$(10/3)\delta^2<d$ on the entire domain.
+Keeping $\epsilon\le7d/10$ and $D_2\le d/12$ gives the full loss
+\[
+ 607/40+8-14/5-1/3-85/8-1=101/12.
+\]
+For E2 at $L=3$, the old unperturbed vector is exactly $u$,
+whose jointly paid base is $-31d/4$.
+The actual perturbation $\delta u+B^2R$ has norm coefficient at
+most $83/150$. Its added norm cost is
+$(17/4)[2(83/150)+(83/150)^2]d$.
+The additional signed mean costs at most $21d/5$, and the actual
+$\epsilon$ curvature costs at most $49d/90$. Their substitution
+gives loss greater than twelve on the whole domain.
+For III at $L=2$, retain the actual zero $\beta_2$ and
+$|\delta|\le d$: its complete loss is at least
+\[
+ 35/4-7/5+8-13/8-85/16-10/9>7.
+\]
+These estimates specialize the full vectors before taking moments.
+
+\paragraph{Minimum-one roots: one parameter payment.}
+The complete curved expenses from
+Lemma~\ref{lem:odd-complete:minimum-one}, divided by $d$, are
+bounded by the following table for all $0<d\le1/3$:
+\[
+\begin{array}{c|cccc}
+ &1&2&3&\ge4\\\hline
+ E2&11/10&0&3/2&21/10\\
+ E3&11/10&0&7/4&21/10\\
+ I&11/10&13/10&2&21/10\\
+ II&11/10&13/10&3/2&21/10\\
+ III&11/10&21/20&3/2&5/4.
+\end{array}
+\]
+For the first window $A_Q\ge-1/5$, $D_Q\le6/5$; the signed
+real-coordinate variant of $\Phi$ gives the common first column.
+For the second, $A_Q>0$, $D_Q\le1$, and $\gamma=\delta$;
+insert the actual lower endpoints of $\delta$.
+For the third, $\gamma=\epsilon$, $D_Q\le5/4$ in E2/E3 and
+$D_Q\le1$ in I--III. The actual lower endpoints of $\epsilon$
+give the third column. All these $Q$ have norm at most
+$(8/5)\sqrt d$, and the $a\ge4$ expense is smaller by $\Psi$.
+
+For the long window all real coordinates are positive.
+In the first four packets use $D_Q\le3/2$, $R=8/5$ and
+$\gamma=-hd$, $h\le1/2$.
+For III the actual coordinate is smaller: at $L-1=3$ it is
+$1-x\tau-x^2V\le1+C_\beta x^3<5/4$.
+For later finite lengths its upper is at most
+$1-x+2x^2+\tau x^{3/2}\le1$, since
+$2\theta+(2/9)\sqrt\theta<1$.
+Thus $\Phi(5/4,1/2,1/3)<5/4$ gives the last entry.
+Subtracting this table from \eqref{eq:odd-even:baselines} leaves
+more than $11/2$ in every cell; the smallest displayed margins
+are $109/15-3/2$ and $697/100-5/4$.
+
+\paragraph{Positive roots: the same rows with complete constant charges.}
+Use the actual $\gamma=0,\delta,\epsilon,-hd$ in the four
+windows, now in \eqref{eq:odd-complete:positive-curved}.
+For E2/E3 first take $d\le1/8$; for I--III take $d\le1/4$.
+The following are upper bounds for the full exponent increments,
+including the signed constant cross and square:
+\begin{equation}\label{eq:odd-even:positive-expenses}
+\begin{array}{c|cccc}
+ &1&2&3&\ge4\\\hline
+ E2&0&67/30&37/28&145/72\\
+ E3&13/4&261/80&23/6&151/120\\
+ I&0&5/2&3&0\\
+ II&0&423/140&1&0\\
+ III&0&0&17/10&0.
+\end{array}
+\end{equation}
+Here is the common calculation of these entries. E2's second
+polynomial increment, including the saved $d$, is at most $59d/60$;
+its curved correction is less than $10d^2$, giving $67d/30$.
+Its third charges are at most
+$10d^2+17d/42$ and $(16/3)d^2$; the saved $d$ gives $37d/28$.
+The long charges are below $8d/9$ and $9d^2$, giving $145d/72$.
+E3's polynomial charges are $13d/4$, $141d/80$,
+$11d/6$, $2d/15$; the last three constant corrections are
+$3d/2$, $2d$, $9d/8$. These use the actual $D_i$ in the
+signed mean, not a frequencywise interpretation of $\|R\|$.
+
+For I, the second curved correction is below $14d^2$ and its
+polynomial is rectangular. At $L=3$, real overshoot costs
+$119d^2/16$. The signed virtual interval is
+$[-x^2-6x/5,x/2+x^2]$; splitting $\epsilon$ by sign bounds
+its cross and square by
+$(867/160+3179/1200)d^2$. The total is below $16d^2$.
+This proves the second and third entries after the saved $d$.
+For II, the second polynomial charge is $17d/140$ and its
+curved correction at most $(78/5)d^2$.
+At $L=3$ the virtual interval is
+$[-x^2-6x/5,x/12+x^2]$; its signed curved correction is
+less than $4d^2$, and the polynomial charge is less than $d$.
+For III, the second virtual coordinate is negative, so
+$\delta<0$ helps; the whole curved correction is less than
+$2d^2$. At $L=3$ real overshoot costs less than $6d/5$.
+The new virtual interval is $[-x-x^2,(11/5)x^2]$.
+For negative $\epsilon$ its cross plus square is at most
+$(187/45+44/27)d^2<6d^2$; positive $\epsilon$ costs less.
+After the saved $d$ this is $17d/10$.
+
+In the long I--III windows, the actual finite alternating coordinates
+are in $[0,1]$ for every $L-1\ge4$.
+At $L-1=3$, the possible virtual overshoot is at most
+$C_\beta x^3$, and is absent in I.
+Its charge is $85d/504$.
+The respective signed curved corrections are below
+$2d^2$, $(5/2)d^2$, $(49/16)d^2$.
+Each total is less than the saved $d$ on its stated interval.
+This proves the zero final entries, including the global $\tau$
+in III and every finite highest exponent.
+Subtracting \eqref{eq:odd-even:positive-expenses} from
+\eqref{eq:odd-even:baselines} leaves at least $11/2$;
+the tight III third row is $109/15-17/10=167/30>11/2$.
+
+On the complementary E2/E3 domains the original finite row bounds
+give the same actual terminal a pointwise scalar surplus.
+For E2 it is at least $127d/160$; the bare-root bound gives
+$387/128+127/40>6$. E3 has larger surplus.
+For I, the paid later pairs leave $qf_{b_1}$.
+For II/III they leave the canonical $qf_2h_{a_2}$;
+$f_{b_2}\le2(1-2d)\le1$ there.
+The same-direction bare reference or canonical odd-triple payment
+below gives $11/2$. These are bounds on the same products; no
+terminal arm is reversed at a host-domain boundary.
+
+\paragraph{Larger-minimum even lists.}
+For $a_1\ge4$, use the independent actual mask of
+Section~\ref{proof:Q5-C180}, with $\Gamma=16jd/5$,
+$\|R\|<\sqrt d/4$, $|\delta|\le d/5$,
+$|\epsilon|\le3d/8$ and all losses at least $d/2$.
+The same four rows \eqref{eq:odd-even:rows} apply.
+At a minimum-one root their direct complete vectors have norm
+coefficients $3/4,5/3,28/15,25/16$ and curve coefficients
+at most $d,6d/5,11d/8,3d/2$.
+Their scalar-plus-mean bounds, before $-\Gamma$, are respectively
+$-45d/32,-223d/96,-1523d/480,-3709d/1440$.
+The direct certificate therefore gives the original loss
+$8+64(j-1)/5$ on the entire domain.
+
+For a positive root take $d\le1/64$.
+The auxiliary full-constant baselines are
+$10,29/5+395/128,47/4,8$.
+The second and third actual $v=3$ base savings are $395/128$ and
+$19/4$ relative to their general-root bounds.
+The full-constant increments are bounded by
+$11d/6,7d/8,d/3,0$.
+These follow from the same norm comparison with tail coefficients
+$1/4,13/80,1/9,1/15$, retaining $\delta\one$,
+$\epsilon\one$ and $-(d/2)\one$ inside the full vectors.
+Every resulting loss exceeds eight.
+For $d\ge1/64$ the actual pair estimate gives
+$F\le e^{-88jd/125}$; the paid bare root gives
+$387/128+352j/125>11/2$.
+
+Finally, on $d\le1/64$, the four rows in
+\eqref{eq:odd-even:rows} obey
+$\|Qu\|+|\gamma|<(19/10)\sqrt d$.
+For the short windows this follows from
+$\rho\le1$, $|\delta|\le6d/5$, $|\epsilon|\le17d/10$;
+the third window has bound $147\sqrt d/80$.
+The long bound is $(167/120)\sqrt d$.
+Adding the actual anchor and pair precursors gives at most
+$(19/10+6/5+3/8)\sqrt d<(7/2)\sqrt d$.
+The complete later-root certificate is therefore available in
+both directions. Equal pairs and the independent outer connector
+are restored by the existing common lemmas. At zero, leaf
+integration gives equality.
+\end{proof}

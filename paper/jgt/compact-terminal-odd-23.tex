@@ -1,0 +1,154 @@
+\subsection[Odd terminals beginning with (2,3)]{Odd terminals beginning with $(2,3)$}\label{loc:S34}
+Let $P=f_3h_c\prod_{i=2}^th_{a_i}f_{b_i}$,
+$4\le c<a_2<b_2<\cdots<a_t<b_t$, and retain the actual inward
+length-two anchor: $F=\bar f_2P$.
+We prove $\E[p(T^LF)^4]\le e^{-2d/3}$ for every $t\ge1,L\ge1$.
+Write $R_0$ for the exponent in Section~\ref{loc:S28},
+$S=\sum_{i=2}^tK^{a_i}G_{b_i-a_i}(K)g$ and $R=R_0+S$.
+
+\proofpart{Large parameters and the small-range inputs}
+For $d\ge1/24$, the exact row-factor squares from
+Section~\ref{loc:S28} give $|R_0|\le17d/6$.
+For $c=4,5$ the squared ratios are below $5$ and $62/9$;
+for $c\ge6$ the convex ratio
+$(1+\theta+d)^2+d(2\theta+d)^2+(1+\theta)\theta^2/d$
+has endpoint bounds $191/24$ and $69/16$, both below eight.
+For $t\ge2$, the disjoint later mask has $|S|<\sqrt d/4\le5d/4$.
+The actual product satisfies $P\le e^{R-(2t+1)d}\le e^{-d/6}$.
+Thus $T^LF\le e^{-d/6}\bar f_{L+2}$, and the actual fourth path bound
+proves the claimed large-range loss.
+
+For $d\le1/24$ the needed packages are
+\[
+ \begin{array}{c|ccc}
+ &\|R\|/\sqrt d&\text{row control}&\E R\\\hline
+ t=1&31/100&|R|\le1/8&\le0\\
+ t\ge2&9/20&R=KV,\ \|V\|\le3\sqrt d/4&\le0.
+ \end{array}
+\]
+For the first row, the three row-factor ratios for $c=4,5,\ge6$
+are below $1/4$, $81/256$, $9/25$.
+For multiple pairs add later row-factor constants
+$1/4,13/80,21/200$, respectively; the sums are at most $3/4$.
+The norm and nonpositive-mean proof is the same signed first-pair/tail
+calculation in Section~\ref{loc:S30}, with the stronger current domain.
+In particular $|\E R|\le3d/4$ follows from the row factor,
+rather than from a square-root-order estimate.
+
+For one pair AM--GM gives
+$F\le \bar f_2m^2(1+kR/2)^2$, $m=1-3d/2$, $k=1/m\le16/15$.
+For $t\ge2$, the positive root
+$[1-d+(R-d)/(2t)]^{2t}$ decreases with real $t\ge2$:
+its logarithmic derivative uses
+$|u|=|(R-d)/(2t(1-d))|\le\sqrt d/4<1/16$,
+and $\log(1+u)-u/(1+u)\le8d/225<d$.
+At $t=2$ use $R^2\le9d/16$ to get the same form with
+$m=1-19d/8$, $k=(1-5d/4)/m\le16/15$.
+The constant inequality is
+$(1-5d/4)^2+9d/256\le1-1843d/768\le m$.
+
+\proofpart{One row comparison and a signed auxiliary}
+Set $H=\bar f_2+kR$, $H_L=T^LH$. These functions may be signed.
+Expansion of the actual quadratic envelope gives
+\begin{equation}\label{eq:compact-odd23-row}
+ 0\le T^LF\le m^2H_L+\epsilon d\,\bar f_{L-1},\quad
+ \epsilon=17/20\ (t=1),\quad13/10\ (t\ge2).
+\end{equation}
+Indeed the first-step error is at most
+$[(12/5)\rho+\rho^2]d$ when $\|R\|\le\rho\sqrt d$;
+use $\|\bar f_2-1\|<6\sqrt d/5$ and the original nonnegative rows.
+Both envelopes have $m^2k,m^2k^2\le1$.
+Every actual path satisfies $\|\bar f_{n}\|_{4,p}\le6/5$ here, including
+$n=0,1$; for $n\ge2$ use the actual cubic bound and $\bar f_{n}\le2$.
+
+Put $K'=-K$, $V_n=S'_n+kK'^{n-2}R=1+v_n$ and
+$\omega_j=\beta_{j+2}-k\E[K'^{j-1}R]$.
+Exact recursion gives
+\[
+ H_L=V_{L+2}-\sum_{j=1}^L\omega_j\bar f_{L-j},\quad
+ \E V_n=1-\omega_{n-1},\quad\E[g'V_n]=\omega_n,
+ \quad V_n=q+K'v_{n-1}.
+\]
+With $\eta=k\rho$,
+$\|v_2\|\le(6/5+\eta)\sqrt d$ and
+$\|v_n\|\le[1+\eta\theta^{(n-2)/2}]\sqrt d$ for $n\ge3$.
+For $j\ge2$,
+$|k\E[K'^{j-1}R]|\le\eta\theta^{(j-2)/2}d$;
+the first coefficient instead uses the exact row-factor mean.
+The resulting complete bounds are
+\[
+\begin{array}{c|ccccc}
+ &\|v_2\|/\sqrt d&\|v_3\|/\sqrt d&\|v_4\|/\sqrt d&
+ \|v_n\|/\sqrt d\ (n\ge5)&(\omega_1/d,\omega_2/d)\\\hline
+1&8/5&\sqrt{3/2}&227/200&109/100&([1,3/2],[14/15,4/3])\\
+\ge2&42/25&4/3&239/200&113/100&([1,9/5],[13/25,37/25]).
+\end{array}
+\]
+For $t=1$, $\omega_3\ge39d/100$ and
+$9d/20\le\omega_j\le6d/5$ for $j\ge4$.
+Also $\E H_1\le1-199d/100$.
+To retain this stronger one-step sign, write
+$M=\int B$, $N=\int(C-xH)$ in the first-pair notation.
+Then $\omega_1=d+kM$, $\omega_2=d-kN$ and
+$M-N\ge-\theta^2d^2$; for $c=4,5$ it is respectively
+$\delta_{2}-d^2$, $\delta_{2}+\delta_{3}-d^2$.
+For $t\ge2$, all $j\ge3$ have
+$7d/25\le\omega_j\le4d/3$, improving for $j\ge4$ to
+$319d/800\le\omega_j\le6d/5$.
+
+\proofpart{Signed fourth coefficients and every length}
+For real $Z$ with $0\le\mu=\E Z\le1$, the centered fourth identity
+remains exact. The coefficient $p(3\mu^2+2\mu Z+Z^2)$ is at most
+$17/2$, $9$, $33/4$ on the respective intervals
+\[
+ [-1/3,q+1/3],\quad[-1/3,q+7/20],\quad[-1/2,q+1/4].
+\]
+Convexity in $Z$ reduces this to the endpoints. At the positive endpoint,
+enlarge $\mu$ to one and complete the square in
+$(2-v)[3+2(v+a)+(v+a)^2]$, $v=q$.
+The bounds are $457/54$, $1529/200+(631/400)^2/(14/5)$ and
+$4177/512$, respectively; the negative endpoints are smaller.
+
+For $L=1,2$ take $Z=H_L$. For $L\ge3$ take
+$Z=V_{L+2}-\gamma d(1+q+\bar f_2)$, with
+$\gamma=3/8$ for one pair and $7/25$ otherwise.
+The preceding positive $\omega_j$ show $H_L\le Z$.
+All these envelopes may be signed, but have positive means.
+Their full fourth budgets are:
+\begin{center}\small
+\begin{tabular}{@{}cccccc@{}}
+\toprule
+$t$ & $L$ & mean upper bound & variance bound & $M$ & $[\E(pZ^4)-1]/d$ upper bound\\\midrule
+1&1&$1-199d/100$&$3d/2$&$17/2$&$231201/40000<6$\\
+1&2&$1-9d/4$&$36d/25$&$17/2$&$7209/1600<6$\\
+1&$\ge3$&$1-3d/2$&$81d/64$&$33/4$&$1281/256<6$\\
+$\ge2$&1&$1-38d/25$&$16d/9$&$9$&$12247/1250<10$\\
+$\ge2$&2&$1-9d/5$&$169d/100$&$17/2$&$319/40<10$\\
+$\ge2$&$\ge3$&$1-6d/5$&$49d/36$&$33/4$&$8147/1200<10$\\\bottomrule
+\end{tabular}
+\end{center}
+The covariance is nonnegative in every row. In the fourth row retain
+$4\mu^3h\ge7d/10$, using $\mu\ge259/300>6/7$ and $h\ge7d/25$.
+All other rows may discard that favorable term.
+For $L\ge3$ the variance uses
+$\|v_{L+2}-\gamma d(2g'+K'g')\|$ and
+$\sqrt{4+\theta}<21/10$.
+Its upper endpoint is at most $q+1/4$ and its lower endpoint at least
+$-1/2$, since $S'_n\ge0$ and $1+q+\bar f_2\le5$.
+For $L=1,2$ the lower endpoint is $-1/3$ by the original row mass
+and the small-range row package. These facts also give all positive
+mean lower endpoints directly from the displayed $\delta$ bounds.
+The table follows by $(1-ad)^4\le1-4ad+6a^2d^2$ and $d\le1/24$.
+
+Finally use the nonnegative composite comparison
+\eqref{eq:compact-odd23-row} with $H_L\le Z$ and Minkowski on
+absolute fourth norms. For one pair,
+\[
+ \|T^LF\|_{4,p}\le e^{-3d/2}+51d/50
+             \le1-693d/1600\le1-2d/5;
+\]
+for multiple pairs it is at most
+$e^{-9d/4}+39d/25\le1-3741d/6400\le1-d/2$.
+Their fourth powers improve the large-range loss $2d/3$.
+Both ranges include $1/24$; decorations, full reversal and $d=0$
+are covered by the common rules.

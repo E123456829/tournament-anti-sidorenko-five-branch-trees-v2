@@ -1,0 +1,240 @@
+\subsection{Minimum-two odd roots with every terminal pair (3,t)}\label{proof:R2-C004}
+\paragraph{R4.1 Statement and exact directions}
+
+% Replace a pure model-definition block only; keep local root/terminal data.
+Use the original finite-space model and arm messages of
+Section~\ref{sec:odd-common-calculus}.
+When the original \(K\)-notation is used, \(K=-B\) and
+\(g=K\one=-u\); in either notation
+\(\delta_j=\|B^j\one\|_2^2=\|K^j\one\|_2^2\).
+All means, norms, adjoints and spectral integrals use the same
+original probability measure.
+The internal root residual is \((2,\allowbreak \allowbreak  b,\allowbreak \allowbreak  c,\allowbreak \allowbreak  s_1,\allowbreak \allowbreak  t_1,\allowbreak \allowbreak  \ldots,\allowbreak \allowbreak  s_k,\allowbreak \allowbreak  t_k)\), \(3\le b<c<\cdots\), \(k\ge0\). The distant terminal residual is \((3,\allowbreak \allowbreak  t)\), \(t\ge4\). Original lengths \(L,\allowbreak \allowbreak  M\ge1\) are independent and all genuine equal-pair decorations are allowed. Fix
+
+\[
+\begin{gathered}
+F=h_3 f_4,t=4;F=\bar f_3 W_t,t\ge 5;\\
+C_r=W_2 \bar f_3 W_c \prod W_{s_i}\bar f_{t_i},b=3;\\
+C_r=W_2 W_b \bar f_c \prod W_{s_i}\bar f_{t_i},b\ge 4
+\end{gathered}
+\]
+
+These directions are unchanged for every \(L\) and host. Inner edges point from the terminal to the root; outer edges from the root to the receiver. The arm directions are those of Section \ref{proof:R2-C002}. The actual message is \(H=E_rC_rT^L(E_tF)\), with equal-pair factors \(E_r,\allowbreak \allowbreak  E_t\).
+
+For all these original parameters and hosts,
+
+\[
+\begin{gathered}
+EH^4\le \exp(-13d/2),\\
+I_q(T^M H)^3\le \exp[-(13-c(M))d]\le \exp(-43d/19) 
+\end{gathered}\tag{R4.1.1}
+\]
+
+Here \(I_q\) and \(c(M)\) are the same original-weight outlet as in Q5-C164.
+
+\paragraph{R4.2 Full root and finite propagation}
+
+The Q5-C188 root input for \(b=3\) is
+
+\[
+\begin{gathered}
+\bar f_3W_c\le \exp[-\Gamma_r+B(U_r+\beta\one)],\\
+\Gamma_r=d+\beta_c+\beta_{c-1}\ge 3d-2\delta_2\ge 35d/16,\\
+\beta=\beta_{c-1}\in[\tau,d],U_r=(xE+zxD)(B)u,\\
+G_{c-3}=E+zD,E\ge 1-x,0\le D\le 1
+\end{gathered}
+\]
+
+Consequently \(\|U_r\|<\sqrt d/2\), \(\|-u+U_r\|\le\sqrt d\), \(\|Bu+U_r\|\le\sqrt d\), \(EBU_r\le0\), and \(EU_r\le0\). For \(b\ge4\), all root pairs combine into one vector with scalar loss \(16(k+1)d/5\), norm at most \(3\sqrt d/8\), and \(B\)-mean at most \(d/12\). The mask for all later pairs with \(s_i\ge5\) has norm at most \(\sqrt d/4\). Their complete proofs are in parts R2.1 and R2.4.1.
+
+For the actual \(F\le e^{R-\Gamma}\), put
+\(D_i=\E B^iR\), \(\sigma=\E R^2\),
+\(\delta=D_0+5\sigma/4\), and \(\epsilon=\delta+D_1\).
+Its Taylor bound gives \eqref{eq:oc:fourth-duhamel}, with \(c_T=5/4\).
+If \(h\ge0\) and \(\gamma_l=\beta_l-D_{l-1}\ge hd\) for every \(l\ge3\),
+use the four rows of \eqref{eq:odd-common:w2-table}.
+For \(L\ge4\), \(n=L-1\), retain both endpoint means
+\(\E BV_0=d-\gamma_{L+1}\le(1-h)d\) and
+\(\E V_0=-\gamma_{n+1}\le-hd\).
+
+The complete pair vector is
+\(V=V_0+U_r+(\beta+c_0)\one\) for \(b=3\), or
+\(V=V_0+U+c_0\one\) for \(b\ge4\).
+With \(S=a-\Gamma_{\rm root}+\E BV\), \(N=\|V\|^2\),
+\eqref{eq:odd-common:w2-complete} gives
+\[
+ \log\E H^4\le4S+(17/4)N.\tag{R4.2.1}
+\]
+
+\paragraph{R4.3 The terminal pair (3, 4)}
+
+Q5-C170, Section 3, gives the following actual two-arm envelope:
+
+\[
+\begin{gathered}
+h_3f_4\le \exp(R-3d),R=d\cdot u+B^3u,\sigma=d^3+\delta_4,\\
+D_0=\delta_2,D_1=-d^2,D_2=-\delta_3,D_3=d\cdot \delta_2,\\
+\delta=\delta_2+(5/4)(d^3+\delta_4),\epsilon=\delta-d^2,\\
+0\le \epsilon\le \delta<101d/160,all \gamma_l\ge d/2
+\end{gathered}
+\]
+
+The Taylor coefficient \(5/4\) is proved on the same pointwise domain, and \hyperref[part:C170.7]{its finite-tail calculation in Section~\ref{proof:Q5-C170}} covers every finite \(\gamma\) index. Convenient weaker norm bounds are
+
+\[
+\begin{gathered}
+\|R\|<3\sqrt{d}/5,\|BR\|<2\sqrt{d}/5,\\
+\|B^2R\|<\sqrt{d}/4,\|B^nR\|<4\sqrt{d}/25 (n\ge 3) 
+\end{gathered}\tag{R4.3.1}
+\]
+
+The first uses \(d+\theta^{3/2}<1/3+4/15=3/5\); the others follow from the original operator norm.
+
+First take \(k=0\). The table gives \(-S/d\ge s\), \(N/d\le n\).
+
+
+\begingroup\small
+\setlength{\tabcolsep}{3pt}
+\setlength{\LTleft}{0pt}\setlength{\LTright}{\fill}
+\begin{longtable}{@{}p{0.1200\linewidth}p{0.8000\linewidth}@{}}
+\caption{Minimum-two odd roots with every terminal pair (3,t): parameter values.}\label{tab:parameters:r2-c004:2}\\
+\toprule
+Entry & L1(s, n) \\
+\midrule\endfirsthead
+\toprule
+Entry & L1(s, n) \\
+\midrule\endhead
+\bottomrule\endfoot
+b3 & \((569/160,\allowbreak 77/48)\); L2(s, n): \((729/160,\allowbreak 3/2)\); L3(s, n): \((5,\allowbreak 9/4)\); \(L\ge 4(s,\allowbreak \) n): \((177/40,\allowbreak 9/4)\). \\
+\addlinespace[2pt]
+\(b\ge 4\) & \((17/4,\allowbreak 2)\); L2(s, n): \((5,\allowbreak 36/25)\); L3(s, n): \((25/4,\allowbreak 225/64)\); \(L\ge 4(s,\allowbreak \) n): \((21/4,\allowbreak 25/9)\). \\
+\end{longtable}
+\endgroup
+
+
+Every loss \(4s-17n/4\) exceeds \(13/2\). For \(b=3,\allowbreak \allowbreak  L=1\), the sufficient value is \(569/40-1309/192>13/2\).
+
+\paragraph{R4.3.1 The unit connector}
+
+For \(b=3\), the real coordinate of \(V_0+U_r\) is \(d-1+xE<0\), with absolute value at most \(1-(1-\theta)x\). The imaginary coefficient is \(x(D-1)\), of absolute value at most \(x\). Thus \((1-(1-\theta)x)^2+x^3\le1\), because \(-2(1-\theta)+(1-\theta)^2\theta+\theta^2<0\). Its mean is at most \(D_0\le \delta_2\). Adding \(\beta\) yields \(N\le d+(1+2\theta)d^2\le77d/48\). Also \(S\le(-3-35/16+101/160+1)d=-569d/160\).
+
+For \(b\ge4\), \(\|R-u\|^2<15d/14\), by \((1-d)^2+x^3\le1+\theta^3<15/14\). Since \(\sqrt{15/14}<83/80\), adding the root mask gives norm less than \(113\sqrt d/80\), with square less than \(2d\). The scalar is at most \((-3-16/5+101/160+1+1/12)d<-17d/4\).
+
+\paragraph{R4.3.2 Inner length two}
+
+For \(b=3\), the nonconstant coordinates of \(BR+U_r\) are \(x^2+xE\) and \(d+xD\). The squared norm is at most \([(\theta+\theta^2)^2+\theta(\theta+1/3)^2]d<9d/16\). The constant \(c=\beta+\delta\) lies in \([0,\allowbreak \allowbreak  261d/160]\), and the nonconstant mean \(-d^2+EU_r\) is nonpositive. Hence \(N\le9d/16+(261d/160)^2<3d/2\). Keeping \(D_2=- \delta_3\le0\) gives \(S\le(-3-35/16+101/160)d=-729d/160\). For \(b\ge4\), the full norm coefficient is less than \(2/5+3/8+303/800<6/5\), and \(S\le(-3-16/5+101/160+1/12)d<-5d\).
+
+\paragraph{R4.3.3 Inner length three}
+
+For \(b=3\), the nonconstant norm coefficient is at most \(1+1/4+101/480<3/2\), and its mean \(-d- \delta_3+EU_r\) is at most \(-d\). Since \(c=\beta+\epsilon\in[0,\allowbreak \allowbreak  261d/160]\), \(2cEV_0+c^2\le0\), giving \(N<9d/4\). Scalar plus mean is \(-3d-\Gamma_r+\epsilon-d- \delta_3-\delta d+d \delta_2+EBU_r\). Keeping the negative terms in their valid direction gives \(S\le(-3-35/16+101/160-1+\theta/3)d<-5d\). For \(b\ge4\), the complete norm coefficient is \(13/20+1/4+101/480+3/8+303/800<15/8\), and \(S/d\le-3-16/5+101/160-1+\theta/3+1/12=-127/20<-25/4\).
+
+\paragraph{R4.3.4 Every finite connector of length at least four}
+
+Here \(h=1/2\), \(D_1<0\). For \(b=3\), the nonconstant norm coefficient is at most \(4/5+4/25+1/2<3/2\). The constant lies in \([3d/32,\allowbreak \allowbreak  d/2]\), and the nonconstant mean is at most \(-d/2\); its increment is nonpositive. Thus \(S/d\le-3-35/16+101/80-1+1/2=-177/40\). For \(b\ge4\), the full coefficient is at most \(4/5+4/25+3/8+3/10<5/3\), and \(S/d\le-3-16/5+101/80-1+1/2+1/12<-21/4\). Every \(\gamma_l\), including \(L+1\), is included.
+
+\paragraph{R4.4 Every terminal (3, t) with t at least five}
+
+The actual terminal envelope in part~\ref{part:C160.4} of
+Section~\ref{proof:Q5-C160} is
+
+\[
+\begin{gathered}
+F=\bar f_3W_t\le \exp(R-\Gamma),\\
+R=(\gamma-xv+zxC)(B)u,\Gamma=d+\beta_t+\gamma,\\
+\gamma=\beta_{t-1}\in[\tau,d],G_{t-2}=A+zC,v=1-A,\\
+0\le v\le x,1-x\le C\le 1,\Gamma\ge 3d-2\delta_2\ge 35d/16
+\end{gathered}
+\]
+
+The pointwise envelope and its Taylor certificate apply both for \(L\ge2\) and at the unit connector with the present root. We have \(e^R\le1+R+5R^2/8\) on the entire original domain and gives, for the same \(R\),
+
+\[
+\begin{gathered}
+\sigma<5d/24,\|R\|<\sqrt{d}/2,\\
+D_0=-\int xC,D_1=-\gamma\cdot d+\int xv,\\
+D_2=\int x^2C\in[0,\delta_3],D_3=\gamma\cdot \delta_2-\int x^2v\le d\cdot \delta_2,\\
+-\delta_2\le \delta<d/24,-3d/4\le \epsilon\le 0,\\
+(D_1)_+\le \delta_3,all \gamma_l\ge 9d/16 
+\end{gathered}\tag{R4.4.1}
+\]
+
+The sign of \(D_1\) is not assumed negative; all long-connector bounds retain its positive part. We may use
+
+\[
+\begin{gathered}
+\|BR\|<13\sqrt{d}/40,\|B^2R\|<5\sqrt{d}/24,\\
+\|B^nR\|<2\sqrt{d}/15 (n\ge 3) 
+\end{gathered}\tag{R4.4.2}
+\]
+
+The following cells again give \(s,\allowbreak \allowbreak  n\), and every \(4s-17n/4\) exceeds \(13/2\).
+
+
+\begingroup\small
+\setlength{\tabcolsep}{3pt}
+\setlength{\LTleft}{0pt}\setlength{\LTright}{\fill}
+\begin{longtable}{@{}p{0.1200\linewidth}p{0.8000\linewidth}@{}}
+\caption{Minimum-two odd roots with every terminal pair (3,t): parameter values.}\label{tab:parameters:r2-c004:3}\\
+\toprule
+Entry & L1(s, n) \\
+\midrule\endfirsthead
+\toprule
+Entry & L1(s, n) \\
+\midrule\endhead
+\bottomrule\endfoot
+b3 & \((27/8,\allowbreak 19/12)\); L2(s, n): \((101/24,\allowbreak 9/10)\); L3(s, n): \((79/16,\allowbreak 2)\); \(L\ge 4(s,\allowbreak \) n): \((223/48,\allowbreak 1849/900)\). \\
+\addlinespace[2pt]
+\(b\ge 4\) & \((1033/240,\allowbreak 3969/1600)\); L2(s, n): (5, 1); L3(s, n): \((88/15,\allowbreak 121/36)\); \(L\ge 4(s,\allowbreak \) n): \((223/40,\allowbreak 25/9)\). \\
+\end{longtable}
+\endgroup
+
+
+The tightest cell, \(b\ge4,\allowbreak \allowbreak  L=1\), exceeds \(13/2\) by \(3341/19200\).
+
+\paragraph{R4.4.1 The unit connector}
+
+For \(b=3\), the nonconstant real coordinate \(-1+\gamma-xv+xE\) is negative, of absolute value at most \(1-x+2x^2\); the imaginary coefficient \(x(C+D)\) is at most \(2x\). A squared-frequency upper bound is
+
+\[
+\begin{gathered}
+1-2x+5x^2+4x^4\le 5/4
+\end{gathered}
+\]
+
+This is convex on \([0,\allowbreak \allowbreak  \theta]\). Using \(\theta\ge2/5\), \(\theta^2<1/6\), \(\theta^4<1/36\), its endpoint is less than \(1-4/5+5/6+1/9<5/4\). The nonconstant mean \(-\int x(C+D)\) is nonpositive, and \(c=\beta\le d\), yielding \(N\le5d/4+d^2\le19d/12\). Since \(\epsilon\le0\), \(S\le(-35/8+1)d=-27d/8\).
+
+For \(b\ge4\), \(\|R-u\|^2\le\int[(1+x^2)^2+x^3]<36d/25\), the same finite rational frequency comparison used in Q5-C180. Adding the root mask gives full norm at most \(63\sqrt d/40\), while \(S/d\le-35/16-16/5+1+1/12=-1033/240\). In particular,
+
+\[
+\begin{gathered}
+1033/60-(17/4)(3969/1600)-13/2=3341/19200>0
+\end{gathered}
+\]
+
+\paragraph{R4.4.2 Inner length two}
+
+For \(b=3\), the real coordinate \(xE-x^2C\) lies in \([0,\allowbreak \allowbreak  x]\); the imaginary coefficient \(xD+\gamma-xv\) has absolute value at most \(x+\gamma\). The nonconstant norm squared is less than \(2d/5\). The constant \(c=\beta+\delta\) lies in \([3d/16,\allowbreak \allowbreak  25d/24]\); the nonconstant mean is at most \(D_1\le \delta_3<d/6\). Thus \(N\le2d/5+275d^2/192<9d/10\), and \(S\le(-35/8+1/6)d=-101d/24\). For \(b\ge4\), the full coefficient is \(13/40+3/8+39/160<1\), and \(S/d\le-35/16-16/5+1/6+1/12<-5\).
+
+\paragraph{R4.4.3 Inner length three}
+
+For \(b=3\), the nonconstant norm coefficient is at most \(1+5/24+11/80<27/20\), using \(|\delta|\le \delta_2\). Its mean lies in \([-3d/2,\allowbreak \allowbreak -5d/6]\), and \(c=\beta+\epsilon\in[-5d/32,\allowbreak \allowbreak  d]\). For nonnegative \(c\) the increment is nonpositive; for negative \(c\), at most \(505d^2/1024\). Hence \(N\le729d/400+505d^2/1024<2d\). The scalar terms \(D_3-\delta d\) sum to at most \(2d \delta_2\), so
+
+\[
+\begin{gathered}
+-S/d\ge 35/8+1-1/6-2\theta/3=79/16
+\end{gathered}
+\]
+
+For \(b\ge4\), the complete norm coefficient is at most \(13/20+5/24+11/80+3/8+9/20<11/6\), and \(-S/d\ge35/16+16/5+1-1/6-2\theta/3-1/12=88/15\).
+
+\paragraph{R4.4.4 Every finite connector of length at least four}
+
+Here \(h=9/16\), \(2\delta_+\le d/12\), and \(2(D_1)_+\le2 \delta_3<d/3\). For \(b=3\), the nonconstant coefficient is at most \(4/5+2/15+1/2=43/30\); the constant lies in \([d/32,\allowbreak \allowbreak  7d/16]\), with nonconstant mean at most \(-9d/16\). Its square and cross term therefore sum to a nonpositive number. The scalar lower bound is \(-S/d\ge35/8+11/16-1/12-1/3=223/48\). For \(b\ge4\), the full coefficient is at most \(4/5+2/15+3/8+27/80<5/3\), and \(-S/d\ge35/16+16/5+11/16-1/12-1/3-1/12=223/40\). These estimates cover every finite \(n=L-1\).
+
+\paragraph{R4.5 Later pairs, the outer outlet and the original tree}
+
+For \(b=3\), every complete vector in the two tables has norm at most \(2\sqrt d\). Adding all later root pairs uses the full-vector increment \([931/192-64k/5]d<0\) for \(k\ge1\), as in \mbox{\hyperref[part:R2.6]{part R2.6}}, preserving the basic loss \(13/2\). For \(b\ge4\), all root pairs remain in one mask and extra scalar loss only helps. Positivity restores all genuine equal-pair decorations. Finally Q5-C164 gives \(13-204/19=43/19\), proving the outlet statement.
+
+If both sides of an original five-branch path use this construction and the center uses the Q4-C143 negative zero-step table with the same \(q\), Hölder gives \(Z_D\le\exp[-(43/19+43/19)d/8]=e^{-43d/76}\). A mixed-side construction requires the stated directions, weight and central role on each side.
+
+The edge count is the sum of all four independent positive core lengths and every original side-arm length, counting multiplicity; \(|V|=e+1\). Branch vertices use original degrees. At \(d=0\), leaf integration gives every actual message one without requiring \(K=0\). Full reversal reverses all arms, connectors, weights and decorations. The correlated-law Gibbs/KL and all-map tournament conclusions use the original product argument of \mbox{\hyperref[part:R2.8]{part R2.8}} on the same measure.

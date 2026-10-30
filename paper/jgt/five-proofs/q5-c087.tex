@@ -1,0 +1,1032 @@
+\subsection{Ordinary fourth moments for genuine singleton-root inputs}\label{proof:Q5-C087}
+\paragraph{Q87.0 Singleton-root fourth moments and their outer transfer}\label{part:Q87.0}
+
+Work on the finite probability space with a real skew kernel. Put
+
+\[
+ A=J+K,\quad T=J-K=A^*,\quad g=K1,\quad p=1+g,\quad q=1-g,
+\]
+\[
+\begin{gathered}
+f_n=A^n1,\quad \bar f_n=T^n1,\quad W_n=A \bar f_{n-1},\qquad\\
+I_q(U)=E[q^{-1/3}|U|^{8/3}].
+\end{gathered}
+\]
+
+The original offcenter root has precisely one residual arm of length
+\(a\), after maximal actual equal-length pairing. The terminal has
+precisely the two residual arms \((1,\allowbreak  b)\), \(b\ge\allowbreak 2\). Their inner
+connector has length \(L\), and the independently specified connector
+from that root to the receiving root has length \(M\). Equal-arm factors are restored by positivity in the common tree assembly.
+
+Local bound. For every
+
+\[
+ a\ge3,\qquad b\ge2,\qquad L\ge1,\qquad M\ge1,
+\]
+
+the following orientation, determined by the lengths, gives a receiving-root message \(U\)
+satisfies \(I_q(U)\le\allowbreak 1\).
+
+
+\begingroup\small
+\setlength{\tabcolsep}{3pt}
+\setlength{\LTleft}{0pt}\setlength{\LTright}{\fill}
+\begin{longtable}{@{}p{0.2200\linewidth}p{0.7000\linewidth}@{}}
+\caption{Ordinary fourth moments for genuine singleton-root inputs: parameter values.}\label{tab:parameters:q5-c087:1}\\
+\toprule
+Entry & Actual input \(Y\) at the singleton root \\
+\midrule\endfirsthead
+\toprule
+Entry & Actual input \(Y\) at the singleton root \\
+\midrule\endhead
+\bottomrule\endfoot
+\(L=\allowbreak 1\), every \(a\ge\allowbreak 3\) & \(f_aT(p\bar f_b)\); Outer message: \(T^M Y\). \\
+\addlinespace[2pt]
+\(a=\allowbreak 3,\allowbreak  L=\allowbreak 2,\allowbreak  M=\allowbreak 1,\allowbreak  2\) & \(f_3TA(p\bar f_b)\); Outer message: \(T^M Y\). \\
+\addlinespace[2pt]
+\(a=\allowbreak 3,\allowbreak  L=\allowbreak 2,\allowbreak  M\ge\allowbreak 3\) & \(W_3T^2(qf_b)\); Outer message: \(T^M Y\). \\
+\addlinespace[2pt]
+\(a=\allowbreak 3,\allowbreak  L\ge\allowbreak 3\) & \(W_3T^L(qf_b)\); Outer message: \(T^M Y\). \\
+\addlinespace[2pt]
+\(a\ge\allowbreak 4,\allowbreak  L\ge\allowbreak 2\) & \(W_aT^L(qf_b)\); Outer message: \(T^M Y\). \\
+\end{longtable}
+\endgroup
+
+
+For the first, second, fourth, and the \(a=\allowbreak 4\) part of the last row,
+the new proof gives
+
+\[
+ EY^4\le e^{-11d/2}.
+ \tag{Q87.0.1}\label{eq:Q87:0.1}
+\]
+
+For every \(a\ge\allowbreak 5,\allowbreak  b\ge\allowbreak 2,\allowbreak  L\ge\allowbreak 2\), it gives
+
+\[
+ E\{[W_aT^L(qf_b)]^4\}\le e^{-3487d/640}.
+ \tag{Q87.0.2}\label{eq:Q87:0.2}
+\]
+
+Here \(d=\allowbreak Eg^2\). The new fourth-input outer bridges are
+
+\[
+\begin{gathered}
+I_q(TY)^3\le e^{204d/19}(E|Y|^4)^2,\qquad\\
+I_q(T^2Y)^3\le e^{87d/8}(E|Y|^4)^2.
+\end{gathered}\tag{Q87.0.3}\label{eq:Q87:0.3}
+\]
+
+Consequently every short-outer row of the local bound has the common bound
+
+\[
+ I_q(U)^3\le e^{-7d/320}\qquad(M=1,2).
+ \tag{Q87.0.4}\label{eq:Q87:0.4}
+\]
+
+In (Q87.0.1) rows the stronger bounds are \(e^{-5d/19}\) for \(M=\allowbreak 1\)
+and \(e^{-d/8}\) for \(M=\allowbreak 2\). For \(M\ge\allowbreak 3\), the exact
+Proposition~\ref{prop:ordinary-unit-inner}, Section~\ref{proof:Q5-C075}, and the unanchored transfer of Section~\ref{proof:Q5-C079} apply to the actual rows
+specified above. In particular,
+
+\[
+ I_q(U)^3\le
+ \begin{cases}
+ (1-d)e^{-d/1024},&L=1,\\
+ (1-d)e^{-3d/20},&L\ge2.
+ \end{cases}
+ \tag{Q87.0.5}\label{eq:Q87:0.5}
+\]
+
+For \(a=\allowbreak 3,\allowbreak  L=\allowbreak 2\), the direction is selected from the outer length \(M\).
+
+\paragraph{Q87.1 Finite identities and inputs}\label{part:Q87.1}
+
+Delete only zero-mass atoms. On every retained atom,
+\(p(x),\allowbreak  q(x)\ge\allowbreak \mu(x)>\allowbreak 0\), because \(K(x,\allowbreak  x)=\allowbreak 0\). Every finite tree message is positive: conditional on its root, the labeling
+putting all other original vertices at that same atom has positive
+mass and all diagonal edge factors one. All norms, expectations, adjoints and rotation blocks use \(\mu\).
+Throughout, \(EY^j\) means the moment \(E[Y^j]\), never the
+power \((EY)^j\) of a mean; displayed explicit norm
+squares are interpreted in the usual original Hilbert space.
+
+Write
+
+\[
+\begin{gathered}
+r=Kg,\quad s=Kr,\quad t=Ks,\quad \delta_j=\|K^j1\|_2^2,\\
+\theta=13/32,\quad\kappa=19/32,\quad\tau=d-\delta_2.
+\end{gathered}
+\]
+
+The finite calculus supplies
+
+\[
+\begin{gathered}
+0\le d\le1/3,\quad d^2\le \delta_2\le\theta d,\quad\\
+\delta_{j+1}\le\theta \delta_j,\quad\|K\|^2\le\theta,\quad\\
+|Kv(x)|\le\|v\|_2,\quad \kappa d\le\tau\le2/9,
+\end{gathered}\tag{Q87.1.1}\label{eq:Q87:1.1}
+\]
+\[
+\begin{gathered}
+Er=-d,\quad Es=0,\quad Et=\delta_2,\quad Egr=Ers=0,\quad\\
+Egs=-\delta_2,\quad Ert=-\delta_3.
+\end{gathered}\tag{Q87.1.2}\label{eq:Q87:1.2}
+\]
+
+Original row centering and antisymmetrization give, respectively,
+
+\[
+ r^2\le pqd,\qquad |r|\le pq/2.
+ \tag{Q87.1.3}\label{eq:Q87:1.3}
+\]
+
+For the second inequality, use
+\(r(x)=\allowbreak \frac12E_{y,\allowbreak  z}[(K(x,\allowbreak  y)-K(x,\allowbreak  z))K(y,\allowbreak  z)]\) and
+\(|u-v|\le\allowbreak 1-uv\) on \([-1,\allowbreak  1]^2\). In particular \(|r|\le\allowbreak 1/2\).
+
+
+Define finite polynomials and finite alternating sums by
+
+\[
+\begin{gathered}
+G_n(z)=\sum_{j=0}^{n-1}z^j,\quad\\
+\beta_1=\beta_2=0,\quad\\
+\beta_n=\sum_{j=1}^{\lfloor(n-1)/2\rfloor}(-1)^{j-1}\delta_j.
+\end{gathered}
+\]
+
+The exact finite positive convolution, for either sign, is
+
+\[
+\begin{gathered}
+\sum_{j=0}^n(\pm K)^j1\\
+=f_n^\pm+\sum_{j=3}^n\beta_jf_{n-j}^\pm,\qquad\\
+\tau\le\beta_j\le d\quad(j\ge3),
+\end{gathered}\tag{Q87.1.4}\label{eq:Q87:1.4}
+\]
+
+where \(f_n^+=\allowbreak f_n,\allowbreak  f_n^-=\allowbreak \bar f_n\). Every removed term is a nonnegative
+actual path. The finite sum identity is proved in the common finite calculus.
+
+At \(z=\allowbreak i\sqrt x\), \(0\le\allowbreak  x\le\allowbreak \theta\), write
+\(G_n(z)=\allowbreak A_n+zB_n\). For \(n\ge\allowbreak 2\), both coordinates lie in
+\([1-x,\allowbreak  1]\). For \(n\ge\allowbreak 4\), both are at most \(1-x+x^2\).
+Also \(\|G_n(K)\|\le\allowbreak 1\) for \(n\ge\allowbreak 3\), and
+\(|G_n(i\sqrt x)|^2\le\allowbreak 1-7x/15\) for \(n\ge\allowbreak 3\).
+The coordinate estimates are Lemma~\ref{lem:odd-common:spectral}; the finite decay bound is (Q81.1.5) of Section~\ref{proof:Q5-C081}.
+they hold at the short endpoints and for every finite integer length.
+
+We use the following inputs.
+
+1. Section~\ref{proof:Q5-C081}, \hyperref[part:Q81.2]{the signed-mean exponential lemma} proves, for every original real vector \(V\) and
+   every \(u\ge\allowbreak 0\),
+
+\[
+   Ee^{uKV}\le
+   \exp\{uE(KV)+(17/64)u^2\|V\|^2\}.
+   \tag{Q87.1.5}\label{eq:Q87:1.5}
+\]
+
+   It retains the actual mean of either sign. We use it at \(u=\allowbreak 4\)
+   and \(u=\allowbreak 8\), including scaled vectors. The Hermite--Bernoulli proof covers the full continuous domain.
+2. Section~\ref{proof:Q5-C064}, the short-operator and all-power estimates give
+
+\[
+\begin{gathered}
+\|T\|^2\le(1+32d/19)^2,\quad\\
+\|T^2\|^2\le(1+d/2)^4,\quad\\
+\|T^M\|\le(1-d/8)^{\lfloor M/3\rfloor}\quad(M\ge3).
+\end{gathered}\tag{Q87.1.6}\label{eq:Q87:1.6}
+\]
+
+   The Section~\ref{proof:Q5-C056} bound
+   \(E[\bar f_3^4/q]\le\allowbreak 1-23d/36\).
+3. Section~\ref{proof:Q5-C079}, the eighth-input transfer estimates prove the eighth-input map and its row budgets:
+
+\[
+\begin{gathered}
+I_q(T^M Y)^3\le\|T^M\|^2E|Y|^8R_M^2,\quad\\
+R_M=E[\bar f_M^3/\sqrt q],\quad R_M^2\le1-d (M\ge3),
+\end{gathered}\tag{Q87.1.7}\label{eq:Q87:1.7}
+\]
+
+   with short costs \(e^{299d/38}\), \(e^{6d}\).
+4. Lemma~\ref{lem:ordinary-unit-inner-terminal} and Proposition~\ref{prop:ordinary-unit-inner} give the actual unit-inner envelopes and ordinary eighth
+   for \(f_aT(p\bar f_b)\), all \(a\ge\allowbreak 3,\allowbreak  b\ge\allowbreak 2\). Section~\ref{proof:Q5-C075} gives the actual
+   nonunit-inner envelopes, their paid scalar expressions, their
+   covariance signs, and the ordinary eighth for
+   \(W_aT^L(qf_b)\), all \(a\ge\allowbreak 3,\allowbreak  b\ge\allowbreak 2,\allowbreak  L\ge\allowbreak 2\).
+5. Section~\ref{proof:Q5-C058-ordinary} gives \(E[pT^L(qf_b)]^8\le\allowbreak 1-d/12000\) for all \(b\ge\allowbreak 2,\allowbreak  L\ge\allowbreak 1\).
+   Section~\ref{proof:Q5-C071} gives \(E[W_2T^L(qf_b)]^8\le\allowbreak 1-d/256\) for \(b,\allowbreak  L\ge\allowbreak 2\).
+
+
+At \(d=\allowbreak 0\), \(g=\allowbreak 0\) but \(K\) need not vanish. Leaf integration
+makes every actual message one. The bounds for arbitrary real inputs
+also follow from their displayed norm/Jensen proofs. Every later
+division by \(d\) assumes \(d>\allowbreak 0\).
+
+\paragraph{Q87.2 Fourth-moment transfer along short outer paths}\label{part:Q87.2}
+
+Let \(B\) be any positive original operator with row \(h=\allowbreak B1>\allowbreak 0\).
+Row Cauchy, then Holder with exponents 3 and \(3/2,\allowbreak \) give
+
+\[
+\begin{gathered}
+|BY|^2\le hB(|Y|^2),\qquad\\
+I_q(BY)\le\\
+\{E[h^4/q]\}^{1/3}\{E[B(|Y|^2)^2]\}^{2/3}.
+\end{gathered}
+\]
+
+Therefore, for every real \(Y\),
+
+\[
+ I_q(BY)^3\le E[h^4/q]\,\|B\|^4(E|Y|^4)^2.
+ \tag{Q87.2.1}\label{eq:Q87:2.1}
+\]
+
+For \(B=\allowbreak T\), \(h=\allowbreak q\), and
+\(Eq^3=\allowbreak 1+3d-Eg^3\le\allowbreak 1+4d\). Together with (Q87.1.6), this proves
+the first inequality of (Q87.0.3), since \(4+128/19=\allowbreak 204/19\).
+
+For \(B=\allowbreak T^2\), the actual row is \(\bar f_2=\allowbreak q+r\). Expand the same row:
+
+\[
+ E[\bar f_2^4/q]
+ =E[q^3+4q^2r]+E[(6q+4r+r^2/q)r^2].
+\]
+
+The first term is at most \(1+2d\): indeed it equals
+\(1-d-Eg^3+4Eg^2r\), and (Q87.1.3) gives
+\(4Eg^2r\le\allowbreak 2E[g^2pq]\le\allowbreak 2d\), while \(-Eg^3\le\allowbreak  d\).
+For the second, (Q87.1.3) gives
+
+\[
+ 6q+4r+r^2/q\le q(6+2p+p^2/4)\le12.
+\]
+
+The last polynomial is \(12-2p-3p^2/2-p^3/4\) for \(0\le\allowbreak  p\le\allowbreak 2\).
+Consequently
+
+\[
+ E[\bar f_2^4/q]\le1+2d+12\delta_2\le1+55d/8.
+ \tag{Q87.2.2}\label{eq:Q87:2.2}
+\]
+
+Now \(\|T^2\|^4\le\allowbreak (1+d/2)^8\le\allowbreak  e^{4d}\); (Q87.2.1) yields
+the second inequality of (Q87.0.3). 
+
+One further exact consequence will be used later:
+
+\[
+ I_q(T^3Y)^3\le(1-23d/36)(E|Y|^4)^2.
+ \tag{Q87.2.3}\label{eq:Q87:2.3}
+\]
+
+This follows from (Q87.2.1), \(\|T^3\|\le\allowbreak 1\), and the actual
+inverse-fourth row. 
+
+\paragraph{Q87.3 Every unit inner connector with a singleton arm at least three}\label{part:Q87.3}
+
+Use the actual reversed terminal \(F_b^-=\allowbreak p\bar f_b\). For \(b=\allowbreak 2\),
+
+\[
+ 0<TF_2^-\le q-\gamma-s,\qquad \gamma=d-\delta_2/2.
+ \tag{Q87.3.1}\label{eq:Q87:3.1}
+\]
+
+This follows from \(p\bar f_2\le\allowbreak (1+r/2)^2\), \(Tr=\allowbreak -d-s\),
+and \(T(r^2)\le\allowbreak 2\delta_2\). For \(b\ge\allowbreak 3\), put
+
+\[
+\begin{gathered}
+\bar R=KG_{b-1}(-K)g,\quad m=1-\beta_b/2,\quad k=1/m,\quad\\
+t_0=\beta_{b+1},\quad e=d-\beta_{b+2},\quad V=E\bar R^2,
+\end{gathered}
+\]
+\[
+ \gamma=kt_0-k^2V/2.
+\]
+
+The exact positive comparison \eqref{eq:ordinary-unit-inner:terminal-long} is
+
+\[
+\begin{gathered}
+0<TF_b^-\le m^2[q-\gamma-kK\bar R],\quad\\
+1\le k\le6/5,\quad \gamma-ke\ge d-68\delta_2/25.
+\end{gathered}\tag{Q87.3.2}\label{eq:Q87:3.2}
+\]
+
+Here \(E\bar R=\allowbreak -t_0\), \(E(g\bar R)=\allowbreak e\),
+\(V=\allowbreak \delta_2+\delta_3\) for \(b=\allowbreak 3\), and \(V\le\allowbreak  \delta_2\) for \(b\ge\allowbreak 4\).
+Both upper factors are nonnegative by their positive-kernel derivation.
+
+Write \(R_a=\allowbreak KG_{a-1}(K)g\). The root envelope
+\(f_a\le\allowbreak  p+R_a-\beta_a\) and AM–GM give
+
+\[
+\begin{gathered}
+f_aT(p\bar f_b)\le\\
+m^2[1-(\beta_a+\gamma)/2+Z/2]^2,\quad\\
+Z=K[G_{a-1}(K)-kKG_{b-1}(-K)]g,
+\end{gathered}\tag{Q87.3.3}\label{eq:Q87:3.3}
+\]
+
+with \(EZ=\allowbreak -\beta_{a+1}+ke\). For \(b=\allowbreak 2\), set \(m=\allowbreak k=\allowbreak 1\),
+\(Z=\allowbreak K[G_{a-1}(K)-K]g\), \(EZ=\allowbreak -\beta_{a+1}\).
+Every square base is half a sum of two nonnegative upper factors.
+Thus raising to the eighth power and using \(1+x\le\allowbreak  e^x\) is legal.
+Equation (Q87.1.5) at \(u=\allowbreak 4\) applies to this same fluctuation.
+
+\paragraph{Q87.3.1 Terminal lengths at least three, root arms three and four}\label{part:Q87.3.1}
+
+The exact correlated estimate \eqref{eq:ordinary-unit-inner:correlated-frequency} gives
+
+\[
+ \|[G_{a-1}(K)-kKG_{b-1}(-K)]g\|^2
+ \le d-17\delta_2/20\qquad(a,b\ge3).
+\]
+
+Consequently
+
+\[
+\begin{gathered}
+\log EY^4\le\\
+-4(\beta_a+\beta_{a+1}+\beta_b+\gamma-ke)\\
++(17/4)d-(289/80)\delta_2.
+\end{gathered}\tag{Q87.3.4}\label{eq:Q87:3.4}
+\]
+
+For \(a=\allowbreak 3\), \(\beta_3+\beta_4=\allowbreak 2d\); for \(a=\allowbreak 4\),
+\(\beta_4+\beta_5=\allowbreak 2d-\delta_2\). Using \(\beta_b\ge\allowbreak \tau\) gives,
+respectively,
+
+\[
+ \log EY^4\le-47d/4+(4507/400)\delta_2,\qquad
+ \log EY^4\le-47d/4+(6107/400)\delta_2.
+\]
+
+The second is the weaker one, and its upper bound is
+\(-71009d/12800<\allowbreak -11d/2\), because
+\(150400-79391=\allowbreak 71009>\allowbreak 70400\). This proves (Q87.0.1) in both rows.
+
+\paragraph{Q87.3.2 A stronger finite frequency bound for every root arm at least five}\label{part:Q87.3.2}
+
+For \(m_0\ge\allowbreak 4,\allowbreak  n\ge\allowbreak 2,\allowbreak  1\le\allowbreak  k\le\allowbreak 6/5\), one has
+
+\[
+\begin{gathered}
+|G_{m_0}(i\sqrt x)-ki\sqrt xG_n(-i\sqrt x)|^2\\
+\le1-3x/2,\qquad0\le x\le\theta.
+\end{gathered}\tag{Q87.3.5}\label{eq:Q87:3.5}
+\]
+
+To prove it write \(G_{m_0}=\allowbreak \alpha_0+i\sqrt x\beta_0\),
+\(G_n(-i\sqrt x)=\allowbreak \gamma_0-i\sqrt x\omega_0\).
+The first two coordinates lie in \([1-x,\allowbreak  1-x+x^2]\), the last
+two in \([1-x,\allowbreak  1]\). The real part of the difference is positive,
+at least \(1-(1+k)x\), and at most
+\(1-(1+k)x+(1+k)x^2\). Its imaginary coefficient has magnitude
+at most \(k-1+x\). Squaring gives \(1+xP(k,\allowbreak  x)\), where
+
+\[
+ P=k^2-4k-1+(k^2+6k+1)x
+ -(2k^2+4k+1)x^2+(k+1)^2x^3.
+\]
+
+Its derivative in \(x\) is at least
+\(8-(434/25)\theta=\allowbreak 379/400>\allowbreak 0\). Its second derivative in \(k\)
+is \(2(1+x-2x^2+x^3)>\allowbreak 0\). The two endpoint maxima at \(x=\allowbreak \theta\)
+are
+
+\[
+ P(1,\theta)=-13411/8192<-3/2,\qquad
+ P(6/5,\theta)=-1271219/819200<-3/2.
+\]
+
+These prove the entire continuous rectangle and all integer lengths.
+
+For \(a\ge\allowbreak 5\), retain also the actual term
+\(\beta_{a-1}p\ge\allowbreak \tau p\) in (Q87.1.4):
+
+\[
+ f_a\le(1-\tau)p+R_a-\beta_a.
+\]
+
+In (Q87.3.3), the new deterministic loss is \(\beta_a+\gamma+\tau\)
+and the fluctuation is \(Z'=\allowbreak K(V_0-\tau1)\), where
+\(V_0=\allowbreak [G_{a-1}(K)-kKG_{b-1}(-K)]g\).
+Its mean is unchanged. Moreover
+
+\[
+ EV_0=-\beta_a+kt_0\ge-\delta_2,\qquad
+ \|V_0-\tau1\|^2\le d-3\delta_2/2+d^2-\delta_2^2.
+\]
+
+Using (Q87.1.5), (Q87.3.2), and \(\beta_a,\allowbreak  \beta_{a+1},\allowbreak  \beta_b\ge\allowbreak \tau\),
+
+\[
+\begin{gathered}
+\log EY^4\le-63d/4+(4101/200)\delta_2+(17/4)(d^2-\delta_2^2)\\
+\le-115261d/19200<-6d.
+\end{gathered}\tag{Q87.3.6}\label{eq:Q87:3.6}
+\]
+
+The last step only uses \(\delta_2\le\allowbreak \theta d\), \(d^2\le\allowbreak  d/3\),
+and discards the negative \(\delta_2^2\). Thus every \(a\ge\allowbreak 5,\allowbreak  b\ge\allowbreak 3\)
+is covered without a remaining score interval.
+
+\paragraph{Q87.3.3 Terminal two, every root arm}\label{part:Q87.3.3}
+
+For \(b=\allowbreak 2\), (Q87.3.3) and (Q87.1.5) give
+
+\[
+\begin{gathered}
+\log EY^4\le-4(\beta_a+\beta_{a+1}+\gamma)\\
++(17/4)\|[G_{a-1}(K)-K]g\|^2.
+\end{gathered}\tag{Q87.3.7}\label{eq:Q87:3.7}
+\]
+
+At \(a=\allowbreak 3\), the last polynomial is 1; this yields
+\(-31d/4+2\delta_2\le\allowbreak -111d/16\).
+At \(a=\allowbreak 4\), its squared modulus is \((1-x)^2\), and (Q87.3.7)
+is at most \(-31d/4-(5/2)\delta_2+(17/4)\delta_3\le\allowbreak -31d/4\).
+
+At \(a=\allowbreak 5\), the exact squared modulus is
+\(1-2x+x^2+x^3\), while \(\beta_5+\beta_6=\allowbreak 2\tau\).
+The upper coefficient is
+
+\[
+ -31/4+(3/2)\theta+(17/4)\theta^2(1+\theta)<-91/16.
+\]
+
+For an explicit comparison, the last positive term is
+\(129285/131072<\allowbreak 1\); the whole expression is less than
+\(-31/4+39/64+1=\allowbreak -393/64<\allowbreak -91/16\).
+
+At \(a=\allowbreak 6\), the exact squared modulus is
+\(1-2x+3x^2-x^3+x^4\), and
+\(\beta_6+\beta_7=\allowbreak 2\tau+\delta_3\). Hence the bound is at most
+\(-31/4+(3/2)\theta+(35/4)\theta^2=\allowbreak -23333/4096<\allowbreak -91/16\).
+
+For every \(a\ge\allowbreak 7\), the same upper squared polynomial
+\(1-2x+3x^2-x^3+x^4\) follows from the finite coordinate bounds.
+Also \(\beta_a,\allowbreak  \beta_{a+1}\ge\allowbreak \tau+\kappa \delta_3\), by the finite
+alternating tails. Substitution in (Q87.3.7) gives
+
+\[
+ \log EY^4\le-31d/4+(3/2)\delta_2+8\delta_3
+ -(17/4)\delta_4+(17/4)\delta_5
+ \le-745d/128<-91d/16.
+\]
+
+All terminal-two cases therefore satisfy (Q87.0.1). This completes every
+\(a\ge\allowbreak 3,\allowbreak  b\ge\allowbreak 2,\allowbreak  L=\allowbreak 1\), with the single orientation in the local bound.
+
+\paragraph{Q87.4 The nonunit-inner scalar table}\label{part:Q87.4}
+
+The remaining proof uses the scalar estimates in Section~\ref{proof:Q5-C075}, the scalar-input and row-table estimates.
+Set \(X=\allowbreak T^L(qf_b)\), \(L\ge\allowbreak 2\), and \(W_2=\allowbreak p-r\). The
+positive envelope has the form
+
+\[
+ 0<X\le C[Bq+Br+Z-a_0],\qquad
+ W_2X\le CB[1+(Z-a_0)/(2B)]^2.
+ \tag{Q87.4.1}\label{eq:Q87:4.1}
+\]
+
+Every \(B\) below is positive. If \(Z=\allowbreak K^2V_0\), the
+paid expression is
+
+\[
+ S_8=8\log C+8\log B-8a_0/B+8M_0/B+6D/B^2.
+ \tag{Q87.4.2}\label{eq:Q87:4.2}
+\]
+
+Here \(EZ\le\allowbreak  M_0\), \(\|V_0\|^2\le\allowbreak  D\). For \(Z=\allowbreak KV_0\),
+replace its last coefficient 6 by \(8c_*\),
+\(c_*=\allowbreak (1+\theta)^2=\allowbreak 2025/1024\). The exact rows are:
+
+
+\begingroup\small
+\setlength{\tabcolsep}{3pt}
+\setlength{\LTleft}{0pt}\setlength{\LTright}{\fill}
+\begin{longtable}{@{}p{0.2200\linewidth}p{0.7000\linewidth}@{}}
+\caption{Ordinary fourth moments for genuine singleton-root inputs: parameter values.}\label{tab:parameters:q5-c087:2}\\
+\toprule
+Entry & \(C,\allowbreak  B,\allowbreak  a_0\) \\
+\midrule\endfirsthead
+\toprule
+Entry & \(C,\allowbreak  B,\allowbreak  a_0\) \\
+\midrule\endhead
+\bottomrule\endfoot
+\(b=\allowbreak 2,\allowbreak  L=\allowbreak 2\) & \(1,\allowbreak  1-\gamma,\allowbreak  0\); Row vector and \(D\): two-row \(V_0=\allowbreak \gamma1+r\), \(D=\allowbreak \delta_2\); Accepted upper for \(S_8\): \(-d/8\). \\
+\addlinespace[2pt]
+\(b=\allowbreak 2,\allowbreak  L=\allowbreak 3\) & \(1,\allowbreak  1-\gamma,\allowbreak  \tau\); Row vector and \(D\): two-row \(V_0=\allowbreak -(g+s)\), \(D=\allowbreak d-2\delta_2+\delta_3\); Accepted upper for \(S_8\): \(-3d/4\). \\
+\addlinespace[2pt]
+\(b=\allowbreak 2,\allowbreak  L=\allowbreak 4\) & \(1,\allowbreak  1-\gamma-\tau,\allowbreak  d(1-\gamma)\); Row vector and \(D\): two-row \(V_0=\allowbreak \tau1-(1-\gamma)g+r+t\); Accepted upper for \(S_8\): \(-d\). \\
+\addlinespace[2pt]
+\(b=\allowbreak 2,\allowbreak  L=\allowbreak 5\) & \(1,\allowbreak  1-2\tau,\allowbreak  \tau\); Row vector and \(D\): one-row \([\tau+zP_3(z)]g\), \(D/d=\allowbreak \theta-2\theta\tau+\tau^2\); Accepted upper for \(S_8\): \(-2d/3\). \\
+\addlinespace[2pt]
+\(b=\allowbreak 2,\allowbreak  L\ge\allowbreak 6\) & \(1,\allowbreak  1-2\tau,\allowbreak  \tau\); Row vector and \(D\): one-row \([\tau+zP_{L-2}(z)]g\), \(D/d=\allowbreak \theta-7\theta^2/15-2\theta\kappa\tau+\tau^2\); Accepted upper for \(S_8\): \(-4d/5\). \\
+\addlinespace[2pt]
+\(b\ge\allowbreak 3,\allowbreak  L=\allowbreak 2\) & \(m^2,\allowbreak  1-\gamma,\allowbreak  ke\); Row vector and \(D\): two-row \(V_0=\allowbreak \gamma1+kR\), \(D=\allowbreak k^2V\); Accepted upper for \(S_8\): \(-d/8\). \\
+\addlinespace[2pt]
+\(b\ge\allowbreak 3,\allowbreak  L=\allowbreak 3\) & \(m^2,\allowbreak  1-B_*,\allowbreak  d-k\rho\); Row vector and \(D\): one-row \([\delta+zP_1(z)]g\), \(D/d=\allowbreak 351/1280+\delta^2\), \(\delta=\allowbreak ke\); Accepted upper for \(S_8\): \(-d/10\). \\
+\addlinespace[2pt]
+\(b\ge\allowbreak 3,\allowbreak  L=\allowbreak 4\) & \(m^2,\allowbreak  1-41d/80,\allowbreak  \kappa d\); Row vector and \(D\): one-row \([\delta+zP_2(z)]g\), \(D/d=\allowbreak \theta(71/63)+\delta^2\), \(\delta=\allowbreak 41d/80\); Accepted upper for \(S_8\): \(-8d/25\). \\
+\addlinespace[2pt]
+\(b\ge\allowbreak 3,\allowbreak  L\ge\allowbreak 5\) & \(1-d/2,\allowbreak  1-d/2,\allowbreak  d/2\); Row vector and \(D\): one-row \([\delta+zP_{L-2}(z)]g\), \(D/d=\allowbreak \theta+d^2/4\), \(\delta=\allowbreak d/2\); Accepted upper for \(S_8\): \(-2d/5\). \\
+\end{longtable}
+\endgroup
+
+
+For \(b=\allowbreak 2\), \(\gamma=\allowbreak d-\delta_2/2\), \(z=\allowbreak -K\),
+\(P_n=\allowbreak G_n+z^{n+1}\). In its \(L=\allowbreak 4\) row,
+\(D=\allowbreak (1-\gamma)^2d+\delta_2-2\delta_3+\delta_4-\tau^2\).
+For \(b\ge\allowbreak 3\), use the actual positive terminal remainder
+\(R=\allowbreak KG_{b-1}(K)g\) and the same even-moment quantities
+\(m,\allowbreak  k,\allowbreak  t_0,\allowbreak  e,\allowbreak  V,\allowbreak  \gamma\) as in (Q87.3.2), with
+\(\rho=\allowbreak ErR\), \(B_*=\allowbreak \gamma+ke\), and
+\(P_n=\allowbreak G_n+kz^{n+1}G_{b-1}(-z)\).
+
+The same-parameter bounds are
+
+\[
+\begin{gathered}
+3d/10\le\gamma\le6d/5,\quad\\
+5d/8\le B_*\le3d/2,\quad\\
+d-k\rho\ge41d/80,\quad 0\le ke\le39d/80,
+\end{gathered}
+\]
+\[
+\begin{gathered}
+\kappa \delta_2\le\rho\le \delta_2,\quad\\
+m^2\le1-209d/384,\quad 1-\gamma\ge17/25.
+\end{gathered}\tag{Q87.4.3}\label{eq:Q87:4.3}
+\]
+
+For \(b=\allowbreak 2\), the bounds needed here are
+\(1-\gamma\ge\allowbreak 13/18\), \(1-\gamma-\tau\ge\allowbreak 1/2\),
+\(1-2\tau\ge\allowbreak 5/9\). In the three \(b\ge\allowbreak 3,\allowbreak  L\ge\allowbreak 3\) rows,
+\(M_0=\allowbreak (\theta-\delta)d\). In the two \(L=\allowbreak 2\) rows,
+\(M_0=\allowbreak \max(k\rho-\gamma d,\allowbreak  0)\), with \(k=\allowbreak 1,\allowbreak  \rho=\allowbreak \delta_2\) for
+\(b=\allowbreak 2\); that latter mean is already nonnegative.
+For \(b=\allowbreak 2,\allowbreak  L=\allowbreak 3\), \(M_0=\allowbreak 0\); for \(L=\allowbreak 4\),
+\(M_0=\allowbreak (\theta\kappa-\tau)d\).
+
+All row-vector ranges, raw second moments, and means belong to these
+same actual fluctuations. The \(b\ge\allowbreak 3,\allowbreak  L=\allowbreak 2\) scalar includes the terminal end-sign term from Section~\ref{proof:Q5-C071}/Section~\ref{proof:Q5-C075}. Every row has \(S_8\le\allowbreak -d/10\).
+
+For later covariance arguments, write
+\(P_n=\allowbreak A_P+zB_P\), \(z=\allowbreak i\sqrt x\). The finite coefficient
+lemma says
+
+\[
+ 1-x\le A_P,B_P\le1\quad(n\ge3),
+\]
+\[
+\begin{gathered}
+n=1: A_P\ge1-6x/5, 0\le B_P\le6x/5;\qquad\\
+n=2: A_P\ge1-x, 1-6x/5\le B_P\le1.
+\end{gathered}\tag{Q87.4.4}\label{eq:Q87:4.4}
+\]
+
+These include every finite tail. In particular \(\Re P_n\ge\allowbreak 1/2\)
+in all required rows.
+
+\paragraph{Q87.5 Every nonunit inner connector with a singleton arm at least five}\label{part:Q87.5}
+
+Let \(a\ge\allowbreak 5\), \(m_0=\allowbreak a-2\ge\allowbreak 3\), \(U_0=\allowbreak K^2G_{m_0}(-K)g\),
+and \(\beta=\allowbreak \beta_a\). Apply positive \(A\) to (Q87.1.4) for
+\(\bar f_{a-1}\). Its last two nonconstant convolution terms are the
+actual messages \(\beta_{a-1}p\) and \(\beta_{a-2}W_2\).
+Retaining both, and using their actual lower coefficients \(\tau\),
+gives
+
+\[
+ 0<W_a\le cp-(1-\tau)r+U_0-\beta,\qquad c=1-2\tau.
+ \tag{Q87.5.1}\label{eq:Q87:5.1}
+\]
+
+This upper side is nonnegative because it equals the actual path
+plus omitted nonnegative path terms and nonnegative coefficient
+remainders. 
+
+Set \(H=\allowbreak G_{m_0}(-K)g-\tau1\). Scaled AM–GM with (Q87.4.1) gives
+
+\[
+ W_aX\le CBc
+ [1+(Z+(B/c)K^2H-a_0-(B/c)\beta)/(2B)]^2.
+ \tag{Q87.5.2}\label{eq:Q87:5.2}
+\]
+
+Indeed \(K^2H=\allowbreak U_0-\tau r\); the coefficient of \(r\) after
+dividing the two factors by \(c\) and \(CB\) is exactly \(-\tau/c\).
+Both scaled factors are nonnegative.
+
+The exact Section~\ref{proof:Q5-C075} centered-covariance argument gives
+
+\[
+ EK^2H\le0,\qquad \|H\|^2\le d-\tau^2,
+ \tag{Q87.5.3}\label{eq:Q87:5.3}
+\]
+
+and the nonpositive original inner products
+\(\langle V_0,\allowbreak  H\rangle\le\allowbreak 0\) in every two-row case, or
+\(\langle V_0,\allowbreak  KH\rangle\le\allowbreak 0\) in every one-row case.
+These statements were proved in Section~\ref{proof:Q5-C075}, the centered-covariance estimates for this same
+\(H\), all \(m_0\ge\allowbreak 2\), and every row of part Q87.4. They are independent of \(c\) and therefore apply in (Q87.5.2). In particular the Section~\ref{proof:Q5-C075} proof retains
+\(\|H\|^2\le\allowbreak  d-\tau^2\), rather than its later weaker \(\le\allowbreak  d\).
+
+For clarity, the mean uses
+\(\delta_2-\delta_3-\tau d\ge\allowbreak (\kappa-d)(\delta_2-d^2)\ge\allowbreak 0\).
+The latter follows by applying the original spectral bound to
+\(r+d1\). The covariance at \(L=\allowbreak 2\) is the actual covariance of
+the two finite arm remainders; the other one-row covariances are
+the finite coefficient inequalities in Section~\ref{proof:Q5-C075}. 
+
+Put \(\alpha=\allowbreak 17\theta/4=\allowbreak 221/128\). Apply (Q87.1.5) at \(u=\allowbreak 4/B\)
+to (Q87.5.2). In a two-row case its variance coefficient is at most
+\(\alpha\|V_0+(B/c)H\|^2/B^2\). In a one-row case it is at
+most \((17/4)\|V_0+(B/c)KH\|^2/B^2\).
+The covariance signs, (Q87.5.3), and \(\|K\|^2\le\allowbreak \theta\) imply
+
+\[
+ \log E[(W_aX)^4]\le S_8/2+F(d,\tau),
+\]
+\[
+\begin{gathered}
+F(d,\tau)=4\log(1-2\tau)-\frac{4\tau}{1-2\tau}\\
++\alpha\frac{d-\tau^2}{(1-2\tau)^2}.
+\end{gathered}\tag{Q87.5.4}\label{eq:Q87:5.4}
+\]
+
+Here \(\alpha<\allowbreak 3\) and \(17/4<\allowbreak 4c_*\) pay the old vector costs.
+The old mean upper stays valid because \(EK^2H\le\allowbreak 0\).
+
+The following pays (Q87.5.4) on the entire original domain:
+
+\[
+ F(d,\tau)\le-691d/128.
+ \tag{Q87.5.5}\label{eq:Q87:5.5}
+\]
+
+For fixed \(d\), its \(\tau\)-derivative, multiplied by
+\((1-2\tau)^3\), is
+
+\[
+ -12+(40-2\alpha)\tau-32\tau^2+4\alpha d
+ \le-227/144<0
+\]
+
+using \(\tau\le\allowbreak 2/9,\allowbreak  d\le\allowbreak 1/3\). Thus it suffices to put
+\(\tau=\allowbreak \kappa d\). Let \(h=\allowbreak 12\kappa-\alpha=\allowbreak 691/128\).
+Using \(\log(1-2\tau)\le\allowbreak -2\tau-2\tau^2\), the assertion
+\(F+hd\le\allowbreak 0\), after multiplication by \((1-2\tau)^2\), is
+bounded above by
+
+\[
+ \tau^2[32-\alpha-4h/\kappa+4hd-32\kappa^2d^2].
+\]
+
+The bracket increases on \([0,\allowbreak  1/3]\), since its derivative is at
+least \(1351/96>\allowbreak 0\). Its endpoint is
+
+\[
+ 3875/128-691/19+691/96-361/288=-3295/21888<0.
+\]
+
+This proves (Q87.5.5).
+Since \(S_8\le\allowbreak -d/10\), (Q87.5.4) now gives precisely (Q87.0.2).
+
+\paragraph{Q87.6 Every nonunit inner connector with a singleton arm four}\label{part:Q87.6}
+
+Here the exact coefficient retained from (Q87.1.4) is \(\beta_3=\allowbreak d\),
+not merely its lower bound \(\tau\). The root identity is
+
+\[
+ W_4=(1-d)p-r+(s-t)-d.
+\]
+
+Put \(c=\allowbreak 1-d\), \(H=\allowbreak g-r-d1\). Formula (Q87.5.2) holds with
+\(\beta=\allowbreak d\), and
+
+\[
+ EH=0,\quad\|H\|^2=d+\delta_2-d^2,\quad EK^2H=-\delta_2+d^2\le0.
+ \tag{Q87.6.1}\label{eq:Q87:6.1}
+\]
+
+The required two-row covariances remain nonpositive. At \(L=\allowbreak 2\),
+the covariance proof in Section~\ref{proof:Q5-C075}, the two-row covariance calculation has no centering constant
+inside its covariance, and \(EH=\allowbreak 0\). At \(b=\allowbreak 2,\allowbreak  L=\allowbreak 3,\allowbreak  4\), \(EV_0=\allowbreak 0\),
+so replacing \(\tau1\) by \(d1\) leaves the covariance
+unchanged.
+
+Every one-row covariance is also nonpositive
+with this new centering. At \(z=\allowbreak -K=\allowbreak i\sqrt x\), \(G_2(z)=\allowbreak 1+z\),
+and the spectral product controlling its negative is
+
+\[
+ \delta d+x[A_P-\delta+(x-d)B_P].
+ \tag{Q87.6.2}\label{eq:Q87:6.2}
+\]
+
+For \(n\ge\allowbreak 3\), and also \(n=\allowbreak 2\), the square bracket is at least
+\(\kappa-2/9-1/3=\allowbreak 11/288>\allowbreak 0\), by (Q87.4.4).
+For \(n=\allowbreak 1\), it is at least
+\(41/80-13/80-13/80=\allowbreak 15/80>\allowbreak 0\).
+Thus the same comparison to \(S_8/2\) gives the increment
+
+\[
+ F_4=4\log(1-d)-4d/(1-d)
+ +\alpha[(1+\theta)d-d^2]/(1-d)^2.
+\]
+
+Let \(h_4=\allowbreak 8-\alpha(1+\theta)=\allowbreak 22823/4096\).
+Using \(\log(1-d)\le\allowbreak -d-d^2/2\), multiplication by \((1-d)^2\)
+bounds \(F_4+h_4d\) by
+
+\[
+ d^2[10-\alpha-2h_4+h_4d-2d^2]
+ \le d^2[10-\alpha-5h_4/3]
+ =-12451d^2/12288\le0.
+\]
+
+Hence \(\log E[(W_4X)^4]\le\allowbreak -(h_4+1/20)d<\allowbreak -11d/2\).
+This covers every terminal length and every \(L\ge\allowbreak 2\).
+
+\paragraph{Q87.7 Singleton arm three and every inner length at least three}\label{part:Q87.7}
+
+The exact root is \(W_3=\allowbreak W_2+s-d\). Combining with (Q87.4.1),
+
+\[
+ W_3X\le CB[1+(Z+Bs-a_0-Bd)/(2B)]^2.
+ \tag{Q87.7.1}\label{eq:Q87:7.1}
+\]
+
+The new fluctuation has the same mean as \(Z\); its deterministic
+loss adds \(-4d\) to the ordinary-fourth exponent.
+For one-row cases its row vector becomes
+\([\delta+z(P_n-B)]g\). At every original frequency,
+
+\[
+ |\delta+z(P_n-B)|^2-|\delta+zP_n|^2
+ =Bx(B-2\Re P_n)\le0.
+ \tag{Q87.7.2}\label{eq:Q87:7.2}
+\]
+
+Put \(\Delta=\allowbreak 4c_*-17/4=\allowbreak 937/256\). Except for the separately
+treated \(b\ge\allowbreak 3,\allowbreak  L=\allowbreak 3\) row, (Q87.1.5), (Q87.7.2), and the paid table yield
+
+\[
+ \log E[(W_3X)^4]\le S_8/2-4d-\Delta D/B^2
+ \tag{Q87.7.3}\label{eq:Q87:7.3}
+\]
+
+in every remaining one-row case.
+
+For \(b=\allowbreak 2,\allowbreak  L=\allowbreak 5\), \(D/B^2\ge\allowbreak \theta d\). For \(b=\allowbreak 2,\allowbreak  L\ge\allowbreak 6\),
+it is at least \((\theta-7\theta^2/15)d\). To verify both entire
+domains, put \(A(t)=\allowbreak A_0-2\theta\sigma t+t^2\). The derivative
+of \(A(t)/(1-2t)^2\) has positive numerator
+\(4A_0-2\theta\sigma+2t(1-2\theta\sigma)\), for
+\((A_0,\allowbreak  \sigma)=\allowbreak (\theta,\allowbreak  1)\) or
+\((\theta-7\theta^2/15,\allowbreak  \kappa)\). Its minimum is therefore at zero.
+For \(b\ge\allowbreak 3,\allowbreak  L=\allowbreak 4\), \(D/B^2\ge\allowbreak \theta(71/63)d>\allowbreak \theta d\);
+for \(b\ge\allowbreak 3,\allowbreak  L\ge\allowbreak 5\), \(D/B^2\ge\allowbreak \theta d\).
+
+The exact lower constants used in (Q87.7.3) are
+
+\[
+\begin{gathered}
+\Delta\theta=12181/8192>67/50,\qquad\\
+\Delta(\theta-7\theta^2/15)=4738409/3932160>11/10.
+\end{gathered}
+\]
+
+With the corresponding \(S_8/2\) values, each coefficient is
+strictly more negative than \(-11d/2\). In particular the weakest
+long terminal-two row has loss at least \(4+2/5+11/10=\allowbreak 11/2\).
+
+For \(b=\allowbreak 2,\allowbreak  L=\allowbreak 3\), the new two-row vector is \(-(\gamma g+s)\).
+Since \(\gamma d\le\allowbreak  \delta_2\), its square norm is at most \(\delta_3\).
+Its mean is zero, and direct use of (Q87.1.5) gives
+
+\[
+\begin{gathered}
+\log E[(W_3X)^4]\\
+\le4\log(1-\gamma)-4\tau/(1-\gamma)-4d\\
++\alpha \delta_3/(1-\gamma)^2\\
+\le[-153/16+17901/32768]d<-9d.
+\end{gathered}\tag{Q87.7.4}\label{eq:Q87:7.4}
+\]
+
+For \(b=\allowbreak 2,\allowbreak  L=\allowbreak 4\), the new vector is \(\tau1-\tau g+r+t\), whose
+norm square is
+\(\delta_2-2\delta_3+\delta_4-\tau^2+\tau^2d\le\allowbreak  \delta_2+\tau^2d\).
+Using the same table parameters gives
+
+\[
+\begin{gathered}
+\log E[(W_3X)^4]\le\\
+-(89/16)d-4d-4d+8\theta\kappa d\\
++4\alpha(\theta+4/81)d<-8d.
+\end{gathered}\tag{Q87.7.5}\label{eq:Q87:7.5}
+\]
+
+For instance \(8\theta\kappa<\allowbreak 2\), while
+\(4\alpha(\theta+4/81)=\allowbreak 2873/1024+221/648<\allowbreak 13/4\), so the last
+strict comparison follows on the entire domain.
+
+Finally let \(b\ge\allowbreak 3,\allowbreak  L=\allowbreak 3\), \(t_*=\allowbreak B_*\in[0,\allowbreak  1/2]\), \(B=\allowbreak 1-t_*\).
+The new one-row vector is \([\delta+z(P_1-B)]g\). Writing
+\(G_{b-1}(-z)=\allowbreak A-zD_0\), its squared modulus is
+
+\[
+\begin{gathered}
+(\delta-kx^2D_0)^2+x(t_*-kxA)^2\\
+\le\delta^2+\theta t_*^2+c_0,\qquad\\
+c_0=(36/25)\theta^3(1+\theta)<7/50.
+\end{gathered}
+\]
+
+The last rational bound follows from
+\(\theta^3<\allowbreak 27/400\), \(1+\theta<\allowbreak 10/7\), and
+\((36/25)(27/400)(10/7)=\allowbreak 243/1750<\allowbreak 7/50\).
+The old row has \(D/d=\allowbreak 351/1280+\delta^2\). Therefore its saved
+cost, divided by \(d\), is at least
+
+\[
+ \frac{3/2-\alpha t_*^2}{(1-t_*)^2}\ge3/2.
+\]
+
+Indeed
+\[
+4c_*(351/1280)-(17/4)c_0
+>(79/10)(27/100)-(17/4)(7/50)=769/500>3/2,
+\]
+and the displayed quotient increases on \([0,\allowbreak  1/2]\), since its
+derivative has numerator \(2(3/2-\alpha t_*)>\allowbreak 0\).
+Consequently its fourth exponent is at most
+\(-d/20-4d-3d/2=\allowbreak -111d/20<\allowbreak -11d/2\).
+This finishes every \(L\ge\allowbreak 3\) at \(a=\allowbreak 3\).
+
+\paragraph{Q87.8 Singleton arm three, two original inner edges, and a real turn}\label{part:Q87.8}
+
+For the remaining short-outer row use
+
+\[
+ Y=f_3TA(p\bar f_b).
+ \tag{Q87.8.1}\label{eq:Q87:8.1}
+\]
+
+The two inner edges meet at their original midpoint and are both
+directed away from that midpoint. Thus at the singleton root the
+last-edge operator is \(T\), and at the midpoint the terminal-edge
+operator is \(A\). The root arm is the outward three-path \(f_3=\allowbreak p+r+s-d\).
+
+The positive terminal square used in \hyperref[part:Q87.3]{part Q87.3} gives
+
+\[
+ A(p\bar f_b)\le m^2[p-\gamma+kK\bar R],
+\]
+\[
+ 0<TA(p\bar f_b)\le m^2[Bq-r-kK^2\bar R-ke],\qquad B=1-\gamma.
+ \tag{Q87.8.2}\label{eq:Q87:8.2}
+\]
+
+For \(b=\allowbreak 2\), use \(m=\allowbreak k=\allowbreak 1,\allowbreak  \bar R=\allowbreak r,\allowbreak  e=\allowbreak 0\). Set
+\(V_0=\allowbreak \gamma1+k\bar R\), \(\rho=\allowbreak Er\bar R\).
+Scaled AM–GM yields
+
+\[
+ Y\le m^2B[1-d/2-ke/(2B)+Z/2]^2,\qquad
+ Z=K^2[g-V_0/B].
+ \tag{Q87.8.3}\label{eq:Q87:8.3}
+\]
+
+Its exact mean and row-vector norm satisfy
+
+\[
+\begin{gathered}
+EZ=(\gamma d-k\rho)/B,\qquad\\
+\|g-V_0/B\|^2\\
+\le d-2ke/B+k^2V/B^2.
+\end{gathered}\tag{Q87.8.4}\label{eq:Q87:8.4}
+\]
+
+Here \(E(g\bar R)=\allowbreak e\), while \(\|V_0\|^2\le\allowbreak  k^2V\) follows
+from the identity \eqref{eq:Q71:8.2}. The sign of the mean
+is retained; (Q87.1.5) allows either sign. Thus
+
+\[
+\begin{gathered}
+\log EY^4\le4\log m^2+4\log B-4d+\alpha d\\
++[4\gamma d-4k\rho-(4+2\alpha)ke]/B\\
++\alpha k^2V/B^2.
+\end{gathered}\tag{Q87.8.5}\label{eq:Q87:8.5}
+\]
+
+\paragraph{Q87.8.1 Terminal two}\label{part:Q87.8.1}
+
+Here \(\rho=\allowbreak \delta_2\), \(B\ge\allowbreak 13/18\), and the exact norm is
+
+\[
+ \|V_0\|^2=\delta_2-d^2+\delta_2^2/4.
+\]
+
+Put \(c_0=\allowbreak \alpha/(13/18)^2=\allowbreak 1377/416\).
+Use \(\delta_2-\gamma d\ge\allowbreak 0\), \(B\le\allowbreak 1\), and \(\log B\le\allowbreak -\gamma\)
+in (Q87.8.3)–(Q87.8.5). After collecting the same moments,
+
+\[
+ \log EY^4\le-(8-\alpha)d+(c_0-2)\delta_2+(4-c_0)d^2
+ -2d\delta_2+(c_0/4)\delta_2^2.
+\]
+
+The last two terms sum to a nonpositive number because
+\((c_0/4)\delta_2\le\allowbreak (c_0\theta/4)d<\allowbreak 2d\).
+Since \(c_0>\allowbreak 2\) and \(4-c_0>\allowbreak 0\), the full bound is at most
+
+\[
+ [-8+\alpha+(c_0-2)\theta+(4-c_0)/3]d
+ =-220097d/39936<-11d/2.
+ \tag{Q87.8.6}\label{eq:Q87:8.6}
+\]
+
+The final numerator comparison is \(220097>\allowbreak 219648\).
+
+\paragraph{Q87.8.2 Every terminal length at least four}\label{part:Q87.8.2}
+
+Use the same \(\delta_2\) throughout, and put
+
+\[
+ C_0=1989/800,\quad N_0=13927/2048,\quad
+ \gamma_0=d-43\delta_2/25>0.
+\]
+
+The finite alternating sums imply
+\(\beta_b\ge\allowbreak \tau\), \(e,\allowbreak  \rho\ge\allowbreak \kappa \delta_2\),
+\(V\le\allowbreak  \delta_2\), and \(\gamma\ge\allowbreak \gamma_0\).
+Thus (Q87.8.5) is bounded by
+
+\[
+\begin{gathered}
+-4\tau-4d+\alpha d+\\
+\Phi(B),\quad\\
+\Phi(B)=4\log B+4(1-B)d/B+C_0\delta_2/B^2-N_0\delta_2/B.
+\end{gathered}
+\]
+
+On \(B\ge\allowbreak 17/25\), its derivative is positive. After multiplying
+by \(B^3\), the derivative is
+\(4B^2-4dB+N_0\delta_2B-2C_0\delta_2\).
+The first two terms are at least \(1768/1875>\allowbreak 9/10\);
+\(2C_0\delta_2<\allowbreak 5(7/50)=\allowbreak 7/10\); the omitted term is nonnegative.
+Hence we may replace \(B\) by \(B_0=\allowbreak 1-\gamma_0\ge\allowbreak  B\).
+Now \(2/3\le\allowbreak  B_0\le\allowbreak 1\).
+
+For \(1\le\allowbreak  w\le\allowbreak 3/2\), convexity and \(N_0\ge\allowbreak 5C_0/2\) imply
+\(C_0w^2-N_0w\le\allowbreak  C_0-N_0\).
+Also \(4\gamma_0d/B_0\le\allowbreak 6d^2\). Using
+\(\log B_0\le\allowbreak -\gamma_0\) gives
+
+\[
+\begin{gathered}
+\log EY^4\le(-10+\alpha)d+\\
+\relax [272/25+C_0-N_0]\delta_2\\
+\le-9184899d/1638400<-28d/5.
+\end{gathered}\tag{Q87.8.7}\label{eq:Q87:8.7}
+\]
+
+The final comparison is \(9184899>\allowbreak 9175040\).
+
+
+\paragraph{Q87.8.3 Terminal three}\label{part:Q87.8.3}
+
+Here \(\beta_b=\allowbreak d\), \(e=\allowbreak \rho=\allowbreak \delta_2\), \(V=\allowbreak \delta_2+\delta_3\).
+Repeat the preceding argument with
+
+\[
+\begin{gathered}
+C_0=\alpha(36/25)(1+\theta)<7/2,\quad\\
+N_0=8+2\alpha>11,\quad\\
+\gamma_0=d-81\delta_2/80.
+\end{gathered}
+\]
+
+Monotonicity now follows immediately from
+\(N_0B-2C_0>\allowbreak 11(17/25)-7>\allowbreak 0\) and \(B>\allowbreak d\).
+The convex endpoint bound still holds since \(N_0\ge\allowbreak 5C_0/2\).
+The final upper is
+
+\[
+ (-10+\alpha)d+[81/20+C_0-N_0]\delta_2
+ \le(-10+\alpha)d<-11d/2.
+\]
+
+This completes (Q87.0.1) for (Q87.8.1). For \(M\ge\allowbreak 3\), the direction table instead uses \(W_3T^2(qf_b)\) and its eighth-moment estimate.

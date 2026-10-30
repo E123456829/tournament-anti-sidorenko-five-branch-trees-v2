@@ -1,0 +1,1179 @@
+\subsection{Minimum-one odd-root bridges and the complete fourth transfer}\label{proof:Q5-C084}
+\paragraph{Q84.0 Exact completed scope and the new unanchored fourth interface}
+
+The original finite host, measure, adjoint, vertices, and edges are retained.
+Write
+\fitdisplay{
+Jv=(Ev)1,\quad A=J+K,\quad T=J-K=A^*,\quad g=K1,
+ \quad p=1+g,\quad q=1-g,
+}{}
+\fitdisplay{
+f_n=A^n1,\quad \bar f_n=T^n1,\quad h_n=T f_{n-1},
+ \quad W_n=A \bar f_{n-1},\quad
+ I_q(H)=\E [q^{-1/3}|H|^{8/3}].
+}{Q84.0.1}
+The root has the original odd residual list
+\fitdisplay{
+(1,u_1,v_1,\ldots,u_j,v_j),\qquad
+ 1<u_1<v_1<\cdots<u_j<v_j,\qquad j\ge1.
+}{Q84.0.2}
+Its terminal has residual arms \((1,\allowbreak  b)\), with every integer \(b\ge2\).
+The inner and outer lengths \(L,\allowbreak  M\ge1\) are independent original lengths.
+
+The root configurations considered here are:
+
+* \(u_1=2\), every finite \(j\), every remaining arm, and all \(b,\allowbreak  L,\allowbreak  M\).
+* \(u_1=3\) or \(4\), \(j=1\), every \(v_1>u_1\), and all \(b,\allowbreak  L,\allowbreak  M\).
+
+Put \(X_{b,\allowbreak  L}=T^L(qf_b)\). For the second block use
+\fitdisplay{
+Y=pW_{u_1}\bar f_{v_1}X_{b,L}.
+}{Q84.0.3}
+For the first block put \(v=v_1\),
+\(P=\prod_{i=2}^j W_{u_i}\bar f_{v_i}\), and use
+\fitdisplay{
+Y=pP\begin{cases}
+       h_2f_v\,T(qf_b),&L=1,\ b\ge3,\ v\ge4,\\
+       \bar f_2W_v\,X_{b,L},&\text{all other original integer cases}.
+      \end{cases}
+}{Q84.0.4}
+The empty product is one. The choice depends on \(b,\allowbreak  v,\allowbreak  L\), independently of \(\mu\) or \(K\).
+
+Fourth-moment bound. Every message (Q84.0.3) or (Q84.0.4),
+including all original equal-pair decorations, satisfies
+\fitdisplay{
+\boxed{EY^4\le\exp(-705d/128),\qquad d=\E g^2.}
+}{Q84.0.5}
+
+Unanchored fourth-moment transfer. For every real original
+function \(H\), every legal original kernel, and every integer \(M\ge1\),
+\fitdisplay{
+\boxed{I_q(T^M H)^3\le e^{11d}(\E |H|^4)^2.}
+}{Q84.0.6}
+There is no reserved arm in (Q84.0.6). In particular no \(\bar f_a\) is inserted
+into the tree. The stronger coefficients for \(M=1,\allowbreak  2,\allowbreak  3\) are
+\(e^{204d/19},\allowbreak  e^{10d},\allowbreak  1\), respectively.
+
+The new all-length path ingredient is
+\fitdisplay{
+E(\bar f_M^4/q)\le e^{11d}\quad(M\ge4).
+}{Q84.0.7}
+It is proved here from the actual finite path convolution and a truncated
+quartic majorant. It is not ordinary path-mean monotonicity, a general
+weighted contraction, or a conclusion drawn from an arbitrary fourth
+budget.
+
+The exact final bridge for every listed original half-tree is therefore
+\fitdisplay{
+\boxed{I_q(T^M Y)^3\le e^{-d/64}\le1
+         \qquad(M\ge1).}
+}{Q84.0.8}
+This single bound covers the full continuous host domain and all integer
+tails. Its margin follows from \(2(705/128)-11=1/64\).
+
+Equal-arm factors and full reversal are handled below. The whole-tree assembly is given in Section~\ref{sec:five-chain}. A union with other exact root
+catalogues is explicitly separated from this theorem. No complete Q5,
+arbitrary terminal table, singleton-root role, or general branching
+recursion is claimed.
+
+\paragraph{Q84.1 Original finite calculus and finite spectral bookkeeping}
+
+Delete only atoms of zero original mass. All expectations, inner products,
+adjoints, and rotation blocks below use the original \(\mu\). Since
+\(K(x,\allowbreak  x)=0\), \(p(x),\allowbreak  q(x)\ge\mu(x)>0\). Every actual tree message is
+positive: the all-equal labeling already has positive weight. A and T are
+positive operators.
+
+Use the C014 calculus and the exact identities:
+\fitdisplay{
+r=Kg,\quad \sigma=Kr,\quad t=K\sigma,\\
+ \delta_i=\|K^i1\|_2^2,\quad d=\delta_1,\\
+ \theta=13/32,\quad\kappa=19/32,\quad\tau=d-\delta_2,
+}{}
+\fitdisplay{
+0\le d\le1/3,\quad \|K\|^2\le\theta,\quad
+ d^2\le \delta_2\le\theta d,\quad \delta_{i+1}\le\theta \delta_i,
+ \quad |KV(x)|\le\|V\|_2,\quad r\le pq/2.
+}{Q84.1.1}
+Also \(\E r=-d\), \(E\sigma=0\), \(\E t=\delta_2\), and \(\E(gr)=0\).
+The lower spectral-moment inequality used below is
+\fitdisplay{
+\delta_3\ge \delta_2^2/d\qquad(d>0),
+}{Q84.1.2}
+which is Cauchy on the same spectral measure of g.
+
+Define finite sums only:
+\fitdisplay{
+G_n(z)=\sum_{a=0}^{n-1}z^a,\quad
+ \beta_1=\beta_2=0,\quad
+ \beta_n=\sum_{a=1}^{\lfloor(n-1)/2\rfloor}(-1)^{a-1}\delta_a.
+}{}
+Positive finite convolution gives
+\fitdisplay{
+\sum_{a=0}^n(\pm K)^a1
+ =f_n^{\pm}+\sum_{a=3}^n\beta_a f_{n-a}^{\pm},
+ \qquad f_n^+=f_n,\ f_n^-=\bar f_n.
+}{Q84.1.3}
+Its coefficients obey
+\fitdisplay{
+\tau\le\beta_n\le d\ (n\ge3),\qquad
+ \beta_n\le d-\kappa \delta_2\ (n\ge5).
+}{Q84.1.4}
+The second bound retains \(-\delta_2+\delta_3\) and bounds the remaining finite
+alternating tail by its first positive end. No path mean is declared
+monotone in its length.
+
+At a frequency \(z=i\sqrt x\), \(0\le x\le\theta\), write
+\fitdisplay{
+G_n(z)=a_n+z c_n.
+}{}
+For \(n\ge2\), both coordinates lie in \([1-x,\allowbreak  1]\); for \(n=1\) they
+are \(1,\allowbreak  0\). For \(n\ge3\), \(a_n\le1-x+x^2\) and \(|G_n|\le1\).
+For \(n\ge4\), both coordinates are at most \(1-x+x^2\).
+Always \(|G_n|^2\le1+x\). These are finite alternating-sum statements.
+The geometric formula gives squared numerator \(1+x^n\) for odd n and
+\((1\pm x^{n/2})^2\) for even n, over \(1+x\). In the positive-ending
+even case \(n\ge6\), use \(2x^2+x^5\le1\).
+
+Let \(\nu\) be the original spectral measure of g. Then
+\fitdisplay{
+\nu([0,\theta])=d,\qquad\int x^a\,d\nu=\delta_{a+1}.
+}{}
+For \(Q(z)=A(x)+zB(x)\) and \(z=-K\), the exact signs are
+\fitdisplay{
+\E [Q(-K)g]=\int B\,d\nu,\qquad
+ \E [KQ(-K)g]=-\int A\,d\nu.
+}{Q84.1.5}
+Every spectral inequality below is applied only in this original spectral
+theorem. 
+
+If \(d=0\), g vanishes, and successive leaf integration makes all actual
+messages equal to one. K need not vanish. All final conclusions include
+this equality case. Divisions by d below are used only when d is positive.
+
+\paragraph{Q84.1.1 The full-mean exponential lemma}
+
+The full-mean bound in Q5-C081, §2, holds for every
+real original vector V and every \(s\ge0\)
+\fitdisplay{
+\E e^{sKV}\le
+ \exp\{sE(KV)+(17/64)s^2\|V\|_2^2\}.
+}{Q84.1.6}
+This full signed estimate is proved in
+Section~\ref{proof:Q5-C081}, paragraph~\ref{part:Q81.2}.
+Its fourth instance is also \eqref{eq:oc:signed-moments} with the
+vector sign changed because its operator is \(-K\). In particular
+the fourth-moment application is
+\fitdisplay{
+\E e^{4KV}\le e^{4E(KV)+(17/4)\|V\|^2}.
+}{Q84.1.7}
+
+\paragraph{Q84.1.2 Later negative pairs}
+
+The exact C067 pair-loss lemma and full reversal give
+\fitdisplay{
+P=\prod_i W_{u_i}\bar f_{v_i}\le e^{S-3nd},\quad
+ S=K U(-K)g,\quad
+ U(z)=\sum_i\sum_{a=u_i}^{v_i-1}z^{a-1},
+}{Q84.1.8}
+when all the displayed \(u_i\ge4\); n is their number. The intervals
+are disjoint finite intervals. Equation~\eqref{eq:root-post:late-mask}
+gives
+\fitdisplay{
+\|U(-K)g\|\le(3/8)\sqrt d,\qquad ES\le d/12.
+}{Q84.1.9}
+For example a finite zero-one mask Q satisfies
+\(|Q(i\sqrt x)|^2\le(1+x)/(1-x^2)^2\), whose maximum is
+\(32768/16245<100/49\). Multiplying by the first compulsory power
+and summing the possible positive mean powers proves (Q84.1.9). If the first
+short is at least five the sharper norm is \(\sqrt d/4\), and the common restoration uses the preceding bound.
+
+For a single canonical pair starting at three,
+\fitdisplay{
+W_3\bar f_v\le e^{S-(2d-\delta_2)},\qquad
+ S=K[z^2G_{v-3}(z)]g,\quad ES\le \delta_2.
+}{Q84.1.10}
+Its loss is exactly \(2d-\delta_2\), not \(3d\).
+
+\paragraph{Q84.2 An unanchored ordinary-fourth bridge for every outer length}
+
+Let B be any positive original kernel operator, with row \(h=B1\).
+Pointwise Cauchy and then Holder give
+\fitdisplay{
+|BH|^2\le h B(|H|^2),
+}{}
+\fitdisplay{
+I_q(BH)^3
+ \le E(h^4/q)\,\bigl[E\bigl((B(|H|^2))^2\bigr)\bigr]^2
+ \le E(h^4/q)\,\|B\|_{2\to2}^{4}(\E |H|^4)^2.
+}{Q84.2.1}
+The Holder exponents are 3 and \(3/2\); its first factor cubed is exactly
+\(h^4/q\). This proves (Q84.2.1) for arbitrary real H without an added arm.
+
+The exact C064 operator estimates are
+\fitdisplay{
+\|T\|\le1+32d/19,\quad
+ \|T^2\|^2\le(1+d/2)^4,\quad
+ \|T^M\|\le1\ (M\ge3).
+}{Q84.2.2}
+The middle expression contains d/2, not \(\delta_2\).
+
+For \(M=1\) the row is q and \(\E q^3\le1+4d\), because \(|\E g^3|\le d\).
+Thus the coefficient in (Q84.2.1) is at most \(e^{204d/19}\).
+
+For \(M=2\) write \(\bar f_2=q+r\) and \(t=r/q\). Positivity and (Q84.1.1) give
+\(-1\le t\le p/2\le1\). On this interval,
+\fitdisplay{
+(1+t)^4\le1+4t+(6+2p+p^2/4)t^2.
+}{}
+Since \(q(6+2p+p^2/4)\le12\), integration yields
+\fitdisplay{
+E(\bar f_2^4/q)\le1-d-\E g^3+4E(g^2r)+12\delta_2
+ \le1+(9/8)d+12\delta_2\le1+6d.
+}{Q84.2.3}
+The middle step uses \(r\le(1-g^2)/2\) and
+\(-g-2g^2\le1/8\). To check the coefficient 12, expand it as
+\(33/4-23g/4-9g^2/4-g^3/4\); it decreases on [-1, 1] and equals
+12 at -1. Combining (Q84.2.3) and (Q84.2.2) gives coefficient \(e^{10d}\).
+
+For \(M=3\), the C056 actual path theorem gives
+\(E(\bar f_3^4/q)\le1-23d/36\le1\). Together with (Q84.2.2) this gives
+coefficient at most one.
+
+\paragraph{Q84.2.1 Every remaining path row: a finite quartic proof}
+
+Fix \(M\ge 4\). From (Q84.1.3),
+\fitdisplay{
+0<\bar f_M\le U=q+R-\beta_M,\quad
+ R=K G_{M-1}(-K)g.
+}{Q84.2.4}
+The upper U is nonnegative because it dominates an actual path.
+All \(n\ge 3\) also satisfy \(\bar f_n\le5/2\). Indeed their finite upper gives
+\fitdisplay{
+\bar f_n\le2+\sqrt{(1+\theta)d}-\kappa d\le5/2.
+}{}
+The scalar middle function increases on \([0,\allowbreak  1/3]\); at \(1/3\) the last
+comparison is \(\sqrt{15/32}\le67/96\), or \(4320\le4489\).
+Thus positivity gives the second actual upper \(\bar f_M\le(5/2)q\).
+
+For every real \(s\ge -1\),
+\fitdisplay{
+\min(1+s,5/2)^4\le1+4s+(57/4)s^2.
+}{Q84.2.5}
+On [-1, \(3/2\)] this is the quartic expansion with
+\(6+4s+s^2\le57/4\). Beyond \(3/2\), the quadratic is increasing and
+already majorizes \((5/2)^4\). Apply (Q84.2.5) to
+\(s=(R-\beta_M)/q\), which is at least -1 by (Q84.2.4):
+\fitdisplay{
+\bar f_M^4/q\le q^3+4q^2(R-\beta_M)
+                  +(57/4)q(R-\beta_M)^2.
+}{Q84.2.6}
+Apply the truncated quartic inequality directly to U.
+
+The same finite R obeys
+\fitdisplay{
+-d\le \E R\le-\tau,\quad \kappa \delta_2\le E(gR)\le \delta_2,
+ \quad \E R^2\le \delta_2,\quad |R|\le\sqrt d.
+}{Q84.2.7}
+Here \(M-1\ge 3\) permits \(|G_{M-1}|\le1\). The sign of E(gR) follows
+from its positive finite imaginary coordinate. In particular
+\fitdisplay{
+E q^2(R-\beta_M)
+ \le-2\tau-2\kappa \delta_2+d\sqrt d-\tau d,
+}{}
+\fitdisplay{
+E q(R-\beta_M)^2
+ \le \delta_2+3d^2+d\sqrt{\delta_2}+2d\delta_2.
+}{Q84.2.8}
+For the last inequality use \(|E(gR^2)|\le d\sqrt{\delta_2}\), from
+Cauchy and \(\E R^4\le d\,\allowbreak  \E R^2\), and retain the same \(E(gR)\).
+
+Substitution into (Q84.2.6), with \(\sqrt\theta<2/3\), gives
+\fitdisplay{
+E(\bar f_M^4/q)
+ \le1+\frac{199}{64}d+\frac{27}{2}d\sqrt d
+                         +\frac{3325}{64}d^2
+ \le1+11d+\frac{121}{2}d^2\le e^{11d}.
+}{Q84.2.9}
+The middle scalar inequality is valid on the full domain. After dividing
+its difference by d and multiplying by 64, it is
+\fitdisplay{
+505-864x+547x^2
+ =547(x-432/547)^2+89611/547>0,\qquad x=\sqrt d.
+}{}
+This proves (Q84.0.7) for every \(M\ge 4\) and then (Q84.0.6) by (Q84.2.1)--(Q84.2.3).
+
+\paragraph{Q84.3 Same-direction terminal envelopes and a stronger joint loss}
+
+For \(b\ge 3\) define the actual finite data
+\fitdisplay{
+\begin{gathered}
+R_b=K G_{b-1}(K)g,\quad m=1-\beta_b/2,\quad\\
+\lambda=1/m,\quad t_0=\beta_{b+1},\quad\\
+e=d-\beta_{b+2},\quad V_b=\E R_b^2,\quad\rho=E(rR_b),
+\end{gathered}
+}{}
+\fitdisplay{
+\begin{gathered}
+\gamma=\lambda t_0-\lambda^2V_b/2,\quad\\
+a_1=\lambda e,\quad B_*=\gamma+a_1,\quad B=1-\gamma,\\
+\quad P_n(z)=G_n(z)+\lambda z^{n+1}G_{b-1}(-z).
+\end{gathered}
+}{Q84.3.1}
+The exact C058/C075 finite proof supplies
+\fitdisplay{
+1\le\lambda\le6/5,\quad 3d/10\le\gamma\le6d/5,
+ \quad \kappa \delta_2\le e,\rho\le \delta_2,
+}{}
+\fitdisplay{
+V_b=\delta_2+\delta_3\ (b=3),\quad V_b\le \delta_2\ (b\ge4),
+ \quad 5d/8\le B_*\le3d/2.
+}{Q84.3.2}
+For \(b=3,\allowbreak  t_0=d,\allowbreak  e=\rho=\delta_2,\allowbreak  \beta_b=d\).
+For \(b=4,\allowbreak  t_0=\tau,\allowbreak  e=\delta_2,\allowbreak  \beta_b=d\).
+When \(b\ge 5,\allowbreak  V_b\ge\kappa^2\delta_2\), by the finite coordinate lower bound.
+
+The exact finite positive envelope is
+\fitdisplay{
+X_{b,L}\le m^2\left[V_L-\gamma \bar f_{L-1}-a_1\bar f_{L-2}
+                    -\sum_{i=3}^L\varepsilon_i \bar f_{L-i}\right],
+}{}
+\fitdisplay{
+V_L=\sum_{i=0}^L(-K)^i1+\lambda(-K)^L R_b,
+ \quad\varepsilon_3=d-\lambda\rho\ge41d/80,
+ \quad\varepsilon_i\ge\tau\ (i\ge4).
+}{Q84.3.3}
+Only existing indices occur. This is an actual envelope for the one
+terminal \(qf_b\); it is not obtained by swapping a different terminal
+into an old moment conclusion.
+
+\paragraph{Q84.3.1 A new stronger common bound for \(B_*\)}
+
+We shall need the whole-integer bound
+\fitdisplay{
+\boxed{B_*\ge d-3\delta_2/4.}
+}{Q84.3.4}
+In addition \(B_*\ge d\) for \(b=3,\allowbreak  B_*\ge d-\delta_2/2\) for \(b=4\),
+and on all \(b\ge 3\)
+\fitdisplay{
+B_*-d\le11\delta_2/10.
+}{Q84.3.5}
+
+Put \(S=t_0+e\). For fixed actual S, \(V_b\) the expression
+\(\lambda S-\lambda^2V_b/2\) increases for \(1\le\lambda\le6/5\).
+For \(b\ge 4,\allowbreak  S\ge d-\delta_3\), so its derivative is at least
+\(d-(\theta+6/5)\delta_2>0\); the \(b=3\) derivative is positive using
+\(S=d+\delta_2,\allowbreak  V_b=\delta_2+\delta_3\).
+It therefore suffices to put \(\lambda=1\) for a lower bound.
+
+For even b, \(S=d\) and \(V_b\le \delta_2\). For \(b=3\) the bound is
+\(d+(\delta_2-\delta_3)/2\ge d\). For odd \(b\ge 5\) write \(b-1=2a,\allowbreak  a\ge 2\).
+On each frequency, put \(c=1-(-1)^a x^a\). The exact finite formulas
+give the integrands
+\fitdisplay{
+S:\ c,\qquad V_b:\ xc^2/(1+x).
+}{}
+The function \(c-xc^2/[2(1+x)]\) increases throughout the allowed
+interval. Since \(c\ge 1-x^2\), its value is at least
+\fitdisplay{
+1-x^2-\frac{x(1-x^2)^2}{2(1+x)}\ge1-3x/4.
+}{}
+The last difference divided by x is
+\(1/4-x/2+x^2/2-x^3/2\ge1/4-\theta/2>0\).
+This proves (Q84.3.4), every finite end sign included.
+
+For (Q84.3.5), \(\lambda-1=\lambda\beta_b/2\le3d/5\), hence
+\((\lambda-1)d\le3\delta_2/5\). For \(b=3\) use
+\(\lambda-\lambda^2/2\le1/2\). For \(b\ge 4\) use \(S\le d+\delta_3\)
+and drop the negative quadratic term; this gives
+\(B_*-d\le(3/5+39/80)\delta_2<11\delta_2/10\).
+
+\paragraph{Q84.3.2 All finite coordinate ranges}
+
+The exact C075 coefficient proof gives
+\fitdisplay{
+P_n=A_n^P+zC_n^P,\quad1-x\le A_n^P,C_n^P\le1
+ \qquad(n\ge3).
+}{Q84.3.6}
+The same statement holds for \(\mathcal P_n=G_n+z^{n+1}\), \(n\ge 3\).
+Split n into its four residue classes. With
+\(S_a=\sum_{i=0}^a(-x)^i\), the base pairs and corrections for \(P_n\) are
+\fitdisplay{
+\begin{array}{c|c|c}
+n&\text{base coordinates}&\text{corrections}\\\hline
+4a&(S_{2a-1},S_{2a-1})&(\lambda x^{2a+1}c_N,\lambda x^{2a}a_N)\\
+4a+1&(S_{2a},S_{2a-1})&(-\lambda x^{2a+1}a_N,\lambda x^{2a+1}c_N)\\
+4a+2&(S_{2a},S_{2a})&(-\lambda x^{2a+2}c_N,-\lambda x^{2a+1}a_N)\\
+4a+3&(S_{2a+1},S_{2a})&(\lambda x^{2a+2}a_N,-\lambda x^{2a+2}c_N).
+\end{array}
+}{}
+Every correction fits the adjacent last alternating term, since
+\(\lambda x<1\) and \(\lambda x^2<x\). The case \(n=3\) in the final
+imaginary coordinate is \(1-\lambda x^2c_N\ge1-x\) directly.
+This proves every integer n. The two short polynomials are
+\fitdisplay{
+P_1=(1-\lambda xa_N)+z\lambda x c_N,
+ \quad P_2=(1-\lambda x^2c_N)+z(1-\lambda xa_N).
+}{Q84.3.7}
+
+\paragraph{Q84.3.3 Raw envelopes for use with the same first pair}\label{part:Q84.3.3}
+
+Write an actual nonnegative upper as
+\(X_{b,\allowbreak  L}\le C[(1-c)q+KQ(-K)g-a]\), and put \(D=c+a\).
+Here is the full table used in parts Q84.5--8:
+
+
+\begingroup\small
+\setlength{\tabcolsep}{3pt}
+\setlength{\LTleft}{0pt}\setlength{\LTright}{\fill}
+\begin{longtable}{@{}>{\raggedright\arraybackslash}p{0.1200\linewidth}>{\raggedright\arraybackslash}p{0.2000\linewidth}>{\raggedright\arraybackslash}p{0.2000\linewidth}>{\raggedright\arraybackslash}p{0.2000\linewidth}>{\raggedright\arraybackslash}p{0.2000\linewidth}@{}}
+\caption{Raw terminal masks indexed by \((b,L)\).}\label{tab:parameters:q5-c084:1}\\
+\toprule
+\((b,L)\) & C & c & a & Q \\
+\midrule\endfirsthead
+\toprule
+\((b,L)\) & C & c & a & Q \\
+\midrule\endhead
+\bottomrule\endfoot
+2, 1 & 1; & 0; & \(\gamma\); & z. \\
+\addlinespace[2pt]
+2, 2 & 1; & \(\gamma\); & 0; & \(1+z^2\). \\
+\addlinespace[2pt]
+2, 3 & 1; & \(\gamma\); & \(\tau\); & \(B+z+z^3\). \\
+\addlinespace[2pt]
+\(2,\allowbreak L\ge 4\) & 1; & \(\tau\); & \(\tau\); & \(\mathcal P_{L-1}\). \\
+\addlinespace[2pt]
+\(b\ge 3,\allowbreak 1\) & \(m^2\); & 0; & \(\gamma\); & \(\lambda z G_{b-1}(-z)\). \\
+\addlinespace[2pt]
+\(b\ge 3,\allowbreak 2\) & \(m^2\); & \(\gamma\); & \(a_1\); & \(P_1\). \\
+\addlinespace[2pt]
+\(b\ge 3,\allowbreak 3\) & \(m^2\); & \(B_*\); & \(\epsilon_3\); & \(P_2-\gamma\). \\
+\addlinespace[2pt]
+\(b\ge 3,\allowbreak 4\) & \(m^2\); & \(\delta=41d/80\); & \(\tau\); & \(P_3\). \\
+\addlinespace[2pt]
+\(b\ge 3,\allowbreak L\ge 5\) & \(m^2\); & \(\tau\); & \(\tau\); & \(P_{L-1}\). \\
+\end{longtable}
+\endgroup
+
+
+In the \(b=2\) rows \(\gamma=d-\delta_2/2\) and \(B=1-\gamma\). Their finite envelope is
+\fitdisplay{
+X_{2,L}\le\sum_{i=0}^Lz^i1+z^{L+2}1-\gamma \bar f_{L-1}
+                         -\sum_{i=3}^L\eta_i \bar f_{L-i},
+\quad \eta_i\ge\tau.
+}{Q84.3.8}
+At \(L\ge 4\) retain the actual last two losses \(\tau \bar f_1,\allowbreak  \tau \bar f_0\).
+For \(b\ge 3,\allowbreak  L=4\) retain \(\delta \bar f_1,\allowbreak  \tau \bar f_0\); for \(L\ge 5\) retain
+\(\tau \bar f_1,\allowbreak  \tau \bar f_0\). 
+The short rows follow by applying T once to the preceding actual row.
+Every upper remains nonnegative because the discarded terms are positive.
+
+\paragraph{Q84.4 The exact first-pair envelopes and the common fourth bookkeeping}
+
+Applying A to the negative finite convolution, retaining its last constant
+term, gives for \(v>2\) the literal bound
+\fitdisplay{
+W_v\le2-\beta_v-S'_v-\beta_{v-1}p,
+ \qquad S'_v=\sum_{a=0}^v(-K)^a1.
+}{}
+Here \(\bar f_2=S'_2\) and
+\(S'_v-S'_2=-z^2G_{v-2}(z)g\), with \(z=-K\). Consequently
+\fitdisplay{
+\bar f_2+W_v\le2-\Gamma+K[-zG_{v-2}(z)g-\beta\one],
+ \quad\beta=\beta_{v-1},\quad\Gamma=\beta_v+\beta.
+}{Q84.4.1}
+In particular for \(v=3,\allowbreak  \beta=0,\allowbreak  \Gamma=d\), and the remainder is sigma.
+For \(v\ge 4\) put \(e_v=d-\beta_{v+1}\); then
+\fitdisplay{
+\kappa \delta_2\le e_v\le \delta_2,
+ \quad \E [-zG_{v-2}(-K)g]=-\beta_v,
+ \quad E K[-zG_{v-2}(-K)g-\beta\one]=-e_v.
+}{Q84.4.2}
+For \(v=3\) take \(e_v=0\). The exact short losses are
+\fitdisplay{
+\Gamma=d\ (v=3),\quad2d\ (v=4),\quad2d-\delta_2\ (v=5),
+ \quad\Gamma\ge2\tau\ (v\ge6).
+}{Q84.4.3}
+
+Combine (Q84.4.1) with a raw row of \mbox{\hyperref[part:Q84.3.3]{part Q84.3.3}} and \(p=1+g\).
+AM--GM, or log \(u\le u-1\) on the four positive actual factors, proves
+\fitdisplay{
+H=p \bar f_2W_v X_{b,L}\le C\exp\{-D-\Gamma+KN\},
+}{}
+\fitdisplay{
+N=[Q(z)-zG_{v-2}(z)]g+(c-\beta)1,
+ \qquad E(KN)=\E [KQ(z)g]-e_v.
+}{Q84.4.4}
+The constant \((c-\beta)1\) is part of the same original vector. It
+cannot be discarded or bounded independently before squaring its norm.
+For \(b\ge 3,\allowbreak  \log C=2\log m\le-\beta_b\).
+Applying (Q84.1.7) gives the single-variable certificate
+\fitdisplay{
+\log \E H^4\le4\log C-4(D+\Gamma)+4E(KN)
+                                      +(17/4)\|N\|^2.
+}{Q84.4.5}
+All the following tables are explicit payments of (Q84.4.5), using that same
+actual N. Write \(\zeta=\delta_2/d\) only when \(d>0\); then
+\(d\le\zeta\le\theta\).
+
+The one structural unit-inner exception in (Q84.0.4) has instead
+\fitdisplay{
+h_2+f_v\le2-\beta_v+K[-zG_{v-2}(-z)]g.
+}{Q84.4.6}
+Since \(h_2=q-r\), this is the positive finite convolution after the
+actual r terms cancel. Its mean is \(+e_v\). \mbox{\hyperref[part:Q84.7]{part Q84.7}} proves its
+whole-parameter unit-inner payment separately.
+
+\paragraph{Q84.5 The entire first pair (2, 3), all terminals and all inner lengths}
+
+Here \(\beta=0,\allowbreak  \Gamma=d\), and N in (Q84.4.4) is
+\([Q-z]g+c_{1}\). The following table lists complete bounds for its squared
+norm and for \(\mathcal L=-\log C+D+\Gamma-E(KN)\).
+
+
+\begingroup\small
+\setlength{\tabcolsep}{3pt}
+\setlength{\LTleft}{0pt}\setlength{\LTright}{\fill}
+\begin{longtable}{@{}llp{.38\linewidth}p{.38\linewidth}@{}}
+\caption{The first pair \((2,3)\): lower bounds for the loss \(\mathcal L\) and upper bounds for the full squared norm.}
+\label{tab:odd84:root23}\\
+\toprule
+\(b\)&\(L\)&\(\mathcal L\) lower&\(\|N\|^2\) upper\\
+\midrule\endfirsthead
+\toprule
+\(b\)&\(L\)&\(\mathcal L\) lower&\(\|N\|^2\) upper\\
+\midrule\endhead
+\bottomrule\endfoot
+2&1&\(2d-\delta_2/2\)&0\\
+2&2&\(3d-3\delta_2/2\)&\(d-\kappa\delta_2\)\\
+2&3&\(4d-3\delta_2/2-\gamma d\)&\(d+\theta^2\delta_2\)\\
+2&\(\ge4\)&\(4d-3\delta_2\)&\(d+\delta_2/3\)\\
+\(\ge3\)&1&\(3d-7\delta_2/4\)&\(d/3\)\\
+\(\ge3\)&2&\(4d-59\delta_2/20\)&\(d\)\\
+\(\ge3\)&3&\(22d/5-59\delta_2/20\)&\(d\)\\
+\(\ge3\)&4&\(361d/80-3\delta_2\)&\(d\)\\
+\(\ge3\)&\(\ge5\)&\(5d-4\delta_2\)&\(d+\delta_2/2\)\\
+\end{longtable}
+\endgroup
+
+
+Here and below notation in tables denotes the displayed mathematical
+quantities.
+
+We prove all norm entries. For \(b=2,\allowbreak  L=1\) the joint \text{primitive }is zero,
+by the preceding primitive formula. For \(L=2\),
+\fitdisplay{
+\|[1+z^2-z]g+\gamma\one\|^2
+ =d-\delta_2+\delta_3-d^2+\delta_2^2/4\le d-\kappa \delta_2.
+}{Q84.5.1}
+For \(L=3\) it is \((B+z^3)g+\gamma\one\), with squared norm
+\(B^2d+\delta_4-2\gamma \delta_2+\gamma^2\le d+\theta^2\delta_2\).
+Indeed \(B^2d+\gamma^2\le d\), since \(\gamma\le d\le 1/3\).
+For \(L\ge 4\), the coordinates of \(\mathcal P_n-z\), \(n\ge 3\), give
+\fitdisplay{
+|\mathcal P_n-z|^2\le(1-x+x^2)^2+x^3
+ \le1-2x/3.
+}{Q84.5.2}
+The last deficit follows from \(2-3\theta-\theta^3>2/3\).
+Its mean as a primitive is nonpositive, so adding \(\tau\one\) increases
+its squared norm by at most \(\tau^2\le \delta_2\). This proves that row.
+
+For \(b\ge 3,\allowbreak  L=1\),
+\fitdisplay{
+|\lambda zG_{b-1}(-z)-z|^2
+ \le(36/25)x^2+x^3+x/25<1/3
+}{Q84.5.3}
+on the whole frequency interval. The imaginary coordinate is bounded
+by \(\max(\lambda-1,\allowbreak  x)\); substitution of \(\theta\) in the nonnegative
+polynomial proves the last strict comparison.
+
+For \(L=2,\allowbreak  |P_1-z|^2\le(1+x)(1-x+x^2)^2\le1-2x/5\).
+The last scalar deficit follows from
+\(1-\theta-\theta^2-\theta^4>2/5\). Also
+\(\E [(P_1-z)g]=a_1-d\). Its constant contribution is at most
+\fitdisplay{
+\gamma^2+2\gamma(a_1-d)
+ \le(21/100)d^2\le(21/100)\delta_2.
+}{Q84.5.4}
+To see this, use \(\gamma\le 6d/5\) and \(a_1\le 6\delta_2/5\); the possible positive
+bracket is at most \(7d/40\). Thus the norm is at most d.
+
+For \(L=3\) the polynomial after the subtraction is
+\(B+\lambda z^3G_{b-1}(-z)\). Its squared modulus is at most \(B^2\).
+In fact the positive tail term is paid by its real cross term because
+\fitdisplay{
+\lambda x|G_{b-1}|^2\le351/512<57/80\le2B c_{b-1}.
+}{}
+The \text{primitive }mean is \(-\lambda\rho\). Consequently
+\fitdisplay{
+\|N\|^2\le B^2d-2B_*\lambda\rho+B_*^2\le d.
+}{Q84.5.5}
+For the final inequality, the quadratic in \(B_*\) is increasing above
+\(\lambda\kappa \delta_2\), and \(B_*\ge5d/8\) lies above that point.
+Replace \(B_*\) by \(\gamma+\lambda \delta_2\), and \(\rho\) by kappa \(\delta_2\). The
+difference from d is at most
+\fitdisplay{
+\gamma[\gamma(1+d)-2d+2\lambda\theta \delta_2]
+ \le-\gamma d/256\le0.
+}{Q84.5.6}
+Here \((6/5)(4/3)+(12/5)\theta^2=2-1/256\). This retains the constant
+cross term; a triangle bound on \(B_*1\) would not give (Q84.5.5).
+
+For every \(n\ge 3,\allowbreak  |P_n-z|^2\le1-2x/5\); for \(n\ge 4\) the stronger
+\(1-x/2\) holds. For \(n=3\) use
+\((1-x+6x^2/5)^2+(36/25)x^5\). Its excess divided by x is at most
+\(-2+(17/5)\theta+(36/25)\theta^3+(36/25)\theta^4<-2/5\).
+For \(n\ge 4\) its real coordinate is at most
+\(1-x+x^2+(6/5)x^3\le1-3x/8\), since
+\(1-\theta-(6/5)\theta^2=1013/2560>3/8\). Its imaginary
+coordinate after subtraction has magnitude at most x. Hence use
+\((1-3x/8)^2+x^3\le1-x/2\).
+The means of these \text{primitive }polynomials are nonpositive. Adding delta1
+at \(L=4\) costs at most \(\delta^2<(2/5)\delta_2\); adding \(\tau\one\) later costs at most
+\(\delta_2\). This proves the last two norm entries.
+
+The loss column follows directly from (Q84.3.3), (Q84.3.4), and the exact means
+in (Q84.1.5). In particular at \(L=3\),
+\(E K(P_2-\gamma)g\le-(4/5-6d/5)d\le-2d/5\).
+All table entries in (Q84.4.5) are at most -\(6d\). The two tight \(b=2\) entries are
+\fitdisplay{
+-\frac{31}{4}d+\frac{445}{128}\delta_2
+ \le-\frac{25959}{4096}d\quad(L=2),
+}{}
+\fitdisplay{
+-\frac{47}{4}d+\frac{161}{12}\delta_2
+ \le-\frac{2419}{384}d\quad(L\ge4).
+}{Q84.5.7}
+For \(b=2,\allowbreak  L=3\) use gamma \(d\le \delta_2\) and \(\theta^2<1/6\) to get an upper
+\(-5683d/768<-6d\). The other entries are stronger by direct use of
+\(\delta_2\le\theta d\). Thus
+\fitdisplay{
+\E [p\bar f_2W_3X_{b,L}]^4\le e^{-6d}
+ \qquad\text{for every }b\ge2,L\ge1.
+}{Q84.5.8}
+Every same \text{primitive }in this proof has squared norm at most \(9d/4\).
+
+\paragraph{Q84.6 Terminal two and every longer first pair (2, v), \(v\ge 4\)}
+
+Use the same \(\bar f_2W_v\) direction for every L here. Let \(h=v-2\) and
+\(G_h=a+zc\). Write \(D_0=Q-zG_h\) and \(s=c_{\rm row}-\beta\);
+then the norm in (Q84.4.5) is exactly
+\fitdisplay{
+\|D_0g+s_{1}\|^2=\|D_0g\|^2+2sE(D_0g)+s^2.
+}{Q84.6.1}
+This section gives the complete \(v=4,\allowbreak  v=5\), and \(v\ge 6\) payments.
+
+\paragraph{Q84.6.1 First and second inner lengths}
+
+For \(L=1,\allowbreak  D_0=-z^2G_{v-3}\), its \text{primitive }mean is nonnegative,
+and \(s=-\beta\). Therefore
+\fitdisplay{
+\|N\|^2\le \delta_2+(1+\theta)\delta_3\le(8/5)\delta_2.
+}{Q84.6.2}
+Using \(\Gamma\ge2\tau\) and \(e_v\ge\kappa \delta_2\), (Q84.4.5) is at most
+\fitdisplay{
+-12d+(577/40)\delta_2\le-7859d/1280<-6d.
+}{Q84.6.3}
+
+For \(L=2,\allowbreak  \gamma=d-\delta_2/2\) and \(s=\gamma-\beta\).
+
+* \(v=4: D_0=1-z\), \(s=-\delta_2/2\), and
+  \(\|N\|^2=d+\delta_2+d\delta_2+\delta_2^2/4\le(8/5)d\).
+  The total loss is \(\mathcal L=4d-\delta_2/2\), so the exponent is
+  at most \(-16d+2\delta_2+(34/5)d<-6d\).
+* \(v=5: D_0=1-z-z^3\), \(s=-\delta_2/2\), and
+\fitdisplay{
+\|N\|^2\le d+\delta_2-(2-\theta)\delta_3+d\delta_2-3\delta_2^2/4
+   \le(4/3)d.
+}{}
+  Indeed \(d\le \zeta\) and (Q84.1.2) bound its ratio by
+  \(1+\zeta-\kappa\zeta^2\le1+\theta-\kappa\theta^2<4/3\).
+  Here \(\mathcal L=4d-3\delta_2/2\), giving an upper
+  \(-379d/48<-6d\).
+* \(v\ge 6\): both coordinates of \(G_h\) are at most \(1-x+x^2\).
+  The polynomial has squared modulus at most
+\fitdisplay{
+(1-x^2+x^3)^2+x(1-x+x^2)^2
+   \le1+x-(19/10)x^2.
+}{}
+  The deficit uses \(4-5\theta-\theta^4>19/10\).
+  Now \(0\le s\le \delta_2/2\), \(E(D_0g)=-\beta_v\), and its
+  constant contribution is nonpositive. Hence
+\fitdisplay{
+\|N\|^2\le d+\delta_2-(19/10)\delta_3\le(23/20)d.
+}{}
+  The last bound follows from
+  \(1+\zeta-(19/10)\zeta^2\le43/38<23/20\).
+  The loss is at least \(4d-(7/2-\kappa)\delta_2\), so (Q84.4.5) is at most
+  \(-16d+(93/8)\delta_2+(391/80)d<-6d\).
+
+The polynomial estimates are full interval inequalities. For the first
+\(v=4\) bound use \(d\le 1/3\) and \(\delta_2\le \theta\) d; its ratio is at most
+\(1+(175/128)\theta<8/5\).
+
+\paragraph{Q84.6.2 The third inner length}
+
+Here \(Q=B+z+z^3\). The three exact/upper norm formulas are
+\fitdisplay{
+\begin{array}{c|l}
+v&\|N\|^2\text{ upper}\\\hline
+4&B^2d+2B\delta_2+\delta_3+\delta_4+5\delta_2^2/4\\
+5&B^2d+2B\delta_2+\delta_3+\delta_2^2/4\\
+\ge6&d+2\delta_2-(2/5)\delta_3-2\gamma d+\gamma^2d+\delta_2^2/4.
+\end{array}
+}{Q84.6.4}
+For \(v=4\) the imaginary coordinate is -x; for \(v=5\) it is zero.
+For \(v\ge 6\) the real coordinate is at most \(B+x-x^2+x^3\), and the
+imaginary coordinate has magnitude at most \(x^2\). The inequality
+\fitdisplay{
+(1+x-x^2+x^3)^2+x^5\le1+2x-(2/5)x^2
+}{}
+follows from \(1-3\theta^2-\theta^4>2/5\). Its constant s is
+nonnegative and at most \(\delta_2/2\), with nonpositive \text{primitive }mean.
+These facts prove all entries of (Q84.6.4).
+
+Substitute them in (Q84.4.5). All gamma-dependent terms are nonpositive
+after the following common estimate:
+\fitdisplay{
+-9\gamma/2+(17/4)\gamma^2+(85/16)\zeta^2d\le0.
+}{Q84.6.5}
+Indeed \(\gamma\ge 51d/64,\allowbreak  \gamma\le 1/3\), and
+\((37/12)(51/64)>(85/16)\theta^2\).
+Writing \(C_0=\theta(1+\theta)\), the remaining fourth exponents are
+bounded by
+\fitdisplay{
+\begin{array}{c|l}
+4&[-63/4+(21/2+17C_0/4)\zeta]d\\
+5&[-63/4+(29/2+17\theta/4)\zeta]d\\
+\ge6&[-63/4+(161/8)\zeta-(17/10)\zeta^2]d.
+\end{array}
+}{Q84.6.6}
+They are all below -\(6d\) on \([0,\allowbreak  \theta]\); even dropping the last
+negative quadratic leaves the third at most \(-1939d/256<-6d\).
+Each norm in (Q84.6.4) is at most \(9d/4\), using \(\delta_2\le \theta\) d and \(d\le 1/3\).
+
+\paragraph{Q84.6.3 Fourth and every longer inner length}
+
+Now \(Q=\mathcal P_n\), \(n=L-1\ge 3\), and \(s=\tau-\beta\le 0\).
+Its real coordinate is at most \(1-x+x^2\), and both coordinates lie
+in \([1-x,\allowbreak  1]\). For \(v=4\) or 5,
+\fitdisplay{
+|Q-zG_h|^2\le(1+x^2)^2+x^3
+ \le1+(13/5)x^2.
+}{Q84.6.7}
+For \(v=4\) the constant contribution is at most \(3\delta_2^2\); for \(v=5\) its
+cross term is nonpositive and only \(\delta_2^2\) is needed. It follows that
+\fitdisplay{
+\|N\|^2\le d+(3/2)\delta_2\quad(v=4),\qquad
+ \|N\|^2\le d+(6/5)\delta_2\quad(v=5).
+}{Q84.6.8}
+For \(v\ge 6,\allowbreak  c_h\le1-x+x^2\) improves the real coordinate to
+\(1+x^3\), while the imaginary difference is at most x. Hence
+\fitdisplay{
+|Q-zG_h|^2\le1+3x^3+x^6.
+}{}
+Moreover \(\E [(Q-zG_h)g]\ge-\theta \delta_2\), since
+\(\E(Qg)\ge\tau\) and \(\beta_v\le d-\kappa \delta_2\).
+Thus
+\fitdisplay{
+\|N\|^2\le d+(3\theta^2+\theta^5)\delta_2
+                         +(1+2\theta)\delta_2^2
+ \le d+(4/5)\delta_2.
+}{Q84.6.9}
+The last scalar inequality uses \(\delta_2\le \theta/3\) and
+\(3\theta^2+\theta^5+(1+2\theta)\theta/3<4/5\).
+
+The loss lower bounds for \(v=4,\allowbreak  5,\allowbreak \ge 6\) are respectively
+\(5d-2\delta_2,\allowbreak  \ 5d-3\delta_2,\allowbreak  \ 5d-141\delta_2/32\).
+Using (Q84.6.8)--(Q84.6.9), the fourth exponents are at most
+\fitdisplay{
+-2537d/256,\qquad-2817d/320,\qquad-9227d/1280,
+}{Q84.6.10}
+respectively. This covers every \(L\ge 4\). Combining the whole section,
+\fitdisplay{
+\E [p\bar f_2W_vX_{2,L}]^4\le e^{-6d}
+ \qquad(v\ge4,L\ge1).
+}{Q84.6.11}
+Every \text{primitive }used here has squared norm at most \(9d/4\).
+
+\paragraph{Q84.7 Unit inner connector, all \(b\ge 3\) and \(v\ge 4\): the new actual direction}\label{part:Q84.7}
+
+Use \(H=p h_2f_v T(qf_b)\), exactly as prescribed in (Q84.0.4).
+Combining (Q84.4.6) with the first \(b\ge 3\) row gives
+\fitdisplay{
+H\le m^2e^{-\gamma-\beta_v+KN},\qquad
+ N=z[\lambda G_{b-1}(-z)-G_{v-2}(-z)]g,
+}{}
+\fitdisplay{
+E(KN)=-\lambda e+e_v.
+}{Q84.7.1}
+Consequently its total loss is
+\(\beta_b+B_*+\beta_v-e_v\). The opposite signs that caused the old
+unit-inner norm difficulty have disappeared in this actual direction.
+
+For all n, \(h\ge 2\), putting \(\Delta=\lambda-1\le1/5\), finite coordinate
+differences give
+\fitdisplay{
+|z[\lambda G_n(z)-G_h(z)]|^2
+ \le x(1+x)(\Delta+x)^2\le17/80.
+}{Q84.7.2}
+Indeed each coordinate difference of two G's is at most x, and each
+coordinate of \(\Delta G_n\) is at most Delta. The endpoint upper is
+\(\theta(1+\theta)(1/5+\theta)^2<17/80\).
+
+This bound suffices when \(b=3,\allowbreak  b=4\), or \(v=4\). Their loss lower bounds are
+respectively
+\fitdisplay{
+3d-2\delta_2,\qquad3d-5\delta_2/2,\qquad3d-11\delta_2/4.
+}{Q84.7.3}
+For \(b=3\) use \(\beta_b=d\) and \(B_*\ge d\). For \(b=4\) use \(\beta_b=d\) and
+\(B_*\ge d-\delta_2/2\). For \(v=4\) use \(\beta_v-e_v=\tau\).
+With norm at most \(17d/80\), every resulting fourth exponent is below -\(6d\).
+
+It remains to cover \(b\ge 5\) and \(v\ge 5\), with no upper bound on either integer.
+Here
+\fitdisplay{
+\boxed{\|N\|^2\le3d/32.}
+}{Q84.7.4}
+For \(v=5\), write \(n=b-1\ge 4,\allowbreak  h=3\), and
+\(G_n=G_3+z^3G_{n-3}\). Then
+\fitdisplay{
+z[\lambda G_n-G_3]=\Delta zG_3+\lambda z^4G_{n-3}.
+}{}
+Their real cross term is nonpositive: apart from positive factors it is
+\((1-x)c_{n-3}-a_{n-3}\le0\). This also holds for \(n-3=1\), whose
+coordinates are 1, 0. Thus the squared modulus is at most
+\fitdisplay{
+\Delta^2 x+\lambda^2(1+x)x^4,
+}{}
+whose uniform upper is
+\(\theta/25+(36/25)(1+\theta)\theta^4<3/32\).
+For \(v\ge 6\), both n and h are at least four. Their difference begins at
+degree at least four. Since \(|G_n|\le1\), its norm is bounded by
+\fitdisplay{
+\theta[1/5+(6/5)\theta^2]^2
+ =13498693/209715200<3/32.
+}{Q84.7.5}
+Here \(\sqrt{1+\theta}<6/5\) bounds the finite difference tail. This
+proves every finite n, h and all their relative orders; no length scan is
+being substituted for the finite factorization.
+
+Finally (Q84.3.4) and \(\beta_v-e_v\ge d-2\delta_2\) give
+\fitdisplay{
+\beta_b+B_*+\beta_v-e_v\ge3d-15\delta_2/4.
+}{}
+Using (Q84.7.4) in (Q84.1.7), the fourth exponent is at most
+\fitdisplay{
+-12d+15\delta_2+(51/128)d
+ \le-705d/128.
+}{Q84.7.6}
+This is the tight common constant in Theorem A. This proof supplies all
+\(b\ge 3,\allowbreak  v\ge 4\) for the actual unit-inner direction, with no score-dependent
+choice and no lost original arm. Its \text{primitive }is also bounded by \(9d/4\).
+
+\paragraph{Q84.8 All \(b\ge 3,\allowbreak  v\ge 4\), and every nonunit inner connector}
+
+Return to the original \(H=p \bar f_2W_vX_{b,\allowbreak  L}\) direction, \(L\ge 2\).
+We give the remaining full-domain raw-norm certificates. Define
+\fitdisplay{
+D_0=Q-zG_{v-2},\quad s=c-\beta,\quad
+ C_s=2sE(D_0g)+s^2.
+}{Q84.8.1}
+All bounds in this section retain \(C_s\) with its actual constant and mean.
+
+\paragraph{Q84.8.1 The complete second-connector norm table}
+
+Here \(Q=P_1,\allowbreak  c=\gamma\). Put \(h=v-2\) and write \(G_{b-1}=a_N+zc_N\).
+Then
+\fitdisplay{
+D_0=(1-\lambda xa_N+xc_h)+z(\lambda xc_N-a_h),
+ \quad E(D_0g)=a_1-\beta_v<0.
+}{Q84.8.2}
+The last sign follows from \(a_1\le6\delta_2/5<\tau\).
+The complete norm table is
+\fitdisplay{
+\begin{array}{c|c}
+\text{range}&\|N\|^2\text{ upper}\\\hline
+b=3&3d/2\\
+b=4&2d\\
+b\ge5,v=4&9d/4\\
+b\ge5,v=5&2d\\
+b\ge5,v\ge6&8d/5.
+\end{array}
+}{Q84.8.3}
+
+\(b=3\). The polynomial in (Q84.8.2) has squared modulus at most
+\(1+x-2x^2+x^3\). Let \(m_0=\beta_v-\lambda \delta_2>0\), so
+\(C_s=s^2-2m_0s\). When \(s\ge 0\), this is nonpositive. Indeed
+\fitdisplay{
+\gamma+2\lambda \delta_2\le3\tau,
+}{}
+because after division by d the difference is at least
+\fitdisplay{
+9/5-(117/25)\zeta+(18/25)\zeta^2\ge9/512>0.
+}{}
+This uses (Q84.1.2), the exact \(b=3\) gamma, and monotonicity in lambda and
+zeta on their stated intervals. If \(s<0\), then
+\(|s|\le\lambda^2(\delta_2+\delta_3)/2\), whence
+\fitdisplay{
+C_s\le\lambda^2(1+\theta)d\delta_2
+            +(\lambda^4/4)(1+\theta)^2\delta_2^2
+ \le(5/6)\delta_2.
+}{Q84.8.4}
+The coefficient before the last relaxation is
+\(27/40+28431/204800=166671/204800<5/6\).
+Thus
+\fitdisplay{
+\|N\|^2\le d+(11/6)\delta_2-(51/32)\delta_3\le3d/2.
+}{}
+The final quadratic in zeta increases to \(\theta\) and its endpoint is less
+than \(3/2\). This proves the first whole-parameter row.
+
+\(b=4\). Since \(a_N=1-x,\allowbreak  c_N=1\), the polynomial norm is at most
+\(1+x+\lambda^2x^3(1+x)\). If \(s\ge 0\) then
+\(s\le d/5<2(\tau-6\delta_2/5)\), so \(C_s\le 0\). If \(s<0\), use
+\(|s|\le43\delta_2/25\) and \(m_0\le\tau\). This yields
+\fitdisplay{
+C_s/\delta_2\le(86/25)d-(301/625)\delta_2
+ \le6149/5625<11/10.
+}{Q84.8.5}
+Here \(\delta_2\ge d^2\) and monotonicity of the remaining quadratic put its maximum
+at \(d=1/3\). Also
+\((36/25)\theta^2(1+\theta)<27/80\). Therefore
+\(\|N\|^2\le d+(39/16)\delta_2<2d\), proving the second row.
+
+The constant bound just used, and reused below, follows on every \(b\ge 4\)
+from \(\gamma\ge\lambda\tau-\lambda^2\delta_2/2\) and \(\beta\le d\):
+\fitdisplay{
+(\beta-\gamma)_+
+ \le[\lambda+\lambda^2/2-(\lambda-1)/\theta]\delta_2
+ \le(3/2)\delta_2<(43/25)\delta_2.
+}{}
+The bracket decreases for \(1\le\lambda\le6/5\), since
+\(1+\lambda-1/\theta<0\). For \(v\ge 6\), the further bound
+\(\beta\le d-\kappa \delta_2\) improves this to
+\((\beta-\gamma)_+\le(29/32)\delta_2<(901/800)\delta_2\).
+
+\(b\ge 5,\allowbreak  v=4\). The polynomial is bounded by
+\(1+x+(8/5)x^2\). To verify it, use real upper \(1+\lambda x^2\)
+and imaginary magnitude at most \(1-\kappa x\). The excess quadratic
+coefficient is at most
+\(97/80+23/160+6/25<8/5\).
+Positive s again gives \(C_s\le 0\). For negative s, \(|s|\le43\delta_2/25\)
+and \(m_0\le d-\kappa \delta_2\), so
+\fitdisplay{
+C_s/\delta_2\le86/75+(9159/10000)(13/96)<13/10.
+}{}
+Hence \(\|N\|^2\le d+(59/20)\delta_2<9d/4\).
+
+\(b\ge 5,\allowbreak  v=5\). Now \(a_h=1-x,\allowbreak  c_h=1\). The polynomial norm is at most
+\(1+x+x^2/2\): use real upper \(1+\lambda x^2\) and imaginary
+magnitude at most \(1-(1+\kappa)x\). The excess coefficient is bounded
+by \(-63/80+663/640+6/25=7815/16000<1/2\).
+When \(s\ge 0\) the constant term is nonpositive. Otherwise
+\(m_0\le d-(1+\kappa)\delta_2\), giving
+\fitdisplay{
+C_s/\delta_2\le(86/25)d-(25241/10000)\delta_2
+ \le77959/90000<7/8.
+}{Q84.8.6}
+Thus \(\|N\|^2\le d+(15/8+\theta/2)\delta_2<2d\).
+
+\(b\ge 5,\allowbreak  v\ge 6\). Both finite coordinate pairs have the stronger upper
+\(1-x+x^2\). The polynomial norm is at most
+\fitdisplay{
+(1+x^3)^2+x(1-2x+2x^2)^2\le1+x-(9/10)x^2.
+}{Q84.8.7}
+The deficit coefficient is
+\(4-10x+8x^2-4x^3-x^4\); it decreases to
+\(1009135/1048576>9/10\). If \(s<0\), (Q84.1.4) and (Q84.3.2) give
+\fitdisplay{
+|s|\le(901/800)\delta_2,\quad m_0\le d-2\kappa \delta_2,
+}{}
+\fitdisplay{
+C_s/\delta_2\le(901/400)d-(900099/640000)\delta_2
+ \le3424701/5760000<3/5.
+}{Q84.8.8}
+For \(s\ge 0\) use \(t_0\le d-\kappa \delta_2\) and
+\(V_b\ge\kappa^2\delta_2\). The possible positive factor
+in \(C_s\) is at most
+\fitdisplay{
+\gamma+2a_1-3\tau
+ \le[-9/5+(9239/2048)\zeta]d\le d/30.
+}{}
+Since \(s\le 6d/5\), it follows that \(C_s\le d^2/25\le(3/5)\delta_2\)
+in this case as well. Combining with (Q84.8.7),
+\fitdisplay{
+\|N\|^2\le d+(8/5)\delta_2-(9/10)\delta_3
+ \le(3075/2048)d<(8/5)d.
+}{Q84.8.9}
+This proves every row of (Q84.8.3), including all terminal and first-pair
+integer tails and the whole continuous domain.
+
+The corresponding lower losses are, in the same row order,
+\fitdisplay{
+5d-697\delta_2/160,\quad5d-497\delta_2/160,
+ \quad5d-39\delta_2/20,\quad5d-59\delta_2/20,
+ \quad5d-697\delta_2/160.
+}{Q84.8.10}
+For the first we use a weaker common bound. For \(b=4\) keep
+\(\beta_b=d\) and \(B_*\ge d-\delta_2/2\). For \(v=4\) or5 keep its exact \(\Gamma\) and \(e_v\).
+Equation (Q84.4.5) gives upper fourth exponents, respectively,
+\fitdisplay{
+-8379d/1280,\ -8259d/1280,\ -1163d/160,
+ \ -1073d/160,\ -1567d/256.
+}{Q84.8.11}
+Every one is below -\(6d\).
+
+\paragraph{Q84.8.2 The complete third-connector norm and loss table}
+
+Here \(Q=P_2-\gamma,\allowbreak  c=B_*\), and
+\fitdisplay{
+E(D_0g)=\varepsilon_3-\beta_v,
+ \quad-6\delta_2/5\le E(D_0g)\le\theta \delta_2,
+ \quad-3\delta_2/4\le s\le21\delta_2/10.
+}{Q84.8.12}
+These follow from (Q84.3.4)--(Q84.3.5). In particular
+\(C_s\le(49/8)\delta_2^2\).
+
+For \(v\ge 6\) its real coordinate is at most
+\(1+x-(1+\kappa)x^2+x^3\), and the imaginary magnitude is at most
+\(x/5+x^2\). Squaring gives
+\fitdisplay{
+|D_0|^2\le1+2x-x^2.
+}{Q84.8.13}
+For a direct continuous check, the two discarded negative terms have
+degrees three and five; the remaining coefficient comparison is
+\(( (51/32)^2+12/5)\theta^2+\theta^4<19/16\).
+Then (Q84.1.2), \(d\le 1/3\), and (Q84.8.12) imply
+\fitdisplay{
+\|N\|^2\le d+2\delta_2-\delta_3+(49/8)\delta_2^2\le2d,
+}{}
+because \(2\theta+(25/24)\theta^2=24193/24576<1\).
+
+For \(v=4\), the polynomial is bounded by
+\((1+x)^2+(36/25)x^3\), hence by \(1+(8/3)x\).
+Now \(s=B_*-d\) and \(E(D_0g)=-\lambda\rho\). Positive s costs nothing,
+since \(s\le11\delta_2/10<2\lambda\rho\); negative s costs at most
+\((189/80)\delta_2^2\le \delta_2/3\). Thus \(\|N\|^2\le d+3\delta_2<9d/4\).
+For \(v=5\) the polynomial is bounded by
+\((1+x)^2+\theta^2x^3\le1+(5/2)x\). Its mean is
+\(\delta_2-\lambda\rho\in[-\delta_2/5,\allowbreak  \theta \delta_2]\), and the constant costs
+at most \((17/8)\delta_2^2<3\delta_2/10\). Again \(\|N\|^2<9d/4\).
+
+The loss lower bounds for \(v=4,\allowbreak  5,\allowbreak \ge 6\) are
+\fitdisplay{
+27d/5-39\delta_2/20,\quad27d/5-59\delta_2/20,
+ \quad27d/5-697\delta_2/160.
+}{Q84.8.14}
+They use the actual mean
+\(EK(P_2-\gamma)g\le-2d/5\), and the exact first-pair loss where
+available. With the norm bounds \(9d/4,\allowbreak  9d/4,\allowbreak  2d\), (Q84.4.5) is at most
+\fitdisplay{
+-1419d/160,\qquad-1159d/160,\qquad-7707d/1280.
+}{Q84.8.15}
+Thus this whole connector also has a fourth exponent below -\(6d\).
+
+\paragraph{Q84.8.3 Fourth and every longer connector, all first-pair lengths}
+
+At \(L=4,\allowbreak  Q=P_3\) and \(c=\delta=41d/80\). The polynomial has real coordinate
+at most \(1+\lambda x^2\) and imaginary difference of magnitude at
+most x. Hence
+\fitdisplay{
+|D_0|^2\le1+(31/10)x^2.
+}{}
+Here \(s=\delta-\beta<0\), with \(|s|\le39d/80\), and
+\(E(D_0g)\ge-\lambda \delta_3\). Thus
+\fitdisplay{
+C_s\le2(39d/80)\lambda \delta_3+(39d/80)^2
+ \le(507/1280)\delta_2,
+}{}
+\fitdisplay{
+\|N\|^2\le d+(2119/1280)\delta_2\le2d.
+}{Q84.8.16}
+The loss is at least \(441d/80-141\delta_2/32\). Its fourth payment is
+\(-8179d/1280<-6d\).
+
+For every \(L\ge 5\), both coordinates of \(Q=P_{L-1}\) lie in [1-x, 1]. Thus
+the real coordinate of \(D_0\) is at most 1+x and its imaginary magnitude
+at most x. Since \(s=\tau-\beta\) lies in [-\(\delta_2\), 0] and
+\(E(D_0g)\ge-\delta_2\),
+\fitdisplay{
+\|N\|^2\le d+2\delta_2+\delta_3+\delta_4+3\delta_2^2
+ \le d+(3049/1024)\delta_2<9d/4.
+}{Q84.8.17}
+The loss is at least \(6d-173\delta_2/32\). Therefore
+\fitdisplay{
+\log \E H^4\le-24d+(173/8)\delta_2+(153/16)d
+ \le-1447d/256<-705d/128.
+}{Q84.8.18}
+All finite long connectors are covered by the one coefficient lemma,
+not by a numerical tail or an unproved monotonicity assertion.
+
+parts Q84.5--8 now prove (Q84.0.5) for every bare first pair \(u_1=2\),
+with every b, L and all \(v>2\). Every chosen same \text{primitive }has squared
+norm at most \(9d/4\). The further original pairs will be restored in
+\mbox{\hyperref[part:Q84.10]{part Q84.10}} without changing any chosen edge direction.
+
+\paragraph{Q84.9 Canonical single pairs with \(u=3\) or \(4\)}
+\label{part:root-post:canonical-fourth}
+For the actual message \(Y=pW_u\bar f_vT^L(qf_b)\), apply
+Proposition~\ref{prop:root-post:square-moments} with one pair
+\((u,v)\). It covers every \(b\ge2\), \(L\ge1\), and \(v>u\), without
+requiring a reserved root arm. Thus
+\[
+ \E Y^4\le e^{-705d/128}.
+\]
+The same proposition supplies the stronger interface
+\eqref{eq:root-post:canonical-certificate}: the pointwise exponent
+has its actual signed mean and its full vector has norm at most
+\(3\sqrt d/2\). In particular its tight \(b=2,L=1,u=3\) payment
+retains the joint norm \(\delta_2+\delta_3\), giving
+\[
+ -12d+(57/4)\delta_2+(17/4)\delta_3
+ \le-22567d/4096<-705d/128.
+\]
+The proof for \(u=2\) in parts Q84.5--8 is separate, with its stated
+integer choice of the first-pair direction. These two inputs prove
+the ordinary-fourth assertion for all listed root configurations.
+
+\paragraph{Q84.10 Restore every later residual pair and every equal pair}\label{part:Q84.10}
+
+For \(u_1=2\) every bare proof in parts Q84.5--8 has an explicit pointwise
+exponential certificate, with the same vector N satisfying
+\(\|N\|\le3\sqrt d/2\). Its paid scalar fourth expression is at most
+\(-705d/128\). The later disjoint pairs start at least at four.
+
+If there are \(n=j-1\ge 1\) later pairs, multiply this actual exponential
+upper by (Q84.1.8). Its remainder becomes the one original variable
+\(K[N+U(-K)g]\). The increase in the squared norm is at most
+\fitdisplay{
+2(3/2)(3/8)d+(3/8)^2d=81d/64.
+}{}
+Its mean increases by at most d/12. The additional scalar fourth cost
+is therefore at most
+\fitdisplay{
+-12nd+d/3+(17/4)(81/64)d
+ =-4829d/768-12(n-1)d<0.
+}{Q84.10.1}
+This operates on the proved same-variable certificate, not on an isolated
+numerical bound for \(EY^4\). It proves every finite number of later pairs,
+all their gaps and lengths, and preserves every original factor.
+
+Now restore the original maximum equal-length pairing. On a root pair of
+length a choose \(\bar f_aW_a\le1\), or its full reversal; on a terminal pair
+choose \(f_ah_a\le1\), or its full reversal. These are the actual
+C014/C143 equal-pair inequalities. Let \(E_r,\allowbreak  E_t\) be the full products.
+The actual message is explicitly
+\fitdisplay{
+Y_D=E_r\,[\text{chosen original root residual factors}]
+                         T^L(E_tqf_b).
+}{Q84.10.2}
+It is nonnegative and at most its corresponding bare residual message.
+Thus both the ordinary fourth budget and the final \(T/I_q\) target follow
+by positivity. No unequal factor is deleted pointwise. All multiplicities
+and all original equal-pair edges remain present in the oriented tree.
+
+Applying the new full-real bridge (Q84.0.6) to the actual \(Y_D\) proves (Q84.0.8).
+This proves the T089 bound throughout the stated parameter ranges.
+
+

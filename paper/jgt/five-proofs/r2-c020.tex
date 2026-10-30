@@ -1,0 +1,281 @@
+\subsection{All odd terminals with nonunit shortest arm}\label{proof:R2-C020}
+Let the original residual list be
+$(\ell,s_1,t_1,\ldots,s_j,t_j)$, with
+$2\le\ell<s_1<t_1<\cdots<s_j<t_j$, $s_1\ge4$, and finite $j\ge1$.
+Fix the actual terminal $F=\bar f_\ell\prod_{i=1}^jh_{s_i}f_{t_i}$,
+orient all connector edges toward the receiving root, and orient the
+receiving arm outward. We prove, for every independent $a\ge3,L\ge1$,
+\begin{equation}\tag{R20.1.1}\label{eq:R20:claim}
+\E[f_a(T^LF)^4]\le1-d/5.
+\end{equation}
+Together with R2-C018, whose second shortest arm is three,
+this covers every odd residual list with at least three entries and
+shortest entry at least two. Actual equal-arm decorations can be restored in place.
+
+Use the original finite receiving notation, exact covariance
+\eqref{eq:R17:covariance}, and centered Taylor identity
+\eqref{eq:R17:taylor}. In particular
+$\E C_a\le1-57d/32$, $C_a\le(1-d)p+(6/5)\sqrt d$,
+$\sigma(C_a)\le(1+d)\sqrt d$.
+The cubic inequality \eqref{eq:R12:cubic} gives the following
+continuous coefficients for $0\le m=\E Y\le1$:
+\[
+\begin{array}{c|ccc}
+C_a+Y+m\text{ upper bound}&4&7/2&18/5\\\hline
+\text{curvature coefficient}&683/54<13&248/27<19/2&2453/250<10.
+\end{array}
+\]
+In the low range $0<d\le1/8$, the exponential payment
+\eqref{eq:R14:exponential} will use
+\begin{equation}\tag{R20.2.4}\label{eq:R20:payment}
+\begin{array}{c|ccc|c}
+ &A&B&C&\text{deficit lower bound}\\\hline
+j=1&39/2&53/3&64/5&(11/54)d>d/5\\
+j\ge2&29&22&128/5&(7/9)d>d/5.
+\end{array}
+\end{equation}
+Indeed $C\ge A/2$, $Ad/2\le39/32$ or $29/16$, both below two,
+and $e^2<9$.
+
+Here is the exact finite anchored input from Q5-C181, Section 3.
+Let $R$ be the sum of the disjoint original power intervals of all
+actual $h_sf_t$ pairs, and let $\Gamma$ be its actual loss.
+Put $\mu_\ell=\E\bar f_\ell\in[0,1]$, $D_i=\E B^iR$.
+Then $F\le\bar f_\ell e^{R-\Gamma}$, $|R|^2<d/3$, and
+\begin{equation}\tag{R20.3.table}\label{eq:R20:rows}
+\begin{array}{c|ccccc}
+\text{row}&\Gamma/d\text{ lower bound}&\rho&c_0&c_1&c_2\\\hline
+I:\ j=1,s_1=4&69/20&1/5&72/125&1/6&7/100\\
+II:\ j=1,s_1\ge5&16/5&3/20&3/5&1/30&1/12\\
+III:\ j\ge2,s_1\ge4&16j/5&1/4&5/6&1/5&1/12
+\end{array}
+\end{equation}
+Here $\|R\|_2<\rho\sqrt d$,
+$\delta_+/d\le c_0$, $(D_1)_+/d\le c_1$, and
+$(D_i)_+/d\le c_2$ for $i\ge2$. All bounds hold for every finite
+mask and the whole $0<d\le1/3$.
+The actual first row and finite propagation are
+\begin{equation}\tag{R20.3.1}\label{eq:R20:propagation}
+\begin{gathered}
+T(\bar f_\ell e^R)\le\bar f_{\ell+1}+\mu_\ell BR+\delta,\\
+e^\Gamma T^LF\le\bar f_n+\mu_\ell B^LR+\delta\bar f_{L-1}
++\mu_\ell\sum_{i=1}^{L-1}D_i\bar f_{L-1-i},\quad n=\ell+L.
+\end{gathered}
+\end{equation}
+$\delta$ may be negative. In positive propagation we may replace it
+by $D=c_0d\ge\delta$, and each $D_i$ only by its declared actual
+positive-part bound. Resulting upper bounds $Y$ remain nonnegative.
+In row I the original $\ell$ is two or three, so $\beta_{\ell+1}=d$.
+
+For $n=3,4,5$ the correct finite bare recurrences are
+\[
+\begin{array}{c|c|c}
+n&\bar f_n&\text{mean upper bound}\\\hline
+3&q-d+B(u+Bu)&1-2d\\
+4&(1-d)q-d+BG_3u&1-5d/2\\
+5&(1-2d)q-\tau+B(G_4-d)u&1-11d/4.
+\end{array}
+\]
+Their variances are at most $d$ and, uniformly,
+$\bar f_n\le q+(6/5)\sqrt d-\kappa d$.
+The exact short covariance formulas retained in Modules R2-C012,
+R2-C014 and R2-C017 give
+\[
+\operatorname{Cov}(C_a,\bar f_n)\le d/12\ (n=3,4,5),\qquad
+\operatorname{Cov}(C_a,\bar f_5)\le d/32.
+\]
+For three steps use nonpositivity at $a\ge4$ and
+$d(55/1024-d)$ at $a=3$; for four steps use zero at $a=3$ and
+$-57d/512+45d^2/32\le33d/512<d/12$ otherwise.
+Two favorable short covariances, directly from
+\eqref{eq:R17:covariance}, are
+\begin{equation}\tag{R20.4.3}\label{eq:R20:shortcov}
+\operatorname{Cov}(C_a,q)\le-\tau+d^2<0,\qquad
+\operatorname{Cov}(C_a,\bar f_2)\le-3d/16+\theta d^2<0.
+\end{equation}
+For the second use $Q=1+z$, $\operatorname{Re}(G_aQ)\ge1-2x\ge3/16$,
+and scalar correction at most $d^2-\tau d=d\delta_2$.
+Also $\sigma(\bar f_2)^2=d+\delta_2-d^2\le(36/25)d$.
+
+Suppose $n\le5,L=1$. Then
+$Y=\bar f_n+\mu_\ell BR+D$ has
+\[
+\begin{gathered}
+m\le1-kd,\quad k=2-c_0-c_1,\quad \operatorname{Var}Y\le(1+\sqrt\theta\rho)^2d,\\
+\operatorname{Cov}(C_a,Y)\le[1/12+(9/8)\sqrt\theta\rho]d.
+\end{gathered}
+\]
+The actual nonzero mean of $BR$ is paid by $D_1$.
+The pointwise row bound gives
+$Y\le q+(6/5+\rho)\sqrt d+(c_0-\kappa)d$.
+All rows have $c_0-\kappa-k<0$, so
+$C_a+Y+m\le3+(12/5+\rho)\sqrt d<4$; the largest increment is
+$159/160<1$ because $\rho\le1/4$, $\sqrt d<3/8$.
+For single pairs, $\sqrt\theta\rho<2/15$, covariance is at most
+$7d/30$, and the remainder coefficient is
+$13(17/15)^2+4(7/30)=3967/225<53/3$.
+The mean exponent $4\Gamma/d+57/32+4k$ has $k_I=943/750$,
+$k_{II}=41/30$ and exceeds $39/2$ (row II gives $9623/480$).
+For multiple pairs $k=29/30$, $\sqrt\theta\rho<1/6$,
+the remainder is at most $13(7/6)^2+4(13/48)=169/9<22$,
+and the mean exponent is $14999/480>29$.
+Thus \eqref{eq:R20:payment} applies.
+
+If $n\le5,L=2$, then $n=4,5$, $\ell=2,3$, and use
+$Y=\bar f_n+\mu_\ell B^2R+Dq+\mu_\ell(D_1)_+$.
+Here $m\le1-kd$, $k=5/2-c_0-c_1-c_2$:
+$k_I=2531/1500>5/3$, $k_{II}=107/60>5/3$,
+$k_{III}=83/60$.
+The standard deviation is at most
+$[1+\theta\rho+c_0d]\sqrt d$, bounded by
+$7\sqrt d/6$, $23\sqrt d/20$, and $5\sqrt d/4$ in the three rows.
+For row I use $\theta/5<1/12$, $(72/125)d\le9/125$;
+for II use $3\theta/20<1/16$; for III use
+$\theta/4<5/48$, $(5/6)d\le5/48$.
+By \eqref{eq:R20:shortcov}, covariance is at most $d/5$ for single
+pairs and $d/4$ for multiple pairs.
+The stronger short bound gives
+$Y\le(1-d+D)q+(1+\sqrt\theta\rho)\sqrt d+(c_1-\kappa)d$.
+For single pairs, $c_0\le3/5$, $c_1\le1/6$, $k\ge5/3$ give
+$C_a+Y+m\le3-(463/160)d+(7/3)\sqrt d\le7/2$;
+the full increment maximum is $1960/4167<1/2$.
+For multiple pairs the $d$ coefficient remains negative and the
+$\sqrt d$ coefficient is $71/30$, giving sum below four.
+The remainder is at most
+$(19/2)(49/36)+4/5=4943/360<14<53/3$ for single pairs,
+and $13(25/16)+1=341/16<22$ for multiple pairs.
+The mean exponents are at least
+$64/5+57/32+20/3>39/2$ and
+$128/5+57/32+83/15>29$, respectively.
+
+The only remaining $n\le5,L=3$ case is $n=5,\ell=2$. Take
+$Y=\bar f_5+\mu_\ell B^3R+D\bar f_2
++\mu_\ell(D_1)_+q+\mu_\ell(D_2)_+$.
+Then $m\le1-kd$, $k=11/4-c_0-c_1-2c_2$:
+$k_I=2801/1500>11/6$, $k_{II}=39/20>11/6$,
+$k_{III}=31/20$.
+Its standard deviation is at most
+$[1+\theta^{3/2}\rho+(6/5)c_0d+c_1d]\sqrt d$, bounded by the
+same three row values $7/6,23/20,5/4$.
+The respective increments are below
+$4/75+7/80+1/48<1/6$,
+$1/25+9/100+1/240<3/20$, and
+$1/15+1/8+1/40<1/4$.
+The added $\bar f_2,q$ terms have nonpositive covariance.
+The remaining tail covariance costs at most
+$(9/8)\theta^{3/2}\rho d\le3d/40$; with $d/32$ use total $d/8$.
+For single pairs, $D+(D_1)_+\le(23/30)d<d$ and the actual five-step
+bound gives $C_a+Y+m\le3-4d+(7/3)\sqrt d\le7/2$.
+Here the negative coefficient is at least
+$2+\kappa+11/6-1/12>4$, the square-root coefficient is below
+$11/5+\theta/5<7/3$, and the increment maximum is $49/144<1/2$.
+For multiple pairs the $q$ coefficient is at most $1-(29/30)d$,
+$-\tau+(D_2)_+<0$, so
+$C_a+Y+m\le3+(11/5+5/48)\sqrt d<4$.
+The remainders are below $14$ and at most
+$13(25/16)+1/2<22$; the mean exponents are at least
+$64/5+57/32+22/3>39/2$ and
+$128/5+57/32+31/5>29$. This exhausts $n\le5$.
+
+For every finite $n\ge6$, rewrite the actual propagated upper bound as
+\[
+Y_{\rm old}=1+G_n(B)u+\mu_\ell B^LR
+-\sum_{r=3}^n\gamma_r\bar f_{n-r},
+\quad
+\gamma_r=\begin{cases}
+\beta_r,&r<\ell+1,\\
+\beta_r-D,&r=\ell+1,\\
+\beta_r-\mu_\ell D_{r-\ell-1},&r>\ell+1.
+\end{cases}
+\]
+Use the row parameters
+\[
+\begin{array}{c|cc}I&h=2d/5&E=0\\
+II&h=d/2&E=81d/80\\III&h=3d/8&E=59d/48.\end{array}
+\]
+Except for the one index $r=\ell+1$, all $\gamma_r\ge h$ and
+the actual mean coefficient $\beta_{n+1}-\mu_\ell D_L\ge h$.
+For I, $\beta_{\ell+1}=d$ gives
+$d-D\ge53d/125>2d/5$, and the other tight coefficient is
+$\kappa d-d/6=41d/96>2d/5$.
+For II and III the nonexceptional bounds are
+$\kappa d-d/12=49d/96>d/2$ and
+$\kappa d-d/5=63d/160>3d/8$.
+The exceptional coefficient in II and III can be raised to $h$ at
+cost at most $(81d/160)\bar f_{L-1}$ or
+$(59d/96)\bar f_{L-1}$. The actual bound $\bar f_{L-1}\le2$ pays
+exactly the stated $E$, even if the index is outside the last four terms.
+Retaining only those four actual terms then gives
+\begin{equation}\tag{R20.8.1}\label{eq:R20:long}
+e^\Gamma T^LF\le Y=1-h(4-d)+Q_{h,n}(B)u+\mu_\ell B^LR+E\ge0,
+\quad Q_{h,n}=G_n-h(3+2z+z^2).
+\end{equation}
+The entire finite bound \eqref{eq:R18:shiftfour} gives
+$\|Q_{h,n}\|\le1-3h$. Retaining $D_L$ in the actual mean yields
+$m\le1-5h+3hd+E\le1-kd$ with
+$k_I=37/20$, $k_{II}=13/10$, $k_{III}=97/192$.
+The variance row bounds are $(17/15)^2d$, $(11/10)^2d$,
+and $(7/6)^2d$, using only $L\ge1$, $\mu_\ell\le1$.
+
+The pointwise form of \eqref{eq:R20:long} is
+$Y=(1-3h)q+BV-h(1-d)+E$,
+$V=[G_{n-1}-h(2+z)]u+\mu_\ell B^{L-1}R$.
+Thus $\|V\|_2\le[1+\rho+h\sqrt{4+\theta}]\sqrt d$, with row
+bounds $4/3$, $41/32$, $7/5$. They give respectively
+\[
+\begin{array}{c|l|c}
+I&C_a+Y+m\le3-(21/5)d+(38/15)\sqrt d\le7/2&19/2\\
+II&C_a+Y+m\le3-(109/40)d+(5/2)\sqrt d\le18/5&10\\
+III&C_a+Y+m\le3-(77/48)d+(13/5)\sqrt d<4&13.
+\end{array}
+\]
+The final column is the curvature coefficient. The first two full
+increment maxima are $361/945<1/2$, $125/218<3/5$; the third is
+at most $39/40<1$ using $\sqrt d<3/8$.
+For $\phi(x)=1-3x+2x^2-x^3$,
+$\phi(\theta)=1451/32768$,
+$\operatorname{Re}(G_aG_n)\ge\phi$ and
+$\operatorname{Re}[G_a(3+2z+z^2)]\le3$.
+The shifted core has $\int Q_e\le d$ and
+$\int Q_o=\beta_{n+1}-2hd\ge\tau-2hd>0$.
+Its actual scalar correction is at most $d^2-\tau^2+2h\tau d$,
+so
+\[
+\operatorname{Cov}(C_a,Q_{h,n}(B)u)
+\le-\phi(\theta)d+[3(h/d)+1-\kappa^2]d^2+2(h/d)d^3.
+\]
+The normalized bound in I is $32629/163840<1/5$;
+in II it is $7857/32768<1/4$; III is smaller than I.
+Add the complete tail costs $3d/20$, $9d/80$, and $3d/16$,
+respectively. The total covariance is at most $3d/8$ in I and II,
+and $2d/5$ in III. The constant $E$ has no covariance.
+The row mean exponents are $3677/160>39/2$, $633/32>39/2$,
+and $14113/480>29$; the remainders are at most
+\[
+\begin{gathered}
+(19/2)(289/225)+3/2=3083/225<53/3,\\
+10(121/100)+3/2=68/5<53/3,\\
+13(49/36)+8/5=3473/180<22.
+\end{gathered}
+\]
+Since $\Gamma\ge16d/5$ in I,II and $\Gamma\ge32d/5$ in III,
+\eqref{eq:R20:payment} proves the full long low range.
+
+For $1/8\le d\le1/3$, the same actual envelope $|R|^2<d/3$ gives
+$|R|\le(5/3)d$, $\Gamma\ge(16/5)jd$, and
+$F\le e^{-(23/15)d}\bar f_\ell\le e^{-d}\bar f_\ell$.
+Thus $T^LF\le e^{-d}\bar f_n$, $n=\ell+L\ge3$.
+The three-step Module R2-C012, four-step Module R2-C014,
+and $n\ge5$ Module R2-C017 give $\E[f_a\bar f_n^4]\le1$, so
+\[
+\E[f_a(T^LF)^4]\le e^{-4d}\le1-\frac{4d}{1+4d}
+\le1-12d/7\le1-d/5.
+\]
+This joins at $d=1/8$. If the second shortest residual arm is three,
+the shortest must be two and Module R2-C018 applies. Otherwise the
+family above applies, proving the announced complete nonunit odd
+terminal union. Directions use only this structural distinction.
+At $d=0$ all actual messages are one by original leaf integration,
+without implying $K=0$. Positivity restores all original equal pairs;
+full reversal reverses the receiving arm, every terminal arm, each
+connector edge, and all decorations simultaneously.

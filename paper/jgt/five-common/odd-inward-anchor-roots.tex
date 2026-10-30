@@ -1,0 +1,252 @@
+\subsection{Odd terminals with their actual inward path}
+\label{sec:odd-complete:inward-anchor}
+
+Write the strictly increasing terminal list as
+$(A,b_1,c_1,\ldots,b_j,c_j)$, $A\ge2$, $j\ge1$.
+If $b_1\ge4$ use
+$F=\bar f_A\prod_i h_{b_i}f_{c_i}$.
+If $b_1=3$, the order forces $A=2$; use
+$F=\bar f_2f_3h_{c_1}\prod_{i\ge2}h_{b_i}f_{c_i}$.
+We prove fourth losses $13/2$ at $pW_a\bar f_b$, $3\le a<b$,
+and $6$ at $f_a h_bf_c$, $3\le a<b<c$, keeping these directions
+for every positive inner connector $L$.
+
+\paragraph{The first pair has minimum at least four.}
+Let $R=r(B)u$ be the one finite sum of the actual pair intervals,
+and $\Gamma$ their total scalar loss. Put
+$\mu_A=\E\bar f_A$ and
+$\sigma_A^2=\operatorname{Var}\bar f_A$.
+The actual centered first row of Section~\ref{proof:Q5-C181} is
+\begin{equation}\label{eq:odd-anchor:general-first}
+\begin{aligned}
+ T(\bar f_Ae^R)&\le\bar f_{A+1}+\mu_A BR+\delta,\\
+ \delta&=\mu_A\E R+2\sigma_A\|R\|+(12/5)\|R\|^2.
+\end{aligned}
+\end{equation}
+The centered product is bounded in the original measure by
+$2\E| (\bar f_A-\mu_A)R|$. The mixed mean and variance use
+the same $R$. The three finite-mask records are
+\[
+\begin{array}{c|c|c|c|c}
+ &\Gamma/d&\rho:\|R\|<\rho\sqrt d&\delta_+/d
+                   &d^{-1}\sum_{i\ge1}(D_i)_+\\\hline
+ j=1,b_1=4&69/20&1/5&72/125&7/25\\
+ j=1,b_1\ge5&16/5&3/20&3/5&1/5\\
+ j\ge2&16j/5&1/4&5/6&2/5.
+\end{array}
+\]
+Here $D_i=\E B^iR$. The first row uses $A=2,3$ and
+$\sigma_A<6\sqrt d/5$; at higher first-pair minimum use
+$\sigma_A<3\sqrt d/2$ and its matching stronger mask.
+
+Finite propagation retains the actual inward anchor:
+\begin{equation}\label{eq:odd-anchor:general-finite}
+ e^\Gamma T^LF\le\bar f_{A+L}+\mu_AB^LR
+       +\delta\bar f_{L-1}
+       +\mu_A\sum_{i=1}^{L-1}D_i\bar f_{L-1-i}.
+\end{equation}
+Thus \eqref{eq:odd-complete:input} has $\alpha=-\Gamma$,
+$C=1$,
+\[
+ Q=G_{A+L-1}+\mu_A z^{L-1}r,\qquad
+ \E BQu=-\beta_{A+L+1}+\mu_A D_L,
+\]
+and $c=\delta-\beta_{A+L}$ at $L=1$, or
+$c=2\delta_++2\mu_A\sum_{i<L}(D_i)_+-\beta_{A+L}$ at
+$L\ge2$. The true anchor mean $\mu_A$ remains in both terms.
+Substituting these data into the auxiliary exponent
+\eqref{eq:odd-complete:baseline-curved} gives losses greater
+than $13/2+10/9$ for one pair and
+$15+10/9+64(j-2)/5$ for several pairs. To verify these numbers
+directly, the complete scalar and joint-norm bounds are
+\[
+\begin{array}{c|cc|cc}
+ &\multicolumn{2}{c|}{-(\alpha+c+\E BQu-d)/d}
+ &\multicolumn{2}{c}{\|(Q-B)u\|/\sqrt d}\\
+ &L=1&L\ge2&L=1&L\ge2\\\hline
+ j=1,b_1=4&69/20+51/32+1-72/125-1/6&7711/2000&131/80&133/100\\
+ j=1,b_1\ge5&16/5+19/16+1-3/5-1/30&889/240&127/80&13/10\\
+ j\ge2&16j/5+277/240&16j/5-29/80&27/16&11/8.
+\end{array}
+\]
+There is no auxiliary $\beta_2$ curvature cost; the $10/9$ just
+reclaims the isolated uniform fee in the corresponding general
+root certificate of Section~\ref{proof:Q5-C181}.
+
+For a minimum-one root these polynomials have nonnegative real
+coordinate, imaginary coordinate at most $5/4$ and norm at most
+$3\sqrt d/2$. For the coordinate assertions use the actual mask,
+whose first degree is at least four:
+$|\operatorname{Re}r|,|\operatorname{Im}r/z|
+ \le(1024/855)x^2<1/5$.
+The real coordinate is at least $\kappa-1/5$, while the
+imaginary coordinate is at most $6/5$. The norm follows from
+$\|R\|<\sqrt d/4$, $|G_2|<6/5$ and $|G_n|\le1$ for
+$n\ge3$, keeping $\mu_A\le1$.
+Their $\Phi$ increment is below $3d/5$;
+$\Psi(5/4,3/2)<0$. The full-domain loss exceeds $13/2$.
+For a positive root write $Q=G_{A+L-1}+\Delta Q$ and use
+the integral form \eqref{eq:odd-complete:positive-norm}.
+The actual tail norms are at most $\rho\sqrt d$, including
+$L=1$ and every finite $A,L$. The increments are at most
+$19d/15$, $7d/10$ and $11d/6$ in the three rows.
+The weakest resulting loss is
+$13/2+10/9-19/15=571/90>6$.
+
+\paragraph{The first pair has minimum three.}
+The actual short anchor is $\bar f_2=1+u+Bu$.
+Let $c=c_1\ge4$, $B_0=\beta_{c-1}$ and
+\[
+ r_0=-B_0-z^3G_{c-3}(-z)=-B_0+x^2V+zxU,
+ \qquad\Gamma_0=d+\beta_c+B_0\ge35d/16.
+\]
+At $c=4$, $(U,V)=(1,0)$; thereafter the coordinates of the
+same finite $G_{c-3}(-z)$ are used. For one pair take $R=r_0(B)u$,
+$\Gamma=\Gamma_0$. For several pairs add the one actual finite
+later mask $S$ to $R$ and its true scalar losses to $\Gamma$.
+On $d\le1/8$, both cases have the centered row
+\begin{equation}\label{eq:odd-anchor:short-first}
+\begin{aligned}
+ T(\bar f_2e^R)&\le\bar f_3+BR+D,\\
+ D&\ge\max\{\E R+\E(uR)+\E((Bu)R)
+          +\sqrt{(d+\delta_2)\E R^2}+(12/5)\E R^2,0\}.
+\end{aligned}
+\end{equation}
+The linear coefficient is one, rather than $\mu_2$; all three
+mixed means are retained. The actual finite heads $c=4,5$ and
+the remaining contracting tail give the following records:
+\[
+\begin{array}{c|c|c|c|c|c}
+ &\Gamma/d&D/d&D_1/d&D_2/d&D_i/d\ (i\ge4)\\\hline
+ j=1&35/16&3/5&[-\delta_3/d,d]&[0,\delta_3/d]&\le1/36\\
+ j\ge2&431/80+16(j-2)/5&3/2&[-19/60,19/120]&\le1/4&\le1/9.
+\end{array}
+\]
+Also $D_3\le\delta_4$ in the first row and $D_3\le d/6$ in
+the second. These are the genuine first-row and signed-tail
+certificates of Section~\ref{proof:Q5-C181} for the displayed
+short anchor.
+
+The finite propagation is
+\begin{equation}\label{eq:odd-anchor:short-finite}
+ e^\Gamma T^LF\le Y_L:=\bar f_{L+2}+B^LR+D\bar f_{L-1}
+                  +\sum_{i=1}^{L-1}D_i\bar f_{L-1-i}.
+\end{equation}
+Expanding its first three actual paths gives the exact rows
+below for \eqref{eq:odd-complete:input}, with $\alpha=-\Gamma$:
+\begin{equation}\label{eq:odd-anchor:short-rows}
+\begin{array}{c|c|c|c}
+ L&C&c&Q\\\hline
+ 1&1&D-d&G_2+r\\
+ 2&1-d+D&D_1-d&G_3+zr\\
+ 3&1-2d+D+D_1&-\tau+D_2&G_4-d+D+z^2r.
+\end{array}
+\end{equation}
+For example $Y_3$ retains both losses in
+$\bar f_5=\one+G_5u-d\bar f_2-dq-\tau\one$; this gives
+the displayed coefficient of $q$ and the separate constant
+$-\tau+D_2$. Its actual mean is
+$-\tau+d^2+D_3-Dd$.
+
+For $j=1$ put $h=2d/5$. The loss coefficients in the same
+convolution are $\gamma_3=d-D=h$ and
+$\gamma_i=\beta_i-D_{i-3}\ge h$, $i\ge4$.
+At $L\ge4$ retain the final four paths $\bar f_0,\ldots,\bar f_3$.
+Their sum is $4-d+3u+2Bu+B^2u$, giving
+\begin{equation}\label{eq:odd-anchor:single-long}
+ C=1-3h,\qquad c=-h(1-d),\qquad
+ Q=G_{L+1}+z^{L-1}r-h(2+z),
+ \quad\E BQu=-\gamma_{L+3}+2hd.
+\end{equation}
+For $j\ge2$, the actual first coefficient is instead
+$\gamma_3=d-D=-d/2$. Keep its positive contribution
+$(D-d)\bar f_{L-1}\le d$, and take $h=d/3$ for every later
+loss, including the mean index. Retaining the final three paths
+$\bar f_0,\bar f_1,\bar f_2$ gives
+\begin{equation}\label{eq:odd-anchor:multiple-long}
+ C=1-2h,\qquad c=d-h,\qquad
+ Q=G_{L+1}+z^{L-1}r-h,
+ \quad\E BQu=-\gamma_{L+3}+hd.
+\end{equation}
+Both rows follow from \eqref{eq:odd-anchor:short-finite}; their
+different constants are kept in the subsequent full vectors.
+
+\paragraph{One complete payment for both root classes.}
+The exact curved baseline \eqref{eq:odd-complete:baseline-curved}
+and the two transfer lemmas give the following sufficient ledger.
+An entry is a loss for $J_0$, followed by an upper bound on its
+increment at the stated root. For multiple pairs add
+$64(j-2)/5$ to every baseline.
+\[
+\begin{array}{c|cccc}
+ &L=1&L=2&L=3&L\ge4\\\hline
+ j=1:\ -J_0/d&1173/100&5573/600&4291/320&799/80\\
+ \text{minimum-one increment}&2&2&2&2\\
+ \text{positive increment}&2&0&49/12&10/3\\\hline
+ j\ge2:\ -J_0/d&12&16&19&16\\
+ \text{minimum-one increment}&7/2&7/2&7/2&15/4\\
+ \text{positive increment}&29/5&171/50+9/8&25/9+15/8&11/6+3/2.
+\end{array}
+\]
+Here is a direct check of the entries that differ from an
+unweighted path input. For $j=1,L=1$, the actual auxiliary joint
+vector has squared norm at most
+$(1+x^2)^2+x^3<36/25$. The scalar is at most
+$-(35/16+91/40)d$, and $C-1=0$. This gives the first loss
+$35/4+91/10-153/25=1173/100$.
+For the other single-pair rows, the respective scalar upper
+bounds are $-1867d/480$, $-211d/40$ and $-403d/80$;
+their joint squared-norm caps are $36d/25$, $25d/16$ and
+$9d/4$. Keeping the actual curved coefficients from
+\eqref{eq:odd-anchor:short-rows}--\eqref{eq:odd-anchor:single-long}
+gives the displayed weaker baseline losses. For several pairs
+the same calculation uses scalar upper bounds
+$-\Gamma-161d/120$, $-\Gamma-329d/480$,
+$-\Gamma-159d/80$ and $-\Gamma-31d/24$.
+
+The single-pair polynomials have real coordinate nonnegative,
+imaginary coordinate at most $3/2$, norm at most $8\sqrt d/5$,
+and $\gamma\ge-8d/5$. Thus
+$\Phi(3/2,8/5,1/8)<2$ and
+$\Psi(3/2,8/5)<7/10$. The multiple-pair values fit
+$\bar D=2$, $R=2$, $\gamma\ge-d$; their respective costs
+are below $7/2$ and $15/4$.
+
+For the positive root apply
+\eqref{eq:odd-complete:positive-curved} to the same $C,c,Q$.
+The single-pair first row has real overshoot at most $x^2$ and
+imaginary overshoot at most $x$. Its increment is below $2d$.
+The second row has only imaginary overshoot $x^2$, costing
+$85d/252$; $\gamma=-2d/5$ contributes less than $3d^2$,
+so the saved $d$ covers both on $d\le1/8$.
+At the third row, the integral norm increment is at most
+$11d/6$, while $|\gamma|\le47d/30$ and
+$|\E V_*|\le7d/6$ give a curved correction below $18d^2$.
+At longer rows use the same $11d/6$ norm increment,
+$\gamma=-6d/5$, $|\E V_*|\le d$ and correction below
+$12d^2$. For the latter mean bound, the finite base and root
+coordinates differ by at most $x$ each, the actual propagated
+tail contributes at most $\max(x/8,x^3)<1/14$, and $h\le1/20$;
+$2\theta+1/14+1/20<1$.
+For multiple pairs the corresponding norm increments
+are $29d/5$, $171d/50$, $25d/9$ and $11d/6$;
+the first curved coefficient is zero and the other corrections
+are below $9d^2$, $15d^2$ and $12d^2$.
+These are comparisons with the complete curved baseline;
+$\gamma\one$ and its signed cross term occur in the positive
+root's vector. The table leaves more than $13/2$ at a
+minimum-one root and more than six at a positive root.
+
+\paragraph{The same short anchor on the high domain.}
+For $d\ge1/8$, the actual inequality
+\eqref{eq:odd-q:high-three-pair} gives $f_3h_{c_1}\le e^{-d}$.
+Each later pair has minimum at least five and is at most
+$e^{-2d}$. Hence the same propagated terminal satisfies
+\[
+ T^LF\le e^{-[1+2(j-1)]d}\bar f_{L+2}.
+\]
+The bare comparisons of Corollary~\ref{cor:odd-complete:bare}
+give rates at least $4+29/10+8(j-1)>13/2$ and
+$4+11/2+8(j-1)>6$, respectively.
+The closed endpoint $d=1/8$ is shared with the low domain.
+At $d=0$ the actual vectors vanish and leaf integration gives one.

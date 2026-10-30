@@ -1,0 +1,112 @@
+\subsection{Odd tables of minimum two: compatible moments}\label{loc:S15}
+Let $F=E_0f_2P$, $P=\prod_{i=1}^t h_{b_i}f_{c_i}$,
+$3\le b_1<c_1<\cdots<b_t<c_t$, $t\ge1$.
+We prove, for this same direction,
+\[
+ \E[qF^4]\le e^{-259d/600},\qquad \E F^2\le e^{-53d/72}.
+\]
+
+\proofpart{Shared scalar and packet estimates}
+The actual ordered pair has envelope $h_bf_c\le e^{R_{bc}-\omega_b}$,
+$R_{bc}=\sum_{j=b}^{c-1}K^jg$.
+The base deficits are $\omega_3=2d-\delta_{2}$, $\omega_b=2d$ for $b\ge4$.
+At the same $R_{bc}$, Section~\ref{loc:S2} gives enhanced deficits
+\[
+ \omega_4=4d-3\delta_{2},\quad\omega_5=6d-6\delta_{2},\quad
+ \omega_b\ge11d/4\quad(b\ge6).
+\]
+Write
+\begin{gather*}
+ R=\sum_iR_{b_ic_i}=Kv,\quad
+ v=\sum_i\sum_{j=b_i}^{c_i-1}K^{j-1}g,\quad
+ I=\|v\|_2^2,\quad J_1=\|R\|_2^2,\quad
+ P\le e^{R-\Delta}.
+\end{gather*}
+The disjoint intervals give a finite zero-one polynomial after factoring
+$K^{b_1-1}$ out of $v$. Separating the two signs in each residue class
+modulo four proves
+\[
+ \|Q_0(K)\|^2\le(1+\theta)/(1-\theta^2)^2
+ =32768/16245<C_*=101/50.
+\]
+Thus $I\le C_*\delta_{b_1}$, $J_1\le C_*\delta_{b_1+1}$.
+For one interval the factor is one except at gap two, where the exact
+values are $I=\delta_{b}+\delta_{b+1}$, $J_1=\delta_{b+1}+\delta_{b+2}$; in all cases the
+factor $3/2$ suffices. The signed means are exactly
+\begin{gather*}
+ \E R_{bc}=\beta_{b+1}-\beta_{c+1},\quad
+ \E[gR_{bc}]=\beta_{c+2}-\beta_{b+2},\quad
+ \E[rR_{bc}]=\beta_{b+3}-\beta_{c+3}.
+\end{gather*}
+For later masks apply the corresponding termwise skew identities.
+Put $D_j=\delta_{j}/(1-\theta^2)$. The rational bounds used below are
+\begin{gather*}
+ \delta_{2}\le5d/12,\ \delta_{3}\le d/6,\ \delta_{4}\le d/12,\ \delta_{5}\le d/32,\ \delta_{6}\le d/64,\\
+ D_2\le d/2,\quad D_3\le d/5,\quad D_4\le d/12,\quad D_5\le d/24.
+\end{gather*}
+Use the scalar bounds in \eqref{eq:compact-log-tools}.
+Positive masses give $|g|<1$ and $u=g+r=f_2-1\in(-1,1)$.
+
+\proofpart{Fourth moment}
+Set $Y=3g+4r+4R$. The exact decomposition
+$Y=3g/5+12u/5+K(8g/5+4v)$ has weighted Cauchy constant
+$(3/5)^2/(3/10)+(12/5)^2/(6/5)+1=7$.
+Thus
+\[
+ Y^2/7\le3g^2/10+6u^2/5+\eta,\qquad
+ \eta=64d/25+16I-64\E R/5.
+\]
+Combine this with $qf_2^4\le e^{3g+4r-3g^2/10-6u^2/5}$ and
+\eqref{eq:compact-log-tools}. Since
+$\E Y=-4d+4\E R$ and
+$\E Y^2=9d+16\delta_{2}+16J_1+24\E[gR]+32\E[rR]$,
+\begin{equation}\label{eq:compact-min2-master}
+ \E[q(f_2P)^4]\le e^\Xi,\quad
+ \Xi=-4\Delta+387d/200+6\delta_{2}+16I+6J_1
+                  +9\E[gR]+12\E[rR]-44\E R/5.
+\end{equation}
+The following table specifies every prefix budget. All entries are upper
+bounds except the two explicitly marked lower-bound columns; later tails
+are already included in each multiple-pair row.
+\begin{center}\small
+\begin{tabular}{@{}ccccccc@{}}\toprule
+$(b,c);t$&$\Delta\ge$&$I\le$&$J_1\le$&$\E R\ge$&$\E[gR]\le$&$\E[rR]\le$\\\midrule
+$(3,4);1$&$2d-\delta_{2}$&$\delta_{3}$&$\delta_{4}$&$\delta_{2}$&$0$&$-\delta_{3}$\\
+$(3,5);1$&$2d-\delta_{2}$&$\delta_{3}+\delta_{4}$&$\delta_{4}+\delta_{5}$&$\delta_{2}$&$\delta_{3}$&$-\delta_{3}$\\
+$(3,\ge6);1$&$2d-\delta_{2}$&$\delta_{3}$&$\delta_{4}$&$\delta_{2}-\delta_{3}$&$\delta_{3}$&$-\delta_{3}+\delta_{4}$\\
+$(3,c);\ge2$&$4d-\delta_{2}$&$C_*\delta_{3}$&$C_*\delta_{4}$&$\delta_{2}-\delta_{3}-D_3$&$\delta_{3}+D_5$&$-\delta_{3}+\delta_{4}+D_4$\\
+$(4,5);1$&$4d-3\delta_{2}$&$\delta_{4}$&$\delta_{5}$&$0$&$\delta_{3}$&$0$\\
+$(4,6);1$&$4d-3\delta_{2}$&$\delta_{4}+\delta_{5}$&$\delta_{5}+\delta_{6}$&$-\delta_{3}$&$\delta_{3}$&$\delta_{4}$\\
+$(4,\ge7);1$&$4d-3\delta_{2}$&$\delta_{4}$&$\delta_{5}$&$-\delta_{3}$&$\delta_{3}$&$\delta_{4}$\\
+$(4,c);\ge2$&$6d-3\delta_{2}$&$C_*\delta_{4}$&$C_*\delta_{5}$&$-\delta_{3}-D_5$&$\delta_{3}+D_5$&$\delta_{4}+D_4$\\
+$(\ge5,c);\ge1$&$11d/4$&$C_*\delta_{5}$&$C_*\delta_{6}$&$-D_3$&$D_5$&$D_4$\\\bottomrule
+\end{tabular}
+\end{center}
+Substitution in \eqref{eq:compact-min2-master}, followed by the displayed
+rational spectral bounds, gives the respective upper bounds for $\Xi/d$
+\begin{gather*}
+ -2639/600,\quad-551/400,\quad-259/600,\quad-31/15,\quad-4253/1200,\\
+ -387/800,\quad-431/400,\quad-13883/2400,\quad-3569/1600.
+\end{gather*}
+The largest is $-259/600$. The two gap-two rows explicitly retain $G_2$.
+
+\proofpart{Second moment in the identical direction}
+Use only the base deficits. With $Y_2=2u+2R$,
+$Y_2^2/8\le3u^2/5+3I$. The denominator-eight scalar bound yields
+\begin{equation}\label{eq:compact-min2-second}
+ \E(f_2P)^2\le e^\Omega,\quad
+ \Omega=-2\Delta-d/3+5\delta_{2}/3+3I+5J_1/3
+               +10(\E[gR]+\E[rR])/3+2\E R.
+\end{equation}
+For one $b=3$ pair use $\Delta=2d-\delta_{2}$, $\E R\le \delta_{2}$,
+$\E[gR]+\E[rR]\le \delta_{4}$, $I\le3\delta_{3}/2$, $J_1\le3\delta_{4}/2$;
+this gives $\Omega\le-53d/72$.
+For multiple pairs starting at three use $\Delta\ge4d-\delta_{2}$,
+$\E R\le D_2$, $\E[gR]\le D_3$, $\E[rR]\le D_4$;
+the mask bounds give $\Omega\le-6427d/1800$.
+For $b\ge4$, use $\Delta\ge2d$, $\E R\le D_4$,
+$\E[gR]\le D_3$, $\E[rR]\le D_4$, obtaining $-27613d/14400$.
+Thus the required second and fourth bounds hold simultaneously.
+The residual singleton is excluded. Restore $E_0$ and reverse all edges
+only through the common rules; the reversed message supplies the
+$p$-fourth and ordinary second moments together.

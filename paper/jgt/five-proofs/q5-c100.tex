@@ -1,0 +1,409 @@
+\subsection{The same-row inverse fourth moment and its endpoint payment}\label{proof:Q5-C100}
+\paragraph{Q100.2 Kernel notation and inherited estimates}
+
+For finite trees with at most five branch vertices, the orientation
+problem requires the following bound on every finite probability space
+and every real skew \(|K|\le 1\):
+
+\fitdisplay{
+Z_D=E_{\mu^{V(U)}}\prod_{v\to w\in D}(1+K(x_v,x_w))\le1.
+}{}
+
+
+
+Delete zero-mass atoms only. On the unchanged original L2(mu), use
+
+\fitdisplay{
+Jv=(Ev)1,\quad A=J+K,\quad T=J-K=A^*,\quad
+ g=K1,\quad p=1+g,\quad q=1-g,
+}{}
+\fitdisplay{
+f_n=A^{n}\one,\quad \bar f_n=T^{n}\one,\quad h_n=T f_{n-1},\quad
+ W_n=A \bar f_{n-1},\quad \delta_j=\|K^{j}\one\|^2,\quad d=\delta_1.
+}{}
+
+The finite calculus gives \(\theta=13/32,\allowbreak  \kappa=19/32,\allowbreak  d\le1/3\), \(d^2\le\delta_2\le\theta d\), \(\delta_{j+1}\le\theta\delta_j\), and \(\|K\|^2\le\theta\).
+Skewness gives \(K(x,\allowbreak x)=0\), so p(x), \(q(x)\ge \mu(x)>0\) on retained atoms.
+Every actual rooted tree message is positive by the all-equal labeling.
+
+The proof uses the finite calculus and the four-branch pairing and zero-step interfaces already established above.
+
+The genuine equal-pair comparison is \(f_l h_l\le 1,\allowbreak \) or its full reverse
+\(\bar f_l W_l\le 1.\) Each such factor stays at its original vertex and is removed
+only from a nonnegative upper comparison. The path-mean bound used here applies to $f_n$ and $\bar f_n$. In contrast, $\E h_2=\E W_2=1+d$.
+The f2 case uses the non-strict bound.
+
+\paragraph{Q100.3 Independent finite-G reconstruction}
+
+Put \(G_m(z)=\sum _{j=0}^{m-1} z^j\) and
+\(E_r(x)=\sum _{j=0}^{r-1}(-x)^j.\) For \(0\le x\le \theta<1,\allowbreak \) the finite
+alternating sum satisfies \(1-x\le E_r\le 1.\) At \(z=i \sqrt{x}\), write
+\(G_m(z)=A_m(x)+zD_m(x).\) For the actual
+
+\fitdisplay{
+R=K G_m(-K)g,\qquad h=E(gR),\qquad V=ER^2,
+ \qquad m=n-1\ge3,
+}{}
+
+the block expression is \(R=(zA_m+xD_m)g.\) Hence the genuine finite
+spectral measure \(\nu_g\) of -\(K^2\) at g gives
+
+\fitdisplay{
+h=\int xD_m\,d\nu_g,\qquad
+ V=\int x(A_m^2+xD_m^2)\,d\nu_g.
+}{}
+
+Its mass is d and its first moment is \(\delta_2.\) This proves the signs and
+identifies the same R as in the original correlated cubic calculation.
+
+\paragraph{Q100.3.1 Even and odd finite lengths}
+
+For \(m=2r,\allowbreak  r\ge 2,\allowbreak  A_m=D_m=E_r,\allowbreak \) and the FINITE identity
+(\(1+x)E_r=1-(-x)^r\) yields
+
+\fitdisplay{
+x[(1+x)E_r^2-E_r]=(-1)^{r+1}x^{r+1}E_r.
+}{}
+
+Positive cases have r odd, so \(r\ge 3.\) They are bounded by \(x^4,\allowbreak \)
+because \(E_r\le 1\) and \(x\le 1.\) Furthermore
+\(x^4\le x^3(1-x+x^2),\allowbreak \) since their difference is \(x^3(1-x)^2.\)
+Negative cases automatically satisfy the same upper bound.
+
+For \(m=2r+1,\allowbreak  r\ge 1,\allowbreak  D_m=E_r\) and \(A_m=1-xE_r.\) Substitution, or replacing
+(\(1+x)E_r\) by its finite expression, gives
+
+\fitdisplay{
+A_m^2+xD_m^2-D_m=(-x)^r A_m.
+}{}
+
+Here \(A_m>0.\) Only even \(r\ge 2\) gives a positive term. In that case
+
+\fitdisplay{
+A_m=\frac{1+x^{r+1}}{1+x}\le
+ \frac{1+x^3}{1+x}=1-x+x^2,\qquad x^{r+1}\le x^3.
+}{}
+
+Multiplication by x proves the same uniform upper polynomial. The two
+short endpoints are explicit:
+
+\fitdisplay{
+m=3:\ -x^2(1-x),\qquad
+ m=4:\ -x^3(1-x).
+}{}
+
+They are negative, not missing positive cases. At \(m=5\) the expression
+is exactly \(x^3(1-x+x^2),\allowbreak \) so that polynomial is a real finite expression.
+These calculations cover every integer \(m\ge 3,\allowbreak \) with no infinite-tail
+substitution.
+
+\paragraph{Q100.3.2 Uniform spectral payment and exact constants}
+
+The derivative of \(x^2(1-x+x^2)\) is \(x(2-3x+4x^2),\allowbreak \) nonnegative;
+the quadratic has discriminant -23 and positive leading coefficient.
+Therefore
+
+\fitdisplay{
+\begin{aligned}
+ V-h
+ &\le\int x^3(1-x+x^2)\,d\nu_g\\
+ &\le\theta^2(1-\theta+\theta^2)\int x\,d\nu_g
+ =r_*\delta_2.
+ \end{aligned}
+}{}
+
+Since \(1-\theta+\theta^2=777/1024\) and \(\theta^2=169/1024,\allowbreak  r_*=131313/1048576.\) The comparisons in (2.6)-(2.7) check exactly:
+
+\begin{itemize}
+\item \(r_*>1/8\) because \(131313>131072.\)
+\item \(r_*<13/100\) because \(13131300<13631488.\)
+\item \(\theta r_*=1707069/33554432<51/1000\) because
+  \(1707069000<1711276032.\)
+\item \(\theta^2-51/1000=(21125-6528)/128000=14597/128000.\)
+  This is >\(9/80\) because \(14597>14400.\)
+\end{itemize}
+
+Thus \(\theta(\theta-r_*)>\delta_*=14597/128000>0.\) No step assumes \(x\ge d.\)
+In particular this is a correlated V-h bound, not independent worst-case
+budgets for V and h.
+
+\paragraph{Q100.4 Exact same-row calculation}
+
+This section reconstructs the calculation through (2.10). Write \(\alpha=\kappa d\), \(C=1-\alpha,\allowbreak  t=1+d/2\) and \(\beta=\beta_{n+1}.\)
+
+The finite convolution is
+
+\fitdisplay{
+S'_n=\sum_{j=0}^n(-K)^j1
+ =\bar f_n+\sum_{j=3}^n\beta_j\bar f_{n-j}=q+R.
+}{}
+
+For \(n\ge 4\) retain its actual b0 and b1 terms. Since \(\beta_n,\allowbreak  \beta_{n-1}\)
+are at least alpha, \(\bar f_n\le Cq+R-\alpha.\) Also T \(v\le 2Ev\) and
+\(T^2v\le 2(Ev)q\) for \(v\ge 0.\) The same finite convolution gives
+\(E\bar f_{n-2}\le 1-\beta_{n-1}\le C,\allowbreak \) hence \(\bar f_n\le 2Cq.\)
+At \(n=4\) the latter uses the actual b2 mean 1-d; no short term is lost.
+
+For \(s\ge -1,\allowbreak \)
+
+\fitdisplay{
+\min(1+s,2)^4\le1+4s+7s^2+4s^3.
+}{}
+
+On [-1, 1] the difference from (\(1+s)^4\) is \(s^2(1-s^2).\)
+On [1, infinity), the cubic starts at 16 and has positive derivative.
+The upper Cq+R-alpha is positive, so \(s=(R-\alpha)/(Cq)>-1.\)
+Applying the inequality to the same actual row gives
+
+\fitdisplay{
+B_n\le C^4Eq^3+4C^3E[q^2(R-\alpha)]
+       +7C^2E[q(R-\alpha)^2]+4CE(R-\alpha)^3.
+}{Q100.A24.1}
+
+The exact finite quantities satisfy \(ER=-\beta,\allowbreak  \alpha\le \beta\le d,\allowbreak  \kappa\delta_2\le h\le\delta_2\), \(V\le \delta_2,\allowbreak  |R|\le \sqrt{d},\allowbreak \) and
+E[\(G_m(-K)g\)]=\(\beta_n\ge \alpha.\) The h and V bounds follow from the
+actual finite coordinates \(D_m\ge 1-x\) and \(|G_m|\le 1\) for \(m\ge 3.\)
+
+Put \(W=2R-Cg.\) The original row estimate gives
+
+\fitdisplay{
+|W|^2\le C^2+4d-4C\alpha
+ =1+(4-6\kappa)d+5\kappa^2d^2\le t^2.
+}{}
+
+The last difference is
+\(d[9/16-(1549/1024)d]\ge179d/3072\). Also
+
+\fitdisplay{
+EW=-2\beta,\qquad D_W=EW^2=C^2d+4V-4Ch\ge0.
+}{}
+
+The pointwise inequality (\(W+2\beta)^2(W-t)\le 0\) gives
+
+\fitdisplay{
+EW^3\le(t-4\beta)D_W-4t\beta^2+8\beta^3.
+}{}
+
+The full correlated identity is
+
+\fitdisplay{
+-C^4Eg^3+4C^3E(g^2R)-6C^2E(gR^2)+4CER^3
+ =\frac{C}{2}[EW^3+C^2E(g^2W)].
+}{}
+
+Use \(E(g^2W)\le td.\) Of the seven copies of -\(C^2E(gR^2)\) in the
+expansion (Q100.A24.1), six are in this identity and one remains. This is
+where a separate absolute cubic budget would lose the intended gain.
+
+At fixed TRUE \(D_W\ge 0,\allowbreak \) the beta-linear coefficient from the rest of
+(Q100.A24.1) is
+
+\fitdisplay{
+-4C^3+14C^2\alpha-12C\alpha^2
+ =-2C(2C-3\alpha)(C-2\alpha)<0.
+}{}
+
+Indeed \(\alpha\le 19/96<1/5.\) The derivative of the cubic bound, after
+its C/2 factor, is
+\(C[-2D_W-4t\beta+12\beta^2]\le0\) because \(3\beta\le 1\le t.\)
+Thus one first lowers beta to alpha, while holding \(D_W\) fixed.
+Only afterwards \(t-4\alpha=1-15d/8\ge 3/8\) allows its substitution.
+
+Before grouping V-h, the coefficients are precisely
+
+\fitdisplay{
+C[7+2t-27\alpha]V+C^2[-8-2t+30\alpha]h.
+}{}
+
+Writing \(V=(V-h)+h\) makes the h coefficient
+
+\fitdisplay{
+\begin{aligned}
+ C\{7+2t-27\alpha+(1-\alpha)(-8-2t+30\alpha)\}
+ &=C[-1+(11+2t)\alpha-30\alpha^2]\\
+ &=C[-1+(13+d)\alpha-30\alpha^2].
+ \end{aligned}
+}{Q100.A24.2}
+
+This independently proves (2.10), including the disputed
+coefficient. Together with its unchanged constants it yields
+
+\fitdisplay{
+\begin{aligned}
+ B_n\le{}&C^4(1+3d)+C^3[td-6\alpha d-8\alpha]
+             +C\alpha^2[19-d-33\alpha]\\
+ &+CB(d)(V-h)
+ +C[-1+(13+d)\alpha-30\alpha^2]h-C^2E(gR^2),
+ \end{aligned}
+}{Q100.A24.3}
+
+where \(B(d)=7+2t-27\alpha=9-481d/32\) and \(B\ge 383/96>0.\)
+
+
+\paragraph{Q100.4.2 Complete signed substitution}
+
+Split the actual h coefficient
+term by term, using the lower h bound on its negative terms and the
+upper h bound on its positive term:
+
+\fitdisplay{
+[-1+(13+d)\alpha-30\alpha^2]h
+ \le[-\kappa+13\kappa d+\kappa(1-30\kappa^2)d^2]\delta_2
+ =H(d)\delta_2.
+}{}
+
+After the proved V-h improvement, the combined coefficient is
+\(S_new=r_*B+H.\) Its constant is >\(17/32,\allowbreak \) using \(r_*>1/8.\)
+Its linear coefficient is
+
+\fitdisplay{
+13\kappa-\frac{481}{32}r_*
+ >\frac{24700-6253}{3200}
+ =\frac{18447}{3200}>5.
+}{}
+
+Its quadratic coefficient is -\(93157/16384>-6.\) Thus
+
+\fitdisplay{
+S_{\rm new}>17/32+5d-6d^2>0,\qquad 0\le d\le1/3.
+}{}
+
+This sign is proved BEFORE multiplying the upper bound \(\delta_2\le\theta d\).
+\paragraph{Q100.5 Old polynomial, exact difference and continuous row}
+
+For the coefficient P, let F0 be
+the first three terms of (Q100.A24.3). The combined coefficient is
+
+\fitdisplay{
+S_{\rm old}=\theta B+H
+ =\frac{49}{16}+\frac{1651}{1024}d
+       -\frac{93157}{16384}d^2.
+}{}
+
+For example, its linear coefficient is
+-\(6253/1024+7904/1024=1651/1024.\) 
+
+The old polynomial is \(P=F_0+C\theta d S_{\rm old}\). Its coefficient ledger in kappa is
+
+
+\begingroup\small
+\setlength{\tabcolsep}{3pt}
+\setlength{\LTleft}{0pt}\setlength{\LTright}{\fill}
+\begin{longtable}{@{}>{\raggedright\arraybackslash}p{0.1200\linewidth}>{\raggedright\arraybackslash}p{0.4000\linewidth}>{\raggedright\arraybackslash}p{0.4000\linewidth}@{}}
+\caption{Coefficients of \(d^j\) in the comparison polynomial \(P(d)\).}\label{tab:parameters:q5-c100:1}\\
+\toprule
+\(j\) & Coefficient before setting \(\kappa=19/32\) & Exact value \\
+\midrule\endfirsthead
+\toprule
+\(j\) & Coefficient before setting \(\kappa=19/32\) & Exact value \\
+\midrule\endhead
+\bottomrule\endfoot
+1 & \(13-31\kappa+10\kappa^2\); & \(-963/512\). \\
+\addlinespace[2pt]
+2 & \(3/2-46\kappa+110\kappa^2-37\kappa^3\); & \(171113/32768\). \\
+\addlinespace[2pt]
+3 & \(-(3/2)\kappa+53\kappa^2-152\kappa^3+57\kappa^4\); & \(-7275575/1048576\). \\
+\addlinespace[2pt]
+4 & \((1/2)\kappa^2-29\kappa^3+72\kappa^4-30\kappa^5\); & \(14103187/16777216\). \\
+\addlinespace[2pt]
+5 & \(9\kappa^4-(1/2)\kappa^3\); & \(1063145/1048576\). \\
+\end{longtable}
+\endgroup
+
+
+Expanding the finite products gives these coefficients. For instance the degree-two numerator
+is \(49152-894976+\;1270720-253783=171113\); the degree-three numerator is
+-\(933888+\;19592192-33362176+\;7428297=-7275575.\) At degree four, the
+numerator over 33554432 is
+\(5914624-203684864+\;300259584-74282970=28206374,\allowbreak \) giving the printed
+fraction after division by two. At degree five it is
+\(1172889-109744=1063145\) over 1048576.
+
+The correct new polynomial is consequently EXACTLY
+
+\fitdisplay{
+F0+C\theta d(r_*B+H)
+ =P-CB\theta(\theta-r_*)d.
+}{Q100.A24.4}
+
+The correlation satisfies
+
+\fitdisplay{
+|E(gR^2)|\le\sqrt{d\,ER^4}
+ \le d\sqrt V\le\sqrt\theta\,d^{3/2}\le\frac23d^{3/2}.
+}{}
+
+Here \(|R|^2\le d\) and \(V\le \theta\) d are the actual same-R bounds.
+Combining them with (Q100.A24.4) proves (3.4) exactly.
+
+The rational majorization of P also checks:
+\(A2<21/4\) follows from \(171113<172032\);
+\(A3<-69/10\) from \(72755750>72351744\);
+\(A4<1\) and \(A5<33/32\) from
+\(14103187<16777216\) and \(1063145<1081344.\)
+Since
+
+\fitdisplay{
+d^3+\frac{33}{32}d^4
+ \le\left(\frac13+\frac{33}{288}\right)d^2
+ =\frac{43}{96}d^2,
+}{}
+
+and \(69/10-43/96=3097/480>32/5,\allowbreak \) one gets (3.5) for \(d>0.\)
+
+Using \(\theta(\theta-r_*)>\delta_*\) proves
+
+\fitdisplay{
+B_n\le1-s(d)d,
+}{}
+\fitdisplay{
+s(d)=\frac{963}{512}-\frac{21}{4}d+\frac{32}{5}d^2
+       -\frac23(1-\kappa d)^2\sqrt d
+       +\delta_*(1-\kappa d)(9-481d/32).
+}{}
+
+All factors in its last product are positive. The derivative of its first
+three terms is at most -\(21/4+64/15=-59/60.\) The product
+(1-kappa d)(9-481d/32) decreases, since both positive factors decrease.
+For \(d>0,\allowbreak \)
+
+\fitdisplay{
+\frac{d}{dd}\{(1-\kappa d)^2\sqrt d\}
+ =\frac{(1-\kappa d)(1-5\kappa d)}{2\sqrt d}>0;
+}{}
+
+at \(d=1/3,\allowbreak \) 1-5kappa \(d=1/96.\) The negative of this term therefore
+decreases too. These exact signs prove decreasing s on the whole
+interval, with its continuous extension at zero. 
+
+\paragraph{Q100.6 Completing the inverse-row bound.}
+The final scalar payment for
+\(B_n=\E[\bar f_n^4/q]\), \(n\ge4\), is as follows.
+The derivative above is positive on \(0<d\le1/3\), and
+\(1/\sqrt3<11/19\), since \(361<363\). Hence
+\fitdisplay{
+\frac23(1-\kappa d)^2\sqrt d
+ \le\frac23\left(\frac{77}{96}\right)^2\frac{11}{19}
+ =\frac{130438}{525312}<\frac14.
+}{Q100.3.6}
+The last comparison is \(521752<525312\).
+Dropping the nonnegative improvement in \(s(d)\), the preceding
+coefficient bound therefore gives, for \(d>0\),
+\fitdisplay{
+\frac{B_n-1}{d}
+ \le-\frac{835}{512}+\frac{21}{4}d-\frac{32}{5}d^2.
+}{Q100.3.7}
+This quadratic increases on \([0,\allowbreak 1/3]\): its derivative is at least
+\(21/4-64/15=59/60>0\). Its value at the right endpoint is
+\fitdisplay{
+-\frac{835}{512}+\frac74-\frac{32}{45}
+ =-\frac{13639}{23040}<-\frac12.
+}{Q100.3.8}
+At \(d=0\), \(\bar f_n=q=1\). Thus every finite \(n\ge4\) satisfies
+\fitdisplay{
+\boxed{\E[\bar f_n^4/q]\le1-d/2.}
+}{Q100.3.9}
+The separate \(n=3\) estimate in Section~\ref{proof:Q5-C056} is
+\(1-23d/36\); since \(23/36>13639/23040>1/2\), it implies the
+same weaker bound. These are the actual inward paths for every
+length throughout the score interval.

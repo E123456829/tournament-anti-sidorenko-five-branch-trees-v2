@@ -1,0 +1,485 @@
+\subsection{The unit reference terminal $(1,\allowbreak 2,\allowbreak 3)$}\label{proof:Q5-C165}
+% Source Q5-C165: lines 17--24 and 54--526; the unpaid follow-up is excluded.
+\paragraph{Q165.0 The actual unit interface}\label{part:Q165.0}
+For every original finite probability space and legal real skew kernel,
+the terminal residual $(1,\allowbreak 2,\allowbreak 3)$ with one connector edge has the fixed
+actual message $F=\allowbreak qf_2\bar f_3$. For every outward receiving arm
+$f_a$, $a\ge\allowbreak 3$, and original equal-pair factors $E_o,\allowbreak E_t$,
+\fitdisplay{
+\E\bigl[E_of_a\{T(E_tqf_2\bar f_3)\}^4\bigr]\le1-d/256.
+\label{eq:Q165:T172.0}
+}{Q165.T172.0}
+The direction is chosen independently of $d$, the host and the kernel.
+
+\paragraph{Q165.1 Original space, direction and parameters}\label{part:Q165.1}
+All quantities use the same original finite probability measure $\mu$.
+Let $K$ be real and skew, with $|K(x,\allowbreak y)|\le\allowbreak 1$, and put
+\fitdisplay{
+Jv=(\E v)\one,\quad A=J+K,\quad T=J-K=A^*,\quad
+ g=K\one,\quad p=1+g,\quad q=1-g,
+}{}
+\fitdisplay{
+f_n=A^n\one,\quad\bar f_n=T^n\one,\quad h_n=Tf_{n-1},
+\quad R=Kg,\quad S=K^2g,\quad W=K^3g,
+}{}
+\fitdisplay{
+\delta_j=\|K^j\one\|_2^2,\quad d=\delta_1,
+\quad\theta=13/32,\quad\kappa=19/32.
+}{}
+The receiving length $a\ge\allowbreak 3$ is distinct from the vector $R$.
+At the terminal the unit arm points inward, the two-edge arm outward
+throughout, and the three-edge arm inward throughout. The connector
+points terminal-to-receiver; the receiving $a$-arm points outward.
+The Q3-C014 finite framework gives
+\fitdisplay{
+0\le d\le1/3,\quad\|K\|^2\le\theta,\quad|Kv(x)|\le\|v\|_2,
+\quad d^2\le\delta_2\le\theta d,\quad\delta_{j+1}\le\theta\delta_j.
+}{}
+Original paths are nonnegative with means at most one, and
+$f_\ell h_\ell\le\allowbreak 1$. Skewness gives
+$\E R=\allowbreak -d$, $\E S=\allowbreak 0$, $\E(gR)=\allowbreak \E(RS)=\allowbreak 0$ and $\E(gS)=\allowbreak -\delta_2$.
+After zero-mass atoms are deleted, $p,\allowbreak q\ge\allowbreak \mu(x)>\allowbreak 0$.
+At $d=\allowbreak 0$, $K$ can still be nonzero; integration from the original leaves
+makes all actual messages one. We use $d>\allowbreak 0$ below; the final bounds
+have no division by $d$.
+
+\paragraph{Q165.2 The receiving envelope and its pointwise bound}\label{part:Q165.2}
+Define $G_n(z)=\allowbreak \sum_{j=\allowbreak 0}^{n-1}z^j$ and $S_n=\allowbreak \one+G_n(K)g$.
+Finite positive convolution gives
+\fitdisplay{
+S_n=f_n+\sum_{j=3}^n\beta_j f_{n-j},\qquad
+\beta_n=\sum_{j=1}^{\lfloor(n-1)/2\rfloor}(-1)^{j-1}\delta_j,
+\qquad\beta_1=\beta_2=0.
+}{}
+For $n\ge\allowbreak 3$, $\kappa d\le\allowbreak \beta_n\le\allowbreak  d$, and hence
+\fitdisplay{
+0\le f_a\le C_a:=S_a-\beta_a\one.
+\label{eq:Q165:T172.1}
+}{Q165.T172.1}
+A separate pointwise bound on $S_a$ is needed. At $z=\allowbreak i\sqrt x$,
+$0\le\allowbreak  x\le\allowbreak \theta$, every $n\ge\allowbreak 3$ satisfies $|G_n(z)|\le\allowbreak 1$.
+For odd $n$ the square is $(1+x^n)/(1+x)\le\allowbreak 1$.
+For even $n=\allowbreak 2j$ it is $(1-(-x)^j)^2/(1+x)$: even $j$ is direct,
+and odd $j$ with $n\ge\allowbreak 6$ uses $2x^2+x^5<\allowbreak 1$ for $x\le\allowbreak \theta<\allowbreak 1/2$.
+The finite rotation blocks of the original skew operator therefore give
+$\|G_a(K)\|\le\allowbreak 1$. The row bound and commutativity yield
+\fitdisplay{
+|S_a(x)-1|=|KG_a(K)\one(x)|
+\le\|G_a(K)\one\|_2\le1.
+}{}
+Thus
+\fitdisplay{
+0\le S_a\le2,\qquad0\le C_a\le2.
+\label{eq:Q165:T172.2}
+}{Q165.T172.2}
+This uses $G_a$ with $a\ge\allowbreak 3$; the exceptional $G_2$ is excluded.
+The later $a=\allowbreak 3$ coordinates use the actual $G_3=\allowbreak 1+z+z^2$, retaining
+its $G_2$ predecessor cost.
+Write $\beta=\allowbreak \beta_a$. Where $S_a>\allowbreak 0$,
+$1-\beta/S_a\le\allowbreak  e^{-\beta/S_a}\le\allowbreak  e^{-\beta/2}$.
+If $S_a=\allowbreak 0$, \eqref{eq:Q165:T172.1} implies $\beta=\allowbreak 0$ and $f_a=\allowbreak 0$.
+Consequently,
+\fitdisplay{
+f_a\le e^{-\beta_a/2}S_a.
+\label{eq:Q165:T172.3}
+}{Q165.T172.3}
+This pays the true constant loss $-\beta_a$ without replacing the
+reference weight by $f_2$.
+
+\paragraph{Q165.3 The high domain}\label{part:Q165.3}
+Let $F=\allowbreak qf_2\bar f_3$ and $X=\allowbreak TF$. The actual short-arm identities are
+\fitdisplay{
+f_2=p+R,\qquad\bar f_3=q-d\one+R-S,
+\qquad\mu_5=\E[f_2\bar f_3]=1-4d+2\delta_2+d^2.
+}{}
+The adjoint gives $\E X=\allowbreak \E[pqf_2\bar f_3]\le\allowbreak \mu_5$.
+Also $\E F\le\allowbreak 2\mu_5$ and $X\le\allowbreak 2\E F\le\allowbreak 4\mu_5$. Hence
+\fitdisplay{
+\E[f_aX^4]\le2\E X^4\le128\mu_5^4.
+}{}
+For $d\ge\allowbreak 1/4$,
+$\mu_5\le\allowbreak 1-(51/16)d+d^2\le\allowbreak 17/64$, since that scalar decreases on
+$[1/4,\allowbreak 1/3]$. Thus $\E[f_aX^4]\le\allowbreak 83521/131072<\allowbreak 3/4<\allowbreak 1-d/256$,
+with the same direction.
+
+\paragraph{Q165.4 The actual low-domain square and a nonnegative auxiliary}\label{part:Q165.4}
+Let $0<\allowbreak d\le\allowbreak 1/4$ and set
+\fitdisplay{
+m=1-3d/2,\quad k=m^{-1}\in[1,8/5],\quad
+U=R+d\one-S/2,\quad V_0=g+(d\one+S)/2.
+}{}
+The two nonnegative arms have $f_2+\bar f_3=\allowbreak 2(m\one+U)$ and
+$f_2-\bar f_3=\allowbreak 2V_0$. Therefore
+\fitdisplay{
+F=q\{(m+U)^2-V_0^2\}\le q(m+U)^2.
+}{}
+Define $H=\allowbreak q+2k(R+d\one)-kS$ and $Z=\allowbreak TH$.
+To prove $H\ge\allowbreak 0$, put $w=\allowbreak 2g-R-d\one$. Then
+$\E w=\allowbreak 0$ and $\|w\|_2^2=\allowbreak 4d+\delta_2-d^2$.
+The centered row gives $|Kw|^2\le\allowbreak  pq\|w\|_2^2$.
+With $a_0=\allowbreak 1-5d/2>\allowbreak 0$, $b_0=\allowbreak 3d$ and $b=\allowbreak \delta_2/d\le\allowbreak \theta$,
+\fitdisplay{
+mH=a_0q+b_0\one+Kw
+\ge a_0q+b_0\one-\sqrt{pq\,d(4+b-d)}.
+}{}
+The identity
+$(a_0q+b_0)^2-b_0(2a_0+b_0)pq=\allowbreak ((a_0+b_0)q-b_0)^2\ge\allowbreak 0$
+and $b_0(2a_0+b_0)=\allowbreak 6d(1-d)\ge\allowbreak  d(4+b-d)$, since
+$b+5d\le\allowbreak 53/32<\allowbreak 2$, imply $H\ge\allowbreak 0$.
+As $\E H=\allowbreak 1$, $0\le\allowbreak  Z\le\allowbreak 2$. The actual expansion is
+\fitdisplay{
+Z=q+R-2k(S+dg)+kW=\one+P(K)g,
+\quad P(z)=-1-2kd+z-2kz^2+kz^3.
+\label{eq:Q165:T172.4}
+}{Q165.T172.4}
+The auxiliary $Z$ uses the same original kernel; it is an analytic
+quantity rather than an additional tree message.
+
+\paragraph{Q165.5 An exponential functional and an algebraic $f_2$ comparison}\label{part:Q165.5}
+This paragraph establishes an algebraic comparison without importing an
+$f_2$-reference conclusion to change the weight.
+For $-1<\allowbreak t\le\allowbreak 1$, $\log(1+t)\le\allowbreak  t-(3/10)t^2$.
+The derivative of the difference is $t(2-3t)/(5(1+t))$;
+at $t=\allowbreak 1$ use $\log2<\allowbreak 7/10$, since
+$e^{7/10}>\allowbreak 1+7/10+49/200+343/6000>\allowbreak 2$.
+For every real $z$,
+\fitdisplay{
+e^{z-z^2/8}\le1+z+(13/32)z^2.
+\label{eq:Q165:T172.5}
+}{Q165.T172.5}
+The right side $Q(z)$ is positive, and
+$[\log Q-z+z^2/8]'=\allowbreak z(13z^2-20z+8)/(128Q)$.
+The quadratic has negative discriminant, so zero is the global minimum.
+For $1+e,\allowbreak 1+v\in[0,\allowbreak 2]$, let $s=\allowbreak e+4v$. The exact completion is
+\fitdisplay{
+s^2/8-(3/10)e^2-(6/5)v^2
+=-(3/8)\{(9e+4v)/5\}^2+(26/25)(e+v)^2.
+}{}
+If $e+v=\allowbreak Kw$, the original row bound, \eqref{eq:Q165:T172.5}, and
+$1+y\le\allowbreak  e^y$ give
+\fitdisplay{
+\E[(1+e)(1+v)^4]
+\le\exp\{(26/25)\|w\|_2^2+\E s+(13/32)\E s^2\}.
+\label{eq:Q165:T172.6}
+}{Q165.T172.6}
+Here $\E Q(s)>\allowbreak 0$, and zero values are included by continuity.
+For the algebraic comparison take $e=\allowbreak G_2(K)g=\allowbreak g+R$ and $v=\allowbreak Z-1$;
+call its exponent $\mathcal E_2$. The original spectral measure $\nu$
+has support $[0,\allowbreak \theta]$, mass $d$, and
+$\int x^j\,\allowbreak d\nu=\allowbreak \delta_{j+1}$. Direct expansion at the same kernel gives
+\fitdisplay{
+J_2=4d+(4k^2-4k)\delta_2+k^2\delta_3-4k^2d^2,
+}{}
+\fitdisplay{
+\begin{aligned}
+\E s_2&=-5d+4k\delta_2,\\
+\E s_2^2&=(3+8kd)^2d+(25-48k-128k^2d)\delta_2
++(64k^2-40k)\delta_3+16k^2\delta_4.
+\end{aligned}
+}{}
+Thus $\mathcal E_2=\allowbreak \int P_2(x)\,\allowbreak d\nu$, where
+\fitdisplay{
+\begin{aligned}
+P_2&=C_0+C_1x+C_2x^2+C_3x^3,\\
+C_0&=-21/25+(13/32)(3+8kd)^2-(104/25)k^2d,\\
+C_1&=(104/25)k^2-(983/50)k+325/32-52k^2d,\\
+C_2&=(676/25)k^2-(65/4)k>0,\qquad C_3=(13/2)k^2>0.
+\end{aligned}
+}{}
+The convex chord gives $\mathcal E_2\le\allowbreak  C_0d+S_0\delta_2$, with
+$S_0=\allowbreak C_1+C_2\theta+C_3\theta^2$. Let $h=\allowbreak k-1\in[0,\allowbreak 3/5]$,
+so $d=\allowbreak 2h/[3(1+h)]$. The exact coefficients are
+\fitdisplay{
+C_0=2253/800+(767/75)h+(1976/225)h^2,
+\quad S_0=5757/51200-(2188241/76800)h-(2833753/153600)h^2.
+\label{eq:Q165:T172.7}
+}{Q165.T172.7}
+For the full comparison payment use $S_0\le\allowbreak 1/8-28h-18h^2$ and
+$d^2\le\allowbreak \delta_2\le\allowbreak \theta d$ to get
+$\mathcal E_2/d\le\allowbreak  C_0+\theta/8-(28h+18h^2)d$.
+Subtract $3+(29/2)d$ and multiply by $1+h$; the result is exactly
+\fitdisplay{
+-\epsilon+(14/25-\epsilon)h+(77/225)h^2-(724/225)h^3,
+\qquad\epsilon=851/6400.
+}{}
+Using $h^2\le\allowbreak 3h/5$, $\epsilon>\allowbreak 17/128$,
+$287/375-\epsilon<\allowbreak 2/3$ and $724/225>\allowbreak 16/5$, this is at most
+$-17/128+(2/3)h-(16/5)h^3<\allowbreak 0$.
+The positive cubic combination has maximum $\sqrt{10}/27<\allowbreak 17/128$,
+with squared comparison $163840<\allowbreak 210681$. Consequently
+\fitdisplay{
+\mathcal E_2\le3d+(29/2)d^2.
+\label{eq:Q165:T172.8}
+}{Q165.T172.8}
+
+\paragraph{Q165.6 The all-$a$ comparison at the same kernel}\label{part:Q165.6}
+Take $e=\allowbreak S_a-1=\allowbreak G_a(K)g$ and $v=\allowbreak Z-1$, whose pointwise ranges were
+proved above. Set
+\fitdisplay{
+w_a=\{G_{a-1}(K)+I-2kK+kK^2\}g-2kd\one.
+}{}
+Then $e+v=\allowbreak Kw_a$. Equations~\eqref{eq:Q165:T172.3} and
+\eqref{eq:Q165:T172.6} imply
+\fitdisplay{
+\begin{aligned}
+\E[f_aZ^4]&\le e^{\mathcal E_a},\\
+\mathcal E_a&=(26/25)\|w_a\|_2^2+\E s_a+(13/32)\E s_a^2-\beta_a/2,\\
+s_a&=G_a(K)g+4P(K)g.
+\end{aligned}\label{eq:Q165:T172.9}
+}{Q165.T172.9}
+Every receiving and terminal symbol below is multiplied at the same
+$x$ and integrated under the same original $\nu$.
+At $z=\allowbreak i\sqrt x$ write
+\fitdisplay{
+G_a(z)=1-xt+zC,\qquad1-x\le t,C\le1,
+\qquad\eta=1-C\in[0,x].
+}{}
+These finite alternating coordinates cover every $a\ge\allowbreak 3$, with
+$t=\allowbreak C=\allowbreak 1$ at $a=\allowbreak 3$. Skewness gives exactly
+\fitdisplay{
+\beta_a=\int t\,d\nu,\qquad\beta_{a+1}=\int C\,d\nu.
+\label{eq:Q165:T172.10}
+}{Q165.T172.10}
+The first identity uses the imaginary coordinate $t$ of $G_{a-1}$,
+since $\E G_{a-1}(K)g=\allowbreak -\beta_a$.
+The polynomial part of $w_a$ has coordinates $C+1-kx$ and $t-2k$.
+Its mean $2kd-\beta_a$ crosses the actual constant $-2kd\one$, yielding
+\fitdisplay{
+\|w_a\|_2^2-J_2
+=\int\{-2(2-kx)\eta+\eta^2+x(t^2-4kt)+4kdt\}\,d\nu.
+\label{eq:Q165:T172.11}
+}{Q165.T172.11}
+In particular the constant cross term $4kd\beta_a$ is retained.
+Let $A_0=\allowbreak -3-8kd+8kx$ and $B_0=\allowbreak 5-4kx$. The coordinates of $s_2$ are
+$A_0,\allowbreak zB_0$, and those of $s_a$ are $A_0-xt,\allowbreak z(B_0-\eta)$.
+Therefore
+\fitdisplay{
+\E s_a-\E s_2=\int\eta\,d\nu,
+}{}
+\fitdisplay{
+\E s_a^2-\E s_2^2
+=\int\{-2A_0xt+x^2t^2+x(-2B_0\eta+\eta^2)\}\,d\nu.
+\label{eq:Q165:T172.12}
+}{Q165.T172.12}
+Substitute \eqref{eq:Q165:T172.10}--\eqref{eq:Q165:T172.12} into the
+exponent difference. The entire $\eta$ contribution is at most
+\fitdisplay{
+\eta\left\{-79/25+[(52/25)k+26/25-65/16]x
++[(13/4)k+13/32]x^2\right\}\le0.
+}{}
+Indeed, at $k\le\allowbreak 8/5$ the linear bracket is at most
+$611/2000<\allowbreak 1/3$, and the quadratic bracket at most $897/160<\allowbreak 6$.
+Since $x<\allowbreak 1/2$, the braces are less than
+$-79/25+1/6+3/2=\allowbreak -112/75$. This first uses $\eta^2\le\allowbreak  x\eta$;
+it bounds the full legal interval without requiring arbitrary independent
+choices of $\eta,\allowbreak t$ to come from a receiving path.
+For the remaining terms use $t^2\le\allowbreak  t$ to obtain
+\fitdisplay{
+\mathcal E_a-\mathcal E_2
+\le\int t\{\chi-a_*x-b_*x^2\}\,d\nu,
+\label{eq:Q165:T172.13}
+}{Q165.T172.13}
+where
+\fitdisplay{
+\chi=-1/2+(104/25)kd=-1/2+(208/75)h,
+\quad a_*=273/400-(13/75)h>0,\quad b_*=195/32+(13/2)h>0.
+}{}
+If $\chi\le\allowbreak 0$, the integral is nonpositive and
+\eqref{eq:Q165:T172.8} applies throughout that domain.
+If $\chi\ge\allowbreak 0$, $t\le\allowbreak 1$ and $t\ge\allowbreak 1-x$ give
+\fitdisplay{
+t(\chi-a_*x-b_*x^2)
+\le\chi-a_*x+(a_*-b_*)x^2+b_*x^3.
+}{}
+Add this to $P_2$. The new quadratic coefficient is positive:
+$C_2+a_*-b_*>\allowbreak 0$, because $C_2\ge\allowbreak (1079/100)k$ and $b_*<\allowbreak (13/2)k$;
+the cubic coefficient is also positive. The convex chord gives
+\fitdisplay{
+\mathcal E_a\le(C_0+\chi)d+S_*\delta_2,
+\qquad S_*=S_0-\kappa(a_*+b_*\theta).
+}{}
+The exact expansion is
+\fitdisplay{
+\begin{aligned}
+S_*&=-1443981/819200-(4601499/153600)h-(2833753/153600)h^2\\
+&\le-7/4-(299/10)h-(92/5)h^2<0.
+\end{aligned}\label{eq:Q165:T172.14}
+}{Q165.T172.14}
+Using only the original global moment inequality $\delta_2\ge\allowbreak  d^2$ gives
+\fitdisplay{
+\mathcal E_a/d\le F(h):=1853/800+13h+(1976/225)h^2+dS_*.
+\label{eq:Q165:T172.15}
+}{Q165.T172.15}
+No pointwise lower spectral bound $x\ge\allowbreak  d$ is imposed.
+For $d\le\allowbreak 4/25$, $h\le\allowbreak 6/19$. By \eqref{eq:Q165:T172.14},
+$(1+h)[F(h)-3-(29/2)d]$ is at most
+\fitdisplay{
+-547/800+(3559/2400)h+(416/225)h^2-(784/225)h^3
+\le-547/800+(3/2)h+(15/8)h^2.
+}{}
+The right side increases, with value $-6667/288800<\allowbreak 0$ at $6/19$.
+For either sign of $\chi$,
+\fitdisplay{
+\E[f_aZ^4]\le\exp\{3d+(29/2)d^2\}
+\qquad(0<d\le4/25).
+\label{eq:Q165:T172.16}
+}{Q165.T172.16}
+For $4/25\le\allowbreak  d\le\allowbreak 1/4$, every $h\le\allowbreak 3/5$ satisfies
+\fitdisplay{
+(1+h)[F(h)-3-15d]
+\le-547/800+(23/20)h+(15/8)h^2-(69/20)h^3<0.
+}{}
+For a continuous proof, let
+$P(h)=\allowbreak 547/800-(23/20)h-(15/8)h^2+(69/20)h^3$.
+Its derivative is a convex quadratic on $[0,\allowbreak 1/2]$ with negative endpoint
+values, so $P$ decreases to $P(1/2)=\allowbreak 57/800$.
+For $h\ge\allowbreak 1/2$, $P''\ge\allowbreak 33/5$, $P'(1/2)=\allowbreak -7/16$, and completing the
+square gives $P\ge\allowbreak 57/800-245/16896>\allowbreak 0$, using
+$57/800>\allowbreak 1/16$ and $245/16896<\allowbreak 1/64$.
+If $\chi\le\allowbreak 0$, \eqref{eq:Q165:T172.8} is stronger. Thus
+\fitdisplay{
+\E[f_aZ^4]\le\exp\{3d+15d^2\}
+\qquad(4/25\le d\le1/4).
+\label{eq:Q165:T172.17}
+}{Q165.T172.17}
+
+\paragraph{Q165.7 The actual square remainder with its variance term}\label{part:Q165.7}
+Let $V=\allowbreak \E U^2=\allowbreak \delta_2+\delta_3/4-d^2$.
+Since $\E U=\allowbreak 0$ and $\E(gU)=\allowbreak \delta_2/2$, the actual square gives
+\fitdisplay{
+X\le m^2Z-m\delta_2\one+2mK(gU)+T(qU^2).
+}{}
+Here $|K(gU)|\le\allowbreak \sqrt{dV}$ and
+$T(qU^2)\le\allowbreak \min\{4V,\allowbreak 2V+2|\E(gU^2)|\}$, while
+$[\E(gU^2)]^2\le\allowbreak  d\operatorname{Var}(U^2)$.
+Moreover,
+\fitdisplay{
+\|U\|_\infty\le d+\sqrt{d+\delta_2/4},\qquad
+\operatorname{Var}(U^2)\le[d+\sqrt{d+\delta_2/4}]^2V-V^2.
+}{}
+The negative $-V^2$ is retained. Set $b=\allowbreak \delta_2/d$, $c=\allowbreak \delta_3/d$,
+$v=\allowbreak V/d=\allowbreak b+c/4-d$ and $t=\allowbreak \sqrt d$. Then
+$b\in[d,\allowbreak \theta]$, $c\le\allowbreak \theta b$ and $v\le\allowbreak \alpha-d$, where
+$\beta_0=\allowbreak 141/128$ and $\alpha=\allowbreak 1833/4096$.
+We have $X\le\allowbreak  m^2Z+\delta_{\rm err}d\one$, with either upper
+\fitdisplay{
+-mb+2m\sqrt v+4v,
+\quad\text{or}\quad
+-mb+2m\sqrt v+2v+2t\sqrt{v\{(t+\sqrt{1+b/4})^2-v\}}.
+}{}
+Both can be bounded jointly at $b=\allowbreak \theta,\allowbreak c=\allowbreak \theta b$.
+First fix $b$ and use the increase of $v(W_0-v)$ when
+$W_0\ge\allowbreak 1>\allowbreak 2\alpha\ge\allowbreak 2v$; then
+$-mb+2m\sqrt{\beta_0b-d}$ has derivative
+$-m+m\beta_0/\sqrt v>\allowbreak 0$, and the other terms increase.
+Thus the two corresponding upper bounds are
+\fitdisplay{
+\rho_4=-m\theta+2m\sqrt{\alpha-d}+4(\alpha-d),
+}{}
+\fitdisplay{
+\rho_2=-m\theta+2m\sqrt{\alpha-d}+2(\alpha-d)
++2t\sqrt{(\alpha-d)\{(t+\sqrt{\beta_0})^2-(\alpha-d)\}}.
+}{}
+The finite radical comparisons are
+\fitdisplay{
+\sqrt{\alpha-d}\le32881/49152-3d/4\le67/100-3d/4,
+}{}
+\fitdisplay{
+\sqrt{I(t)}\le Q(t)=11/20+(9/10)t-(21/20)t^2,
+\quad I(t)=(\alpha-t^2)\{2679/4096+2t^2+(21/10)t\}.
+}{}
+The second holds for $0\le\allowbreak  t\le\allowbreak 1/2$, using
+$\sqrt{\beta_0}<\allowbreak 21/20$. For its full-domain certificate write
+$z=\allowbreak t-1/4$:
+\fitdisplay{
+Q^2-I=478089/419430400-(97/10240)z
++(75261/102400)z^2+(53/16)z^3+(1241/400)z^4.
+}{}
+At $z\ge\allowbreak 0$ the first three terms are at least
+$1/1000-z/100+(73/100)z^2>\allowbreak 0$, and the last two are nonnegative.
+At $z\le\allowbreak 0$ the linear term is nonnegative; the remaining $z^2$ bracket
+increases on $[-1/4,\allowbreak 0]$, with left endpoint at least $613/6400>\allowbreak 0$.
+Also $Q>\allowbreak 0$. Substitution gives the paid uppers
+\fitdisplay{
+\begin{aligned}
+\Delta_2&=747/800+2\alpha+(11/10)\sqrt d
+-(4961/1600)d-(21/10)d^{3/2}+(9/4)d^2,\\
+\Delta_4&=747/800+4\alpha-(11041/1600)d+(9/4)d^2.
+\end{aligned}\label{eq:Q165:T172.18}
+}{Q165.T172.18}
+Use $\Delta_2$ in the first range and $\Delta_4$ in the second.
+They are positive on their respective ranges:
+for $d\le\allowbreak 4/25$,
+$\Delta_2\ge\allowbreak 747/800+2\alpha-4961/10000-168/1250>\allowbreak 0$;
+for $d\le\allowbreak 1/4$,
+$\Delta_4\ge\allowbreak 747/800+4\alpha-11041/6400>\allowbreak 0$.
+These remainder bounds concern the same $F,\allowbreak U$ at the original kernel
+and reference weight.
+
+\paragraph{Q165.8 The complete low-domain payment under $f_a\mu$}\label{part:Q165.8}
+The original weight $f_a\mu$ is a nonnegative finite measure of mass
+$\E f_a\le\allowbreak 1$. Apply Minkowski to $X\le\allowbreak  m^2Z+\Delta d\one$ without
+renormalizing that weight into another kernel:
+\fitdisplay{
+\|X\|_{L^4(f_a\mu)}
+\le m^2\|Z\|_{L^4(f_a\mu)}+\Delta d(\E f_a)^{1/4}
+\le m^2\|Z\|_{L^4(f_a\mu)}+\Delta d.
+}{}
+In the first range, \eqref{eq:Q165:T172.16} and
+$2\log m\le\allowbreak -3d-(9/4)d^2$ bound the first term by
+$e^{-(9/4)d+(11/8)d^2}$.
+Using $e^{-h}\le\allowbreak 1-h+h^2/2$ gives
+\fitdisplay{
+\|X\|_{L^4(f_a\mu)}\le1-d[L_1(d)-\Delta_2(d)],
+\quad L_1=9/4-(125/32)d+(99/32)d^2-(121/128)d^3.
+}{}
+For $t=\allowbreak \sqrt d\le\allowbreak 2/5$, the gap is
+\fitdisplay{
+21567/51200-(11/10)t-(1289/1600)t^2
++(21/10)t^3+(27/32)t^4-(121/128)t^6.
+}{}
+Using $t^2\le\allowbreak 2t/5$ and $t^3\le\allowbreak 4t/25$, its derivative is at most
+$-11/10+(1159/800)t\le\allowbreak -1041/2000<\allowbreak 0$.
+The gap is therefore at least $142671/32000000>\allowbreak 1/256$.
+In the second range, \eqref{eq:Q165:T172.17} bounds the first term
+by $e^{-(9/4)d+(3/2)d^2}$. The same finite Taylor comparison gives
+\fitdisplay{
+L_2=9/4-(129/32)d+(27/8)d^2-(9/8)d^3,
+}{}
+\fitdisplay{
+L_2-\Delta_4=-12129/25600+(4591/1600)d+(9/8)d^2-(9/8)d^3.
+}{}
+This increases on $[4/25,\allowbreak 1/4]$, since its derivative is at least
+$4591/1600-27/128>\allowbreak 0$; its left endpoint is
+$152047/16000000>\allowbreak 1/256$.
+This pays the extra all-$a$ exponent loss at the actual reference weight.
+Thus throughout the low domain,
+$\|X\|_{L^4(f_a\mu)}\le\allowbreak 1-d/256$, and
+\fitdisplay{
+\E[f_aX^4]\le(1-d/256)^4\le1-d/256.
+}{}
+Together with the high domain and $d=\allowbreak 0$, this proves the bare interface
+for every $a\ge\allowbreak 3$ and every original legal kernel.
+
+\paragraph{Q165.9 Decorations, complete reversal and original counts}\label{part:Q165.9}
+Each genuine equal-pair factor lies in $[0,\allowbreak 1]$. Positivity of $T$ gives
+\fitdisplay{
+\E[E_of_a\{T(E_tF)\}^4]\le\E[f_a(TF)^4].
+}{}
+This restores all original multiplicities and subdivisions.
+If the sums of the equal-pair half-lengths are $S_t,\allowbreak S_o$, one original
+component has $a+7+2S_t+2S_o$ edges and $a+8+2S_t+2S_o$ vertices.
+The fourth-moment test tree has $a+28+8S_t+2S_o$ edges and
+$a+29+8S_t+2S_o$ vertices. The analytic copies add no reference arm
+to the original component.
+Reversing every edge, or replacing $K$ by $-K$, gives
+\fitdisplay{
+\E[\overline E_o\bar f_a\{A(\overline E_t p\bar f_2f_3)\}^4]
+\le1-d/256.
+}{}
+The reference weight, terminal and connector reverse together.
+All vertex variables remain under the same original product measure;
+original edge counts, noninjective maps and arbitrary original joint-label
+laws retain their meanings. This is the specified reference fourth
+interface; ordinary eighth moments, arbitrary internal-root closures,
+compound outputs and other skeleton payments require their own inputs.

@@ -1,0 +1,558 @@
+\subsection{Ordinary eighth moments for even terminals with multiple pairs at every connector length}\label{proof:Q5-C090-ordinary}
+
+\paragraph{Q90.0 The terminal and its bounds.}
+After maximal equal pairing, let the distinct residual arms be
+\begin{equation}\tag{Q90.0.1}\label{eq:Q90:0.1}
+a_1<b_1<a_2<b_2<\cdots<a_j<b_j,\qquad j\ge1.
+\end{equation}
+Every \(a_i\)-arm has its first edge inward and the remaining edges
+outward; every \(b_i\)-arm is outward. All \(L\ge\allowbreak 1\) connector edges
+point from terminal to receiving root, whose unit arm points outward.
+For arbitrary genuine equal-pair products \(E_t,\allowbreak E_r\), define
+\begin{equation}\tag{Q90.0.2}\label{eq:Q90:0.2}
+F=\prod_{i=1}^jh_{a_i}f_{b_i},\quad
+X_D=T^L(E_tF),\qquad H_D=E_rpX_D.
+\end{equation}
+For \(a_1\ge\allowbreak 2,\allowbreak j\ge\allowbreak 2\), the same directions give
+\begin{equation}\tag{Q90.0.3}\label{eq:Q90:0.3}
+\boxed{\E H_D^8\le e^{-d/6}\qquad(L\ge1).}
+\end{equation}
+The stronger rows are
+\begin{equation}\tag{Q90.0.4}\label{eq:Q90:0.4}
+a_1=3,\ j\ge2:\qquad\E H_D^8\le e^{-d},
+\end{equation}
+\begin{equation}\tag{Q90.0.5}\label{eq:Q90:0.5}
+a_1\ge4,\ j\ge1:\qquad
+\E H_D^8\le e^{-(128j/5-24)d}.
+\end{equation}
+All integer lengths, gaps and finite pair counts in these ranges are allowed.
+
+Use the finite model, path definitions, skew moments, row bounds and
+finite convolution in Appendix~\ref{proof:Q5-C064}, and the pair and
+finite-mask bounds in Appendix~\ref{proof:Q5-C090}.
+Thus \(K'=\allowbreak -K\), \(g'=\allowbreak -g\), \(T=\allowbreak J+K'\),
+\(\delta_n=\allowbreak \|K^n\one\|_2^2\), \(d=\allowbreak \delta_1\),
+\(\theta=\allowbreak 13/32\), \(\kappa=\allowbreak 19/32\), and \(\tau=\allowbreak d-\delta_2\).
+All expectations and adjoints use the fixed finite probability measure.
+In particular \(0\le\allowbreak  d\le\allowbreak 1/3\), \(d^2\le\allowbreak \delta_2\le\allowbreak \theta d\),
+\(\delta_{n+1}\le\allowbreak \theta\delta_n\), \(d\delta_3\ge\allowbreak \delta_2^2\),
+and \(\delta_3\ge\allowbreak  d^3\).
+Write \(G_n(z)=\allowbreak \sum_{i=\allowbreak 0}^{n-1}z^i\), \(G_0=\allowbreak 0\),
+\(\beta_1=\allowbreak \beta_2=\allowbreak 0\),
+\(\beta_n=\allowbreak \sum_{i=\allowbreak 1}^{\lfloor(n-1)/2\rfloor}(-1)^{i-1}\delta_i\).
+The finite \(G_n\) norm is at most one for \(n=\allowbreak 0,\allowbreak 1\) or \(n\ge\allowbreak 3\),
+while \(\|G_2\|\le\allowbreak \sqrt{1+\theta}<\allowbreak 19/16\).
+For the actual finite mask set
+\fitdisplay{
+\begin{gathered}
+R=\sum_{i=1}^j\sum_{r=a_i+1}^{b_i}K^r\one,\qquad F\le e^{R-\Gamma},\\
+\Gamma/d=\begin{cases}
+\kappa+16(j-1)/5,&a_1=2,\\
+2-\theta+16(j-1)/5,&a_1=3,\\
+16j/5,&a_1\ge4.
+\end{cases}
+\end{gathered}
+}{}
+These are precisely the pair losses of \eqref{eq:L90:pair}.
+The mask has \(R=\allowbreak U(K')g'\), with the frequency and propagated norm
+bounds \eqref{eq:L90:mask}--\eqref{eq:L90:masknorm};
+\(C_*=\allowbreak 32768/16245<\allowbreak 100/49\).
+For \(a_1\ge\allowbreak 4\), the pointwise bound gives
+\(|R|^2<\allowbreak d/7\le\allowbreak 1/21<\allowbreak 1/16\), and for \(a_1=\allowbreak 3\),
+\(|R|^2<\allowbreak d/3\le\allowbreak 1/9\). Taking Taylor range \(1/4\) or \(1/3\)
+gives \(e^R\le\allowbreak 1+R+(3/5)R^2\).
+For \(a_1=\allowbreak 2\), \(|R|^2<\allowbreak 5d/6\le\allowbreak 5/18<\allowbreak 9/25\), and Taylor range
+\(3/5\) gives \(e^R\le\allowbreak 1+R+(5/8)R^2\).
+These follow from the finite remainder bound
+\(e^R\le\allowbreak 1+R+R^2/[2(1-t/3)]\) for \(|R|\le\allowbreak  t<\allowbreak 3\), proved in
+Appendix~\ref{proof:Q5-C090}.
+The full-mean exponential inequality of Appendix~\ref{proof:Q5-C081}
+is \(\E e^{8K'V}\le\allowbreak  e^{8\E(K'V)+17\|V\|_2^2}\).
+Consequently, if \(H\le\allowbreak (c+N/2)^2\), \(N=\allowbreak K'V\), with nonnegative
+square base, then \(\log\E H^8\le\allowbreak 16(c-1)+8\E N+17\|V\|^2\).
+
+\paragraph{Q90.3 Finite propagation of the common mask.}
+Let \(V=\allowbreak \E R^2\), \(D_n=\allowbreak \E K'^nR\), \(a_0=\allowbreak \E KR=\allowbreak -D_1\),
+and \(\rho=\allowbreak -D_2\). Define
+\begin{equation}\tag{Q90.3.1}\label{eq:Q90:3.1}
+\delta=D_0+cV,\quad\varepsilon=\delta-a_0,\qquad
+c=6/5\ (a_1\ge3),\quad c=5/4\ (a_1=2).
+\end{equation}
+With \(B=K'\), \(u=g'\), \(\sigma=V\), and \(D_1=-a_0\),
+\eqref{eq:oc:fourth-duhamel} gives the positive upper
+\(0<T^LF\le e^{-\Gamma}Y_L\):
+\begin{equation}\tag{Q90.3.2}\label{eq:Q90:3.2}
+\begin{gathered}
+Y_1=q+\delta+K'R,\\
+Y_L=\bar f_L+\delta\bar f_{L-1}-a_0\bar f_{L-2}+K'^LR
+ +\sum_{n=2}^{L-1}D_n\bar f_{L-1-n}\quad(L\ge2).
+\end{gathered}
+\end{equation}
+The sum is empty at \(L=2\). Writing
+\(p+Y_L=2+c_L+N_L\), \(N_L=K'V_L\), use
+\eqref{eq:oc:ordinary-sum} at \(r=8\) to obtain
+\begin{equation}\tag{Q90.3.3}\label{eq:Q90:3.3}
+\log\E[(pT^LF)^8]\le-8\Gamma+8c_L+8\E N_L+17\|V_L\|^2.
+\end{equation}
+The three short lengths have the exact forms
+\begin{equation}\tag{Q90.3.4}\label{eq:Q90:3.4}
+L=1:\qquad c_1=\delta,\quad V_1=R,\quad\E N_1=-a_0;
+\end{equation}
+\begin{equation}\tag{Q90.3.5}\label{eq:Q90:3.5}
+\begin{gathered}
+L=2:\quad c_2=\varepsilon,\quad
+V_2=\delta\one+g'+K'R,\quad\E N_2=-d-\rho,\\
+\|V_2\|^2=d+2\rho+\|K'R\|^2+\delta^2-2\delta a_0;
+\end{gathered}
+\end{equation}
+\begin{equation}\tag{Q90.3.6}\label{eq:Q90:3.6}
+\begin{gathered}
+L=3:\quad c_3=\varepsilon-d-\rho,\quad
+V_3=\varepsilon\one+(1+\delta)g'+K'g'+K'^2R,\\
+\E N_3=-(1+\delta)d+D_3,\\
+\|V_3\|^2=(1+\delta)^2d+\delta_2-2(1+\delta)D_3+2D_4
+ +\|K'^2R\|^2+\varepsilon^2-2\varepsilon(d+\rho).
+\end{gathered}
+\end{equation}
+In particular, these retain the constant coordinates and their cross terms.
+
+\paragraph{Q90.3.2 Finite convolution losses.}
+Put \(S'_n=\allowbreak \sum_{i=\allowbreak 0}^nK'^i\one\), \(\nu=\allowbreak 1+\varepsilon\), and define
+\begin{equation}\tag{Q90.3.7}\label{eq:Q90:3.7}
+\begin{gathered}
+Z_L^*=S'_L+\delta S'_{L-1}-a_0S'_{L-2}+K'^LR,\\
+P_n(z)=G_n(z)+z^nU(z),\qquad
+Q_n(z)=P_n(z)+\varepsilon G_{n-2}(z)+\delta z^{n-2}
+\quad(n\ge2).
+\end{gathered}
+\end{equation}
+Subtracting \eqref{eq:Q90:3.2} term by term gives
+\begin{equation}\tag{Q90.3.8}\label{eq:Q90:3.8}
+\begin{gathered}
+Z_L^*-Y_L=\sum_{n=3}^L\gamma_n\bar f_{L-n},\\
+\gamma_3=d-D_2=d+\rho,\quad
+\gamma_4=d+\delta d-D_3,\\
+\gamma_n=\beta_n+\delta\beta_{n-1}-a_0\beta_{n-2}-D_{n-1}
+\quad(n\ge5).
+\end{gathered}
+\end{equation}
+The finite polynomials also give
+\(Z_L^*=\allowbreak \nu+Q_L(K')g'\), \(Q_L=\allowbreak \nu+zQ_{L-1}\) for \(L\ge\allowbreak 3\),
+and \(\E Z_L^*=\allowbreak \nu-\gamma_{L+1}\) for \(L\ge\allowbreak 4\).
+Suppose every \(\gamma_n\ge\allowbreak  hd\), \(n\ge\allowbreak 3\), and
+\(B=\allowbreak 1+\varepsilon-hd>\allowbreak 0\). For \(L\ge\allowbreak 4\), keep the two distinct
+last terms \(\gamma_L\bar f_0\), \(\gamma_{L-1}\bar f_1\):
+\begin{equation}\tag{Q90.3.9}\label{eq:Q90:3.9}
+\begin{gathered}
+0<e^\Gamma T^LF\le Y_L\le Z:=Z_L^*-hd(1+q)=Bq-hd+N_0,\\
+N_0=K'Q_{L-1}(K')g',\qquad\E N_0=-\gamma_{L+1}\le-hd.
+\end{gathered}
+\end{equation}
+Let \(m=\allowbreak e^{-\Gamma/2}\). Weighted AM--GM for \(p,\allowbreak Z\ge\allowbreak 0\) gives
+\begin{equation}\tag{Q90.3.10}\label{eq:Q90:3.10}
+\begin{gathered}
+pT^LF\le(c_*+N/2)^2,\qquad
+c_*=m\sqrt B-\frac{mhd}{2\sqrt B},\\
+N=K'V_*,\qquad V_*=\frac m{\sqrt B}Q_{L-1}(K')g'.
+\end{gathered}
+\end{equation}
+Its nonnegative square base is
+\(m(\sqrt Bp+Z/\sqrt B)/2\).
+Alternatively, retain \(m^2=\allowbreak e^{-\Gamma}\) outside the square and
+use the exponential form \eqref{eq:Q90:3.3}.
+
+\paragraph{Q90.3.3 Finite contraction when \(U\) is small.}
+If \(|U(i\sqrt x)|\le\allowbreak 3/8\), then \(|P_n|\le\allowbreak 1\) for every \(n\ge\allowbreak 3\).
+For \(n=\allowbreak 3,\allowbreak 5\), \(|G_n|^2\le\allowbreak 1-\kappa x\), hence
+\(|G_n|\le\allowbreak 1-\kappa x/2\). The perturbation is at most
+\((3/8)x^{3/2}<\allowbreak 39x/160<\allowbreak \kappa x/2\), and is smaller for \(n=\allowbreak 5\).
+For \(n=\allowbreak 4\), \(|G_4|=\allowbreak (1-x)\sqrt{1+x}\le\allowbreak 1-x/2\), while the
+perturbation is at most \(3\theta x/8<\allowbreak x/2\).
+For \(n\ge\allowbreak 6\), the finite geometric formula and \(|U|\le\allowbreak 1\) give
+\begin{equation}\tag{Q90.3.11}\label{eq:Q90:3.11}
+|P_n|\le(1+x^3)/\sqrt{1+x}+x^3\le1.
+\end{equation}
+The last comparison is equivalent to
+\(x(1+\sqrt{1+x})\le\allowbreak 1\), whose left side is at most \(143/160\).
+The zero frequency is included.
+
+\paragraph{Q90.4 Minimum arm at least four, every pair count and length.}
+Let \(a_1\ge\allowbreak 4\), \(j\ge\allowbreak 1\), \(\Gamma=\allowbreak 16jd/5\).
+Summing the positive and negative even-moment subcollections of the
+finite mask separately gives
+\begin{equation}\tag{Q90.4.1}\label{eq:Q90:4.1}
+D_0,a_0\in[-d/5,d/12],\quad
+\rho,D_3\in[-d/12,d/30],\quad |D_n|\le d/30\quad(n\ge4).
+\end{equation}
+The geometric constants are \(\theta^2/(1-\theta^2)=\allowbreak 169/855<\allowbreak 1/5\),
+\(\theta^3/(1-\theta^2)=\allowbreak 2197/27360<\allowbreak 1/12\), and
+\(\theta^4/(1-\theta^2)=\allowbreak 28561/875520<\allowbreak 1/30\).
+The first possible negative even term of \(D_0\) is \(-\delta_3\)
+and the first positive one is \(\delta_4\), since \(R\) starts at
+least at \(K^5\one\); the classes for \(\rho,\allowbreak D_3\) start with
+\(-\delta_4\) or \(\delta_5\).
+The mask bound further gives
+\fitdisplay{
+V\le28561d/519840<d/18,\quad
+\|K'R\|^2<d/44,\quad\|K'^2R\|^2<d/108,\quad
+\|U\|^2<1/18<1/16.
+}{}
+Thus
+\begin{equation}\tag{Q90.4.2}\label{eq:Q90:4.2}
+\delta\in[-d/5,3d/20],\quad a_0\in[-d/5,d/12],\quad
+\varepsilon\in[-17d/60,7d/20],\quad
+d+\rho\in[11d/12,31d/30].
+\end{equation}
+At \(L=\allowbreak 1\), the cost beyond \(-8\Gamma\) is
+\(8\varepsilon+17V\le\allowbreak 337d/90<\allowbreak 4d\).
+At \(L=\allowbreak 2\), the constant square block is at most
+\(3d^2/25\le\allowbreak  d/25\), so
+\fitdisplay{
+\|V_2\|^2\le(1+1/15+1/44+1/25)d<8d/7,\qquad
+\E N_2\le-11d/12.
+}{}
+The extra cost is at most
+\((14/5-22/3+136/7)d=\allowbreak 1564d/105<\allowbreak 15d\).
+At \(L=\allowbreak 3\), \eqref{eq:Q90:3.6} gives
+\fitdisplay{c_3+\E N_3\le(7/20-2+1/15+7/60)d=-22d/15.}{}
+The constant block \(\varepsilon^2-2\varepsilon(d+\rho)\)
+is at most \(203d^2/240\). Taking \(1+\delta\le\allowbreak 21/20\),
+\fitdisplay{
+\|V_3\|^2/d\le441/400+13/32+7/40+1/15+1/108+203/720
+=44099/21600<21/10.
+}{}
+Here \(7/40\) comes from the negative endpoint of \(D_3\), and
+\(1/15\) from the positive endpoint of \(D_4\).
+The extra cost is at most
+\((-176/15+357/10)d=\allowbreak 719d/30<\allowbreak 24d\). Therefore
+\begin{equation}\tag{Q90.4.3}\label{eq:Q90:4.3}
+\E[(pT^LF)^8]\le e^{-(128j/5-24)d}\qquad(L=1,2,3).
+\end{equation}
+For the longer lengths, \eqref{eq:Q90:3.8} gives
+\(\gamma_3\ge\allowbreak 11d/12\), \(\gamma_4\ge\allowbreak 9d/10\), and for \(n\ge\allowbreak 5\),
+\fitdisplay{\gamma_n\ge[19/32-1/30-(17/60)d]d
+\ge(9/20+23/1440)d.}{}
+Take \(h=\allowbreak 9/20\). Part Q90.3.3 gives \(\|P_n\|\le\allowbreak 1\).
+The three finite ranges for \(Q_n\) are
+\fitdisplay{
+\begin{array}{ll}
+n=3:&\|Q_n\|\le1+(7/20+13/100)d<1+d/2,\\
+n=4:&\|Q_n\|\le1+(133/320+13/160)d
+=1+(159/320)d<1+d/2.
+\end{array}
+}{}
+For \(n\ge\allowbreak 5\), contraction of \(G_{n-2}\) and the smaller last power
+give the same bound. The \(n=\allowbreak 4\) row uses
+\(\sqrt{1+\theta}<\allowbreak 19/16\) for its \(G_2\) term.
+Equation~\eqref{eq:Q90:3.9} now has
+\begin{equation}\tag{Q90.4.4}\label{eq:Q90:4.4}
+1-11d/15\le B\le1-d/10,\qquad\E N_0\le-9d/20.
+\end{equation}
+Keep \(m^2=\allowbreak e^{-\Gamma}\) outside the square. The unscaled precursor norm is
+\begin{equation}\tag{Q90.4.5}\label{eq:Q90:4.5}
+\frac{(1+d/2)^2}{1-11d/15}d\le(245/136)d.
+\end{equation}
+The ratio increases on the full domain and equals \(245/136\)
+at \(d=\allowbreak 1/3\). Its unscaled mean is at most \(-9d/20\), since
+\(B\le\allowbreak 1\), and its constant satisfies
+\fitdisplay{
+\sqrt B-\frac{hd}{2\sqrt B}
+\le(1+B)/2-hd/2\le1-11d/40.
+}{}
+The full exponential cost is therefore
+\begin{equation}\tag{Q90.4.6}\label{eq:Q90:4.6}
+-8\Gamma+[-22/5-18/5+17(245/136)]d
+=-(128j/5-181/8)d.
+\end{equation}
+As \(181/8<\allowbreak 24\), this and \eqref{eq:Q90:4.3} prove
+\eqref{eq:Q90:0.5}, including the two retained terms at \(L=\allowbreak 4\).
+
+\paragraph{Q90.5 Minimum arm three and at least two pairs.}
+Let \(a_1=\allowbreak 3\), \(j\ge\allowbreak 2\), and
+\(\Gamma=\allowbreak [2-\theta+16(j-1)/5]d\ge\allowbreak 767d/160\).
+The mask begins at \(K^4\one\). Its finite signed subcollections give
+\begin{equation}\tag{Q90.5.1}\label{eq:Q90:5.1}
+\begin{gathered}
+D_0\in[-d/5,d/2],\quad a_0\in[-d/5,d/12],\quad
+\rho\in[-d/12,d/5],\\
+D_3\in[-d/12,d/30],\qquad |D_n|\le d/12\quad(n\ge4).
+\end{gathered}
+\end{equation}
+In particular \(D_3=\allowbreak -\E K^3R\) has first possible negative term
+\(-\delta_4\). The finite mask bounds give
+\fitdisplay{
+V\le2197d/16245<5d/36,\quad
+\|K'R\|^2<3d/50,\quad\|K'^2R\|^2<d/40,\quad
+|U|^2<5/36<9/64.
+}{}
+Consequently
+\begin{equation}\tag{Q90.5.2}\label{eq:Q90:5.2}
+\delta\in[-d/5,2d/3],\quad
+\varepsilon\in[-17d/60,7d/8],\quad
+d+\rho\in[11d/12,6d/5].
+\end{equation}
+The upper \(\delta\) uses \(D_0\le\allowbreak  d/2\), \(6V/5\le\allowbreak  d/6\);
+the upper \(\varepsilon\) first gives \(13d/15\), then \(7d/8\).
+The bound on \(U\) holds at every frequency.
+At \(L=\allowbreak 1\), the extra cost is
+\(7d+85d/36=\allowbreak 337d/36<\allowbreak 10d\).
+At \(L=\allowbreak 2\), the constant block is at most \(32d^2/45\), so
+\fitdisplay{
+\|V_2\|^2/d\le1+2/5+3/50+32/135<7/4,\qquad
+\E N_2\le-11d/12.
+}{}
+Its extra cost is at most
+\((7-22/3+119/4)d=\allowbreak 353d/12<\allowbreak 30d\).
+At \(L=\allowbreak 3\),
+\begin{equation}\tag{Q90.5.3}\label{eq:Q90:5.3}
+c_3+\E N_3\le(7/8-2+1/12+1/15+1/30)d=-113d/120.
+\end{equation}
+If \(\varepsilon\ge\allowbreak 0\), then
+\(\varepsilon\le\allowbreak 7d/8<\allowbreak 2(d+\rho)\), so its constant block is nonpositive.
+If \(\varepsilon<\allowbreak 0\), the block is at most \(2737d^2/3600\),
+using \(|\varepsilon|\le\allowbreak 17d/60\).
+Take \(1+\delta\le\allowbreak 11/9\) in \eqref{eq:Q90:3.6}; then
+\begin{equation}\tag{Q90.5.4}\label{eq:Q90:5.4}
+\begin{aligned}
+\|V_3\|^2/d
+&\le121/81+13/32+11/54+1/6+1/40+2737/10800\\
+&<3/2+13/32+5/24+1/6+1/40+13/50
+=6159/2400<13/5.
+\end{aligned}
+\end{equation}
+The extra cost is at most \((-113/15+221/5)d=\allowbreak 110d/3\).
+Since \(8\Gamma\ge\allowbreak 767d/20\), the gap is \(101d/60>\allowbreak d\).
+Thus each short length has bound \(e^{-d}\).
+For \(L\ge\allowbreak 4\), \(\gamma_3\ge\allowbreak 11d/12\), \(\gamma_4\ge\allowbreak 9d/10\), and
+\begin{equation}\tag{Q90.5.5}\label{eq:Q90:5.5}
+\gamma_n\ge[19/32-1/12-(17/60)d]d
+\ge(2/5+23/1440)d\quad(n\ge5).
+\end{equation}
+Take \(h=\allowbreak 2/5\). Part Q90.3.3 gives \(\|P_n\|\le\allowbreak 1\).
+The extra coefficients for \(Q_3,\allowbreak Q_4\) are at most \(157d/120\)
+and \(503d/384\); for \(n\ge\allowbreak 5\) they are no larger than the
+\(n=\allowbreak 3\) bound. Hence \(\|Q_n\|\le\allowbreak 1+4d/3\) for every \(n\ge\allowbreak 3\), and
+\begin{equation}\tag{Q90.5.6}\label{eq:Q90:5.6}
+1-41d/60\le B\le1+19d/40,\qquad\E N_0\le-2d/5.
+\end{equation}
+Let \(\lambda=\allowbreak \Gamma/d\ge\allowbreak 767/160\), \(m=\allowbreak e^{-\Gamma/2}\), retaining
+the scale in \(V_*\). Then
+\begin{equation}\tag{Q90.5.7}\label{eq:Q90:5.7}
+\|V_*\|^2\le e^{-\lambda d}
+\frac{(1+4d/3)^2}{1-41d/60}d\le d.
+\end{equation}
+The logarithmic derivative of the ratio is at most
+\(-767/160+8/3+123/139<\allowbreak 0\), and its value at zero is one.
+The constant \(c_*\le\allowbreak  m\sqrt B\) satisfies
+\begin{equation}\tag{Q90.5.8}\label{eq:Q90:5.8}
+c_*\le e^{-691d/320}\le(1+691d/320)^{-1}
+\le1-(2073/1651)d\le1-5d/4.
+\end{equation}
+The last step uses \(d\le\allowbreak 1/3\) and \(2073/1651>\allowbreak 5/4\).
+The actual mean \(\E N=\allowbreak (m/\sqrt B)\E N_0\) is nonpositive.
+The full-mean exponential bound gives \(\E[(pT^LF)^8]\le\allowbreak  e^{-3d}\).
+Together with the short lengths this proves \eqref{eq:Q90:0.4}.
+
+\paragraph{Q90.6 Minimum arm two and at least two pairs.}
+Let \(a_1=\allowbreak 2\), \(j\ge\allowbreak 2\), and
+\(\Gamma=\allowbreak [\kappa+16(j-1)/5]d\ge\allowbreak 607d/160\).
+The coefficient of \(K^3\one\) in \(R\) is exactly one; all later
+coefficients are zero or one.
+The signed even-moment subcollections and the mask norm give
+\begin{equation}\tag{Q90.6.1}\label{eq:Q90:6.1}
+\begin{gathered}
+D_0\in[-d/5,d/2],\quad a_0\le d/2,\quad
+\rho\in[-d/12,d/5],\quad D_3\le d/5,\\
+|D_n|\le d/12\quad(n\ge4),\quad
+V\le5408d/16245<d/3,\\
+\|K'R\|^2\le13d/96,\quad\|K'^2R\|^2<d/18,\quad
+\delta=D_0+5V/4\in[-d/5,11d/12].
+\end{gathered}
+\end{equation}
+The required \(K^3\one\) term contributes \(+\delta_2\) to
+\(a_0=\allowbreak \E KR\) and \(+\delta_3\) to \(D_3=\allowbreak -\E K^3R\).
+The possible negative tails are bounded by
+\(\delta_3/(1-\theta^2)\) and \(\delta_4/(1-\theta^2)\), respectively, so
+\begin{equation}\tag{Q90.6.2}\label{eq:Q90:6.2}
+\begin{gathered}
+a_0\ge\delta_2-\frac{\delta_3}{1-\theta^2}
+\ge(439/855)\delta_2\ge0,\\
+D_3\ge\delta_3-\frac{\delta_4}{1-\theta^2}
+\ge(439/855)\delta_3>\delta_3/2\ge d^3/2.
+\end{gathered}
+\end{equation}
+Here \(\theta/(1-\theta^2)=\allowbreak 416/855<\allowbreak 1/2\); the sign of \(D_3\)
+uses \(K'=\allowbreak -K\).
+The positive terms of \(D_0\) sum to at most
+\(\delta_2/(1-\theta^2)\). Thus
+\fitdisplay{
+D_0-a_0\le\frac{\delta_2+\delta_3}{1-\theta^2}-\delta_2
+\le\frac\theta{1-\theta}\delta_2=(13/19)\delta_2.
+}{}
+With \(V\le\allowbreak  d/3\) and \(\delta_2\le\allowbreak \theta d\), this yields
+\(\varepsilon\le\allowbreak (169/608+5/12)d=\allowbreak (1267/1824)d<\allowbreak 7d/10\).
+The lower bound follows from \(\delta\ge\allowbreak -d/5\), \(a_0\le\allowbreak  d/2\), hence
+\begin{equation}\tag{Q90.6.3}\label{eq:Q90:6.3}
+|\varepsilon|\le7d/10,\qquad d+\rho\in[11d/12,6d/5].
+\end{equation}
+At \(L=\allowbreak 1\), the extra cost is at most
+\(28d/5+17d/3<\allowbreak 12d<\allowbreak 8\Gamma\).
+At \(L=\allowbreak 2\), if \(\delta\ge\allowbreak 0\), then \(a_0\ge\allowbreak 0\) bounds the
+constant block by \(\delta^2\le\allowbreak 121d^2/144\).
+If \(\delta<\allowbreak 0\), it is at most
+\(d^2/25+d^2/5=\allowbreak 6d^2/25<\allowbreak 121d^2/144\).
+Therefore
+\fitdisplay{\|V_2\|^2/d\le1+2/5+13/96+121/432
+=7843/4320<11/6.}{}
+Since \(\E N_2\le\allowbreak -11d/12\), \(c_2\le\allowbreak 7d/10\), the extra cost is
+\fitdisplay{
+8c_2+8\E N_2+17\|V_2\|^2
+\le(28/5-22/3+187/6)d=883d/30.
+}{}
+As \(8\Gamma\ge\allowbreak 607d/20\), and \(607/20-883/30=\allowbreak 11/12\),
+\begin{equation}\tag{Q90.6.4}\label{eq:Q90:6.4}
+\E[(pT^2F)^8]\le e^{-11d/12}.
+\end{equation}
+
+\paragraph{Q90.6.3 The common-variable cancellation at \(L=\allowbreak 3\).}
+Equations~\eqref{eq:Q90:3.6} and
+\eqref{eq:Q90:6.1}--\eqref{eq:Q90:6.3} give
+\begin{equation}\tag{Q90.6.5}\label{eq:Q90:6.5}
+c_3+\E N_3\le(7/10-2+1/12+1/15+1/5)d=-19d/20.
+\end{equation}
+Use the exact \(\delta=\allowbreak \varepsilon+a_0\) to rewrite the full norm as
+\begin{equation}\tag{Q90.6.6}\label{eq:Q90:6.6}
+\begin{aligned}
+\|V_3\|^2={}&d+\delta_2+2a_0d+\delta^2d
+ +\varepsilon^2-2\varepsilon\rho\\
+ &+\|K'^2R\|^2-2(1+\delta)D_3+2D_4.
+\end{aligned}
+\end{equation}
+The term \(2\varepsilon d\) has canceled with the constant-coordinate
+cross term. The required coefficient in \eqref{eq:Q90:6.2}, and
+\(1+\delta\ge\allowbreak 14/15\), imply
+\begin{equation}\tag{Q90.6.7}\label{eq:Q90:6.7}
+\delta^2d-2(1+\delta)D_3
+\le(121/144-14/15)d^3\le0.
+\end{equation}
+The remaining quadratic terms satisfy
+\(2a_0d\le\allowbreak  d^2\), \(\varepsilon^2\le\allowbreak 49d^2/100\),
+\(-2\varepsilon\rho\le\allowbreak 7d^2/25\). Hence
+\begin{equation}\tag{Q90.6.8}\label{eq:Q90:6.8}
+\begin{aligned}
+\|V_3\|^2&\le(1+13/32+1/18+1/6)d+(177/100)d^2\\
+&\le(469/288+59/100)d=(15973/7200)d.
+\end{aligned}
+\end{equation}
+Substitute \eqref{eq:Q90:6.5} and \eqref{eq:Q90:6.8} in
+\eqref{eq:Q90:3.3}. The cost beyond \(-8\Gamma\) is at most
+\(216821d/7200\); its gap from \(607d/20\) is
+\(1699d/7200>\allowbreak d/5\). Thus
+\begin{equation}\tag{Q90.6.9}\label{eq:Q90:6.9}
+\E[(pT^3F)^8]\le e^{-d/5}.
+\end{equation}
+This includes the shortest table \((2,\allowbreak 3,\allowbreak 4,\allowbreak 5)\) and every larger
+finite gap and pair count.
+
+\paragraph{Q90.6.4 The required coefficient and contraction of every \(P_n\).}
+At \(z=\allowbreak i\sqrt x\), write \(U(z)=\allowbreak A_x+zB_x\).
+The required \(K^3\one\) term becomes \(-z^2\) in the \(K'\) notation.
+Separately bounding the positive and negative finite tails gives
+\begin{equation}\tag{Q90.6.10}\label{eq:Q90:6.10}
+\begin{gathered}
+x-\frac{x^2}{1-x^2}\le A_x\le\frac{x}{1-x^2},\qquad A_x\ge0,\\
+-\frac{x}{1-x^2}\le B_x\le\frac{x^2}{1-x^2}.
+\end{gathered}
+\end{equation}
+The coordinate \(B_x\) is distinct from the scalar \(B\) in
+\eqref{eq:Q90:3.9}.
+For \(n=\allowbreak 3\), the real and normalized imaginary coordinates are
+\(1-x+x^2B_x\), \(1-xA_x\). Their lower bounds are
+\((1-x-x^2)/(1-x^2)>\allowbreak 0\) and
+\((1-2x^2)/(1-x^2)>\allowbreak 0\), respectively.
+Since \(\theta^3/(1-\theta^2)<\allowbreak 1/12\), their upper bounds are
+\(1-11x/12\) and one. Consequently
+\begin{equation}\tag{Q90.6.11}\label{eq:Q90:6.11}
+|P_3|^2\le(1-11x/12)^2+x\le1.
+\end{equation}
+For \(n=\allowbreak 4\), the coordinates are \(1-x+x^2A_x\), \(1-x+x^2B_x\),
+both nonnegative and at most \(1-4x/5\), using
+\(\theta^2/(1-\theta^2)<\allowbreak 1/5\). Thus
+\begin{equation}\tag{Q90.6.12}\label{eq:Q90:6.12}
+|P_4|^2\le(1+x)(1-4x/5)^2\le1.
+\end{equation}
+For \(n=\allowbreak 5\), the coordinates are
+\(1-x+x^2-x^3B_x\), \(1-x+x^2A_x\), again nonnegative.
+Using \(\theta/(1-\theta^2)<\allowbreak 1/2\), they are at most
+\(1-x/2\) and \(1-4x/5\). Therefore
+\begin{equation}\tag{Q90.6.13}\label{eq:Q90:6.13}
+|P_5|^2\le(1-x/2)^2+x(1-4x/5)^2
+=1-27x^2/20+16x^3/25\le1.
+\end{equation}
+For every \(n\ge\allowbreak 6\), the mask's frequency bound gives
+\(|U(z)|^2\le\allowbreak  x^2C_*<\allowbreak 1/3\), so the finite estimate
+\eqref{eq:Q90:3.11} applies. Thus \(\|P_n\|\le\allowbreak 1\) for all
+\(n\ge\allowbreak 3\), including the \(P_3\) used at \(L=\allowbreak 4\).
+
+\paragraph{Q90.6.5 Every finite \(L\ge\allowbreak 4\).}
+The convolution coefficients satisfy
+\(\gamma_3\ge\allowbreak 11d/12\), \(\gamma_4\ge\allowbreak 11d/15\).
+For \(n\ge\allowbreak 5\), use \(\delta\ge\allowbreak -d/5\), \(a_0\le\allowbreak  d/2\),
+and \(D_{n-1}\le\allowbreak  d/12\) to obtain
+\begin{equation}\tag{Q90.6.14}\label{eq:Q90:6.14}
+\gamma_n\ge[19/32-1/12-(7/10)d]d\ge133d/480>d/4.
+\end{equation}
+Take \(h=\allowbreak 1/4\). The extra coefficient for \(Q_3\) is
+\(7/10+(11/12)(13/20)=\allowbreak 311/240<\allowbreak 4/3\).
+For \(Q_4\), it is \((7/10)(19/16)+(11/12)(13/32)<\allowbreak 4/3\);
+for \(n\ge\allowbreak 5\), it is no larger than for \(n=\allowbreak 3\).
+Hence \(\|Q_n\|\le\allowbreak 1+4d/3\) for every \(n\ge\allowbreak 3\).
+Equation~\eqref{eq:Q90:3.9} gives
+\(B\in[1-19d/20,\allowbreak 1+9d/20]\), with positive lower endpoint, and
+\(\E N_0\le\allowbreak -d/4\).
+Let \(\lambda=\allowbreak \Gamma/d\ge\allowbreak 607/160\), \(m=\allowbreak e^{-\lambda d/2}\),
+in \eqref{eq:Q90:3.10}. Then
+\begin{equation}\tag{Q90.6.15}\label{eq:Q90:6.15}
+\|V_*\|^2\le e^{-\lambda d}
+ \frac{(1+4d/3)^2}{1-19d/20}d\le d.
+\end{equation}
+For the last inequality, the logarithmic derivative of the ratio
+is at most
+\fitdisplay{-607/160+\frac{8/3}{1+4d/3}
+                  +\frac{19/20}{1-19d/20}.}{}
+The sum of the two fractions is convex in \(d\), so its maximum
+on \([0,\allowbreak 1/3]\) occurs at an endpoint. The endpoint values are
+\(217/60\), \(1725/533\), both less than \(607/160\).
+The ratio therefore decreases from one at zero.
+The constant satisfies
+\begin{equation}\tag{Q90.6.16}\label{eq:Q90:6.16}
+c_*\le m\sqrt B\le e^{-107d/64}\le(1+107d/64)^{-1}
+\le1-(321/299)d\le1-(103/96)d.
+\end{equation}
+This uses \(d\le\allowbreak 1/3\); the cross-product difference in the last
+comparison is \(19\).
+The actual mean \(\E N\) is nonpositive and the AM--GM square base
+is nonnegative. The exponential bound yields
+\begin{equation}\tag{Q90.6.17}\label{eq:Q90:6.17}
+\log\E[(pT^LF)^8]\le-[16(103/96)-17]d=-d/6.
+\end{equation}
+Together with the \(L=\allowbreak 1\) bound, \eqref{eq:Q90:6.4}, and
+\eqref{eq:Q90:6.9}, this proves the minimum-two case for all
+\(j\ge\allowbreak 2,\allowbreak L\ge\allowbreak 1\). Parts Q90.4--Q90.5 complete
+\eqref{eq:Q90:0.3}--\eqref{eq:Q90:0.5}.
+
+\paragraph{Q90.8 Decorations, zero boundary and full reversal.}
+By positivity and the equal-pair comparison,
+\begin{equation}\tag{Q90.8.1}\label{eq:Q90:8.1}
+0<H_D=E_rpT^L(E_tF)\le pT^LF,\qquad
+0<X_D=T^L(E_tF)\le T^LF.
+\end{equation}
+The terminal product stays before propagation and the root product
+at the receiving root. At \(d=\allowbreak 0\), \(g=\allowbreak 0\); leaf integration makes
+all tree messages one even if \(K\ne0\). All divisions by \(d\)
+above concern \(d>\allowbreak 0\).
+Full reversal reverses terminal, connector, root unit arm and every
+equal-pair decoration together. It replaces \(K\) by \(-K\),
+exchanges \(A/T\), \(p/q\), \(f_n/\bar f_n\), and \(h_n/W_n\),
+where \(W_n=\allowbreak A\bar f_{n-1}\). The spectral moments and probability
+measure are unchanged, giving the reversed ordinary eighth bounds.

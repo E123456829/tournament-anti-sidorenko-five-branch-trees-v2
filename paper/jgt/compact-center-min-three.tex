@@ -1,0 +1,170 @@
+\subsection{Even centers of minimum at least three}\label{loc:S37}
+In this proof $D_j=\delta_{j}/(1-\theta^2)$ bounds finite same-sign tails.
+For an even center use $\prod h_{a_i}f_{b_i}$ if $a_1\ge4$;
+if $a_1=3$, use $f_3h_{b_1}\prod_{i\ge2}h_{a_i}f_{b_i}$.
+We prove its original cubed-weight fourth moment is at most $e^{-d/1000}$.
+The stronger bounds below are retained because they supply the later-pair
+budgets. Equal-pair multipliers are restored at the end.
+
+\proofpart{A cubed-weight exponential comparison}
+If $P\le e^{R-\Delta}$, $R=KV$, put
+$I=\|V\|^2$, $J=\|R\|^2$, $t_0=\E[gV]$, $L_0=\E[rV]$.
+Then
+\begin{equation}\label{eq:compact-center-master}
+ \E[q^3P^4]\le e^\Xi,\qquad
+ \Xi=-4\Delta+6d+16I+(32/3)J-4t_0+16L_0.
+\end{equation}
+To prove this use $\log(1-g)\le-g-3g^2/10$ and $X=-3g+4R$.
+The original row bound and exact square completion give
+$X^2/11-9g^2/10=16R^2-(9/110)(g+40R/3)^2\le16I$.
+Also $e^{X-X^2/11}\le Q(X)=1+X+2X^2/3$:
+the logarithmic difference has derivative
+$X[4(X-2)^2+1]/[33Q(X)]$ and minimum zero.
+Finally $\E X=-4t_0$ and $\E X^2=9d+16J+24L_0$.
+Here $q^3\mu$ denotes the unnormalized weighted measure.
+
+For a single pair with $a\ge4$, use
+$R=K^aG_{b-a}(K)g$, $\Delta=2d$.
+The squared norms are at most $3\delta_{a}/2,3\delta_{a+1}/2$.
+Finite alternating signs give the following complete budgets:
+\[
+\begin{array}{c|ccc}
+a&t_0\text{ lower bound}&L_0\text{ upper bound}&\Xi\text{ upper bound}\\\hline
+4&0&-\delta_{3}+\delta_{4}&-3d/2\\
+5&\delta_{3}-\delta_{4}&\delta_{4}&-5d/16\\
+\ge6&-\delta_{4}&\delta_{4}&-d/10.
+\end{array}
+\]
+The positive costs are, respectively,
+$40\delta_{4}+16\delta_{5}-16\delta_{3}\le31265d/65536$,
+$3d/4+d/4+11d/16$, and $3d/8+d/8+7d/5$,
+against the common loss $2d$.
+For $t\ge2$, disjoint masks give
+$I\le4\delta_{4}$, $J\le4\delta_{5}$, $-t_0,L_0\le D_4=\delta_{4}/(1-\theta^2)$.
+Equation~\eqref{eq:compact-center-master} gives
+$\Xi\le-[8(t-2)+63/25]d$.
+
+\proofpart{The first pair of minimum three}
+Retain $P_0=f_3h_b\le e^{R_0-3d}$ and the coefficients $C,D,E$
+and row factor $V_0$ from Section~\ref{loc:S28}.
+Write $M=\E[gV_0]$, $N_0=\E[gR_0]$.
+The exponent is
+\[
+ \Xi_0=-6d+16\|V_0\|^2+(32/3)\|R_0\|^2-4M-16N_0.
+\]
+For $b=4$, $M=\delta_{2}$, $N_0=d^2$ and
+$\Xi_0=-6d+16\delta_{3}+(32/3)(d^3+\delta_{4})-4\delta_{2}\le-d$.
+For $b=5$, $M=(1+d)\delta_{2}$, $N_0=d^2+d\delta_{2}-\delta_{3}$, giving
+\[
+ \Xi_0=-6d-4\delta_{2}+32\delta_{3}+80\delta_{4}/3+32\delta_{5}/3+H,
+\]
+where $H=-20d\delta_{2}+16(1+d)\delta_{2}^2+
+(32/3)(d^3+2d^2\delta_{2}+d\delta_{2}^2+\delta_{2}^3-2d\delta_{3})\le0$.
+For $u=\delta_{2}/d\le1/3$ use $d\le u$ and $\delta_{3}\ge \delta_{2}^2/d$;
+$H/d^2\le(4u/3)(-7+12u+20u^2+8u^3)\le0$.
+For $u\ge1/3$ use $d\le1/3$ to obtain
+$(4/9)(8-29u+8u^2+8u^3)<0$.
+The remaining spectral polynomial is convex and has endpoints
+$0,563745/98304<23/4$, so $\Xi_0\le-d/4$.
+
+For $d\ge1/9$, use the full row bound
+$|R_0|\le(69/32-1/4000)d$ from Section~\ref{loc:S28} and
+$\E q^3\le1+4d\le e^{27d/8}$.
+This proves the uniform loss $d/1000$ for every $b\ge4$.
+It remains to treat $b\ge6,d\le1/9$.
+
+\proofpart{All remaining finite lengths in the small range}
+Put $\alpha=d-\beta_b$, $\alpha'=d-\beta_{b-1}$,
+$\rho=\beta_{b-3}/(\beta_{b-2}+\beta_{b-3})$ and $S_0=\alpha+\alpha'$.
+Then $19/51\le\rho\le32/51$ and
+$E=\rho S_0/(1-d\rho)$, $D=S_0+dE$.
+The important joint bound is $\rho S_0\le \delta_{2}$.
+It is immediate if $\rho\le1/2$.
+For $b=7$ it is $d\delta_{3}\ge \delta_{2}^2$.
+For $b\ge11$ in the remaining residue $b\equiv3\pmod4$, write
+$\beta_{b-2}=\beta-e$, $S_0=2(d-\beta)+2e-f$,
+$e=\delta_{(b-3)/2}$, $f=\delta_{(b-1)/2}$.
+The sufficient inequality is
+$2(19/32)-(2+\theta/(19/32))\theta=59/608>0$.
+Thus every finite residue is included and
+\begin{gather*}
+ 7\delta_{2}/16\le E\le13\delta_{2}/12,\quad19\delta_{2}/16\le D<17\delta_{2}/8,\\
+ C\ge d+(19/32)\delta_{2}+dE,\quad C<3d/2,\quad D<7d/8.
+\end{gather*}
+
+Let $W=-K^2G_{b-3}(K)g$ and $V_0=W+C\one+Dg+Er$.
+Apply the finite geometric loss \eqref{eq:compact-G-loss} with $N=b-3\ge3$.
+Consequently the base norms are
+$I_b\le \delta_{3}-7\delta_{4}/15$, $J_b\le \delta_{4}-7\delta_{5}/15$.
+With $G_{b-2}=a+i\sqrt x b_x$, define
+$M_1=\int xb_x$, $M_2=\int x^2b_x$,
+$L_1=\int x(1-a)$, $L_2=\int x^2(1-a)$.
+Their ranges are
+$\delta_{2}-\delta_{3}\le M_1\le \delta_{2}$, $0\le M_2\le \delta_{3}$,
+$\delta_{3}-\delta_{4}\le L_1\le \delta_{3}$, $0\le L_2\le \delta_{4}$.
+The full dependent quantities are
+\begin{align*}
+ I&=I_b+2Cd-C^2+D^2d+E^2\delta_{2}+2DM_1+2EL_1,\\
+ J&=J_b+C^2d+D^2\delta_{2}+E^2\delta_{3}-2CL_1+2DM_2+2EL_2-2CE\delta_{2},\\
+ M&=Dd+M_1,\qquad N_0=Cd-E\delta_{2}-L_1.
+\end{align*}
+In particular the negative terms $-C^2$ and $-2CE\delta_{2}$ are retained.
+Substitution gives
+\[
+ \Xi_0\le-6d-4\delta_{2}+36\delta_{3}+16\delta_{4}/5-224\delta_{5}/45+H,
+\]
+where
+\begin{align*}
+ H={}&-(16-32d/3)C^2+16Cd+D^2(16d+32\delta_{2}/3)-4Dd\\
+ &+32D\delta_{2}+64D\delta_{3}/3+E^2(16\delta_{2}+32\delta_{3}/3)\\
+ &+16E\delta_{2}+32E\delta_{3}+64E\delta_{4}/3-64CE\delta_{2}/3-64C(\delta_{3}-\delta_{4})/3.
+\end{align*}
+Using the preceding upper and lower coefficient bounds with their
+indicated signs yields $H\le d^2H_2(u)+d^3H_3(u)$, $u=\delta_{2}/d$,
+with the complete polynomials
+\begin{gather*}
+ H_2=-57u/4+14881u^2/144-361u^3/48,\\
+ H_3=(32/3)(1+19u/32)^2-161u/27+755u^2/12+28723u^3/432.
+\end{gather*}
+For example the $C$ term decreases for $C\ge d$, and its bound is
+$-16(19/32)d\delta_{2}-16(19/32)^2\delta_{2}^2+
+(32/3)d^3(1+19u/32)^2-161d^2\delta_{2}/27$.
+The negative last term uses $\delta_{3}-\delta_{4}\ge(19/32)\delta_{2}^2/d$.
+Jensen gives $\delta_{5}\ge du^4$, so
+\[
+ \Xi_0/d\le-6+B(u)+dH_2(u)+d^2H_3(u),\quad
+ B(u)=3569u/320-224u^4/45.
+\]
+$B$, $\max(H_2,0)$ and $H_3$ increase on $[0,\theta]$:
+$H_2\le0$ up to $1/8$, then its derivative is positive and increasing;
+the other derivatives have the indicated positive coefficient bounds.
+The endpoint certificates are
+$B(\theta)<22/5$, $H_2(\theta)<54/5$, $H_3(\theta)<29$.
+For the last polynomial its four terms are respectively below
+$33/2,-12/5,52/5,9/2$.
+Hence $\Xi_0/d<-6+22/5+(54/5)/9+29/81=-17/405$.
+
+\proofpart{All later pairs and the original star interface}
+For $t\ge2$ put $R=R_0+R_T$, $V=V_0+V_T$ and
+$\Delta=(2t+1)d$. The exact additional cost is
+\[
+ 16(2\langle V_0,V_T\rangle+\|V_T\|^2)
+ +(32/3)(2\langle R_0,R_T\rangle+\|R_T\|^2)
+ -4\E[gV_T]+16\E[rV_T].
+\]
+For $b=4$, the two signed cross terms are at most
+$(1+d)D_4$ and $dD_4+D_5$;
+$\|V_T\|^2\le d/16$, $\|R_T\|^2\le d/36$.
+Thus the additional cost is at most $568d/81$, leaving
+$[8(t-2)+161/81]d$.
+For $b\ge5$, use
+$\|V_0\|^2\le d/2$, $\|R_0\|\le31\sqrt d/100$,
+$\|V_T\|\le\sqrt d/6$, $\|R_T\|\le\sqrt d/9$,
+and $-\E[gV_T],\E[rV_T]\le D_4$.
+The cost ratio is at most $268/63+5264/6075+5/3<7$,
+leaving $[8(t-2)+1]d$.
+For $d\ge1/9$, $R_T\le3d/4$ and the already proved same-direction
+first-pair bound give the stronger loss $[8(t-2)+5+1/1000]d$.
+The common rules restore decorations, $d=0$ and full reversal.
+The original star assembly using these center moments is proved in
+Section~\ref{sec:star}.

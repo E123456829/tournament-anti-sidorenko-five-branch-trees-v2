@@ -1,0 +1,869 @@
+\subsection{Finite path rows and ordinary operator power bounds}\label{proof:Q5-C064}
+\paragraph{Q64.1 Measure, operators, and inputs}
+
+Let \(X\ne\varnothing\) be finite with a probability measure \(\mu\),
+after deleting zero-mass atoms. Assume
+\fitdisplay{
+K(x,y)=-K(y,x),\qquad |K(x,y)|\le1.
+}{Q64.1.1}
+Every expectation and every operator adjoint is with respect to this
+one original \(\mu\). Define
+\fitdisplay{
+Jv=(Ev)1,\quad A=J+K,\quad T=J-K=A^*,\quad
+ g=K1,\quad p=1+g,\quad q=1-g,
+}{}
+\fitdisplay{
+f_n=A^{n}\one,\quad \bar f_n=T^{n}\one,\quad f_0=\bar f_0=1,\qquad
+ h_n=T f_{n-1}\quad(n\ge1),
+}{}
+\fitdisplay{
+I_q(X)=E[q^{-1/3}|X|^{8/3}],\qquad
+ \beta(X)=E[X^2/q].
+}{Q64.1.2}
+The kernels of \(A,\allowbreak  T\) are nonnegative. Since \(K(x,\allowbreak  x)=0\),
+\(p(x),\allowbreak  q(x)\ge\mu(x)>0\). Every \(f_n,\allowbreak  \bar f_n\) is strictly positive.
+
+Write
+\fitdisplay{
+r=Kg,\quad s=Kr,\quad t=Ks,\quad
+ \delta_j=\|K^{j}\one\|_2^2,\quad d=\delta_1,\quad
+ \theta=\frac{13}{32},\quad c=\frac{19}{32},\quad k=\frac{32}{19}.
+}{Q64.1.3}
+We use the kernel spectral bound
+\(\|K\|^2\le\theta\) from the Q3/Q4 package. We keep \(p\) and \(q\) as weights. In particular,
+\fitdisplay{
+0\le d\le\frac13,\quad d^2\le \delta_2\le\theta d,\quad
+ \delta_{j+1}\le\theta \delta_j,\quad \delta_3d\ge \delta_2^2.
+}{Q64.1.4}
+Here \(Er=-d\) proves \(d^2\le \delta_2\). The last inequality is
+Cauchy--Schwarz in the finite spectral measure of \(-K^2\) at \(1\).
+\mbox{\hyperref[part:Q64.9]{part Q64.9}} includes the elementary proof of \(d\le1/3\).
+
+The other inputs are the following exact finite identities and estimates.
+
+Ordinary path multiplier. For every \(a\ge2\),
+\fitdisplay{
+\|M_{f_a}T\|_{2\to2}^2\le1-d/72.
+}{Q64.1.5}
+This is the full ordinary multiplier, in this actual order, stated in
+Q4 C115, original formula (8.3) and reconstructed in the Q3 operator
+proof in Appendix~\ref{q3:app:operators}. Apply it to \(-K\), then take the
+ordinary \(\mu\)-adjoint, to obtain
+\fitdisplay{
+\boxed{\|T M_{\bar f_a}\|_{2\to2}^2\le1-d/72,\quad a\ge2.}
+}{Q64.1.6}
+The full multiplier and propagation occur in the displayed order.
+
+Inverse path fourth, C056.
+\fitdisplay{
+E[\bar f_3^4/q]\le1-\frac{23}{36}d.
+}{Q64.1.7}
+
+
+Eighth-moment bounds, C049/C050 and C058. For the same
+directions at every positive inner length, put
+\fitdisplay{
+Y_{b,L}=pT^L(qf_b),\qquad b\ge2,\quad L\ge1.
+}{}
+Then
+\fitdisplay{
+EY_{b,L}^8\le1-d/12000.
+}{Q64.1.8}
+For \(b=2\), the stronger inputs are
+\fitdisplay{
+EY_{2,L}^8\le1-d/500\quad(L\ge1),\qquad
+ EY_{2,L}^8\le1-d/50\quad(L\ge2).
+}{Q64.1.9}
+The same terminal message is used for every positive connector length in (Q64.1.8).
+
+The four-branch zero-step R table and equal-arm pairs. The actual
+negative zero-step table satisfies
+\fitdisplay{
+E[q(C^-)^4]\le1.
+}{Q64.1.10}
+The residual arm table is empty or has at least two distinct lengths
+after maximal equal-length pairing; a singleton S table is not added.
+An equal positive pair of length \(\ell\) contributes
+\(f_\ell h_\ell\le1\) pointwise. Reversing every edge gives the
+negative pair inequality.
+
+If \(d=0\), then \(g=0\), \(p=q=1\), and every \(f_n=\bar f_n=1\).
+The kernel need not vanish. Leaf integration gives value one for
+actual finite-tree messages with boundary values one. Expressions
+using \(\delta_2/d\) below are restricted to \(d>0\).
+
+\paragraph{Q64.2 Row bounds and the full positive path convolution}
+
+For \(Ev=0\), row centering gives
+\fitdisplay{
+|Kv(x)|^2
+ =|E_y[(K(x,y)-g(x))v(y)]|^2
+ \le p(x)q(x)\|v\|_2^2.
+}{Q64.2.1}
+Thus \(r^2\le pqd\). Row Cauchy for the nonnegative \(T\)-kernel yields
+\fitdisplay{
+(TX)^2\le qT(X^2),\qquad
+ \beta(TX)\le E[T(X^2)]=E[pX^2]\le\beta(X),
+}{Q64.2.2}
+where the last step uses \(pq\le1\). Since \(\bar f_2=q+r\),
+\fitdisplay{
+\beta(\bar f_2)=1-2d+E[r^2/q]\le1-d.
+}{}
+Consequently
+\fitdisplay{
+\boxed{\beta(\bar f_n)\le1-d,\qquad n\ge2.}
+}{Q64.2.3}
+
+Define
+\fitdisplay{
+S_n=\sum_{j=0}^nK^{j}\one,\quad G_n(z)=\sum_{j=0}^{n-1}z^j,\quad
+ \tau=d-\delta_2,
+}{}
+\fitdisplay{
+\beta_1=\beta_2=0,\qquad
+ \beta_j=\sum_{i=1}^{\lfloor(j-1)/2\rfloor}(-1)^{i-1}\delta_i
+ \quad(j\ge3).
+}{Q64.2.4}
+The scalar \(\beta_j\) is distinct from the quadratic functional
+\(\beta(X)\). Skewness gives \(ES_n=1-\beta_{n+1}\).
+The recurrence \(S_n=AS_{n-1}+\beta_n1\) and induction give
+\fitdisplay{
+\boxed{S_n=f_n+\sum_{j=3}^n\beta_j f_{n-j}.}
+}{Q64.2.5}
+The sum is empty for \(n<3\). Alternation and (Q64.1.4) imply
+\fitdisplay{
+\tau\le\beta_j\le d\ (j\ge3),\qquad
+ cd\le\tau\le d-d^2\le2/9.
+}{Q64.2.6}
+This is a positive finite convolution for every \(n\).
+
+We will also use
+\fitdisplay{
+\|G_n(K)\|_{2\to2}\le1\ (n\ge3),\qquad
+ \|S_j\|_2\le1\ (j\ge2).
+}{Q64.2.7}
+For a full proof, diagonalize the real skew operator into rotation
+blocks and put \(z=i\sqrt{x}\), \(0\le x\le\theta<1/2\).
+For odd \(n\ge3\),
+\fitdisplay{
+|G_n(z)|^2=(1+x^n)/(1+x)\le1.
+}{}
+For even \(n\), the numerator is
+\((1-(-1)^{n/2}x^{n/2})^2\). If \(4\mid n\), the claim is immediate.
+Otherwise \(n\ge6\), and with \(m=n/2\ge3\),
+\fitdisplay{
+2x^{m-1}+x^{2m-1}\le2x^2+x^5\le1/2+1/32<1.
+}{}
+This proves the first inequality in (Q64.2.7); the second follows from
+\(S_j=G_{j+1}(K)1\). Since \(|Ku|\le E|u|\le\|u\|_2\),
+\fitdisplay{
+0\le S_n=1+KS_{n-1}\le2\qquad(n\ge3).
+}{Q64.2.8}
+In particular \(0<f_n\le2\) for \(n\ge3\), by (Q64.2.5).
+
+For \(0\le Z\le U\), \(\mu_Z=EZ\), and
+\(V_Z=\operatorname{\operatorname{Var}}Z\), we shall use the exact identity and bound
+\fitdisplay{
+EZ^4=\mu_Z^4+
+ E[(Z-\mu_Z)^2(Z^2+2\mu_ZZ+3\mu_Z^2)]
+ \le\mu_Z^4+(U^2+2\mu_ZU+3\mu_Z^2)V_Z.
+}{Q64.2.9}
+Expansion and \(E(Z-\mu_Z)=0\) prove the identity. Every use below
+retains the nonnegativity of the mean and of its majorants.
+
+\paragraph{Q64.3 Length four: a same-kernel fourth moment}\label{part:Q64.3}
+
+Assume \(d>0\) and put \(x=\delta_2/d\), so \(d\le x\le\theta\).
+The exact path, mean, and upper bound are
+\fitdisplay{
+f_4=S_4-d(1+p)=1-2d+(1-d)g+r+s+t,
+}{}
+\fitdisplay{
+m=Ef_4=1-(3-x)d,\qquad 0<f_4\le U=2-d.
+}{Q64.3.1}
+Skewness gives
+\fitdisplay{
+\operatorname{\operatorname{Var}}f_4
+ =d-\delta_2-\delta_3+\delta_4-3d^2+4d\delta_2-\delta_2^2+d^3.
+}{Q64.3.2}
+Indeed \(\langle g,\allowbreak  s\rangle=-\delta_2\),
+\(\langle r,\allowbreak  t\rangle=-\delta_3\), odd total-degree pairings vanish, and
+the mean of \((1-d)g+r+s+t\) is \(-d+\delta_2\).
+Using \(\delta_4\le\theta \delta_3\) and \(\delta_3\ge \delta_2^2/d\), define
+\fitdisplay{
+V(d,x)=d[1-x-cx^2-3d+4dx-dx^2+d^2],
+}{}
+\fitdisplay{
+F(d,x)=m^4+(U^2+2mU+3m^2)V(d,x).
+}{Q64.3.3}
+Then \(Ef_4^4\le F(d,\allowbreak  x)\).
+
+For the exact \(x\)-dependence put
+\fitdisplay{
+m_*=1-\frac{83}{32}d,\quad
+ V_0=d-4d^2+\frac{141}{32}d^3-d^4,
+}{}
+\fitdisplay{
+b(d)=1-\frac{45}{16}d+2d^2,\quad C_{\min}=11-36d+34d^2.
+}{Q64.3.4}
+Throughout \(0<d\le1/3,\allowbreak  \ d\le x\le\theta\),
+\fitdisplay{
+1-3d\le m\le m_*,\quad V\le V_0,\quad V_x\le-db(d),\quad
+ U^2+2mU+3m^2\ge C_{\min}.
+}{Q64.3.5}
+Here \(b(d)\ge41/144>0\). All variance majorants are nonnegative:
+\(V\) decreases with \(x\), and
+\fitdisplay{
+V(d,\theta)/d=c(1-\theta^2)-\frac{1577}{1024}d+d^2
+ \ge\frac{27581}{294912}>0.
+}{Q64.3.6}
+The last quadratic decreases on the whole interval and the displayed
+constant is its value at \(d=1/3\).
+
+Differentiating (Q64.3.3) at fixed \(d\) gives \(F_x\le-dD(d)\), where
+\fitdisplay{
+D=bC_{\min}-[4m_*^3+(2U+6m_*)V_0]
+ =7-\frac{733}{16}d+\frac{34325}{256}d^2
+ -\frac{1737845}{8192}d^3+\frac{79557}{512}d^4-\frac{281}{16}d^5.
+}{Q64.3.7}
+A coefficientwise lower polynomial is
+\fitdisplay{
+P(d)=7-46d+134d^2-213d^3+155d^4-18d^5.
+}{}
+For \(s=3d\in[0,\allowbreak  1]\), the degree-five Bernstein coefficients of
+\(P(s/3)\) are
+\fitdisplay{
+7,\quad59/15,\quad106/45,\quad133/90,\quad362/405,\quad41/81.
+}{Q64.3.8}
+They are positive, so \(D>0\) and \(F\) decreases with \(x\).
+A degree-\(n\) Bernstein list \((B_0,\allowbreak  \ldots,\allowbreak  B_n)\) here always means
+the exact identity
+\fitdisplay{
+P(s/3)=\sum_{i=0}^nB_i\binom ni s^i(1-s)^{n-i}.
+}{Q64.3.9}
+Thus each ledger specifies a finite algebraic certificate and its
+entire interval, not a finite collection of test points.
+
+At \(x=d\), expansion gives
+\fitdisplay{
+F_0(d):=F(d,d)
+ =1-d-22d^2+\frac{2959}{32}d^3-\frac{1365}{8}d^4
+ +\frac{1351}{8}d^5-\frac{689}{8}d^6+\frac{679}{32}d^7-2d^8.
+}{Q64.3.10}
+The expression \((F_0-1+d)/d^2\) is at most
+\fitdisplay{
+Q_4(d)=-22+93d-170d^2+169d^3-86d^4+22d^5.
+}{}
+The degree-five Bernstein coefficients of \(Q_4(s/3)\) are
+\fitdisplay{
+-22,\quad-79/5,\quad-517/45,\quad-2279/270,\quad
+ -2528/405,\quad-1118/243.
+}{Q64.3.11}
+Every coefficient is at most \(-4\). Therefore
+\fitdisplay{
+\boxed{Ef_4^4\le F(d,x)\le F_0(d)\le1-d-4d^2.}\label{eq:Q64:four}
+}{Q64.3.12}
+Changing \(K\) to \(-K\) gives the same bounds for \(\bar f_4\) with the
+same \(d,\allowbreak  \delta_2,\allowbreak  x\). This asserts common bounds, not equality between
+the two fourth moments for a fixed kernel.
+
+\paragraph{Q64.4 Length five: a global strict fourth budget}
+
+The convolution gives
+\fitdisplay{
+f_5=S_5-d(f_2+p+1)+\delta_2,\quad
+ Ef_5=1-4d+2\delta_2+d^2\le1-\frac{51}{16}d+d^2,\quad 0<f_5\le2.
+}{Q64.4.1}
+Its nonconstant polynomial is \(G_5(K)g-d(2g+r)\).
+For \(z=i\sqrt{x}\), \(0\le x\le\theta<1/2\),
+\fitdisplay{
+|G_5(z)|^2=\frac{1+x^5}{1+x}\le1-\frac7{15}x,
+}{}
+\fitdisplay{
+\operatorname{Re}\{G_5(z)\overline{(2+z)}\}
+ =2-x+x^2\ge\frac74,\qquad |2+z|^2\le\frac92.
+}{Q64.4.2}
+For the first inequality,
+\((1-x^4)/(1+x)\ge(15/16)/(3/2)=5/8>7/15\).
+Integrating against the spectral measure at \(g\) and dropping the
+nonnegative square of the mean gives
+\fitdisplay{
+\operatorname{\operatorname{Var}}f_5
+ \le d-\frac7{15}\delta_2-\frac72d^2+\frac92d^3
+ \le d-\frac{37}{15}d^2=:V_5.
+}{Q64.4.3}
+This last majorant is nonnegative on \([0,\allowbreak  1/3]\), and is positive
+when \(d>0\).
+
+For \(m=1-ad\), the right side of (Q64.2.9) with \(U=2,\allowbreak  V=V_5\) is
+\fitdisplay{
+1+(11-4a)d+C_2d^2+C_3d^3+C_4d^4,
+}{}
+\fitdisplay{
+C_2=6a^2-10a-407/15,\quad
+ C_3=-4a^3+3a^2+(74/3)a,\quad C_4=a^4-(37/5)a^2.
+}{Q64.4.4}
+This bound is increasing in a nonnegative mean majorant \(m\).
+For \(d\le1/6\), (Q64.4.1) allows \(a=145/48\), for which
+\fitdisplay{
+11-4a=-13/12,\quad C_2=-4971/1920<-2,\quad
+ C_3=-926260/110592<0,\quad C_4<16.
+}{Q64.4.5}
+The last inequality follows from \(a^2<913/100\) and
+\((913/100)(913/100-37/5)=157949/10000<16\).
+Thus (Q64.4.4) is at most
+\fitdisplay{
+1-\frac{13}{12}d-2d^2+16d^4\le1-\frac{13}{12}d.
+}{Q64.4.6}
+For \(1/6\le d\le1/3\), use \(a=137/48\), so
+\fitdisplay{
+11-4a=-5/12,\quad C_2=-13051/1920<-6,\quad
+ C_3=203308/110592<3,\quad C_4<7.
+}{Q64.4.7}
+Indeed \(a^2<49/6\) and
+\((49/6)(49/6-37/5)=1127/180<7\). Hence (Q64.4.4) is at most
+\fitdisplay{
+1-\frac5{12}d-6d^2+3d^3+7d^4
+ \le1-\frac5{12}d-\frac{38}{9}d^2
+ \le1-\frac{121}{108}d\le1-\frac{13}{12}d.
+}{Q64.4.8}
+The intervals meet and \(d=0\) is immediate. We have proved
+\fitdisplay{
+\boxed{Ef_5^4\le1-\frac{13}{12}d,\qquad
+        E\bar f_5^4\le1-\frac{13}{12}d.}
+}{Q64.4.9}
+The second statement is the global sign reversal of the first.
+
+\paragraph{Q64.5 All lengths at least six: one finite mask proof}
+
+For every \(n\ge6\), the four final coefficients in (Q64.2.5) are at least
+\(\tau\), so
+\fitdisplay{
+0<f_n\le Z:=S_n-\tau(1+p+f_2+f_3).
+}{Q64.5.1}
+This uses the full integer convolution, not extrapolation from samples.
+Since \(1+p+f_2+f_3=4-d+3g+2r+s\), and
+\(\alpha=\beta_{n+1}\in[\tau,\allowbreak  d]\),
+\fitdisplay{
+EZ=1-\alpha-\tau(4-3d)\le\mu_0:=1-\tau(5-3d),\qquad
+ Z\le2-\tau.
+}{Q64.5.2}
+We have \(\mu_0\ge1/9\), because
+\((d-d^2)(5-3d)\) increases on \([0,\allowbreak  1/3]\) to \(8/9\).
+
+The nonconstant polynomial of \(Z\) is
+\fitdisplay{
+G_n(K)g-\tau(3g+2r+s).
+}{}
+Put \(P(z)=3+2z+z^2\). For \(z=i\sqrt{x}\),
+\fitdisplay{
+|P(z)|^2=9-2x+x^2\le9,\qquad
+ \operatorname{Re}\{(1-z)^{-1}\overline{P(z)}\}
+ =\frac{3+x}{1+x}\ge\frac73.
+}{Q64.5.3}
+For \(n\ge6\), the geometric tail satisfies
+\fitdisplay{
+|((1-z)^{-1}-G_n(z))\overline{P(z)}|
+ \le3\theta^3<1/4.
+}{}
+Therefore
+\fitdisplay{
+\operatorname{Re}\{G_n(z)\overline{P(z)}\}\ge2.
+}{Q64.5.4}
+Together with (Q64.2.7), this gives the squared-norm majorant
+\(d(1-4\tau+9\tau^2)\le d(1-2\tau)\), since \(\tau\le2/9\).
+The mean of the nonconstant polynomial is \(-\alpha+2\tau d\);
+moreover \(\alpha-2\tau d\ge\tau(1-2d)\ge0\). Thus
+\fitdisplay{
+\operatorname{\operatorname{Var}}Z\le d(1-2\tau)-\tau^2(1-2d)^2.
+}{Q64.5.5}
+
+In the fourth-moment bound (Q64.2.9), the upper quantities \(\mu_0\),
+\(2-\tau\), and the right side of (Q64.5.5) decrease with \(\tau\).
+They are nonnegative where used; the variance bound majorizes an
+actual nonnegative variance and increases when \(\tau\) decreases.
+Hence substitute \(\tau=cd\) and put
+\fitdisplay{
+m=1-5cd+3cd^2,\quad U=2-cd,\quad
+ V=d-(2c+c^2)d^2+4c^2d^3-4c^2d^4.
+}{Q64.5.6}
+All substituted factors are nonnegative.
+
+The coefficients of \(m^4+(U^2+2mU+3m^2)V-1\), degrees one through
+eight, are
+\fitdisplay{
+\begin{array}{c|l}
+ 1&11-20c=-7/8\\
+ 2&-66c+139c^2\\
+ 3&30c+62c^2-444c^3\\
+ 4&-146c^2+474c^3+539c^4\\
+ 5&27c^2-4c^3-1060c^4\\
+ 6&-66c^3+595c^4\\
+ 7&-48c^4\\
+ 8&-27c^4
+ \end{array}
+}{Q64.5.7}
+At \(c=19/32\), degrees two through six equal respectively
+\fitdisplay{
+\frac{10051}{1024}<10,\quad-\frac{1745492}{32768}<-53,\quad
+ \frac{120309387}{1048576}<115,\quad
+ -\frac{129037284}{1048576}<-122,\quad
+ \frac{63054787}{1048576}<61.
+}{Q64.5.8}
+Discard the last two negative terms and divide by \(d>0\). The result
+is at most
+\fitdisplay{
+Q_{\ge6}(d)=-7/8+10d-53d^2+115d^3-122d^4+61d^5.
+}{}
+The degree-five Bernstein coefficients of \(Q_{\ge6}(s/3)\) are
+\fitdisplay{
+-7/8,\quad-5/24,\quad-47/360,\quad-233/1080,\quad
+ -1099/3240,\quad-829/1944.
+}{Q64.5.9}
+Each is at most \(-47/360\). Including \(d=0\), we obtain
+\fitdisplay{
+\boxed{Ef_n^4\le1-\frac{47}{360}d,\quad
+ E\bar f_n^4\le1-\frac{47}{360}d,\qquad n\ge6.}
+}{Q64.5.10}
+Together with parts Q64.3--4 this yields the weaker common bound
+\(1-47d/360\) for every \(n\ge4\).
+
+\paragraph{Q64.6 Positive-kernel transfer from an ordinary norm}
+
+Let \(B\) be a positive linear operator on this same finite
+\(L^2(\mu)\), with strictly positive row mass \(a=B\one\).
+For real \(Y\), row Jensen gives
+\fitdisplay{
+|BY|^4\le a^3B(|Y|^4).
+}{}
+Raise this to power \(2/3\), multiply by \(q^{-1/3}\), and apply
+Hölder with exponents \(3\) and \(3/2\):
+\fitdisplay{
+I_q(BY)\le
+ \{E[(B(|Y|^4))^2]\}^{1/3}\{E[a^3/\sqrt q]\}^{2/3}.
+}{}
+Thus, putting \(R(a)=E[a^3/\sqrt q]\), we have
+\fitdisplay{
+\boxed{I_q(BY)^3\le\|B\|_{2\to2}^2E|Y|^8R(a)^2.}
+}{Q64.6.1}
+
+
+Cauchy--Schwarz supplies
+\fitdisplay{
+R(a)^2\le\beta(a)Ea^4,\qquad
+ R(\bar f_3)^2\le(E\bar f_3^4/q)(E\bar f_3^2).
+}{Q64.6.2}
+For the second, factor \(\bar f_3^3/\sqrt q=(\bar f_3^2/\sqrt q)\bar f_3\).
+The exact second moment is
+\fitdisplay{
+E\bar f_3^2=1-3d-\delta_2+\delta_3+3d^2\le1-2d,
+}{Q64.6.3}
+using \(\bar f_3=q+r-s-d\), \(\delta_3\le \delta_2\), and \(3d^2\le d\).
+Consequently (Q64.1.7) gives
+\fitdisplay{
+R(\bar f_3)^2\le(1-23d/36)(1-2d)\le1.
+}{Q64.6.4}
+
+\paragraph{Q64.7 Two short ordinary operator bounds}
+
+\paragraph{Q64.7.1 A \(T\)-norm bound retaining \(\delta_2\)}
+
+Put \(\Pi=I-J\), \(C=\Pi K\Pi\) on \(1^\perp\),
+\(U=-C^2\), and \(h=Cg\). Then
+\(0\le U\le\theta I\), \(\|h\|^2=\delta_2-d^2\), and
+\fitdisplay{
+T=\begin{pmatrix}1&g^*\\-g&-C\end{pmatrix},\qquad
+ T^*T=\begin{pmatrix}1+d&(g-h)^*\\g-h&U+g\otimes g\end{pmatrix}.
+}{Q64.7.1}
+Our convention is \((u\otimes v)w=u\langle v,\allowbreak  w\rangle\).
+Set
+\fitdisplay{
+t_0=d+k\delta_2,\quad\Lambda=(1+t_0)^2,\quad
+ R=(\Lambda-U)^{-1},\quad \sigma=\langle g,Rg\rangle.
+}{}
+Commutation with \(U\) and skewness of \(C\) give
+\fitdisplay{
+\langle g-h,Rg\rangle=\sigma,\qquad
+ \langle g-h,R(g-h)\rangle=(1+\Lambda)\sigma-d.
+}{Q64.7.2}
+Moreover
+\fitdisplay{
+\sigma\le\frac{d+(\delta_2-d^2)/(\Lambda-\theta)}{\Lambda}
+ \le\frac{t_0}{(1+t_0)^2}
+ \le1-\Lambda^{-1/2}<1
+}{Q64.7.3}
+when \(t_0>0\). If \(t_0=0\), then \(g=0,\allowbreak  \sigma=0\), and the
+same non-strict inequalities are immediate.
+
+The rank-one inverse formula, verifiable by multiplication, gives
+\fitdisplay{
+\langle g-h,(\Lambda-U-g\otimes g)^{-1}(g-h)\rangle
+ =\Lambda\sigma-d+\frac{\sigma}{1-\sigma}.
+}{Q64.7.4}
+The lower block is positive since \(\sigma<1\).
+Its Schur complement in \(\Lambda I-T^*T\) is nonnegative exactly
+when \(\Lambda(1-\sigma)^2\ge1\), which follows from (Q64.7.3).
+Therefore
+\fitdisplay{
+\boxed{\|T\|_{2\to2}^2\le(1+d+k\delta_2)^2
+ =:\Lambda(d,x)=(1+d+kxd)^2.}
+}{Q64.7.5}
+The same \(x=\delta_2/d\) will be preserved in \mbox{\hyperref[part:Q64.8]{part Q64.8}}.
+
+
+\paragraph{Q64.7.2 A \(T^2\)-norm bound using cyclic even/odd subspaces}\label{part:Q64.7.2}
+
+Let \(S=-K^2\). The finite cyclic subspace generated by \(1\) under
+\(K\), and its orthogonal complement, are invariant. On the latter,
+\(J=0\), so \(T^2=K^2\) has norm at most \(\theta\).
+Inside the cyclic subspace put
+\fitdisplay{
+{\cal E}=\operatorname{span}\{S^j1:j\ge0\},\qquad
+ {\cal O}=\operatorname{span}\{KS^j1:j\ge0\}.
+}{Q64.7.6}
+Odd skew moments vanish, so these spaces are orthogonal and span
+the cyclic subspace. The operator \(K\) interchanges them and
+\(S\) preserves them.
+
+Multiplying \(T^2\) on the left by the orthogonal sign operator
+\(P=\operatorname{\operatorname{diag}}(I_{\cal E},\allowbreak -I_{\cal O})\) gives
+\fitdisplay{
+N=PT^2=\begin{pmatrix}
+ J-S_{\cal E}&1\otimes g\\ g\otimes1&S_{\cal O}
+ \end{pmatrix}.
+}{Q64.7.7}
+This operator is self-adjoint and has the same norm as \(T^2\).
+Let \(\nu\) be the finite spectral measure of \(S\) at \(1\):
+\fitdisplay{
+\operatorname{supp}\nu\subset[0,\theta],\quad
+ \int d\nu=1,\quad\int x\,d\nu=d,\quad\int x^2\,d\nu=\delta_2.
+}{Q64.7.8}
+This scalar spectral measure changes no original adjoint.
+
+Take \(\lambda\ge1>\theta\). In \(\lambda I+N\) the lower block
+is positive and its Schur complement is
+\fitdisplay{
+\lambda-S_{\cal E}
+ +\{1-\langle g,(\lambda+S_{\cal O})^{-1}g\rangle\}J>0,
+}{}
+because the bracket is at least \(1-d/\lambda>0\).
+For \(\lambda I-N\), the rank-one Schur condition is
+\fitdisplay{
+\lambda h_\lambda t_\lambda\le1,\quad
+ h_\lambda=\int\frac{d\nu(x)}{\lambda-x},\quad
+ t_\lambda=\int\frac{d\nu(x)}{\lambda+x}.
+}{Q64.7.9}
+Indeed
+\fitdisplay{
+1+\langle g,(\lambda-S_{\cal O})^{-1}g\rangle
+ =1+\int\frac{x\,d\nu(x)}{\lambda-x}=\lambda h_\lambda.
+}{}
+Put
+\fitdisplay{
+\alpha=\int\frac{x^2\,d\nu(x)}{\lambda^2-x^2},\qquad
+ \eta=\int\frac{x\,d\nu(x)}{\lambda^2-x^2}.
+}{}
+Then \(h_\lambda=(1+\alpha)/\lambda+\eta\) and
+\(t_\lambda=(1+\alpha)/\lambda-\eta\), whence
+\fitdisplay{
+\lambda h_\lambda t_\lambda\le(1+\alpha)^2/\lambda.
+}{}
+Choose
+\fitdisplay{
+\kappa=(1-\theta^2)^{-1}=1024/855,\qquad
+ \lambda=(1+\kappa \delta_2)^2.
+}{}
+We have \(\alpha\le\kappa \delta_2\), so (Q64.7.9) follows. Both signs of
+\(N\), and the orthogonal complement, are controlled. Hence
+\fitdisplay{
+\boxed{\|T^2\|_{2\to2}\le(1+\kappa \delta_2)^2,\qquad
+ \|T^2\|_{2\to2}^2\le(1+d/2)^4.}
+}{Q64.7.10}
+Here \(\kappa\theta=416/855<1/2\).
+This is an ordinary \(L^2(\mu)\) bound, not the separate generic
+weighted two-step conjecture.
+
+\paragraph{Q64.8 Full continuous payment for outer length two}\label{part:Q64.8}
+
+The expression to pay is
+\fitdisplay{
+(1-d)\Lambda(d,x)F(d,x),\qquad
+ 0<d\le1/3,\quad d\le x\le\theta.
+}{Q64.8.1}
+Separately maximizing the factors in \(x\) would lose needed
+same-kernel information. By \mbox{\hyperref[part:Q64.3]{part Q64.3}}, \(F_x\le-dD\), while
+\fitdisplay{
+\Lambda_x/\Lambda=\frac{2kd}{1+d+kxd}\le2kd.
+}{}
+All factors are nonnegative. Since \(F\le F_0\),
+\fitdisplay{
+(\Lambda F)_x\le-\Lambda d\{D(d)-2kF_0(d)\}.
+}{Q64.8.2}
+We now certify positivity of this bracket on the whole interval.
+
+The coefficients of \(D-2kF_0\), in degrees zero through eight, are
+\fitdisplay{
+\frac{69}{19},\quad-\frac{12903}{304},\quad
+ \frac{1012623}{4864},\quad-\frac{81499311}{155648},\quad
+ \frac{7102623}{9728},\quad-\frac{178267}{304},\quad
+ \frac{5512}{19},\quad-\frac{1358}{19},\quad\frac{128}{19}.
+}{Q64.8.3}
+They are coefficientwise at least those of
+\fitdisplay{
+L(d)=18/5-(85/2)d+208d^2-524d^3+730d^4-587d^5
+       +290d^6-72d^7+6d^8.
+}{Q64.8.4}
+For \(s=3d\), the power coefficients of \(65610L(s/3)\) are
+\fitdisplay{
+236196,\ -929475,\ 1516320,\ -1273320,\ 591300,
+ -158490,\ 26100,\ -2160,\ 60.
+}{Q64.8.5}
+Its degree-eight Bernstein coefficients are \(N_i/\binom8i\), where
+\fitdisplay{
+(N_0,\ldots,N_8)=
+ (236196,\ 960093,\ 1623483,\ 1532601,\ 971595,
+ 495261,\ 204543,\ 54333,\ 6531).
+}{Q64.8.6}
+Thus the Bernstein coefficients of \(L(s/3)\) are
+\(N_i/[65610\binom8i]\), all strictly positive. The finite rational
+identities (Q64.8.3)--(Q64.8.6) prove \(D-2kF_0>0\). Consequently
+\fitdisplay{
+(1-d)\Lambda(d,x)F(d,x)
+ \le(1-d)(1+d+kd^2)^2(1-d-4d^2).
+}{Q64.8.7}
+The final product is exactly
+\fitdisplay{
+1-\frac{50}{19}d^2-\frac{140}{19}d^3-\frac{3251}{361}d^4
+ +\frac{612}{361}d^5+\frac{1792}{361}d^6+\frac{4096}{361}d^7.
+}{Q64.8.8}
+The last three terms are at most
+\fitdisplay{
+2d^5+5d^6+12d^7\le(5/3)d^4,
+}{}
+whereas \(3251/361>9\). Thus (Q64.8.8) is at most
+\fitdisplay{
+1-\frac{50}{19}d^2-\frac{140}{19}d^3-\frac{22}{3}d^4\le1.
+}{}
+The zero boundary is direct. We have proved
+\fitdisplay{
+\boxed{(1-d)\Lambda(d,x)F(d,x)\le1}
+}{Q64.8.9}
+on the entire permitted region with the same kernel moments.
+
+\paragraph{Q64.9 Ordinary contraction of every power of length at least three}\label{part:Q64.9}
+
+This section proves the long-power bound associated with R157/R158.
+
+\paragraph{Q64.9.1 Actual-kernel budgets and the two-dimensional comparison}
+
+For \(a,\allowbreak  b,\allowbreak  c\in[-1,\allowbreak  1]\),
+\fitdisplay{
+(1+ab)^2-(a+b)^2=(1-a^2)(1-b^2)\ge0,\qquad 1+ab\ge0.
+}{}
+Hence \(ab+c(a+b)\ge ab-|a+b|\ge-1\).
+Apply this to \(a=K(x,\allowbreak  y),\allowbreak  b=K(y,\allowbreak  z),\allowbreak  c=K(z,\allowbreak  x)\) and integrate over
+three independent original variables. Each product has mean \(-d\);
+therefore \(d\le1/3\), including all atomic coincidences.
+
+Use \(C=\Pi K\Pi\), \(U=-C^2\), and put \(H=Cg\),
+\(r_C=\|C\|\). In the decomposition \(\mathbb R1\oplus1^\perp\),
+\fitdisplay{
+K=\begin{pmatrix}0&-g^*\\g&C\end{pmatrix},\qquad
+ A=\begin{pmatrix}1&-g^*\\g&C\end{pmatrix}.
+}{}
+Orthogonality of Hilbert--Schmidt blocks gives
+\fitdisplay{
+2d+\|C\|_{\rm HS}^2=\|K\|_{\rm HS}^2
+ =E_{x,y}K(x,y)^2\le1.
+}{Q64.9.1}
+A real skew operator satisfies \(2\|C\|^2\le\|C\|_{\rm HS}^2\).
+Indeed, for unit \(u\) with \(Cu\ne0\), the unit vector
+\(v=Cu/\|Cu\|\) is orthogonal to \(u\), and
+\(|\langle Cv,\allowbreak  u\rangle|=\|Cu\|\). The Hilbert--Schmidt square
+contains at least \(\|Cu\|^2+\|Cv\|^2\ge2\|Cu\|^2\).
+Take the supremum. Consequently
+\fitdisplay{
+r_C^2\le1/2-d,\qquad r_C\le3/4,\qquad
+ \langle g,H\rangle=0,\qquad \|H\|^2\le(1/2-d)d.
+}{Q64.9.2}
+
+
+For any block operator
+\fitdisplay{
+B=\begin{pmatrix}a&-w^*\\v&D\end{pmatrix},
+ \qquad 0\le a\le\bar a,\quad \|v\|,\|w\|\le N,\quad \|D\|\le e,
+}{}
+with \(\bar a,\allowbreak  N,\allowbreak  e\ge0\), componentwise norm estimates imply
+\fitdisplay{
+\|B\|\le\left\|\begin{pmatrix}\bar a&N\\N&e\end{pmatrix}\right\|.
+}{Q64.9.3}
+The symmetric comparison matrix has nonnegative entries and trace,
+so its largest eigenvalue has modulus at least that of the other.
+To bound it by \(\rho=1-d/8\), it is therefore enough to show
+\(\rho I-\left(\begin{smallmatrix}\bar a&N\\N&e\end{smallmatrix}\right)\)
+is positive semidefinite. The original block operator need not be
+self-adjoint.
+
+\paragraph{Q64.9.2 The cube}
+
+Exact multiplication gives
+\fitdisplay{
+A^3=\begin{pmatrix}1-2d&-w_3^*\\v_3&D_3\end{pmatrix},
+}{}
+\fitdisplay{
+v_3=(1-d-U)g+H,\quad w_3=(1-d-U)g-H,
+}{}
+\fitdisplay{
+D_3=C^3-g\otimes g-H\otimes g+g\otimes H.
+}{Q64.9.4}
+Commutation and skewness eliminate the cross term in the squared
+off-diagonal norms. The scalar polynomial
+\((1-d-u)^2+u\) decreases for \(0\le u\le1/2-d\). Thus
+\fitdisplay{
+\|v_3\|^2=\|w_3\|^2\le d(1-d)^2.
+}{Q64.9.5}
+The combined skew rank-two operator
+\(g\otimes H-H\otimes g\) has norm \(\|g\|\|H\|\), since
+\(g\perp H\). Hence
+\fitdisplay{
+\|D_3\|\le r_C^3+d+r_Cd
+ \le d+r_C/2\le d+3/8.
+}{Q64.9.6}
+Use (Q64.9.3) with \(\bar a=1-2d\), \(N=\sqrt d(1-d)\),
+\(e=d+3/8\). The two diagonals of \(\rho I-M\) are
+\(15d/8\) and \(5/8-9d/8\ge1/4\). Its determinant is
+\fitdisplay{
+d\left(\frac{11}{64}-\frac7{64}d-d^2\right)\ge\frac7{288}d.
+}{Q64.9.7}
+The bracket decreases to \(7/288\) at \(d=1/3\).
+This proves \(\|A^3\|\le\rho\), including \(d=0\).
+
+\paragraph{Q64.9.3 The fourth power}
+
+Multiplication by \(A\) gives
+\fitdisplay{
+a_4=1-3d+d^2+\|H\|^2,\quad
+ v_4=(1-2d-U)g+(1-d-U)H,
+}{}
+\fitdisplay{
+w_4=(1-2d-U)g-(1-d-U)H,
+}{}
+\fitdisplay{
+D_4=U^2-(1-d)g\otimes g+(Ug)\otimes g+g\otimes(Ug)
+       +H\otimes H+g\otimes H-H\otimes g.
+}{Q64.9.8}
+Here
+\fitdisplay{
+1-3d+d^2\le a_4\le1-5d/2.
+}{Q64.9.9}
+The lower bound is at least \(1/9\), so the constant block is
+nonnegative. The squared off-diagonal norm is obtained by integrating
+\fitdisplay{
+f_4(u)=(1-2d-u)^2+u(1-d-u)^2.
+}{}
+Its derivative is
+\fitdisplay{
+f_4'(u)=-1+2d+d^2+2(-1+2d)u+3u^2.
+}{}
+This is convex in \(u\); at \(u=0\) it is at most \(-2/9\), and
+at \(u=1/2-d\) it is \(3d-5/4\le-1/4\).
+It is therefore nonpositive throughout the spectral interval. Thus
+\fitdisplay{
+\|v_4\|^2=\|w_4\|^2\le d(1-2d)^2.
+}{Q64.9.10}
+Bounding the last two skew terms of \(D_4\) together, and the other
+terms separately, gives
+\fitdisplay{
+\|D_4\|\le r_C^4+(1-d)d+3r_C^2d+r_Cd
+ \le e_4:=1/4+(9/4)d-3d^2\le2/3.
+}{Q64.9.11}
+Use \(\bar a=1-5d/2\), \(N=\sqrt d(1-2d)\), \(e=e_4\) in
+(Q64.9.3). The diagonals of \(\rho I-M\) are \(19d/8\) and
+\(3/4-19d/8+3d^2\ge7/24\). The determinant is
+\fitdisplay{
+d\left(\frac{25}{32}-\frac{105}{64}d+\frac{25}{8}d^2\right)
+ \ge\frac{15}{64}d.
+}{Q64.9.12}
+This proves \(\|A^4\|\le\rho\).
+
+\paragraph{Q64.9.4 The fifth power}
+
+The next multiplication gives
+\fitdisplay{
+a_5=1-4d+3d^2+2\|H\|^2,
+}{}
+\fitdisplay{
+v_5=[a_4-(1-d)U+U^2]g+(1-2d-U)H,\quad
+ w_5=[a_4-(1-d)U+U^2]g-(1-2d-U)H.
+}{Q64.9.13}
+The scalar block obeys
+\fitdisplay{
+0\le(1-d)(1-3d)\le a_5\le1-3d+d^2.
+}{Q64.9.14}
+To control the off-diagonal terms, put
+\(b=1-2d\in[1/3,\allowbreak  1]\), \(c_0=1-d=(1+b)/2\), and
+\(\vartheta=a_4\). The spectral variable satisfies \(0\le u\le b/2\),
+and \(\vartheta\ge\vartheta_0=(b^2+4b-1)/4\).
+For \(P(u)=\vartheta-c_0u+u^2\), we have
+\fitdisplay{
+P(u)\ge\vartheta_0-b/4=(b^2+3b-1)/4\ge1/36.
+}{Q64.9.15}
+Indeed \(P\) decreases on this interval. The relevant norm polynomial
+and its derivative are
+\fitdisplay{
+f_5(u)=P(u)^2+u(b-u)^2,\qquad
+ f_5'(u)=-2P(u)(c_0-2u)+(b-u)(b-3u).
+}{Q64.9.16}
+On \(b/3\le u\le b/2\) both terms are nonpositive.
+For \(0\le u\le b/3\), the negative derivative increases with
+\(\vartheta\), and its value at \(\vartheta_0\) gives
+\fitdisplay{
+-f_5'(u)\ge
+ \frac{b^3+b^2+3b-1}{4}
+ -\frac{(1+b)(3b-1)}2u+u^2(3b-4u)
+}{}
+\fitdisplay{
+\hspace{24mm}\ge\frac{-3b^3-b^2+11b-3}{12}\ge1/27.
+}{Q64.9.17}
+For the last step the numerator is increasing on \([1/3,\allowbreak  1]\), since
+its derivative is \((1-b)(9b+11)\), and its value at \(1/3\) is
+\(4/9\). Therefore \(f_5(u)\le f_5(0)=a_4^2\), and
+\fitdisplay{
+\|v_5\|^2=\|w_5\|^2\le d a_4^2\le d(1-5d/2)^2.
+}{Q64.9.18}
+The lower-right block can be kept as
+\(D_5=-g\otimes w_4+CD_4\). Equations (Q64.9.10)--(Q64.9.11) give
+\fitdisplay{
+\|D_5\|\le d(1-2d)+(3/4)e_4
+ =e_5:=3/16+(43/16)d-(17/4)d^2\le5/6.
+}{Q64.9.19}
+It is nonnegative by its first expression.
+
+Use \(\bar a=1-3d+d^2\),
+\(N=\sqrt d(1-5d/2)\), and \(e=e_5\).
+The diagonals of \(\rho I-M\) are
+\(d(23/8-d)\) and \(13/16-45d/16+17d^2/4\ge1/8\).
+Its determinant is
+\fitdisplay{
+d\left[\frac{171}{128}-\frac{499}{128}d
+       +\frac{281}{32}d^2-\frac{17}{4}d^3\right]>0
+ \quad(d>0).
+}{Q64.9.20}
+The constant and linear terms in the bracket sum to at least \(7/192\);
+the remaining part is
+\(d^2[281/32-(17/4)d]\ge0\). The zero boundary is positive
+semidefinite. Thus \(\|A^5\|\le\rho\).
+
+\paragraph{Q64.9.5 Every integer power}
+
+For \(\ell=3m\), use \(m\) factors \(A^3\).
+For \(\ell=3m+1\ge4\), use \(A^4\) and \(m-1\) factors \(A^3\).
+For \(\ell=3m+2\ge5\), use \(A^5\) and \(m-1\) factors \(A^3\).
+Submultiplicativity and adjunction prove
+\fitdisplay{
+\boxed{\|A^\ell\|,\ \|T^\ell\|
+ \le(1-d/8)^{\lfloor\ell/3\rfloor}\le1,\qquad\ell\ge3.}
+}{Q64.9.21}
+For \(d=0\), \(A\) is block diagonal with blocks \(1,\allowbreak  C\), so these
+powers have norm exactly one. This handles the boundary without
+dividing by \(d\).

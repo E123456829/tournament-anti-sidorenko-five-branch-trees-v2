@@ -1,0 +1,49 @@
+\subsection{Odd internal roots of minimum at least three}
+\label{proof:Q5-C189}
+
+Take a root residual list
+$(a,b,c,s_1,t_1,\ldots,s_k,t_k)$ with
+$3\le a<b<c<s_1<t_1<\cdots<s_k<t_k$ and $k\ge0$.
+Let the terminal residual list contain at least two distinct positive
+lengths. For a list other than $(1,t)$, use the same
+terminal directions as Table~\ref{tab:odd186:directions} and set
+\[
+ H_k=E_r f_a h_bf_c\prod_{i=1}^kh_{s_i}f_{t_i}\,
+                   T^L(E_tF).
+\]
+For the short-one terminal use
+\eqref{eq:odd-short:directions} with $N=k+1$ and ordered pairs
+$(b,c),(s_1,t_1),\ldots,(s_k,t_k)$, then restore its genuine
+equal-pair decorations. The root and terminal decorations
+$E_r,E_t$ retain their actual arm vertices.
+
+\begin{proposition}\label{prop:odd-complete:positive-root}
+For all the stated residual lists and every independent $L,M\ge1$,
+\[
+ \E H_k^4\le e^{-\lambda_k d},\qquad
+ I_q(T^MH_k)^3\le e^{-[2\lambda_k-c(M)]d}\le e^{-5d/19},
+\]
+where $\lambda_0=11/2$, $\lambda_k=11/2+\zeta_k$ for $k\ge1$,
+$\zeta_k$ is \eqref{eq:odd-complete:later-rate}, and $c(M)$ is
+the unanchored ordinary outlet cost \eqref{eq:odd-common:outlet}.
+\end{proposition}
+\begin{proof}
+The complete positive-root transfer in
+Lemma~\ref{lem:odd-complete:positive} keeps the actual constant
+vector $\gamma\one$ and its signed mean cross.
+Sections~\ref{sec:odd-complete:short-exceptions},
+\ref{sec:odd-three:roots}, \ref{sec:odd-even:roots},
+\ref{sec:odd-complete:q-terminals} and
+\ref{sec:odd-complete:inward-anchor} give all the terminal
+families, with rates at least $11/2$ as summarized in
+\eqref{eq:odd-complete:catalogue}.
+Their full low-domain vectors satisfy
+Lemma~\ref{lem:odd-complete:vector-cap}.
+Section~\ref{sec:odd-complete:assembly} therefore restores all
+later ordered pairs and genuine equal pairs in their specified
+directions. In the short-one family those root pairs are already
+paid together by \eqref{eq:odd-short:whole-pairs}, with a stronger
+increment. Apply \eqref{eq:odd-common:outlet} to the resulting
+actual message; $11-204/19=5/19$.
+At $d=0$ the finite leaf integrations give equality.
+\end{proof}

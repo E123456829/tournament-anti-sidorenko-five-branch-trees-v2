@@ -1,0 +1,520 @@
+\subsection{Unit-root eighth moments for terminal pairs \((3,b)\)}
+\label{proof:Q5-C089}
+Keep the finite model and notation of Section~\ref{proof:Q5-C050}, and
+write \(f_n=A^n\one\), \(h_n=Tf_{n-1}\),
+\(\bar f_n=T^n\one\). Choose the terminal direction from the integer
+lengths before choosing the host:
+\begin{equation}\label{eq:unit-ordinary:three-directions}
+\begin{array}{c|c}
+ b\ge4, L=1&f_3h_b\\
+ b=4, L=2&h_3f_4\\
+ b\ge5, L=2&f_3h_b\\
+ b\ge4, L\ge3&h_3f_b.
+\end{array}
+\end{equation}
+An \(f_n\) arm points outward throughout. In an \(h_n\) arm only
+its first edge points toward the terminal. The connector points from
+the terminal to the receiving root, whose original unit arm supplies
+\(p\). For actual equal-pair factors \(0\le E_t,E_r\le1\), set
+\begin{equation}\tag{Q89.0.2}\label{eq:Q89:0.2}
+ H_D=E_rpT^L(E_tF_{b,L}).
+\end{equation}
+We prove
+\begin{equation}\tag{Q89.0.3}\label{eq:Q89:0.3}
+ \E H_D^8\le1-d/500\qquad(b\ge4, L\ge1).
+\end{equation}
+The \(L=1\) row is Section~\ref{proof:Q5-C053-unit}. Positivity
+allows us to set \(E_t=E_r=1\) until the end. At \(d=0\), all
+tree messages are one by leaf integration.
+
+\paragraph{Finite square propagation at the original unit root.}
+Put \(K'=-K\), \(g'=K'\one\), \(G_n(z)=\sum_{j=0}^{n-1}z^j\),
+\(G_0=0\). The finite convolution \eqref{eq:Q188:conv} gives
+\[
+ \tau\le\beta_j\le d\ (j\ge3),\qquad
+ \|G_n(K')\|\le1\ (n=0,1\text{ or }n\ge3),\quad
+ \|G_2(K')\|\le\sqrt{1+\theta}<6/5.
+\]
+Suppose \(0\le F\le(m+R/2)^2\), where \(m>0\), and put
+\[
+\begin{gathered}
+ k=m^{-1},\quad D_j=\E(K')^jR,\quad V=\E R^2,
+ \quad a_1=-D_1,\quad\rho=-D_2,\\
+ \delta=kD_0+k^2V/2,\quad a=ka_1,\quad\varepsilon=\delta-a.
+\end{gathered}
+\]
+Expanding the square, using \(T(R^2)\le2V\), and applying finite
+Duhamel gives
+\begin{equation}\label{eq:unit-ordinary:three-duhamel}
+ \frac{T^LF}{m^2}\le
+ \bar f_L+k(K')^LR+\delta\bar f_{L-1}-a\bar f_{L-2}
+       +k\sum_{j=2}^{L-1}D_j\bar f_{L-1-j}\quad(L\ge2).
+\end{equation}
+For \(R=(A(x)-B(x)z)g'\), \(z=i\sqrt x\), use the same
+spectral measure \(\nu\) of \(g'\), supported on \([0,\theta]\)
+and of mass \(d\). Thus
+\begin{equation}\label{eq:unit-ordinary:three-moments}
+ \begin{gathered}
+ V=\int(A^2+xB^2)\,d\nu,\quad D_0=\int B\,d\nu,
+ \quad a_1=\int A\,d\nu,\quad\rho=\int xB\,d\nu,\\
+ D_{4j+1}=-\int x^{2j}A\,d\nu,\quad
+ D_{4j+2}=-\int x^{2j+1}B\,d\nu,\\
+ D_{4j+3}=\int x^{2j+1}A\,d\nu,\quad
+ D_{4j+4}=\int x^{2j+2}B\,d\nu.
+ \end{gathered}
+\end{equation}
+Let \(S'_L=\sum_{j=0}^L(K')^j\one\), and define
+\[
+ \begin{gathered}
+ P_n=G_n+kz^n(A-Bz),\quad
+ Q_n=P_n+\varepsilon G_{n-2}+\delta z^{n-2}\quad(n\ge2),\\
+ Z_L^*=S'_L+\delta S'_{L-1}-aS'_{L-2}+k(K')^LR
+       =1+\varepsilon+Q_L(K')g'.
+ \end{gathered}
+\]
+The exact difference between \(Z_L^*\) and the right side of
+\eqref{eq:unit-ordinary:three-duhamel} is
+\begin{equation}\label{eq:unit-ordinary:three-losses}
+ \begin{gathered}
+ \sum_{j=3}^L\gamma_j\bar f_{L-j},\qquad
+ \gamma_3=d+k\rho,\quad\gamma_4=d+\delta d-kD_3,\\
+ \gamma_j=\beta_j+\delta\beta_{j-1}-a\beta_{j-2}-kD_{j-1}
+ \qquad(j\ge5).
+ \end{gathered}
+\end{equation}
+Also \(Q_L=1+\varepsilon+zQ_{L-1}\) for \(L\ge3\), and
+\(\E Z_L^*=1+\varepsilon-\gamma_{L+1}\) for \(L\ge4\).
+These are finite identities, including the constant coordinate.
+
+Whenever \(N=K'W\), \(0\le H\le(c+N/2)^2\), and the square
+base is nonnegative, the signed estimate of
+Section~\ref{proof:Q5-C081} and \eqref{eq:oc:ordinary-square} give
+\begin{equation}\label{eq:unit-ordinary:three-signed}
+ \E H^8\le\exp\{16(c-1)+8\E N+17\|W\|^2\}.
+\end{equation}
+For a normalized square with prefactor \(m^{16}\) this exponent
+becomes \(16\log m+8\eta+8\E N+17\|W\|^2\), when its center
+before rescaling is \(1+\eta/2\).
+
+\paragraph{Two terminal packets, with all finite arm lengths.}
+For this paragraph assume \(0<d\le1/5\). At \(b=4\), the exact
+identity \(h_3+f_4=2-3d+t-dg\) gives
+\begin{equation}\label{eq:unit-ordinary:three-four-sum}
+ \begin{gathered}
+ h_3+f_4=2m+R,\qquad m=1-3d/2,\\
+ R=t-dg,\qquad A=d,\quad B=x.
+ \end{gathered}
+\end{equation}
+In particular
+\begin{equation}\label{eq:unit-ordinary:three-four-data}
+ \begin{gathered}
+ D_0=\delta_2,\quad a_1=d^2,\quad\rho=\delta_3,
+ \quad V=d^3+\delta_4,\\
+ U:=\|KR\|^2=d^2\delta_2+\delta_5,\qquad
+ W:=\|K^2R\|^2=d^2\delta_3+\delta_6.
+ \end{gathered}
+\end{equation}
+Moreover \(0\le\varepsilon\le\delta\le7d/10\), as will also
+follow from the scalar certificates below.
+
+For every \(b\ge5\), retain three terms of each positive convolution.
+At \(b=5\) take \(c_1=d\), \(c_2=d/4+\delta_2\), \(c_3=0\).
+For \(b\ge6\), take
+\begin{equation}\label{eq:unit-ordinary:three-retained}
+ \lambda=\frac{9d/4-\beta_b-\beta_{b-1}}
+                 {\beta_{b-2}+(1-d)\beta_{b-3}},\quad
+ c_1=\beta_{b-1},\quad c_2=\lambda\beta_{b-2},\quad
+ c_3=\lambda\beta_{b-3}.
+\end{equation}
+The denominator is at least \((2-d)\tau>0\), the numerator is
+nonnegative, and the available constant loss is at least
+\((4-d)\tau\ge361d/160>9d/4\); hence \(0\le\lambda\le1\).
+For \(b=5\), \(c_2\le21d/32\le\beta_3\), without using
+the zero coefficient \(\beta_2\).
+Put \(C=c_1+c_2+c_3\), \(D=c_2+c_3\), \(E=c_3\), and
+\[
+ R_{\rm old}=\sum_{j=3}^bK^j\one-Cg-Dr-Es,\quad
+ R=R_{\rm old}-s,\qquad m=1-13d/8.
+\]
+The two positive convolutions yield the two actual arm sums
+\begin{equation}\label{eq:unit-ordinary:three-arm-sums}
+ \begin{gathered}
+ h_2+f_b\le2-9d/4+R_{\rm old},\quad
+ f_2+h_b\le2-9d/4-R_{\rm old},\\
+ h_3+f_b\le2m+R,\qquad f_3+h_b\le2m-R.
+ \end{gathered}
+\end{equation}
+Both signs therefore give positive square envelopes. For the second
+sign retain the actual \(q,h_2,h_3\) factors after applying \(T\).
+Their constant loss in either direction is
+\(\beta_b+c_1+c_2+(1-d)c_3=9d/4\).
+
+Here is the complete finite coordinate description. At \(b=5\),
+\(A=C-x^2\), \(B=D+x\). At \(b\ge6\), put \(N=b-2\ge4\)
+and \(G_N=a_f+zb_f\). Then
+\begin{equation}\label{eq:unit-ordinary:three-coordinates}
+ A=C+x(a_f-E-1),\quad B=D+xb_f,\quad
+ a_f,b_f\in[1-x,1-x+x^2],\quad a_f\ge(1-x)b_f.
+\end{equation}
+These finite geometric bounds include \(N=4,5\).
+The retained constants satisfy
+\[
+ \begin{gathered}
+ C=9d/4-\beta_b+dE,\quad
+ D=9d/4-\beta_b-\beta_{b-1}+dE,\quad E\le d,\\
+ \tau\le c_1\le d,\quad C\le d+D,\quad
+ d/4\le D\le85d/64,\quad C\le C_0:=(53/32+d)d.
+ \end{gathered}
+\]
+Consequently \(-x^2\le A\le C\),
+\(D+(1-x)x\le B\le D+x\), and
+\(A+x-(1-x)B\ge c_1\ge\tau\).
+Using \(D\le d/4+2\delta_2+dE\) in the upper bound for \(B\)
+gives
+\[
+ B\le x-x^2+x^3+d/4+2\delta_2+dE
+   \le z_0:=\theta+13d/16.
+\]
+Indeed the difference after setting \(x=\theta\),
+\(\delta_2\le\theta d\), \(E\le d\) is at most
+\(-3/32+d/4+d^2\le-3/800\); the \(b=5\) bound is smaller.
+Thus, with
+\begin{equation}\label{eq:unit-ordinary:three-joint-data}
+ v_0=C_0^2+\theta^4+\theta z_0^2,\quad
+ s_0=kz_0+\tfrac12k^2v_0,\quad
+ e_0=k[\theta(1+z_0)-\kappa d]+\tfrac12k^2v_0,
+\end{equation}
+we have \(V\le v_0d\), \(\delta\le s_0d\), and
+\(\varepsilon\le e_0d\). The last bound uses the same spectral
+measure and \(D_0-a_1\le[\theta(1+z_0)-\kappa d]d\).
+For the opposite bound, \(a_f-b_f\) is zero or an alternating
+end term; its first positive possibility is \(x^2\). Hence
+\[
+ a_1-D_0\le d^2-\delta_2+\delta_4\le\theta^3d,
+ \qquad\varepsilon\ge-k\theta^3d>-d/10.
+\]
+At \(b=5\), the left side is exactly \(d^2-\delta_2-\delta_3\).
+
+One additional pointwise estimate is needed for the exchanged
+two-step direction:
+\begin{equation}\label{eq:unit-ordinary:three-relative}
+ A^2+xB^2\le(5/4)B<2mB.
+\end{equation}
+Indeed its ratio to \(B\) is at most
+\((C^2+x^4)/(D+\kappa x)+x(D+x)\), a convex function of \(x\).
+At \(x=0\) it is at most \(d(1+D/d)^2/(D/d)\le5/4\).
+At \(x=\theta\), replace \(C\) by \(d+D\); the resulting function
+is convex in \(D\), and then in \(d\) on each endpoint
+\(D/d\in\{1/4,85/64\}\). The corner bounds are
+\(169/608\), \(8/15\), and \(13/16\), all below \(5/4\).
+Also \(2m\ge27/20>5/4\).
+
+\paragraph{A single continuous payment for each short connector.}
+For the canonical square, direct AM--GM gives the following two
+complete vector formulas:
+\begin{equation}\label{eq:unit-ordinary:three-short-vectors}
+\begin{gathered}
+ V_2=\delta\one+g'+kK'R,\qquad
+ \E(K'V_2)=-d-k\rho,\\
+ \|V_2\|^2=d+2k\rho+k^2U+\delta^2-2\delta a,\\
+ V_3=\varepsilon\one+(1+\delta)g'+K'g'+k(K')^2R,\\
+ \E(K'V_3)=-(1+\delta)d+kD_3,\\
+ \begin{aligned}
+ \|V_3\|^2={}&(1+\delta)^2d+\delta_2-2k(1+\delta)D_3\\
+ &+2kD_4+k^2W+\varepsilon^2-2\varepsilon(d+k\rho).
+ \end{aligned}
+\end{gathered}
+\end{equation}
+For \(L=3\) the one retained path loss is \(\gamma_3=d+k\rho\).
+The square bases are halves of sums of nonnegative factors. Applying
+\eqref{eq:unit-ordinary:three-signed} yields
+\begin{equation}\label{eq:unit-ordinary:three-short-payments}
+\begin{aligned}
+ \log\E(pT^2F)^8\le{}&16\log m+9d+8\varepsilon+26k\rho
+                  +17k^2U+17(\delta^2-2\delta a),\\
+ \log\E(pT^3F)^8\le{}&16\log m+(253/32)d+26\delta d+17\delta^2d\\
+ &-(26+34\delta)kD_3+34kD_4-8k\rho+17k^2W+\mathcal E,\\
+ \mathcal E={}&8\varepsilon+17\varepsilon^2
+                         -34\varepsilon(d+k\rho).
+\end{aligned}
+\end{equation}
+In particular the full constant-vector cross terms remain in both rows.
+
+Here are explicit rational functions which pay these bounds on the
+single interval \(0\le d\le1/5\). Write
+\(\mathcal L_q=-16\sum_{j=1}^4(qd)^j/j\ge16\log(1-qd)\).
+For \(b=4\), let \(m_4=1-3d/2\), \(k_4=1/m_4\), and
+\(s_4=k_4\theta+\frac12k_4^2(d^2+\theta^3)\). Define
+\[
+\begin{split}
+ F_{42}={}&\mathcal L_{3/2}+9d+8s_4d-8k_4d^2\\
+ &+26k_4\theta^2d+17k_4^2(d^2\theta+\theta^4)d
+ +17s_4^2d^2-34s_4k_4d^3,\\
+ F_{43}={}&\mathcal L_{3/2}+(253/32)d+(91/5)d^2+(833/100)d^3\\
+ &+34k_4\theta^3d+17k_4^2(d^2\theta^2+\theta^5)d
+ +(28/5)d-(1547/100)d^2.
+\end{split}
+\]
+The two bounds are \(F_{42}\le-d\), \(F_{43}\le-6d\).
+For the first, the dependence on \(\delta\) is increasing and
+\(\delta\le s_4d\); for the second use
+\(0\le\varepsilon\le\delta\le7d/10\), \(D_3\ge0\),
+and the data \eqref{eq:unit-ordinary:three-four-data}.
+
+For \(b\ge5\), use \(m=1-13d/8\), \(k=1/m\), and the joint
+functions \eqref{eq:unit-ordinary:three-joint-data}. Put
+\[
+ \begin{gathered}
+ l=k\theta^3,\quad j_0=1+k\theta z_0,\quad
+ E_+=8e_0d+(17e_0^2-34e_0)d^2,\quad
+ E_-=-8ld+(17l^2+34j_0l)d^2,\\
+ \begin{aligned}
+ F_{\ge5,3}={}&\mathcal L_{13/8}+(253/32)d+26s_0d^2+17s_0^2d^3\\
+ &+(26+34s_0d)k\theta^3d+34k\theta^2z_0d
+                       +17k^2\theta^2v_0d+E_+.
+ \end{aligned}
+ \end{gathered}
+\]
+Convexity in \(\varepsilon\), retaining its sign, gives
+\(\mathcal E\le\max(0,E_+,E_-)=E_+\).
+Indeed \(-ld\le\varepsilon\le e_0d\),
+\(d\le d+k\rho\le j_0d\), and the certificates below show
+\(E_+\ge0,E_-\). The remaining substitutions are
+\(D_3\ge-\theta^3d\), \(D_4\le\theta^2z_0d\),
+\(W\le\theta^2v_0d\). They prove the whole-domain bound
+\(F_{\ge5,3}\le-d/50\).
+
+For the actual exchanged \(L=2\) packet replace \(R\) by \(-R\).
+Equation~\eqref{eq:unit-ordinary:three-relative} gives
+\(\delta_-=-kD_0+k^2V/2\le0\) and
+\(\|g'-kK'R\|^2=d-2k\rho+k^2U\le d\), since
+\(U\le(5/4)\rho\), \((5/4)k<2\).
+The actual mean is \(-d+k\rho\), and
+\[
+ |\delta_-|\le6d/7,\quad |a_-|\le4d/7,
+ \quad\varepsilon_-\le d/2,\quad k\rho\le7d/20,
+ \quad\delta_-^2-2\delta_-a_-\le12d^2/7.
+\]
+Thus its exponent is at most
+\([-26+9+4+14/5+204/35]d=-153d/35<-4d\).
+
+The continuous certificates just used have only 78 rational
+Bernstein coefficients in total. Each polynomial below has all its
+coefficients greater than \(1/200\) on \([0,1/5]\).
+The positive factors in the second column clear all denominators.
+At \(d=0\), quotients by \(d\) mean their polynomial continuations.
+\begin{table}[htbp]\centering\small
+\caption{Continuous short-connector payments and their moment guards.}
+\label{tab:unit-ordinary:three-low-certificates}
+\begin{tabular}{@{}llc@{}}\toprule
+Function & Positive factor & Degree\\\midrule
+\((-F_{\ge5,3}-d/50)/d\) & \(m^4\) & 10\\
+\(6/5-s_0,\ 9/8-e_0,\ e_0\) & \(m^2\) & 4 each\\
+\(E_+/d,\ (E_+-E_-)/d\) & \(m^4\) & 9 each\\
+\(81/256-v_0\) & \(1\) & 4\\
+\(4/7-kC_0\) & \(m\) & 2\\
+\(7/20-k\theta z_0\) & \(m\) & 1\\
+\(1/2-k\theta^3-k^2v_0/2\) & \(m^2\) & 4\\
+\((-F_{42}-d)/d\) & \(m_4^4\) & 7\\
+\((-F_{43}-6d)/d\) & \(m_4^2\) & 5\\
+\(7/10-s_4\) & \(m_4^2\) & 2\\\bottomrule
+\end{tabular}
+\end{table}
+These are direct applications of \eqref{eq:bernstein-coefficients};
+the exact coefficients and inverse expansions accompany the manuscript.
+Also \(k\theta^2<4/7\) controls the negative part of \(a_1\),
+and \(kz_0<6/7\) controls \(\delta_-\). The table therefore proves
+all the moment guards used in both directions, including the endpoints.
+
+\paragraph{Every low-domain connector of length at least four.}
+For both terminal packets, \(\|P_n\|\le1\) for all \(n\ge3\).
+Here is a finite-index proof. For \(b\ge5,n=3\), the real and
+normalized imaginary parts are \(1-x-kx^2B\), \(1-kxA\).
+They are nonnegative and bounded above by \(1-x\), \(1+kx^3\).
+Hence
+\[
+ |P_3|^2\le1-x[1-x-2kx^3-k^2x^6]\le1;
+\]
+the bracket is at least \(23/256\) on \(x\le1/2,k\le3/2\).
+For \(b=4\), those two components are
+\(1-x-kx^3\), \(1-kdx\), between zero and the components of
+\(G_3\). In both cases \(k\sqrt{A^2+xB^2}\le1\).
+At \(n=4\), use
+\(|P_4|\le(1-x)\sqrt{1+x}+x^2\le1\).
+At \(n=5\), use
+\(|P_5|\le1-x/2+(23/20)x^2\le1\).
+For \(n\ge6\), the finite geometric formula gives
+\(|P_n|\le(1+x^3)/\sqrt{1+x}+x^3\le1\), since
+\(x(1+\sqrt{1+x})\le143/160<1\).
+
+The same data imply the following complete loss and predecessor table:
+\begin{equation}\label{eq:unit-ordinary:three-long-data}
+\begin{array}{c|c|c|c|c}
+ &h&\gamma_j\ (j\ge3)&\|Q_n\|\ (n\ge3)&\varepsilon/d\\\hline
+ b=4&2/5&\ge hd&\le1+6d/5&[0,7/10]\\
+ b\ge5&1/3&\ge hd&\le1+2d&[-1/10,9/8]
+\end{array}
+\end{equation}
+Indeed \(\gamma_3\ge d\), \(\gamma_4>3d/4\).
+For \(j\ge5\), \eqref{eq:unit-ordinary:three-losses} gives respectively
+\[
+ \gamma_j/d\ge\kappa-kd^2-k\theta^3\ge2/5,
+ \qquad\gamma_j/d\ge\kappa-(4/7)d-k\theta^2z_0\ge1/3.
+\]
+For the latter bound \((D_j)_+\le\theta^2z_0d\) for every
+\(j\ge4\); the four residue formulas in
+\eqref{eq:unit-ordinary:three-moments} prove this also when \(A<0\).
+For \(Q_n\), use its defining sum and separate \(n=3,4\) from
+\(n\ge5\), so the sole \(G_2\) factor is charged \(6/5\).
+The largest extra coefficients are respectively
+\(231/200,1799/1600,63/64\) for \(b=4\), and
+\(381/200,147/80,129/80\) for \(b\ge5\).
+
+Retain the last two losses in
+\eqref{eq:unit-ordinary:three-losses}. With \(B_*=1+\varepsilon-hd\),
+the finite recursion gives
+\[
+ 0\le T^LF/m^2\le Z=B_*q-hd+N_0,
+ \quad N_0=K'Q_{L-1}(K')g',\quad \E N_0\le-hd.
+\]
+Weighted AM--GM at the genuine unit root gives
+\[
+ pT^LF\le(c_*+N/2)^2,\quad
+ c_*=m\sqrt{B_*}-\frac{mhd}{2\sqrt{B_*}},\quad
+ N=\frac m{\sqrt{B_*}}N_0.
+\]
+The square base is half a sum of nonnegative factors. The following
+data concern this same complete vector, including its mean:
+\begin{equation}\label{eq:unit-ordinary:three-long-payments}
+\begin{array}{c|c|c|c|c|c}
+ &B_*&m/\sqrt{B_*}&\|\frac m{\sqrt{B_*}}Q_{L-1}g'\|^2
+ &\E N&c_*\\\hline
+ b=4&[1-2d/5,1+3d/10]&\ge2/3&\le d&\le-4d/15&\le1-5d/4\\
+ b\ge5&[1-13d/30,1+19d/24]&\ge5/8&\le9d/8&\le-5d/24&\le1-4d/3
+\end{array}
+\end{equation}
+For the norm column, use respectively
+\[
+ m^2(1+6d/5)^2\le1-3d/5\le B_*;
+ \quad m^2(1+2d)^2\le1+3d/4-(407/64)d^2
+                  \le(9/8)(1-13d/30).
+\]
+The latter difference is bounded below by
+\(1/8-(99/80)d+(407/64)d^2>0\).
+The other columns follow from these \(B_*\)-intervals and
+\(\sqrt{1+x}\le1+x/2\).
+Substitution in \eqref{eq:unit-ordinary:three-signed} proves the
+rates \(77/15\) and \(31/8\) in the final table below.
+
+\paragraph{High-domain terminal means.}
+Assume \(1/5\le d\le1/3\). The actual canonical mean is
+\(s_b=\E(h_3f_b)=\E(f_2f_{b+1})\).
+Let \(u_j=\E K^j\one\). The finite convolution gives
+\[
+ s_b=1-(2-d)\beta_{b+1}+u_{b+1}+u_{b+3}
+                       -\sum_{j=3}^b\beta_js_{b-j}.
+\]
+Direct expansion yields
+\[
+\begin{gathered}
+ s_0=1,\ s_1=1-d+\delta_2,\ s_2=(1-d)^2,\quad
+ s_3=1-3d+d^2+\delta_2-\delta_3,\\
+ s_4=1-4d+2d^2+2(1-d)\delta_2,\\
+ s_5=1-5d+4d^2-d^3+(3-2d)\delta_2-\delta_3+\delta_4,\\
+ s_6=1-6d+7d^2-2d^3+4(1-d)\delta_2+\delta_2^2-2(1-d)\delta_3.
+\end{gathered}
+\]
+Consequently
+\begin{equation}\label{eq:unit-ordinary:three-high-means}
+ s_4\le M_4:=1-(51/16)d+(19/16)d^2,
+ \quad 2M_4\le1-9d/10,\quad
+ s_b\le(1-d)/2\quad(b\ge5).
+\end{equation}
+For the last bound at \(b=5\), use
+\(s_5-(1-d)/2\le1/2-(105/32)d+(51/16)d^2-d^3
+\le-147/4000\).
+At \(b=6\), Cauchy--Schwarz in the spectral measure, together with
+\(\delta_2\ge d^2\), gives \(\delta_3\ge d\delta_2\), and hence
+\(s_6-(1-d)/2\le1/2-(31/8)d+(19/4)d^2\le-17/200\).
+For every \(b\ge7\), the base in the finite convolution is at most
+\(1-(2-d)\tau+\delta_4\). Retaining its five actual nonnegative
+terms \(s_0,\ldots,s_4\) gives
+\[
+ s_b\le1-\tau\{7-11d+4d^2+(4-2d)\delta_2-\delta_3\}+\delta_4.
+\]
+Keep the global ratio \(w=\delta_2/d\in[d,\theta]\).
+The subtracted quantity is at least
+\(d\{(1-w)[7-11d+4d^2+(4-2d-\theta)wd]-\theta^2w\}\).
+Its bracket decreases in \(w\), since
+\(7-11d+4d^2\ge34/9\) and \((4-2d-\theta)d\le4/3\).
+At \(w=\theta\) the full subtracted quantity exceeds
+\((1+d)/2+7/1500\): after
+retaining the cubic contribution with \(d\ge1/5\), it is enough
+to check \(-1/2+(43/12)d-(53/10)d^2\ge7/1500\),
+a concave quadratic with endpoint values \(7/1500,19/180\).
+This proves all finite \(b\), without monotonicity of path means.
+
+For the exchanged direction, adjunction instead gives
+\[
+ \widetilde s_b=\E(f_3h_b)=\E(f_4f_{b-1}),\quad
+ \E f_4^2\le U_4:=1-(147/32)d+(83/16)d^2+d^3.
+\]
+Here the exact square is
+\(1-5d+6d^2+d^3+(1-2d)\delta_2-\delta_3+\delta_4\); use
+\(\delta_2\le\theta d\), \(\delta_4\le\delta_3\).
+The polynomial \(U_4\) decreases on this domain, with maximum
+\(U_4(1/5)=1187/4000\). The actual finite path-norm bounds of
+Section~\ref{proof:Q5-C064} give, for every \(n\ge0\),
+\(\|A^n\|\le1+32d/19\); they include \(n=0,1,2\) separately.
+Thus
+\begin{equation}\label{eq:unit-ordinary:three-high-exchanged}
+ \widetilde s_b\le(1+32d/19)U_4
+                 \le105643/228000<15/32\quad(b\ge5).
+\end{equation}
+
+\paragraph{Propagation, strong rates, and restoration.}
+Corollary~\ref{cor:unit-square:two-step-path} and the independent
+bare-path estimate \eqref{eq:Q86:0.3} give
+\[
+ \E(p\bar f_2)^8\le
+ \begin{cases}35/8,&1/5\le d\le1/4,\\82/15,&1/4\le d\le1/3,\end{cases}
+ \qquad\E(p\bar f_n)^8\le e^{253d/32}\quad(n\ge3).
+\]
+Since the kernel of \(T\) is at most two,
+\(pT^LF\le2(\E F)p\bar f_{L-1}\).
+Together with \eqref{eq:unit-ordinary:three-high-means} and
+\eqref{eq:unit-ordinary:three-high-exchanged}, this yields the
+following full set of rates. Entries without an expectation are
+pointwise bounds on \(H=pT^LF\).
+\begin{table}[htbp]\centering\small
+\caption{Actual directions and complete eighth-moment payments.}
+\label{tab:unit-ordinary:three-final}
+\begin{tabular}{@{}lll@{}}\toprule
+Actual parameters and terminal & \(0<d\le1/5\) & \(1/5\le d\le1/3\)\\\midrule
+\(b=4,L=2,h_3f_4\)&\(\E H^8\le e^{-d}\)&\(H\le1-9d/10\)\\
+\(b\ge5,L=2,f_3h_b\)&\(\E H^8\le e^{-4d}\)&\(H\le15/16\)\\
+\(b=4,L=3,h_3f_4\)&\(\E H^8\le e^{-6d}\)&\(\E H^8\le15/16\)\\
+\(b\ge5,L=3,h_3f_b\)&\(\E H^8\le e^{-d/50}\)&\(\E H^8\le3/4\)\\
+\(b=4,L\ge4,h_3f_4\)&\(\E H^8\le e^{-77d/15}\)&\(\E H^8\le e^{-d/100}\)\\
+\(b\ge5,L\ge4,h_3f_b\)&\(\E H^8\le e^{-31d/8}\)&\(\E H^8\le e^{-3d/32}\)\\\bottomrule
+\end{tabular}
+\end{table}
+For \(L=3,b\ge5\), the high-domain costs are
+\((4/5)^8(35/8)<3/4\) and \((3/4)^8(82/15)<3/4\).
+For \(b=4\), use \(2M_4(1/5)=41/50\),
+\(2M_4(1/4)=71/128<3/5\), giving respectively
+\((41/50)^8(35/8)<15/16\) and \((3/5)^8(82/15)<3/4\).
+For \(L\ge4,b\ge5\), use
+\(8\log(1-d)+(253/32)d\le-3d/32\).
+For \(b=4\), retaining three logarithm terms gives
+\[
+ \frac{8\log(1-9d/10)}d+253/32
+ \le113/160-(81/25)d-(243/125)d^2
+ \le-1951/100000<-1/100.
+\]
+These inequalities include both closed intervals at \(d=1/4\).
+Finally \(e^{-d/100}\le1-3d/301\le1-d/500\), and the
+pointwise and constant bounds are stronger still. This proves
+\eqref{eq:Q89:0.3}. Positivity restores both actual equal-pair factors.
+Replacing \(K\) by \(-K\) gives the full reversal, with message
+\(\overline E_rqA^L(\overline E_t\,\overline F_{b,L})\).

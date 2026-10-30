@@ -1,0 +1,207 @@
+\subsection{Unit shortest arm and second shortest arm at least four}\label{proof:R2-C021}
+For the residual list $(1,s_1,t_1,\ldots,s_j,t_j)$,
+$4\le s_1<t_1<\cdots<s_j<t_j$, fix, for every finite $j\ge2$,
+$F=q\prod_{i=1}^jh_{s_i}f_{t_i}$. The unit arm points toward the
+terminal, every $h_s$ has its first edge toward the terminal and the
+rest toward the leaf, and every $f_t$ points outward. All $L\ge1$
+connector edges point toward the receiving root and its arm $a\ge3$
+points outward. We prove
+\begin{equation}\tag{R21.1.1}\label{eq:R21:claim}
+\E[f_a(T^LF)^4]\le1-d/5.
+\end{equation}
+For $j=1$, use the orientation $qf_sh_t$ from the
+short reference table Section~\ref{proof:R2-C009}/$D_{\rm full}$, with deficit
+$d/3000$. Choosing between these two directions by the original $j$
+gives the entire family $j\ge1$ with bound $1-d/3000$.
+
+Use the receiving bounds and exact centered identities
+\eqref{eq:R17:covariance}--\eqref{eq:R17:taylor}.
+For $m\le1$, $C_a+Y+m\le4$, the full continuous cubic proof in
+\eqref{eq:R12:cubic} gives curvature coefficient $683/54<13$.
+In the low range $0<d\le1/8$ every row will satisfy
+\begin{equation}\tag{R21.2.3}\label{eq:R21:payment}
+\E[f_a(T^LF)^4]\le e^{-(55/2)d}+(51/2)de^{-(128/5)d}.
+\end{equation}
+By \eqref{eq:R14:exponential}, its deficit is at least
+$2de^{-(55/4)d}>2d/9>d/5$, since $(55/4)d\le55/32<2$.
+
+The finite mask $R$ in Q5-C181, Section 3, depends only on the pairs,
+so the same actual terminal satisfies
+\[
+\begin{gathered}
+F\le qe^{R-\Gamma},\quad\Gamma\ge(16/5)jd\ge32d/5,
+\quad\|R\|_2<(1/4)\sqrt d,\quad|R|^2<d/3,\\
+D_0=\E R\le d/12,\quad(D_1)_+\le d/5,\quad
+(D_i)_+\le d/12\ (i\ge2),\quad D_i=\E B^iR.
+\end{gathered}
+\]
+The first row must be proved for the actual unit anchor $q$.
+As $|R|\le1/3$, $e^R\le1+R+(3/5)R^2$.
+Using $T(qR)=D_0+BR+T(uR)$,
+$T(uR)\le2\E|uR|$, and $T(qR^2)\le4\E R^2$, we obtain
+\begin{equation}\tag{R21.3.1}\label{eq:R21:firstrow}
+T(qe^R)\le\bar f_2+BR+D_0+2\sqrt d\|R\|_2+(12/5)\|R\|_2^2
+\le\bar f_2+BR+D,\qquad D=11d/15.
+\end{equation}
+The coefficient is $1/12+1/2+3/20=11/15$.
+Finite propagation, with the exact $\E q=1$, gives $n=L+1$ and
+\begin{equation}\tag{R21.3.2}\label{eq:R21:propagation}
+e^\Gamma T^LF\le\bar f_n+B^LR+D\bar f_{L-1}
++\sum_{i=1}^{L-1}D_i\bar f_{L-1-i}.
+\end{equation}
+Only declared positive parts will be raised in this expression.
+
+For the short paths the exact bounds are
+\[
+\begin{array}{c|c|c|c}
+n&\text{pointwise upper bound}&\text{mean upper bound}&\text{variance}\\\hline
+2&q+\sqrt d&1-d&(45/32)d\\
+3&q+(6/5)\sqrt d-d&1-2d&d\\
+4&(1-d)q+\sqrt d-d&1-5d/2&d\\
+5&(1-2d)q+(1-d)\sqrt d-\tau&1-11d/4&d.
+\end{array}
+\]
+The corresponding receiving covariances are at most $d/12,d/12,d/32$
+for $n=3,4,5$, respectively; the sharper three-step bound is
+$(55/1024)d$. They follow from the exact finite formulas in Modules
+R2-C012, R2-C014 and R2-C017. In addition,
+\begin{equation}\tag{R21.4.1}\label{eq:R21:favorable}
+\operatorname{Cov}(C_a,q)\le-\tau+d^2<0,\qquad
+\operatorname{Cov}(C_a,\bar f_2)
+\le-3d/16+\theta d^2\le-(5/96)d\le0.
+\end{equation}
+The latter holds on the full domain $d\le1/3$: use
+$\operatorname{Re}[G_a(1+z)]\ge1-2x\ge3/16$ and actual scalar
+correction at most $d\delta_2$. Also
+$\sigma(\bar f_2)\le6\sqrt d/5$ and $\sigma(q)=\sqrt d$.
+
+For $L=1$, take $Y=\bar f_2+BR+D$.
+Then $m\le1-d/15$,
+$\operatorname{Var}Y\le(6/5+1/6)^2d=(1681/900)d$,
+and covariance at most $(9/8)(1/6)d=3d/16$.
+The row bound uses $|BR|\le\|R\|_2<\sqrt d/4$, giving
+$Y\le q+(5/4)\sqrt d+11d/15$ and
+\[
+C_a+Y+m\le3-dp+(49/20)\sqrt d+(2/3)d<4.
+\]
+Indeed $\sqrt d\le17/48$ since $289/2304>1/8$, and the positive
+increment is at most $833/960+1/12=913/960<1$.
+The Taylor remainder is at most
+$13(1681/900)+3/4=5632/225<51/2$;
+the mean exponent is at least
+$4\Gamma/d+57/32+4/15\ge13271/480>55/2$.
+This proves \eqref{eq:R21:payment} in the shortest case without any
+bare-two-step contraction assumption.
+
+For $L=2$, take $Y=\bar f_3+B^2R+Dq+(D_1)_+$.
+The actual mean is at most $1-(59/60)d$ and
+\[
+\sigma(Y)\le[1+\theta/4+(11/15)d]\sqrt d
+<[1+5/48+11/120]\sqrt d<(6/5)\sqrt d.
+\]
+The $Dq$ covariance is nonpositive; the remainder is at most
+$d/12+(9/8)(5/48)d<d/4$.
+Since $|B^2R|\le\|BR\|_2<\sqrt d/6$,
+$Y\le(1+D)q+(41/30)\sqrt d-(4/5)d$ and
+$C_a+Y+m\le3-(19/60)d+(77/30)\sqrt d<4$,
+using increment $77/80<1$.
+The Taylor remainder is at most $13(36/25)+1=493/25<51/2$;
+the mean exponent is at least $128/5+57/32+59/15>55/2$.
+
+For $L=3$, take
+$Y=\bar f_4+B^3R+D\bar f_2+(D_1)_+q+(D_2)_+$.
+Its mean is at most $1-7d/5$ and, since $\theta^{3/2}<4/15$,
+$\sigma(Y)\le[1+1/15+(22/25+1/5)d]\sqrt d<(5/4)\sqrt d$.
+The added $\bar f_2,q$ covariances are nonpositive, and the remainder
+is at most $d/12+3d/40<d/5$.
+The $q$ coefficient is at most $1-d/15$, the square-root coefficient
+at most $1+11/120+5/48=287/240<6/5$, and the scalar remainder is
+at most $-11d/12$. Hence $C_a+Y+m<3+(12/5)\sqrt d<4$.
+The remainder is at most $13(25/16)+4/5=1689/80<51/2$;
+the mean exponent is at least $128/5+57/32+28/5>55/2$.
+
+For $L=4$, retain every short addition:
+$Y=\bar f_5+B^4R+D\bar f_3+(D_1)_+\bar f_2
++(D_2)_+q+(D_3)_+$.
+Retaining $D_4$ in the actual mean gives
+$m\le1-(11/4)d+D+d/5+3d/12=1-(47/30)d$.
+Also $\|B^4R\|_2<\sqrt d/24$ and
+\[
+\sigma(Y)\le[1+1/24+(11/15+6/25+1/12)d]\sqrt d
+=[1+1/24+(317/300)d]\sqrt d<(6/5)\sqrt d.
+\]
+The $\bar f_2,q$ additions have nonpositive covariance, but the
+$\bar f_3$ addition is paid explicitly:
+\[
+\operatorname{Cov}(C_a,Y)\le d/32+3d/64
++(11d/15)(55d/1024)
+\le[5/64+605/122880]d<d/10.
+\]
+The correct short expansions give $q$ coefficient at most
+$1-59d/60$, square-root coefficient at most
+$16/15+(2/25)d\le323/300<6/5$, and scalar remainder at most
+$-\tau+(D_3)_+<0$. Thus $C_a+Y+m<4$.
+The remainder is at most $13(36/25)+2/5<51/2$;
+the mean exponent is at least $128/5+57/32+94/15>55/2$.
+
+For all $L\ge5$, $n=L+1\ge6$, the positive term
+$D\bar f_{L-1}$ has convolution index two and must be paid separately:
+use the actual $\bar f_{L-1}\le2$ at cost $E=2D=22d/15$.
+For $r\ge3$ the remaining coefficients are
+$\gamma_r=\beta_r-D_{r-2}$, with
+$\gamma_3\ge4d/5$, $\gamma_4\ge11d/12$,
+and $\gamma_r\ge49d/96>d/2$ for $r\ge5$.
+The actual mean coefficient $\gamma_{n+1}=\beta_{n+1}-D_L$ obeys
+the same bound. Put $h=d/2$ and retain the last four actual messages:
+\begin{equation}\tag{R21.9.1}\label{eq:R21:long}
+e^\Gamma T^LF\le Y=1-h(4-d)+Q_{h,n}(B)u+B^LR+E\ge0,
+\quad Q_{h,n}=G_n-h(3+2z+z^2).
+\end{equation}
+The full finite certificate \eqref{eq:R18:shiftfour} gives
+$\|Q_{h,n}\|\le1-3h$ for every $n\ge6$.
+The actual mean and variance satisfy
+$m\le1-5h+3hd+E\le1-(203/240)d$ and
+$\operatorname{Var}Y\le(49/36)d$.
+The pointwise form is $(1-3h)q+BV-h(1-d)+E$ with
+$V=[G_{n-1}-h(2+z)]u+B^{L-1}R$ and
+$\|V\|_2\le[1+1/4+(d/2)\sqrt{4+\theta}]\sqrt d<(7/5)\sqrt d$.
+Thus $C_a+Y+m\le3-(109/60)d+(13/5)\sqrt d<4$.
+As in the retained-mean calculation of Module R2-C020,
+\[
+\operatorname{Cov}(C_a,Q_{h,n}(B)u)
+\le-\phi(\theta)d+(5/2-\kappa^2)d^2+d^3
+\le(7857/32768)d<d/4,
+\]
+where $\phi=1-3x+2x^2-x^3$.
+The actual scalar correction is
+$\le d^2-\tau^2+2h\tau d$, since
+$\int Q_e\le d$, $\int Q_o\ge\tau-2hd>0$;
+$\operatorname{Re}(G_aG_n)\ge\phi$ and
+$\operatorname{Re}[G_a(3+2z+z^2)]\le3$.
+The complete tail costs at most $3d/16$, so total covariance is
+at most $d/2$. The remainder is at most
+$13(49/36)+2=709/36<51/2$; the mean exponent is at least
+$128/5+57/32+203/60>55/2$.
+This proves \eqref{eq:R21:payment} for every positive $L$.
+
+For $1/8\le d\le1/3$, the same finite mask gives
+$|R|\le5d/3$, so $\Gamma-|R|\ge71d/15>4d$ and
+$F\le e^{-4d}q$, $T^LF\le e^{-4d}\bar f_{L+1}$.
+For $L\ge2$, the precise bare assertions of Modules R2-C012,
+R2-C014 and R2-C017 give $\E[f_a\bar f_{L+1}^4]\le1$;
+$e^{-16d}$ then suffices. For $L=1$ instead use the actual
+$\bar f_2\le2$ and the full-domain covariance in
+\eqref{eq:R21:favorable}:
+\[
+\E[f_a\bar f_2^4]\le8\E[C_a\bar f_2]
+\le8(1-57d/32)(1-d).
+\]
+On this range the last two factors are at most $4/5,7/8$ and
+$e^{-16d}\le e^{-2}\le3/19$, since
+$e^2\ge1+2+2+4/3=19/3$. Hence
+$\E[f_a(TF)^4]\le84/95<14/15\le1-d/5$.
+The high and low ranges meet at $d=1/8$ with identical directions.
+At $d=0$ use original leaf integration; positivity restores all equal
+pairs. The $j=1$ union uses $qf_sh_t$, while $j\ge2$ uses
+$q\prod h_sf_t$ as stated. Full reversal changes every original
+edge, receiving weight, and decoration together.

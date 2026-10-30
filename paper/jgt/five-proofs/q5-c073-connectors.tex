@@ -1,0 +1,276 @@
+\subsection{The remaining short-two unit and long-connector rows}\label{proof:Q5-C073-connectors}
+This continuation retains exactly Q5-C073, Sections 2 and 4--8,
+needed in the all-connector union \eqref{eq:L77:union}.
+For the unit $(2,3)$ row put $m=1-d/2$, $R=s=K^2g$.
+Then $h_2+f_3=2m+s\ge0$ and the square notation
+\eqref{eq:L69:square} gives
+\[
+\E[f_2w_0]=-m^2d-m(\delta_2-\delta_3),\quad
+\E[f_2e]\le\delta_3/2,\quad\E w_0^2=m^4d+m^2\delta_4,
+\]
+\[
+2\E(w_0e)=-(m^2/2)\E(rs^2)
+-(m/2)[\delta_2\delta_3+\E((Kt_0)s^2)].
+\]
+The original row bounds $|r|\le\sqrt d$,
+$|Kt_0|\le\sqrt{\delta_4}<4\sqrt d/15$ yield
+$\E(w_0+e)^2\le m^4d+m^2\delta_4
++(19/30)m\sqrt d\,\delta_3+\delta_3^2/4$.
+On $d\le1/4$, $x=\sqrt d$, the row gives
+$Y\le m^2q+B_0$, $B_0/m\le C=5x/12+x^2/10$.
+Thus the coefficient divided by $m^2$ is bounded by
+$Q=(2+x-q)\{[m(q+1)+C]^2+2m^2\}$.
+For $c=C/m\le(8/15)x$, direct derivatives locate its maximum in
+$[1/2,1]$, where $Q''\le-2m^2$.
+The normalized derivative at $3/4$ is
+$D=-11/16+(7/2)x+(2x-1)c-c^2$, with $|D|\le1$.
+For the lower estimate use
+$c+c^2\le(8/15+32/225)x<(7/2)x$.
+For $x\le5/12$ use $D\le-11/16+35/24<1$; afterward
+$c\ge x/2$ gives $D\le-11/16+(7/2)x-x^2/4\le1$.
+The locating signs, divided by $m^2$, are
+$(1+c)(3+2x-c)-2>0$ at zero,
+$1/4+3x+2xc-c^2>0$ at $1/2$,
+$-2+4x+(-2+2x)c-c^2\le0$ at one; $Q'$ is concave.
+The tangent polynomial is
+\[
+\Phi=(5/4+x)\{[7/4+5x/12-31x^2/40]^2
++2(1-x^2/2)^2\}+(1/4)(1-x^2/2)^2.
+\]
+Its coefficients are
+$421/64,\allowbreak 661/96,\allowbreak -643/144,\allowbreak -15397/2880,\allowbreak 3043/3840,\allowbreak 1761/1600$.
+Absorbing $x^4\le x^2/4$, $x^5\le x^3/4$ gives
+$421/64+(661/96)x-(17/4)x^2-5x^3$.
+It increases to $7999/960<17/2$ on $[0,2/5]$; after $2/5$,
+$x^3\ge(2/5)x^2$ gives an increasing quadratic with endpoint
+$203/24<17/2$. Hence the coefficient is at most $(17/2)m^2$.
+With $u_2=\delta_2/d\in[d,\theta]$, the normalized actual deficit is
+\begin{align*}
+D_3\ge{}&1/2-d/2+(67/8)d^2-(3/8)d^3\\
+&+u_2[327/2048-(11/4)d+(101/64)d^2-(19/64)d^3]\\
+&-(323/60)(\theta u_2\sqrt d/m)
+-(17/8)(\theta^2u_2^2d/m^2).
+\end{align*}
+The inverse expansion used here is
+$[m^{-4}-m^4(1-5d)]/d\ge9-9d+(21/2)d^2-(3/8)d^3$.
+For $u_2\le\theta$, $m\ge7/8$, discard positive terms to get
+$D_3\ge1/2-(51/50)x-(17/10)x^2+(33/4)x^4$.
+The exact relaxations are
+$54587/53760<51/50$ for the square-root cost,
+$1/2+11\theta/4+(136/49)\theta^4<17/10$,
+$3/8+19\theta/64=1015/2048<1/2$, and $d^3\le d^2/4$.
+At $x=2/5+y$, the lower polynomial is
+$39/1250-(67/250)y+(311/50)y^2+(66/5)y^3+(33/4)y^4$,
+$-2/5\le y\le1/10$.
+Use $y^3\ge-(2/5)y^2$ to get the decreasing quadratic with
+coefficient $47/50$ and endpoint $69/5000$.
+Since $(69/5000)(7/8)^4>1/125$, the unit loss is $d/125$.
+For $d\ge1/4$, the actual mean $1-2d-d^2\le7/16$ gives
+$TF_3\le7/8$, proving the same row.
+
+For longer connectors use the exact propagation
+\eqref{eq:L77:propagation}. Put
+$Z_L^*=S'_L+\delta S'_{L-1}-aS'_{L-2}+kB^LR
+=\nu_0+Q_L(B)u$.
+Its difference from that propagated upper bound is
+$\sum_{j=3}^L\gamma_j\bar f_{L-j}$, with
+\begin{equation}\tag{L73c.4.2}\label{eq:L73c:losses}
+\begin{gathered}
+\gamma_3=d-kD_2,\quad \gamma_4=d+\delta d-kD_3,\\
+\gamma_j=\beta_j+\delta\beta_{j-1}-a\beta_{j-2}-kD_{j-1}\ (j\ge5).
+\end{gathered}
+\end{equation}
+For $\alpha_L=\nu_0-\E Z_L^*$, actual skew integration gives
+$\E(uZ_L^*)=\alpha_{L+1}$,
+$\E[r(Z_L^*-\nu_0)]=\nu_0d-\alpha_{L+2}$.
+If every $\gamma_j\ge hd$ and $L\ge4$, retain the last two actual
+losses to obtain $Z=Z_L^*-hd(1+q)\ge T^LF_0/m^2\ge0$.
+If the three $\alpha$ terms are at least $hd$ and $\|Q_L\|\le N_0$,
+then exact centering yields
+\begin{equation}\tag{L73c.4.4}\label{eq:L73c:moments}
+\mu\le\nu_0-3hd,\quad
+\E[f_2(Z-\mu)]\le(\nu_0-2h)d,\quad
+\operatorname{Var}Z\le N_0^2d-3h^2d^2+h^2d^3.
+\end{equation}
+If $\|Q_{L-1}\|\le N_0$ as well, the original row is
+$Z\le(\nu_0-hd)q-hd+N_0\sqrt d$.
+
+For $(2,3)$ over the full $d\le1/3$, $D_0=D_2=D_4=0$,
+$D_1=-\delta_2$, $D_3=\delta_3$, with later nonzero signs
+alternating. Put $a=k\delta_2$, $\delta=k^2\delta_3/2$,
+$\eta=a-\delta$. Then
+$\nu_0=1-\eta$, $\delta/a\le39/160$,
+$0\le\eta\le39d/80\le13/80<1/6$, $\delta\le\eta/3$.
+The exact finite polynomial is
+$Q_n=G_n-\eta G_{n-2}+\delta z^{n-2}-kz^{n+2}$ for $n\ge3$.
+For $n=3$, $P_3=G_3-kz^5$ has squared norm at most
+$(1-\xi)^2+\xi\le1$.
+$Q_3$ has coordinates $1-\xi-\eta$, $1+\delta-k\xi^2$;
+its square difference is at most
+$\eta[-2+(8/3)\xi+\eta(1+\xi/9)]<0$, bracket at most $-53/108$.
+For $n=4$ the positive coordinates are bounded by those of
+$P_4=G_4-kz^6$, whose norm is at most
+$(1-\xi)(1+\xi/2)+k\xi^3\le1$ since $k\xi\le39/80<1/2$.
+The coordinate positivity bounds are $11/36$ and $1/3$.
+For every finite $n\ge5$,
+\[
+Q_n=\frac{1-\eta+z^{n-2}[a-\delta z-z^2-kz^4+kz^5]}{1-z}.
+\]
+The last three terms of the bracket have norm at most $\xi$ because
+$(1-k\xi)^2+k^2\xi^3\le1$, implied by $k\xi(1+\xi)\le2$.
+Also $a+\delta\sqrt\xi\le19\eta/12$,
+$(19/12)\xi^{3/2}<1$.
+The numerator norm is at most $1+\xi^{5/2}$ and
+$2\xi^{3/2}+\xi^4\le13/16<1$ gives $\|Q_n\|\le1$.
+The losses obey $\gamma_3=d$, $\gamma_4\ge4d/5$;
+positive $D_{j-1}$ for $j\ge5$ first occurs at index seven and is at
+most $\delta_5\le\theta^4d$.
+All losses are therefore at least $hd$, $h=9/16-d/2$.
+After multiplying the comparison by $m$, its difference is
+$1/32-\theta^4+(5/64)d-d^2/4$, concave with positive endpoints
+$4207/1048576$ and $4207/1048576-1/576$.
+For $L\ge4$, $\alpha_L=\gamma_{L+1}\ge hd$ and
+\eqref{eq:L73c:moments} applies with $N_0=1$, $\nu_0\le1$.
+The full-domain coefficient ten follows whenever
+$Z\le(1-cd)q-cd+\sqrt d$, $\mu\le1-3cd$, $c=19/48$.
+Its quadratic-loss polynomial is
+$A(q)=(5111/6912)q^2+(3059/864)q+17767/3456$.
+It dominates $(2-q^2/2)(q+1)^2$: a sufficient difference is
+$q^4/2+q^3-(4/5)q^2-q/2+3$, at least $17/10$ on $[0,1]$
+by dropping positive terms, and positive on $[1,2]$ by $q^3\ge q^2$.
+Completing the square adds at most one to the base nine.
+Since $h\ge19/48$, the actual mean upper bound is
+$v_0=1-27d/16+3d^2/2$, covariance at most $-d/8+d^2$,
+variance at most $d-3h^2d^2+h^2d^3$.
+The upper mean endpoint is positive:
+$v_0\ge29/48$, $(1-d)v_0\ge29/72$, $4d^2-d/2\ge-1/64$.
+For $a_0=27d/16-3d^2/2<2/5$ use
+$v_0^4\le1-4a_0+6a_0^2$ and
+$(4d^2-d/2)v_0^3\le(4d^2-d/2)(1-3a_0)+12d^2a_0^2$.
+The full polynomial before $m^8$ is at most
+$1+(7/4)d+(215/8)d^2-(3579/64)d^3+(5307/64)d^4
+-(287/4)d^5+27d^6$.
+The last two terms sum nonpositively; inverse Taylor gives gap
+$d[9/4-(143/8)d+(1605/32)d^2]\ge(8441/12840)d$.
+With $m^8>1/5$ this proves deficit $d/8$ for $L\ge4$.
+For $L=3$ take the actual $Z=Z_3^*-d$.
+$\alpha_3\ge4d/5$ gives $\mu\le1-9d/5$, covariance at most
+$-d/8+d^2/5\le-d/20$, variance at most $d-16d^2/25$.
+$Q_2=1+\delta+z-kz^4$ has square at most $(1+\delta)^2+\xi$;
+$\delta\le3d/25\le1/25$ gives $\|Q_2\|<5/4$ and
+$Z\le q-d+(5/4)\sqrt d$.
+The coefficient ten follows by square completion with loss
+$A(q)=(28/5)(q+1)+1037/1200$,
+using $(2-q^2/2)(q+1)\le25/8$ and $28/5>625/128$.
+The upper mean bracket is at least $1/5$ and the full polynomial is
+$1+(8/5)d+(533/25)d^2-(5589/125)d^3+(4374/125)d^4-(6561/625)d^5$.
+Its inverse gap is at least $d[12/5-13d+54d^2]>(8/5)d$,
+so the actual loss exceeds $d/4$.
+
+For $(2,4),L\ge4$, on $d\le1/4$ use $m=1-d$ and the actual
+$R=s+t_0-dg$ of Q5-C069.
+The exact Q4-C128, Section 4, finite losses retained in
+Section~\ref{loc:S25} give
+$|\varepsilon|\le d/6$, $\delta\le25d/24$,
+$\gamma_j\ge hd$, $h=1/2-6d/5$.
+Its finite $P_n$ contraction gives
+$\|Q_L\|,\|Q_{L-1}\|\le1+d$.
+The shortest $Q_3$ cost is $1/6+(13/20)(25/24)=27/32<1$;
+$Q_4$ uses $\|G_2\|\le6/5$, and later tails are smaller.
+All three actual $\alpha$ terms are at least $hd$.
+Thus $\mu\le1-4d/3+18d^2/5$, covariance at most $3d^2$,
+variance at most $(1+d)^2d-3h^2d^2+h^2d^3$.
+The row and mean sum is at most $q+B(x)$,
+$B(x)=1+x-(11/6)x^2+x^3+(24/5)x^4\le22/15<3/2$.
+It increases: $B'\ge1-11/12>0$ up to $1/4$, and then
+$B'\ge1-(11/3)x+(39/5)x^2>0$.
+With $f_2\le5/2-q$, $\mu\le1$, the curvature cubic has
+$Q''\le-1$, $Q(9/10)=1552/125$, $Q'(9/10)=-2/25$,
+so its maximum is at most $7762/625<13$.
+Using $a_0=(4/3)d-(18/5)d^2\ge0$ and
+$(1-d)(1-a_0)^4+12d^2(1-a_0)^3
+\le1-d-4a_0+4da_0+6a_0^2+12d^2$,
+the full bound is
+$P\le1+(20/3)d+(1173/20)d^2-(179/20)d^3+6d^4+(468/25)d^5$.
+The inverse gap is at least
+$d[4/3-(453/20)d+(2579/20)d^2]>d/3$, since the completion loss
+$205209/206320<1$.
+$m^8>1/10$ gives low loss $d/30$.
+
+For every $b\ge5,L\ge4$, $d\le1/5$, the finite vector proof \eqref{eq:L77:correctedfrequency} applies.
+It gives $|\varepsilon|\le3d/5$, $\delta\le6d/5$,
+all $\gamma_j\ge hd$, $h=1/2-6d/5$.
+Every positive $D_j$, $j\ge4$, is at most $\theta^2z_0d$
+because $\theta u_0\le z_0$.
+For $j\ge5$, compare $\kappa-d-k\theta^2z_0$ with $h$;
+after multiplying by $m$ its decreasing difference is
+$875/32768-(3241/81920)d-(9/40)d^2$, endpoint
+$40101/4096000>0$. The first two losses are stronger.
+The finite $P_n$ contraction holds for all $n\ge3$ using $ku_0\le1$:
+for $n=3$ coordinates are nonnegative and bounded by $G_3$;
+for $n=4$ use $(1-\xi)(1+\xi/2)+\xi^2\le1$;
+for $n=5$ use $|G_5|\le1-\xi/2+\xi^2/2$ and
+$\xi^{5/2}\le13\xi^2/20$, whose base square difference is
+$\xi^2(1+2\xi-3\xi^2)/4\ge0$;
+for $n\ge6$ use $(1+\xi^3)/\sqrt{1+\xi}+\xi^3\le1$,
+following from $\xi(1+\sqrt{1+\xi})\le143/160<1$.
+Thus $\|Q_L\|,\|Q_{L-1}\|\le1+7d/5$;
+the shortest cost is $3/5+(13/20)(6/5)=69/50<7/5$,
+and $Q_4$ uses the true $G_2$ bound.
+The actual mean is at most $v_0=1-9d/10+18d^2/5\le1$ and
+covariance at most $3d^2$.
+Its row is $Z\le aq+b$, $a\le267/250<107/100$,
+$b\le21/40$; at $d=1/5$ the increasing latter bound is below
+$(32/25)(9/20)-13/250=131/250<21/40$.
+The curvature cubic
+$(49/20-q)[((107/100)q+61/40)^2+2]$ has
+$Q''\le-91699/100000<-9/10$,
+$Q(9/10)=3967101/312500<127/10$ and
+$|Q'(9/10)|=7819/125000<1/10$, so its maximum is below
+$127/10+1/180<13$.
+The mean part is at most
+$1-(23/5)d+(1743/50)d^2-(1332/25)d^3+(1944/25)d^4$;
+variance at most
+$d+(41/20)d^2+(581/100)d^3-(138/25)d^4+(36/25)d^5$.
+The full bound is therefore
+$P\le1+(42/5)d+(6151/100)d^2+(89/4)d^3+6d^4+(468/25)d^5$.
+Inverse Taylor gives gap
+$d[3/5-16d+147d^2]\ge(121/735)d$;
+$m^8>1/8$ and $121/5880>1/50$ prove low loss $d/50$.
+
+For the high range, the precise original path inputs are
+$\E[\bar f_3^4/q]\le1-23d/36$ \eqref{eq:L56:claim} and
+$\E\bar f_4^4\le1-d-4d^2$ \eqref{eq:Q64:four}.
+On positive support $q(x)\ge\mu(x)>0$, so inverse weights
+are well defined. Since
+$f_2q\le pq(1+q/2)=2q-q^3/2\le8/(3\sqrt3)<8/5$,
+the weighted bare moments are at most
+$(8/5)(1-23d/36)$ and $2(1-d-4d^2)$, respectively.
+The all-integer path means proved in Q5-C090 give
+$\bar f_n\le2\mu_{n-1}\le2-5d\le1$ for $n\ge5,d\ge1/5$.
+For $b\ge5$, use the actual terminal-mean convolution
+$t_b=1-\beta_{b+1}-\beta_{b+2}+\beta_{b+3}
+-\sum_{j=3}^b\beta_jt_{b-j}$ with short values
+\eqref{eq:L77:means}.
+$t_5\le79/200$ for $d\ge1/5$;
+$t_6\le1-(121/32)d+(45/16)d^2+d^3$ decreases and is at most
+$1457/4000<91/200$ at $1/5$.
+For every $b\ge7$ retain five actual terms $t_0,\ldots,t_4$,
+$t_4\ge1-3d\ge0$, all beta indices at least three, to get
+$t_b\le1-d(3479-3287d-608d^2)/1024$.
+The loss increases with derivative numerator at least $1085$;
+at $1/5$ it is $17483/32000$.
+Thus all $b\ge5$ have $t_b\le91/200$, $TF_b\le91/100$.
+For $L=4$, the target is below
+$(91/100)^4(8/5)(7/8)<35/36$, using $(91/100)^2<5/6$.
+For $L=5$, the weighted fourth-path bound $32/25$ gives target
+below $8/9$; for $L\ge6$, the actual path is at most one, giving
+target at most $1-d\le4/5$.
+All are stronger than $1-d/50$.
+For $b=4,d\ge1/4$, its mean gives $TF_4\le4/5$.
+For $L=4$ use weighted three-step bound $8/5$, for $L=5$ use
+fourth-step bound two, and for $L\ge6$ the pointwise path bound;
+all targets are at most $512/625$.
+Together with its low proof this gives loss $d/40$ for $b=4$.
+Combining all finite $b$ proves the common loss $d/50$ for every
+$b\ge3,L\ge4$.

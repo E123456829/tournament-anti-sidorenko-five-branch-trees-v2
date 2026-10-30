@@ -1,0 +1,98 @@
+% Insert once after ordinary-propagation.tex.  This file supplies scalar
+% comparisons only; the finite model and the signed exponential estimate
+% are unchanged.  It does not use any local terminal certificate.
+\paragraph{Scalar comparisons for ordinary moments}
+\label{part:oc:scalar-comparisons}
+
+\begin{lemma}[Quadratic Hermite comparison]\label{lem:oc:hermite}
+Let \(W\) be a finite real variable with \(|W|\le U\), and let
+\(f\in C^3([-U,U])\) satisfy \(f'''\ge0\).
+For \(-U\le c<U\), put
+\begin{equation}\label{eq:oc:hermite-majorant}
+ Q_c(w)=f(c)+f'(c)(w-c)+b_c(w-c)^2,\qquad
+ b_c=\frac{f(U)-f(c)-f'(c)(U-c)}{(U-c)^2}.
+\end{equation}
+Then \(f(w)\le Q_c(w)\) throughout \([-U,U]\).
+If also \(f',f''\ge0\), \(0\le a\le U\),
+\(\E W\le-a\) and \(\E W^2\le v_0\), then
+\begin{equation}\label{eq:oc:negative-contact}
+ \E f(W)\le f(-a)+b_{-a}(v_0-a^2).
+\end{equation}
+Here the case \(U=a=0\) is read directly. If in addition \(f\ge0\),
+then \(0\le b_{-a}\le f(U)/(U+a)^2\) when \(U+a>0\).
+In particular, for \(0\le h\le1\),
+\begin{equation}\label{eq:oc:fixed-contact}
+ \E W\le0,\quad \E W^2\le hU^2
+ \quad\Longrightarrow\quad
+ \E f(W)\le\frac{f(-hU)+h f(U)}{1+h},
+ \qquad(f',f'',f'''\ge0).
+\end{equation}
+
+For moment matching, write \(m=\E W\), \(v=\E(W-m)^2\),
+\(M=U-m>0\). With
+\begin{equation}\label{eq:oc:matched-contacts}
+ c=m-v/M,\qquad \ell=M+v/M,\qquad
+ \pi=\frac{v}{M^2+v},
+\end{equation}
+one has \(-U\le c\le m<U\), and the Bernoulli variable
+\(Z\) of mean \(\pi\) gives
+\begin{equation}\label{eq:oc:hermite-matching}
+ \E f(W)\le \E f\bigl(m+\ell(Z-\pi)\bigr).
+\end{equation}
+If \(M=0\), then \(W=U\); if \(v=0\), both sides equal \(f(m)\).
+The matching statement needs only \(f'''\ge0\), not a restriction
+on the sign of \(m\) or a bound involving \(\theta\).
+\end{lemma}
+\begin{proof}
+The Hermite remainder has sign
+\(f'''(\xi)(w-c)^2(w-U)/6\le0\).
+Under the additional hypothesis \(f''\ge0\), convexity gives
+\(b_c\ge0\); at \(c=-a\), the coefficient of
+\(\E W\) in \(\E Q_c(W)\) is \(f'(c)+2ab_c\ge0\).
+Substituting the two moment bounds proves
+\eqref{eq:oc:negative-contact}; the upper bound for \(b_{-a}\)
+follows by dropping the nonnegative terms in its numerator.
+For \eqref{eq:oc:fixed-contact}, take \(c=-hU\): the enlarged
+moments \(0,hU^2\) are realized at \(-hU,U\) with probabilities
+\(1/(1+h),h/(1+h)\).
+For matching, \(v\le U^2-m^2=M(U+m)\) places the lower contact
+in the interval. The two-point variable in
+\eqref{eq:oc:hermite-matching} has the same first two moments
+as \(W\) and lies at the contact points, so its expectation of
+\(Q_c\) is \(\E Q_c(W)\).
+\end{proof}
+
+The centered Bernoulli estimate used with these comparisons is
+\eqref{eq:Q102:3.5}, proved in paragraph~\ref{part:Q81.2}.
+Moment matching retains the actual mean of \(W\), of either sign.
+The continuous balanced coefficient is \(1/8\); at a deterministic
+endpoint the centered variable is zero.
+
+\begin{lemma}[Ordinary moments from a positive sum or square]
+\label{lem:oc:ordinary-comparison}
+Use the original finite kernel and \(B=-K\).
+For \(r\in\{4,8\}\), write \(C_r=17r^2/64\).
+If \(H\ge0\), \(a>0\), and
+\(H\le a^2(c+BV/2)^2\) with \(c+BV/2\ge0\), then
+\begin{equation}\label{eq:oc:ordinary-square}
+ \log\E H^r\le
+ 2r\log a+2r(c-1)+r\E BV+C_r\|V\|_2^2.
+\end{equation}
+If \(X,Y\ge0\), \(X+Y\le2+c+BV\), and
+\(0\le H\le a^2e^{-\Gamma}XY\), then
+\begin{equation}\label{eq:oc:ordinary-sum}
+ \log\E H^r\le
+ r(2\log a-\Gamma+c+\E BV)+C_r\|V\|_2^2.
+\end{equation}
+Both formulas allow either sign of \(\E BV\) and a constant
+coordinate in \(V\). A zero moment is read with \(\log0=-\infty\).
+\end{lemma}
+\begin{proof}
+For \(y\ge0\), \(y^{2r}\le e^{2r(y-1)}\).
+Apply \eqref{eq:oc:signed-moments} to the resulting exponential
+of \(rBV\) to obtain \eqref{eq:oc:ordinary-square}.
+For the sum form, AM--GM gives
+\(XY\le(1+(c+BV)/2)^2\), whose base is nonnegative since it
+dominates \((X+Y)/2\); use the square form with
+\(a e^{-\Gamma/2}\) and \(1+c/2\).
+\end{proof}

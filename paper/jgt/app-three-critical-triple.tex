@@ -1,0 +1,337 @@
+\subsection{The critical residual triple of lengths one two and three}\label{q3:app:critical}
+We prove the last root inequality
+\begin{equation}\label{q3:eq:criticaltarget}
+ \E[(qf_2h_3)^3]\le1 .
+\end{equation}
+Only the bounded skew-kernel model and the spectral bound of Lemma~\ref{q3:lem:spectral} are needed for this root proof. Within this subsection
+\[
+ r=Kg,\quad k=K^2g,\quad D=\E r^2,\quad E_3=\E k^2 .
+\]
+We will prove the quantitative bounds
+\begin{equation}\label{q3:eq:criticalranges}
+\begin{array}{ll}
+ \E[(qf_2h_3)^3]\le1-(99/1280)d,&0\le d\le1/8,\\
+ \E[(qf_2h_3)^3]\le1-(67/6000)d,&1/8\le d\le8/29,\\
+ \E[(qf_2h_3)^3]\le3943/4000,&8/29\le d\le1/3.
+\end{array}
+\end{equation}
+Each line concerns the same actual orientation.
+
+\subsubsection{A geometric bound and a universal reversal}
+Skewness gives
+\[
+ \E g=\E k=\E(gr)=\E(rk)=0,\quad
+ \E r=-d,\quad \E(gk)=-D,\quad d^2\le D\le\theta d,\quad E_3\le\theta D.
+\]
+Use the pointwise constraint \eqref{q3:eq:cyclepoint}.
+Thus $c=r+(1-g^2)/2\ge0$ and $\E c=(1-3d)/2$.
+Also $|k|\le\sqrt D\le\sqrt{13/96}<3/8$.
+
+The actual short messages are $f_2=1+g+r$ and $h_3=1-d-g-r-k$.
+The target at the universally reversed kernel is
+\[
+ F=(qf_2h_3)(-K)=p(1-g+r)(1-d+g-r+k).
+\]
+It suffices to prove $\E F^3\le1$ for every legal $K$, then substitute $-K$.
+Set
+\[
+ a=1-d/2,\quad m=a+k/2,\quad w=-r+(k-d)/2,\quad z=g+w .
+\]
+The last two actual factors of $F$ are $m-z,m+z$, so
+$F=p(m^2-z^2)$ and $|z|\le m$.
+The geometric bounds give
+\[
+ w\ge-(1-g^2)/2-17/48,\quad m\ge31/48,\quad
+ m\le1+\theta/8=269/256,\quad m^2<10/9 .
+\]
+Consequently
+\begin{equation}\label{q3:eq:criticalexponential}
+ F^3\le m^6p^3e^{-27z^2/10}.
+\end{equation}
+
+\subsubsection{A scalar quadratic majorant}
+For $-1\le g\le1$ and $w\ge-(1-g^2)/2-17/48$, put $z=g+w$.
+We claim
+\begin{equation}\label{q3:eq:Qmajorant}
+ \frac{p^3}{1+27z^2/10}
+ \le Q=1+3g+(12/5)g^2+(3/2)w^2.
+\end{equation}
+Let
+\[
+ Q_0=1+3g+(12/5)g^2=(12/5)(g+5/8)^2+1/16>0,
+\]
+\[
+ B=3/2+(27/10)Q_0=21/5+(81/10)g+(162/25)g^2>0.
+\]
+Expanding and using $Q\ge Q_0$ bounds the difference between the two sides after multiplication by the denominator below by
+\[
+ R_g(z)=g^2(9/10-g)-3gz+Bz^2.
+\]
+The following four cases prove nonnegativity.
+For $g\le-3/5$, directly
+$Q-p^3=g^2(-3/5-g)+(3/2)w^2\ge0$.
+For $-3/5\le g\le0$, put
+\[
+ \Delta(g)=(9/10-g)B-9/4
+ =153/100+(309/100)g-(567/250)g^2-(162/25)g^3.
+\]
+Writing $-g=1/2+y$, $-1/2\le y\le1/10$, gives
+$\Delta=57/250-(249/500)y+(1863/250)y^2+(162/25)y^3
+\ge1/5-|y|/2+4y^2\ge59/320$.
+Then
+$R_g(z)=B[z-3g/(2B)]^2+(g^2/B)\Delta\ge0$.
+For $0\le g\le7/10$, $\Delta''<0$ and its endpoint values are $153/100$ and $1122/3125$, so the same square completion works.
+
+For $g=7/10+y$, $y\ge0$, the assumed lower bound on $w$ gives
+\[
+ z\ge T=109/1200+(17/10)y+y^2/2,\quad
+ B\ge13+17y,\quad T\ge9/100+(17/10)y+y^2/2.
+\]
+Thus $BT-3g/2\ge3/25+(103/5)y>0$ and $R_g$ increases for $z\ge T$.
+The part of $R_g(T)$ outside $BT^2$ equals
+$-371/4000-(1621/400)y-(147/20)y^2-(5/2)y^3$.
+Multiplication of the positive lower bounds yields
+\[
+ BT^2\ge1053/10000+(41157/10000)y+(3757/100)y^2+(221/10)y^3.
+\]
+Their sum is at least
+$251/20000+(79/1250)y+(1511/50)y^2+(98/5)y^3>0$.
+This proves \eqref{q3:eq:Qmajorant}. Since $e^{-u}\le1/(1+u)$ for $u\ge0$, \eqref{q3:eq:criticalexponential} implies
+\begin{equation}\label{q3:eq:criticalreduction}
+ \E F^3\le\E[m^6Q].
+\end{equation}
+
+\subsubsection{Centered moments and the Taylor remainder}
+Introduce
+\[
+ S=\E g^3,\quad M=\E(g^2k),\quad N=\E(gk^2),\quad
+ B_{22}=\E(g^2k^2),\quad \rho_0=D-d^2,
+\]
+\[
+ s=k+dg=K(r+d\one),\quad \sigma=\E s^2,\quad G=\E(gs^2).
+\]
+Since $k=s-dg$, the exact relation is
+\begin{equation}\label{q3:eq:Nidentity}
+ N=-2dM-d^2S+G .
+\end{equation}
+The row and spectral bounds give $|s|^2\le\rho_0$ and $\sigma\le\theta\rho_0$.
+Centering $s^2$, and using $\E g=0$, gives
+\[
+ |G|^2\le d(\E s^4-\sigma^2)\le d(\rho_0\sigma-\sigma^2).
+\]
+Since $\theta<1/2$ and $u(1-u)$ increases up to $1/2$,
+\begin{equation}\label{q3:eq:centeredG}
+ |G|\le\sqrt{d\theta(1-\theta)}(D-d^2)\le(\sqrt d/2)(D-d^2).
+\end{equation}
+If $\rho_0=0$, then $s=0$ and this holds directly.
+
+The remaining bounds are
+\[
+ |M|\le d\sqrt D,\quad |S|\le d-d^2,\quad
+ B_{22}\le dD,\quad |N|\le D\sqrt{\theta d},
+\]
+\begin{equation}\label{q3:eq:wsecondcritical}
+ \E w^2=D+E_3/4-3d^2/4
+ \le(1+\theta/4)D-3d^2/4.
+\end{equation}
+The score bound for $S$ follows from the expectations of $(1-g)(g+d)^2$ and $(1+g)(g-d)^2$. The nonnegative cycle remainder gives stronger large-$d$ estimates:
+\begin{equation}\label{q3:eq:cyclemoments}
+ |S|\le1-3d,\qquad |M|\le(1-d)(1-3d)/2.
+\end{equation}
+Indeed $\E(gc)=-S/2$; with $b=1-g^2$, skewness gives $\E[cKb]=M$, and $|Kb|\le\E b=1-d$.
+
+Expand $T=m^6=(a+k/2)^6$:
+\[
+ T=a^6+3a^5k+(15/4)a^4k^2+R_3,\quad
+ |R_3|\le C_3|k|^3,
+\]
+\[
+ C_3=(5/2)a^3+(15/16)a^2\sqrt D+
+       (3/16)aD+D^{3/2}/64.
+\]
+The bounds $\sqrt D<3/8$ and $a=1-d/2$ give
+\[
+ C_3<3\ (d\ge0),\qquad C_3<12/5\ (d\ge1/8),\qquad C_3<2\ (d\ge1/4).
+\]
+For example, with denominator $32768$ the three upper numerators are $94331$, $78462$ and $64483$.
+Also $T\le27/20$ always, since $(269/256)^6<27/20$.
+For $d\ge8/29$, $\sqrt{\theta d}\le d+3/50$, so $m\le103/100$ and $T<6/5$. The squared comparison is the increasing polynomial
+$d^2-(229/800)d+9/2500$, positive at $11/40<8/29$.
+
+Because $Q_0>0$, the absolute remainder is bounded with its sign intact by
+\[
+ \E(R_3Q_0)\le C_3\sqrt D\,\E(k^2Q_0)\le R(d)D,
+\]
+where, for a valid constant $\bar C\ge C_3$,
+\[
+ t=\sqrt d,\qquad
+ R(d)=\bar C(16/25)t[\theta+3(16/25)t+(12/5)d].
+\]
+The three choices $\bar C=3,12/5,2$ give respectively
+\[
+\begin{array}{c|l}
+R_S&(39/50)t+(2304/625)t^2+(576/125)t^3\\
+R_M&(78/125)t+(9216/3125)t^2+(2304/625)t^3\\
+R_L&(13/25)t+(1536/625)t^2+(384/125)t^3 .
+\end{array}
+\]
+Using \eqref{q3:eq:Nidentity} in the principal quadratic term yields the master estimate
+\begin{equation}\label{q3:eq:criticalmaster}
+\begin{split}
+ \E F^3\le{}&
+ a^6[1+(12/5)d]-9a^5D+(15/4)a^4E_3\\
+ &+A_MM-(45/4)a^4d^2S+(45/4)a^4G\\
+ &+9a^4B_{22}+R(d)D+(3/2)U[(1+\theta/4)D-3d^2/4],
+\end{split}
+\end{equation}
+where $A_M=(9/10)a^4(8-29d)$ and $U$ is the applicable bound on $T$.
+Before substituting \eqref{q3:eq:Nidentity}, the quadratic term is
+$(15/4)a^4[E_3+3N+(12/5)B_{22}]$ and the linear term is
+$-9a^5D+(36/5)a^5M$. This verifies every sign in \eqref{q3:eq:criticalmaster}.
+
+\subsubsection{A common polynomial for the small and middle ranges}
+For $d\le8/29$, $A_M\ge0$. Use
+$M\le d\sqrt D\le D/4+d^2$, \eqref{q3:eq:centeredG}, $|S|\le d-d^2$,
+$B_{22}\le dD$, $E_3\le\theta D$, and $U=27/20$. Then
+\begin{equation}\label{q3:eq:A0V}
+ \E F^3\le A_0(d)+V(d)D,
+\end{equation}
+\[
+ A_0=a^6[1+(12/5)d]+
+ a^4d^2[36/5-(297/20)d-(45/8)t-(45/4)d^2]-(243/160)d^2,
+\]
+\[
+ V=a^4[-3633/640+(45/8)t+(279/40)d]+R(d)+11421/5120.
+\]
+The negative term $-(45/8)a^4td^2$ is the centered contribution of $G$ and is retained.
+With $R=R_M$ and $H_M=A_0+\theta dV$, direct collection gives
+\[
+\begin{split}
+ H_M={}&a^4[1-(18557/20480)t^2+(585/256)t^3+
+ (10091/1280)t^4-(45/8)t^5\\
+ &\hspace{26mm}-(57/4)t^6-(45/4)t^8]
+ +(148473/163840)t^2+(507/2000)t^3\\
+ &-(32067/100000)t^4+(936/625)t^5.
+\end{split}
+\]
+Write $(H_M-1)/t^2=\sum_{j=0}^{14}q_jt^j$. All coefficients and the upper bounds used are
+\[
+\begin{array}{r|r|r}
+j&q_j&\text{upper bound}\\\hline
+0&-327663/163840&-199/100\\
+1&81237/32000&51/20\\
+2&69600837/6400000&109/10\\
+3&-695817/80000&-43/5\\
+4&-261131/8192&-1593/50\\
+5&7515/512&147/10\\
+6&242409/8192&148/5\\
+7&-4905/512&0\\
+8&-188313/65536&0\\
+9&12105/4096&3\\
+10&-189589/20480&0\\
+11&-45/128&0\\
+12&303/64&19/4\\
+13&0&0\\
+14&-45/64&0 .
+\end{array}
+\]
+For $t\le8/15$, the positive terms of degree at least five are bounded by
+\[
+ t^4[(147/10)(8/15)+(148/5)(8/15)^2+
+ 3(8/15)^5+(19/4)(8/15)^8]\le(8211/500)t^4.
+\]
+Combining with $q_4$ and discarding the remaining negative terms gives
+\[
+ (H_M-1)/t^2\le L_M(t)
+ =-199/100+(51/20)t+(109/10)t^2-(43/5)t^3-(77/5)t^4.
+\]
+With $R=R_S$, only $q_1,q_2,q_3$ change, to
+$16653/6400$, $71517765/6400000$, $-133173/16000$.
+Thus the corresponding $H_S=A_0+\theta dV$ satisfies
+\[
+ (H_S-1)/t^2\le L_S(t)
+ =-199/100+(261/100)t+(56/5)t^2-(83/10)t^3-(77/5)t^4.
+\]
+
+\subsubsection{The small range}
+Suppose $d\le1/8$ and use $R_S$. Since $d^2\le D\le\theta d$, \eqref{q3:eq:A0V} is bounded by the larger of $A_0+Vd^2$ and $H_S$.
+First $V\le1$ on this interval. Indeed
+$B(t)=-3633/640+(45/8)t+(279/40)t^2$ is negative and increasing, so $a^4B$ increases, as does $R_S$. At $d=1/8$, use $t\le99/280$:
+\[
+ B\le-563/200,\quad a^4\ge193/250,\quad
+ R_S<941/1000,\quad11421/5120<2231/1000.
+\]
+These give $V<49941/50000<1$.
+Moreover
+\[
+ \begin{aligned}
+ a^6[1+(12/5)d]
+ ={}&1-(3/5)d-(69/20)d^2+(13/2)d^3-(81/16)d^4\\
+ &+(33/16)d^5-(139/320)d^6+(3/80)d^7\\
+ \le{}&1-(3/5)d-(5/2)d^2 .
+ \end{aligned}
+\]
+The last comparison follows by dividing the difference by $d^2$ and bounding it by
+$-19/20+13/16+33/8192+3/2621440<0$.
+Dropping negative terms in the bracket of $A_0$ now gives
+\[
+ A_0+Vd^2\le1-(3/5)d+(669/160)d^2\le1-(99/1280)d.
+\]
+For the upper endpoint, $t\le\sqrt{1/8}<3/8$ and
+$L_S'(t)\ge261/100+(22/5)t>0$ on $[0,3/8]$.
+Thus $L_S(t)\le L_S(3/8)=-18277/102400<-99/1280$.
+Both endpoints prove the first range of \eqref{q3:eq:criticalranges}.
+
+\subsubsection{The middle range}
+For $1/8\le d\le8/29$ use $R_M$. The coefficient $V$ is positive:
+$B(t)\ge-375/128$ and $a^4\le(15/16)^4$ imply $a^4B>-23/10$;
+$R_M\ge26/125$ and $11421/5120>11/5$ give $V>27/250$.
+Hence $D$ may be replaced by $\theta d$.
+Here $1/3\le t\le\sqrt{8/29}<8/15$ and
+\[
+ L_M''(t)=109/5-(258/5)t-(924/5)t^2<-15.
+\]
+At $t=1/2$, $L_M=-11/400$ and $L_M'=-7/10$. Strong concavity gives
+\[
+ L_M(t)\le-11/400-(7/10)(t-1/2)-(15/2)(t-1/2)^2
+ \le-67/6000 .
+\]
+This proves the second range of \eqref{q3:eq:criticalranges}.
+
+\subsubsection{The large range and completion}
+For $d\ge8/29$, $A_M\le0$. Use the cycle bounds \eqref{q3:eq:cyclemoments}, $R_L$ and $U=6/5$ in \eqref{q3:eq:criticalmaster}. The coefficient of $D$ is
+\[
+ V_L=a^4[-957/128+(27/2)d+(45/8)t]+R_L+1269/640>0 .
+\]
+Indeed the bracket is at least $-165/128$ for $d\ge1/4,t\ge1/2$,
+and $1269/640-165/128=111/160>0$.
+Replacing $D$ by $\theta d$ and collecting gives
+\[
+ \E F^3\le a^4I(d)+O(d),
+\]
+\[
+ I=P(d)+(45/8)d^{3/2}(\theta-d),\quad
+ P(d)=-13/5+(528643/20480)d-(15493/320)d^2+6d^3,
+\]
+\[
+ O=(16497/20480)d+(169/800)d^{3/2}-(879/2500)d^2+(156/125)d^{5/2}.
+\]
+For verification, the cycle $M$ term expands as
+$-18/5+(549/20)d-63d^2+(783/20)d^3$; the two terms containing $\sqrt d$ inside $a^4$ combine to the displayed one in $I$.
+
+Since $P''<-84$, $P(2/7)=3381267/3512320<97/100$ and
+$|P'(2/7)|=385389/1003520<1/2$, a quadratic tangent gives
+$P(d)\le97/100+1/672<39/40$.
+Also $d(\theta-d)$ decreases on this interval and has maximum $121/3364$ at $8/29$.
+Using $\sqrt d\le7/12$ bounds the remaining term of $I$ by
+$38115/322944<1/8$. Thus $I\le11/10$ and
+$a^4I\le(25/29)^4(11/10)\le99/160$.
+For $O$, use $d\le1/3$ and $d^2\ge64/841$ to bound its four terms respectively by
+$27/100$, $21/500$, $-13/500$, $81/1000$. Hence $O\le367/1000$ and
+\[
+ \E F^3\le99/160+367/1000=3943/4000<1 .
+\]
+This proves the third range. If $d=0$, all arm messages equal one.
+The three closed ranges exhaust $[0,1/3]$. The argument is universal in $K$, so substituting $-K$ proves \eqref{q3:eq:criticaltarget} for the original fixed message $qf_2h_3$.
+Multiplying by any actual equal-pair product $E_0\le1$ preserves the cubic.
+Theorem~\ref{q3:thm:endpoints} and the exact assembly in Section~\ref{q3:sec:assembly} therefore apply to the last residual family as well, completing the proof of the three-branch theorem.

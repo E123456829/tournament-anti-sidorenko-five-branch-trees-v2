@@ -1,0 +1,242 @@
+\subsection[Propagated pairs (2,b), b >= 4]{Propagated pairs $(2,b)$, $b\ge4$}\label{loc:S25}\label{proof:Q4-C128}
+In this proof $\tau=d-\delta_{2}$.
+For $F=h_2f_b$ we prove $\E[p(T^LF)^4]\le1$ for all $b\ge4,L\ge1$.
+First assume $0<d\le1/4$ and put
+$m=1-d$, $k=m^{-1}$, $u_0=1/2+d$, $z_0=\theta+11d/16$.
+
+\proofpart{A retained quadratic envelope}
+In $h_2+f_b=2+\sum_{j=3}^bK^j\one-\sum_{j=3}^b\beta_jf_{b-j}$
+retain coefficients $C_1,C_2,C_3$ as follows:
+\[
+ (C_1,C_2,C_3)=
+ \begin{cases}(d,0,0),&b=4,\\(d,\delta_{2},0),&b=5,\\
+ (\beta_{b-1},\lambda\beta_{b-2},\lambda\beta_{b-3}),&b\ge6,
+ \end{cases}
+\]
+where $\lambda=(2d-\beta_b-\beta_{b-1})/
+[\beta_{b-2}+(1-d)\beta_{b-3}]\in[0,1]$.
+Indeed the numerator is at most $2\delta_{2}$, whereas the full retained
+constant is at least $(4-d)\tau\ge209d/96>2d$.
+Then $0\le C_i\le d$, $C_1\ge\tau$, and
+$\beta_b+C_1+C_2+(1-d)C_3=2d$.
+Set $C=C_1+C_2+C_3$, $D=C_2+C_3$, $E=C_3$ and
+\[
+ R=\sum_{j=3}^bK^j\one-Cg-Dr-Es.
+\]
+The actual nonnegative sum is at most $2m+R$, so
+$F\le F_0=(m+R/2)^2$.
+At spectral frequency $i\sqrt x$, write
+$G_{b-2}=a+i\sqrt x\,b_x$, $1-x\le a,b_x\le1$.
+The multiplier of $R$ at $g$ is $-A-i\sqrt xB$, with
+\begin{gather*}
+ A=C+x(a-E),\quad B=D+xb_x,\\
+ V=\E R^2=\int(A^2+xB^2),\quad D_0=\E R=\int B,\\
+ a_1=-\E[gR]=\int A,\quad\rho_0=-\E[rR]=\int xB.
+\end{gather*}
+All integrals use the spectral measure of $g$.
+Since $(1-x)B-A\le-C_1-C_2x$,
+\begin{equation}\label{eq:compact-2b-cancellation}
+ \E[f_2R]\le-\tau d,\quad
+ a_1\ge D_0-\rho_0+\tau d,\quad D_0^2-2D_0a_1\le0.
+\end{equation}
+The pointwise spectral bounds are
+\[
+ \sqrt{A^2+xB^2}\le u_0,\quad B\le z_0;
+ \qquad \sqrt{A^2+xB^2}\le3/8+3d/2\quad(b\ge5).
+\]
+For $b=4$ use $A=d+x,B=x$ and
+$\theta^2(1+\theta)<1/4$.
+For $b=5$ the constant and $d$ vectors have squared norms
+$131313/1048576<9/64$ and $66997/32768<9/4$.
+For $b\ge6$ use $u=\theta-\theta^2+\theta^3<5/16$ and maximize
+\[
+ [u+(1+\theta)d+E(d-\theta)]^2+
+                  \theta[u+2\theta d+dE]^2
+\]
+at $E=0,d$. Their square-root bounds are respectively
+$3/8+3d/2$ and $3/8+8d/7+6d^2/5\le3/8+3d/2$.
+The bound for $B$ follows from
+$u+2\theta d+d^2-z_0\le5/16-13/32+d/8+d^2\le0$.
+
+Let $D_j=\E[K'^jR]$. The repeating signs are
+\[
+ D_{4j+1}=-\int x^{2j}A,\quad D_{4j+2}=-\int x^{2j+1}B,
+ \quad D_{4j+3}=\int x^{2j+1}A,\quad D_{4j+4}=\int x^{2j+2}B.
+\]
+Thus $D_3\le\theta u_0d$ and every positive $D_j$, $j\ge4$,
+is at most $\theta^2z_0d$. Also
+$a_1-D_0\le d^2+\theta^3d$, since
+$A-B=C_1-Ex+x(a-b_x)$ and the last possible positive term has
+integral at most $\delta_{4}$.
+
+\proofpart{One step}
+Exactly $Y=TF_0=m^2q+m(D_0-KR)+e$, $0\le e\le V/2$.
+Its fourth coefficient relative to $m^2$ is at most $7m^2$.
+Here is a direct certificate. Set $x=\sqrt d\le1/2$, $y=q+1$,
+$A_y=y^2+2$ and $p=3-y$. Then $pA_y\le32/5$ and
+$py^2\le4A_y/5$. The row errors divided by $m$ are at most
+$x/2+21d/16$ for $b=4$, and $3x/8+7d/4$ for $b\ge5$.
+After absorbing cubic and quartic terms using $x\le1/2$, the
+coefficient divided by $m^2$ is bounded respectively by
+\[
+ p[A_y+yx-D_yx^2],\quad
+ D_y=2y^2-21y/8+2439/1024\ge A_y/2,
+\]
+and
+\[
+ p[A_y+3yx/4-D_yx^2],\quad
+ D_y=2y^2-7y/2+43/16\ge3A_y/8.
+\]
+Completing the square gives $32/5+2/5<7$ and $32/5+3/10<7$.
+
+For $w=Y-m^2$, \eqref{eq:compact-2b-cancellation} yields
+\[
+ \E[pw]\le-m^2d-m\tau d+V/2,\quad
+ \E w^2\le m^2dH+(6/5)md^{3/2}v+d^2v^2/4,
+\]
+where $v=(1/2+d)^2$ and $H=(733-699d+434d^2)/512<36/25$.
+The fourth expansion is at most
+\[
+ U=m^8(1-4d)-19m^7d^2/8+2m^6dv+7m^4dH
+                         +(42/5)m^3d^{3/2}v+(7/4)m^2d^2v^2.
+\]
+Positive Taylor terms of $m^{-4}$, followed by
+$m^{-1}\le1+4d/3$, $m^{-2}\le16/9$, show that
+$(1-U)/(m^4d)$ is at least
+\[
+ Q(x)=757/512-21x/10-13x^2/10-56x^3/5+25x^4.
+\]
+The discarded even-power coefficients are positive: the remaining
+fourth and sixth coefficients are $288989/11520>25$ and $2023/120$.
+For $x\le2/5$, completing the square gives
+$Q\ge1838493/8000000>0$.
+For $x=1/2-y$, $0\le y\le1/10$, its exact expansion is
+$681/2560-7y/10+97y^2/5-194y^3/5+25y^4$,
+at least $251545/1600000>0$.
+
+\proofpart{The common propagation calculation}
+Put $\delta=kD_0+k^2V/2$, $\varepsilon=\delta-ka_1$, $\nu=1+\varepsilon$.
+Duhamel gives the positive upper comparison
+\[
+ T^LF_0/m^2\le Z_L^*=S'_L+\delta S'_{L-1}-ka_1S'_{L-2}+kK'^LR.
+\]
+The dropped coefficients are
+$\gamma_3=d+k\rho_0$, $\gamma_4=d+\delta d-kD_3$ and
+$\gamma_j=\beta_j+\delta\beta_{j-1}-ka_1\beta_{j-2}-kD_{j-1}$.
+They are nonnegative; for $j\ge5$,
+$\gamma_j\ge(1/2-6d/5)d$.
+The comparison follows from the endpoint-positive concave polynomial
+$875/32768+40369d/81920-11d^2/5$ after multiplying by $m$.
+We also have
+\[
+ |\varepsilon|\le\frac{297+21d+834d^2}{1024m^2}d\le315d/512,
+ \qquad0\le\delta\le\frac{544+800d-192d^2}{1024m^2}d\le61d/48.
+\]
+For the lower $\varepsilon$ bound use $a_1-D_0\le d^2+\theta^3d$;
+the numerator difference is $7307-29899d+59456d^2>0$.
+
+With $R=(A-Bz)g'$ define $P_n=G_n+kz^n(A-Bz)$.
+Then $\|P_n\|\le1$ for $n\ge3$, $|P_2|^2\le1+x$ and
+$\|P_1\|\le10/7$.
+For $n=3$ both real and imaginary parts decrease those of $G_3$.
+For $n=4,5$ the respective upper bounds are
+$1-x/2+x^2/2$ and $1-x/2+23x^2/20$.
+For $n\ge6$ use
+$(1+x^3)/\sqrt{1+x}+x^3\le1$, which follows from
+$x(1+\sqrt{1+x})\le143/160<1$ (with equality in the original comparison at $x=0$).
+For $P_2$ it suffices that
+$2-4x-kx[u_0(1-x)+xz_0]\ge323/49152>0$;
+for $P_1$ the squared upper bound is $1561/768<100/49$.
+
+For $L\ge4$, write $Z_L^*=\nu+Q_L(K')g'$ with
+$Q_L=P_L+\varepsilon G_{L-2}+\delta z^{L-2}$.
+Both its norm and row-tail bound are at most $N=1+29d/20$.
+The boundary $L=4$ uses
+$1+|\varepsilon|+\sqrt\theta\delta\le1+11069d/7680\le N$;
+the other lengths use $(6/5)|\varepsilon|+\theta\delta$.
+With $\alpha=\nu-\E Z_L^*$ and $\eta=\E[g'Z_L^*]$, the exact mean losses are
+\begin{gather*}
+ \alpha=\beta_{L+1}+\delta\beta_L-ka_1\beta_{L-1}-kD_L,\\
+ \eta=\beta_{L+2}+\delta\beta_{L+1}-ka_1\beta_L-kD_{L+1}.
+\end{gather*}
+Both are at least $(1/2-6d/5)d$.
+The expansion around $\nu$ is exactly
+\begin{gather*}
+ \E[pZ^4]=\nu^4+4\nu^3\E[p(Z-\nu)]
+   +\E[p(Z-\nu)^2(Z^2+2\nu Z+3\nu^2)],\\
+ \E[p(Z-\nu)]=-\alpha-\eta.
+\end{gather*}
+Using $\nu\le u=1+2d/3$, the fourth comparison is bounded by
+\[
+ u^4-4u^3d+(48/5)u^3d^2+(32/5)u^2N^2d
+                           +(9/4)uN^3d+2N^4d^2.
+\]
+This uses $\sqrt d\le1/2$ and the joint endpoint maximum of
+$t^3(t-8(1/2-6d/5)d)$; its upper endpoint is positive.
+The polynomial coefficients are $1,439/60,17859/400$, followed by
+values below $89,84,39,9$.
+The positive Taylor coefficients of $m^{-8}$ dominate them, leaving
+$d[41/60-3459d/400+31d^2]>0$ by completing the square.
+
+For $L=3$ retain $\ell=d+k\rho_0$ and use $Z=Z_3^*-\ell$.
+Its reference is $\nu_0=1+\varepsilon-\ell\in[5/12,1-3d/8]$ and
+$\|Z-\nu_0\|\le N\sqrt d$.
+Here $\alpha=\nu_0-\E Z=d+\delta d-kD_3\ge(19/32)d$ and
+$\eta=\E[g'Z]=\tau+\varepsilon d-kD_4\ge15371d/49152$,
+so the combined loss is $\alpha+\eta\ge7d/8$. These bounds and the row bound $q+11\sqrt d/6$
+give the coefficient $32/5+33\sqrt d/4+121d/18$.
+The fourth polynomial after $\sqrt d\le1/2$ has coefficients
+$1,221/40,<421/10,<42,<15$.
+The Taylor difference is at least
+$d[99/40-61d/10]+78d^3+315d^4\ge19d/20$.
+
+For $L=2$, $Z=Z_2^*$ has
+\[
+ \mu\le u=1-2d/3,\quad h\ge19d/32,\quad
+ \operatorname{Var}Z\le45d/32+5d^2/3+16d^3/9.
+\]
+The mean estimate uses \eqref{eq:compact-2b-cancellation}; the variance
+uses the real-shift bound
+\[
+ |P_2+\delta|^2\le(1+\delta)^2+x,
+\]
+and subtracts the squared mean loss. Its fourth coefficient is at most $32/5+9\sqrt d+8d$.
+For $q\le1$ the row bound is $q+2\sqrt d$.
+For $1\le q\le2$ compare instead
+$q+10x/7+E_qx^2$, $E_q=5/8+9(q-1)/7$, with that same coefficient.
+The difference divided by $x$ is at most
+\[
+ -8(q+1)/7+x[2(q+1)E_q-4q/3-292/49]
+                  +(20/7)E_qx^2+(E_q^2+4/3)x^3.
+\]
+Convexity in $x\in[0,1/2]$, then in $q$ at $x=1/2$, reduces it
+to two negative endpoints, $-565/98+95/56+25/512$ and $-1621/75264$.
+Using $\sqrt d\le1/8+2d$ gives the fourth polynomial
+\[
+ u^4-(19/8)du^3+(301/40+26d)(45d/32+5d^2/3+16d^3/9).
+\]
+The upper mean endpoint is positive because
+$u-4(19/32)d=1-73d/24\ge23/96>0$.
+Its coefficients are $1,4255/768,2713/48,14137/270,3817/81$.
+The Taylor difference is at least
+$d[1889/768-985d/48+67d^2]+282d^4>0$.
+
+\proofpart{The large range, using the actual message}
+For $d\ge1/4$ put $t_b=\E[h_2f_b]$.
+The first four means are $1+d,1,1-d-\delta_{2},1-2d-d^2$.
+Weighted positive convolution gives
+\[
+ t_4=1-3d+\delta_{2}-d^2+\delta_{3}\le1353/4096<2/5,
+ \quad t_5=1-4d+2(1+d)\delta_{2}\le65/256<2/5.
+\]
+For $b\ge6$ retain those four actual means to obtain
+\[
+ t_b\le1-\tau(5-2d-d^2-\delta_{2})+\delta_{3}
+ \le1-d(2871-1463d-608d^2)/1024\le2/5.
+\]
+The last loss increases and equals $9869/16384>3/5$ at $d=1/4$.
+Therefore $TF\le4/5$. Positivity and the actual path moments
+$\E[pq^4]\le11/6$, $\E[p\bar f_{n}^4]\le2$ for $n\ge2$ yield, respectively,
+$256/625$, $1408/1875$, $512/625$ at $L=1,2,\ge3$.
+Both parameter ranges include $1/4$. The common rules cover $d=0$,
+all equal pairs, and full reversal without changing any actual direction.

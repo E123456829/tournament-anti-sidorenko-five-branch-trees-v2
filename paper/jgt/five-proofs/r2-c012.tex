@@ -1,0 +1,187 @@
+\subsection{The three-step bare reference estimate}\label{proof:R2-C012}
+Use $B=-K$, $u=-g$ and the notation of R2-C007.
+For every integer $a\ge3$, orient the receiving arm outward and all
+three input edges toward the receiving root. We prove
+\begin{equation}\tag{R12.1.1}\label{eq:R12:claim}
+ \E[f_a\bar f_3^4]\le1-3d/40,
+ \qquad
+ \E[E_of_a\{T^3(E_t)\}^4]\le1-3d/40
+\end{equation}
+for actual equal-arm decorations $0\le E_o,E_t\le1$ at their original
+vertices.
+
+The finite calculus gives
+$0\le d\le1/3$, $d^2\le\delta_2\le\theta d$,
+$\delta_3\le\theta\delta_2$, and $d\delta_3\ge\delta_2^2$.
+For any centered real $V$, the original row bound is
+\begin{equation}\tag{R12.2.2}\label{eq:R12:row}
+ |BV(x)|^2
+ =|\E_y[(B(x,y)-u(x))V(y)]|^2\le p(x)q(x)\|V\|_2^2.
+\end{equation}
+Use the exact finite $G_n,\beta_n,S_a,C_a$ of
+\eqref{eq:R07:receiving}; in particular
+\[
+\begin{gathered}
+S_a=f_a+\sum_{j=3}^a\beta_jf_{a-j},\quad 0\le f_a\le C_a,\quad \E C_3=1-2d,\\
+\E C_a=1-\beta_{a-1}-\beta_a-\beta_{a+1}\le1-57d/32\ (a\ge4).
+\end{gathered}
+\]
+For $a\ge4$, $V_a=G_{a-1}(-B)u$ has $\E V_a=\beta_a$,
+$\|V_a\|_2\le\sqrt d$, and
+\[
+C_a=(1-\beta_a-\beta_{a-1})p+B(V_a-\beta_a)
+\le(1-d)p+\sqrt{pqd}.
+\]
+Here $\beta_a+\beta_{a-1}\ge2\tau\ge19d/16\ge d$, and the finite
+$G$ norm holds for every $a-1\ge3$. The case $a=3$ instead uses the
+following exact centered identities:
+\begin{equation}\tag{R12.3.3}\label{eq:R12:centered}
+\begin{gathered}
+\bar f_3=1-d+u+Bu+B^2u=q-d+B(u+Bu)
+       =(1-d)q+B(u+Bu+d),\\
+f_3=(1-d)p+B(u-Bu-d),\qquad
+\|u+Bu+d\|_2^2=\|u-Bu-d\|_2^2=d+\delta_2-d^2.
+\end{gathered}
+\end{equation}
+Both inputs of $B$ are centered because $\E Bu=-d$.
+
+Put $\alpha=1-d$, $m=\E\bar f_3=1-2d$,
+$\sigma^2=d+\delta_2-d^2\ge d$, and
+$c=\sqrt{d(45/32-d)}$. Then for every $a\ge3$,
+\begin{equation}\tag{R12.3.6}\label{eq:R12:pointwise}
+\begin{gathered}
+C_a\le\alpha p+\sqrt{pq}\,\sigma,\quad \bar f_3\le\alpha q+\sqrt{pq}\,\sigma,\\
+C_a+(\bar f_3+m)\le3-4d+2c.
+\end{gathered}
+\end{equation}
+The row errors need not have the same sign.
+
+We record the continuous cubic inequality used here and below. If
+$x,y,m\ge0$, $x+y\le D$, and $D\ge3m$, then
+\begin{equation}\tag{R12.4.1}\label{eq:R12:cubic}
+x(y^2+2m^2)\le\tfrac4{27}D^3+\tfrac23Dm^2+\tfrac12m^3.
+\end{equation}
+For $D=0$ this is immediate. Otherwise monotonicity in $y$ reduces
+the problem to $G(x)=x[(D-x)^2+2m^2]$. With $z=x-D/3$,
+\[
+G(x)=\tfrac4{27}D^3+\tfrac23Dm^2+2m^2z-Dz^2+z^3.
+\]
+On $-D/3\le z\le0$ the last three terms are nonpositive. On
+$0\le z\le D/3$ they are at most
+$2m^2z-(2D/3)z^2\le3m^4/(2D)\le m^3/2$.
+On $2D/3\le x\le D$, $G''=6x-4D\ge0$, so only its endpoints
+remain. The left endpoint is already covered, and
+$G(D)=2Dm^2\le(4/27)D^3+(2/3)Dm^2+m^3/2$ because $D^2\ge9m^2$.
+This also covers $m=0$.
+
+On $0\le d\le1/4$, $m\ge1/2$ and
+\[
+c\le(1+5d)/4,
+\quad ((1+5d)/4)^2-c^2
+=\frac{82(d-25/164)^2+31/328}{32}>0.
+\]
+Hence \eqref{eq:R12:pointwise} gives
+$C_a+(\bar f_3+m)\le D=(7-3d)/2$,
+$D-3m=(1+9d)/2\ge0$. Applying \eqref{eq:R12:cubic} yields
+\begin{align*}
+C_a[(\bar f_3+m)^2+2m^2]
+&\le\tfrac{248}{27}-\tfrac{43}{2}d+\tfrac{137}{6}d^2-\tfrac{17}{2}d^3\\
+&\le\tfrac{19}{2}(1-d)^2-\tfrac{23}{216}.
+\end{align*}
+Indeed the difference before the last constant is
+$17/54+(5/2)d-(40/3)d^2+(17/2)d^3
+\ge17/54-(5/6)d\ge23/216$, using $d^2\le d/4$.
+This is a certificate on the entire continuous interval.
+
+The spectral polynomial $G_3(z)=1+z+z^2$ satisfies
+$|G_3(i\sqrt x)|^2=1-x+x^2$, so the exact variance is
+\begin{equation}\tag{R12.6.1}\label{eq:R12:variance}
+N:=\operatorname{Var}(\bar f_3)=d-\delta_2+\delta_3-d^2
+\le d-\tfrac{19}{32}\delta_2-d^2\le d-\tfrac{51}{32}d^2.
+\end{equation}
+For every finite $a\ge4$, the alternating coordinates of
+$G_a(z)=E_a(x)+zD_a(x)$ satisfy
+$E_a\ge1-x$, $D_a\le1-x+x^2$.
+For $a=4,5$ the latter is exactly $1-x$; all later finite truncations
+obey the displayed bound since $0\le x\le\theta<1$.
+Consequently
+\[
+\operatorname{Re}(G_aG_3)=(1-x)E_a-xD_a
+\ge\phi(x):=1-3x+2x^2-x^3>0.
+\]
+Here $\phi'=-3+4x-3x^2<0$ and
+$\phi(13/32)=1451/32768>0$.
+Writing $\beta=\beta_{a-1}$, the exact centered covariance is
+\begin{equation}\tag{R12.6.5}\label{eq:R12:covariance}
+\operatorname{Cov}(C_a,\bar f_3)
+=-\int\operatorname{Re}(G_aG_3)\,d\nu
++\beta\tau-\beta_{a+1}d\le0\quad(a\ge4).
+\end{equation}
+This uses $\E[uG_3(B)u]=\tau$, $\E G_3(B)u=-d$,
+$\E G_a(-B)u=\beta_{a+1}$, $\beta\le d$, and
+$\beta_{a+1}\ge\tau$.
+For $a=3$ the exact signed formula is
+\begin{equation}\tag{R12.6.6}\label{eq:R12:a3covariance}
+\operatorname{Cov}(f_3,\bar f_3)
+=-d+3\delta_2-\delta_3-d^2
+\le d(55/1024-d).
+\end{equation}
+For $d>0$ the last comparison writes $v=\delta_2/d$ and uses
+$\delta_3/d\ge v^2$ and monotonicity of $-1+3v-v^2$ on
+$0\le v\le13/32$. The variable $v$ is a global moment ratio.
+
+The exact Taylor identity about the actual mean $m$ gives, on
+$0<d\le1/4$,
+\begin{equation}\tag{R12.7.1}\label{eq:R12:payment}
+\E[C_a\bar f_3^4]\le(\E C_a)m^4
++4m^3\operatorname{Cov}(C_a,\bar f_3)
++\tfrac{19}{2}(1-d)^2N.
+\end{equation}
+For $a\ge4$ the resulting bound is
+$(1-57d/32)(1-2d)^4+(19/2)(1-d)^2[d-(51/32)d^2]$.
+After subtracting one and dividing by $d$, it becomes
+\[
+\begin{aligned}
+P_4&=-9/32+(263/64)d-(1119/32)d^2+(3703/64)d^3-(57/2)d^4\\
+&\le-9/32+(263/64)d-(5249/256)d^2\\
+&\le-9/32+69169/335936<-3/40.
+\end{aligned}
+\]
+The final rational comparison has numerator
+$335936\cdot33-69169\cdot160=18848>0$.
+For $a=3$ omit the covariance temporarily; the baseline is
+$m^5+(19/2)(1-d)^2[d-(51/32)d^2]$.
+Its normalized excess is
+\[
+P_3=-1/2+(375/64)d-(1287/32)d^2+(4151/64)d^3-32d^4
+\le-1/2+(375/64)d-(6145/256)d^2.
+\]
+If $d\ge55/1024$, the covariance is nonpositive and
+$P_3\le-1/2+140625/393280<-1/10<-3/40$, using
+$140625/393280<2/5$.
+If $0<d\le55/1024$, its upper bound is nonnegative and $m^3\le1$
+can be used for this term only. The total normalized excess is at most
+\[
+\begin{gathered}
+-73/256+(119/64)d-(6145/256)d^2
+\\
+\le-73/256+14161/393280<-73/256+1/20<-1/5<-3/40.
+\end{gathered}
+\]
+Thus the possible positive covariance is fully included.
+
+For $1/4\le d\le1/3$, the actual message satisfies
+$0\le\bar f_3=T\bar f_2\le2\E\bar f_2=2(1-d)$.
+All the covariances above are now nonpositive, and for every $a\ge3$
+$\E C_a\le1-57d/32$. Therefore
+\[
+\E[f_a\bar f_3^4]\le[2(1-d)]^3\E[C_a\bar f_3]
+\le8(1-d)^3(1-57d/32)(1-2d)
+\le1917/2048<39/40\le1-3d/40.
+\]
+All factors used in the endpoint comparison are nonnegative and
+decreasing. This overlaps the low range at $d=1/4$.
+Finally $T^3(E_t)\le T^3\one=\bar f_3$, which proves the decorated
+claim. At $d=0$ all messages are one by original leaf integration;
+$K$ need not vanish. Full reversal replaces $f_a,\bar f_3$ by
+$\bar f_a,f_3$ and reverses every decoration. The resulting three-step reference estimate uses the original tree edge count.

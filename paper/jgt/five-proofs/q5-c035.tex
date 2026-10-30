@@ -1,0 +1,196 @@
+\subsection{The one-step genuine short-one, long-three reference}\label{proof:Q5-C035}
+For the actual terminal $F_{13}=qf_3$ with its unit arm inward and
+length-three arm outward, set $X=T F_{13}$. The connector points from
+the terminal toward the receiving root, whose outward length-two arm
+supplies the weight $f_2$. Then
+\begin{equation}\tag{L35.T}\label{eq:L35:claim}
+\E[f_2X^4]\le1-59d/6000.
+\end{equation}
+Write
+$r=Kg$, $s=Kr$, $t=Ks$, $\theta=13/32$, and
+$\delta_j=\|K^j\one\|_2^2$. Here $t$ is a Krylov vector.
+The exact short paths are $f_2=p+r$, $f_3=p-d+r+s$, and
+\[
+\begin{gathered}
+\E r=-d,\quad\E s=0,\quad\E t=\delta_2,\quad
+\E[gr]=\E[rs]=\E[gt]=\E[st]=0,\\
+\E[gs]=-\delta_2,\quad\E[rt]=-\delta_3,\quad
+\E r^2=\delta_2,\quad\E s^2=\delta_3,\quad\E t^2=\delta_4.
+\end{gathered}
+\]
+For an original row, centering gives
+$r(x)=\E_y[(K(x,y)-g(x))g(y)]$ and
+$r(x)^2\le p(x)q(x)d$.
+We use the scalar profile D of Section~\ref{calc:coefficientprofiles}:
+if $z,u_0\ge0$, $z\le q+(4/5)\sqrt d-3d/8$,
+$u_0\le1-5d/8$, then
+\begin{equation}\tag{L35.1.5}\label{eq:L35:pcoefficient}
+p(z^2+2u_0z+3u_0^2)\le7\quad(0\le d\le1/3).
+\end{equation}
+The C127 scalar profile bounds the $p$ contribution in the
+$f_2$-weighted calculation below.
+
+\proofpart{A positive square envelope for the same actual terminal}
+Put $a=1-d/2$, $R=r+s$, $V=\E R^2=\delta_2+\delta_3$.
+Then $5/6\le a\le1$ and $q+f_3=2a+R$. Hence
+$0<F_{13}\le(a+R/2)^2$ and positivity of $T$, together with
+$TR=-d-s-t$ and $T(R^2)\le2V$, gives
+\begin{equation}\tag{L35.2.2}\label{eq:L35:envelope}
+0<X\le T\{(a+R/2)^2\}\le Z:=a^2q-ad-a(s+t)+V/2.
+\end{equation}
+Thus the nonnegativity of $Z$ follows from the actual positive message.
+For $\mu=\E Z$ and $w=Z-\mu$,
+\[
+\begin{aligned}
+\mu&=a^2-ad-a\delta_2+(\delta_2+\delta_3)/2\\
+&=1-2d+3d^2/4-(1-d)\delta_2/2+\delta_3/2,
+\end{aligned}
+\]
+so $0<\mu\le1-2d+3d^2/4\le N:=1-7d/4$, using
+$\delta_3\le\theta\delta_2$ and $1-d-\theta>0$.
+Also $N\ge5/12$ and
+$w=-a^2g-as-a(t-\delta_2)$.
+
+\proofpart{The actual weighted covariance and variance}
+The signed identities give
+$\E[gw]=-a^2d+a\delta_2$, $\E[rw]=a\delta_3-ad\delta_2$.
+Therefore
+\begin{equation}\tag{L35.3.1}\label{eq:L35:covariance}
+\begin{gathered}
+\E[f_2w]=-a^2d+a(1-d)\delta_2+a\delta_3
+\le dH(v),\quad H(v)=-a^2+a(1-d+\theta)v,\\
+v=\delta_2/d\in[d,\theta].
+\end{gathered}
+\end{equation}
+For $d>0$ the same $v$ is retained in the exact variance:
+\begin{equation}\tag{L35.3.3}\label{eq:L35:variance}
+\begin{gathered}
+\E w^2=a^4d-2a^3\delta_2+a^2(\delta_3+\delta_4-\delta_2^2)
+\le dW(v),\quad W(v)=a^2[a^2-(2a-\eta)v-dv^2],\\
+\eta=585/1024<3/5.
+\end{gathered}
+\end{equation}
+Here $\eta=\theta(1+\theta)$, the negative cross term uses
+$\E[gs]=-\delta_2$, and the square of the nonzero mean
+$\E t=\delta_2$ is retained.
+
+\proofpart{The full fourth coefficient on the continuous domain}
+Since $V\le\eta d$, the row bound $|KR|\le\sqrt V$ yields
+\[
+Z\le a^2q+a\sqrt V-ad+V/2
+\le a^2q+(4/5)\sqrt d-d/2.
+\]
+The rational comparisons used are $\eta<16/25$ and
+$5/6-\eta/2=3365/6144>1/2$. Together with $\mu\le N$, these imply
+the hypotheses of \eqref{eq:L35:pcoefficient}.
+For the additional $r$ term set $x=\sqrt d\in[0,1/\sqrt3]$,
+\[
+b=1-11x^2/12,\quad e=4x/5-x^2/2,\quad
+n=1-7x^2/4,\quad u_0=e+n=1+4x/5-9x^2/4.
+\]
+Since $a^2\le1-11d/12$, one has $Z\le bq+e$, $\mu\le n$.
+All right sides are nonnegative on the stated interval. Maximizing the
+squares over $q\in[0,2]$, with $p=2-q$, gives
+\[
+\sqrt{pq}\le1,\qquad q\sqrt{pq}\le3\sqrt3/4<21/16,
+\qquad q^2\sqrt{pq}\le25\sqrt5/27<25/12.
+\]
+The latter critical points are $q=3/2,5/3$, and both endpoint values
+are zero. Consequently, also when $r<0$,
+\begin{align*}
+r(Z^2+2\mu Z+3\mu^2)
+&\le x\sqrt{pq}[(bq+u_0)^2+2n^2]\le\mathcal E(x),\\
+\mathcal E(x)&=x[(25/12)b^2+(21/8)bu_0+u_0^2+2n^2]\\
+&=\frac{185}{24}x+\frac{37}{10}x^2-\frac{82771}{3600}x^3
+-\frac{221}{40}x^4+\frac{63425}{3456}x^5.
+\end{align*}
+As $x^2\le1/3$ and
+$-82771/3600+63425/10368+67/4=-32287/259200<0$,
+\[
+\mathcal E(x)\le G(x):=185x/24+37x^2/10-67x^3/4.
+\]
+On $[0,1/3]$, $G'$ is concave with positive endpoint values
+$185/24,551/120$, so $G\le G(1/3)=2549/1080<3$.
+On $[1/3,1/\sqrt3]$,
+$G''=37/5-(201/2)x\le-261/10<-26$.
+At $1/2$, $G=1289/480<27/10$, $G'=-277/240$, $|G'|<6/5$.
+The strong concavity bound gives
+$G(x)\le G(1/2)+G'(1/2)^2/52<27/10+9/325<3$.
+The added term is zero at $x=0$. Thus the full coefficient satisfies
+\begin{equation}\tag{L35.4.6}\label{eq:L35:coefficient}
+f_2(Z^2+2\mu Z+3\mu^2)\le10.
+\end{equation}
+
+\proofpart{A compatible endpoint reduction}
+The exact fourth expansion and
+\eqref{eq:L35:covariance}--\eqref{eq:L35:coefficient} give
+\[
+\E[f_2Z^4]\le k\mu^4+4dH(v)\mu^3+10dW(v),\qquad k=1-d.
+\]
+The derivative of $\Phi(t)=kt^4+4dH(v)t^3$ is
+$4t^2[kt+3dH(v)]$. On $[0,N]$ the function increases, or first
+decreases and then increases. Its maximum is therefore at an endpoint:
+\begin{equation}\tag{L35.5.2}\label{eq:L35:endpoints}
+\E[f_2Z^4]\le\max\{10dW(v),\ kN^4+4dH(v)N^3+10dW(v)\}.
+\end{equation}
+Both branches strictly decrease in $v$. For the first use $2a-\eta>0$.
+For the second its $v$ derivative divided by $da$ is
+$4(1-d+\theta)N^3-10a(2a-\eta+2dv)$.
+The first term is at most $45/8$, whereas the second is at least
+$10(5/6)(5/3-3/5)=80/9>45/8$.
+Thus the same endpoint $v=d$ can be used for both compatible budgets.
+
+For the zero endpoint, $\eta\le3/5$ gives
+\[
+W(d)\le a^2[1-(12/5)d+(5/4)d^2-d^3]
+\le a^2(1-6d/5)^2\le(1-3d/2)^2.
+\]
+The second comparison has difference $19d^2/100+d^3\ge0$.
+The last uses the nonnegative quantities
+$a(1-6d/5)=1-17d/10+3d^2/5\le1-3d/2$.
+The cubic $10d(1-3d/2)^2$ has derivative
+$10(1-3d/2)(1-9d/2)$ and its maximum on $[0,1/3]$ is $80/81$ at
+$d=2/9$. Therefore $10dW(d)\le80/81$.
+
+For the other endpoint use $\theta\le5/12$ and $d^3/2\le d^2/6$:
+\[
+H(d)\le-1+29d/12-47d^2/24+d^3/2
+\le-1+29d/12-43d^2/24.
+\]
+That branch is consequently at most
+\[
+P(d)=(1-7d/4)^3[1-27d/4+137d^2/12-43d^3/6]
++10d(1-3d/2)^2.
+\]
+The bracket can be negative at an endpoint value. The complete divided excess is
+\begin{equation}\tag{L35.6.5}\label{eq:L35:excess}
+\frac{P(d)-1}{d}=F(d):=-2+\frac{625}{24}d-\frac{5375}{48}d^2
++\frac{45745}{256}d^3-\frac{97559}{768}d^4+\frac{14749}{384}d^5.
+\end{equation}
+The following is a continuous certificate on $[0,1/3]$, using the
+polynomial extension at zero:
+\[
+\begin{aligned}
+F''&=-5375/24+(137235/128)d-(97559/64)d^2+(73745/96)d^3,\\
+F'''&=137235/128-(97559/32)d+(73745/32)d^2,\\
+F''''&=(-97559+147490d)/32<0.
+\end{aligned}
+\]
+Although $F'''$ decreases, $F'''(1/3)=359387/1152>0$.
+Hence $F''$ increases to $F''(1/3)=-77737/10368<0$,
+and $F''(1/4)=-80263/2048<-30$.
+At $1/5$, $F=-38711/1200000<-3/100$,
+$F'=-34071/32000$, $|F'|<11/10$.
+On $[0,1/4]$ strong concavity therefore gives
+\[
+F(d)\le F(1/5)+F'(1/5)^2/60<-3/100+121/6000=-59/6000.
+\]
+On $[1/4,1/3]$, $F''<0$ and $F'(1/5)<0$, so $F$ decreases and the
+same bound holds. Thus $P(d)<1-59d/6000$ for $d>0$.
+Finally $59d/6000\le59/18000<1/81$, so the zero endpoint also obeys
+$80/81<1-59d/6000$. Substitution in \eqref{eq:L35:endpoints} and
+$0<X\le Z$ proves \eqref{eq:L35:claim}. At $d=0$, $g=0$ and
+$f_2=f_3=F_{13}=X=1$; this allows $K\ne0$ and gives equality directly.
+Actual equal-arm factors at either end are restored by positivity.
+Applying the same statement to $-K$, with every edge and weight reversed,
+gives $\E[\bar f_2\{A(p\bar f_3)\}^4]\le1-59d/6000$.

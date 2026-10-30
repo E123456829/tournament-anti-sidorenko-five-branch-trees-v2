@@ -1,0 +1,166 @@
+
+\section{Trees with at most three branch vertices}\label{sec:three}
+We first treat up to three branch vertices using a joint moment estimate for endpoint messages at a common label.
+\begin{theorem}\label{q3:thm:main}
+For every nonempty finite tree $U$ with $b(U)\le3$, there is an orientation $D=D(U)$ of all its original edges such that~\eqref{eq:tas} holds for every nonempty finite loopless tournament.
+\end{theorem}
+\begin{theorem}\label{q3:thm:kernel}
+The orientation in Theorem~\ref{q3:thm:main} may be chosen so that $Z_D(K,\mu)\le1$ for every finite probability space and every real skew kernel bounded in absolute value by one.
+\end{theorem}
+\subsection{Root moments and connector estimates}\label{q3:sec:interfaces}
+\begin{proposition}\label{q3:prop:canonical}
+The same positive canonical even message $F$ satisfies
+\begin{equation}\label{q3:eq:evencubic}
+ \E F^3\le1,\qquad \E[pF^3]\le1.
+\end{equation}
+A positive canonical odd message $f_aR$ satisfies
+\begin{equation}\label{q3:eq:anchored}
+ \E[f_aR^3]\le1.
+\end{equation}
+All equal-pair factors are included. The complete reversals hold as well.
+\end{proposition}
+Section~\ref{q3:app:canonical} proves these statements. The anchored estimate \eqref{q3:eq:anchored} uses exponent one on the leading path factor in $f_aR$.
+
+\begin{proposition}\label{q3:prop:operators}
+For all positive indices in the stated ranges,
+\begin{align}
+ \norm{\sqrt{f_n}A^*}_{\op}&\le1 &&(n\ge2),\label{q3:eq:half}\\
+ \norm{\sqrt{f_n}A^*\sqrt q}_{\op}&\le1 &&(n\ge1),\label{q3:eq:mixed}\\
+ \norm{\sqrt{f_i}(A^*)^j\sqrt{\bar f_a}}_{\op}&\le1 &&(i,a,j\ge1).\label{q3:eq:opposite}
+\end{align}
+The same bounds hold after replacing $K$ by $-K$.
+\end{proposition}
+The proof, including all short indices, is in Appendix~\ref{q3:app:operators}. Multiplication operators occur in the displayed order.
+
+\begin{lemma}\label{q3:lem:momentpack}
+If a real function $z$ satisfies $\E z^2\le1$ and $\E[pz^2]\le1$, then
+\begin{equation}\label{q3:eq:momentpack}
+ \E\bigl[f_i((A^*)^jz)^2\bigr]\le1\qquad(i,j\ge1).
+\end{equation}
+\end{lemma}
+\begin{proof}
+Row Cauchy--Schwarz and positivity give
+\[
+ \E[p(A^*z)^2]\le\E[A(pq)z^2]\le\E[pz^2].
+\]
+This iterates and proves the case $i=1$. For $i\ge2,j=1$, use \eqref{q3:eq:half}. Put
+\[
+ X_i=\sqrt{f_i}A^*\sqrt q,\qquad
+ Y_t=q^{-1/2}(A^*)^tp^{-1/2}\quad(t\ge1).
+\]
+Row Cauchy--Schwarz proves $\norm{Y_1}\le1$; weighted square propagation proves $\norm{q^{-1/2}A^*\sqrt q}\le1$. Thus $\norm{Y_t}\le1$ for $t\ge1$. For $j\ge2$,
+\[
+ \sqrt{f_i}(A^*)^jz=X_iY_{j-1}\sqrt p\,z.
+\]
+Apply \eqref{q3:eq:mixed}. Only positive indices of $Y$ occur.
+\end{proof}
+
+\begin{theorem}[Joint endpoint moment]\label{q3:thm:endpoints}
+Let $F,G$ be the complete messages of two arbitrary endpoint arm lists, each of size at least two. Use positive canonical directions at an even left endpoint and negative canonical directions at an odd left endpoint; reverse these choices on the right. For all $L,M\ge1$,
+\begin{equation}\label{q3:eq:joint}
+ \E\left[\bigl(((A^*)^LF)(A^MG)\bigr)^{3/2}\right]\le1.
+\end{equation}
+This statement has no assumption on the middle arm list.
+\end{theorem}
+\begin{proof}
+Write $W=(A^*)^L$, $V=A^M$. At an even left endpoint put $\sigma=L$, $X=F^{3/2}$, $B_{\rm L}=W$. At an odd left endpoint write $F=\bar f_aR_-$ and put
+\[
+ \sigma=L+a,\quad X=\sqrt{\bar f_a}\,R_-^{3/2},\quad
+ B_{\rm L}=W\sqrt{\bar f_a}.
+\]
+The even $X$ has both ordinary and $p$-weighted square norm at most one by \eqref{q3:eq:evencubic}; the odd $X$ has ordinary square norm at most one by \eqref{q3:eq:anchored}. On the right, use $\tau=M$, $Y=G^{3/2}$, $B_{\rm R}=V$ in the even case, and
+\[
+ \tau=M+b,\quad Y=\sqrt{f_b}\,R_+^{3/2},\quad B_{\rm R}=V\sqrt{f_b}
+\]
+when $G=f_bR_+$ is odd. The even $Y$ has ordinary and $q$-weighted square norms at most one, and the odd $Y$ has ordinary square norm at most one.
+
+For every nonnegative kernel $B$ and nonnegative $u,z$, row H\"older gives
+\[
+ [B(uz)]^{3/2}\le[Bu]^{1/2}B(uz^{3/2}).
+\]
+Choose the reference $u=1$ at even endpoints and the actual anchor at odd endpoints. Since $W\bar f_a=\bar f_{L+a}$ and $Vf_b=f_{M+b}$,
+\[
+ (WF)^{3/2}\le\sqrt{\bar f_\sigma}B_{\rm L}X,
+ \qquad (VG)^{3/2}\le\sqrt{f_\tau}B_{\rm R}Y.
+\]
+Multiplication and Cauchy--Schwarz, with the reference weights crossed, give
+\[
+ \E[((WF)(VG))^{3/2}]
+ \le\{\E[f_\tau(B_{\rm L}X)^2]\}^{1/2}
+      \{\E[\bar f_\sigma(B_{\rm R}Y)^2]\}^{1/2}\le1.
+\]
+For an even endpoint use Lemma~\ref{q3:lem:momentpack}; for an odd endpoint use \eqref{q3:eq:opposite}. Apply the reversed versions on the right. This includes all four endpoint parities and $L=M=1$.
+\end{proof}
+
+\subsection{The lower-branch assembly}\label{q3:sec:assembly}
+\subsubsection{The three-branch geometry}
+The case $b(U)\le2$ is proved in Appendix~\ref{q3:app:foundations}. Suppose $b(U)=3$. The three branch vertices lie on one path: otherwise their connecting subtree has a distinct tripod junction, yielding a fourth branch vertex. Call them $u,w,v$ in path order. Their connector lengths $L,M$ are positive. Every component attached off the core is a path to a leaf. Hence the data are arbitrary positive arm lengths $\alpha_1,\ldots,\alpha_r$ at $u$, $\beta_1,\ldots,\beta_s$ at $v$, and $c_1,\ldots,c_k$ at $w$, with $r,s\ge2$ and $k\ge1$. In particular,
+\begin{equation}\label{q3:eq:edgecount}
+ e(U)=L+M+\sum_i\alpha_i+\sum_j\beta_j+\sum_\ell c_\ell.
+\end{equation}
+Pair equal middle arms as in Section~\ref{q3:sec:method}, and let $t$ be the number of distinct residual lengths.
+
+\subsubsection{One residual middle arm}
+Suppose $t=1$ and let $n$ be its length. Give it message $f_n$, so the middle message is $E_0f_n$. Direct both connectors toward $w$. At each endpoint use positive canonical directions for an even arm count and negative canonical directions for an odd count.
+
+For an even endpoint message $F$, \eqref{q3:eq:evencubic} and H\"older, on the probability measures $\mu$ and $p\mu$, imply $\E F^2\le1$ and $\E[pF^2]\le1$. Lemma~\ref{q3:lem:momentpack} yields
+\begin{equation}\label{q3:eq:singleendpoint}
+ \E[f_n((A^*)^jF)^2]\le1\qquad(n,j\ge1).
+\end{equation}
+For an odd endpoint $F=\bar f_aR_-$, H\"older with the finite measure $\bar f_a\mu$ gives
+\[
+ \E[\bar f_aR_-^2]\le
+ (\E[\bar f_aR_-^3])^{2/3}(\E\bar f_a)^{1/3}\le1.
+\]
+Now apply \eqref{q3:eq:opposite} to $\sqrt{\bar f_a}R_-$ to obtain \eqref{q3:eq:singleendpoint}. Thus, for the two actual endpoint messages $F,G$,
+\[
+ Z_D=\E[E_0f_n((A^*)^LF)((A^*)^MG)]
+ \le\{\E[f_n((A^*)^LF)^2]\}^{1/2}
+      \{\E[f_n((A^*)^MG)^2]\}^{1/2}\le1.
+\]
+This includes $n=1,2$ and every positive connector length.
+
+\subsection{The middle cubic construction}
+If $t=0$, the middle message is $E_0\le1$. If $t\ge2$ is even, use the positive canonical even direction and \eqref{q3:eq:evencubic}. For odd $t\ge3$, write the distinct residual list as
+\[
+ a<b<c<b_2<c_2<\cdots<b_m<c_m,\qquad t=2m+1,\quad m\ge1,
+\]
+and put $P_{\rm tail}=\prod_{i=2}^m h_{b_i}f_{c_i}$, with empty product one. The following table specifies a residual message $C$. The complete middle message is always $C_{\rm mid}=E_0C$.
+
+\begin{table}[htbp]
+\centering
+\caption{Middle-root directions for odd residual lists.}\label{tab:middle}
+\fontsize{9}{11}\selectfont
+\noindent\begin{tabular}{@{}p{65mm}p{45mm}p{25mm}@{}}
+\toprule
+Residual condition & Residual message $C$ & Proof\\\midrule
+$a\ge3$ & $f_ah_bf_cP_{\rm tail}$ & Section~\ref{q3:app:odd}\\
+$a\in\{1,2\},\ b=4$ & $\bar f_ah_4f_cP_{\rm tail}$ & Section~\ref{q3:app:odd}\\
+$a\in\{1,2\},\ b\ge5$ & $f_ah_bf_cP_{\rm tail}$ & Section~\ref{q3:app:odd}\\
+$a\in\{1,2\},\ b=3,\ c=4$ & $\bar f_ah_3f_4P_{\rm tail}$ & Section~\ref{q3:app:prefix}\\
+$a\in\{1,2\},\ b=3,\ c\ge5$ & $\bar f_ah_3f_cP_{\rm tail}$ & Section~\ref{q3:app:prefix}\\
+$a=1,b=2,m\ge2$ & $p h_2f_cP_{\rm tail}$ & Section~\ref{q3:app:tails}\\
+$a=1,b=2,m=1,c=3$ & $qf_2h_3$ & Section~\ref{q3:app:critical}\\
+$a=1,b=2,m=1,c=4,5$ & $qf_2h_c$ & Section~\ref{q3:app:triples}\\
+$a=1,b=2,m=1,c\ge6$ & $qf_2h_c$ & Section~\ref{q3:app:longtriples}\\
+\bottomrule
+\end{tabular}
+\end{table}
+
+Each cited subsection proves the ordinary cubic bound for the direction in its row. Restoring $E_0\le1$ gives
+\begin{equation}\label{q3:eq:middlecubic}
+ \E C_{\rm mid}^3\le1.
+\end{equation}
+To read the cases, if $a<3$, then $a=1$ or $2$; next $b\ge4$, $b=3$, or $b=2$. The first two alternatives are listed, while $b=2$ forces $a=1$ and is divided by whether the tail is empty. An empty tail is exhausted by $c=3,4,5$ and $c\ge6$.
+
+\subsection{Assembly and the tournament inequality}
+Use the cubic construction when $t=0$ or $t\ge2$. Direct the core $u\to w\to v$ consistently and take the endpoint directions in Theorem~\ref{q3:thm:endpoints}. Exact integration over arms and connector interiors gives
+\[
+ Z_D=\E[C_{\rm mid}((A^*)^LF)(A^MG)].
+\]
+H\"older with conjugate exponents $3$ and $3/2$, \eqref{q3:eq:middlecubic} and \eqref{q3:eq:joint} imply $Z_D\le1$. Together with the singleton construction and the lower-branch cases this proves Theorem~\ref{q3:thm:kernel}.
+
+The choices depend only on arm lengths, multiplicities and endpoint
+parities.  Applying the kernel-to-tournament comparison in
+Section~\ref{sec:finite-transfer} to this orientation proves
+Theorem~\ref{q3:thm:main}.

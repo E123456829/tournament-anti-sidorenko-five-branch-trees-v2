@@ -1,0 +1,168 @@
+\subsection{Even centers of minimum two and unit-arm reductions}\label{loc:S38}
+In this proof $D_j=\delta_{j}/(1-\theta^2)$ bounds finite same-sign tails.
+For $2=a_1<b_1<a_2<\cdots<a_t<b_t$ use
+$F=f_2h_{b_1}\prod_{i=2}^th_{a_i}f_{b_i}$.
+We prove $\E[q^3F^4]\le e^{-d/20}$, with the stronger loss
+$[8(t-2)+1]d$ when $t\ge2$.
+In particular the first pair is $f_2h_b$, rather than the terminal
+direction $h_2f_b$.
+
+\proofpart{A logarithmic comparison retaining both arms}
+Suppose $h_b\le\widehat h\le2$ and
+$f_2+\widehat h=2-\Delta+R$, $R=KV$.
+Write $I=\|V\|^2$, $J=\|R\|^2$,
+$t_0=\E[gV]$, $L_0=\E[rV]$. Then
+\begin{equation}\label{eq:compact-min2-center-master}
+ \E[q^3(f_2h_b)^4]\le e^\Xi,
+\end{equation}
+where the complete exponent is
+\[
+ \Xi=-4\Delta+8091d/2056+900I/257+6J+9L_0
+                         +(-308/257+2\Delta)t_0+\Delta^2/6.
+\]
+To prove it put $u=f_2-1=g+r$, $v=\widehat h-1$,
+$w=(u-v)/2=g+r-R/2+\Delta/2$.
+The quadratic logarithmic bound gives
+\[
+ q^3(f_2\widehat h)^4\le
+ e^{-4\Delta-3g+4R-9g^2/10-12w^2/5}.
+\]
+Take $X=-3g+4R-2\Delta/3=-5g/3-4w/3+KZ$,
+$Z=(4g+10V)/3$.
+Weighted Cauchy and the original row bound give
+$X^2/7\le9g^2/10+12w^2/5+\eta$,
+$\eta=(9/257)\|4g+10V\|^2$.
+The scalar inequality $e^{X-X^2/7}\le Q(X)=1+X+3X^2/8$
+follows from derivative $X(6X^2-5X+2)/(56Q)$.
+Finally
+\[
+ \eta=144d/257+900I/257+720t_0/257,\quad
+ \E X=-4t_0-2\Delta/3,
+\]
+and $\E X^2=9d+16J+24L_0+(16\Delta/3)t_0+4\Delta^2/9$.
+Taking expectation under the fixed probability measure gives the exponent.
+
+\proofpart{Every single pair}
+For $b=3$ take $\widehat h=h_3$, $\Delta=d$, $R=-s$, $V=-r$.
+Thus $(I,J,t_0,L_0)=(\delta_{2},\delta_{3},0,-\delta_{2})$ and
+\[
+ \Xi=-133d/2056-1413\delta_{2}/257+6\delta_{3}+d^2/6\le-d/16.
+\]
+For $b\ge4$, use the retained coefficients $C_1,C_2,C_3$ from
+Section~\ref{loc:S28} and
+$\widehat h=2-\beta_b-S_b-C_1h_1-C_2h_2-C_3h_3$.
+It lies between the actual $h_b$ and two.
+Let $R_0=KV_0$ be the same first-pair polynomial as there.
+Then $\Delta=2d$, $R=R_0-s$, $V=V_0-r$.
+Put $M=\E[gV_0]$, $N_0=\E[gR_0]$, $N_1=-\E[sR_0]$.
+The quantities entering the exponent are exactly
+\[
+ t_0=M,\quad L_0=-N_0-\delta_{2},\quad
+ I=\|V_0\|^2+\delta_{2}+2N_0,\quad J=\|R_0\|^2+\delta_{3}+2N_1.
+\]
+Hence
+\begin{align*}
+ \Xi={}&-8357d/2056+(900/257)\|V_0\|^2+6\|R_0\|^2
+ -1413\delta_{2}/257-513N_0/257\\
+ &+6\delta_{3}+12N_1+(-308/257+4d)M+2d^2/3.
+\end{align*}
+For $b=4$, the exact inputs are
+\[
+ I=3d^2+\delta_{2}+\delta_{3},\quad J=d^3+\delta_{3}+\delta_{4}+2d\delta_{2},
+ \quad t_0=\delta_{2},\quad L_0=-d^2-\delta_{2}.
+\]
+The linear spectral terms are at most $-5\delta_{2}/3$;
+using $d\le1/3$, $\delta_{2}\le5d/12$ gives $\Xi\le-19d/18$.
+For $b=5$, they are
+\begin{align*}
+ I&=3d^2+\delta_{2}+2d\delta_{2}+(1+d)\delta_{2}^2-\delta_{3}+\delta_{4},\\
+ J&=d^3+2d^2\delta_{2}+d\delta_{2}^2+\delta_{2}^3+(1-2d)\delta_{3}-\delta_{4}+\delta_{5}
+                                      +2d\delta_{2}+2\delta_{2}^2,\\
+ t_0&=(1+d)\delta_{2},\qquad L_0=-d^2-d\delta_{2}+\delta_{3}-\delta_{2}.
+\end{align*}
+Substitution bounds the exponent by
+\[
+ -4d+9d^2/4+6d^3-2\delta_{2}+8d\delta_{2}+16d^2\delta_{2}+(16+10d)\delta_{2}^2+6\delta_{2}^3.
+\]
+The positive costs divided by $d$ are at most
+$3/4+2/3+55/54+29/27+7/150$, giving
+$\Xi\le-1199d/2700\le-2d/5$.
+
+For every $b\ge6$, the common finite-frequency formulas give
+\begin{gather*}
+ \|V_0\|^2\le C^2+(1+\theta)\delta_{3}+D^2d,\quad
+ \|R_0\|^2\le C^2d+\delta_{4}+\delta_{5}+D^2\delta_{2},\\
+ N_0\ge Cd-\delta_{3}-E\delta_{2},\quad
+ N_1\le C\delta_{2}-\delta_{4}+\delta_{5}-E\delta_{3}.
+\end{gather*}
+For $d\le1/5$, the $M$ coefficient is negative and $M\ge0$.
+Let $A=900/257$, $B=513/257$.
+The higher spectral terms after substitution have nonpositive sum:
+their coefficient per $\delta_{2}$ is at most
+$(41395/3200)(13/32)+7/32-549/100=-1641/102400$.
+The remaining positive terms are bounded as follows, using
+$d\le C\le257d/160$, $D\le81d/80$, $E\le D$:
+\[
+\begin{array}{c|c}
+\text{term divided by }d&\text{upper bound}\\\hline
+[(A+6d)C^2-BCd]/d&9/5\\
+D^2(Ad+6\delta_{2})/d&1/4\\
+12C\delta_{2}/d&8/5\\
+BE\delta_{2}/d&1/6\\
+2d/3&2/15
+\end{array}
+\]
+Their sum is $79/20$, while $8357/2056>4$.
+Thus $\Xi\le-d/20$ on the full small interval, with every finite $b$.
+For $d\ge1/5$, the stronger actual path means
+\eqref{eq:compact-strong-path-means} give $h_b\le77/80$.
+The same-direction singleton result of Section~\ref{loc:S36} gives
+$\E[q^3f_2^4]\le1$, so the actual pair fourth moment is at most
+$(77/80)^4\le e^{-3/20}\le e^{-d/20}$.
+
+\proofpart{All later pairs in the same integral}
+Let $S=KW=\sum_{i=2}^t\sum_{j=a_i}^{b_i-1}K^jg$ and put
+$I_W=\|W\|^2$, $J_W=\|S\|^2$,
+$t_W=\E[gW]$, $L_W=\E[rW]$.
+In the preceding logarithmic argument replace $X$ by $X+4S$ and
+the row vector $Z$ by $Z+4W$.
+The exact additional cost is
+\[
+ \mathrm{Extra}=2160\langle V,W\rangle/257+1296I_W/257
+ +12\langle R,S\rangle+6J_W+9L_W+(-164/257+2\Delta)t_W.
+\]
+The total exponent is $\Xi_{\rm first}-8(t-1)d+\mathrm{Extra}$.
+On $d\le1/5$, $|-164/257+2\Delta|<2/3$,
+$|t_W|\le D_3<d/5$ and $L_W\le D_4<21d/250$.
+For $b=3$ use
+$\|V\|\le13\sqrt d/20$, $\|R\|\le5\sqrt d/12$,
+$\|W\|<2\sqrt d/5$, $\|S\|<\sqrt d/4$.
+The six term cost ratios sum to
+$221/100+102/125+5/4+3/8+189/250+2/15=16621/3000<7$.
+For $b\ge4$, the exact norms above imply
+$\|V\|\le7\sqrt d/5$, $\|R\|\le5\sqrt d/6$.
+Indeed $C\le13d/8$, $D\le21d/20$ give squared ratios below
+$23/12<49/25$ and $1333/2000<25/36$.
+Later minimum at least five gives
+$\|W\|<\sqrt d/4$, $\|S\|<13\sqrt d/80$;
+the six costs are at most
+$119/40+51/160+13/8+507/3200+189/250+2/15<7$.
+This proves the stronger multiple-pair loss $[8(t-2)+1]d$.
+For $d\ge1/5$, the actual tail is bounded by $S<2\sqrt d/5\le d$.
+Multiply the same-direction first-pair bound by its actual exponential
+tail, giving the still stronger loss $[8(t-2)+4+1/20]d$.
+
+\proofpart{A residual unit arm}
+Except for the sole residual pair $(1,2)$, direct that unit arm outward.
+If $G$ is the remaining actual message with $\E[pG^4]\le1$, then
+\[
+ \E[q^3(pG)^4]=\E[p(pq)^3G^4]\le\E[pG^4]\le1.
+\]
+For sole $(1,b)$, $b\ge3$, take $G=\bar f_{b}$ and use
+Section~\ref{loc:S20}. If at least three arms remain after removing the
+unit arm, use the fully reversed positive odd canonical direction
+from Sections~\ref{loc:S15}--\ref{loc:S16}.
+These are the original zero-step fourth directions.
+The exception $(1,2)$ has length outside the path theorem and is handled
+separately in the main star catalogue.
+All equal pairs, zero parameters and full reversal follow from the common rules.

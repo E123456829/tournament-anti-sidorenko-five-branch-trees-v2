@@ -1,0 +1,423 @@
+\subsection{All nonunit odd terminals: choosing the actual eighth-moment direction}\label{proof:R2-C030}
+Let the strict odd residual list at the terminal be
+\fitdisplay{
+\Sigma=(\ell,r_1,t_1,\ldots,r_j,t_j),\qquad
+ 2\le\ell<r_1<t_1<\cdots<r_j<t_j,\quad j\ge1.
+}{R30.1.1}
+Keep its genuine equal-pair product $E_t$. For the existing receiving
+arm $m\ge3$ and connector $L\ge1$, put $n=\ell+L$ and choose
+\fitdisplay{
+F_\Sigma=\begin{cases}
+ \bar f_\ell\prod_{i=1}^j h_{r_i}f_{t_i},&r_1\ge4,\\
+ \bar f_2f_3h_c\prod_{i=2}^jh_{r_i}f_{t_i},&r_1=3,\ \ell=2,\ c=t_1\ge4.
+ \end{cases}
+}{R30.1.2}
+Empty products equal one. If $m\le n$, the receiving arm is
+$W_m=A\bar f_{m-1}$ and the connector is $T^L$.
+If $m>n$, the receiving arm is $\bar f_m=T^m\one$ and the connector is
+$AT^{L-1}$. Thus the first connector edge changes only according to
+the actual integers. When $L=1$ the latter operator is $A$ on the
+one existing edge. Denote the chosen receiving arm by $R_{m,n}$ and
+the connector by $\mathcal P_{m,n,L}$. We prove
+\fitdisplay{
+\E[\{R_{m,n}\mathcal P_{m,n,L}(E_tF_\Sigma)\}^{8}]
+ \le e^{-3d}.
+}{R30.1.3}
+The same bound holds after a genuine equal-pair product $E_c$ and
+any finite ordered negative post block
+$P_c^-=\prod_{\nu=1}^kW_{u_\nu}\bar f_{v_\nu}$,
+$4\le u_1<v_1<\cdots<u_k<v_k$, $k\ge0$, are restored at the receiver.
+The terminal and receiver length intervals may overlap. This is a
+construction for the stated direction.
+
+\paragraph{R30.2 Finite tools}
+Use $B=-K$, $u=B\one=-g$, $T=J+B$, $A=J-B$, $p=1-u$,
+$q=1+u$, $\delta_i=\|B^i\one\|_2^2$, $d=\delta_1$,
+$\theta=13/32$, $\kappa=19/32$ and $\tau=d-\delta_2$.
+The finite spectral and row bounds give
+\fitdisplay{
+d^2\le\delta_2\le\theta d,\quad d\le1/3,\quad
+ \delta_{i+1}\le\theta\delta_i,\quad\|B\|^2\le\theta,
+ \quad |BV(x)|\le\|V\|_2.
+}{}
+For $G_s(z)=\sum_{i=0}^{s-1}z^i$, $G_0=0$, one has
+$\|G_s(B)\|\le1$ for $s=0,1$ or $s\ge3$, while
+$\|G_2(B)\|^2\le1+\theta$. Define the finite sums
+\fitdisplay{
+\beta_1=\beta_2=0,\qquad
+ \beta_n=\sum_{i=1}^{\lfloor(n-1)/2\rfloor}(-1)^{i-1}\delta_i,
+ \qquad \tau\le\beta_n\le d\quad(n\ge3).
+}{}
+The spectral measure $\nu$ at $u$ has mass $d$, support
+$[0,\theta]$ and moments $\int x^i\,d\nu=\delta_{i+1}$.
+Writing $z=i\sqrt x$, a real polynomial $P=P_e+zP_o$ satisfies
+$\E P(B)u=-\int P_o\,d\nu$. All four path messages lie in $[0,2]$;
+their means satisfy $\mu_a=\E f_a=\E\bar f_a\le1$,
+$\mu_2=1-d$, $\mu_a\le1-2d$ for $a\ge3$, and
+$W_a+\bar f_a=2\mu_{a-1}$. Only genuine equal pairs are bounded by
+one pointwise.
+
+The full-mean exponential lemma of Section~\ref{proof:Q5-C081} is
+\fitdisplay{
+\E e^{8BV}\le\exp\{8\E(BV)+17\|V\|_2^2\}.
+}{R30.2.5}
+It applies to every real $V$, including its constant component.
+The actual pair-sum estimates of Section~\ref{proof:Q5-C090}, after
+full reversal, are
+\fitdisplay{
+W_h+\bar f_H\le2+\sum_{a=h}^{H-1}B^au-\gamma_h,
+ \quad 3\le h<H,\qquad
+ \gamma_h=\begin{cases}2d-\delta_2,&h=3,\\16d/5,&h\ge4.
+ \end{cases}
+}{}
+For $4\le r<t$, the actual positive terminal pair satisfies
+$h_rf_t\le\exp\{\sum_{a=r}^{t-1}K^ag-16d/5\}$.
+A finite disjoint-interval mask with least power $a$ has bounds
+\fitdisplay{
+\|R\|_2^2\le\theta^a C_*d,\quad
+ |R|^2\le\theta^{a-1}C_*d,\qquad C_*=32768/16245.
+}{}
+These bounds apply to the finite sums in the path expansions.
+
+\paragraph{R30.3 Matching the two actual lengths}
+For $3\le h\le H$, put
+\fitdisplay{
+Q_{h,H}=W_h\bar f_H,\quad
+ R_* =\sum_{a=h}^{H-1}B^au=BZ_*,\quad
+ Z_*=B^{h-1}G_{H-h}(B)u.
+}{}
+At $h=H$ these sums vanish. Uniformly,
+\fitdisplay{
+W_h+\bar f_H\le2-\lambda d+R_*,\quad
+ \lambda=51/32,\quad \E R_*\le\theta d,\quad
+ \|Z_*\|_2\le\tfrac12\sqrt d.
+}{R30.3.2}
+For $h<H$ the first assertion follows from the pair-sum estimate,
+since $2d-\delta_2\ge51d/32$. At equality use
+$2\mu_{h-1}\le2-2d$, including $h=3$. In the finite alternating
+mean sum the first possible positive term is $\delta_2$, so
+$\E R_*\le\delta_2\le\theta d$. Furthermore
+\fitdisplay{
+\|Z_*\|_2^2\le\theta^{h-1}(1+\theta)d
+ \le7605d/32768<d/4,
+}{}
+including the $G_2$ exception. Both actual arms are nonnegative.
+Their arithmetic-geometric mean bound and $1+x\le e^x$ give
+$Q_{h,H}\le e^{R_*-\lambda d}$. Applying (R30.2.5) once yields
+\fitdisplay{
+\E Q_{h,H}^8\le
+ \exp\{(-8\lambda+8\theta+17/4)d\}=e^{-21d/4}.
+}{R30.3.4}
+
+\paragraph{R30.4 Both first-edge choices and every finite propagation length}
+For $\sigma\in\{+1,-1\}$ let
+\fitdisplay{
+S_\sigma=J+\sigma B,\quad P_L^\sigma=S_\sigma T^{L-1},\quad
+ w_0^\sigma=1,\quad w_j^+=\bar f_j,\quad w_j^-=W_j\ (j\ge1).
+}{}
+Choose $\sigma=+$ when $m\le n$, and $-$ otherwise.
+Suppose $F\le\bar f_\ell e^{R-\Gamma}$ and write
+$D_i=\E B^iR$. For the actual range $|R|\le1/2$ verified below,
+\eqref{eq:oc:remainder} with $t=1/2$, $c=6/5$ gives
+$e^R\le1+R+3R^2/5$.
+
+If $r_1\ge4$, the finite first row is
+\fitdisplay{
+S_\sigma(\bar f_\ell e^R)
+ \le w_{\ell+1}^\sigma+\sigma\chi BR+\delta,
+ \quad \chi=\mu_\ell\in[0,1],
+}{}
+\fitdisplay{
+\delta=\mu_\ell D_0+
+ 2\operatorname{sd}(\bar f_\ell)\|R\|_2+\tfrac{12}{5}\|R\|_2^2.
+}{R30.4.2}
+Indeed split $S_\sigma(\bar f_\ell R)$ into
+$\mu_\ell D_0+\sigma\mu_\ell BR$ and the centered part, which is
+at most $2\E| (\bar f_\ell-\mu_\ell)R|$. The two positive kernels
+have the same absolute row bound, and the quadratic fee is
+$12\E R^2/5$. Thus the same signed $\delta$ works for both first
+edges.
+
+If $r_1=3$, the actual first row instead has $\chi=1$:
+\fitdisplay{
+S_\sigma(\bar f_2e^R)\le w_3^\sigma+\sigma BR+\delta,
+}{}
+\fitdisplay{
+\delta=\E R+\E(uR)+\E((Bu)R)
+       +\sqrt{(d+\delta_2)\E R^2}+\tfrac{12}{5}\E R^2.
+}{R30.4.4}
+Here $\bar f_2=1+u+Bu$; the displayed three means are precisely
+$J(\bar f_2R)$, and the remaining row term is bounded by
+$\E|(u+Bu)R|\le\sqrt{(d+\delta_2)\E R^2}$.
+This proves sign compatibility without identifying the two distinct
+first-row coefficients.
+
+For any $D\ge\delta$ and every finite $L\ge1$, with $n=\ell+L$,
+\fitdisplay{
+e^\Gamma P_L^\sigma F\le
+ Y_L^\sigma=w_n^\sigma+\sigma\chi B^LR
+       +Dw_{L-1}^\sigma
+       +\chi\sum_{i=1}^{L-1}D_iw_{L-1-i}^\sigma.
+}{R30.4.5}
+For $L=1$ this is the corresponding $S_\sigma$ first row. For $L\ge2$,
+apply $S_\sigma T^{L-2}$ to the $T$ first row and use
+\eqref{eq:oc:finite-duhamel}. Its final summand is
+$\chi D_{L-1}w_0^\sigma$; all indices are nonnegative and positivity gives
+$Y_L^\sigma\ge0$.
+Replacing signed coefficients by positive parts only when they
+multiply a nonnegative message gives the scalar upper bounds
+\fitdisplay{
+\begin{array}{c|c}
+ L& C\ \text{bounding }Dw_{L-1}^\sigma+
+ \chi\sum_{i=1}^{L-1}(D_i)_+w_{L-1-i}^\sigma\\\hline
+ 1&D\\2&2D+(D_1)_+\\3&2D+2(D_1)_++(D_2)_+\\
+ L\ge4&2D+2\sum_{i\ge1}(D_i)_+
+ \end{array}
+}{R30.4.6}
+The last geometric bound dominates each finite positive subsum.
+
+The product of the actual receiver and $w_n^\sigma$ is always
+$Q_{h,H}$ with $h=\min(m,n)$ and $H=\max(m,n)$.
+Consequently
+\fitdisplay{
+R_{m,n}+Y_L^\sigma\le2-\lambda d+C+BV,
+ \qquad V=Z_*+\sigma\chi B^{L-1}R.
+}{}
+If $\|B^{L-1}R\|_2\le\rho_L\sqrt d$, then
+$|D_L|\le\rho_Ld$, and hence
+$\E BV\le(\theta+\rho_L)d$ and
+$\|V\|_2\le(1/2+\rho_L)\sqrt d$.
+Arithmetic-geometric mean followed by (R30.2.5) gives the complete
+same-kernel payment
+\fitdisplay{
+\begin{aligned}
+ \log\E[\{R_{m,n}P_L^\sigma F\}^8]
+ \le{}&-8\Gamma-\tfrac{51}{4}d+8C
+       +8(\theta+\rho_L)d+17(1/2+\rho_L)^2d.
+ \end{aligned}
+}{R30.4.9}
+If the moment is zero use the equivalent exponential inequality.
+The terminal mask and root interval need not be disjoint: this is one
+exponential expectation, with every scalar cost displayed.
+
+\paragraph{R30.5 Second-shortest terminal length at least four}\label{part:R30.5}
+Section~\ref{proof:Q5-C181} gives, for the first row of (R30.1.2),
+\fitdisplay{
+\begin{gathered}
+ R=\sum_{i=1}^j\sum_{a=r_i}^{t_i-1}K^ag,\quad
+ F_\Sigma\le\bar f_\ell e^{R-\Gamma},\\
+ \Gamma\ge16jd/5,\quad \|R\|_2<\tfrac14\sqrt d,
+ \quad |R|^2<d/3,
+\end{gathered}
+}{}
+\fitdisplay{
+\delta\le5d/6,\qquad\sum_{i\ge1}(D_i)_+<2d/5.
+}{R30.5.1}
+For $j=1,r_1=4$ the stronger three entries are
+$\sqrt d/5,72d/125,7d/25$; for $j=1,r_1\ge5$ they are
+$3\sqrt d/20,3d/5,d/5$. For $j\ge2$ use the joint row, without
+combining incompatible extrema. The finite mask of least original
+power four can be written $R=(U_e+zU_o)u$ with
+\fitdisplay{
+-\frac{x^2}{1-x^2}\le U_e\le\frac{x^3}{1-x^2},\qquad
+ -\frac{x^3}{1-x^2}\le U_o\le\frac{x^2}{1-x^2}.
+}{}
+Its four residue classes give the positive-tail bound
+\fitdisplay{
+\frac{x^2(1+x)(1+x^2)}{(1-x^2)^2}
+ =\frac{x^2(1+x^2)}{(1-x)^2(1+x)}.
+}{}
+It has nonnegative power-series coefficients; its value at $\theta$
+is $201617/519840<2/5$. Integration proves the stated finite-tail
+bound. If $r_1=4$ then $\ell=2$ or $3$, so the larger mask and the
+small path variance belong to the same row; the $r_1\ge5$ row has
+the smaller mask.
+
+Take $D=5d/6$, $C=37d/15$ and $\rho_L=1/4$ for every finite $L$.
+Substitution in (R30.4.9) gives
+\fitdisplay{
+\begin{aligned}
+ \log\E[\{R_{m,n}P_L^\sigma F\}^8]
+ &\le\left[-\frac{128j}{5}-\frac{51}{4}
+       +\frac{296}{15}+\frac{21}{4}+\frac{153}{16}\right]d\\
+ &=-\left(\frac{128j}{5}-\frac{5231}{240}\right)d
+ \le-\frac{913}{240}d<-3d.
+ \end{aligned}
+}{}
+The actual $\chi=\mu_\ell$ was retained before using $0\le\chi\le1$.
+This proof also retains $\|V\|_2\le3\sqrt d/4$ on the whole domain.
+
+\paragraph{R30.6 The exact second-shortest length three}
+Strict order forces $\ell=2,r_1=3,c=t_1\ge4$. Set
+\fitdisplay{
+\beta_*=\beta_{c-1},\quad
+ R_0=-\beta_*u-B^3G_{c-3}(-B)u,\quad
+ \Gamma_0=d+\beta_c+\beta_*.
+}{}
+The actual pair estimate in Section~\ref{proof:Q5-C181} gives
+$f_3+h_c\le2-\Gamma_0+R_0$ and
+$\bar f_2f_3h_c\le\bar f_2e^{R_0-\Gamma_0}$, with
+$\Gamma_0\ge35d/16$. The $c=4,5$ values are respectively $3d$ and
+$3d-\delta_2$; for $c\ge6$ use $d+2\tau\ge35d/16$.
+Let
+\fitdisplay{
+S=\sum_{i=2}^j\sum_{a=r_i}^{t_i-1}K^ag,\quad
+ R=R_0+S,\quad \Gamma=\Gamma_0+16(j-1)d/5.
+}{}
+At $j=1$, $S=0$. Otherwise $r_2\ge c+1\ge5$, and the finite
+terminal mask gives
+\fitdisplay{
+\|S\|_2<3\sqrt d/20,\quad |S|<\sqrt d/4,\quad
+ \sum_{i\ge1}(\E B^iS)_+<d/5.
+}{}
+The actual shortest arm $\bar f_2$ is still present.
+
+For $0<d\le1/8$ the full first row (R30.4.4) has the following
+joint bounds from Section~\ref{proof:Q5-C181}:
+\fitdisplay{
+\begin{array}{c|ccc}
+ &D&(D_1)_+&(D_2)_+\\\hline
+ j=1&3d/5&d^2&\delta_3\\
+ j\ge2&3d/2&19d/120&d/4
+ \end{array}
+}{}
+These bound the complete $\delta$, including its correlated means.
+They use coefficient one on $BR$. Also
+\fitdisplay{
+\|R_0\|_2\le(d+\tfrac65\theta^{3/2})\sqrt d
+ <89\sqrt d/200<9\sqrt d/20,
+}{}
+since $\sqrt{1+\theta}<6/5$ and $\theta^{3/2}<4/15$.
+Thus $\|R\|_2<3\sqrt d/5$ for $j\ge2$.
+The Taylor conditions follow from
+$|R_0|\le d+39\sqrt d/80<1/3$ and
+$|R_0+S|\le d+59\sqrt d/80<1/2$;
+$\sqrt d<3/8$ gives $197/640<1/3$ and $257/640<1/2$.
+
+For the necessary finite positive-tail sum, write
+$G_{c-3}(-z)=U-zV$, so $r_0=-\beta_*+x^2V+zxU$.
+At $c=4$, $(U,V)=(1,0)$; otherwise $0\le U,V\le1$.
+For every integer $k\ge0$, the four residue classes are
+\fitdisplay{
+\begin{array}{ll}
+ D_{4k}(R_0)=-\int x^{2k+1}U\,d\nu,&
+ D_{4k+1}(R_0)=\beta_*\delta_{2k+1}-\int x^{2k+2}V\,d\nu,\\
+ D_{4k+2}(R_0)=\int x^{2k+2}U\,d\nu,&
+ D_{4k+3}(R_0)=-\beta_*\delta_{2k+2}+\int x^{2k+3}V\,d\nu.
+ \end{array}
+}{}
+Consequently every finite positive subsum is bounded by
+\fitdisplay{
+\begin{aligned}
+ \sum_{i\ge1}(D_i(R_0))_+
+ &\le\frac{\beta_*d+\delta_3+\delta_4}{1-\theta^2}\\
+ &\le\frac{d^2+\theta^2(1+\theta)d}{1-\theta^2}\\
+ &\le\frac{11701}{27360}d<\frac37d.
+\end{aligned}
+}{}
+The last comparison uses $d\le1/8$ and
+$7\cdot11701=81907<82080=3\cdot27360$.
+For $S$ the corresponding four-class bound is
+\fitdisplay{
+\frac{x^3+2x^4+x^5}{(1-x^2)^2}
+ =\frac{x^3}{(1-x)^2}\le\frac{2197}{11552}<\frac15.
+}{}
+Thus $\sum_{i\ge1}(D_i(R))_+<22d/35$ by
+$(a+b)_+\le a_++b_+$. There is no independence assumption.
+
+\paragraph{R30.7 The complete second-shortest-three payment}
+For $j=1$ use $D=3d/5$ and the following finite-length data in
+(R30.4.9):
+\fitdisplay{
+\begin{array}{c|ccc}
+ L&C/d&\rho_L&\text{loss coefficient}\\\hline
+ 1&3/5&9/20&1303/400\\
+ 2&53/40&3/10&78/25\\
+ 3&97/60&3/16&17401/3840\\
+ \ge4&72/35&3/25&53341/17500
+ \end{array}
+}{}
+The norm bounds use $1$, $\sqrt\theta<2/3$, $\theta<5/12$,
+$\theta^{3/2}<4/15$. The scalar bounds use
+$(D_1)_+\le d/8$, $(D_2)_+\le\theta^2d<d/6$ and the finite-tail
+bound above. The negative base is
+$8\Gamma_0+51d/4\ge121d/4$; the four positive costs are respectively
+\fitdisplay{
+\begin{array}{ll}
+ 24/5+137/20+6137/400,&53/5+113/20+272/25,\\
+ 194/15+19/4+2057/256,&576/35+421/100+16337/2500.
+ \end{array}
+}{}
+Subtracting gives the table, all strictly greater than three. The
+tight long row has margin $841/17500$ above three. This includes
+$c=4,L=1,m=n=3$.
+
+For $j\ge2$ use $D=3d/2$ and
+\fitdisplay{
+\begin{array}{c|ccc}
+ L&C/d&\rho_L&\text{loss at }j=2\\\hline
+ 1&3/2&3/5&1523/100\\
+ 2&379/120&2/5&3109/300\\
+ 3&107/30&1/4&3001/240\\
+ \ge4&149/35&4/25&172509/17500
+ \end{array}
+}{}
+Here $8\Gamma+51d/4\ge1117d/20$ at $j=2$, and the positive costs are
+\fitdisplay{
+\begin{array}{ll}
+ 12+161/20+2057/100,&379/15+129/20+1377/100,\\
+ 428/15+21/4+153/16,&1192/35+453/100+18513/2500.
+ \end{array}
+}{}
+All losses exceed nine. Each further pair adds $16d/5$ to $\Gamma$,
+while the joint mask, $D$ and finite positive-tail bounds remain the
+same. Both low-domain families retain $\|V\|_2\le11\sqrt d/10$.
+
+For $1/8\le d\le1/3$ keep exactly the same direction. The row and
+finite $G$ bounds give
+\fitdisplay{
+|R_0|\le d+39\sqrt d/80\le197d/80,
+ \quad \Gamma_0\ge175d/80,
+ \quad |S|\le\tfrac34(j-1)d.
+}{}
+Since $\sqrt d\le3d$ on this domain,
+\fitdisplay{
+F\le\bar f_2\exp\{[11/40-49(j-1)/20]d\}.
+}{}
+The positive connector sends $\bar f_2$ to $w_n^\sigma$; the
+remaining pair is $Q_{h,H}$. By (R30.3.4) the resulting loss is
+$61/20+98(j-1)/5\ge3$. The domains overlap at $d=1/8$.
+Together with the structural case above this proves (R30.1.3).
+
+\paragraph{R30.8 Receiver posts and genuine equal pairs}
+For $k\ge1$, the actual negative post block has
+\fitdisplay{
+P_c^-\le e^{R_c-\Gamma_c},\quad
+ R_c=\sum_{\nu=1}^k\sum_{a=u_\nu}^{v_\nu-1}B^au=BZ_c,
+ \quad\Gamma_c\ge16kd/5.
+}{}
+Here extracting a factor $B$ is a polynomial identity, not inversion.
+The finite mask gives
+\fitdisplay{
+\|Z_c\|_2^2\le\theta^3 C_*d=2197d/16245<4d/25,
+ \quad \E R_c\le\frac{\delta_4}{1-\theta^2}
+ \le2197d/27360<d/12.
+}{}
+The first possible positive mean comes from original power seven.
+On the whole domain of \mbox{\hyperref[part:R30.5]{part R30.5}} and the low domain of R30.7,
+combine $V+Z_c$ before applying the exponential lemma once. The
+extra cost, including all cross terms, is at most
+\fitdisplay{
+\begin{aligned}
+ 8\E R_c+34\|V\|_2\|Z_c\|_2+17\|Z_c\|_2^2-8\Gamma_c
+ &\le[2/3+374/25+68/25-128k/5]d\\
+ &=[1376/75-128k/5]d\le-544d/75<0.
+ \end{aligned}
+}{}
+The terminal and receiver masks may overlap.
+On the high domain of R30.7,
+$|R_c|\le\|Z_c\|_2<2\sqrt d/5\le6d/5$ gives
+$P_c^-\le\exp[-(16k/5-6/5)d]\le1$.
+For $k=0$ no additional cost occurs. Finally restore $E_c,E_t\le1$
+using positivity of the actual operators. This proves the decorated
+bound with every original edge retained.

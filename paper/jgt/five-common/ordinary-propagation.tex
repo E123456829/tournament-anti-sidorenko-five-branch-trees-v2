@@ -1,0 +1,147 @@
+% Insert once at the former R29.5 position; see integration.json.
+% Uses only the finite calculus established before R29.5 and Q81.2.
+% Historical equation tags are retained to preserve incoming references.
+\paragraph{A common propagation lemma}\label{part:R29.5}
+Write \(B=-K\), \(u=B\one=-g\), \(T=J+B\), and
+\(p=1-u\). All expectations and norms use the original finite measure.
+The path convolution, the bounds \(0<\bar f_n\le2\), and
+\(\beta_n\in[\tau,d]\) for \(n\ge3\) are given by
+\eqref{eq:Q188:conv}. The signed-mean inequality of
+Section~\ref{proof:Q5-C081}, paragraph~\ref{part:Q81.2}, gives
+\begin{equation}\label{eq:oc:signed-moments}
+ \E e^{4BV}\le e^{4\E BV+(17/4)\|V\|^2},\qquad
+ \E e^{8BV}\le e^{8\E BV+17\|V\|^2}
+ \quad(V\ \text{real}).
+\end{equation}
+
+The continuation identity \eqref{eq:oc:finite-duhamel} and
+Theorem~\ref{thm:unit-two-step-transport} give the following two
+specializations.
+
+\begin{lemma}[Ordinary fourth-moment propagation]\label{lem:oc:fourth}
+Suppose \(F>0\), \(F\le e^{R-\Gamma}\), and \(|R|\le t\), where \(0\le t<3\).
+For \(c\ge(1-t/3)^{-1}\), put
+\begin{equation}\tag{R29.5.1}\label{eq:oc:remainder}
+ e^R\le1+R+\frac c2R^2,
+\end{equation}
+\begin{equation}\tag{R29.5.2}\label{eq:oc:fourth-data}
+ \sigma=\E R^2,\quad D_i=\E B^iR,\quad
+ \delta=D_0+c\sigma,\quad \epsilon=\delta+D_1.
+\end{equation}
+Let \(H=pT^LF\), \(L\ge1\). Then
+\begin{align}
+ \log\E H^4&\le-4\Gamma+4\epsilon+\tfrac{17}{4}\sigma,
+ &&L=1,\tag{R29.5.6}\label{eq:oc:fourth-L1}\\
+ \log\E H^4&\le-4\Gamma+4\epsilon-4d+4D_2
+  +\tfrac{17}{4}\|u+BR\|^2+\tfrac{10}{3}\delta^2,
+ &&L=2,\tag{R29.5.7}\label{eq:oc:fourth-L2}\\
+ \log\E H^4&\le-4\Gamma+4\epsilon+4D_2+4D_3-4\delta d-8d
+  \notag\\[-2pt]
+ &\hspace{9mm}+\tfrac{17}{4}\|(1+B)u+\delta u+B^2R\|^2
+     +\tfrac{10}{3}\epsilon^2,
+ &&L=3.\tag{R29.5.8}\label{eq:oc:fourth-L3}
+\end{align}
+For \(L\ge4\), assume additionally that \(h\ge0\) and
+\begin{equation}\tag{R29.5.9}\label{eq:oc:gamma}
+ \gamma_k:=\beta_k-D_{k-1}\ge hd\quad(k\ge3).
+\end{equation}
+With \(V_L=G_{L-1}(B)u+B^{L-1}R\), one has
+\begin{equation}\tag{R29.5.10}\label{eq:oc:fourth-long}
+ \log\E H^4\le-4\Gamma+8\delta_++8(D_1)_+-12hd
+          +\tfrac{17}{4}\|V_L\|^2+\tfrac{10}{3}h^2d^2.
+\end{equation}
+\end{lemma}
+\begin{proof}
+Use the E row of Table~\ref{tab:unit-two-step:parameters}, that is,
+$w=1$, $r=1$, $\lambda=1$, $s_0=e^{-\Gamma}$ and $R$ as stated.
+Lemma~\ref{lem:unit-two-step:exponential-envelope} gives
+\eqref{eq:oc:remainder}; the first row and continuation give
+\begin{equation}\tag{R29.5.3}\label{eq:oc:fourth-duhamel}
+ 0<e^\Gamma T^LF\le Y_L
+ =\bar f_L+\delta\bar f_{L-1}+B^LR
+       +\sum_{i=1}^{L-1}D_i\bar f_{L-1-i}.
+\end{equation}
+The scalar inequalities in the common proof are
+\begin{equation}\tag{R29.5.4}\label{eq:oc:unit-log}
+ \log p\le-u-\tfrac3{10}u^2\qquad(-1\le u<1),
+\end{equation}
+\begin{equation}\tag{R29.5.5}\label{eq:oc:unit-square}
+ 4a_0u-\tfrac65u^2\le\tfrac{10}{3}a_0^2
+ \qquad(a_0\in\mathbb R).
+\end{equation}
+For the complete-vector payment
+\eqref{eq:unit-two-step:moment-payment}, take $s=e^{-\Gamma}$,
+$C=1$, and the following actual $(c,t,V)$:
+\[
+\begin{array}{c|ccc}
+ L&c&t&V\\\hline
+ 1&\delta&0&R\\
+ 2&\epsilon&\delta&u+BR\\
+ 3&\epsilon+D_2-d&\epsilon&(1+\delta)u+Bu+B^2R.
+\end{array}
+\]
+The signed means of $BV$ are $D_1$, $-d+D_2$, and
+$-(1+\delta)d+D_3$. This gives the three short formulas.
+For $L\ge4$, the finite ledger retains $\bar f_0=1$ and
+$\bar f_1=1+u$, giving
+\[
+ Y_L\le q+2\delta_++2(D_1)_+-hd(2+u)+BV_L.
+\]
+Here $\E BV_L=-\gamma_{L+1}\le-hd$.
+The same payment with $t=-hd$ proves
+\eqref{eq:oc:fourth-long}.
+\end{proof}
+
+\begin{lemma}[Ordinary eighth moments with an inward path arm]
+\label{lem:oc:anchored-eighth}
+Let \(a\ge1\), \(F>0\), and
+\(F\le\bar f_a e^{R-\Gamma}\). Suppose
+\[
+ |R|\le\tfrac12,\qquad \|R\|\le\varrho\sqrt d,\qquad
+ \|\bar f_a-\mu_a\|\le s\sqrt d,
+ \quad \mu_a=\E\bar f_a\in[0,1].
+\]
+Here \(s,\varrho\ge0\).
+Write \(\mu=\mu_a\), \(D_i=\E B^iR\), and
+\(c_0=2s\varrho+(12/5)\varrho^2\). Set
+\(\delta=\mu D_0+c_0d\). The positive first step obeys
+\begin{equation}\tag{Q93.4.1}\label{eq:Q93:4.1}
+ \begin{aligned}
+ T(\bar f_ae^R)&\le\bar f_{a+1}+T(\bar f_aR)
+                         +\tfrac35T(\bar f_aR^2)\\
+ &\le\bar f_{a+1}+\mu BR+\delta.
+ \end{aligned}
+\end{equation}
+For \(L\ge1\), \(n=a+L\), define
+\begin{equation}\tag{Q93.4.3}\label{eq:Q93:4.3}
+ 0<e^\Gamma T^LF\le Y_L
+ =\bar f_n+\mu B^LR+\delta\bar f_{L-1}
+       +\mu\sum_{i=1}^{L-1}D_i\bar f_{L-1-i},
+\end{equation}
+\begin{equation}\tag{Q93.4.4}\label{eq:Q93:4.4}
+ V=G_{n-1}(B)u+\mu B^{L-1}R,\quad N=BV,\quad
+ \E N=-\beta_{n+1}+\mu D_L,
+\end{equation}
+\begin{equation}\tag{Q93.4.5}\label{eq:Q93:4.5}
+ c_1=\delta-\beta_n,\qquad
+ c_L=2\delta_++2\mu\sum_{i=1}^{L-1}(D_i)_+-\beta_n\quad(L\ge2).
+\end{equation}
+Then
+\begin{equation}\tag{Q93.4.6}\label{eq:Q93:4.6}
+ \log\E[(pT^LF)^8]
+ \le-8\Gamma+8c_L+8\E N+17\|V\|^2.
+\end{equation}
+\end{lemma}
+\begin{proof}
+Use the A row of Table~\ref{tab:unit-two-step:parameters}, with
+$w=\bar f_a$, $r=a+1$, $\lambda=\mu$, $c=6/5$ and
+normalized seed $\mu R$. The scalar error is at most
+$\mu D_0+2s\varrho d+(12/5)\varrho^2d=\delta$.
+This proves \eqref{eq:Q93:4.1} and the exact continuation
+\eqref{eq:Q93:4.3}. The finite ledger retains $\beta_n\bar f_0$;
+the remaining positive paths are bounded by two, giving
+$p+Y_L\le2+c_L+N$ with \eqref{eq:Q93:4.4}--\eqref{eq:Q93:4.5}.
+Apply \eqref{eq:unit-two-step:moment-payment} at $\nu=8$,
+$s=e^{-\Gamma}$, $C=1$, $t=0$ to obtain
+\eqref{eq:Q93:4.6}.
+\end{proof}

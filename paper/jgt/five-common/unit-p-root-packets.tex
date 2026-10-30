@@ -1,0 +1,1621 @@
+\subsection{Ordinary moments at an actual unit root}
+\label{sec:unit-p-root-packets}
+Throughout this subsection the receiving vertex has one existing
+outward unit arm. Its message is \(p\). The inner path has length
+\(L\ge1\) and contributes \(T^L\). At its other endpoint let \(F\)
+be the terminal message specified below. We estimate
+\[
+ H=pT^LF,\qquad
+ \mathcal I(U)=\E[q^{-1/3}|U|^{8/3}].
+\]
+The measure, operators and finite spectral measure are those of
+\eqref{eq:odd-common:inputs}. Write \(B=-K\), \(u=B\one=-g\),
+\(z=i\sqrt x\), \(0\le x\le\theta=13/32\),
+\(\kappa=19/32\), and \(\tau=d-\delta_2\).
+Thus \(\int x^j\,d\nu=\delta_{j+1}\) and \(\nu([0,\theta])=d\).
+All polynomials and masks in this proof are finite. The proof works
+with \(d>0\); its last paragraph treats \(d=0\) directly.
+
+\begin{theorem}[The unit-root ordinary catalogue]
+\label{thm:unit-p:catalogue}
+Terminal residual lists are strictly increasing:
+\((a,b_1,c_1,\ldots,b_k,c_k)\), with
+\(1\le a<b_1<c_1<\cdots<b_k<c_k\) and \(k\ge1\).
+The directions in Table~\ref{tab:unit-p:directions} depend only on
+the original residual lengths. They satisfy the fourth and eighth
+moment bounds proved in the corresponding paragraphs below.
+Every fourth-moment entry in Table~\ref{tab:unit-p:directions}
+has loss at least \(15d/4\).
+Every eighth-moment row with terminal minimum one has bound
+\(1-d/12000\); the sharper rates in the tables are retained.
+These assertions allow every positive \(L\), all genuine equal-pair
+decorations, and complete reversal.
+\end{theorem}
+
+\begin{table}[htbp]\centering\small
+\caption{Terminal messages at the unit root. An absent eighth entry carries no eighth-moment estimate for that direction.}
+\label{tab:unit-p:directions}
+\begin{tabular}{@{}lll@{}}\toprule
+Residual lengths & Actual \(F\) & Moments proved\\\midrule
+\((a,b_1,c_1,\ldots,b_k,c_k),\ b_1\ge4\)
+ & \(\bar f_a\prod_i h_{b_i}f_{c_i}\) & \(4\); also \(8\) if \(a=1\)\\
+\(b_1=3,\ k\ge2,\ a=1,2\)
+ & \(\bar f_af_3h_{c_1}\prod_{i\ge2}h_{b_i}f_{c_i}\)
+ & \(4\); also \(8\) if \(a=1\)\\
+\((a,3,c),\ a=1,2,\ c\ge4\)
+ & \(\bar f_af_3h_c\) & \(4\); also \(8\) if \(a=1\)\\
+\((1,2,c_1,\ldots,b_k,c_k),\ k\ge3\)
+ & \(qf_2h_{c_1}\prod_{i\ge2}h_{b_i}f_{c_i}\) & \(4,8\)\\
+\((1,2,c,b,e),\ 4\le c<b<e\)
+ & \(qf_2h_ch_bf_e\) & \(4,8\)\\
+\((1,2,3,b,e),\ 5\le b<e\)
+ & \(qf_2h_3h_bf_e\) & \(4,8\)\\
+\((1,2,3,4,e),\ e\ge5\)
+ & \(qf_2h_eh_3f_4\) & \(4,8\)\\
+\((1,2,c),\ c\ge4\)
+ & \(qf_2h_c\) & \(8\)\\
+\((1,2,3),\ L\ne2\)
+ & \(qf_2h_3\) & \(8\)\\
+\((1,2,3),\ L=2\)
+ & \(qf_2\bar f_3\) & \(8\)\\\bottomrule
+\end{tabular}
+\end{table}
+
+\subsubsection{One finite ledger and its two moment payments.}
+We use Theorem~\ref{thm:unit-two-step-transport} on the original
+positive row. The four first-row forms needed here are
+\begin{equation}\label{eq:unit-p:data-1}
+\begin{array}{c|c|c|c}
+ F\text{ upper}&s&r&\lambda\\\hline
+ e^{R-\Gamma}&e^{-\Gamma}&1&1\\
+ \bar f_ae^{R-\Gamma}&e^{-\Gamma}&a+1&\mu_a:=\E\bar f_a\\
+ qe^{R-\Gamma}&e^{-\Gamma}&2&1\\
+ q(m-U/2)^2&m^2&2&1,\quad R=-U/m.
+\end{array}
+\end{equation}
+For the exponential inputs \(|R|\le1/2\), except for the explicitly
+larger interval in the first-pair-two multipair case. The respective
+admissible first-row constants are as follows. The coefficient \(6/5\)
+in the first line is replaced by \(2\) on the larger interval
+\(|R|\le3/2\).
+\begin{equation}\label{eq:unit-p:data-2}
+\begin{aligned}
+ D_E&\ge \E R+\tfrac65\E R^2,\\
+ D_A&\ge \mu_a\E R+
+          2\sigma(\bar f_a)\|R\|+\tfrac{12}{5}\E R^2,\\
+ D_Q&\ge \E(qR)+\sqrt{d\E R^2}+\tfrac{12}{5}\E R^2,\\
+ D_{QS}&\ge-\frac{\E U-\E(gU)}m+
+             \frac{\sqrt{d\E U^2}}m+\frac{\E U^2}{m^2}.
+\end{aligned}
+\end{equation}
+We always enlarge to a nonnegative \(D\). In the first two lines the
+linear vector has coefficient \(\lambda\); in the last two it has
+coefficient one. In particular the \(a=2\) uncentred mode used below
+has coefficient one and squared distance \(d+\delta_2\), rather than
+coefficient \(1-d\) and centered variance \(d+\delta_2-d^2\).
+Here \(R\) denotes the seed before multiplication by \(\lambda\);
+the normalized linear vector in the transport theorem is
+\(\lambda R\).
+
+Put \(D_i=\E B^iR\). Positive continuation gives the actual finite
+upper
+\begin{equation}\label{eq:unit-p:ledger}
+ T^LF\le sY_L,\qquad
+ Y_L=\bar f_{r+L-1}+\lambda B^LR+D\bar f_{L-1}
+       +\lambda\sum_{i=1}^{L-1}D_i\bar f_{L-1-i}.
+\end{equation}
+For a \(q\)-weighted input, \(\lambda=1,r=2\), this is equivalently
+\begin{equation}\label{eq:unit-p:q-ledger}
+ Y_L=S'_{L+1}+B^LR+D\bar f_{L-1}
+             -\sum_{j=3}^{L+1}\gamma_j\bar f_{L+1-j},
+ \qquad\gamma_j=\beta_j-D_{j-2}.
+\end{equation}
+Only after proving \(\gamma_j\ge0\) do we drop a loss.
+
+We record the complete comparison used to pay both moments:
+\begin{equation}\label{eq:unit-p:comparison}
+ 0\le Y_L\le Cq+BV+c,\qquad C>0.
+\end{equation}
+The upper is positive because it majorizes the actual message.
+The unit pairing and the signed-exponential estimate give, for
+\(\nu=4,8\),
+\begin{equation}\label{eq:unit-p:joint-payment}
+ \log\E H^\nu
+ \le \nu\log(sC)+\frac{\nu}{C}(c+\E BV)
+                   +\frac{17\nu^2}{64C^2}\|V\|^2.
+\end{equation}
+Indeed \(pY_L\le C[1+(BV+c)/(2C)]^2\), with nonnegative base,
+and \(\E e^{tBV}\le
+\exp(t\E BV+17t^2\|V\|^2/64)\) for \(t\ge0\).
+For one specified norm upper \(N\), the fourth payment equals
+one half of its eighth payment minus \(17N/(4C^2)\).
+This relation concerns the two proof expenses for this same vector.
+
+In short rows \(V=P(B)u+e\one\), its complete norm is
+\begin{equation}\label{eq:unit-p:complete-norm}
+ \|V\|^2=\int|P|^2\,d\nu+
+                2e\,\E[P(B)u]+e^2.
+\end{equation}
+We retain the mixed term. The subsequent tables specify either this
+complete vector or a proved positive enlargement of it.
+
+\begin{lemma}[Short-ledger normalization]\label{lem:unit-p:short-ledger}
+Write \(R=P_R(B)u\), with \(P_R\) its finite polynomial, and put
+\(Q_L=G_{r+L-2}+z^{L-1}P_R\).
+For \(r=2,3\), the exact upper \(Y_L\) of
+\eqref{eq:unit-p:ledger}, with \(\lambda=1\), has the form
+\(C_0q+BP_0(B)u+c_0\) with the following complete data:
+\begin{equation}\label{eq:unit-p:short-ledger}
+\begin{array}{cc|c|c|c}
+ r&L&C_0&P_0&c_0\\\hline
+ 2&1&1&Q_1&D\\
+ 2&2&1+D&Q_2&D_1-d\\
+ 2&3&1-d+D+D_1&Q_3+D&D_2-d\\
+ 2&4&1-2d+D+D_1+D_2&
+                   Q_4-d+DG_2+D_1&D_3-\tau-Dd\\
+ 3&1&1&G_2+P_R&D-d\\
+ 3&2&1-d+D&Q_2&D_1-d\\
+ 3&3&1-2d+D+D_1&Q_3-d+D&D_2-\tau .
+\end{array}
+\end{equation}
+For every real \(e\) and \(C>0\) with \(C\ge C_0-e\), the same
+table gives the positive comparison
+\begin{equation}\label{eq:unit-p:data-23}
+Y_L\le Cq+B(P_0u+e\one)+(c_0+e).
+\end{equation}
+\end{lemma}
+\begin{proof}
+Insert
+\[
+ \bar f_2=q+Bu,\quad \bar f_3=q+BG_2u-d,\quad
+ \bar f_4=(1-d)q+BG_3u-d,\quad
+ \bar f_5=(1-2d)q+B(G_4-d)u-\tau
+\]
+in the finite ledger. This gives each row, including every
+constant coordinate. Since \(B\one=u=q-\one\), the difference
+between the upper in \eqref{eq:unit-p:data-23} and the exact table is
+\((C-C_0+e)q\ge0\).
+The norm is then exactly \eqref{eq:unit-p:complete-norm}.
+\end{proof}
+
+\subsubsection{Centered inward arms and the minimum-four packet.}
+\begin{lemma}\label{lem:unit-p:inward-path}
+For every \(a\ge1\),
+\(\sigma(\bar f_a)<3\sqrt d/2\); for \(a=1,2,3\) one may use
+\(6\sqrt d/5\), and \(\sigma(q)=\sqrt d\).
+The first-row comparison in \eqref{eq:unit-p:ledger} for
+\(\bar f_ae^{R-\Gamma}\) has the actual coefficient
+\(\lambda=\mu_a\), with \(D_A\) from \eqref{eq:unit-p:data-2}.
+More precisely, for every real \(R\) with \(|R|\le1/2\),
+\[
+ T(\bar f_ae^R)\le\bar f_{a+1}+\mu_aBR+\delta_A,\qquad
+ \delta_A=\mu_a\E R+2\sigma(\bar f_a)\|R\|
+                                  +(12/5)\|R\|^2 .
+\]
+This formula allows the actual signed \(\delta_A\).
+The catalogue payments enlarge it to a nonnegative \(D_A\).
+\end{lemma}
+\begin{proof}
+With \(C_0=(I-J)B(I-J)\), finite iteration gives
+\[
+ \bar f_a-\mu_a
+   =\sum_{i=0}^{a-1}\mu_{a-1-i}C_0^iu .
+\]
+The coefficients belong to \([0,1]\). The finite-mask squared norm
+bound \(C_*=32768/16245<9/4\), applied on the centered subspace,
+gives the first assertion. This uses its operator norm, not an
+original pointwise row assertion on \(C_0\).
+The three short variances are
+\[
+ d,\qquad d+\delta_2-d^2,\qquad
+ d-\delta_2+\delta_3-d^2,
+\]
+each below \(36d/25\). The centered original row in
+Theorem~\ref{thm:unit-two-step-transport} gives \(D_A\).
+\end{proof}
+
+\begin{lemma}\label{lem:unit-p:minimum-four}
+Let
+\[
+ R=\sum_{i=1}^k\sum_{j=b_i+1}^{c_i}K^j\one,\qquad
+ a<b_1<c_1<\cdots<b_k<c_k,\quad b_1\ge4 .
+\]
+Then
+\[
+ \bar f_a\prod_i h_{b_i}f_{c_i}
+       \le \bar f_a e^{R-\Gamma},
+\]
+where a pair beginning at four contributes \(69d/20\) to
+\(\Gamma\), and every other pair contributes \(16d/5\).
+The following finite bounds hold on all \(0\le d\le1/3\).
+\begin{equation}\label{eq:unit-p:data-3}
+\begin{array}{c|c|c|c|c|c|c|c}
+ b_1,k&r_0&D_0/d&D_1/d&D_{i\ge2}/d&
+       \sum_{i\ge1}(D_i)_+/d&D_q/d&D_{\rm gen}/d\\\hline
+ 4,1&1/5&0&1/6&7/100&7/25&62/125&72/125\\
+ 4,k\ge2&1/4&1/12&1/5&1/12&2/5&11/15&5/6\\
+ \ge5,k\ge1&3/20&1/12&1/30&1/12&1/5&164/375&3/5
+\end{array}
+\end{equation}
+Here \(\|R\|\le r_0\sqrt d\), \(D_q\) is an admissible constant
+when \(a=1\), and \(D_{\rm gen}\) is admissible for every listed \(a\).
+\end{lemma}
+\begin{proof}
+The full finite path estimate
+\eqref{eq:compact-strong-path-means},
+\(\mu_n\le1-83d/32\), \(n\ge4\), and the positive convolution
+give, for \(t>4\),
+\[
+ h_4+f_t\le2+R_{4t}-4d+\delta_2(1+p)-\tau f_2.
+\]
+The original row identity
+\[
+ Kg(x)=\tfrac12\E_{y,z}
+ [(K(x,y)-K(x,z))K(y,z)]
+\]
+and \(|a-b|\le1-ab\) for \(a,b\in[-1,1]\) give
+\(|Kg|\le pq/2\), hence \(f_2\ge p^2/2\).
+Completing the square in \(p\ge0\) yields
+\[
+ \delta_2(1+p)-\tau f_2
+ \le\delta_2+\delta_2^2/(2\tau)\le663d/1216 .
+\]
+The resulting loss \(4201/1216\) exceeds \(69/20\).
+For \(s\ge5\), the same convolution gives
+\[
+ h_s+f_t\le2+R_{st}-(83/16)d+
+                         4\delta_2/(1-\theta^2).
+\]
+Its loss is at least \(83/16-1664/855>16/5\).
+Positive AM--GM proves the pair bounds.
+
+The disjoint finite coefficient masks start at powers five and six,
+respectively. The mask bound gives \(r_0=1/4\) or \(3/20\);
+the latter uses \(\theta^5C_*<9/400\).
+A single first interval is \(K^4G_{c_1-4}(K)g\), giving
+\((6/5)\theta^2=507/2560<1/5\).
+Removing one original \(K\) also proves \(|R|<1/3\).
+For every finite mask the exact signed formula is
+\[
+ D_i=\sum_j(-1)^ie_j\E K^{i+j}\one,\quad
+ \E K^{2r}\one=(-1)^r\delta_r,\quad
+ \E K^{2r+1}\one=0 .
+\]
+Its positive terms have \(j\equiv i\pmod4\); increasing either
+index by four multiplies the upper tail by at most \(\theta^2\).
+For the single interval the positive classes begin with
+\(\delta_3,\delta_4\), and their total is at most \(169d/608<7d/25\).
+For a mask beginning at five the total is
+\(201617d/519840<2d/5\); when it begins at six it is
+\(2197d/11552<d/5\). The same first signed terms give the
+individual columns of \eqref{eq:unit-p:data-3}.
+The \(q\)-row bound
+\(D_0+2\sqrt d\|R\|+(12/5)\|R\|^2\) gives \(D_q\).
+For a single pair beginning at four \(a\le3\), as also for
+several pairs beginning at four; use Lemma~\ref{lem:unit-p:inward-path}
+with \(6/5\). At minimum at least five use \(3/2\).
+These give precisely the \(D_{\rm gen}\) column.
+\end{proof}
+
+\subsubsection{Both moments of the minimum-four family.}\label{part:unit-p:minimum-four-payments}
+Put \(n=a+L\). For \eqref{eq:unit-p:comparison} take \(C=1\),
+\[
+ V=G_{n-1}(B)u+\mu_aB^{L-1}R .
+\]
+For \(L=1\), its constant-plus-mean is at most
+\(D-\beta_n-\beta_{n+1}+D_1\).
+For \(L\ge2\), replace the first two terms by
+\(2D+2\sum_{i=1}^{L-1}(D_i)_+\); this gives a positive upper
+because all discarded path factors lie in \([0,2]\).
+Use \(\beta_{n}+\beta_{n+1}\ge d\) at \(L=1\), the exact sum
+\(2d\) at \((a,L)=(1,2)\), and \(2\kappa d\) in all other
+\(L\ge2\) rows, where \(n\ge4\).
+The norm bounds are \(6/5+r_0\) at \(L=1\),
+\(6/5+13r_0/20\) at \(a=1,L=2\), and
+\(1+13r_0/20\) at \(L\ge2,n\ge4\).
+For each of the three seed rows, the cases are \(L=1\),
+\((a,L)=(1,2)\), and \(L\ge2,n\ge4\).
+For \(D=D_{\rm gen}\), substitution in
+\eqref{eq:unit-p:joint-payment} gives fourth losses greater than
+five in these nine rows.
+
+When \(a=1\), use \(D_q\), \(1+r_0\) at \(L=1\), and
+\(6/5+13r_0/20\) only at \(L=2\). At \(L\ge3\) use
+\(1+13r_0/20\). The exact smallest eighth losses are
+\begin{equation}\label{eq:unit-p:data-4}
+\begin{array}{c|c}
+ b_1,k&\text{loss}/d\\\hline
+ 4,1&70981/30000>2\\
+ 4,k\ge2&121127/6400+128(k-2)/5>18+128(k-2)/5\\
+ b_1\ge5&601503/160000+128(k-1)/5>3+128(k-1)/5 .
+\end{array}
+\end{equation}
+Each entry is a direct payment for the same positive comparison;
+the fourth conclusion is not derived by interpolating the eighth.
+
+\subsubsection{A same-direction high-domain comparison.}
+\begin{lemma}\label{lem:unit-p:three-centered}
+\begin{equation}\label{eq:R37:centered-pair}
+ f_3h_c\le e^{-d},\qquad h_3f_c\le e^{-d}
+ \quad(c\ge4,\ d\ge1/8).
+\end{equation}
+Moreover
+\[
+ \log\E[(p\bar f_n)^8]\le253d/32\quad(n\ge3),
+ \qquad \log\E[(p\bar f_2)^8]\le9d .
+\]
+\end{lemma}
+\begin{proof}
+Let \(\eta=\beta_{c-1}\), \(\Gamma_0=d+\beta_c+\eta\),
+\(U=\sum_{j=3}^{c-1}K^j\one\), and \(R=\eta g-KU\).
+Finite positive convolution gives the actual arm sums
+\[
+ f_3+h_c\le2-\Gamma_0+R,\qquad
+ h_3+f_c\le2-\Gamma_0-R .
+\]
+Since \(\E U=d-\beta_c\), put
+\(\alpha=\eta-\E U=\Gamma_0-2d\).
+Centering the original row and using \(g^2+pq=1\) gives
+\[
+ |R|\le\sqrt{\alpha^2+\operatorname{Var}U}.
+\]
+For \(c=4,5,\ge6\), respectively, the lower bounds for \(\alpha/d\)
+are \(1,\kappa,3/16\). The finite \(G_1,G_2,G_{n\ge3}\) bounds give
+\[
+ \operatorname{Var}U/d^2\le
+ 169/128,\quad7605/4096,\quad169/128 .
+\]
+They are smaller than \(3,35/16,11/8\), respectively, hence
+\(\operatorname{Var}U\le d^2+2\alpha d\).
+Thus \(\Gamma_0-|R|\ge d\), and positive AM--GM proves both
+inequalities without changing a direction.
+
+For a bare path, retain \(\beta_n\) in its finite convolution and
+apply \eqref{eq:unit-p:joint-payment}:
+\[
+ \log\E[(p\bar f_n)^8]
+ \le-8\beta_n-8\beta_{n+1}+17\|G_{n-1}(B)u\|^2.
+\]
+At \(n=3\) the actual norm is \(d+\delta_2\), giving \(253d/32\).
+For \(n\ge4\) it is at most \(d\), giving \(15d/2\).
+At \(n=2\), \(p+\bar f_2=2+Bu\) gives \(-8d+17d=9d\).
+\end{proof}
+
+\subsubsection{First pair three with a full later mask.}\label{part:unit-p:three-later}
+Suppose \(a=1,2\), \(k\ge2\), and
+\[
+ F=\bar f_af_3h_c\prod_{i\ge2}h_{b_i}f_{c_i}.
+\]
+The one finite seed is
+\[
+ \eta=\beta_{c-1},\quad W=\sum_{j=4}^cK^j\one,\quad
+ S=\sum_{i\ge2}R_{b_ic_i},\quad R=\eta g-W+S,
+\]
+\begin{equation}\label{eq:unit-p:data-5}
+\Gamma=d+\beta_c+\eta+(16/5)(k-1)d .
+\end{equation}
+On \(d\le1/6\) it has \(|R|\le d+(2/3)\sqrt d<1/2\).
+The complete low-domain data are
+\begin{equation}\label{eq:unit-p:data-6}
+\begin{array}{c|c|c|c|c|c|c|c}
+ c&\|R\|^2/d&r_0&D_2/d&D_3/d&T&
+             D_q/d&D_{\rm gen}/d\\\hline
+ 4&79/400&9/20&1/4&1/30&3/5&687/500&777/500\\
+ 5&3/20&2/5&1/5&1/6&17/25&29/25&33/25\\
+ \ge6&3/25&7/20&1/5&1/6&17/25&247/250&141/125
+\end{array}
+\end{equation}
+Here \(D_0\le0\), \(D_1\le d/5\),
+\(\sum_{i\ge1}(D_i)_+\le Td\), and \(\|R\|\le r_0\sqrt d\).
+At \(k=2\) the corresponding lower \(\Gamma/d\) values are
+\(31/5,927/160,431/80\).
+
+We give the finite justification of all columns. Relative to \(g\),
+the multiplier is
+\(\eta-\sum_{j=3}^{c-1}z^j+P_S(z)\), with the zero-one later
+mask starting at degree \(c+1\). For \(c=4\) its real part is in
+\([-1/12,1/5]\) and its nonnegative imaginary part is at most
+\((3/2)x^{3/2}\). For \(c=5\) use \([-1/4,1/6]\) and
+\((13/12)x^{3/2}\). For \(c\ge6\) use real absolute bound \(9/50\)
+and the same latter imaginary bound. Indeed the continuous real
+interval is between \(x^2(1-x)\) and \(x^2\), its imaginary interval
+between \(-x^{3/2}\) and \(-x^{3/2}(1-x)\), and the disjoint
+later tail is smaller than the retained leading terms.
+Squaring gives \(79/400,3/20,3/25\), respectively.
+
+The exact signed formula
+\[
+ D_i=(-1)^i\left[
+  \eta\E K^{i+1}\one-\sum_{j=4}^c\E K^{i+j}\one
+                         +\sum_{j\in S}\E K^{i+j}\one\right]
+\]
+has \(D_0\le0\), since \(\E W\ge\kappa\delta_2\) while
+\(\E S\le\delta_4/(1-\theta^2)<\delta_2/5\).
+The positive mixed tail in \(D_1\) starts at \(\delta_5\).
+The positive \(S\) contribution to \(D_2\) starts at \(\delta_4\)
+when \(c=4\), and at \(\delta_6\) otherwise. At \(D_3\), the
+\(\eta g\) term is nonpositive; the continuous contribution is
+zero at \(c=4\) and at most \(\delta_4\) otherwise.
+Continuing the four residue classes gives exactly the \(D_2,D_3,T\)
+columns. For every \(L\ge4\), original Cauchy--Schwarz also gives
+\[
+ D_L/d\le(4/15)r_0,\qquad
+ \|B^{L-1}R\|/\sqrt d\le(4/15)r_0 .
+\]
+Finally \(\sigma(q)=\sqrt d\) gives \(D_q\), whereas
+\(\sigma(\bar f_2)<6\sqrt d/5\) gives \(D_{\rm gen}\).
+
+For the fourth moment use \(D_{\rm gen}\) and the following
+complete expenses; \(M=(c+\E BV)/d\) and
+\(\|V\|\le N\sqrt d\):
+\begin{equation}\label{eq:unit-p:data-7}
+\begin{array}{cc|c|c}
+ c&L&M&N\\\hline
+ 4&1&377/500&33/20\\
+ 4&2&5141/2000&597/400\\
+ 4&\ge3&6741/2000&517/400\\
+ 5&1&13/25&8/5\\
+ 5&2&821/400&73/50\\
+ 5&\ge3&241/80&63/50\\
+ \ge6&1&41/125&31/20\\
+ \ge6&2&3337/2000&571/400\\
+ \ge6&\ge3&5257/2000&491/400
+\end{array}
+\end{equation}
+The two beta sums are at least \(d\) at \(L=1\) and
+\(2\kappa d\) thereafter. At \(L=2\) the positive partial sum
+contains only \(D_1\); the contracting \(G\) applies at \(L\ge3\).
+These facts and \eqref{eq:unit-p:data-6} derive the table.
+Every direct fourth loss exceeds four.
+
+For \(a=1\) use the smaller \(D_q\).
+At \(L=1\) use \(M=D_q/d-1+1/5\), \(N=1+r_0\).
+At \(L=2\) use
+\[
+ M=2D_q/d+2/5-2+D_2/d,\qquad N=6/5+13r_0/20.
+\]
+The smallest eighth loss there is \(87607/160000>1/2\).
+At \(L=3\), only \(D_1,D_2\) enter the partial sum and
+\(\beta_4+\beta_5\ge51d/32\); this gives
+\(M\le21/10,17/10,27/20\), and \(N\le6/5\).
+For all \(L\ge4\) use
+\begin{equation}\label{eq:unit-p:data-8}
+M=2D_q/d+2T-2\kappa+(4/15)r_0,\qquad
+ N=1+(4/15)r_0 .
+\end{equation}
+Substitution gives eighth loss at least \(d/2\) in every row.
+Additional pairs increase the fourth loss by \(64d/5\) and
+the eighth loss by \(128d/5\), without increasing the finite mask.
+
+For \(d\ge1/6\), Lemma~\ref{lem:unit-p:three-centered} and
+\(|S|\le\sqrt d/4\le5d/8\) give, in the same actual direction,
+\[
+ F\le
+ e^{-[143/40+(16/5)(k-2)]d}\bar f_a .
+\]
+The bare fourth cost is at most \(d/4\), and at \(a=1\) the
+bare eighth cost is at most \(9d\).
+Thus this complementary interval preserves both claimed rates,
+including \(L=1\), and meets the low interval at its endpoint.
+
+\subsubsection{The three-arm packet, including its two inward minima.}\label{part:unit-p:three-single}
+For \(F=\bar f_af_3h_c\), \(a\in\{1,2\}\), \(c\ge4\), put
+\begin{equation}\label{eq:unit-p:data-9}
+\eta=\beta_{c-1},\quad W=\sum_{j=4}^cK^j\one,\quad
+ R=\eta g-W,\quad \Gamma=d+\beta_c+\eta .
+\end{equation}
+The two arm sums in Lemma~\ref{lem:unit-p:three-centered} prove
+this exponential upper. Work first on \(d\le1/8\).
+Write \(j=c-3\ge1\), so \(W=K^3G_j(K)g\).
+The original point range is below \(d+(6/5)\theta\sqrt d<1/2\).
+The available losses are \(3d\) at \(c=4\),
+\(2d+\tau\) at \(c=5\), and at least \(d+2\tau\) at \(c\ge6\).
+In particular \(\Gamma\ge35d/16\); at both \(c=4,5\) one
+may use the lower bound \(2d+\tau\).
+
+There are two first rows for this one seed. At \(a=1\), use
+the Q row of \eqref{eq:unit-p:data-2}. At \(a=2\), expand the actual
+\(\bar f_2=1-g+Kg\) with coefficient one:
+\begin{equation}\label{eq:unit-p:data-10}
+T(\bar f_2e^R)\le\bar f_3+BR+D,\quad
+ D\ge\E R-\E(gR)+\E[(Kg)R]
+                  +\sqrt{(d+\delta_2)\E R^2}
+                  +\tfrac{12}{5}\E R^2 .
+\end{equation}
+The following choices are valid:
+\begin{equation}\label{eq:unit-p:data-11}
+D^{(1)}=7d/20,\qquad
+ D^{(2)}=
+ \begin{cases}17d/32,&c=4,5,\\ d/2,&c\ge6.\end{cases}
+\end{equation}
+Here is a direct same-moment verification. At \(c=4\),
+\[
+ R=dg-K^4\one,\quad \Gamma=3d,\quad
+ \E R^2=d^3+\delta_4,\quad
+ \E R-\E(gR)+\E[(Kg)R]=-\delta_2-d^2+\delta_3 .
+\]
+Put \(t=\delta_2/d\).
+The Q-row error is at most
+\[
+ \theta\sqrt t-(773/1280)t+(12/5)d^2
+ \le845/12368+3/80<7/20.
+\]
+For the uncentred B row use
+\(\sqrt{(1+t)(d^2+\theta^2t)}
+ \le(1+t)/6+(3/2)(d^2+\theta^2t)\).
+Its error divided by \(d\) is at most
+\[
+ 1/6-d+(39/10)d^2+
+             t[-\kappa+1/6+(39/10)\theta^2]
+ \le1/6+\theta[-\kappa+1/6+(39/10)\theta^2]<17/32 .
+\]
+The \(t\) coefficient is positive and
+\(-d+(39/10)d^2\le0\) throughout this domain.
+Thus the same two first-row constants cover the genuine \(G_1\).
+For \(c=5\), set
+\(t=\delta_2/d\), \(J=d^2+[\theta^2(1+\theta)-2\theta d]t\).
+Then
+\[
+\begin{aligned}
+ \E R-\E(gR)&=-\delta_2-d^2+\delta_3,\\
+ \E R-\E(gR)+\E[(Kg)R]&=-\delta_2-d^2+2\delta_3,\\
+ \E R^2&=d^3+\delta_4+\delta_5-2d\delta_3\le dJ .
+\end{aligned}
+\]
+Use \(\sqrt J\le1/8+2J\) for \(a=1\), and
+\(\sqrt{(1+t)J}\le(1+t)/6+3J/2\) for \(a=2\).
+The resulting bounds are \(156575/524288<3/10\) and
+\(5514615/10485760<17/32\).
+For \(c\ge6\), the finite alternating sums give
+\[
+\begin{gathered}
+ \E W-\E(gW)\ge\delta_2-2\delta_3,\quad
+ \kappa\delta_3\le\E(gW)\le\delta_3,\quad
+ \|W\|^2\le\theta\delta_3,\\
+ \E W+\E[(Kg)W]\ge\kappa(\delta_2-\delta_3).
+\end{gathered}
+\]
+The last assertion is the alternating sum beginning
+\((\delta_2-\delta_3)-(\delta_3-\delta_4)\); its successive
+differences contract by \(\theta\).
+Now \(\E R^2/d\le d^2+[\theta^2-2\kappa^2\theta d]t\).
+The two Young bounds yield
+\[
+ \frac18-\kappa d+\frac{22}{5}d^2+
+ t\left[b+\frac{22}{5}\theta^2
+                   -\frac{44}{5}\kappa^2\theta d\right],
+ \quad b=-3/16,\quad b=1/8+55/1024,
+\]
+respectively. Both \(t\) coefficients are positive. At \(t=\theta\)
+the \(d\)-derivative is at most
+\(11/10-\kappa-(44/5)\kappa^2\theta^2<0\).
+At zero the values are \(28167/81920<7/20\) and
+\(80709/163840<1/2\). This proves \eqref{eq:unit-p:data-11}.
+
+The one signed sequence satisfies
+\begin{equation}\label{eq:unit-p:three-moments}
+\begin{gathered}
+ -\delta_3\le D_1\le d^2,\quad 0\le D_2\le\delta_3,\quad
+ -\eta\delta_2\le D_3\le\delta_4,\quad D_4\le0,\\
+ D_i\le\theta^4d<d/36\quad(i\ge4),\qquad
+ \sum_{i\ge1}(D_i)_+
+       \le(169/608)d+(1024/855)d^2 .
+\end{gathered}
+\end{equation}
+Indeed its exact formula is
+\[
+ D_i=(-1)^i\left[\eta\E K^{i+1}\one
+                         -\sum_{r=4}^c\E K^{i+r}\one\right].
+\]
+The positive \(\eta g\) class has \(i=1\bmod4\), whereas
+the positive continuous classes have \(i=2,3\bmod4\).
+Thus their separate maxima are not charged in the same class.
+At \(c=4\), the initial values are exactly
+\(-\delta_2,d^2,\delta_3,-d\delta_2,-\delta_4\).
+The two later positive classes give the same bounds in
+\eqref{eq:unit-p:three-moments}, using \(d\le1/8<\theta^2\).
+
+For either \(a\), let
+\begin{equation}\label{eq:unit-p:data-12}
+Q_L=G_{L+a-1}-\eta z^{L-1}-z^{L+2}G_j(-z),\qquad
+ G_j(-z)=U-zV,\quad 1-x\le U\le1,\quad0\le V\le1.
+\end{equation}
+These coordinate intervals include \(j=1\), with \((U,V)=(1,0)\).
+The norm arguments below require no positive lower bound on \(V\).
+At \(L=1\), the positive comparison has \(C=1\) and
+\[
+\begin{array}{c|c|c|c}
+ a&V& (c+\E BV)/d&\|V\|^2/d\\\hline
+ 1&(1-\eta-z^3G_j(-z))u&-21/40&3/2\\
+ 2&(G_2-\eta-z^3G_j(-z))u&-43/32&9/4 .
+\end{array}
+\]
+In the second row the scalar is \(c=D^{(2)}-d\); in the first
+it is \(D^{(1)}\). The squared coordinate upper bounds are
+\((1+x^2)^2+x^3<3/2\) and
+\(1+x+4x^2+x^3+x^4\le45901/20736<9/4\), respectively.
+The direct fourth rates are \(179/40\) and \(73/16\), both
+larger than four.
+
+At \(a=1\) the three remaining short complete vectors are
+\begin{equation}\label{eq:unit-p:data-13}
+\begin{array}{c|c|c|c}
+ L&c&V_{\rm tot}&\E BV_{\rm tot}\\\hline
+ 2&D+D_1-d&Q_2u+D\one&-d+D_2\\
+ 3&D+D_1+D_2-2d&(Q_3+D)u-\lambda\one&-\tau+D_3-Dd\\
+ 4&-\eta_0-\tau-Dd+D_3&
+       (Q_4-\lambda+Dz)u-\eta_0\one&-\tau+D_4+\lambda d
+\end{array}
+\end{equation}
+Here \(D=7d/20\), \(\lambda=d-D-D_1\), and
+\(\eta_0=2d-D-D_1-D_2\).
+This table is obtained by expanding the actual
+\(\bar f_3,\bar f_4,\bar f_5\) in the finite ledger.
+
+At \(L=2\), the two coordinates of \(Q_2\) are
+\(1-x^2U\), \(1-\eta+x^2V\), positive, and
+\[
+ |Q_2|^2\le
+ 1+x-2x^2+4x^3+x^4-x^5+x^6<11/8.
+\]
+Adding \(D\one\) decreases the norm, because
+\(\E Q_2u=-d+D_1\) and \(D\le2(d-D_1)\).
+At \(L=3\), its coordinates are
+\(1-(1-\eta)x-x^3V\), \(1-x^2U\), proving \(|Q_3|\le1\).
+Here \(0<\lambda\le d\) and
+\(\E[(Q_3+D)u]=-d+D_2\in[-d,0]\). The complete norm is at most
+\begin{equation}\label{eq:unit-p:data-14}
+(1+D)^2d+\lambda^2+2\lambda d
+ \le d+(15/4)d^2\le47d/32.
+\end{equation}
+At \(L=4\), the squared excess of \(Q_4\), divided by \(x\),
+is at most
+\(-1-3x/4+(177/64)x^2-2x^3+x^5\le-71/256\).
+Thus \(|Q_4|\le1\), \(\Re Q_4\ge\kappa\), and
+\(|Q_4-\lambda+Dz|^2\le1+d/2\).
+Since \(0<\eta_0<11d/6\) and the mean of this last vector is
+in \([-9d/8,0]\), \eqref{eq:unit-p:complete-norm} gives
+\[
+ \|V_{\rm tot}\|^2\le
+ d+(575/72)d^2\le1151d/576<2d .
+\]
+These ranges follow from
+\(0<\lambda\le d,\ D_1\in[-\delta_3,d^2]\),
+\(0\le D_2<d/6\), and
+\(\E[(Q_4-\lambda+Dz)u]=-\tau+D_3-Dd\);
+the lower mean bound uses \(D_3\ge-\eta\delta_2\).
+Consequently the short \(a=1\) payments are
+\begin{equation}\label{eq:unit-p:data-15}
+\begin{array}{c|c|c|c}
+ L&(c+\E BV_{\rm tot})/d&\|V_{\rm tot}\|^2/d&
+               \text{eighth exponent}/d\\\hline
+ 2&-163/120&11/8&-599/120\\
+ 3&-15/8&47/32&-241/32\\
+ 4&-7/3&2&-13/6 .
+\end{array}
+\end{equation}
+All direct fourth payments in these same rows are less than
+\(-4d\).
+
+For \(a=2\), enlarge \(D\) to \(17d/32\), and put
+\(\lambda=d-D=15d/32\).
+At \(L=2\), \(Q_2\) has positive coordinates
+\(1-x-x^2U,\ 1-\eta+x^2V\) and \(|Q_2|\le1\).
+The complete data are
+\[
+ c=D+D_1-2d,\quad
+ V_{\rm tot}=Q_2u-\lambda\one,\quad
+ \E BV_{\rm tot}=-\tau+D_2.
+\]
+Its mean sum is at most \(-85d/48\), its norm squared below
+\(3d/2\), and the eighth expense at most \(-6d\).
+Indeed \(\E Q_2u=-d+D_1\), so the entire constant-vector
+cost is at most \((10/3)d^2\), using
+\(0<\lambda\le d\), \(D_1\ge-\delta_3\), and \(\delta_3<d/6\).
+At \(L=3\),
+\[
+ |Q_3|\le1-3x/8+(7/25)x^2\le1,\qquad \Re Q_3>1/2.
+\]
+Here \(|G_4|\le1-x/2-x^2/2\), \(\eta\le1/8\), and
+\(|G_j(-z)|<6/5\), including \(G_1\); also
+\((6/5)\sqrt x-1/2\le7/25\).
+The real lower bound is \(1-x-x^3>1/2\).
+Consequently \(|Q_3-\lambda|\le1\).
+With \(\eta_0=2d-D-D_1\) the complete data are
+\[
+\begin{gathered}
+ c=D+D_1+D_2-2d-\tau,\quad
+ V_{\rm tot}=(Q_3-\lambda)u-\eta_0\one,\\
+ \E BV_{\rm tot}=-\tau+\lambda d+D_3 .
+\end{gathered}
+\]
+The mean sum is below \(-2d\), the complete norm is below
+\(9d/5\), and the eighth expense at most \(-29d/10\).
+More explicitly its mean sum divided by \(d\) is at most
+\(17/32+1/8+1/6+1/14+1/8-2-19/16=-1457/672\).
+Also \(0<\eta_0<5d/3\) and
+\(\E[(Q_3-\lambda)u]=-\tau+D_2\in[-\tau,0]\);
+thus the complete norm is at most \(d+(55/9)d^2<9d/5\).
+The two corresponding direct fourth payments are below \(-4d\).
+
+\subsubsection{One whole finite tail for both inward minima.}\label{part:unit-p:three-tail}
+For \(a=1,L\ge5\) or \(a=2,L\ge4\), put \(n=a+L\ge6\).
+Retaining the four genuine convolution terms at indices
+\(0,1,2,3\) gives
+\[
+ \bar f_n\le Cq+B[G_{n-1}-\tau(2+z)]u-\tau(1-d),
+ \quad C=1-3\tau,\quad a_0=1-2\tau.
+\]
+The polynomial for this same complete upper is
+\[
+ P=G_{L+a-1}-\tau(2+z)-\eta z^{L-1}
+                                      -z^{L+2}G_j(-z).
+\]
+It satisfies \(|P|\le a_0\) for every finite index.
+At \(a=2,L=4\) its two coordinates are at most
+\(a_0-x+x^2+x^3\) and \(1-\tau-7x/8\).
+Their squared excess divided by \(x\) is at most
+\[
+ -1+2\tau+\tau^2+(5/4-9\tau/4)x
+              +(49/64-4\tau)x^2-x^3+2x^4+x^5.
+\]
+The leading negative magnitude is at least \(47/64\).
+The remaining positive part satisfies
+\[
+ 180800/248832<47/64.
+\]
+At \(L=5\) the common coordinate bounds for both \(a\) are
+\[
+ a_0-x+(1-\eta)x^2+x^4V,\qquad
+ 1-\tau-x+x^2+x^3.
+\]
+The resulting quotient is at most
+\[
+ -1+2\tau+\tau^2+(1-2\tau)x+(1-2\tau)x^2
+              +(3-6\tau)x^3-3x^4+4x^5+x^6+x^7 .
+\]
+Its derivative in \(\tau\) is positive. At \(\tau=1/8\)
+its positive part after deleting \(-3x^4\) is at most
+\(1217/1800<47/64\).
+For all \(L\ge6\) use only the scalar comparator
+\(P_\infty=(1-z)^{-1}-\tau(2+z)\). Direct algebra gives
+\[
+ a_0^2-|P_\infty|^2
+    =x[a_0/(1+x)-\tau^2],\qquad
+ a_0-|P_\infty|>x/3.
+\]
+The actual finite remainder divided by \(x\) is at most
+\[
+ x^2+x^{3/2}/8+(6/5)x^3\le85/288<1/3 .
+\]
+This proves every finite tail; \(x=0\) is equality.
+
+Let \(P_{\rm cost}=2D^{(a)}+2\sum_{i\ge1}(D_i)_+\).
+The positive comparison is
+\[
+ Y_L\le Cq+BPu+P_{\rm cost}-\tau(1-d),\qquad
+ \E BPu=-\beta_{n+1}+2\tau d+D_L .
+\]
+By \eqref{eq:unit-p:three-moments}, for either \(a\),
+\begin{equation}\label{eq:unit-p:data-16}
+P_{\rm cost}+D_L\le Ad+2bd^2,\qquad b=6/5,\quad
+ A=\begin{cases}5/3,&c=4,5,\\8/5,&c\ge6.\end{cases}
+\end{equation}
+Here \(D_1\le d^2\), \(D_2\le\delta_3\), and the finite tail
+bound are combined before enlarging constants; these bounds are
+also valid for the smaller \(a=1\) first-row error.
+For \(c\ge6\) the unrounded linear constant is \(4333/2736<8/5\);
+for \(c=4,5\) it is \(563/342<5/3\).
+
+Set \(t=\tau/d\in[\kappa,1]\), a global moment ratio, not the
+frequency \(x\). Using \(\log C\le-3\tau\) in
+\eqref{eq:unit-p:joint-payment}, the eighth expense times
+\(C^2/d\) is bounded by
+\begin{equation}\label{eq:unit-p:data-17}
+\begin{aligned}
+ F={}&9+8A-56t
+ +d[288t^2+(4-24A)t+16b]\\
+ &-d^2[360t^3+76t^2+48bt] &&(c\ge6),\\
+ F_5={}&1+8A-48t
+ +d[240t^2+(52-24A)t+16b]\\
+ &-d^2[288t^3+148t^2+48bt] &&(c=4,5).
+\end{aligned}
+\end{equation}
+On the whole rectangle \(0\le d\le1/8,\ \kappa\le t\le1\),
+the degree-\((2,3)\) Bernstein coefficients of
+\(-F-(1-3td)^2\) have minimum \(573959/1310720>0\).
+Those of \(-F_5-2(1-3td)^2\) have minimum
+\(1359451/983040>0\).
+These are the exact coefficients from
+\eqref{eq:bernstein-coefficients}. Lemma~\ref{lem:bernstein-certificate}
+therefore gives eighth expenses \(-d\) and \(-2d\),
+respectively, simultaneously for both \(a\).
+Since \(a_0\ge C>0\), their direct fourth expenses are at most
+\(-19d/4\).
+
+For \(d\ge1/8\), the same direction satisfies
+\[
+ pT^L(\bar f_af_3h_c)\le e^{-d}p\bar f_{a+L}.
+\]
+It has fourth rate four, except at \(a=L=1\) where the bare
+fourth cost \(d/4\) gives \(15/4\). At \(a=1,L\ge2\)
+its eighth rate is \(3/32\). The unit-connector eighth input
+\(\E[(pT(qf_3h_c))^8]\le1-d/500\) is the actual one-step
+theorem of Section~\ref{proof:Q5-C065}.
+Thus the common eighth bound for \(qf_3h_c\), \(c\ge4\),
+is \(1-d/601\).
+
+\subsubsection{First pair two and at least three pairs.}\label{part:unit-p:two-many}
+Here
+\[
+ F=qf_2h_c\prod_{i\ge2}h_{b_i}f_{c_i},\quad k\ge3.
+\]
+Put \(\eta=\beta_{c-1}\), \(\alpha=1-\eta\),
+\(W=\sum_{j=2}^{c-1}K^jg\), and \(S=\sum_{i\ge2}R_{b_ic_i}\).
+The actual arm sum and \(q\le e^{-g}\) give the single unweighted seed
+\begin{equation}\label{eq:unit-p:data-18}
+F\le e^{R-\Gamma},\quad R=-\alpha g-W+S,\qquad
+ \Gamma=\beta_c+\eta+(16/5)(k-1)d
+        \ge[1+(16/5)(k-1)]d .
+\end{equation}
+The \(q\) is absorbed only into this upper bound; it is still the
+terminal's original unit arm.
+
+On \(d\le1/6\) the finite polynomial
+\(P_0(z)=\alpha+\sum_{j=2}^{c-1}z^j-P_S(z)\)
+has the following coordinate bounds. The later mask starts at
+degree \(c+1\).
+\begin{equation}\label{eq:unit-p:data-19}
+\begin{array}{c|c|c}
+ c&\text{positive real part, upper}&
+                    |\text{imaginary part}|\\\hline
+ 3&1-4x/5&x^{5/2}/(1-x^2)\\
+ 4&1-4x/5&(3/2)x^{3/2}\\
+ \ge5&1-3x/8&(13/12)x^{3/2}.
+\end{array}
+\end{equation}
+They follow by summing the four finite signed residue intervals.
+The positive real lower bounds are
+\(1-x-x^2/(1-x^2)\) at \(c=3\), and
+\(5/6-x-x^4/(1-x^2)\) otherwise. The squared excess quotients
+are bounded by
+\[
+ -8/5+8/25+1/25,\quad
+ -8/5+8/25+3/8,\quad -1673/3456 ,
+\]
+all negative. Hence \(\|R\|^2\le d\).
+The original row gives
+\(|R|<1+(6/5)\sqrt d<3/2\).
+Use \(e^R\le1+R+R^2\), obtaining \(D=25d/12\).
+
+The exact signed classes give
+\[
+ D_0\le d/12,\quad
+ D_1\le-\alpha d+(3/2)\delta_2\le-43d/192<0,\quad
+ D_2<d/4,\quad |D_i|\le\theta^{(i-1)/2}d\ (i\ge3).
+\]
+Thus the unweighted convolution losses
+\(\gamma_j=\beta_j-D_{j-1}\) satisfy
+\(\gamma_3\ge3d/4,\gamma_4\ge\kappa d,\gamma_j>d/4\) for \(j\ge5\).
+Retain \(D_1\) until its sign is known, then discard it and the
+other nonpositive path terms, keeping the last gamma loss.
+If \(P=P_0(-z)=A+zV\), the coordinates also give
+\[
+ 0<A\le1,\quad |P|\le1,\quad
+ |V|\le3x/2,\quad V\ge-x^2/(1-x^2).
+\]
+For \(Q_n=G_n+z^nP\),
+\[
+ |Q_1|^2\le455/288<8/5,\quad
+ |Q_2|^2\le249/128<2,\quad
+ |Q_n|\le1+\theta^{3/2}<19/15\quad(n\ge3).
+\]
+These prove, with \(C=1\), the four complete comparison rows:
+\begin{equation}\label{eq:unit-p:data-20}
+\begin{array}{c|c|c|c|c}
+ L&(c+\E BV)/d&\|V\|^2/d&
+            \text{fourth loss}/d&\text{eighth loss}/d\\\hline
+ 1&119/64&1&1433/80&\\
+ 2&41/12&8/5&137/15&14/3\\
+ 3&271/96&2&1177/120&157/60\\
+ \ge4&11/3&361/225&7303/900&583/225 .
+\end{array}
+\end{equation}
+At \(L=1\), the direct eighth payment also exceeds \(5/2\).
+For \(L=2\), only the two indicated short terms occur; for larger
+\(L\) the finite gamma bound pays the whole tail.
+Each extra pair adds \(64d/5\) or \(128d/5\) to the fourth or
+eighth loss. 
+
+For \(d\ge1/6\), \(h_c\le2\), \(|S|\le(3/8)\sqrt d\le15d/16\),
+and \(2\le e^{9d/2}\). The same actual factors satisfy
+\[
+ F\le e^{-[77/80+(16/5)(k-3)]d}qf_2 .
+\]
+The all-length ordinary eighth theorem for the actual \(qf_2\)
+input bounds its fourth as well by one.
+Consequently the global fourth rate is at least \(77/20\),
+and the eighth rate exceeds \(1/2\), for every \(L\).
+
+\subsubsection{One \(q\)-weighted square for the shortest-two triples.}\label{part:unit-p:shortest-two}
+For \(F=qf_2h_c\), \(c\ge3\), use the following actual arm sums:
+\begin{equation}\label{eq:unit-p:data-24}
+\begin{array}{c|c|c|c|c}
+ c,\text{direction}&m&U=(A-Bz)u&d_{\max}&D\\\hline
+ 3,\ h_3&1-d/2&\mathsf Xu&1/3&3d/8\\
+ 3,\ \bar f_3,\ L=2&1-d/2&(\mathsf X-2B)u&1/3&
+                         \text{specified below}\\
+ 4,\ h_4&1-d&(d+\mathsf X-\mathsf XB)u&1/4&d/2\\
+ c\ge5,\ h_c&1-9d/8&\text{retained }U_c&1/5&2d/5 .
+\end{array}
+\end{equation}
+Here \(\mathsf X=-B^2\), and the \(B\)'s inside the vector
+column are the skew operator; \(A(x),B(x)\) in \(U\)'s coordinate
+description are scalar coordinates.
+In each row the sum of the two actual nonnegative arms is
+bounded by \(2m-U\). Thus \(F\le q(m-U/2)^2\) with
+nonnegative square base. The exceptional row uses \(qf_2\bar f_3\),
+so it has no asserted canonical \(h_3\) fourth counterpart.
+
+Let \(k=1/m,\ R=-kU\).
+The QS first row of \eqref{eq:unit-p:data-2} and
+\eqref{eq:unit-p:short-ledger} are the only propagation used.
+For the canonical \(c=3\) row,
+\[
+ D_{\rm actual}=-k\delta_2+k\sqrt{d\delta_3}+k^2\delta_3,
+ \qquad
+ D_{\rm actual}/d\le\frac{k\theta}{4(1-k\theta)}
+                    \le39/164<1/4 .
+\]
+We choose \(D=3d/8\) to retain one convenient long normalization.
+Its exact sequence has
+\begin{equation}\label{eq:unit-p:data-25}
+D_1=k\delta_2,\quad D_2=0,\quad D_3=-k\delta_3,\quad D_4=0,
+ \quad\gamma_j\ge49d/96\quad(j\ge3).
+\end{equation}
+The last statement follows from
+\(\gamma_3\ge41d/80\), \(\gamma_4=d\), and the first remaining
+positive class \(k\delta_4<d/12\), followed by factors \(\theta^2\).
+
+For \(c=4\) the actual raw moments are
+\[
+ \E U^2=d^3+2d\delta_2+\delta_3+\delta_4,\qquad
+ \E U-\E(gU)=d^2+2\delta_2.
+\]
+Writing \(t=\delta_2/d\), Young's inequality gives
+\[
+ D_{\rm actual}/(kd)\le
+ 3/8-d+2d^2+t[-2+4d+2\theta(1+\theta)]\le3/8.
+\]
+If the bracket is negative discard it; otherwise take \(t=\theta\),
+where the residual increases to \(-1099/16384<0\).
+As \(k\le4/3\), \(D=d/2\) is admissible.
+The exact signed classes are
+\[
+ D_{2j-1}=(-1)^{j+1}k(d\delta_j+\delta_{j+1}),\qquad
+ D_{2j}=(-1)^{j+1}k\delta_{j+2}.
+\]
+Their first two upper bounds are \(7d/8,d/4\).
+Every positive term from index three on is below \(d/6\):
+the first are \(k(d\delta_3+\delta_4)\le1183d/8192\)
+and \(k\delta_5\), followed by \(\theta^2\).
+Hence
+\begin{equation}\label{eq:unit-p:data-26}
+\gamma_3\ge d/8,\quad\gamma_4\ge3d/4,\quad
+ \gamma_j\ge41d/96\quad(j\ge5).
+\end{equation}
+
+For \(c\ge5\), Lemma~\ref{lem:reference-retained-packet}, at
+\(\sigma=9/4\), proves the actual QS row \(D=2d/5\) and all
+its finite signed classes. It retains
+\[
+ D_1,D_2\ge0,\quad D_3,D_4\le0,\quad
+ D_1+D_2<5d/4,\quad
+ \gamma_3,\gamma_4\ge0,\quad\gamma_{j\ge5}\ge41d/96.
+\]
+The real retained coefficients also give
+\begin{equation}\label{eq:unit-p:data-27}
+0\le kA,kB<1,\quad
+ \|1-kBx+z(1-kA)\|^2\le8/7,\quad
+ \|1-x+kAx+z(1-kBx)\|^2\le8/7 .
+\end{equation}
+These are the two actual short-polynomial inequalities
+\eqref{eq:retained-reference:Q2-tight} and
+\eqref{eq:retained-reference:Q3-tight}, not an arbitrary
+independent rectangle substituted for the retained coefficients.
+
+\begin{lemma}[Two finite geometric comparisons]
+\label{lem:unit-p:geometric}
+For \(0\le x\le\theta\), \(z=i\sqrt x\),
+\begin{equation}\label{eq:unit-p:data-28}
+|G_{n-1}(z)+z^n|\le1\qquad(n\ge4),
+\end{equation}
+and, for \(0\le h\le3/16\),
+\begin{equation}\tag{Q102.5.6}\label{eq:Q102:5.6}
+ |G_n(z)-h(2+z)|\le1-2h\qquad(n\ge3).
+\end{equation}
+\end{lemma}
+\begin{proof}
+For the first assertion, at \(n=4\) the excess is
+\(x[-1+3x-2x^2+x^3]\); its bracket increases to
+\(-1451/32768\). At \(n=5\) it is
+\(x[-1-x+3x^2-2x^3+x^4]<0\).
+For every \(n\ge6\),
+\[
+ (1-z)(G_{n-1}+z^n)
+   =1-z^{n-1}(1-z+z^2),\qquad |1-z+z^2|^2=1-x+x^2\le1.
+\]
+The remaining numerator expense, divided by \(x\), is at most
+\(2\theta^{3/2}+\theta^4<889/1600<1\).
+
+For the second assertion put \(a=1-2h\).
+At \(n=3,4\) the squared excess is respectively
+\[
+ x[-1+2h+h^2+x],\qquad
+ x[-1+2h+h^2+(-1+2h)x+x^2],
+\]
+both nonpositive.
+For \(n\ge5\), the numerator after multiplication by \(1-z\) is
+\(M-z^n\), \(M=a+hz+hz^2\), and \(|M|\le1\).
+Its exact available margin is
+\[
+ a^2(1+x)-|M|^2
+  =x[1-2h-h^2(1+x)]\ge(4715/8192)x .
+\]
+The finite tail costs at most \(2x^{n/2}+x^n\).
+After division by \(x\), this is below
+\(889/1600<9/16<4715/8192\).
+This proves every finite index; both assertions are direct at \(x=0\).
+\end{proof}
+
+\subsubsection{Canonical \(123\): two short rows and one retained tail.}\label{part:unit-p:canonical123}
+Here \(m=1-d/2,\ k\in[1,6/5],\ D=3d/8\).
+For \(L=3\), the short-ledger table gives
+\[
+ C_0=1-d+D+k\delta_2,\quad
+ P=1+D+z+(1-k\mathsf X)z^2,\quad c_0=-d.
+\]
+Enlarge \(C_0\) to \(C=1-d/8\).
+The squared frequency modulus of \(P\), minus \((1+D)^2\),
+divided by \(x\), is
+\[
+ -5/2+3/(2k)+(7k/2-1/2)x-2kx^2+k^2x^3 .
+\]
+It is convex in \(k\). At \(k=1,6/5\) it increases with \(x\);
+the endpoint values are
+\[
+ -1451/32768,\qquad -9507/204800.
+\]
+Thus \(\|Pu\|^2\le(1+D)^2d\).
+Its constant plus signed mean is at most \(-(7/4+D)d\).
+Using the actual scale \(m^2\) in
+\eqref{eq:unit-p:joint-payment}, the eighth expense divided by \(d\)
+is at most
+\begin{equation}\label{eq:unit-p:data-29}
+-23-3d+17\left(\frac{1+3d/8}{1-d/8}\right)^2\le-1/2.
+\end{equation}
+The last continuous inequality is one of the exact polynomial
+certificates recorded below.
+
+At \(L=4\), write
+\[
+ C_0=1-2d+D+k\delta_2,\quad A_0=C_0+d,\quad
+ P=A_0+(1+D)z+z^2+(1-k\mathsf X)z^3 .
+\]
+The frequency bracket in
+\[
+ |P|^2=A_0^2+
+ x[(1+D-x+kx^2)^2+x-2A_0]
+\]
+is convex in \(x\). At \(x=0\) it is below \(-1/4\);
+at \(x=\theta\) use
+\(1+D-\theta+k\theta^2\le2347/2560<15/16\) and
+\(A_0\ge19/24\), obtaining \(-229/768<-1/4\).
+Thus \(\|Pu\|^2\le A_0^2d-\delta_2/4\).
+Enlarge to \(C=1-9d/8\). The actual same-moment bounds are
+\begin{equation}\label{eq:unit-p:data-30}
+\|Pu\|^2/d\le1-d/2+d^2/64,\qquad
+ (c_0+\E BPu)/d\le-19/16+d/4-2d^2 .
+\end{equation}
+For the mean bound use \(\delta_3/d\ge(\delta_2/d)^2\) and
+\(d\le\delta_2/d\le\theta\); these are integrated moment
+constraints, not a lower bound on spectral frequencies.
+The exact cleared polynomial below proves eighth loss \(d/8\).
+
+For every \(L\ge5\), put \(h=49d/96\).
+By \eqref{eq:unit-p:data-25} retain the last four nonnegative losses in
+\eqref{eq:unit-p:q-ledger}, and enlarge
+\(D\bar f_{L-1}\le DS'_{L-1}\).
+The complete comparison has
+\[
+\begin{gathered}
+ C=1+D-3h=1-37d/32,\quad c=-h(1-d),\\
+ P=G_L-k\mathsf Xz^{L-1}+DG_{L-2}-h(2+z).
+\end{gathered}
+\]
+The first two terms are the convex combination
+\((1-kx)G_L+kxG_{L-1}\), with \(kx\le39/80\).
+Lemma~\ref{lem:unit-p:geometric} therefore gives
+\begin{equation}\label{eq:unit-p:data-31}
+\|P\|\le1-2h+D=1-31d/48,\qquad
+ c+\E BPu\le d[-49/48+(335/256)d].
+\end{equation}
+Here \(\E BPu=-\beta_{L+2}+D_L-D\beta_L+2hd\);
+the retained \(\gamma_{L+2}\) and \(\beta_L\ge\kappa d\)
+are used before any enlargement.
+Truncating the negative logarithm expansions at degree three,
+the cleared polynomial below gives eighth loss \(d/24\) on
+all \(0\le d\le1/3\).
+The \(L=1\) direction is the actual one-step input of
+Section~\ref{proof:Q5-C062}. At \(L=2\) use the different row next.
+
+\subsubsection{The actual \(123,L=2\) square.}\label{part:unit-p:exchanged123}
+The existing three-edge arm points entirely inward.
+Its exact sum is \(f_2+\bar f_3=2-d+2Kg-K^2g\).
+Thus \(m=1-d/2,\ U=(\mathsf X-2B)u\) and
+\[
+ \E U^2=4\delta_2+\delta_3,\quad
+ D_{\rm actual}=-k(2d+\delta_2)+k\sqrt{d(4\delta_2+\delta_3)}
+                                  +k^2(4\delta_2+\delta_3).
+\]
+For \(t=\delta_2/d\), the bound on its positive part is
+\[
+ (D_{\rm actual}/d)_+
+ \le k[-2-t+\sqrt{(141/32)t}+k(141/32)t]_+ .
+\]
+At \(t\le1/4\) it is at most \(117/800<1/6\), by taking
+\(k=6/5,t=1/4\) and \(\sqrt{141/128}<21/20\).
+For \(t\ge1/4\), divide by \(t\). The positive expression
+increases in \(k\) and \(t\); at \(k=6/5,t=\theta\) it is
+below \(8313/2600<16/5\).
+Use \(D=d/6\) or \(D=(16/5)td\), respectively.
+
+The same exact short-ledger row is
+\[
+ C=1+D,\quad c=k\delta_2-d,\quad
+ P=(1-2k\mathsf X)+(1-k\mathsf X)z .
+\]
+The actual mean and raw norm satisfy
+\[
+ (c+\E BPu)/d=-2+3kt,\qquad \|Pu\|^2\le d(1-2t).
+\]
+Indeed the squared-frequency excess quotient increases with \(x\)
+and is convex in \(k\); its two endpoint values at \(x=\theta\)
+are \(-2071/1024,-14063/6400<-2\).
+On \(t\le1/4\), direct substitution gives eighth expense
+\([-275/57-(638/95)t]d<-4d\).
+On the whole remaining rectangle
+\(0\le d\le1/3,\ 1/4\le t\le\theta\), set
+\(C_t=1+(16/5)td\) and \(m=1-d/2\).
+The actual logarithmic truncations yield the numerator
+\begin{equation}\label{eq:unit-p:data-32}
+\begin{aligned}
+ P_2(d,t)={}&mC_t^2[-8-2d+(128/5)t-(1024/25)t^2d
+                                   +(32768/375)t^3d^2]\\
+ &+8(-2m+3t)C_t+17(1-2t)m .
+\end{aligned}
+\end{equation}
+The eighth expense divided by \(d\) is at most
+\(P_2/(mC_t^2)\).
+The exact degree-\((5,5)\) Bernstein coefficients of
+\(-P_2-\tfrac14mC_t^2\) have minimum \(33/80>0\).
+This proves the whole two-moment domain directly, including
+its finite boundary, and gives the eighth loss \(d/4\).
+The canonical fourth direction is unchanged at this integer length.
+
+\subsubsection{The canonical \(124\) and retained \(12c\) rows.}\label{part:unit-p:124-and-retained}
+First take \(c=4\), \(d\le1/4\), \(m=1-d,D=d/2\).
+At \(L=2\), the actual polynomial from the short ledger is
+\[
+ P=1-k\mathsf X^2+[1-k(d+\mathsf X)]z,\quad C=1+D .
+\]
+Its two coordinates are nonnegative, and
+\[
+ |P|^2\le(1-x^2)^2+x(1-x)^2
+       \le1+x-3x^2\le13/12 .
+\]
+The constant plus true signed mean is at most
+\(-695d/768\). With \(1\le C\le9/8\), the eighth expense is
+\begin{equation}\label{eq:unit-p:data-33}
+[-16+4-695/108+221/12]d=-d/54 .
+\end{equation}
+At \(L=3\), use
+\[
+ P=1+D+z+[1-k(d+\mathsf X)]z^2+k\mathsf Xz^3,
+ \quad C=1+3d/8\ge C_0 .
+\]
+Its real coordinate lies in \([0,1+D]\), and its imaginary
+coefficient in \([0,1]\), so \(|P|^2\le(1+D)^2+x\).
+Consequently its normalized squared norm is at most \(45d/32\):
+after multiplication by \(C^2\), the scalar margin over
+\((1+d/2)^2+\theta\) is \(d(112-107d)/2048\).
+The \(k\delta_3\) terms cancel in the exact mean, leaving
+\(c_0+\E BPu\le-51d/32\).
+Its eighth expense is at most \(-841d/1120<-3d/4\).
+
+For \(c\ge5\), take \(m=1-9d/8,D=2d/5\) on \(d\le1/5\).
+At \(L=2\) use the real short-ledger normalization \(C=1,e=D\).
+By \eqref{eq:unit-p:data-27} the complete data give
+\[
+ c+\E BV\le-7d/20,\qquad
+ \|V\|^2\le8d/7+D^2<6d/5 ,
+\]
+and the eighth expense is at most \(-2d/5\).
+At \(L=3\) set \(\lambda=d-D-D_1,\ P=Q_3+D\),
+\(C=1,e=-\lambda\). The exact mean sum is at most
+\(-151d/160\), and \(\E Pu=-d+D_2<0\).
+If \(\lambda\le0\), adding \(-\lambda\one\) decreases the norm,
+since \(0\le-\lambda<D<2(d-D_2)\).
+If \(\lambda>0\), write the actual retained coordinate as
+\(A=C_0+x(a_f-E_0)\), where
+\(C_0\ge5d/4+dE_0,\ a_f\ge\kappa,\ E_0\le d\).
+Integration with \(\delta_2\ge d^2\) gives
+\[
+ D_1=k\int A\,d\nu\ge(59/32)kd^2\ge3d^2/2 .
+\]
+The \(E_0\) contributions cancel in this lower bound.
+Thus \(\lambda/d\le3/5-3d/2\).
+Its entire extra constant-vector norm cost divided by \(d\)
+is below \(7/50\), since
+\[
+ d[(3/5-3d/2)^2+2(3/5-3d/2)]
+ \le(39/25)d-(87/20)d^2<7/50 .
+\]
+Also \(\|Pu\|^2/d\le8/7+(6/7)d+(4/25)d^2\).
+Together these give \(\|Pu-\lambda\one\|^2<3d/2\).
+The full eighth expense is therefore at most \(-d/20\).
+
+It remains to prove the entire finite tail for both \(124\)
+and retained \(12c\).
+In each case
+\[
+ Q_L=G_L-kAz^{L-1}+kBz^L .
+\]
+For \(124\), \(A=d+x,B=x\), so \(0\le kB\le kA\le7/8\).
+For retained \(12c\), the actual coordinates have
+\(0\le kA,kB<1\).
+Thus \(Q_L\) is a convex combination of
+\(G_{L-1},G_L,G_{L-1}+z^L,G_{L+1}\).
+Lemma~\ref{lem:unit-p:geometric} proves \(|Q_L|\le1\)
+for every finite \(L\ge4\).
+For \(124\) retain the last gamma loss and
+\(D\bar f_{L-1}\le DS'_{L-1}\). Then
+\[
+ C=1+D,\quad P=Q_L+DG_{L-2},\quad c=-\gamma_{L+1},
+\]
+\[
+ c+\E BPu\le-41d/48,\quad
+ \|P\|/C\le(1+3d/5)/(1+d/2)\le46/45 .
+\]
+The \(G_2\) exception at \(L=4\) is the reason for \(3d/5\).
+The eighth expense is at most \(-628d/2025<-d/4\).
+For retained \(12c\), simply use
+\(C=1,\ c=2D-\gamma_{L+1},\ V=Q_Lu\).
+Its mean sum is at most \(-13d/240\); the scale \(m^2\)
+gives eighth expense at most \(-43d/30<-d\).
+
+The low-domain bounds meet the same-direction high comparisons.
+At \(c=4,d\ge1/4\), \(h_4\le2(1-2d)\le1\);
+at \(c\ge5,d\ge1/5\), \(h_c\le2\mu_{c-1}\le77/80<1\).
+Therefore \(pT^L(qf_2h_c)\le pT^L(qf_2)\).
+The actual short-one ordinary theorem
+\eqref{eq:Q58O:0.2} supplies \(1-d/12000\), at every \(L\).
+The \(L=1\) low rows are the same-direction one-step input
+of Section~\ref{proof:Q5-C063}, with deficit \(d/500\).
+For canonical \(123\) the \(L=1\) input is
+Section~\ref{proof:Q5-C062}.
+
+\subsubsection{The six complete continuous payments.}\label{part:unit-p:certificates}
+For clarity we give the unexpanded defining polynomials for the
+remaining certificates. Put
+\[
+\begin{gathered}
+ C_3=1-d/8,\qquad C_4=1-9d/8,\qquad
+ \xi=37/32,\quad C_5=1-\xi d,\\
+ P_4=[-17-(113/16)d-(243/64)d^2]C_4^2
+             +[-19/2+2d-16d^2]C_4
+             +17(1-d/2+d^2/64),\\
+ P_5=[-8-8\xi-(2+4\xi^2)d-(2/3+8\xi^3/3)d^2]C_5^2\\
+ \hspace{2em}+[-49/6+(335/32)d]C_5+17(1-31d/48)^2 .
+\end{gathered}
+\]
+These are obtained from \eqref{eq:unit-p:data-30} and \eqref{eq:unit-p:data-31}
+after using the signed means and the degree-three negative
+logarithm bounds. In particular the factor \(m^{16}\) of the
+ordinary eighth moment has been included.
+Define
+\begin{equation}\label{eq:unit-p:data-34}
+\begin{aligned}
+ G_3&=(45/2+3d)C_3^2-17(1+3d/8)^2,\\
+ G_4&=-P_4-1/8,\qquad G_5=-P_5-1/24,\\
+ G_2(d,t)&=-P_2(d,t)-\tfrac14(1-d/2)[1+(16/5)td]^2,\\
+ G_{13}(d,t)&=-F(d,t)-(1-3td)^2,\\
+ G_{13,5}(d,t)&=-F_5(d,t)-2(1-3td)^2 .
+\end{aligned}
+\end{equation}
+Here \(t=\delta_2/d\) in \(G_2\), whereas \(t=\tau/d\) in
+the two \(G_{13}\)'s. 
+For each row below map its complete interval or rectangle
+affinely to the unit interval or square.
+Formula~\eqref{eq:bernstein-coefficients} gives the indicated
+minimum among all coefficients, with exact reconstruction of the
+displayed polynomial:
+\begin{equation}\label{eq:unit-p:data-35}
+\begin{array}{c|c|c|c}
+ \text{polynomial}&\text{complete domain}&\text{degree}&
+                                  \text{minimum coefficient}\\\hline
+ G_3&0\le d\le1/3&3&77/1152\\
+ G_4&0\le d\le1/3&4&1319/36864\\
+ G_5&0\le d\le1/3&4&2038583/339738624\\
+ G_2&0\le d\le1/3,\ 1/4\le t\le\theta&(5,5)&33/80\\
+ G_{13}&0\le d\le1/8,\ \kappa\le t\le1&(2,3)&573959/1310720\\
+ G_{13,5}&0\le d\le1/8,\ \kappa\le t\le1&(2,3)&1359451/983040 .
+\end{array}
+\end{equation}
+Each positive minimum proves the claimed
+continuous inequality by
+Lemma~\ref{lem:bernstein-certificate}.
+
+\begin{corollary}[An ordinary-fourth resource for the canonical
+shortest-two square]\label{cor:unit-p:shortest-two-fourth}
+The same actual \(pT^L(qf_2h_c)\) has ordinary fourth at most
+\(e^{-18d/5}\) on the following domains:
+\[
+ c=3,\quad L\ge3,\quad 0\le d\le1/3;\qquad
+ c=4,\quad L\ge2,\quad 0\le d\le1/4;
+\]
+\[
+ c\ge5,\quad L\ge2,\quad0\le d\le1/5 .
+\]
+This assertion concerns no inverse-fourth output. It does not
+replace the canonical \(123,L=2\) fourth row.
+\end{corollary}
+\begin{proof}
+Use the fourth expression in \eqref{eq:unit-p:joint-payment}
+for each already specified complete vector.
+For canonical \(123\), its normalized norm upper is at least
+\(d\): this is direct at \(L=3\) and \(L\ge5\); at \(L=4\)
+the difference from \(C_4^2d\) is
+\((7d/4-5d^2/4)d\ge0\).
+Thus the eighth rates \(1/2,1/8,1/24\) give direct fourth
+rates at least \(9/2,69/16,205/48\), respectively.
+For \(124,L=2\), the normalized upper \(13d/(12C^2)\) is at
+least \(208d/243\), so its fourth rate is at least
+\(1/108+884/243>18/5\).
+The \(L=3\) and finite tail rows are stronger.
+For retained \(12c\), the specified norm uppers are
+\(6d/5,3d/2,d\); combined with the stated eighth expenses,
+they give the claimed rate directly.
+This is the same-comparison expense identity, not a consequence
+of ordinary eighth-to-fourth interpolation.
+\end{proof}
+
+\subsubsection{The three finite five-arm packets.}\label{part:unit-p:five-arms}
+The actual directions are those in Table~\ref{tab:unit-p:directions}.
+All three use \(F\le qe^{R-\Gamma}\), the Q-row, and
+\(\gamma_j=\beta_j-D_{j-2}\).
+Their data on the stated low domains are
+\begin{equation}\label{eq:unit-p:data-21}
+\begin{array}{c|c|c|c|c|c|c}
+ \text{row}&d_{\max}&\Gamma/d&D/d&D_1/d&D_2/d&
+                          \gamma_{j\ge5}/d\\\hline
+ A:\ c\ge4&1/64&351/80&9/10&1/2&1/4&11/32\\
+ B:\ c=3,\ b\ge5&1/8&21/5&5/6&3/5&1/14&79/160\\
+ C:\ \text{crossed}&1/8&21/4&11/10&19/40&1/16&49/96 .
+\end{array}
+\end{equation}
+In row A retain
+\(\gamma_3\ge d/2,\gamma_4\ge3d/4\).
+In B retain \(2d/5,13d/14\), and in C retain \(d/2,15d/16\).
+The following finite construction proves all these columns.
+
+For A set
+\[
+ \eta=\beta_{c-1},\quad W=\sum_{j=3}^cK^j\one,\quad
+ S=\sum_{j=b+1}^eK^j\one,\quad R=\eta g-W+S .
+\]
+Here \(|R|\le d+\sqrt d\le9/64\).
+With \(t=\delta_2/d\), at \(c=4\) the raw norm is at most
+\([d+(3/2)\sqrt{\theta t}]^2d\) and the signed mixed mean
+is at most \(-2(1-\theta^2)td\).
+At \(c\ge5\) replace \(3/2\) by \(6/5\) and the last coefficient
+by \(2\kappa-2\theta^2\).
+The first-row error increases in \(\sqrt t\) and \(d\).
+At \(t=\theta,d=1/64\) it is at most
+\(3/4+2\theta^3<9/10\) in the first case and
+\(-1/3+51/100+(12/5)(51/100)^2<9/10\) in the second.
+This retains the two consecutive positive \(\delta_4\) terms
+in \(\E S-\E(gS)\).
+The finite sign formula gives
+\[
+ D_1\le d^2+\delta_2+\delta_4,\quad
+ D_2\le\delta_3+\delta_4,\quad
+ D_{i\ge3}<d/4 .
+\]
+The four first tail classes are bounded by
+\(\delta_5,\delta_6,\delta_4+\eta\delta_3+\delta_7,
+\delta_5+\delta_6\); every further block advances all moment
+indices by two.
+
+For the polynomial norm in A put
+\[
+ P=G_{c-2}(z)-z^{b-2}G_{e-b}(z),\qquad P(-z)=U-zV .
+\]
+Its opposite-sign finite intervals are disjoint and
+\[
+ (1-2x)/(1-x)\le U,V\le1/(1-x),\qquad |P|\le3/2.
+\]
+The \(c=4\) estimate is
+\(\sqrt{1+\theta}+39/125<3/2\); the first block contracts
+when \(c\ge5\), with a smaller tail.
+Now \(Q_L=G_L-\eta z^{L-1}+z^{L+1}P(-z)\).
+At \(L=2\) both coordinates are in \([0,1]\), so
+\(|Q_2|^2\le45/32\).
+At \(L=3\), \(|Q_3|\le1+273/2048<6/5\).
+At \(L=4\) the perturbation of \(G_4\) is at most \(11/64\),
+and at every \(L\ge5\) at most \(1/384+21/200<1/5\).
+Thus \(|Q_L|\le6/5\) for all \(L\ge3\).
+
+For B take \(R=-K^3\one+S\), \(S=R_{be}\).
+The point row is below \((119/125)\sqrt d<1/2\).
+At \(b=5\) its coordinates are \((-A+Cz)u\), where
+\(0\le A=x-x^3V\le x,\ 0\le C=x^2U\le x^2\).
+Writing \(w=\E R^2/d\) and \(v=d^{-1}\int(A+C)\,d\nu\),
+we have \(w\le\theta v,\ w<1/4\); hence the Q error is at most
+\(\sqrt w-(4/65)w<1/2\).
+For \(b\ge6\), its mixed mean is at most
+\(-\delta_2+2\delta_4\) and
+\[
+ \E R^2/d\le
+ \theta[1+(6/5)\theta^2]^2t .
+\]
+The error increases in \(t\), and at \(t=\theta\) is below
+\(49/100+(12/5)(49/100)^2-4/15<4/5\).
+Thus \(D=5d/6\) suffices.
+Its signed tails give
+\(D_1\le\delta_2+\delta_3,\ D_2\le\delta_4,\
+D_{i\ge3}\le\delta_4+\delta_5\).
+The polynomial is \(Q_L=G_L+z^{L+1}+z^{L-1}(S/u)\).
+The base \(G_L+z^{L+1}\) contracts for all \(L\ge3\):
+at \(L=3\) its excess is \(x[-1+3x-2x^2+x^3]<0\);
+at \(L=4\) it is at most \(-3x/4\).
+For every \(L\ge5\), use
+\[
+ (1-z)(G_L+z^{L+1})
+       =1-z^L(1-z+z^2),\qquad
+ |1-z+z^2|^2=1-x+x^2\le1 .
+\]
+The tail is paid by \(2x^{3/2}+x^4<1\).
+The additional propagated \(S\) costs less than \(1/10\).
+At \(L=2\) the base has squared norm at most \(31/27\)
+and the tail at most \(2/15\), so \(|Q_2|<5/4\).
+
+For C take the actual retained \(U_e=(A-Bz)u\) of
+Lemma~\ref{lem:unit-retained-pair}, \(\sigma=9/4\), and
+\[
+ R=-U_e+K^4\one-dg=(-\bar A+\bar Bz)u,\quad
+ \bar A=A-d,\quad\bar B=B-x .
+\]
+The exact \(e=5\) coordinates are
+\(A=5d/4+\delta_2+x-x^2,\ B=d/4+\delta_2+x\);
+for \(e\ge6\) use \eqref{eq:unit-retained:coordinates}.
+Their retained constants give
+\[
+ 0\le\bar A\le19/40,\quad
+ -x^2\le\bar B\le19d/16,\quad|\bar B|<1/6,\quad
+ \bar A+\bar B\ge d/2+x/16 .
+\]
+For the \(\bar A\) upper, if \(x\ge d\), the retained
+\(E_0(d-x)\) term is nonpositive and
+\(\bar A\le21d/32+x-x^2+x^3\le101/256<19/40\).
+If \(x\le d\), use
+\(\bar A\le53d/32+d^2\le57/256<19/40\).
+Thus the actual mixed mean is nonpositive and
+\(\E R^2/d<(19/40)^2+\theta/36<1/4\).
+The original expression
+\[
+ R=(C_0-d)g+D_0Kg+(E_0-1)K^2g-\sum_{j=5}^eK^j\one
+\]
+has point bound
+\(25/256+(19/128+119/125)\sqrt{1/8}<1/2\).
+The Q error is therefore at most \(11d/10\).
+The signed classes are
+\[
+ D_{4j+1}=\int x^{2j}\bar A,\quad
+ D_{4j+2}=\int x^{2j+1}\bar B,\quad
+ D_{4j+3}=-\int x^{2j+1}\bar A,\quad
+ D_{4j+4}=-\int x^{2j+2}\bar B .
+\]
+They include the possible positive fourth class when \(\bar B<0\).
+It is at most \(\theta^4d\); the fifth class is at most
+\((19/40)\theta^2d<d/12\).
+At \(L=1\), \(\|u+R\|^2\le81d/80\).
+At \(L=2,3\) the complete coordinates of \(Q_L\) give
+squared norms below \(8/5,3/2\), respectively.
+For every \(L\ge4\),
+\[
+ |Q_L|\le1+(19/40)\theta^{3/2}+\theta^2/6<6/5 .
+\]
+
+Here are all the remaining low-domain payments, with the actual
+first-row constants of \eqref{eq:unit-p:data-21}:
+\begin{equation}\label{eq:unit-p:data-22}
+\begin{array}{c|c|c|c|c}
+ \text{row}&L&(c+\E BV)/d&\|V\|^2/d&
+                      \text{eighth exponent}/d\\\hline
+ A&1&2/5&169/64&\text{one-step input}\\
+ A&2&11/20&45/32&<-6\\
+ A&\ge3&89/80&36/25&-43/25\\
+ B&1&13/30&64/25&\text{one-step input}\\
+ B&2&71/210&25/16&<-4\\
+ B&\ge3&163/240&36/25&<-3\\
+ C&1&23/40&81/80&-323/16\\
+ C&2&61/80&8/5&-87/10\\
+ C&3&107/160&3/2&<-11\\
+ C&\ge4&283/240&36/25&<-8 .
+\end{array}
+\end{equation}
+At \(L\ge2\), take
+\(c=2D-\gamma_{L+1}\),
+\(\E BV=-\beta_{L+2}+D_L\), with the finite \(Q_Lu\) just proved.
+At \(L=1\), take \(V=u+R\), preserving its full mean.
+The direct fourth payments at A1 and B1 are
+\(-6051d/1280\) and \(-314d/75\).
+Every other row has direct fourth loss greater than four by
+\eqref{eq:unit-p:joint-payment}.
+For A1/B1 the ordinary eighth bound \(e^{-d/2}\) is exactly the
+same-direction one-step theorem of Section~\ref{proof:Q5-C067}.
+The crossed C1 row is proved here and needs no crossed extension
+of that one-step theorem.
+
+For A on \(d\ge1/64\), regroup the same factors as
+\((qf_2h_b)(h_cf_e)\). If \(c=4\), the already proved short-four
+loss gives \(h_4f_e\le e^{-477d/500}\), since
+\[
+ |R_{4e}|<(39/125)\sqrt d\le(312/125)d.
+\]
+If \(c\ge5\), its row tail is below \(\sqrt d/5\), giving
+the stronger loss \(8d/5\).
+The actual all-length eighth base \(qf_2h_b\), \(b\ge5\),
+proved in the square-packet argument above, is at most one.
+It follows that the fourth rate is \(477/125>15/4\) and the
+eighth rate exceeds \(1/2\).
+For B and C on \(d\ge1/8\), use
+\eqref{eq:R37:centered-pair} to regroup respectively
+\((qf_2h_b)(h_3f_e)\) and \((qf_2h_e)(h_3f_4)\).
+This gives fourth loss four and eighth loss eight.
+
+\subsubsection{Completeness and original decorations.}\label{part:unit-p:decorations}
+For a residual beginning with one, split its first pair minimum
+into at least four, three, or two. The first two cases were proved
+above, including their single-triple boundaries.
+At first minimum two, \(k\ge3\) is the finite-mask family,
+\(k=2\) is exactly the three five-arm rows, and \(k=1\) is the
+square family. Its \(c=3,L=2\) entry directs only the existing
+three-edge arm differently. Every \(d\)-split changes the estimate,
+not this integer direction.
+For nonunit terminal minimum, the fourth rows state exactly their
+additional ranges; no corresponding eighth direction is inferred.
+
+Restore the actual pair products at their own vertices:
+\[
+ 0\le E_rpT^L(E_tF)\le pT^LF,\qquad 0\le E_t,E_r\le1 .
+\]
+All original edges and subdivision vertices remain.
+Full reversal replaces \(K\) by \(-K\) throughout, including the
+unit root, connector, terminal and every decoration.
+At \(d=0\), \(K\one=0\) although \(K\) need not vanish; original
+leaf integration makes all actual tree messages one.
+
+For the R37 two-edge application the actual output is
+\(U=T^2[E_rpT^L(E_tF)]\), with its original two intermediate
+edges and the same original \(q\). Its common ordinary-fourth
+loss \(15d/4\), followed by
+Corollary~\ref{cor:unit-two-step:output}, gives
+\[
+ \mathcal I(U)^3\le
+ e^{(24427/3420)d-5d^2}(\E H_D^4)^2
+ \le e^{-1223d/3420-5d^2}.
+\]
+The separate R26 inverse-fourth resources and their directions
+have not entered this ordinary-moment proof.

@@ -1,0 +1,112 @@
+\section{The five-vertex star and fork}\label{sec:five-star-fork}
+Let $c$ be the degree-four star center or the degree-three fork center.
+There are four simple terminal branches in the star, and two simple
+terminal branches plus one compound branch in the fork. A reducible
+simple terminal is covered by Lemma~\ref{lem:five-reduction}.
+Write $E_c\le1$ for the product of central equal pairs.
+
+\subsection{Nonempty central residuals}
+Table~\ref{tab:five-center} allocates the central arms along the
+increasing residual list. One actual outward arm $f_s$ serves as the
+common reference; an ordinary message consumes its anchor, one simple
+terminal and the connecting path; the central equal pairs belong to one
+indicated factor.
+\begin{table}[htbp]\centering\small
+\caption{Central arm allocation for $K_{1,4}$ and $T_5$. Later pairs always retain their displayed negative canonical directions.}\label{tab:five-center}
+\begin{tabular}{@{}p{38mm}p{19mm}p{43mm}p{40mm}@{}}\toprule
+Residual list & Reference & Ordinary factors & Other central factors\\\midrule
+Singleton $s$ & $f_s$ & None & $E_c$ in one reference message\\
+$(s,m,\text{later pairs})$, $2\le s<m$ & $f_s$ & $H$: anchor $m$, later pairs, $E_c$ & None\\
+$(s,a,b,\text{later pairs})$, $2\le s<a<b$ & $f_s$ & $H_a$ and $H_b$; latter holds later pairs and $E_c$ & None\\
+$(1,s,m,\text{later pairs})$ & $f_s$ & Unit $H_1$; $H_m$ holds later pairs and $E_c$ & None\\
+$(1,s)$ or $(1,s,a,b,\text{later pairs})$ & $f_s$ & Unit $H_1$ holds $E_c$ & $Q=1$ or $W_a\bar f_b$ times later pairs\\\bottomrule
+\end{tabular}
+\end{table}
+In every nonsingleton row $s\ge2$, so \eqref{eq:five-mixed} applies,
+and the anchor preceding a nonempty post block is shorter than all its
+post lengths, as Proposition~\ref{prop:five-ordinary} requires.
+
+For a singleton center the densities are
+\[
+ Z_\star=\E[f_sX_1X_2X_3X_4],\qquad
+ Z_{T_5}=\E[f_sX_1X_2Y].
+\]
+Use H\"older exponents $(4,4,4,4)$ or $(4,4,2)$ and the reference
+estimates. Both densities are at most one, including $s=1,2$.
+
+For a nonunit even center the products are $f_sHX_2X_3X_4$ and
+$f_sHXY$. Factor the first into
+$H,f_s^{1/4},f_s^{1/4}X_2,f_s^{1/4}X_3,f_s^{1/4}X_4$,
+and the second into $H,f_s^{1/4},f_s^{1/4}X,f_s^{1/2}Y$.
+H\"older with exponents $(8,8,4,4,4)$ or $(8,8,4,2)$ gives, in both
+cases, $Z_D\le e^{-d/8192}$.
+
+For a nonunit odd center there are two distinct ordinary factors.
+The star and fork factors are, respectively,
+\[
+ (H_a,H_b,f_s^{1/2},f_s^{1/4}X_3,f_s^{1/4}X_4),\qquad
+ (H_a,H_b,f_s^{1/2},f_s^{1/2}Y).
+\]
+The same exponent lists give $Z_D\le e^{-d/4096}$.
+For a unit-minimum odd center replace the first ordinary input by
+$\E H_1^8\le1-d/20000$. This gives
+\[
+ Z_D\le (1-d/20000)^{1/8}e^{-d/8192}
+       \le e^{-(1/160000+1/8192)d}.
+\]
+
+For a unit-minimum even center use the factors
+$H_1,f_s^{1/4}Q$ and the remaining reference factors. Equations
+\eqref{eq:five-mixed} and the same H\"older exponents give
+\begin{equation}\label{eq:five-star-strict}
+ Z_D\le
+ \begin{cases}
+ e^{-d/160000},&Q=1,\\
+ e^{-(1/160000+17/512)d},&Q\ne1.
+ \end{cases}
+\end{equation}
+The reference
+arm carries total analytic power one, and the ordinary factors use
+distinct terminal branches. H\"older applies to the resulting functions
+of the central label.
+
+\subsection{Empty central residual}
+For the star, choose two paths toward $c$ and two away from it. Put
+$G_i=T^{L_i-1}F^+_{i,L_i-1}$ for $i=1,2$ and
+$H_i=A^{L_i-1}F^-_{i,L_i-1}$ for $i=3,4$. Then
+\[
+ Z_D=\E[E_c(TG_1)(TG_2)(AH_3)(AH_4)].
+\]
+For each pair, row Cauchy--Schwarz, $pq\le1$, and the path interface give
+\[
+ \E[(TG)^2(AH)^2]
+ \le\ip{G^2}{A^2(H^2)}
+ \le\sqrt{\E[pG^4]\,\E[qH^4]}\le1.
+\]
+Cauchy--Schwarz on $(TG_1)(AH_3)$ and $(TG_2)(AH_4)$ proves $Z_D\le1$.
+
+For the fork label its simple ends $a,b$ and its compound $c-r-t$,
+with lengths $L_a,L_b,M,N$. Set
+\[
+ X=A^{L_a}F^-_{a,L_a},\quad
+ G=T^{L_b-1}F^+_{b,L_b-1},\quad H_c=E_cX(TG).
+\]
+The first terminal uses the $L_a$-step supply. The edge measure
+for $T$ has marginals $q\mu,p\mu$, so
+\[
+ N_+(H_c)\le\sqrt{\E[p^2q^3X^4]\,\E[pG^4]}
+             \le\sqrt{\E[qX^4]\,\E[pG^4]}\le1.
+\]
+If $r$ is type R, choose its positive zero-step factor $V_r^+$ and put
+$V=A^{N-1}F^-_{t,N-1}$, $H_r=V_r^+AV$. If $r$ is a singleton,
+put $C_r^+=E_rf_a$, $V=T^{N-1}F^+_{t,N-1}$ and $H_r=C_r^+TV$.
+Inequality~\eqref{eq:mergeRright} gives $N_-(H_r)\le1$ in the R case, and
+\eqref{eq:mergeSright} in the singleton case, where the $q^5$ weight enters.
+Direct the whole $M$-path from $c$ to $r$. Then
+\[
+ Z_D=\ip{H_c}{A^MH_r}\le\sqrt{N_+(H_c)N_-(H_r)}\le1.
+\]
+This proves both skeletons. Only the
+nonsingleton central allocations give the strict loss $e^{-d/160000}$;
+the comparison, empty-center and singleton-center directions give the
+bound $1$.

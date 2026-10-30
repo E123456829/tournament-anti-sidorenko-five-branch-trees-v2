@@ -1,0 +1,56 @@
+\subsection{Canonical cubic root certificates}\label{q3:app:canonical}
+We prove Proposition~\ref{q3:prop:canonical}. Throughout this subsection $P=\prod_{i} h_{a_i}f_{b_i}$, where $a_1<b_1<\cdots<a_t<b_t$. Equal pairs are restored at the end using \eqref{q3:eq:equalpair}.
+
+\subsubsection{The ordinary cubic}
+If $t=0$ there is nothing to prove. If $a_1\ge3$, use the ordinary sixth moment in Lemma~\ref{q3:lem:pairmoments}. A single pair with $a_1=1$ or $2$ is covered by Lemma~\ref{q3:lem:shortpaircubes}.
+
+For the remaining cases write $P\le e^{R-\Delta}$ as in \eqref{q3:eq:mask}, and let $D_0=\Delta-\E R$. The following bounds prove $D_0\ge3M^2/2$:
+\[
+\begin{array}{c|c|c}
+\text{condition}&D_0\text{ lower bound}&M^2\text{ upper bound}\\ \hline
+a_1=2,\ t\ge2 &(67/32)d&C_*\theta d\\
+a_1=1,\ b_1\ge3,\ t\ge2 &(99/32)d&C_*d\\
+(a_1,b_1)=(1,2),\ t\ge3 &(131/32)d&C_*d .
+\end{array}
+\]
+Indeed the sums $\Delta$ in the first two rows are at least $(3-\theta)d$, and in the last row at least $(4-\theta)d$; subtract the ordinary mean estimates after \eqref{q3:eq:weightedboundary}. The comparisons are $3939/3200<67/32$ and $303/100<99/32<131/32$.
+
+It remains to consider exactly two pairs $(1,2),(a,b)$, $3\le a<b$. If $a=3$, write
+\[
+ R=KQ(K)g,\qquad Q(z)=1+z^2G_{b-3}(z).
+\]
+Then $\norm{Q(K)}\le1$. For $G_1$ this is immediate. For $m=b-3\ge2$,
+\[
+ Q(z)=\frac{1-z+z^2-z^{m+2}}{1-z}.
+\]
+At $z=i\lambda$, $x=\lambda^2\le1/2$, its numerator has squared modulus at most $1-x+3x^2+x^4\le1+x$, because $3x+x^3<2$. Thus $M^2=d$ is valid. Here $\E R\le-d+\delta_{2}$ and $\Delta=2d-\delta_{2}$, so $D_0\ge(35/16)d>3d/2$.
+
+If $a\ge4$, the polynomial $Q(z)=1+z^{a-1}G_{b-a}(z)$ has no terms of degrees one or two. Grouping powers modulo four yields
+\[
+ |Q(i\lambda)|^2\le\frac{1+x^3}{(1-x^2)^2}
+ \le\frac{1+(3/7)^3}{(1-(3/7)^2)^2}=\frac{259}{160}.
+\]
+Hence $M^2\le259d/160$. Since $\Delta=2d$ and $\E R\le-d/2$, $D_0\ge5d/2>777d/320=3M^2/2$. Criterion~\eqref{q3:eq:criterion} proves $\E P^3\le1$ in all cases.
+
+
+\subsubsection{The compatible weighted cubic}
+The complete even catalogue proved in Appendix~\ref{q3:app:foundations} and Sections~\ref{loc:S2}--\ref{loc:S9}
+and collected in Section~\ref{loc:S13} gives, for this same canonical $P$,
+$\E[pP^6]\le1$ unless the sole distinct pair is $(1,2)$.
+For that pair Section~\ref{loc:S13} proves $\E[pP^4]\le1$.
+Since $\E p=1$, H\"older under $p\mu$ yields in both cases
+\begin{equation}\label{q3:eq:weightedpairs}
+ \E[pP^3]\le1.
+\end{equation}
+Multiplication by the actual factor $E_0\le1$ restores all equal pairs.
+The foundational estimates in Appendix~\ref{q3:app:foundations}
+supply the inputs to the even catalogue.
+
+\subsubsection{An odd anchor to power one}
+Pair equal lengths, retain the smallest residual arm $a$, and write $R=E_0P$ for the remaining pairs. If $P$ is empty, $\E[f_aR^3]\le\mu_a\le1$. If $a=1$, then $f_a=p$ and all paired shorter lengths are at least two, so \eqref{q3:eq:weightedpairs} applies. If $a\ge2$, all paired shorter lengths are at least three and
+\[
+ \E[f_aR^3]\le
+ \left(\E\frac{f_a^2}{p}\right)^{1/2}
+ \left(\E[pP^6]\right)^{1/2}\le1.
+\]
+Here the inverse-weight path square and weighted sixth moment were proved in Appendix~\ref{q3:app:foundations}. Every anchor is an existing arm. Replacing $K$ by $-K$ proves the complete reversed statements and finishes Proposition~\ref{q3:prop:canonical}.

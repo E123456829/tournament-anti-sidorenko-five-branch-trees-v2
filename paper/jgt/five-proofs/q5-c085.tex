@@ -1,0 +1,751 @@
+\subsection{Short connectors for every terminal pair \((2,\allowbreak b)\)}\label{proof:Q5-C085}
+On the original nonempty finite probability space, let \(K\) be real and antisymmetric with \(|K|\le\allowbreak 1\), and put
+\[
+ Jv=(Ev)1,\quad A=J+K,\quad T=J-K=A^*,\quad
+ g=K1,\quad p=1+g,\quad q=1-g,
+\]
+\[
+ f_n=A^n1,\quad \bar f_n=T^n1,\quad h_n=Tf_{n-1},\qquad
+ \delta_j=\|K^j1\|_2^2,\quad d=\delta_1,
+\]
+\[
+ \theta=13/32,\quad\kappa=19/32,\quad
+ r=Kg,\quad s=Kr,\quad t=Ks.
+\]
+All adjoints, norms, spectral measures and expectations use the same original \(\mu\).
+Choose the terminal directions by the original integer lengths:
+\[
+\begin{array}{c|c}
+\text{terminal and connector}&F_{b,L}\\ \hline
+b\ge3,\ L=1&h_2f_b\\
+b=3,\ L=2&h_2f_3\\
+b\ge4,\ L=2&f_2h_b\\
+b\ge3,\ L\ge3&h_2f_b
+\end{array}
+\]
+Each \(f_n\) arm points entirely away from the terminal.
+Each \(h_n\) arm has its first edge toward the terminal and its remaining edges away from its first neighbour toward the leaf.
+All \(L\) connector edges point from the terminal toward the receiving root, whose original unit arm points outward.
+The actual message is \(H=\allowbreak pT^LF_{b,\allowbreak L}\); these directions are fixed before the host is given.
+
+The short-connector bounds are
+\[
+ E[pT^2(h_2f_3)]^8\le e^{-d/25},                         \tag{Q85.0.1}\label{eq:Q85:0.1}
+\]
+\[
+ E[pT^2(f_2h_4)]^8\le e^{-d/3},\qquad
+ E[pT^3(h_2f_4)]^8\le e^{-d/3},                        \tag{Q85.0.2}\label{eq:Q85:0.2}
+\]
+\[
+ E[pT^2(f_2h_b)]^8\le e^{-d/5},\qquad
+ E[pT^3(h_2f_b)]^8\le e^{-d/5}\quad(b\ge5).             \tag{Q85.0.3}\label{eq:Q85:0.3}
+\]
+The high-domain part of the second bound in \eqref{eq:Q85:0.3} uses the terminal-mean theorem in Section~\ref{proof:Q5-C086}; its use is stated below.
+Together with the unit and long-connector rows, these estimates give
+\[
+ E H^8\le Q(d):=1-d/20000.                              \tag{Q85.0.4}\label{eq:Q85:0.4}
+\]
+The ordinary row \(F_{b,\allowbreak 2}=\allowbreak f_2h_b\) for \(b\ge\allowbreak 4\) has its stated direction.
+The \(f_2\)-reference fourth bound for \(h_2f_b\) is a separate input on that actual branch.
+
+\paragraph{Q85.1 Finite framework and local inputs}
+The finite calculus in Section~\ref{proof:Q5-C081} gives
+\[
+ 0\le d\le1/3,\quad\|K\|^2\le\theta,\quad
+ d^2\le \delta_2\le\theta d,\quad \delta_{j+1}\le\theta \delta_j,
+\]
+\[
+ |Kv(x)|\le\|v\|_2,\quad
+ EK^{2j}1=(-1)^j \delta_j,\quad EK^{2j+1}1=0.               \tag{Q85.1.1}\label{eq:Q85:1.1}
+\]
+After deleting zero-mass atoms, \(p(x),\allowbreak q(x)\ge\allowbreak \mu(x)>\allowbreak 0\).
+Actual tree messages are positive: conditional on the root label, assigning every other label that same value has positive mass and makes every edge factor one.
+At \(d=\allowbreak 0\), \(g=\allowbreak 0\) and successive leaf integration gives every actual message one, so all moment bounds hold directly.
+Subsequent divisions by \(d\) use \(d>\allowbreak 0\).
+
+The finite positive convolution is
+\[
+ S_n:=\sum_{j=0}^nK^j1
+ =f_n+\sum_{j=3}^n\beta_jf_{n-j},\quad
+ \beta_1=\beta_2=0,
+\]
+\[
+ \beta_j=\sum_{i=1}^{\lfloor(j-1)/2\rfloor}(-1)^{i-1}\delta_i,
+ \qquad \tau:=d-\delta_2\le\beta_j\le d\quad(j\ge3).        \tag{Q85.1.2}\label{eq:Q85:1.2}
+\]
+Its complete reversal uses \(K'=\allowbreak -K,\allowbreak g'=\allowbreak -g\).
+All finite path messages in discarded convolution terms are nonnegative.
+
+We use the signed coefficient-\(17\) exponential estimate in Section~\ref{proof:Q5-C081}, the retained-envelope formulas and full-frequency bounds of Section~\ref{proof:Q5-C077}, and the corresponding \(b=\allowbreak 4\) parameter bounds of Section~\ref{proof:Q5-C073}.
+The arithmetic-mean input for \(h_4+f_v\), for every finite \(v\ge\allowbreak 5\), is the one in Section~\ref{proof:Q5-C067}; its needed formula is restated in \eqref{eq:Q85:6.4}'s derivation.
+The ordinary unit row is \( \E[pT(h_2f_b)]^8\le\allowbreak 1-d/500\) for every \(b\ge\allowbreak 3\).
+The remaining long rows and the high-domain actual terminal mean are supplied by Section~\ref{proof:Q5-C086}.
+
+\paragraph{Q85.2 A variance-sensitive exponential comparison}\label{calc:Q85:variance-exp}
+Let \(W\) be finite and real with \(|W|\le\allowbreak  U\) and
+\(\E W^2\le\allowbreak \theta U^2\). For every \(s\ge\allowbreak 0\), retaining the actual mean of either sign,
+\[
+ E e^{sW}\le
+ \exp\left\{sEW+\frac{s^2}{8}(U^2+3EW^2)\right\}.    \tag{Q85.2.1}\label{eq:Q85:2.1}
+\]
+In particular, for every real original vector \(V\),
+\[
+ E e^{8KV}\le
+ \exp\{8E(KV)+8\|V\|^2+24\|KV\|^2\}.                \tag{Q85.2.2}\label{eq:Q85:2.2}
+\]
+The cases \(U=0\) and constant-variable endpoints are immediate.
+Otherwise set \(h=\E W^2/U^2\), \(m=\E W\),
+\(v=\E(W-m)^2\), and \(M=U-m\).
+Apply \eqref{eq:oc:hermite-matching} to \(f(w)=e^{sw}\):
+\[
+ E e^{sW}\le e^{sm}E e^{sL(B-\pi)},\qquad
+ L=M+v/M,\quad \pi=\frac{v}{M^2+v},                   \tag{Q85.2.3}\label{eq:Q85:2.3}
+\]
+where \(B\) is Bernoulli with mean \(\pi\).
+
+When \(m\ge\allowbreak 0\), write \(w=\allowbreak m/U\). Then
+\[
+ L/U=\frac{1+h-2w}{1-w}\le1+h.
+\]
+The centered Bernoulli logarithmic moment has tilted second derivative at most \(L^2/4\).
+Integrating twice gives coefficient \(L^2/8\), at most
+\((1+3h)U^2/8\), since \((1+h)^2\le\allowbreak 1+3h\) for \(0\le\allowbreak  h\le\allowbreak 1\).
+
+When \(m\le\allowbreak 0\), put \(u=\allowbreak -m/U,\allowbreak t=\allowbreak 1+u\) and
+\[
+ a=\frac{h-u^2}{(1+u)^2}\in[0,h],\qquad
+ L/U=t(1+a),\quad y=1-2\pi=\frac{1-a}{1+a}.          \tag{Q85.2.4}\label{eq:Q85:2.4}
+\]
+The centered Bernoulli estimate is
+\[
+ E e^{z(B-\pi)}\le
+ \exp\left\{\frac{1-2\pi}{4\log((1-\pi)/\pi)}z^2\right\}.
+                                                               \tag{Q85.2.5}\label{eq:Q85:2.5}
+\]
+This is \eqref{eq:Q102:3.5}, including its continuous endpoints.
+
+Use \(\log((1+y)/(1-y))\ge\allowbreak 2(y+y^3/3)\).
+It suffices to bound \(L^2/[8(1+y^2/3)]\).
+After division by \(t^2\), the desired inequality becomes
+\[
+ \frac{3(1+a)^4}{4(1+a+a^2)}
+ \le \frac{1+3u^2}{(1+u)^2}+3a.                     \tag{Q85.2.6}\label{eq:Q85:2.6}
+\]
+Subtracting \(3a\) on the left yields
+\[
+ \frac{3(1+a^2)^2}{4(1+a+a^2)}\le\frac34,
+\]
+because \(a^3+a\le\allowbreak \theta^3+\theta<\allowbreak 1\). On the right,
+\[
+ \frac{1+3u^2}{(1+u)^2}-\frac34
+ =\frac{(3u-1)^2}{4(1+u)^2}\ge0.
+\]
+This proves \eqref{eq:Q85:2.1}.
+The original row and spectral bounds, with \(U=\allowbreak \|V\|\) and \(W=\allowbreak KV\), prove \eqref{eq:Q85:2.2}.
+Degenerate Bernoulli endpoints follow directly or by continuity.
+The coefficient-\(17\) estimate and \eqref{eq:Q85:2.2} can both be applied to the same primitive.
+
+\paragraph{Q85.3 The exceptional row \(b=\allowbreak 3,\allowbreak L=\allowbreak 2\)}
+Use \(F=\allowbreak h_2f_3\). Its arithmetic mean is
+\[
+ h_2+f_3=2-d+s=2m+s,\quad m=1-d/2,\quad k=1/m\in[1,6/5].
+\]
+Put \(K'=\allowbreak -K,\allowbreak g'=\allowbreak K'\one,\allowbreak a=\allowbreak k\delta_2,\allowbreak \delta=\allowbreak k^2\delta_3/2\) and
+\(\eta=\allowbreak a-\delta\).
+Positive two-step propagation of \(F\le\allowbreak (m+s/2)^2\) gives
+\[
+ 0<X=T^2F\le m^2 Z,
+ \quad Z=1-\eta+(1+\delta+K'-kK'^4)g'.               \tag{Q85.3.1}\label{eq:Q85:3.1}
+\]
+This is the two-step envelope obtained by \(T(s^2)\le\allowbreak 2\delta_3\).
+Set
+\[
+ V=\delta1+g'-kK'^3g',\qquad N=K'V.
+\]
+Then \(p+Z=\allowbreak 2-\eta+N\), with \(p,\allowbreak Z\ge\allowbreak 0\), so
+\[
+ (pX)^8\le m^{16}[1+(N-\eta)/2]^{16}
+ \le m^{16}\exp(8N-8\eta).                          \tag{Q85.3.2}\label{eq:Q85:3.2}
+\]
+The base is the actual arithmetic mean.
+Its zero endpoint is included by
+\((1+x)^{16}\le\allowbreak  e^{16x}\) for \(x\ge\allowbreak -1\).
+Skew orthogonality gives
+\[
+ EN=-d,
+\]
+\[
+ \|V\|^2=d+k^2\delta_4-2\delta k \delta_2+\delta^2
+ \le d+k^2\delta_4,
+\]
+\[
+ \|K'V\|^2=\delta_2+k^2\delta_5-2\delta k \delta_3+\delta^2d
+ \le \delta_2+k^2\delta_5.                                    \tag{Q85.3.3}\label{eq:Q85:3.3}
+\]
+The discarded terms are nonpositive because
+\(\delta\le\allowbreak 2k\delta_2\) and \(\delta d\le\allowbreak 2k\delta_3\).
+Both follow from \(\delta=\allowbreak k^2\delta_3/2,\allowbreak k\le\allowbreak 6/5,\allowbreak d\le\allowbreak 1/3\) and
+\(\delta_3\le\allowbreak \theta\delta_2\).
+
+Using the coefficient-\(17\) estimate in \eqref{eq:Q85:3.2}, and
+\(16\log m\le\allowbreak -8d\), yields
+\[
+ \log E(pX)^8
+ \le d-8k \delta_2+4k^2\delta_3+17k^2\delta_4
+ \le d-(78/25)\delta_2.                                  \tag{Q85.3.4}\label{eq:Q85:3.4}
+\]
+Indeed \(4\theta+17\theta^2=\allowbreak 4537/1024<\allowbreak 9/2\), and
+\(-8k+(9/2)k^2\) increases on \([1,\allowbreak 6/5]\), with maximum \(-78/25\).
+Using \eqref{eq:Q85:2.2} instead gives
+\[
+ \log E(pX)^8\le
+ -8d+(24-8k)\delta_2+4k^2\delta_3+8k^2\delta_4+24k^2\delta_5
+ \le-8d+(108/5)\delta_2.                                 \tag{Q85.3.5}\label{eq:Q85:3.5}
+\]
+Here \(4\theta+8\theta^2+24\theta^3<\allowbreak 5\): replacing \(\theta\) by \(5/12\) already gives \(115/24<\allowbreak 5\).
+The quadratic \(24-8k+5k^2\) increases on \([1,\allowbreak 6/5]\) and has maximum \(108/5\).
+If \(\delta_2/d\ge\allowbreak 1/3\), \eqref{eq:Q85:3.4} is at most \(-d/25\).
+If \(\delta_2/d\le\allowbreak 1/3\), \eqref{eq:Q85:3.5} is at most \(-4d/5\).
+Both include equality, proving \eqref{eq:Q85:0.1} on the full domain.
+
+\paragraph{Q85.4 Two actual signs of the retained square envelope}
+For \(b=\allowbreak 4\), let \(m=\allowbreak 1-d,\allowbreak R=\allowbreak s+t-dg\). The finite formulas give
+\[
+ h_2+f_4=2m+R,\qquad f_2+h_4=2m-R.                  \tag{Q85.4.1}\label{eq:Q85:4.1}
+\]
+For every \(b\ge\allowbreak 5\) on \(0<\allowbreak d\le\allowbreak 1/5\), use the retained coefficients with \(m=\allowbreak 1-9d/8\).
+For \(b=\allowbreak 5\), take
+\[
+ c_1=d,\quad c_2=d/4+\delta_2,\quad c_3=0.
+\]
+For \(b\ge\allowbreak 6\), set
+\[
+ \lambda=
+ \frac{9d/4-\beta_b-\beta_{b-1}}
+ {\beta_{b-2}+(1-d)\beta_{b-3}},\quad
+ c_1=\beta_{b-1},\ c_2=\lambda\beta_{b-2},\ c_3=\lambda\beta_{b-3}.
+                                                               \tag{Q85.4.2}\label{eq:Q85:4.2}
+\]
+The denominator is positive and \(0\le\allowbreak \lambda\le\allowbreak 1\):
+the full retained constant is at least
+\((4-d)\tau\ge\allowbreak 361d/160>\allowbreak 9d/4\).
+Thus every \(c_i\) is bounded by its actual positive-convolution coefficient.
+Put
+\[
+ C=c_1+c_2+c_3,\quad D=c_2+c_3,\quad E_*=c_3,
+\]
+\[
+ R=\sum_{j=3}^b K^j1-Cg-Dr-E_*s.
+\]
+In the positive convolution for \(f_b\), retain
+\(\beta_b,\allowbreak c_1f_1,\allowbreak c_2f_2,\allowbreak c_3f_3\). This gives \(h_2+f_b\le\allowbreak 2m+R\).
+For the opposite pair, apply \(T\) to the positive convolution for \(f_{b-1}\), retaining \(c_1q,\allowbreak c_2h_2,\allowbreak c_3h_3\). Since
+\[
+ h_3=(1-d)-g-r-s,
+\]
+the constant loss is again
+\(\beta_b+c_1+c_2+(1-d)c_3=\allowbreak 9d/4\), and the remaining polynomial is \(-R\).
+Thus
+\[
+ 0<h_2+f_b\le2m+R,\qquad
+ 0<f_2+h_b\le2m-R.                                  \tag{Q85.4.3}\label{eq:Q85:4.3}
+\]
+The actual products are bounded by \((m+R/2)^2\) and \((m-R/2)^2\), respectively.
+
+Write \(K'=\allowbreak -K,\allowbreak g'=\allowbreak -g\).
+On its rotation blocks \(z=\allowbreak i\sqrt x\),
+\(R=\allowbreak (\mathsf A(x)-\mathsf B(x)z)g'\).
+All unlabelled integrals below use the finite positive spectral measure of
+\(-K'^2\) at \(g'\), with total mass \(d\).
+For \(b=\allowbreak 5\),
+\[
+ \mathsf A=d+D+x-x^2,\qquad\mathsf B=D+x,
+ \quad D=d/4+\delta_2.                                   \tag{Q85.4.4}\label{eq:Q85:4.4}
+\]
+For \(b\ge\allowbreak 6\), let \(N=\allowbreak b-2\ge\allowbreak 4\) and \(G_N(z)=\allowbreak a_N+zb_N\). Then
+\[
+ \mathsf A=C+x(a_N-E_*),\quad
+ \mathsf B=D+x b_N,                                  \tag{Q85.4.5}\label{eq:Q85:4.5}
+\]
+\[
+ 1-x\le a_N,b_N\le1-x+x^2,\quad a_N\ge(1-x)b_N.
+\]
+These are finite alternating geometric sums. The coefficients and the global
+\(\delta_2\) in \(c_i\) stay fixed while \(x\) varies.
+Put \(k=\allowbreak 1/m\) and
+\[
+ V_R=ER^2=\int(\mathsf A^2+x\mathsf B^2),\quad
+ D_0=ER=\int\mathsf B,\quad a_1=EKR=\int\mathsf A,
+\]
+\[
+ \rho=-E(rR)=\int x\mathsf B,\quad
+ U_R=\|KR\|^2=\int x(\mathsf A^2+x\mathsf B^2),
+\]
+\[
+ \delta=kD_0+k^2V_R/2,\quad a=ka_1,\quad
+ \varepsilon=\delta-a.                              \tag{Q85.4.6}\label{eq:Q85:4.6}
+\]
+The retained-envelope estimates give
+\[
+ \mathsf A,\mathsf B\ge0,\quad
+ \mathsf A-(1-x)\mathsf B\ge c_1+c_2x,\quad c_1\ge\tau,
+\]
+\[
+ \sqrt{\mathsf A^2+x\mathsf B^2}\le u_0=3/8+9d/5,
+ \quad \mathsf B\le z_0=\theta+13d/16,                \tag{Q85.4.7}\label{eq:Q85:4.7}
+\]
+\[
+ |\varepsilon|\le3d/5,\quad \delta\le6d/5,\quad ku_0\le1,
+ \quad a_1-D_0\le d^2+\theta^3d.                     \tag{Q85.4.8}\label{eq:Q85:4.8}
+\]
+For the last inequality, \eqref{eq:Q85:4.5} gives
+\(\mathsf A-\mathsf B=\allowbreak c_1-E_*x+x(a_N-b_N)\);
+the first possible positive finite end term is \(x^3\).
+For \(b=\allowbreak 5\), the difference integrates to \(d^2-\delta_3\).
+Multiplying the same finite observation by \(x\) also gives
+\[
+ D_3-\rho:=\int x(\mathsf A-\mathsf B)
+ \le d \delta_2+\delta_5.                                     \tag{Q85.4.9}\label{eq:Q85:4.9}
+\]
+For \(b=\allowbreak 4\) on \(0<\allowbreak d\le\allowbreak 1/4\), the corresponding exact quantities are
+\[
+ D_0=\delta_2,\quad a_1=d^2+\delta_2,\quad \rho=\delta_3,
+\]
+\[
+ V_R=d^3+2d\delta_2+\delta_3+\delta_4,\quad
+ U_R=d^2\delta_2+2d\delta_3+\delta_4+\delta_5,
+\]
+\[
+ \delta=k\delta_2+k^2V_R/2,\quad
+ \varepsilon=-kd^2+k^2V_R/2,
+ \quad |\varepsilon|\le d/6,\quad\delta\le25d/24.     \tag{Q85.4.10}\label{eq:Q85:4.10}
+\]
+The last two estimates apply to this same \(R,\allowbreak m\).
+
+\paragraph{Q85.5 Full-frequency contraction of the retained envelope}\label{calc:Q85:retained-contraction}
+For every \(b\ge\allowbreak 5,\allowbreak 0<\allowbreak d\le\allowbreak 1/5\) and every original frequency
+\(0\le\allowbreak  x\le\allowbreak \theta\),
+\[
+ \boxed{\mathsf A(x)^2+x\mathsf B(x)^2\le2m\mathsf B(x).} \tag{Q85.5.1}\label{eq:Q85:5.1}
+\]
+Consequently,
+\[
+ V_R\le2mD_0,\qquad kU_R\le2\rho.                  \tag{Q85.5.2}\label{eq:Q85:5.2}
+\]
+First suppose \(b\ge\allowbreak 6\), and let \(f=\allowbreak x-x^2+x^3,\allowbreak \ell=\allowbreak x-x^2\).
+Equations \eqref{eq:Q85:4.2}--\eqref{eq:Q85:4.5} give
+\[
+ \mathsf A\le D+d+f,\quad D+\ell\le\mathsf B\le D+f,
+\]
+\[
+ d/4\le D\le(17/16)d+d^2.                           \tag{Q85.5.3}\label{eq:Q85:5.3}
+\]
+Indeed
+\(D=\allowbreak 9d/4-\beta_b-\beta_{b-1}+dE_*\), and these two global bounds follow from
+\(\tau\le\allowbreak \beta_j\le\allowbreak  d,\allowbreak E_*\le\allowbreak  d\). It is enough to prove
+\[
+ Q=(1+x)(D+f)^2+2d(D+f)+d^2-2m(D+\ell)\le0.         \tag{Q85.5.4}\label{eq:Q85:5.4}
+\]
+For fixed \(d\), \(Q\) is convex in \(D\). It is also convex in \(x\).
+To see the latter, use
+\[
+ (1+x)f=x+x^4,
+\]
+\[
+ (1+x)f^2=x^2-x^3+x^4+x^5-x^6+x^7=:P(x).
+\]
+Here \(P''\ge\allowbreak 5/4\), since
+\(2-6x+12x^2\ge\allowbreak 5/4\), \(20x^3-30x^4\ge\allowbreak 0\), and the remaining terms are nonnegative.
+The potentially negative term \(2df''\ge\allowbreak -4d\) is paid by the contribution \(4m\).
+Thus \(Q_{xx}>\allowbreak 0\) on the whole rectangle.
+It suffices to use \(x=\allowbreak 0,\allowbreak \theta\) and the two \(D\) endpoints while retaining the full interval of \(d\).
+
+At \(x=\allowbreak 0,\allowbreak D=\allowbreak d/4\),
+\[
+ Q=d[(17/8)d-1/2]\le-3d/40.
+\]
+At \(x=\allowbreak 0,\allowbreak D=\allowbreak (17/16)d+d^2\),
+\[
+ Q/d=-17/8+(1189/256)d+(51/8)d^2+d^3<0.
+\]
+For the last inequality, increase the three positive coefficients to \(5,\allowbreak 7,\allowbreak 1\) and use \(d\le\allowbreak 1/5\).
+At \(x=\allowbreak \theta\), use
+\(f(\theta)<\allowbreak 5/16\), \(6/25\le\allowbreak \ell(\theta)\le\allowbreak 1/4\) and \(1+\theta<\allowbreak 3/2\).
+For \(D=\allowbreak d/4\),
+\[
+ Q\le75/512-12/25+(59/64)d+(69/32)d^2
+ \le-161/2560.                                      \tag{Q85.5.5}\label{eq:Q85:5.5}
+\]
+For \(D=\allowbreak (17/16)d+d^2\), the linear coefficient is at most \(-15/4096\).
+The quadratic, cubic and quartic coefficients are less than \(6,\allowbreak 15/2,\allowbreak 3/2\), respectively, so
+\[
+ Q\le75/512-12/25+6d^2+(15/2)d^3+(3/2)d^4
+ \le-9957/320000.                                    \tag{Q85.5.6}\label{eq:Q85:5.6}
+\]
+Before enlargement the quadratic coefficient is \(49005/8192<\allowbreak 6\), and the cubic coefficient is \(1853/256<\allowbreak 15/2\).
+The linear comparison is
+\((1277/256)(5/16)-17/8+9/16=\allowbreak -15/4096\).
+Every remaining positive polynomial was bounded at \(d=\allowbreak 1/5\).
+Convexity proves the intermediate frequencies and \(D\) values.
+
+For \(b=\allowbreak 5\),
+\(\mathsf A=\allowbreak D+d+x-x^2,\allowbreak \mathsf B=\allowbreak D+x\), with
+\(d/4\le\allowbreak  D\le\allowbreak (21/32)d\).
+Because \(\mathsf A\ge\allowbreak 0\), discard its \(-x^2\) inside the positive square.
+It suffices to prove
+\[
+ Q=(1+x)(D+x)^2+2d(D+x)+d^2-2m(D+x)\le0.             \tag{Q85.5.7}\label{eq:Q85:5.7}
+\]
+This \(Q\) is convex in \(D\) and \(x\); its second \(x\)-derivative is
+\(2(1+2D)+6x>\allowbreak 0\).
+At \(x=\allowbreak 0\), the lower \(D\) endpoint was proved above, and the upper gives
+\(Q/d=\allowbreak -21/16+(4321/1024)d<\allowbreak 0\).
+At \(x=\allowbreak \theta\), write \(D=\allowbreak t_0d\), \(t_0=\allowbreak 1/4\) or \(21/32\).
+The constant is \(-19019/32768\le\allowbreak -9/16\), the linear coefficient is at most \(13/8\), and the quadratic coefficient is at most \(9/2\).
+For the quadratic bound, use \(1+\theta<\allowbreak 3/2,\allowbreak t_0<\allowbreak 2/3\);
+for the linear bound, use \(2\theta+2\theta^2-2<\allowbreak -3/4,\allowbreak t_0\ge\allowbreak 1/4\).
+Therefore
+\[
+ Q\le-9/16+(13/8)d+(9/2)d^2\le-23/400.
+\]
+This proves \eqref{eq:Q85:5.1} for every finite \(b\ge\allowbreak 5\).
+Integrate against the original spectral measure, first directly and then after multiplication by \(x\), to obtain \eqref{eq:Q85:5.2}.
+The global \(\delta_2\) is constant in this frequency calculation.
+
+\paragraph{Q85.6 Every \(b\ge\allowbreak 5,\allowbreak L=\allowbreak 2\), in the reversed-pair direction}
+For \(0<\allowbreak d\le\allowbreak 1/5\), take \(F=\allowbreak f_2h_b\) and use its actual square
+\((m-R/2)^2\) from \eqref{eq:Q85:4.3}.
+In the two-step Duhamel calculation write
+\[
+ \delta_-=-kD_0+k^2V_R/2,\quad a_-=-ka_1,
+ \quad\varepsilon_-=\delta_--a_-.
+\]
+Positive propagation gives
+\[
+ 0<T^2F/m^2\le Z=\bar f_2-kK'^2R+ka_1+\delta_-q.
+\]
+This follows by expanding that square and using \(T(R^2)\le\allowbreak 2V_R\).
+In particular its right side is nonnegative. It satisfies
+\[
+ p+Z=2+\varepsilon_-+N,
+ \quad N=K'V_-,\quad V_-=\delta_-1+g'-kK'R.
+\]
+The exact moments are
+\[
+ EN=-d+k\rho,
+\]
+\[
+ \|V_-\|^2=d-2k\rho+k^2U_R+\delta_-^2-2\delta_-a_-.
+                                                               \tag{Q85.6.1}\label{eq:Q85:6.1}
+\]
+Equation \eqref{eq:Q85:5.2} gives \(\delta_-\le\allowbreak 0\) and \(kU_R\le\allowbreak 2\rho\).
+Also \(a_1\ge\allowbreak \kappa D_0+\tau d\) implies \(D_0\le\allowbreak 2a_1\), so
+\(\delta_-\ge\allowbreak 2a_-\).
+Thus the entire constant-coordinate term in \eqref{eq:Q85:6.1} is nonpositive and
+\[
+ \|V_-\|^2\le d.
+\]
+AM--GM and the coefficient-\(17\) estimate yield
+\[
+ \log E[pT^2F]^8
+ \le16\log m+9d+8(\varepsilon_-+k\rho).              \tag{Q85.6.2}\label{eq:Q85:6.2}
+\]
+For the same \(R\),
+\[
+ \varepsilon_-+k\rho
+ \le \{k(d+\theta^3)+(k^2/2)u_0^2+k\theta z_0\}d.
+\]
+All three terms increase with \(d\) on \([0,\allowbreak 1/5]\), and their endpoint comparisons are
+\[
+ 43753/126976<7/20,\quad
+ 21609/48050<9/20,\quad
+ 1183/3968<3/10.
+\]
+Their sum is therefore less than \(11/10\).
+Since \(16\log m\le\allowbreak -18d\), \eqref{eq:Q85:6.2} is at most \(-d/5\).
+This proves the low-domain row for every finite \(b\ge\allowbreak 5\).
+
+For \(1/5\le\allowbreak  d\le\allowbreak 1/3\), original adjunction gives
+\[
+ EF=E(f_2h_b)=E(f_3f_{b-1})=E(h_4f_{b-2}).            \tag{Q85.6.3}\label{eq:Q85:6.3}
+\]
+For \(b=\allowbreak 5\), this is
+\(\E[f_3Af_3]=\allowbreak \E[f_3Tf_3]=\allowbreak (\E f_3)^2=\allowbreak (1-2d)^2\).
+For \(b=\allowbreak 6\), it is
+\(\E(h_4f_4)\le\allowbreak \mu_3^2=\allowbreak (1-2d)^2\), since \(h_4+f_4=\allowbreak 2\mu_3\) pointwise.
+For \(b\ge\allowbreak 7\), set \(v=\allowbreak b-2\ge\allowbreak 5\). The arithmetic-mean input gives
+\[
+ h_4+f_v\le2-13d/4+R_{4v},\quad
+ R_{4v}=\sum_{j=5}^vK^j1.
+\]
+The finite alternating means start with a zero odd term and a negative even term, so
+\(\E R_{4v}\le\allowbreak 0\). Its norm satisfies
+\[
+ ER_{4v}^2\le(1+\theta)\delta_5\le(1+\theta)\theta^4d.
+\]
+The finite \(G_N\) norm is at most one except at \(N=\allowbreak 2\), where its square is at most
+\(1+\theta\); \(N=\allowbreak 1\) is included.
+Since \(1-13d/8>\allowbreak 0\),
+\[
+ E(h_4f_v)\le(1-13d/8)^2+\frac{(1+\theta)\theta^4}{4}d
+ \le(1-13d/8)^2+d/80.                                \tag{Q85.6.4}\label{eq:Q85:6.4}
+\]
+The coefficient comparison already follows from \(\theta<\allowbreak 5/12\).
+The last quadratic decreases on \([1/5,\allowbreak 1/3]\), with maximum
+\(733/1600<\allowbreak 11/24\). The \(b=\allowbreak 5,\allowbreak 6\) maximum \(9/25\) is smaller.
+Thus \(TF\le\allowbreak 2\E F\le\allowbreak 11/12\) at every atom.
+Positivity gives \(T^2F\le\allowbreak (11/12)q\), whence
+\[
+ E[pT^2F]^8\le(11/12)^8\le e^{-2/3}\le e^{-d/5}.      \tag{Q85.6.5}\label{eq:Q85:6.5}
+\]
+The same direction applies on both domains, proving the first inequality in \eqref{eq:Q85:0.3}.
+
+\paragraph{Q85.7 The two short \(b=\allowbreak 4\) rows}
+For \(L=\allowbreak 2,\allowbreak F=\allowbreak f_2h_4,\allowbreak 0<\allowbreak d\le\allowbreak 1/4\), use \eqref{eq:Q85:4.10}.
+In the reversed square,
+\(\delta_-=\allowbreak -k\delta_2+k^2V_R/2\le\allowbreak 0\), because
+\[
+ V_R/\delta_2\le3d+\theta+\theta^2\le2(1-d).
+\]
+Also \(\varepsilon_-=\allowbreak kd^2+k^2V_R/2\ge\allowbreak 0\), so
+\(\delta_-\ge\allowbreak  a_-\) and the constant norm contribution is nonpositive.
+The two-step calculation in \eqref{eq:Q85:6.1} gives
+\[
+\begin{aligned}
+ \log EH^8\le{}&16\log m+9d+8kd^2\\
+ &+k^2[4d^3+(8d+17d^2)\delta_2+(4+34d)\delta_3+21\delta_4+17\delta_5]
+ -26k\delta_3.                                           
+\end{aligned}
+\tag{Q85.7.1}\label{eq:Q85:7.1}
+\]
+Group \(\delta_3,\allowbreak \delta_4,\allowbreak \delta_5\) before estimating their signs.
+Since \(4+21\theta+17\theta^2<\allowbreak 31/2\), the total coefficient of \(\delta_3\) is at most
+\(k^2(31/2+34d)-26k\le\allowbreak 24k^2-26k\le\allowbreak 8\).
+Bound the remaining positive terms at \(d=\allowbreak 1/4,\allowbreak k=\allowbreak 4/3\).
+Using \(16\log m\le\allowbreak -16d\), the result divided by \(d\) is
+\[
+ -7+8/3+4/9+49\theta/9+8\theta^2=-137/384<-1/3.       \tag{Q85.7.2}\label{eq:Q85:7.2}
+\]
+
+For \(L=\allowbreak 3,\allowbreak F=\allowbreak h_2f_4\), use the canonical parameters in
+\eqref{eq:Q85:4.10}. The three-step arithmetic-mean primitive is
+\[
+ V_3=\varepsilon1+(1+\delta)g'+K'g'+kK'^2R.
+\]
+Its nonconstant spectral coordinates are
+\[
+ 1+\delta-kdx-kx^2,\qquad 1+kx^2.
+\]
+The scalar constant plus the signed mean of \(K'V_3\) is
+\(-2d-kd^2+kV_R/2\). Thus
+\[
+ \log EH^8\le16\log m-16d-8kd^2+4kV_R+17\|V_3\|^2. \tag{Q85.7.3}\label{eq:Q85:7.3}
+\]
+In the nonconstant norm, group \(\delta_3,\allowbreak \delta_4,\allowbreak \delta_5,\allowbreak \delta_6\).
+Their coefficient is at most
+\[
+ k[-2\kappa+k((d+\theta)^2+\theta^3)]<0,
+\]
+because
+\((d+\theta)^2+\theta^3\le\allowbreak 16309/32768<\allowbreak 1/2\) and \(k\le\allowbreak 4/3\).
+The constant-vector contribution is
+\(\varepsilon^2-2\varepsilon(d+k\delta_3)
+\le(1001/2304)d^2<d^2/2\).
+The parameter bounds on \(\delta,\allowbreak \varepsilon\) give
+\[
+ \|V_3\|^2/d\le1+\theta+(85/48)d+(625/576)d^2.        \tag{Q85.7.4}\label{eq:Q85:7.4}
+\]
+The coefficient \(1-2k(1+\delta)d\) of \(\delta_2\) is nonnegative:
+its minimum from those parameter bounds is \(23/144\).
+Thus \(\delta_2\le\allowbreak \theta d\) can be used in this term.
+Use \(16\log m\le\allowbreak -16d-8d^2,\allowbreak k\ge\allowbreak 1\) and
+\(4kV_R/d\le\allowbreak 16309/6144\), and bound the remaining positive powers at \(d=\allowbreak 1/4\).
+Equation \eqref{eq:Q85:7.3}, divided by \(d\), is at most
+\[
+ -259/32+677/192+10625/9216+16309/6144
+ =-14015/18432<-3/4.                                 \tag{Q85.7.5}\label{eq:Q85:7.5}
+\]
+
+For the actual bare path, Corollary~\ref{cor:unit-square:two-step-path}
+gives
+\[
+ \E(p\bar f_2)^8\le82/15\qquad(1/4\le d\le1/3).
+ \tag{Q85.7.6}\label{eq:Q85:7.6}
+\]
+On the adjacent interval it gives
+\[
+ \E(p\bar f_2)^8\le35/8\qquad(1/5\le d\le1/4).
+ \tag{Q85.7.7}\label{eq:Q85:7.7}
+\]
+Both statements use the same actual \(r=K^2\one\) and its compatible
+mean and second moment, with the proof now shared at the unit root.
+
+For the \(b=\allowbreak 4\) reversed pair on \(d\ge\allowbreak 1/4\),
+\[
+ E(f_2h_4)=Ef_3^2=1-3d+3d^2-\delta_2+\delta_3
+ \le1-3d+(77/32)d^2\le205/512                       \tag{Q85.7.8}\label{eq:Q85:7.8}
+\]
+The bounding quadratic decreases on \([1/4,\allowbreak 1/3]\).
+Thus \(T(f_2h_4)\le\allowbreak 205/256\) and
+\(pT^2(f_2h_4)\le\allowbreak 205/256\).
+Its eighth power is smaller than \(e^{-d/3}\):
+\((205/256)^2<\allowbreak 13/20\) gives an eighth power below \(9/50\), whereas
+\(e^{-d/3}\ge\allowbreak 8/9\).
+For the canonical pair, its exact mean gives
+\[
+ E(h_2f_4)=1-3d+\delta_2-d^2+\delta_3
+ \le1-(2487/1024)d-d^2\le1353/4096<1/3.              \tag{Q85.7.9}\label{eq:Q85:7.9}
+\]
+Hence \(pT^3(h_2f_4)\le\allowbreak (2/3)p\bar f_2\).
+Equation \eqref{eq:Q85:7.6} gives an eighth moment at most
+\((2/3)^8(82/15)<\allowbreak 1/2<\allowbreak e^{-d/3}\).
+Together with \eqref{eq:Q85:7.2} and \eqref{eq:Q85:7.5}, this proves
+\eqref{eq:Q85:0.2} in its fixed directions.
+
+\paragraph{Q85.8 Every \(b\ge\allowbreak 5,\allowbreak L=\allowbreak 3\) on the low domain}
+Let \(0<\allowbreak d\le\allowbreak 1/5,\allowbreak F=\allowbreak h_2f_b\). Three-step Duhamel propagation of the actual square gives
+\[
+ p+Z=2+\varepsilon-d-k\rho+N,
+\]
+\[
+ N=K'V_3,\quad
+ V_3=\varepsilon1+(1+\delta)g'+K'g'+kK'^2R,
+\]
+\[
+ EN=-(1+\delta)d+kD_3,\qquad D_3=\int x\mathsf A.
+\]
+Consequently,
+\[
+ \log EH^8\le16\log m-16d+8\varepsilon-8\delta d
+                 +8k(D_3-\rho)+17\|V_3\|^2.          \tag{Q85.8.1}\label{eq:Q85:8.1}
+\]
+The nonconstant coordinates of \(V_3\) are
+\(1+\delta-kx\mathsf A\) and \(1+kx\mathsf B\).
+For every \(b\ge\allowbreak 5\), their squared norm satisfies
+\[
+ (1+\delta-kx\mathsf A)^2+x(1+kx\mathsf B)^2
+ \le(1+\delta)^2+x.                                 \tag{Q85.8.2}\label{eq:Q85:8.2}
+\]
+Here is the full finite certificate.
+Using \(\mathsf A^2+x\mathsf B^2\le\allowbreak  u_0\mathsf A+xz_0\mathsf B\) and
+\(\mathsf A\ge\allowbreak (1-x)\mathsf B\), the unshifted squared difference is at most
+\[
+ kx\mathsf B[-2+4x+kx\{u_0(1-x)+xz_0\}].
+\]
+The substitution is valid because \(2-kxu_0>\allowbreak 0\).
+The bracket is negative on the full rectangle:
+\(x[u_0(1-x)+xz_0]\) increases with \(x\), with derivative at least
+\(u_0(1-2x)>\allowbreak 0\), and all parameters increase with \(d\).
+At \(d=\allowbreak 1/5,\allowbreak x=\allowbreak 13/32\), its negative margin is \(79745/3174400\).
+A nonnegative \(\delta\) shift adds \(-2\delta kx\mathsf A\) to the difference.
+This proves \eqref{eq:Q85:8.2}, including \(b=\allowbreak 5\).
+The constant coordinate then gives
+\[
+ \|V_3\|^2\le(1+\delta)^2d+\delta_2
+                 +\varepsilon^2-2\varepsilon(d+k\rho).          \tag{Q85.8.3}\label{eq:Q85:8.3}
+\]
+
+Besides \(\varepsilon\le\allowbreak 3d/5\), the parameter and endpoint bounds give
+\[
+ -\varepsilon\le k(a_1-D_0)<7d/20,\qquad k\rho<3d/10.
+\]
+The full \(\varepsilon\) contribution satisfies
+\[
+ 8\varepsilon+17\varepsilon^2-34\varepsilon(d+k\rho)
+ \le(24/5)d-(357/25)d^2.                             \tag{Q85.8.4}\label{eq:Q85:8.4}
+\]
+For \(\varepsilon\ge\allowbreak 0\), discard the nonpositive \(\rho\) term.
+The convex quadratic on \([0,\allowbreak 3d/5]\) has maximum at an endpoint;
+\(8-34d>\allowbreak 0\) makes the upper endpoint larger, giving exactly the right side.
+For \(\varepsilon\le\allowbreak 0\), put \(w=\allowbreak -\varepsilon\le\allowbreak 7d/20\).
+The upper bound is a convex quadratic in \(w\), with endpoints zero and
+\[
+ -(14/5)d+(7021/400)d^2.
+\]
+The right side of \eqref{eq:Q85:8.4} is positive and exceeds this endpoint:
+their difference is \(d[38/5-(12733/400)d]>\allowbreak 0\) for \(d\le\allowbreak 1/5\).
+Thus the actual mean of either sign and its constant-vector cross term remain included.
+Use \(\delta\le\allowbreak 6d/5\), \eqref{eq:Q85:4.9}, and
+\[
+ 16\log m\le-18d-(81/8)d^2,
+ \quad 8k\theta^4<3/10,\quad8k\theta<17/4.
+\]
+Substitution into \eqref{eq:Q85:8.1}--\eqref{eq:Q85:8.4} gives
+\[
+ \log EH^8\le-(799/160)d+(2209/200)d^2+(612/25)d^3
+ \le-(36111/20000)d<-(9/5)d.                         \tag{Q85.8.5}\label{eq:Q85:8.5}
+\]
+All remaining positive coefficients were bounded at \(d=\allowbreak 1/5\).
+This proves the canonical low-domain row for every finite \(b\ge\allowbreak 5\).
+
+\paragraph{Q85.10 Completion using the actual long-connector inputs}
+For the canonical \(F=\allowbreak h_2f_b\), Section~\ref{proof:Q5-C086} proves
+\(\E[pT^LF]^8\le\allowbreak 1-d/20000\) when \(b=\allowbreak 3,\allowbreak L\ge\allowbreak 3\), or \(b\ge\allowbreak 4,\allowbreak L\ge\allowbreak 4\).
+It also proves, for every finite \(b\ge\allowbreak 5\) and \(1/5\le\allowbreak  d\le\allowbreak 1/3\),
+\(\E(h_2f_b)\le\allowbreak (1-d)/2\).
+
+For the remaining \(b\ge\allowbreak 5,\allowbreak L=\allowbreak 3,\allowbreak d\ge\allowbreak 1/5\) row, the kernel
+\(0\le\allowbreak 1-K(x,\allowbreak y)\le\allowbreak 2\) gives \(TF\le\allowbreak 1-d\). Positivity yields
+\[
+ pT^3F\le(1-d)p\bar f_2.
+\]
+The actual path estimates \eqref{eq:Q85:7.6}--\eqref{eq:Q85:7.7} now give
+\[
+ E[pT^3F]^8\le
+ \begin{cases}
+ (4/5)^8(35/8)=286720/390625<3/4,&1/5\le d\le1/4,\\
+ (3/4)^8(82/15)=538002/983040<3/4,&1/4\le d\le1/3.
+ \end{cases}                                                   \tag{Q85.10.1}\label{eq:Q85:10.1}
+\]
+Since \(e^{-d/5}\ge\allowbreak 1-d/5\ge\allowbreak 14/15\), this proves the second inequality in
+\eqref{eq:Q85:0.3} on the remaining domain.
+Together with \eqref{eq:Q85:8.5}, it proves that row in the same direction.
+
+The full ordinary catalogue has the following rows:
+\[
+\begin{array}{c|c|c}
+\text{integer row}&F_{b,L}&\text{ordinary eighth upper bound}\\ \hline
+b\ge3,\ L=1&h_2f_b&1-d/500\\
+b=3,\ L=2&h_2f_3&e^{-d/25}\\
+b=3,\ L\ge3&h_2f_3&1-d/20000\\
+b=4,\ L=2&f_2h_4&e^{-d/3}\\
+b=4,\ L=3&h_2f_4&e^{-d/3}\\
+b\ge5,\ L=2&f_2h_b&e^{-d/5}\\
+b\ge5,\ L=3&h_2f_b&e^{-d/5}\\
+b\ge4,\ L\ge4&h_2f_b&1-d/20000
+\end{array}
+\]
+The unit row uses the \((2,\allowbreak 3)\) unit input of Section~\ref{proof:Q5-C053-unit} and
+Section~\ref{proof:Q5-C057} for \(b\ge\allowbreak 4\).
+The \(b=\allowbreak 3,\allowbreak L\ge\allowbreak 3\) and \(b\ge\allowbreak 4,\allowbreak L\ge\allowbreak 4\) rows use Section~\ref{proof:Q5-C086};
+all other rows were proved above.
+For \(0\le\allowbreak  d\le\allowbreak 1/3\),
+\[
+ e^{-d/25}\le\frac1{1+d/25}
+ =1-\frac{d}{25+d}\le1-\frac{3d}{76}
+ \le1-d/20000.
+\]
+The stronger short-row exponentials satisfy the same bound. Therefore
+\[
+ \boxed{E[pT^L F_{b,L}]^8\le Q(d)=1-d/20000
+   \quad(b\ge3,L\ge1).}                              \tag{Q85.10.2}\label{eq:Q85:10.2}
+\]
+
+\paragraph{Q85.11 Decorations and complete reversal}
+At the terminal, let \(E_t\) be the product of its original equal pairs.
+One member of each pair points entirely outward; the other has its first edge inward and its remaining edges outward.
+At the receiving root, let \(E_r\) be the corresponding product of actual pairs or their complete reversals, as specified by the structure.
+Each pair factor lies in \([0,\allowbreak 1]\).
+The decorated actual message is
+\[
+ H_D=E_rpT^L(E_tF_{b,L}).                              \tag{Q85.11.1}\label{eq:Q85:11.1}
+\]
+Positivity and \eqref{eq:Q85:10.2} imply \(\E H_D^8\le\allowbreak  Q(d)\);
+the decorations are inserted before their outgoing propagation.
+
+For complete reversal, replace \(K\) by \(-K\) on the entire fixed structure.
+Then \(p,\allowbreak q\) exchange, \(A,\allowbreak T\) exchange, \(f_n,\allowbreak \bar f_n\) exchange, and
+\(h_n\) becomes \(A\bar f_{n-1}\).
+All terminal and root decorations reverse together.
+In particular, the \(L=\allowbreak 2,\allowbreak b\ge\allowbreak 4\) row reverses \(f_2h_b\) as a whole.
+The reversed ordinary bound has the same \(Q(d)\) and the same original edge and vertex counts.

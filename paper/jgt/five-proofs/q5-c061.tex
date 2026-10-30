@@ -1,0 +1,341 @@
+\subsection{Unit-connector ordinary eighth moments for even terminals of minimum one}\label{proof:Q5-C061}
+
+\paragraph{Q61.0 The terminal and its directions.}
+Use the fixed finite model of Appendix~\ref{proof:Q5-C064}, with
+\(Jv=\allowbreak (\E v)\one\), \(A=\allowbreak J+K\), \(T=\allowbreak J-K=\allowbreak A^*\), \(K^*=\allowbreak -K\),
+\(|K(x,\allowbreak y)|\le\allowbreak 1\), \(g=\allowbreak K\one\), \(p=\allowbreak 1+g\), \(q=\allowbreak 1-g\),
+\(d=\allowbreak \E g^2\), \(\delta_j=\allowbreak \|K^j\one\|_2^2\),
+\(\theta=\allowbreak 13/32\), \(\kappa=\allowbreak 19/32\), \(f_n=\allowbreak A^n\one\),
+\(h_n=\allowbreak Tf_{n-1}\), and \(h_1=\allowbreak q\).
+After maximal equal pairing, suppose
+\(1=\allowbreak a_1<\allowbreak b_1<\allowbreak a_2<\allowbreak b_2<\allowbreak \cdots<\allowbreak a_k<\allowbreak b_k\), \(k\ge\allowbreak 2\).
+For the genuine equal-pair product \(E_0=\allowbreak \prod_\ell f_\ell h_\ell\le\allowbreak 1\), set
+\begin{equation}\tag{Q61.0.1}\label{eq:Q61:0.1}
+\boxed{F=E_0qf_{b_1}\prod_{i=2}^kh_{a_i}f_{b_i},\qquad H=pTF.}
+\end{equation}
+Each \(f_n\)-arm points outward; each \(h_n\)-arm has only its first
+edge inward. The terminal unit arm points inward. A single connector
+edge points from the terminal to the new root, whose unit arm points
+outward. This choice depends only on the arm list. For all finite
+integer lengths, \(k\ge\allowbreak 2\), legal kernels and equal-pair multiplicities,
+\begin{equation}\tag{Q61.0.2}\label{eq:Q61:0.2}
+\boxed{\E[(pTF)^8]\le e^{-63d/50}\le1-d/2.}
+\end{equation}
+The proof includes \((1,\allowbreak 2,\allowbreak a,\allowbreak c)\) with \(a\ge\allowbreak 4\), \((1,\allowbreak 3,\allowbreak a,\allowbreak c)\) with
+\(a\ge\allowbreak 4\), every \(b_1\ge\allowbreak 4\), and \((1,\allowbreak 2,\allowbreak 3,\allowbreak c)\), in the ordered
+direction \eqref{eq:Q61:0.1}.
+
+\paragraph{Q61.1 Finite identities and boundary cases.}
+After deletion of zero-mass atoms, skewness gives
+\(|g(x)|\le\allowbreak 1-\mu(x)\) and \(p(x),\allowbreak q(x)\ge\allowbreak \mu(x)>\allowbreak 0\).
+The finite calculus gives
+\begin{equation}\tag{Q61.1.1}\label{eq:Q61:1.1}
+0\le d\le1/3,\quad\|K\|_{2\to2}^2\le\theta,\quad
+\delta_{j+1}\le\theta\delta_j,\quad |Kv(x)|\le\|v\|_2,
+\end{equation}
+and
+\begin{equation}\tag{Q61.1.2}\label{eq:Q61:1.2}
+\E K^{2j}\one=(-1)^j\delta_j,\quad\E K^{2j+1}\one=0,\quad
+0\le f_n,h_n\le2,\quad f_nh_n\le1.
+\end{equation}
+These are identities in \(L^2(\mu)\). When \(d=\allowbreak 0\), \(g=\allowbreak 0\) and
+\(A\one=\allowbreak T\one=\allowbreak \one\); integration from the leaves gives every tree
+message equal to one even if \(K\ne0\). Below take \(d>\allowbreak 0\) where needed.
+
+\paragraph{Q61.2 The \(K^2\) row input.}
+The finite three-label and random-sign argument in
+\eqref{eq:Q49:2.1}--\eqref{eq:Q49:2.3} proves
+\fitdisplay{
+\|Kv\|_2^2\le1/3\quad(|v|\le1),\qquad
+|K^2w(x)|^2\le\|w\|_2^2/3\quad(w\text{ real}).
+}{}
+The first estimate is from \(L^\infty\) to \(L^2\), and the second
+is a row estimate for \(K^2\). The spectral estimate used here is
+\(\|K\|^2\le\allowbreak \theta\).
+
+\paragraph{Q61.3.1 A centered variable in a bounded interval.}
+Let a finite real variable \(Y\) have \(\E Y=\allowbreak 0\) and take values in
+an interval of length \(\ell\). For \(\psi(s)=\allowbreak \log\E e^{sY}\), the
+exponentially tilted law has the same support, and
+\(\psi''(s)=\allowbreak \operatorname{Var}_s(Y)\le\allowbreak \ell^2/4\).
+Indeed, if \(c\) is the interval midpoint, then
+\(\operatorname{Var}_s(Y)\le\allowbreak \E_s(Y-c)^2\le\allowbreak \ell^2/4\).
+Since \(\psi(0)=\allowbreak \psi'(0)=\allowbreak 0\), two integrations give, for every \(s\ge\allowbreak 0\),
+\begin{equation}\tag{Q61.3.1}\label{eq:Q61:3.1}
+\E e^{sY}\le e^{s^2\ell^2/8}.
+\end{equation}
+
+\paragraph{Q61.3.2 Hermite comparison with either sign of the mean.}
+Suppose the same finite real variable \(W\) satisfies
+\(|W|\le\allowbreak  U\), \(\E W^2\le\allowbreak  U^2/2\), \(U\ge\allowbreak 0\).
+For \(s\ge\allowbreak 0\), put \(m=\allowbreak \E W\), \(m_+=\allowbreak \max(m,\allowbreak 0)\). We prove
+\begin{equation}\tag{Q61.3.2}\label{eq:Q61:3.2}
+\boxed{\E e^{sW}\le\exp\{sm_++9s^2U^2/32\}.}
+\end{equation}
+The cases \(U=\allowbreak 0\) or \(s=\allowbreak 0\) are immediate. For \(U,\allowbreak s>\allowbreak 0\), let
+\(f(w)=e^{sw}\). Its Hermite majorant is
+\begin{equation}\tag{Q61.3.3}\label{eq:Q61:3.3}
+Q(w)=f(a)+f'(a)(w-a)+B(w-a)^2,\qquad
+B=\frac{f(U)-f(a)-f'(a)(U-a)}{(U-a)^2}\ge0.
+\end{equation}
+Lemma~\ref{lem:oc:hermite} proves \(f\le Q\) for \(-U\le a<U\).
+Its remainder argument also covers \(a<-U\), since \(f'''\ge0\)
+throughout the contact interval. Thus the stated majorant holds for
+every \(a<U\), with \(B\ge0\).
+
+If \(m\le0\), \eqref{eq:oc:fixed-contact} with \(h=1/2\) gives
+\(\E e^{sW}\le(2/3)e^{-sU/2}+(1/3)e^{sU}\).
+This centered two-point variable has interval length \(3U/2\),
+so \eqref{eq:Q61:3.1} proves \eqref{eq:Q61:3.2} in this case.
+
+If \(m\ge\allowbreak 0\), keep the variance
+\(v=\allowbreak \E(W-m)^2=\allowbreak \E W^2-m^2\le\allowbreak  U^2/2-m^2\).
+Then \(0\le\allowbreak  m\le\allowbreak  U/\sqrt2<\allowbreak U\). Put \(M=\allowbreak U-m>\allowbreak 0\) and
+\(a=m-v/M\). Take the centered two-point variable
+\(Y=\ell(Z-\pi)\) of \eqref{eq:oc:matched-contacts}, where
+\(\ell=M+v/M\). Lemma~\ref{lem:oc:hermite} places \(a\) in
+\([-U,U]\) and matches the first two moments, so
+\begin{equation}\tag{Q61.3.4}\label{eq:Q61:3.4}
+\E e^{sW}\le\E Q(W)=\E Q(m+Y)=e^{sm}\E e^{sY}.
+\end{equation}
+Its interval length obeys
+\begin{equation}\tag{Q61.3.5}\label{eq:Q61:3.5}
+M+\frac vM\le U-m+\frac{U^2/2-m^2}{U-m}
+=\frac{3U^2/2-2Um}{U-m}\le\frac{3U}{2}.
+\end{equation}
+After multiplication by \(U-m>\allowbreak 0\), the last inequality is
+\(-2Um\le\allowbreak -3Um/2\), valid for \(m\ge\allowbreak 0\).
+Apply \eqref{eq:Q61:3.1} in \eqref{eq:Q61:3.4} to complete the proof.
+
+\paragraph{Q61.4 Positive propagation and a uniform exponential payment.}
+The scalar estimate on the whole interval \(|u|\le\allowbreak 1\) is
+\begin{equation}\tag{Q61.4.1}\label{eq:Q61:4.1}
+e^u\le1+u+\frac34u^2.
+\end{equation}
+For \(u\le\allowbreak 0\), the integral remainder coefficient is at most \(1/2\).
+For \(0\le\allowbreak  u\le\allowbreak 1\), successive terms starting at degree two have
+ratio at most \(1/3\), so their sum is at most
+\((u^2/2)/(1-1/3)=\allowbreak 3u^2/4\).
+Suppose a nonnegative message \(F_0\) has
+\begin{equation}\tag{Q61.4.2}\label{eq:Q61:4.2}
+F_0\le e^{R-\Lambda d},\qquad R=KP(K)g,\qquad
+\|P(K)\|^2\le B,\qquad Bd\le1,
+\end{equation}
+where \(P\) is its finite arm polynomial. Set
+\(V=\allowbreak \E R^2\), \(Z=\allowbreak KR\), \(U^2=\allowbreak Bd/3\).
+The row, spectral and \(K^2\) row estimates give
+\begin{equation}\tag{Q61.4.3}\label{eq:Q61:4.3}
+\begin{gathered}
+|R|^2\le Bd\le1,\quad V\le\theta Bd,\quad |Z|^2\le U^2,\\
+\E Z^2\le\theta^2Bd=3\theta^2U^2\le U^2/2,
+\end{gathered}
+\end{equation}
+using \(3\theta^2=\allowbreak 507/1024<\allowbreak 1/2\).
+The kernel of \(T\) is nonnegative and at most two, so
+\begin{equation}\tag{Q61.4.4}\label{eq:Q61:4.4}
+Te^R\le q+\E R-Z+\tfrac32V=:B_0.
+\end{equation}
+Since \(B_0\ge\allowbreak  Te^R\ge\allowbreak 0\), AM--GM yields
+\begin{equation}\tag{Q61.4.5}\label{eq:Q61:4.5}
+0\le pTF_0\le e^{-\Lambda d}pB_0
+\le e^{-\Lambda d}\left(1+\frac{\E R}{2}+\frac34V-\frac Z2\right)^2.
+\end{equation}
+The base equals \((p+B_0)/2\ge\allowbreak 0\). Applying \(x\le\allowbreak  e^{x-1}\),
+taking the eighth power and integrating gives
+\begin{equation}\tag{Q61.4.6}\label{eq:Q61:4.6}
+\E[(pTF_0)^8]\le e^{-8\Lambda d+8\E R+12V}\E e^{-8Z}.
+\end{equation}
+Apply \eqref{eq:Q61:3.2} to the same \(W=\allowbreak -Z\), \(s=\allowbreak 8\):
+\(\E e^{-8Z}\le\allowbreak  e^{8(-\E Z)_++18U^2}\).
+Since \(12\theta+6=\allowbreak 87/8\), this gives
+\begin{equation}\tag{Q61.4.7}\label{eq:Q61:4.7}
+\boxed{\E[(pTF_0)^8]\le
+\exp\left[-8\Lambda d+8\E R+\frac{87}{8}Bd+8(-\E Z)_+\right].}
+\end{equation}
+
+\paragraph{Q61.5.1 Finite pair envelopes.}
+For \(a<\allowbreak b\), put \(R_{ab}=\allowbreak \sum_{j=\allowbreak a+1}^bK^j\one\),
+\(\beta_1=\allowbreak \beta_2=\allowbreak 0\), and
+\(\beta_b=\allowbreak \sum_{j=\allowbreak 1}^{\lfloor(b-1)/2\rfloor}(-1)^{j-1}\delta_j\).
+Positive convolution gives the pair envelopes
+\begin{equation}\tag{Q61.5.1}\label{eq:Q61:5.1}
+h_af_b\le
+\begin{cases}
+e^{R_{ab}-\beta_b},&a=1,2,\\
+e^{R_{ab}-(2d-\delta_2)},&a=3,\\
+e^{R_{ab}-2d},&a\ge4.
+\end{cases}
+\end{equation}
+For the first two short lengths, the pair-sum inequalities are
+\(q+f_b\le\allowbreak 2-\beta_b+R_{1b}\) and
+\(h_2+f_b\le\allowbreak 2-\beta_b+R_{2b}\).
+For \(a=\allowbreak 3\), the sum is at most \(2+R_{3b}-(2d-\delta_2)\).
+These are the finite short sums; the longer-pair estimate follows
+also from the stronger bound \eqref{eq:L90:pair}.
+AM--GM has a nonnegative base in each case.
+For all \(b\ge\allowbreak 3\), \(\kappa d\le\allowbreak  d-\delta_2\le\allowbreak \beta_b\le\allowbreak  d\).
+Removing \(E_0\) from \eqref{eq:Q61:0.1}, write the remaining message
+as \(F_0\). Its exponent variable is
+\begin{equation}\tag{Q61.5.2}\label{eq:Q61:5.2}
+R=\sum_{i=1}^kR_{a_ib_i}=KP(K)g.
+\end{equation}
+Disjoint ordered intervals give a finite zero-one mask: the term
+\(K^j\one\) corresponds to the coefficient of \(z^{j-2}\) in \(P\).
+
+\paragraph{Q61.5.2 An arbitrary finite zero-one mask.}
+At \(z=\allowbreak i\sqrt x\), \(0\le\allowbreak  x\le\allowbreak \theta\), the positive and negative
+real subsums are each at most \(1/(1-x^2)\) in modulus; the imaginary
+part is at most \(\sqrt x/(1-x^2)\). Hence
+\begin{equation}\tag{Q61.5.3}\label{eq:Q61:5.3}
+|P(i\sqrt x)|^2\le\frac{1+x}{(1-x^2)^2}\le\frac{54}{25}=:B_{\mathrm I}.
+\end{equation}
+Here \(1+\theta<\allowbreak 3/2\), \(\theta^2=\allowbreak 169/1024<\allowbreak 1/6\), and the
+denominator exceeds \((5/6)^2\). This includes \(x=\allowbreak 0\).
+The finite skew spectral theorem gives the corresponding operator norm.
+
+\paragraph{Q61.5.3 The mask \(P_0=\allowbreak 1,\allowbreak P_1=\allowbreak P_2=\allowbreak 0\).}
+Its positive real subsum is at most \(1/(1-x^2)\), the negative one
+at most \(x^3/(1-x^2)\), and the imaginary part at most
+\(x\sqrt x/(1-x^2)\). Thus
+\begin{equation}\tag{Q61.5.4}\label{eq:Q61:5.4}
+|P(i\sqrt x)|^2\le\frac{1+x^3}{(1-x^2)^2}
+\le\frac{54}{35}<\frac{25}{16}=:B_{\mathrm {II}}.
+\end{equation}
+Indeed, \(\theta^2<\allowbreak 1/6\), \(\theta^3=\allowbreak 2197/32768<\allowbreak 1/14\), so the
+ratio is below \((15/14)(36/25)=\allowbreak 54/35\); the last comparison is
+\(864<\allowbreak 875\).
+
+\paragraph{Q61.5.4 The mask \(P_0=\allowbreak P_2=\allowbreak 1,\allowbreak P_1=\allowbreak 0\).}
+Here
+\fitdisplay{
+1-\frac{x}{1-x^2}\le\Re P\le1-x+\frac{x^2}{1-x^2}.
+}{}
+For \(0\le\allowbreak  x\le\allowbreak 1/2\), the lower bound is at least \(1/3\), and the
+upper bound at most \(1-x/3\). The imaginary part is again at most
+\(x\sqrt x/(1-x^2)\), so
+\begin{equation}\tag{Q61.5.5}\label{eq:Q61:5.5}
+|P|^2\le(1-x/3)^2+\frac{16}{9}x^3
+\le(1-x/3)^2+\frac49x\le1-x/6\le1=:B_{\mathrm {III}}.
+\end{equation}
+The steps use \(x^2\le\allowbreak 1/4\) and \(x^2/9\le\allowbreak  x/18\).
+These forced coefficients and gaps come from the ordered arm list.
+The geometric sums bound finite subsums. All three constants are
+at most \(54/25\), hence
+\begin{equation}\tag{Q61.5.6}\label{eq:Q61:5.6}
+Bd\le(54/25)(1/3)=18/25<1.
+\end{equation}
+Thus the exponential interval in Q61.4 holds on the whole domain.
+
+\paragraph{Q61.6.1 The class \(b_1\ge\allowbreak 3\).}
+All later \(a_i\ge\allowbreak 4\). Equation \eqref{eq:Q61:5.1} gives
+\(F_0\le\allowbreak  e^{R-\Lambda d}\), \(\Lambda=\allowbreak \kappa+2(k-1)\).
+The terms \(K^2\one,\allowbreak K^3\one\) both have coefficient one in \(R\).
+Retain the \(-d\) contribution of the first and drop the other
+negative mean terms:
+\begin{equation}\tag{Q61.6.1}\label{eq:Q61:6.1}
+\E R\le-d+\frac{\delta_2}{1-\theta^2}
+\le-\frac{439}{855}d\le-d/2.
+\end{equation}
+Retain the \(+\delta_2\) contribution of the second to \(\E Z=\allowbreak \E KR\)
+and drop the other positive terms:
+\begin{equation}\tag{Q61.6.2}\label{eq:Q61:6.2}
+\E Z\ge\delta_2-\frac{\delta_3}{1-\theta^2}
+\ge\frac{439}{855}\delta_2\ge0.
+\end{equation}
+The coefficient used is \(\theta/(1-\theta^2)=\allowbreak 416/855\).
+Insert \(B=\allowbreak B_{\mathrm I}=\allowbreak 54/25\) into \eqref{eq:Q61:4.7}:
+\begin{equation}\tag{Q61.6.3}\label{eq:Q61:6.3}
+\E[(pTF_0)^8]\le e^{-[16(k-2)+63/50]d}.
+\end{equation}
+The constant calculation is
+\fitdisplay{
+8\kappa+16+4-\frac{87}{8}\frac{54}{25}
+=\frac{99}{4}-\frac{2349}{100}=\frac{63}{50}.
+}{}
+This holds for all \(b_1=\allowbreak 3\) or \(b_1\ge\allowbreak 4\), all later finite
+lengths and \(0<\allowbreak d\le\allowbreak 1/3\).
+
+\paragraph{Q61.6.2 The class \(b_1=\allowbreak 2,\allowbreak a_2\ge\allowbreak 4\).}
+Every later short arm is at least four, so
+\fitdisplay{
+F_0\le e^{R-2(k-1)d},\qquad
+R=K^2\one+\sum_{i=2}^k\sum_{j=a_i+1}^{b_i}K^j\one.
+}{}
+The latter sum starts at \(j\ge\allowbreak 5\), so \(P_0=\allowbreak 1,\allowbreak P_1=\allowbreak P_2=\allowbreak 0\),
+and \(B=\allowbreak B_{\mathrm {II}}=\allowbreak 25/16\).
+The first possible positive mean term has \(j=\allowbreak 8\); hence
+\begin{equation}\tag{Q61.6.4}\label{eq:Q61:6.4}
+\E R\le-d+\frac{\delta_4}{1-\theta^2}\le-11d/12.
+\end{equation}
+Here \(\theta^3/(1-\theta^2)=\allowbreak 2197/27360<\allowbreak 1/12\), by
+\(26364<\allowbreak 27360\). The first possible negative term of \(\E Z\)
+has \(j=\allowbreak 5\), giving
+\begin{equation}\tag{Q61.6.5}\label{eq:Q61:6.5}
+\E Z\ge-\frac{\delta_3}{1-\theta^2}
+\ge-\frac{169}{855}d\ge-d/5,
+\end{equation}
+where \(845<\allowbreak 855\). Equation \eqref{eq:Q61:4.7} yields
+\begin{equation}\tag{Q61.6.6}\label{eq:Q61:6.6}
+\E[(pTF_0)^8]\le e^{-[16(k-2)+9103/1920]d}.
+\end{equation}
+The exact constant is
+\fitdisplay{
+16+\frac{22}{3}-\frac85-\frac{87}{8}\frac{25}{16}
+=\frac{9103}{1920}>4>\frac{63}{50}.
+}{}
+The \(8/5\) term retains the possible negative mean of \(Z\).
+
+\paragraph{Q61.6.3 The class \(b_1=\allowbreak 2,\allowbreak a_2=\allowbreak 3\).}
+The direction remains
+\(qf_2h_3f_{b_2}\prod_{i\ge\allowbreak 3}h_{a_i}f_{b_i}\).
+The second pair has loss \(2d-\delta_2\), and each later pair loss
+\(2d\), so \(\Lambda=\allowbreak 2(k-1)-\theta\).
+The terms \(K^2\one,\allowbreak K^4\one\) are present, and \(K^3\one\) is absent.
+Thus \(P_0=\allowbreak P_2=\allowbreak 1,\allowbreak P_1=\allowbreak 0\), and \(B=\allowbreak B_{\mathrm {III}}=\allowbreak 1\).
+The same first-sign estimates give
+\begin{equation}\tag{Q61.6.7}\label{eq:Q61:6.7}
+\E R\le-d/2,\qquad\E Z\ge-d/5.
+\end{equation}
+Consequently
+\begin{equation}\tag{Q61.6.8}\label{eq:Q61:6.8}
+\E[(pTF_0)^8]\le e^{-[16(k-2)+171/40]d},
+\end{equation}
+since
+\fitdisplay{
+16-8\theta+4-\frac85-\frac{87}{8}
+=\frac{171}{40}>4>\frac{63}{50}.
+}{}
+This includes \(k=\allowbreak 2\) and every \((1,\allowbreak 2,\allowbreak 3,\allowbreak c)\) in this direction.
+
+\paragraph{Q61.6.4 Completion of the three classes.}
+For \(k\ge\allowbreak 2\), either \(b_1\ge\allowbreak 3\), or \(b_1=\allowbreak 2\) with \(a_2=\allowbreak 3\)
+or \(a_2\ge\allowbreak 4\). Each class has the stronger bound
+\(\E[(pTF_0)^8]\le\allowbreak  e^{-[16(k-2)+63/50]d}\), and hence
+\(\E[(pTF_0)^8]\le\allowbreak  e^{-63d/50}\).
+Using \(e^x\ge\allowbreak 1+x\) and \(d\le\allowbreak 1/3\),
+\begin{equation}\tag{Q61.6.9}\label{eq:Q61:6.9}
+e^{-63d/50}\le\frac1{1+63d/50}
+=1-\frac{63d}{50+63d}\le1-\frac{63}{71}d\le1-d/2.
+\end{equation}
+Restore \(E_0\le\allowbreak 1\) by
+\(0\le\allowbreak  pT(E_0F_0)\le\allowbreak  pTF_0\), proving \eqref{eq:Q61:0.2}.
+
+\paragraph{Q61.7 Decorations, extreme entries and full reversal.}
+Genuine equal pairs at both terminal and receiving root multiply
+nonnegative messages by factors at most one. Positivity restores
+every finite multiplicity and pair length. Entries \(|K(x,\allowbreak y)|=\allowbreak 1\)
+are allowed; the proof divides by neither \(p\) nor \(q\).
+The one-atom space has \(d=\allowbreak 0\); a zero message is also compatible
+with AM--GM and the exponential upper bounds.
+If \(\overline F\) is obtained by reversing every edge of \(F\),
+replace \(K\) by \(-K\) in the whole formula. Then \(p\) becomes
+\(q\), \(T\) becomes \(A\), and \(d,\allowbreak \delta_j\) stay unchanged. Thus
+\begin{equation}\tag{Q61.7.1}\label{eq:Q61:7.1}
+\E[(qA\overline F)^8]\le e^{-63d/50}\le1-d/2.
+\end{equation}
+All terminal, connector, receiving-unit and decoration edges reverse
+together. The ordered terminal direction is also that of
+Appendix~\ref{loc:S29}, which independently proves
+\begin{equation}\tag{Q61.7.2}\label{eq:Q61:7.2}
+\boxed{\E[p(T^nF)^4]\le1\qquad(n\ge1).}
+\end{equation}

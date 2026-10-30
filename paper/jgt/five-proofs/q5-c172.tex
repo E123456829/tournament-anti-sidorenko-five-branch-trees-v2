@@ -1,0 +1,311 @@
+\subsection{Terminal triples (1,3,w) at a root (1,2,v)}\label{proof:Q5-C172}
+% Common local aliases for the former repeated C168.1--C168.3 prefaces.
+Use the original-measure calculus of
+Section~\ref{sec:odd-common-calculus} and the complete root-pair
+certificates of Section~\ref{sec:odd-common:fourth}.
+For a root \((1,2,v)\), write \(m=v-2\), \(G_m=E+zD\),
+\(\beta=\beta_{v-1}=\int D\,d\nu\),
+\(\beta_v=\int E\,d\nu\),
+\(P_+=h_2f_v\), \(P_-=\bar f_2W_v\),
+\(\ell_+=\ell_a\), and \(\ell_-=\ell_s\).
+The two vectors, their signed means and full constants are
+\eqref{eq:odd-common:root-standard}--\eqref{eq:odd-common:root-losses}.
+At \(v=3\), \((E,D)=(1,0)\) and \(\beta=0\).
+All subsequent direction choices and packet estimates retain their
+stated integer and parameter ranges.
+Here $n=v-2$, and $D_r$ denotes the imaginary coordinate $D$. The ordinary-fourth bridge of Q5-C084, Section 2, has cost $11d$ for every positive outer length. Its exact terminal $(1,3)$ row is $\E[pP_{v,L}T^L(qf_3)]^4\le e^{-705d/128}$, with precisely the same $P_{v,L}$ as below. It supplies the high-domain comparison.
+\paragraph{C172.0 The terminal family (1, 3, w)}
+
+The construction retains the original tree, every arm, subdivision and equal-pair multiplicity, all independent positive connector lengths, the original edge count and arbitrary original label laws.
+
+% Replace a pure model-definition block only; keep local root/terminal data.
+Use the original finite-space model and arm messages of
+Section~\ref{sec:odd-common-calculus}.
+When the original \(K\)-notation is used, \(K=-B\) and
+\(g=K\one=-u\); in either notation
+\(\delta_j=\|B^j\one\|_2^2=\|K^j\one\|_2^2\).
+All means, norms, adjoints and spectral integrals use the same
+original probability measure.
+The root residual is \((1,\allowbreak \allowbreak  2,\allowbreak \allowbreak  v)\), \(v\ge3\), and the terminal residual \((1,\allowbreak \allowbreak  3,\allowbreak \allowbreak  w)\), \(w\ge4\). The inner and outer lengths are independent positive integers. Fix
+\[
+F=qf_3h_w.
+\]
+Choose the root direction by v and L:
+\[
+P=P_{v,L}=\begin{cases}h_2f_v,&L=1,\ v\ge4,\\ \bar f_2W_v,&\text{all other cases},\end{cases}
+\qquad H=pP\,T^LF.                                      \tag{C172.T179.1}
+\]
+
+For every listed original integer and legal kernel,
+\[
+\boxed{\begin{gathered}
+EH^4\le e^{-705d/128},\qquad\\
+I_q(T^MH)^3\le e^{-d/64},\quad I_q(Y)=E[q^{-1/3}|Y|^{8/3}].
+\end{gathered}}\tag{C172.T179.2}
+\]
+The rate \(705/128=11/2+1/128\) is the ordinary fourth rate of the message containing the original unit arm and complete root pair. Restore genuine equal pairs and complete reversal by the common argument.
+
+The root unit arm points outward, giving \(p\). The terminal unit arm points inward, its three-edge arm entirely outward, and its \(w\)-arm first inward then outward. Inner edges point from terminal to root and outer edges from root to receiver. On the entire low domain \(0<d\le1/4\), the more precise rates are
+\[
+\log EH^4\le\begin{cases}-421d/60,&L=1,\\-427d/60,&L=2,\\-337d/60,&L\ge3.\end{cases}            \tag{C172.T179.3}
+\]
+The common low-domain margin is \(337/60-705/128=209/1920>0\). The same root direction on the high domain compares with the exact Q5-C084 \(qf_3\) row.
+
+
+\paragraph{C172.2 The actual terminal envelope and uniform low domain}
+
+Until the final high-domain comparison, take \(0<d\le1/4\). Set
+\[
+m_0=w-3\ge1,\quad B_0=\beta_{w-1},\quad
+\Gamma=d+\beta_w+B_0\ge(35/16)d,
+\]
+\[
+R=-B_0u-B^3G_{m_0}(-B)u.                                \tag{C172.T179.8}
+\]
+Retain the actual constant \(B_0\) in the finite convolution of \(f_{w-1}\), then apply positive \(T\):
+\[
+h_w\le T S_{w-1}-B_0q,
+\quad S_n=\sum_{j=0}^nK^j1,\ K=-B.
+\]
+Add the exact \(f_3\). Cancellation of the first three original \(K\)-powers gives
+\[
+f_3+h_w\le2-\Gamma+R.                                 \tag{C172.T179.9}
+\]
+At \(w=4\), \(\beta_3=\beta_4=d\), \(\Gamma=3d\), and \(R=-du-B^3u\); this is the exact short identity. Nonnegativity and AM--GM yield
+\[
+F=qf_3h_w\le q\exp(R-\Gamma).                          \tag{C172.T179.10}
+\]
+
+The original row and spectral bounds, retaining the \(G_2\) cost at \(m_0=2\), give
+\[
+|R|\le d+(6/5)\theta\sqrt d\le1/4+39/160=79/160<1/2.
+\]
+Thus \(e^R\le1+R+3R^2/5\). The integral Taylor coefficient increases for \(R\le1/2\), and \(e^{1/2}<33/20\) makes it less than \(3/5\); negative \(R\) is included. Use \(q\le2\), the original kernel bound two, and \(|B(uR)|\le\sqrt{dER^2}\):
+\[
+\begin{gathered}
+T(qe^R)\le \bar f_2+BR+\delta,\\
+\quad\delta=ER+E(uR)+\sqrt{dER^2}+(12/5)ER^2.
+\end{gathered}\tag{C172.T179.11}
+\]
+The actual mixed mean remains signed.
+
+\paragraph{C172.2.1 The case \(w=4\)}
+
+Here \(ER+E(uR)=-\delta_2-d^2\), \(ER^2=d^3+\delta_4\). Put \(v=\delta_2/d\), \(J=ER^2/d\le d^2+\theta^2v\). Young gives \(\sqrt J\le1/8+2J\), hence
+\[
+\delta/d\le1/8-d+(22/5)d^2+v[-1+(22/5)\theta^2].
+\]
+The \(v\) coefficient is negative, since \(\theta^2<1/6\). Dropping it leaves a convex quadratic in \(d\), with endpoint values \(1/8,\allowbreak \allowbreak  3/20\) on \([0,\allowbreak \allowbreak  1/4]\). Hence \(\delta\le3d/20<7d/20\).
+
+\paragraph{C172.2.2 The case \(w=5\) on the entire low domain}
+
+Now \(B_0=d\), \(ER+E(uR)=-\delta_2-d^2+\delta_3\), and \(ER^2=d^3+\delta_4+\delta_5-2d\delta_3\). Thus \(J\le d^2+[\theta^2(1+\theta)-2\theta d]v\), with a positive middle coefficient. The same Young bound gives
+\[
+\begin{gathered}
+\delta/d\le1/8-d+(22/5)d^2\\
++v[-\kappa+(22/5)\theta^2(1+\theta)-(44/5)\theta d].
+\end{gathered}\tag{C172.T179.12}
+\]
+For \(d\le1/8\), drop the negative \(vd\) term and \(-d+22d^2/5\le0\), then bound a positive \(v\) coefficient by \(v\le\theta\). The result is \(156575/524288<3/10\). On \([1/8,\allowbreak \allowbreak  1/4]\), that coefficient decreases from \(-1593/81920<0\). Dropping it leaves the convex quadratic with endpoint values \(11/160,\allowbreak \allowbreak  3/20\). Thus the whole low domain has \(\delta\le7d/20\).
+
+\paragraph{C172.2.3 Every w at least six}
+
+In the original \(K\) notation let \(V_0=\sum_{j=4}^wK^j\one\), \(g=-u\), so \(R=B_0g-V_0\). Finite alternating moments give \(EV_0-E(gV_0)\ge \delta_2-2\delta_3\), \(E(gV_0)\ge\kappa \delta_3\), and the finite contracting \(G_{w-3}\) gives \(\|V_0\|^2\le \delta_4\). Therefore
+\[
+ER+E(uR)\le-(3/16)\delta_2-\kappa d^2,
+\quad J\le d^2+[\theta^2-2\kappa^2\theta d]v.
+\]
+The coefficient \(\theta-2\kappa^2d\) is positive, so \(\delta_3\le\theta \delta_2\) is used in its valid direction. The same Young inequality gives
+\[
+\begin{gathered}
+\delta/d\le1/8-\kappa d+(22/5)d^2\\
++v[-3/16+(22/5)\theta^2-(44/5)\kappa^2\theta d].
+\end{gathered}\tag{C172.T179.13}
+\]
+The \(v\) coefficient stays positive for \(d\le1/4\); using \(2/5<\theta<5/12\), \(\kappa<3/5\), a lower bound is \(373/2000\). Set \(v=\theta\). The resulting convex quadratic has exact endpoints
+\[
+P(0)=28167/81920,
+\qquad P(1/4)=1795141/5242880,
+\]
+Both are less than \(7/20\), whose numerator over \(5242880\) is \(1835008\). Convexity covers the whole domain and every \(w\ge6\).
+
+Thus use the uniform actual first-row bound
+\[
+\boxed{D=7d/20\ge\max(\delta,0)}.                       \tag{C172.T179.14}
+\]
+This uniform certificate keeps the same original direction.
+
+\paragraph{C172.3 Every finite signed moment and positive propagation}
+
+For i at least one, let \(D_i=EB^iR.\) Finite alternating sums give
+\[
+\begin{gathered}
+D_{2r-1}=(-1)^{r+1}[B_0\delta_r-H_{r+2}],\qquad\\
+D_{2r}=(-1)^{r+1}\widetilde H_{r+2},
+\end{gathered}\tag{C172.T179.15}
+\]
+Here \(H,\allowbreak \allowbreak  \widetilde H\) have respectively \(\lfloor m_0/2\rfloor,\allowbreak \allowbreak  \lceil m_0/2\rceil\) terms, starting at the indicated \(\delta_{r+2}\), and empty sums are zero. Hence \(0\le H,\allowbreak \allowbreak  \widetilde H\le \delta_{r+2}\), including \(m_0=1\). Consequently
+\[
+\begin{gathered}
+D_1\le d^2,\quad0\le D_2\le \delta_3,\quad D_3\le \delta_4,\\
+\quad D_4\le0,\quad(D_i)_+\le d/24\quad(i\ge4).
+\end{gathered}\tag{C172.T179.16}
+\]
+For odd \(i\ge5\), the two summands have opposite signs, so the positive part is at most \(\max(B_0\delta_3,\allowbreak \allowbreak  \delta_5)\). Since \(B_0\le d\le1/4\), \(\theta^2<1/6\), the first is less than \(d/24\); the second is at most \(\theta^4d<d/36\). Positive even indices start with \(D_6\le \delta_5\).
+
+Put \(\gamma_j=\beta_j-D_{j-2}.\) For every actual j at least three,
+\[
+\boxed{\gamma_j\ge d/2}.                              \tag{C172.T179.17}
+\]
+The precise short bounds are \(\gamma_3\ge3d/4\), \(\gamma_4\ge(1-\theta^2)d\), \(\gamma_5\ge(\kappa-\theta^3)d>49d/96\), and \(\gamma_j\ge53d/96\), \(j\ge6\).
+
+Original positive propagation gives, for every L at least one,
+\[
+\begin{gathered}
+T^LF\le e^{-\Gamma}Y_L,\\
+\quad Y_L=\bar f_{L+1}+B^LR+D\bar f_{L-1}\\
++\sum_{i=1}^{L-1}D_i \bar f_{L-1-i}.
+\end{gathered}\tag{C172.T179.18}
+\]
+\(Y_L\) dominates a strictly positive actual message. For L at least two, the finite convolution is
+\[
+Y_L=1+G_{L+1}(B)u+B^LR+D\bar f_{L-1}
+-\sum_{j=3}^{L+1}\gamma_j \bar f_{L+1-j}.
+\]
+Every gamma is nonnegative. Keep the final original \(\bar f_0\) term and use \(\bar f_j\le2\) for the positive \(D\) term:
+\[
+\begin{gathered}
+Y_L\le1+u+c_L+B Q_L(B)u,\\
+\quad c_L=2D-\gamma_{L+1},\\
+\quad Q_L=G_L+z^{L-1}r(z),\quad R=r(B)u.
+\end{gathered}\tag{C172.T179.19}
+\]
+The exact mean is \(EBQ_L(B)u=-\beta_{L+2}+D_L=-\gamma_{L+2}\). At \(L=1\), retain \(Y_1=1+u+D+B(u+R)\), using \(D\) only once.
+
+
+Combine with the complete root-pair envelope and the curvature payment of the original p. For L at least two this gives
+\[
+\begin{gathered}
+\log EH^4\le-4\Gamma+4(2D-\gamma_{L+1}-\gamma_{L+2})\\
+-4\ell_\sigma+(17/4)\|[Q_L-zG_n(\mp z)]u\|^2+(10/3)\beta^2.
+\end{gathered}\tag{C172.T179.23}
+\]
+The positive root uses \(G_n(-z)\), the negative one \(G_n(z)\); every cross term belongs to the same actual kernel. At \(L=1\), replace the scalar bracket by \(D-d+D_1\) and \(Q_L\) by \(1+r\). Since \(\beta\le d\le1/4\), the curvature cost is at most \(5d/6\).
+
+\paragraph{C172.5 The two short-connector joint-frequency payments}
+
+Write \(r=-t+zs\). At \(w=4\), \(t=d,\allowbreak \allowbreak  s=x\). For \(w\ge5\), write \(G_{w-3}(-z)=U-zV\), with \(1-x\le U,\allowbreak \allowbreak  V\le1\), so
+\[
+t=B_0-x^2V,\qquad s=xU.
+\]
+The common range is
+\[
+-x^2\le t\le d\le1/4,\qquad0\le s\le x.                \tag{C172.T179.24}
+\]
+The coordinate \(t\) may be negative here. The actual means are \(D_1=\int t\), \(D_2=\int xs\).
+
+\paragraph{C172.5.1 The first connector, including its actual mean}
+
+For the negative root the frequency expression is
+\[
+\begin{gathered}
+J_1^-=4t-4[E+(1+x)D_r]\\
++(17/4)[(1-t+xD_r)^2+x(s-E)^2].
+\end{gathered}\tag{C172.T179.25}
+\]
+For \(n\ge2\), both root-coordinate derivatives are negative. The \(D_r\)-derivative is bounded by \(-4(1+x)+(17/2)x(1+x+x^2)\), increasing to \(-13051/65536<0\) at \(\theta\); the \(E\)-derivative is at most \(-4+17\theta/2=-35/64\). Thus take \(D_r=E=1-x\). Since \(s\le x<1-x\), take \(s=0\). Convexity in \(t\), and derivative at most \(4-(17/2)(3/4)<0\) on \([0,\allowbreak \allowbreak  1/4]\), reduce to \(t=0,\allowbreak \allowbreak -x^2\). At zero the expression is
+\[
+\mathcal B(x)=-15/4+(67/4)x-(35/4)x^2-(17/4)x^3+(17/4)x^4<3/2.
+\]
+This increases with derivative at least \(77/16\) for \(x\le1/2\), and endpoint margin \(-245759/4194304\) below \(3/2\). At \(t=-x^2\), it is
+\[
+-15/4+(67/4)x-(17/4)x^2+(17/4)x^3
+\le-15/4+871/128+17/48=1309/384<7/2.
+\]
+This drops a negative quadratic term and uses \(\theta^3<1/12\). At \(n=1\), retain \((E,\allowbreak \allowbreak  D_r)=(1,\allowbreak \allowbreak  0)\). For \(t\ge0\), the maximum at zero is \(1/4+17x/4<2\); at \(t=-x^2\), it is at most \(1/4+9x^2/2+17x^4/4+17x/4<26/9<7/2\). Hence every negative-root first row costs at most \(7/2\).
+
+For the actual \(L=1,\allowbreak \allowbreak  v\ge4\) positive root, replace the real coordinate by \(1-t-xD_r\), and root loss by \(E+(1-x)D_r\). The real coordinate is at least \(1-1/4-\theta>0\), so both root derivatives are negative. Take \(D_r=E=1-x\). Throughout the actual \(t\) range, \(0<1-t-x(1-x)\le1-x+2x^2\le1\), and \(4t\le1\). Set \(s=0\), obtaining
+\[
+1-969/256+(17/4)(1+\theta)=817/256<7/2.                 \tag{C172.T179.26}
+\]
+This covers precisely the actual first-row directions.
+
+\paragraph{C172.5.2 The second connector, including both actual means}
+
+Use the negative root, with \(Q2=1-xs+z(1-t).\) The joint expression is
+\[
+\begin{gathered}
+J_2=4t+4xs-4[E+(1+x)D_r]\\
++(17/4)[(1+x(D_r-s))^2+x(1-t-E)^2].
+\end{gathered}\tag{C172.T179.27}
+\]
+The \(D_r\)-derivative is at most \((1+x)(17x/2-4)<0\); the \(E\)-derivative is \(-4+(17/2)x(E+t-1)<0\). For \(n\ge2\), set \(D_r=E=1-x\); at one retain \((0,\allowbreak \allowbreak  1)\). The \(s\)-derivative is \(x[4-(17/2)(1+x(D_r-s))]<0\). Indeed even enlarging to \(s\le1\) leaves the real coordinate at least \(1-x>8/17\).
+
+For nonnegative \(t\), enlarge to \([0,\allowbreak \allowbreak  1]\), keeping the \(E\)-derivative negative. Convexity reduces to endpoints; one exceeds zero by \(4+17x(2E-1)/4>0\). At \(s=0,\allowbreak \allowbreak  t=1\), the \(n=1\) value is \(17(1+x)/4\le765/128<6\), and later values are \(4+\mathcal B(x)<11/2\).
+
+For negative \(t\), only the endpoint \(-x^2\) remains. The real coordinate is at most \(1+x\), and the imaginary coefficient \(x+x^2\) is at most one; this also bounds \(n=1\). Root loss is at least one, so
+\[
+\begin{gathered}
+J_2\le-4x^2-4+(17/4)[(1+x)^2+x]\\
+=1/4+(51/4)x+x^2/4\le22409/4096<6.
+\end{gathered}\tag{C172.T179.28}
+\]
+Thus the full second-row cost is at most six, including negative t.
+
+\paragraph{C172.6 Every finite connector of length at least three}
+
+The root is negative. Write \(G_L=U+zV\), with both coordinates in \([1-x,\allowbreak \allowbreak  1]\) and \(U\le1-x+x^2\). The joint base satisfies
+\[
+-4[E+(1+x)D_r]+(17/4)[(U+xD_r)^2+x(V-E)^2]\le1/4.       \tag{C172.T179.29}
+\]
+At \(n=1\), its square is at most \((1-x+x^2)^2+x^3\le1\), since \(2-3x+x^2-x^3>0\). At \(n\ge2\), both root derivatives are negative. Set \(D_r=E=1-x\); the real coordinate is at most one, imaginary coefficient has absolute value at most \(x\), giving \(-15/4+4x+4x^2+17x^3/4\le-7/32<1/4\).
+
+Uniformly for every finite n at least one and L at least three,
+\[
+\begin{gathered}
+|G_L-zG_n(z)|^2\le(1+x)^2+x^3\\
+\le66997/32768<67712/32768=(23/16)^2.
+\end{gathered}\tag{C172.T179.30}
+\]
+The actual \(r\) is finite. Retaining every \(G_{m_0}\) bound \(6/5\) and \(\sqrt\theta<13/20\),
+\[
+|r(z)|\le d+(6/5)x^{3/2}
+\le1/4+(6/5)\theta^{3/2}<907/1600<3/5.
+\]
+The perturbation modulus is at most \(3x/5\), for every finite \(L\ge3\). Its additional square is at most \(69x/40+9x^2/25\). After integration, the norm cost is
+\[
+\begin{gathered}
+(17/4)[(69/40)\theta+(9/25)\theta^2]d\\
+=330837d/102400<13d/4.
+\end{gathered}\tag{C172.T179.31}
+\]
+This one certificate covers lengths three, four and every finite longer length.
+
+\paragraph{C172.7 Continuous low-domain payments and the same-direction high domain}
+
+For \(L=1\), the exact common payment is \(-4\Gamma+4D-4d+\int J_1+10\beta^2/3\). Use \(\Gamma\ge35d/16,\allowbreak \allowbreak  D=7d/20,\allowbreak \allowbreak  J_1\le7/2\), and curvature cost \(5d/6\):
+\[
+\log EH^4\le[-35/4+7/5-4+7/2+5/6]d=-421d/60.
+\]
+For \(L=2\), the adjacent gamma sum is \(2d-D_1-D_2\), so
+\[
+\log EH^4\le[-35/4+14/5-8+6+5/6]d=-427d/60.
+\]
+For every \(L\ge3\), the adjacent gamma sum is at least \(d\), with base cost \(d/4\) and additional norm cost \(13d/4\):
+\[
+\log EH^4\le[-35/4+14/5-4+1/4+13/4+5/6]d=-337d/60.
+\]
+Every low-domain row therefore has ordinary fourth loss greater than \(705/128\).
+
+For \(d\ge1/4\), keep the same \(F,\allowbreak \allowbreak  P\). Since \(w-1\ge3\),
+\[
+h_w\le2Ef_{w-1}\le2(1-2d)\le1.
+\]
+Positivity gives \(0\le H\le pPT^L(qf_3)\). The root is exactly the Q5-C084 direction: positive at \(L=1,\allowbreak \allowbreak  v\ge4\), negative otherwise. Its same-direction fourth rate is \(705/128\). At \(d=1/4\), both analytic domains include the endpoint; at \(d=0\), original leaf integration gives every message one even if \(B\ne0\).
+
+For every independent positive outer length use the Q5-C084 ordinary fourth bridge:
+\[
+I_q(T^MH)^3\le e^{11d}(EH^4)^2
+\le\exp\{[11-2(705/128)]d\}=e^{-d/64}.
+\]
+The input is the actual ordinary fourth moment of the complete message.

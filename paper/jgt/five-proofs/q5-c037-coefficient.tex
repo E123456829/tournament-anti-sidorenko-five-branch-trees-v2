@@ -1,0 +1,294 @@
+\subsection{The complete two-connector coefficient certificate}\label{proof:Q5-C037-coefficient}
+We prove the pointwise premise \eqref{eq:L37:C2} for the same
+two-connector message, with the original row constraints retained.
+Its vector $R=r+t_3=K(g+s)$ has $\E(g+s)=0$; centering an original
+row gives
+\[
+|R|\le\sqrt{pq(d-2\delta_2+\delta_3)}
+\le\sqrt{pqd[1-(51/32)v]},\qquad |r|\le\sqrt{pqd}.
+\]
+Put $x=\sqrt d$, $t=\sqrt{d[1-(51/32)v]}$. Then
+\[
+a=1-(35/51)x^2-(16/51)t^2,\qquad
+m=1-(18/17)x^2-(16/17)t^2,
+\]
+where $m=\mu_2$. The actual parameters satisfy $(19/32)x\le t\le x$
+and $t^2\le d-(51/32)d^2\le8/51<4/25$.
+It suffices to work on the full closed rectangle
+\begin{equation}\tag{L37.8.3}\label{eq:L37:rectangle}
+0\le x\le1/\sqrt3,\qquad0\le t\le2/5,
+\end{equation}
+where $a,m>0$. Since $\sqrt{pq}\le1$, the actual coefficient is at most
+\[
+(p+x)\{[a(2-p)+t]^2+2m[a(2-p)+t]+3m^2\}.
+\]
+Writing $y=p+x\in[x,2+x]$ and $B_0=a(2+x)+t$ makes this
+$H(y)=y[(B_0-ay)^2+2m(B_0-ay)+3m^2]$.
+At $y_0=7/5$, define
+\[
+\begin{gathered}
+z_0=a(3/5+x)+t,\quad u_0=z_0+m,\quad H_0=(7/5)(u_0^2+2m^2),\\
+D=H'(7/5)=u_0^2+2m^2-(14/5)au_0.
+\end{gathered}
+\]
+The proof will establish $|D|<3/10$ on the entire rectangle, and the
+additional independent estimates needed to combine that derivative bound.
+
+\proofpart{The exact Taylor square for every allowed value of the weight}
+For $h_0=y-7/5$, the cubic expansion is exactly
+\[
+H(y)=H_0+Dh_0-a[2u_0-ay]h_0^2.
+\]
+Since $y\le2+x$, the square coefficient is at least
+$K_0=a[a(x-4/5)+2t+2m]$.
+Let $b=16/51$, $A_0=1-35x^2/51$, $M_0=1-18x^2/17$,
+$L=x+26/5$, $B_1=A_0(x-4/5)+2M_0$. Then
+\[
+K_0=(A_0-bt^2)(B_1+2t-bLt^2),\quad
+\partial_t^2K_0=-2b(A_0L+B_1)-12bt+12b^2Lt^2<0.
+\]
+Indeed $A_0>3/4$, $L\le29/5$, $B_1\le2$, $A_0L+B_1>4$;
+with $b<1/3$, $t\le2/5$ the last derivative is less than
+$-8b+(1392/125)b^2<0$.
+Dropping positive terms from the endpoint difference and using
+$A_0L+B_1\le39/5$ gives
+$K_0(x,\allowbreak 2/5)-K_0(x,\allowbreak 0)>3/5-52/125-16/375>0$.
+Thus the smaller $t$ endpoint is zero. There the exact polynomial is
+\[
+k(x)=6/5+x-(122/51)x^2-(70/51)x^3
++(2800/2601)x^4+(1225/2601)x^5.
+\]
+Its second derivative is convex and negative at both endpoints:
+$k''(0)=-244/51$ and
+$k''(1/\sqrt3)=-1244/2601-39760/(7803\sqrt3)<0$.
+So $k$ is concave. Its endpoint minimum exceeds $13/16$:
+$k(0)=6/5$, and using $1/\sqrt3>1/2$ gives
+\[
+k(1/\sqrt3)>(118/153)[59/153+518/765]=31978/39015>13/16.
+\]
+Consequently $K_0>13/16$ on the full rectangle, without requiring
+$H''\le0$ for all $y$, and
+\begin{equation}\tag{L37.8.6}\label{eq:L37:Taylor}
+H(y)\le H_0+(4/13)D^2\le H_0+D^2/3.
+\end{equation}
+
+\proofpart{The complete anchor-value certificate}
+Let $F(x,t)=H_0+8x^2$, $b=16/51$, $q_0=x+18/5$,
+\[
+U_0=8/5+x-(25/17)x^2-(35/51)x^3,\qquad M_0=1-(18/17)x^2.
+\]
+Then $u_0=U_0+t-bq_0t^2$, $m=M_0-3bt^2$.
+Concavity of $U_0$ and its endpoint values give $U_0\ge3/2$;
+also $M_0\ge11/17$ and $18/5\le q_0\le21/5$.
+The exact second derivative is
+\[
+\frac{F_{tt}}{14/5}=1-2bq_0U_0-12bM_0-6bq_0t
++b^2(6q_0^2+108)t^2.
+\]
+The constant part is at most $1-288/85-704/289<-19/4$.
+The remaining part is at most $6/25$: the convex polynomial
+$R(q)=-6bq+(2/5)b^2(6q^2+108)$ has endpoint values
+$174528/325125$ and $166752/325125$, both less than $3/5$,
+and is multiplied by $t\le2/5$. Hence $F_{tt}<-12$.
+At $t=1/4$,
+\[
+\begin{gathered}
+F_t(x,1/4)=(14/5)N(x),\\
+N=-643/5780+(128/867)x+(527/2601)x^2
+-(59/867)x^3+(280/2601)x^4.
+\end{gathered}
+\]
+The numerator of $N'$ is $384+1054x-531x^2+1120x^3>0$, using
+$x^2\le1/3$. Thus $F_t$ increases in $x$. Its left endpoint is
+$-4501/14450>-1/3$; at the right endpoint, $1/\sqrt3<3/5$ yields
+$N<-1/10+7/100+3/250+3/40=57/1000$ and hence $F_t<1/3$.
+So $|F_t(x,1/4)|<1/3$, giving
+$F(x,t)<F(x,1/4)+1/216$ by strong concavity.
+
+Set $F_0(x)=F(x,1/4)$. Its complete derivative is
+\[
+F_0''=-92647/13005-(12929/289)x+(222796/4335)x^2
++(49000/867)x^3+(17150/867)x^4.
+\]
+All coefficients of $F_0^{(4)}$ are positive, so $F_0''$ is convex.
+The left endpoint is below $-2$; the right is
+\[
+F_0''(1/\sqrt3)=476197/39015-67361/(2601\sqrt3)
+<49/4-(129/5)(4/7)=-349/140<-2.
+\]
+At $2/5$,
+$F_0=115038439/14450000<637/80$ and
+$F_0'=-24517/541875\in(-1/20,0)$.
+Thus $F_0<637/80+1/1600$, and the separate strong concavity bounds give
+\[
+F<637/80+1/1600+1/216=255/32-43/43200.
+\]
+For the stronger combined bound, put $n(x)=F_t(x,1/4)$.
+The same numerator for $N'$ gives $0<n'(x)<7/5$: discarding its
+nonpositive quadratic term and using $x<3/5$ bounds it by
+\[
+\frac{14}{5}\frac{384+1054(3/5)+1120(3/5)^3}{2601}
+=440412/325125<7/5.
+\]
+Also $n(2/5)=-12971/216750\in(-1/16,0)$.
+For $h=x-2/5$, $z=t-1/4$, $s=F_0'(2/5)$ and $n_0=n(2/5)$,
+the two strong concavity bounds and this Lipschitz bound give
+\[
+\begin{aligned}
+F(x,t)&\le F_0(2/5)+sh+n_0z-h^2-6z^2+(7/5)|hz|\\
+&<637/80+sh+n_0z-h^2/2-5z^2.
+\end{aligned}
+\]
+Here $(7/5)|hz|\le h^2/2+(49/50)z^2$.
+Completing both squares yields
+\begin{equation}\tag{L37.8.9}\label{eq:L37:anchor}
+H_0+8d<637/80+1/800+1/5120=203877/25600.
+\end{equation}
+
+\proofpart{The derivative certificate on the entire rectangle}
+Retain the full polynomial certificate for the same
+$D=u_0^2+2m^2-(14/5)au_0$. Write
+$D(x,t)=\sum_{j=0}^4D_j(x)t^j$. Direct expansion gives
+\begin{align*}
+D_0={}&2/25+(2/5)x-(191/255)x^2-(22/17)x^3\\
+&+(179/867)x^4+(1820/2601)x^5+(1225/2601)x^6,\\
+D_1={}&2/5+2x-(52/51)x^2-(70/51)x^3,\\
+D_2={}&-2309/1275-(128/85)x+(13952/4335)x^2
++(3296/2601)x^3+(1120/2601)x^4,\\
+D_3={}&-2b(x+11/5),\\
+D_4={}&b^2\mathcal C(x),\quad\mathcal C=x^2+(22/5)x+522/25.
+\end{align*}
+Indeed, with $A_0=1-35x^2/51$, $M_0=1-18x^2/17$ one has
+$u_0=U_0+t-b(x+18/5)t^2$, giving all five coefficients.
+These are ordinary polynomials, including the rectangle boundary.
+
+First,
+\[
+D_{tt}=2D_2-12b(x+11/5)t+12b^2\mathcal C(x)t^2.
+\]
+It is convex in each coordinate separately, since $D_2''>0$ and
+$\mathcal C''=2>0$. Its maximum is therefore at a corner.
+Put $X=1/\sqrt3$. The exact value
+\[
+D_2(X)=-403991/585225-718624/(663255\sqrt3)<-9/7
+\]
+follows because the first term is below $-2/3$, the coefficient in
+the second exceeds $13/12$ (the integer difference is $1173$), and
+$X>4/7$. At $(0,0)$, $D_{tt}=-4618/1275<-18/5$; at $(X,0)$ it is
+less than $-18/7$. At $(0,2/5)$ its three terms are less than
+$-18/5,-33/10,4$, summing to $-29/10$.
+At $(X,2/5)$ the first is below $-18/7$; since $X>1/2$ the negative
+term has absolute value greater than
+$(24/5)(16/51)(27/10)=1728/425>81/20$.
+Since $b^2<1/10$, $X<3/5$, $X^2=1/3$,
+$\mathcal C(X)<1/3+66/25+522/25=1789/75$,
+and the positive term is below
+$(48/25)(1/10)(1789/75)=85872/18750<23/5$.
+Thus the final corner is below
+$-18/7-81/20+23/5=-283/140<-2$, proving $D_{tt}<-2$ throughout.
+
+Second, the full other derivative is
+\begin{align*}
+D_{xx}={}&-382/255-(132/17)x+(716/289)x^2
++(36400/2601)x^3+(36750/2601)x^4\\
+&+[-104/51-(140/17)x]t\\
+&+[27904/4335+(19776/2601)x+(13440/2601)x^2]t^2
++(512/2601)t^4.
+\end{align*}
+It too is separately convex: in $t$ directly, and in $x$ because its
+quadratic and higher coefficients are nonnegative, with positive
+quadratic coefficient. At $(0,0)$ it equals $-382/255<-4/5$.
+At $(X,0)$,
+\[
+D_{xx}=105072/117045-24188/(7803\sqrt3)
+<9/10-3(4/7)=-57/70<-4/5.
+\]
+At $(0,2/5)$ it is
+\[
+-118/51+111616/108375+8192/1625625.
+\]
+The three terms are below $-23/10$, $21/20$ and $1/100$, and their
+sum is less than $-4/5$.
+For the last corner compare to $(X,0)$. Its linear $t$ term is less
+than $-(2/5)(104/51+70/17)=-628/255<-12/5$.
+The bracket in the quadratic $t$ term is less than
+$13/2+24/5+7/4=261/20$, using $X<3/5$ and $X^2=1/3$;
+after multiplication by $4/25$ it is below $21/10$.
+The quartic term is below $1/100$.
+The increment is therefore below $-12/5+21/10+1/100=-29/100<0$.
+All corners satisfy the desired bound, proving $D_{xx}<-4/5$.
+
+For an upper bound on $D$, take $x_0=1/4$, $t_0=1/5$.
+There $a=6423/6800$, $m=3047/3400$, $u_0=258271/136000$ and
+\[
+\begin{gathered}
+D(x_0,t_0)=3516398793/18496000000<191/1000,\\
+D_t(x_0,t_0)=-7468703/86700000,\quad |D_t|<1/10.
+\end{gathered}
+\]
+The $t$ concavity bound gives
+$D(1/4,t)<191/1000+1/400=387/2000<1/5$ on the full vertical line.
+On that line the exact coefficient derivatives are
+\[
+\begin{gathered}
+D_1'=503/408\in(6/5,5/4),\quad D_2'=4784/13005\in(0,2/5),\\
+D_3'=-32/51<-3/5,\quad D_4'=6272/13005\in(0,1/2),\\
+D_0'=13/510-33/136+179/13872+2275/166464+1225/443904
+\in(-1/5,-9/50).
+\end{gathered}
+\]
+For the last interval the lower bound uses $13/510>1/40$,
+$33/136<1/4$ and the next two positive terms each greater than $1/80$;
+the upper uses $13/510<13/500$, $33/136>6/25$, and the remaining
+positive terms less than $13/1000,7/500,3/1000$.
+Furthermore
+\[
+\partial_tD_x(1/4,t)=D_1'+2D_2't+3D_3't^2+4D_4't^3
+>6/5-(96/51)(4/25)=382/425>0.
+\]
+Thus its lower endpoint exceeds $-1/5$, and its upper endpoint is below
+\[
+-9/50+(5/4)(2/5)+(2/5)(4/25)-(3/5)(8/125)+(1/2)(16/625)
+=224/625<3/8.
+\]
+Hence $|D_x(1/4,t)|<3/8$. The $x$ strong concavity bound yields
+\[
+D(x,t)<1/5+(3/8)^2/(8/5)=1/5+45/512=737/2560<3/10.
+\]
+Maximizing that quadratic on the whole real line merely enlarges the
+allowed interval; it requires no assumption on the maximizing point.
+
+For the lower bound, the established separate concavity puts the minimum
+at one of the four corners, without asserting joint concavity.
+At $(0,0)$, $D=2/25>0$.
+At $(0,2/5)$,
+$a=1211/1275<19/20$, $m=361/425>21/25$,
+$u_0=3866/2125\in(9/5,11/6)$, so
+\[
+D>81/25+2(441/625)-(14/5)(19/20)(11/6)
+=-1691/7500>-3/10.
+\]
+At $(X,0)$, $a=118/153<31/40$, $m=11/17>16/25$;
+$4/7<X<7/12$ gives
+$8303/5355<u_0<7159/4590$ and thus $31/20<u_0<25/16$.
+Therefore
+\[
+D>(31/20)^2+2(16/25)^2-(14/5)(31/40)(25/16)
+=-6757/40000>-3/10.
+\]
+At $(X,2/5)$, $a=2758/3825<73/100$, $m=211/425>49/100$;
+the same bounds on $X$ give
+$233093/133875<u_0<401558/229500$ and $87/50<u_0<7/4$.
+Thus
+\[
+D>(87/50)^2+2(49/100)^2-(14/5)(73/100)(7/4)
+=-173/2500>-3/10.
+\]
+This proves $-3/10<D<3/10$ on every point of the full closed rectangle.
+Finally \eqref{eq:L37:Taylor} and \eqref{eq:L37:anchor} give
+\[
+H(y)+8d<203877/25600+(4/13)(3/10)^2
+=1023/128-183/332800.
+\]
+In particular the required coefficient $C_2(d)=1023/128-8d$ in
+\eqref{eq:L37:C2} is valid, completing the two-connector premise.

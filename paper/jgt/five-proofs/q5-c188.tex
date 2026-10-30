@@ -1,0 +1,641 @@
+\subsection{The minimum-two odd root: unit and minimum-one odd terminals}\label{proof:Q5-C188}
+\paragraph{Q188.1 Original model and the actual orientation table}
+
+% Replace q5-c188.tex lines 4--48 (through the paragraph on equal pairs),
+% by exact boundary strings specified in GLOBAL_COMPRESSION.json.
+% The original eq:Q188:conv label moves to the common convolution equation.
+% Keep every orientation and every root3/root4 calculation from this point on.
+Use the original finite-space model, path messages and spectral coordinates
+of Section~\ref{sec:odd-common-calculus}. In particular
+\(B=-K\), \(u=B\one\), \(T=J+B\), \(A=T^*\),
+\(p=1-u\), \(q=1+u\), and \(\tau=d-\delta_2\).
+The two signed means and the complete-vector square are
+\eqref{eq:odd-common:coordinates}; the finite positive convolution is
+\eqref{eq:Q188:conv}. At \(n=1\), \(G_n=(1,0)\), whereas
+\(|G_2|^2=1+x\); the contraction \(|G_n|\le1\) is used only for
+\(n\ge3\).
+Every certificate \(H\le e^{a+BV}\) below uses the first convention
+of Lemma~\ref{lem:odd-common:fourth}, with the actual signed mean and
+all constant components retained in \(V\).
+Only the genuine equal-length decorations in
+\eqref{eq:odd-common:inputs} may be dropped by positivity.
+For terminal (1, a), \(F=q f_a.\) For the odd catalogue, normally
+
+\fitdisplay{
+F=q f_{a_1} h_{b_1} \prod_{i\ge 2} h_{a_i} f_{b_i}.
+}{Q188.L63}
+
+
+In the sole cross pattern,
+
+\fitdisplay{
+F=q f_2 h_{b_2} h_3 f_4 \prod_{i\ge 3} h_{a_i} f_{b_i}.
+}{Q188.L67}
+
+
+Its complete reversal \(\bar F\) replaces q/f/h by p/b/W. The actual root input is
+
+
+\begingroup\small
+\setlength{\tabcolsep}{3pt}
+\setlength{\LTleft}{0pt}\setlength{\LTright}{\fill}
+\begin{longtable}{@{}p{0.2200\linewidth}p{0.7000\linewidth}@{}}
+\caption{The minimum-two odd root: unit and minimum-one odd terminals: parameter values.}\label{tab:parameters:q5-c188:1}\\
+\toprule
+Entry & Actual H \\
+\midrule\endfirsthead
+\toprule
+Entry & Actual H \\
+\midrule\endhead
+\bottomrule\endfoot
+\(L=1\) & \(f_2 h_b f_c \prod h_{s_i} f_{t_i} * T(\bar F)\). \\
+\addlinespace[2pt]
+\(L\ge 2,\allowbreak \allowbreak  b=3\) & \(W_2 \bar f_3 W_c \prod W_{s_i} \bar f_{t_i} * T^L(F)\). \\
+\addlinespace[2pt]
+\(L\ge 2,\allowbreak \allowbreak  b\ge 4\) & \(W_2 W_b \bar f_c \prod W_{s_i} \bar f_{t_i} * T^L(F)\). \\
+\end{longtable}
+\endgroup
+
+
+The inner path points from terminal to root and the outer path from root to receiver. f is an entirely outward original arm, b entirely inward, h first inward then outward, and W first outward then toward the first neighbour. All decisions use only original integer lengths and the cross pattern. No direction is chosen after d, \(\mu\) or K is known.
+
+\paragraph{Q188.2 The actual root3 pair, full constants, and one mask for all later pairs}\label{part:Q188.2}
+
+% Replace only the initial two pair-envelope derivations within Q188.2:
+% from 'Write n=c-3' through the paragraph immediately before the mask.
+% Keep part:Q188.2, the later mask proof, the minimum>=5 improvement and
+% the exact 931/192 extra-pair payment that uses the smaller norm.
+Write \(n=c-3\ge1\), \(G_n=E+zD\), and
+\(\beta=\beta_{c-1}\).
+Use the positive pair \eqref{eq:odd-common:positive-three} for
+\(h_3f_c\), and the distinct exchanged pair
+\eqref{eq:odd-common:exchanged-three} for \(\bar f_3W_c\).
+Thus \(V_+=(-xE+zxD)u+\tau\one\), whereas
+\(V_-=(xE+zxD)u+\beta\one\) and
+\(\Gamma_-=d+\beta_c+\beta\).
+Their nonconstant norm and signed means are
+\eqref{eq:odd-common:three-norms}, including \(n=1,D=0\).
+Each displayed constant stays in the complete vector used below.
+For every actual ordered pair with short length at least four, C096's retained finite difference supplies the stronger loss 16d/5. The union of all disjoint exponent intervals is one finite 0–1 mask. Four residue classes give
+
+\fitdisplay{
+\lvert P(i \sqrt{x})\rvert^2 \le  (1+x)/(1-x^2)^2 <100/49.
+}{Q188.L103}
+
+
+Consequently the complete primitive U of all such positive or negative pairs has
+
+\fitdisplay{
+\|U\|\le 3\sqrt{d}/8, E(BU)\le d/12.
+}{Q188.L107}
+
+
+If its first short length is at least five, \(\|U\|\le \sqrt{d}/4\). The mean bound follows by retaining only positive even-power contributions: the first possible one is at most \(\delta_4/(1-\theta^2)<d/12\). These are original-measure statements, with no independence between pairs and no multiplication of separate moment estimates.
+
+For a paid root3 certificate \(H\le \exp(a+BV)\), with complete \(\|V\|\le 2\sqrt{d}\), adding all \(k\ge 1\) later original root pairs at once changes its fourth exponent by at most
+
+\fitdisplay{
+\begin{gathered}
+\relax [1/3+(17/4)(2\cdot 2\cdot (1/4)+1/16)-64k/5]d\\
+=[931/192-64k/5]d \le  -7633d/960.
+\end{gathered}
+}{Q188.L113}
+
+
+Here the full constant term of V is included. The complete norm cap is checked in §8 below. If \(b\ge 4,\allowbreak \allowbreak  \) all root pairs are instead paid in the one mask of norm 3\(\sqrt{d}\)/8; their total loss is 16(k+1)d/5. Thus arbitrary pair counts are covered.
+
+\paragraph{Q188.3 New all-host \(L=1\) core for every terminal (1, a)}
+
+The preceding fourth-moment estimate uses the positive root-pair direction.
+C081 Theorem A uses a distinct unit direction.
+
+For \(a=2,\allowbreak \allowbreak   p+\bar f_2=2+Bu\), so
+
+\fitdisplay{
+\begin{gathered}
+p \bar f_2 \le  (1+Bu/2)^2,\\
+T(p \bar f_2) \le  q-\gamma+B^2u, \gamma=d-\delta_2/2.
+\end{gathered}
+}{Q188.L124}
+
+
+The latter follows by expanding the same square, using \(E Bu=-d\) and \(T((Bu)^2)\le 2\delta_2\). Since \(f_2=1-u+Bu\), the arithmetic mean of the two actual positive factors gives
+
+\fitdisplay{
+f_2\cdot T(p \bar f_2) \le  \exp[-\gamma+B(1+B)u].
+}{Q188.L129}
+
+
+For \(a\ge 3\) set \(N=a-1,\allowbreak \allowbreak   R_a=B G_N(B)u\), \(m=1-\beta_a/2\), \(k_{0}=1/m\le 6/5\),
+
+\fitdisplay{
+\begin{gathered}
+t_{0}=\beta_{a+1}, e=d-\beta_{a+2}, V_{0}=E R_a^2,\\
+\gamma=k_{0}\cdot t_{0}-k_{0}^2\cdot V_{0}/2.
+\end{gathered}
+}{Q188.L133}
+
+
+The actual finite positive convolution gives
+
+\fitdisplay{
+p \bar f_a \le  (m+R_a/2)^2,
+T(p \bar f_a) \le  m^2[q-\gamma+k_{0} B R_a].
+}{Q188.L138}
+
+
+Here \(ER_a=-t_{0}\), \(E(uR_a)=-e\), \(0\le e\le \delta_2\); \(V_{0}=\delta_2+\delta_3\) for \(a=3\) and \(V_{0}\le \delta_2\) for \(a\ge 4.\) Positive AM–GM with the actual \(f_2\) therefore gives
+
+\fitdisplay{
+\begin{gathered}
+f_2\cdot T(p \bar f_a) \le  \exp[2\log m-\gamma+B Q(B)u],\\
+Q=1+k_{0} zG_N, E[BQ(B)u]=-d+k_{0} e.
+\end{gathered}
+}{Q188.L143}
+
+
+For \(a\ge 4,\allowbreak \allowbreak   t_{0}-e\ge d-2\delta_2\ge 0\), \(k_{0}\ge 1\) and \(k_{0}^2\)/\(2\le 18/25\) prove
+
+\fitdisplay{
+\gamma-k_{0} e \ge  d-68\delta_2/25.
+}{Q188.L148}
+
+
+For \(a=3\) the direct values \(t_{0}=d,\allowbreak \allowbreak   e=\delta_2\) and \(V_{0}=\delta_2+\delta_3\) give the stronger coefficient \(161/80,\allowbreak \) hence the same stated bound. This checks the whole finite a-tail and its end signs.
+
+Now \(b=3.\) In the \(a=2\) row the combined nonconstant primitive has coordinates
+
+\fitdisplay{
+(1-xE, 1+xD).
+}{Q188.L154}
+
+
+Its squared modulus is at most \((1-x+x^2)^2+x(1+x)^2\le 3/2\): its second derivative is positive, so the two endpoints suffice, and the \(\theta\) endpoint is \(1446129/1048576<3/2\). Its imaginary coefficient is at least 1. The full \(\tau\) constant therefore has nonpositive incremental square \(\tau^2+2\tau E V_{\rm non}\le 0\). Including the actual mean and the full-mean fourth exponential lemma gives
+
+\fitdisplay{
+\log E H^4 \le  -20d+14\delta_2+51d/8 \le  -127d/16.
+}{Q188.L158}
+
+
+For \(a\ge 3\) the coordinates are
+
+\fitdisplay{
+(1-k_{0} xD_N-xE, k_{0} E_N+xD).
+}{Q188.L162}
+
+
+The real coordinate is at least \(17/160>0,\allowbreak \) and both coordinates can therefore be safely upper-bounded before squaring. Their square is at most
+
+\fitdisplay{
+(1-2\kappa\cdot x)^2+x(6/5+x)^2 \le 3/2.
+}{Q188.L166}
+
+
+The displayed polynomial is convex in x; at \(\theta\) its value is \(17249442/13107200<3/2\). The imaginary coefficient is at least \(\kappa>1/2,\allowbreak \allowbreak  \) so the \(\tau\) cross is again nonpositive. Since \(\beta_a\ge \tau,\allowbreak \allowbreak  \)
+
+\fitdisplay{
+\begin{gathered}
+\log E H^4 \le  -24d+(672/25)\delta_2+51d/8\\
+\le  -1341d/200 < -6d.
+\end{gathered}
+}{Q188.L170}
+
+
+For \(b\ge 4,\allowbreak \allowbreak  \) use the single complete root mask. In the \(a=2\) row the base norm is below 6\(\sqrt{d}\)/5, scalar-plus-mean fourth loss is at least \(115/16,\allowbreak \) and the resulting loss is at least
+
+\fitdisplay{
+115/16+64/5-1/3-67473/6400 >6.
+}{Q188.L175}
+
+
+For \(a\ge 3,\allowbreak \allowbreak  \) the exact Q norm is below 9\(\sqrt{d}\)/8. One direct check starts from
+
+\fitdisplay{
+\begin{gathered}
+\lvert Q\rvert^2 \le 1-(24/25)x+(96/25)x^2\\
+\le 1+3x/200+(36/25)x^2 <997/800<81/64.
+\end{gathered}
+}{Q188.L179}
+
+
+The scalar-plus-mean fourth loss is at least \(1191/200,\allowbreak \) because it is at least \(12-(372/25)\theta\). After the same whole root mask, the loss is at least
+
+\fitdisplay{
+1191/200+64/5-1/3-153/16 >6.
+}{Q188.L184}
+
+
+Further root pairs only improve this payment. Thus all \(a\ge 2,\allowbreak \allowbreak  \) all hosts, and every original positive root table have the required actual \(L=1\) fourth loss 6.
+
+% Replace the complete Q188.4 block, up to (but not including) Q188.5.
+% Its exact original boundary strings and all formula mappings are recorded.
+\paragraph{Correlated first rows and the actual root cancellation}
+Use Lemma~\ref{lem:odd-common:q-packet} with the terminal's own
+\(R,\Gamma,D\), taking \(\alpha=-\Gamma\) in an exponential row.
+Its first row is
+\eqref{eq:odd-common:q-first-row}, where
+\[
+ D\ge\max\{\delta,0\},\qquad
+ \delta=\E R+\E(uR)+\sqrt{d\E R^2}+c_T\E R^2.
+\]
+Here \(c_T=12/5\) or \(8/3\), as proved for the packet;
+the square-envelope row uses \(c_T=1\) and
+\(\alpha=2\log m-\Gamma\), retaining its factor \(m^2\) at every
+length. Keep these actual first-row data.
+For \(L=1\), use the reversed terminal and the first row of
+\eqref{eq:odd-common:q-cancel}; for \(L\ge2\), use the second row.
+Each following packet proves the required nonnegative
+\(\gamma_j=\beta_j-D_{j-2}\), including the next mean index
+\(L+2\). Its root vector retains the full \(\tau\one\) or
+\(\beta\one\) component from the actual pair envelope.
+\paragraph{Q188.5 Canonical123: signed mean and all-length loss \(13/2\)}
+
+Put \(m=1-d/2\), \(k_{0}=1/m\). The actual sums are
+
+\fitdisplay{
+f_2+h_3=2-d+B^2u, \bar f_2+W_3=2-d-B^2u.
+}{Q188.L239}
+
+
+The same positive squares have first-row error
+
+\fitdisplay{
+\delta=-k_{0}\cdot \delta_2+k_{0}\cdot \sqrt{d\cdot \delta_3}+k_{0}^2\cdot \delta_3 \le 39d/164<d/4.
+}{Q188.L243}
+
+
+To check the whole domain, put \(a=\delta_2/d\) and \(\mathfrak{b}_0=1-k_{0} \theta\ge 41/80\); then
+
+\fitdisplay{
+\begin{gathered}
+\delta/d \le  k_{0}[-\mathfrak{b}_0\cdot a+\sqrt{\theta\cdot a}]\\
+\le k_{0} \theta/(4\mathfrak{b}_0)\le 39/164.
+\end{gathered}
+}{Q188.L247}
+
+
+This is completion of a square. Take \(D=d/4.\) The actual signed coefficients are \(D_{1}=k_{0}\delta_2,\allowbreak \allowbreak  D_{2}=0,\allowbreak \allowbreak  D_{3}=-k_{0}\delta_3,\allowbreak \allowbreak  D_{4}=0\), and all \(\gamma_j\ge d/2\) for \(j\ge 3.\) Thus
+
+\fitdisplay{
+Q_L=G_L-k_{0}\cdot x\cdot z^{L-1}, c_L=d/2-\gamma_{L+1}.
+}{Q188.L252}
+
+
+For \(L=1,\allowbreak \allowbreak  b=3,\allowbreak \allowbreak  \) the full nonconstant primitive is \([x(k_{0}-E)+zxD]u\); its mean after B is nonpositive, norm squared is below 9d/64, and adding the actual \(\tau\) constant still leaves norm below \(\sqrt{d}\). For example its nonconstant square is at most \(x^2(1/5+x)^2+x^3\); the stated weaker \(9/64\) is valid. The scalar fourth exponent is at most -47d/4. Hence the fourth loss is at least \(15/2.\) For \(b\ge 4\) the nonconstant base norm is below \(\sqrt{d}\)/2 and the full mask norm gives 7\(\sqrt{d}\)/8; the resulting fourth loss also exceeds \(15/2.\)
+
+For \(L\ge 2,\allowbreak \allowbreak  b=3\) the nonconstant primitive is
+
+\fitdisplay{
+[Q_L-1+xE+zxD]u,
+}{Q188.L258}
+
+
+and the full constant is \(\beta_{c-1}\one.\) Its imaginary coefficient is at least \(41/80\) at L2, at least 1 at L3, at least \(\kappa\) at L4, and at least \(\kappa-1/12=49/96>1/2\) for every \(L\ge 5.\) This last lower bound remains valid when the root gap is one and \(D=0.\) Therefore the entire \(\beta\)-square increment is nonpositive.
+
+% Replace only q5-c188.tex's description at baseline lines 384--389.
+% Retain its preceding same-vector beta-square argument and subsequent
+% explicit short coordinates; this is a layout change, not a new proof.
+\begingroup\small
+\renewcommand{\arraystretch}{1.15}
+\begin{longtable}{@{}ccccc@{}}
+\caption{The \(b=3\) short and long fourth-moment ledger.
+Norms concern the nonconstant vector; its actual constant is retained
+and has a nonpositive square increment by the preceding argument.}
+\label{tab:odd188:short-outlet}\label{tab:parameters:q5-c188:2}\\
+\toprule
+\(L\)&\(\|V_{\rm non}\|^2/d\le\)&\(4a/d\le\)
+     &\(4\E BV_{\rm non}/d\le\)&Loss \(\ge\)\\
+\midrule\endfirsthead
+\toprule
+\(L\)&\(\|V_{\rm non}\|^2/d\le\)&\(4a/d\le\)
+     &\(4\E BV_{\rm non}/d\le\)&Loss \(\ge\)\\
+\midrule\endhead
+\bottomrule\endfoot
+\(2\)&\(3/5\)&\(-64/5\)&\(0\)&\(41/4\)\\
+\(3\)&\(1\)&\(-59/4\)&\(0\)&\(21/2\)\\
+\(4\)&\(1\)&\(-105/8\)&\(2/3\)&\(197/24\)\\
+\(\ge5\)&\(6/5\)&\(-51/4\)&\(106/105\)&\(2789/420\)\\
+\end{longtable}
+\endgroup
+
+
+The short coordinates are respectively
+
+\fitdisplay{
+\begin{gathered}
+L2: (xE, 1-k_{0}\cdot x+xD),\\
+L3: (x(E-1)+k_{0}\cdot x^2, 1+xD),\\
+L4: (x(E-1), 1-x+k_{0}\cdot x^2+xD).
+\end{gathered}
+}{Q188.L271}
+
+
+Their displayed norms follow, for instance, from \(x+x^2<3/5\) at L2; at L3 use \(x+2x^2+x^3+(36/25)x^4<1\); at L4 use \(x+(12/5)x^3+x^4+(36/25)x^5<1\). The mean at L3 is at most \(\delta_3-k_{0}\delta_3\le 0\), and at L4 at most \(\delta_3\).
+
+For every \(L\ge 5\) the unperturbed square is at most \(x+3x^2+x^3\le 31733/32768<1\). The terminal perturbation is at most \(k_{0}\cdot x^3<1/12\); thus the whole square is below \((13/12)^2<6/5\). The actual mean is not always nonpositive. Precisely,
+
+\fitdisplay{
+\begin{gathered}
+EBV_{\rm non} \le  \delta_3+(6/5)\delta_4,\\
+4EBV_{\rm non} < 2d/3+12d/35=106d/105.
+\end{gathered}
+}{Q188.L279}
+
+
+This uses \(\beta_{L+2}\ge d- \delta_2\) and \(\int xE\ge \delta_2-\delta_3\), and the largest positive actual \(D_L\) is at most k0\(\delta_4\). The final loss is therefore \(51/4-51/10-106/105=2789/420>13/2\). 
+
+For \(b\ge 4\) and \(L\ge 2,\allowbreak \allowbreak   \|(Q_L-1)u\|<9\sqrt{d}/10\): L2–4 are bounded by \(x+x^2<3/5\), and the long tail by \(\sqrt{3/5}+1/12<53/60<9/10\). The complete mask gives fourth loss at least
+
+\fitdisplay{
+217/15-44217/6400=145109/19200>15/2.
+}{Q188.L286}
+
+
+The canonical123 conclusion \(13/2\) is thus uniform in all L, all root gaps and all hosts, before later root pairs, which improve it.
+
+\paragraph{Q188.6 Canonical12c: new actual2d retention and all low lengths}
+
+Here \(0<d\le 1/4\), \(m=1-d\) and \(k_{0}\le 4/3.\) The actual \(c=4\) retained square has
+
+\fitdisplay{
+\begin{gathered}
+R=(-t+zs)u, t=k_{0}(d+x), s=k_{0}\cdot x, D=5d/12,\\
+\gamma_{3}\ge d/8, \gamma_{4}\ge 3d/4, \gamma_j\ge 41d/96 (j\ge 5).
+\end{gathered}
+}{Q188.L294}
+
+
+For \(c\ge5\), use the actual \(\sigma=2\) row of
+Lemma~\ref{lem:reference-retained-packet}, throughout \(0<d\le1/4\).
+It has the same canonical \(F=qf_2h_c\), \(m=1-d\),
+\(R=(-t+zs)u=-m^{-1}(A_0-zB_0)u\), and \(D=d/2\).
+The true retained construction gives
+\[
+ A_0\ge\tau+(1-x)B_0,\quad A_0,B_0\ge x(1-x),\quad
+ A_0<7/10,\quad B_0<3/5,\quad
+ 2(A_0^2+xB_0^2)\le A_0+B_0.
+\]
+Hence \(0\le t<14/15\), \(0\le s<4/5\), and \(t\ge x(1-x)\).
+The signed moments in \eqref{eq:reference-retained:signed-moments}
+give \(\gamma_3\ge0\), \(\gamma_4\ge2d/3\),
+\(\gamma_5\ge\tau\), and \(\gamma_j\ge41d/96\) for all \(j\ge5\).
+The root-fourth calculation below uses this same vector and its signs.
+
+For \(L\ge 3,\allowbreak \allowbreak  \) both coordinates of \(Q_L=G_L+z^{L-1}(-t+zs)\) lie in [1-x, 1]. This can also be seen directly by residues mod four: the last two terms are fractional truncations of the final alternating interval, because t, s lie in [0, 1]. L2 instead has coordinates \((1-sx,\allowbreak \allowbreak  1-t)\) and is treated separately.
+
+For \(b=3,\allowbreak \allowbreak  L=1\) the complete nonconstant primitive has coordinates
+
+\fitdisplay{
+(t-xE, s+xD).
+}{Q188.L314}
+
+
+The plus sign \(s+xD\) is necessary: \(\bar R\) and the actual positive root pair have the same imaginary sign here. In \(c=4\) the real coordinate is nonnegative and below \(2/3,\allowbreak \) and the imaginary coefficient is between 0 and \(7x/3<1.\) Thus the nonconstant square is below d; its B mean is nonpositive. The \(\tau\) cross is nonpositive and its remaining square is at most \(d^2\le d/4.\) The complete fourth exponent is at most
+
+\fitdisplay{
+-181d/12+(17/4)(5d/4)=-469d/48<-6d.
+}{Q188.L318}
+
+
+For \(c\ge 5\) the real coordinate is in [-\(x^2,\allowbreak  14/15\)] and the imaginary coefficient is at most \(4/5+x.\) Their square is below \(3/2,\allowbreak \) since
+
+\fitdisplay{
+196/225+(5/12)(73/60)^2=64277/43200<3/2.
+}{Q188.L322}
+
+
+Again the constant cross is nonpositive and its square is at most \(d^2,\allowbreak \) so complete squared norm \(\le 7d/4.\) The actual B mean is at most \(\delta_3\). With scalar fourth exponent at most -59d/4 the loss is at least
+
+\fitdisplay{
+59/4-2/3-119/16=319/48>6.
+}{Q188.L326}
+
+
+For \(b=3,\allowbreak \allowbreak  L=2\) the coordinates are \((x(E-s),\allowbreak \allowbreak  1-t+xD)\). They have square below 1, imaginary coefficient nonnegative, and actual B mean at most \(\delta_3\). The constant square costs at most \(d^2,\allowbreak \) giving complete squared norm \(\le 5d/4.\) The weakest scalar is -51d/4, leaving loss
+
+\fitdisplay{
+51/4-2/3-85/16=325/48>6.
+}{Q188.L330}
+
+
+The \(c=4\) row is stronger: E-\(s\ge 5/96,\allowbreak \allowbreak  \) the imaginary coefficient is at most 1, nonconstant square \(<3/5\) and scalar \(\le -167d/12.\) For every \(L\ge 3\) the rectangle gives nonconstant square \(<1\) and imaginary coefficient \(\ge \kappa,\allowbreak \allowbreak  \) so the full \(\beta\) cross is nonpositive. The signed mean is at most \(\delta_3\). Scalar fourth bounds are -121d/8 for \(c=4\) and -347d/24 for \(c\ge 5\); after mean and \(17/4\) norm payment both leave loss \(>6.\)
+
+For \(b\ge 4,\allowbreak \allowbreak  L=1\) the base norm is below 6\(\sqrt{d}\)/5 and B mean is nonpositive; after the full root mask the mean is at most d/12 and norm below \((6/5+3/8)\sqrt{d}\). Its weakest scalar, -8d+4D-64d/5, still pays loss \(>6.\) For \(L\ge 2\) the base norm is below 4\(\sqrt{d}\)/5. Adjacent \(\gamma\) sums are at least 41d/48 in \(c=4\) and 2d/3 for \(c\ge 5.\) In the exact scalar-plus-mean formula of §4 the resulting losses exceed 10 and 9 respectively. All later root pairs are already in this same mask.
+
+\paragraph{Q188.7 All remaining triples: actual envelopes, \(G_{1}\) and weakest \(2427/400\)}
+
+For \(F=q f_a h_c\), \(c>a\ge 3,\allowbreak \allowbreak  \) and \(0<d\le 1/4\), the actual first-row packages extracted from C172/C173 are:
+
+
+\begingroup\small
+\setlength{\tabcolsep}{3pt}
+\setlength{\LTleft}{0pt}\setlength{\LTright}{\fill}
+\begin{longtable}{@{}>{\raggedright\arraybackslash}p{0.1200\linewidth}>{\raggedright\arraybackslash}p{0.2000\linewidth}>{\raggedright\arraybackslash}p{0.2000\linewidth}>{\raggedright\arraybackslash}p{0.2000\linewidth}>{\raggedright\arraybackslash}p{0.2000\linewidth}@{}}
+\caption{First-row parameters for \(F=qf_ah_c\), \(3\le a<c\) and \(0<d\le1/4\).}\label{tab:parameters:q5-c188:3}\\
+\toprule
+\(a\) & \(g=\Gamma/d\) lower & \(D*=D/d\) upper & \(\rho\) with \(\lvert r\rvert\le \rho\) & h with all \(\gamma_j\ge h\cdot d\) \\
+\midrule\endfirsthead
+\toprule
+\(a\) & \(g=\Gamma/d\) lower & \(D*=D/d\) upper & \(\rho\) with \(\lvert r\rvert\le \rho\) & h with all \(\gamma_j\ge h\cdot d\) \\
+\midrule\endhead
+\bottomrule\endfoot
+3 & \(35/16\); & \(7/20\); & \(3/5\); & \(1/2\). \\
+\addlinespace[2pt]
+4 & \(51/16\); & 1; & \(3/10\); & \(15/32\). \\
+\addlinespace[2pt]
+5 & \(89/32\); & \(2/3\); & \(1/4\); & \(15/32\). \\
+\addlinespace[2pt]
+\(\ge 6\) & \(19/8\); & \(7/20\); & \(1/8\); & \(15/32\). \\
+\end{longtable}
+\endgroup
+
+
+For \(a=3\) the exact polynomial is \(r=-\beta_{c-1}-z^3G_{c-3}(-z)\). For \(a\ge 4\) it is
+
+\fitdisplay{
+\begin{gathered}
+r=-c_{0}+(-1)^a z^aG_{c-a}(-z),\\
+c_{0}=\beta_{c-1}-\beta_{a-1}.
+\end{gathered}
+}{Q188.L349}
+
+
+The cited finite constructions supply these signs, the finite \(G_{2}\) cost, the actual \(\delta\) and all \(\gamma\) indices. In particular \(c_{0}\) is a finite alternating difference, not a monotone-\(\beta\) increment. These actual envelopes, not p-root moment conclusions, are the inputs to the new \(W_2\)/\(f_2\) root proof.
+
+For \(a\ge 4\) and \(b=3,\allowbreak \allowbreak  L=1,\allowbreak \allowbreak  \) complete norm is at most \((\rho+1)\sqrt{d}\), since it includes \(\bar R\), the root nonconstant norm \(<\sqrt{d}/2\) and \(\tau\le d\le \sqrt{d}/2.\) The actual B mean is at most \((\rho+\theta)d\). The fourth loss is consequently at least
+
+\fitdisplay{
+4g-4D*+57/8-4\rho-(17/4)(\rho+1)^2.
+}{Q188.L356}
+
+
+The \(a=4\), \(a=5\) and \(a\ge 6\) rows respectively exceed 7, 7 and 9.
+
+For \(L\ge 2\) the unperturbed primitive \(G_L-1+xE+zxD\) has norm below \(\sqrt{d}\), since its real coordinate has absolute value at most x and its imaginary coefficient at most 1+x. The terminal perturbation has norm below \(2\rho/3\), uniformly in L. Its imaginary coefficient is nonnegative after addition: the L2 base is at least 1 and the perturbation is at most \(\rho\), the L3 base is at least 1 and the perturbation at most sqrt(\(\theta\))*\(\rho\), and from L4 onward the base is at least \(\kappa\) and perturbation at most \(\theta\)*\(\rho\). This argument explicitly allows root \(n=1\) and \(D=0.\) Hence the \(\beta\) cross is nonpositive, but the \(\beta\) square is still paid by \(\beta^2\le d^2\le d/4\).
+
+The fourth loss is therefore at least
+
+\fitdisplay{
+4g+35/4-4(2D*+1-2h)
+  -(17/4)[(1+2\rho/3)^2+1/4].
+}{Q188.L364}
+
+
+For \(a=4\) this is exactly \(53/4-(17/4)(169/100)=2427/400>6\). For \(a=5\) it equals \(67/9>7,\allowbreak \) and for \(a\ge 6\) it is greater than 9. This is the weakest general-triple payment; it contains the actual \(\beta\) square.
+
+The \(a=3\) unit row benefits from its actual correlation. Its nonconstant coordinates are
+
+\fitdisplay{
+(\beta_t-x^2D_t-xE, x(E_t+D)), t=c-3.
+}{Q188.L371}
+
+
+Their square is at most \(d^2+x^2+6x^3+x^4<2/3\). After the \(\tau\) square the complete squared norm is at most 11d/12, and the signed mean after B is at most \(\delta_2\)+\(\delta_3\). The scalar fourth exponent is at most -161d/10. Using \(4(\delta_2+\delta_3)\le 585d/256\) leaves loss greater than \(793/80>6.\)
+
+For \(a=3\), L2 the nonconstant coordinates are \((xE-x^2E_t,\allowbreak \allowbreak  1-\beta_t+x^2D_t+xD)\). Their square is below \(6/5\); the \(\theta\) certificate is \(39193245/33554432<6/5\). The complete constant adds at most \(d^2.\) For \(L\ge 3,\allowbreak \allowbreak  \) the unperturbed norm is below 1 and the perturbation below \(1/4,\allowbreak \) so complete squared norm \(\le 29d/16.\) The exact scalar-plus-mean loss is at least \(147/10.\) Even the latter weaker norm leaves
+
+\fitdisplay{
+147/10-493/64>6.
+}{Q188.L377}
+
+
+For \(b\ge 4\) the actual unit and nonunit rows use the same mask as before. Their respective lower losses are
+
+\fitdisplay{
+\begin{gathered}
+4g-4D*+64/5-4\rho-1/3-(17/4)(\rho+3/8)^2,\\
+4g+64/5-4(2D*+1-2h)-1/3\\
+-(17/4)(4/5+2\rho/3+3/8)^2.
+\end{gathered}
+}{Q188.L381}
+
+
+All four table rows exceed 6; the weakest nonunit one is already the \(a=3\) row, exceeding 7. Thus all triples and every later root pair are paid in the full low domain.
+
+\paragraph{Q188.8 All odd multipairs, all finite j, and complete root-norm control}
+
+For \(j\ge 2,\allowbreak \allowbreak  \) use the five exhaustive terminal blocks and actual finite first-row constructions of C177. Their exact packages are:
+
+\begin{description}[style=nextline,leftmargin=1.6em,before=\raggedright]
+\item[{I}] Original structure: \(a_{1}\ge 3\);\par\noindent g: \(431/80\);\par\noindent D*: \(5/3\);\par\noindent \(\rho\): \(1/2\);\par\noindent h: \(1/3\);\par\noindent \(\Delta\): \(1/64\).
+\item[{II}] Original structure: \(a_{1}=2,\allowbreak \allowbreak  b_1\ge 4\);\par\noindent g: \(351/80\);\par\noindent D*: \(11/10\);\par\noindent \(\rho\): \(2/3\);\par\noindent h: \(1/3\);\par\noindent \(\Delta\): \(1/64\).
+\item[{III}] Original structure: \(a_{1}=2,\allowbreak \allowbreak  b_1=3,\allowbreak \allowbreak  a_{2}\ge 5\);\par\noindent g: \(21/5\);\par\noindent D*: \(11/10\);\par\noindent \(\rho\): \(3/5\);\par\noindent h: \(15/32\);\par\noindent \(\Delta\): \(1/8\).
+\item[{IV}] Original structure: cross, \(j=2\);\par\noindent g: \(21/4\);\par\noindent D*: \(11/10\);\par\noindent \(\rho\): \(1/2\);\par\noindent h: \(1/2\);\par\noindent \(\Delta\): \(1/8\).
+\item[{V}] Original structure: cross, \(j\ge 3\);\par\noindent g: \(169/20\);\par\noindent D*: \(7/4\);\par\noindent \(\rho\): \(3/5\);\par\noindent h: \(1/3\);\par\noindent \(\Delta\): \(1/8\).
+\end{description}
+
+All later terminal pairs belong to the same actual R and finite disjoint mask, so \(\rho\) and D do not increase with j. The \(\Gamma\) lower bounds come from the actual first package plus 16d/5 for each later pair. The \(\beta\) coefficients enter through their finite identities. In III the actual \(\gamma_{3}\ge d/2,\allowbreak \allowbreak   \gamma_{4}\ge 11d/12,\allowbreak \allowbreak  \) later \(\gamma\ge 79d/160\) justify \(h=15/32.\) IV later \(\gamma\ge 49d/96\) justify \(h=1/2\) only with its short bounds. V is bounded using \(h=1/3\) rather than a nonexistent universal \(1/2.\)
+
+For \(b=3,\allowbreak \allowbreak  L1\) the complete root certificate, including \(\tau\), gives fourth loss at least
+
+\fitdisplay{
+U=4g-4D*+57/8-4\rho
+    -(17/4)(\rho+1/2+\sqrt{\Delta})^2.
+}{Q188.L403}
+
+
+Use \(\sqrt{\Delta}=1/8\) in I/II and the upper \(3/8\) in III/IV/V. The five lower bounds respectively exceed 14, 10, 7, 13 and 22. For example III has \(U=137/8-59177/6400>7\). This pays the possibly positive actual B mean of \(\bar R\) by 4\(\rho\)*d.
+
+For \(b=3,\allowbreak \allowbreak  L\ge 2,\allowbreak \allowbreak  \) the same base and perturbation proof as §7 gives nonnegative imaginary coefficient even when the root gap is one. The constant increment is at most \(\beta^2\le \Delta\cdot d.\) Hence the fourth loss is at least
+
+\fitdisplay{
+N=4g+35/4-4(2D*+1-2h)
+   -(17/4)[(1+2\rho/3)^2+\Delta].
+}{Q188.L410}
+
+
+The five rows respectively exceed 8, 7, 7, 12 and 18. The closest exact comparisons are
+
+\fitdisplay{
+\begin{gathered}
+I:  N=469/30-17561/2304=8+131/11520>8,\\
+II: N=97/6-185249/20736>7,\\
+III:N=33/2-7089/800>7.
+\end{gathered}
+}{Q188.L415}
+
+
+Thus no finite-j or short-L gap is hidden by these envelopes. The full complete vector is still being used, not a product of expectations.
+
+For \(b\ge 4\) the respective unit/nonunit losses are
+
+\fitdisplay{
+\begin{gathered}
+U_{4}=4g-4D*+64/5-4\rho-1/3-(17/4)(\rho+3/8)^2,\\
+N4=4g+64/5-4(2D*+1-2h)-1/3\\
+-(17/4)(4/5+2\rho/3+3/8)^2.
+\end{gathered}
+}{Q188.L423}
+
+
+All five \(U_{4}\) rows exceed 18, and all five N4 rows exceed 8. These are direct substitutions into positive-denominator rational expressions; every parameter family is already covered by the finite-mask and finite-propagation arguments.
+
+The norm premise needed to add later root pairs in \mbox{\hyperref[part:Q188.2]{part Q188.2}} holds as follows. In the general nonunit rows the unperturbed norm is below 1 and terminal perturbation below 2\(\rho\)/\(3\le 4/9,\allowbreak \) while the complete constant has norm at most \(\sqrt{d}\)/2 (at most 3\(\sqrt{d}\)/8 in the multipair low domains). Thus complete norm is below 2\(\sqrt{d}\). In unit rows, \(\bar R\) plus root nonconstant and constant is at most \((\rho+1/2+\sqrt{\Delta})\sqrt{d}\) in the low domains, also below 2\(\sqrt{d}\). The special canonical12c unit bound is at most \((\sqrt{3/2}+1/2)\sqrt{d}<2\sqrt{d}\). The all-host (1, a) unit proof has nonconstant norm at most \(\sqrt{3d/2}\), and \(\tau\le d\) gives norm at most \((\sqrt{3/2}+1/\sqrt{3})\sqrt{d}<2\sqrt{d}\). Canonical123 is stronger. Therefore the whole-root-pair lifting increment is valid in every row where it is used.
+
+\paragraph{Q188.9 Closed high domains and exact paid exterior interfaces}
+
+For \(c=4\) and \(d\ge 1/4,\allowbreak \allowbreak   h_4\le 2E f_3=2-4d\le 1\). For \(c\ge 5,\allowbreak \allowbreak  \) the finite path-mean proof in Q5-C169, Section 8 gives \(E f_n\le 1-5d/2\) for all \(n\ge 4,\allowbreak \allowbreak  \) so \(h_c\le 2-5d\le 1\) already for \(d\ge 1/5\) and in particular for \(d\ge 1/4.\) Complete reversal gives \(W_c\le 1\) in the same domains. Thus each single triple compares in the same direction to terminal (1, a): L1 to \(T(p \bar f_a)\) and \(L\ge 2\) to \(T^L(q f_a)\).
+
+For multipair blocks I/II and \(d\ge 1/64,\allowbreak \allowbreak  \) C177's actual later-pair estimate is
+
+\fitdisplay{
+\begin{gathered}
+h_s f_t \le  \exp[(39/125)\sqrt{d}-16d/5]\\
+\le \exp(-88d/125)\le 1, s\ge 4.
+\end{gathered}
+}{Q188.L437}
+
+
+Thus remove only already-paid factors inside the same positive \(T^L\); the resulting single triple preserves every surviving arm's direction. For III and \(d\ge 1/8,\allowbreak \allowbreak  \) use the exact multiplication identity
+
+\fitdisplay{
+F=(q f_2 h_{a_2})(h_3 f_{b_2}) \prod_{i\ge 3}h_{a_i} f_{b_i}.
+}{Q188.L442}
+
+
+Here \(h_3 f_{b_2}\le \exp(-d),\allowbreak \allowbreak  \) with \(b_2\ge 6,\allowbreak \allowbreak  \) and later pairs are \(\le1\). For IV/V the original cross already is
+
+\fitdisplay{
+F=(q f_2 h_{b_2})(h_3 f_4) \prod_{i\ge 3}h_{a_i} f_{b_i},
+}{Q188.L446}
+
+
+with \(h_3f_4\le e^{-d}\). These actual high-domain bounds are proved by centred original rows, including the finite \(G_{2}\) exception. Complete reversal gives the corresponding \(\bar F\) comparisons. These operations change no actual direction; they are comparisons after the original factors were oriented. Low and high intervals overlap or meet at included endpoints.
+
+Every paid fourth-loss-6 domain uses exact C164's all-M real-input outlet
+
+\fitdisplay{
+\begin{gathered}
+I_q(T^M H)^3 \le \exp(c(M)d)(E H^4)^2,\\
+c(1)=204/19,c(2)=10,c(3)=0,c(4)=7,c(M)=6 \quad\text{for } M\ge 5.
+\end{gathered}
+}{Q188.L452}
+
+
+Its worst cost leaves \(12-204/19=24/19>3/95\). Canonical123 is stronger.
+
+For all remaining nonunit high-domain comparisons, the exact actual C081 Theorem B input for \(b=3\) is
+
+\fitdisplay{
+W_2 \bar f_3 W_c \prod W_{s_i} \bar f_{t_i} T^L(q f_a), L\ge 2,
+}{Q188.L459}
+
+
+with ordinary eighth moment \(\le e^{-79d/10}\). This is exactly the new root direction, including every later pair. For \(b\ge 4\) the exact C080 Theorem T085.2 input is
+
+\fitdisplay{
+W_2 W_b \bar f_c \prod W_{s_i} \bar f_{t_i} T^L(q f_a), L\ge 2,
+}{Q188.L463}
+
+
+with ordinary eighth moment \(\le e^{-479d/60}\).  These exact ordinary-eighth premises concern the same actual messages.
+
+C079's all-real, unanchored outlet has maximum cost 299d/38 over all M, with separate costs 6d at M2 and factor 1-d at \(M\ge 3.\) Therefore the exact losses are
+
+\fitdisplay{
+79/10-299/38=3/95,
+479/60-299/38=131/1140>3/95.
+}{Q188.L469}
+
+
+This pays the exterior with the same actual ordinary-eight function.  L1 high domains use the new positive-pair fourth proof of §3 instead, so the old C081 unit special direction is irrelevant. Every original host is covered with the same orientation. This proves the stated all-host output bound.

@@ -1,0 +1,741 @@
+\subsection{Reference fourth moments for terminal $(1,\allowbreak 3,\allowbreak c)$}\label{proof:Q5-C175}
+% Source Q5-C175: lines 18--549.
+\paragraph{Q175.0 The actual local interface}\label{part:Q175.0}
+For every $c\ge\allowbreak 4$, $a\ge\allowbreak 2$ and original positive connector length $L$,
+the fixed canonical direction $F_c=\allowbreak qf_3h_c$ satisfies
+\fitdisplay{
+\E[E_of_a\{T^L(E_tF_c)\}^4]\le1-d/800.
+\label{eq:Q175:T180.0}
+}{Q175.T180.0}
+The result concerns this same-reference local interface.
+Until paragraph~\ref{part:Q175:f2-extension}, take \(a\ge3\).
+The genuine case \(a=2\) is proved there using its own receiving
+mass and finite \(G_2\) covariance.
+On the original finite probability space let $A=\allowbreak J+K$, $T=\allowbreak J-K=\allowbreak A^*$,
+where $K$ is real skew and $|K|\le\allowbreak 1$. Write
+\fitdisplay{
+g=K\one,\quad p=1+g,\quad q=1-g,\quad
+\delta_j=\|K^j\one\|_2^2,\quad d=\delta_1,\quad
+\theta=13/32,\quad\kappa=19/32,\quad\tau=d-\delta_2,
+}{}
+\fitdisplay{
+f_n=A^n\one,\qquad\bar f_n=T^n\one,\qquad h_n=Tf_{n-1}.
+}{}
+The Q3-C014 finite framework gives $d\le\allowbreak 1/3$, $\|K\|^2\le\allowbreak \theta$,
+$|Kv|\le\allowbreak \|v\|_2$, $d^2\le\allowbreak \delta_2\le\allowbreak \theta d$ and
+$\delta_{j+1}\le\allowbreak \theta\delta_j$. Actual messages are nonnegative;
+path means are at most one and, for $n\ge\allowbreak 3$,
+$\E f_n=\allowbreak \E\bar f_n\le\allowbreak 1-2d$. Equal pairs satisfy $f_\ell h_\ell\le\allowbreak 1$.
+Let $G_n(z)=\allowbreak \sum_{j=\allowbreak 0}^{n-1}z^j$, $S_n=\allowbreak \one+G_n(K)g$, and use
+the finite alternating moments $\beta_n$, with $\beta_1=\allowbreak \beta_2=\allowbreak 0$.
+Positive convolution gives
+\fitdisplay{
+0\le f_a\le C_a=S_a-\beta_a\one\le2,\quad
+\E C_a=1-\beta_a-\beta_{a+1}\le1-2\tau,
+\quad\tau\le\beta_n\le d\quad(n\ge3).
+}{}
+The independent bound $S_a\le\allowbreak 2$ follows from
+$|S_a-1|=\allowbreak |KG_a(K)\one|\le\allowbreak \|G_a(K)\one\|_2\le\allowbreak 1$, since
+$\|G_a\|\le\allowbreak 1$ for $a\ge\allowbreak 3$. The true $G_2$ predecessor at $a=\allowbreak 3$
+has norm $\sqrt{1+\theta}<\allowbreak 6/5$; hence the receiving row is
+\fitdisplay{
+C_a\le p+(6/5)\sqrt d\,\one-\beta_a\one
+\le p+(6/5)\sqrt d\,\one.
+\label{eq:Q175:T180.1}
+}{Q175.T180.1}
+All quantities use the same original measure. At $d=\allowbreak 0$, $K$ can be
+nonzero, but integration from the original leaves gives messages one.
+
+\paragraph{Q175.1 Centered rows and actual constants}\label{part:Q175.1}
+Put $z=\allowbreak -K$, $g'=\allowbreak z\one=\allowbreak -g$, so $q=\allowbreak 1+g'$ and $p=\allowbreak 1-g'$.
+For $\E w=\allowbreak 0$, subtract the original row mean $g'(x)$ and use Cauchy--Schwarz:
+\fitdisplay{
+|zw(x)|^2\le p(x)q(x)\E w^2.
+\label{eq:Q175:T180.2}
+}{Q175.T180.2}
+The row variance is at most $1-g'(x)^2=\allowbreak pq$; this is a bound on the
+original kernel. For an analytic output $Y=\allowbreak Cq+zV+c\one$, where $V$
+is an actual real vector on the original space, set $e=\allowbreak \E V$ and
+$\sigma^2=\allowbreak \operatorname{Var}V$. The complete pointwise bound is
+\fitdisplay{
+Y\le(C+e)q+(c-e)\one+\sqrt{pq}\,\sigma.
+\label{eq:Q175:T180.3}
+}{Q175.T180.3}
+It retains the true mean $e$. When finite propagation gives $c=\allowbreak e$,
+the free constant cancels and $Y\le\allowbreak (C+e)q+\sqrt{pq}\sigma$.
+The coefficient lemmas below concern original nonnegative variables and
+their actual means, rather than a conversion of ordinary eighth moments.
+
+\paragraph{Q175.2 The coefficient $17/2$}\label{part:Q175.2}
+Suppose $0\le\allowbreak  d\le\allowbreak 1/4$, $t=\allowbreak \sqrt d$, $\gamma=\allowbreak 35/16$,
+$0<\allowbreak \alpha\le\allowbreak  e^{-\gamma d}$, $p+q=\allowbreak 2$, $p,\allowbreak q\ge\allowbreak 0$,
+$C_0,\allowbreak Z\ge\allowbreak 0$ and $\mu=\allowbreak \E Z\ge\allowbreak 0$. Assume
+\fitdisplay{
+C_0\le p+(6/5)t,\quad\mu\le\alpha,\quad
+Z+\mu\le\alpha\{q+1+(6/5)\sqrt{pq}\,t+(57/160)t^2\}.
+\label{eq:Q175:T180.4}
+}{Q175.T180.4}
+Then $C_0\{(Z+\mu)^2+2\mu^2\}\le\allowbreak 17/2$ pointwise.
+To prove this, use $\sqrt{pq}\le\allowbreak 1$, put $a=\allowbreak 6/5$, $b=\allowbreak 57/160$,
+$\delta=\allowbreak at+bt^2$, and $H_0=\allowbreak q^2+2q+3$.
+The coefficient is at most
+$e^{-2\gamma t^2}(p+at)\{H_0+2(q+1)\delta+\delta^2\}$.
+The constant coefficient is $pH_0=\allowbreak 6+q-q^3\le\allowbreak 13/2$, since
+$\max(q-q^3)=\allowbreak 2/(3\sqrt3)<\allowbreak 1/2$.
+The linear coefficient is $a\{H_0+2p(q+1)\}
+=a(-q^2+4q+7)\le66/5$.
+The next four coefficients satisfy
+\fitdisplay{
+\begin{gathered}
+A_2\le6a^2+(9/2)b<41/4,\quad A_3=a^3+6ab<43/10,\\
+A_4\le2b^2+2a^2b<13/10,\quad A_5=ab^2<4/25.
+\end{gathered}
+}{}
+Here $p(q+1)\le\allowbreak 9/4$, $0\le\allowbreak  p,\allowbreak q\le\allowbreak 2$, and all coefficient uppers are
+nonnegative. Since $t\le\allowbreak 1/2$, compression to the quadratic gives
+$41/4+43/20+13/40+1/50=\allowbreak 2549/200<\allowbreak 13$.
+The polynomial before the exponential is at most
+$13/2+(66/5)t+13t^2$, while
+$(17/2)e^{2\gamma t^2}\ge\allowbreak 17/2+(595/16)t^2$.
+Their difference is at least $2-(66/5)t+(387/16)t^2$, which is positive
+on the real line: its leading coefficient is positive and discriminant
+$-963/50<\allowbreak 0$. The case $d=\allowbreak 0$ follows directly.
+
+\paragraph{Q175.3 Coefficients nine and eleven for connector tails}\label{part:Q175.3}
+Keep $t=\allowbreak \sqrt d$, $\alpha\le\allowbreak  e^{-35d/16}$,
+$C_0\le\allowbreak  p+(6/5)t$ and $0\le\allowbreak \mu\le\allowbreak \alpha$.
+If $d\le\allowbreak 1/8$ and
+\fitdisplay{
+Z+\mu\le\alpha\{q+1+\sqrt{pq}\,t+(3/2)t^2\},
+}{}
+then $C_0\{(Z+\mu)^2+2\mu^2\}\le\allowbreak 9$.
+If $d\le\allowbreak 1/4$ and $3/2$ is replaced by $5/2$, the coefficient is at most
+$11$. For the proof take $\sqrt{pq}\le\allowbreak 1$, $\delta=\allowbreak t+bt^2$ and
+$a=\allowbreak 6/5$ in the same expansion.
+The constant is at most $13/2$, the linear coefficient at most $66/5$.
+At $b=\allowbreak 3/2$, degrees two through five have bounds
+$319/20,\allowbreak 12,\allowbreak 81/10,\allowbreak 27/10$.
+Using $t\le\allowbreak 1/\sqrt8<\allowbreak 3/8$, their quadratic compression is less than
+$87/4$. Compare with $9e^{2\gamma t^2}\ge\allowbreak 9+(315/8)t^2$:
+the difference is at least $5/2-(66/5)t+(141/8)t^2$, with discriminant
+$-201/100<\allowbreak 0$.
+At $b=\allowbreak 5/2$, the four bounds are $409/20,\allowbreak 96/5,\allowbreak 37/2,\allowbreak 15/2$.
+At $t\le\allowbreak 1/2$ their compressed coefficient is $2849/80<\allowbreak 36$.
+Compare with $11e^{2\gamma t^2}\ge\allowbreak 11+(385/8)t^2$:
+the difference is at least $9/2-(66/5)t+(97/8)t^2$, with discriminant
+$-4401/100<\allowbreak 0$. Both full continuous domains follow.
+
+\paragraph{Q175.4 The exponential first row for all $c\ge\allowbreak 4$}\label{part:Q175.4}
+Let $0<\allowbreak d\le\allowbreak 1/4$, $m=\allowbreak c-3\ge\allowbreak 1$, and let $B_0=\allowbreak \beta_{c-1}$ be a scalar.
+Finite positive convolution retains $\beta_c$ and $B_0q$, giving
+\fitdisplay{
+f_3+h_c\le(2-\Gamma)\one+R,\quad
+\Gamma=d+\beta_c+B_0,\quad R=-B_0g'-z^3G_m(-z)g'.
+\label{eq:Q175:T180.5}
+}{Q175.T180.5}
+Indeed $h_c=\allowbreak T f_{c-1}\le\allowbreak  T(S_{c-1}-B_0\one)$, and adding the exact
+$f_3$ gives the bound. AM--GM for the actual arms yields
+$F_c\le\allowbreak  q e^{R-\Gamma}$.
+Also $\Gamma\ge\allowbreak  d+2\tau\ge\allowbreak (35/16)d$, $\Gamma\le\allowbreak 3d$.
+Set $\alpha=\allowbreak e^{-\Gamma}$.
+For every $m$, $\|G_m\|\le\allowbreak 6/5$, and the row bound gives
+$|R|\le\allowbreak  d+(6/5)\theta\sqrt d\le\allowbreak 79/160<\allowbreak 1/2$.
+The Taylor bound $e^r\le\allowbreak 1+r+(3/5)r^2$ for $r\le\allowbreak 1/2$ gives
+\fitdisplay{
+T(qe^R)\le\bar f_2+zR+\delta\one,
+\quad\delta=\E R+\E(g'R)+\sqrt{d\E R^2}+(12/5)\E R^2.
+\label{eq:Q175:T180.6}
+}{Q175.T180.6}
+The mixed means are retained jointly; use
+$|z(g'R)|\le\allowbreak \E|g'R|\le\allowbreak \sqrt{d\E R^2}$ and $T(qR^2)\le\allowbreak 4\E R^2$.
+The Taylor constant follows from the increase of
+$(e^r-1-r)/r^2$ and the finite positive-series bound $e^{1/2}<\allowbreak 33/20$.
+We now prove $D=\allowbreak 7d/20\ge\allowbreak \max(\delta,\allowbreak 0)$, with the direction fixed.
+Put $v=\allowbreak \delta_2/d$.
+For $c=\allowbreak 4$, $R=\allowbreak -dg'-z^3g'$, $\E R+\E(g'R)=\allowbreak -\delta_2-d^2$,
+and $\E R^2=\allowbreak d^3+\delta_4$. Young's bound $\sqrt J\le\allowbreak 1/8+2J$ gives
+\fitdisplay{
+\delta/d\le1/8-d+(22/5)d^2+v[-1+(22/5)\theta^2]\le3/20.
+}{}
+The $v$ coefficient is negative; the remaining convex quadratic has
+maximum $3/20$ at the endpoints zero and $1/4$.
+For $c=\allowbreak 5$, the same-kernel expansion gives
+$\E R+\E(g'R)=\allowbreak -\delta_2-d^2+\delta_3$ and
+$\E R^2/d\le\allowbreak  d^2+[\theta^2(1+\theta)-2\theta d]v$.
+Thus
+\fitdisplay{
+\delta/d\le1/8-d+(22/5)d^2
++v[-\kappa+(22/5)\theta^2(1+\theta)-(44/5)\theta d].
+}{}
+For $d\le\allowbreak 1/8$, discard the negative $vd$ and $-d+(22/5)d^2$,
+then use $v\le\allowbreak \theta$ to obtain $156575/524288<\allowbreak 3/10$.
+For $d\ge\allowbreak 1/8$, the $v$ coefficient is $-1593/81920<\allowbreak 0$ at the left
+endpoint and decreases; discarding it gives $3/20$.
+For $c\ge\allowbreak 6$, one has
+$\E R+\E(g'R)\le\allowbreak -(3/16)\delta_2-\kappa d^2$ and
+$\E R^2/d\le\allowbreak  d^2+[\theta^2-2\kappa^2\theta d]v$, whence
+\fitdisplay{
+\delta/d\le1/8-\kappa d+(22/5)d^2
++v[-3/16+(22/5)\theta^2-(44/5)\kappa^2\theta d].
+}{}
+These expansions use the finite alternating moments of
+$W=\allowbreak K^3G_m(K)g$: $\E W-\E(gW)\ge\allowbreak \delta_2-2\delta_3$,
+$\E(gW)\ge\allowbreak \kappa\delta_3$, and $\|W\|_2^2\le\allowbreak \delta_4$.
+The $v$ bracket is at least $373/2000>\allowbreak 0$ on the full quarter-domain,
+using $2/5\le\allowbreak \theta\le\allowbreak 5/12$, $\kappa\le\allowbreak 3/5$.
+Set $v=\allowbreak \theta$; the resulting convex quadratic has endpoint values
+$28167/81920$ and $1795141/5242880$, both less than $7/20$.
+Thus $D=\allowbreak 7d/20$ is valid in every case.
+
+\paragraph{Q175.5 Finite propagation, signed moments and fourth expansion}\label{part:Q175.5}
+Let $D_i=\allowbreak \E z^iR$. Define the finite propagation by
+\fitdisplay{
+Y_L=\bar f_{L+1}+z^LR+D\bar f_{L-1}
++\sum_{i=1}^{L-1}D_i\bar f_{L-1-i}\qquad(L\ge1).
+\label{eq:Q175:T180.7}
+}{Q175.T180.7}
+The first $Y_1$ is a nonnegative upper in \eqref{eq:Q175:T180.6};
+$Y_L=\allowbreak T^{L-1}Y_1\ge\allowbreak 0$ and $T^LF_c\le\allowbreak \alpha Y_L$.
+The finite alternating sums give
+\fitdisplay{
+-\delta_3\le D_1\le d^2,\quad0\le D_2\le\delta_3,
+\quad D_3\le\delta_4,\quad D_4\le0.
+\label{eq:Q175:T180.8}
+}{Q175.T180.8}
+More fully,
+$D_{2r-1}=\allowbreak (-1)^{r+1}(B_0\delta_r-H_{r+2})$ and
+$D_{2r}=\allowbreak (-1)^{r+1}\widetilde H_{r+2}$, where $H,\allowbreak \widetilde H$ are
+the actual finite decreasing alternating sums obtained by taking the
+means of the displayed finite polynomial $R$, both in $[0,\allowbreak \delta_{r+2}]$.
+This includes the empty sum at $m=\allowbreak 1$.
+Pay the positive sign classes separately:
+\fitdisplay{
+\sum_{i\ge1}(D_i)_+
+\le\frac{B_0d+\delta_3+\delta_4}{1-\theta^2}
+\le(169/608)d+(1024/855)d^2.
+\label{eq:Q175:T180.9}
+}{Q175.T180.9}
+The geometric sum only bounds the actual finite positive terms.
+For any nonnegative $Z$ on the original space and $\mu=\allowbreak \E Z$,
+\fitdisplay{
+\E[C_aZ^4]=(\E C_a)\mu^4+4\mu^3\operatorname{Cov}(C_a,Z)
++\E[C_a(Z-\mu)^2\{(Z+\mu)^2+2\mu^2\}].
+\label{eq:Q175:T180.10}
+}{Q175.T180.10}
+A pointwise coefficient bound $K_0$ bounds the last term by
+$K_0\operatorname{Var}Z$. We apply this to $W_L=\allowbreak \alpha Y_L$ or its
+actual nonnegative upper. The original spectral measure $\nu$ of
+$-K^2$ at $g$ (or its full reversal $g'$) has support $[0,\allowbreak \theta]$,
+mass $d$, and $\int x^j\,\allowbreak d\nu=\allowbreak \delta_{j+1}$; all symbol products
+use the same frequency and original measure.
+For the finite exponential denominator set
+\fitdisplay{
+\gamma=35/16,\quad a_0=35/8,\quad b_0=1225/128,
+\quad H(d)=1+a_0d+b_0d^2.
+\label{eq:Q175:T180.11}
+}{Q175.T180.11}
+Then $e^{2\gamma d}\ge\allowbreak  H(d)$.
+For $d\le\allowbreak 1/4$, $H\le\allowbreak 5513/2048<\allowbreak 11/4$ and $H^2<\allowbreak 8$;
+for $d\le\allowbreak 1/8$, $H<\allowbreak 2$ and $H^2<\allowbreak 4$.
+The remaining payments after clearing $H^2$ are finite polynomials.
+
+\paragraph{Q175.6 The unit connector: coupled moments and the variance square}\label{part:Q175.6}
+Write $G_m(-z)=\allowbreak U-zV$. For $m\ge\allowbreak 2$, $1-x\le\allowbreak  U,\allowbreak V\le\allowbreak 1$;
+for $m=\allowbreak 1$, $U=\allowbreak 1,\allowbreak V=\allowbreak 0$. Define the finite polynomial $P$ by
+$R=\allowbreak (P-I)g'$, namely
+$P=\allowbreak 1-B_0+x^2V+zxU$. Then $Y_1=\allowbreak \one+D\one+g'+zPg'$.
+Since $\E R\le\allowbreak 0$, $|\E R|\le\allowbreak \delta_2$ and
+$\|Pg'\|_2^2\le\allowbreak (36/25)d$, the centered row gives
+\fitdisplay{
+Y_1+\E Y_1\le q+1+(6/5)\sqrt{pqd}+(57/160)d.
+}{}
+Indeed,
+$Y_1\le\allowbreak (1+\E R)q+(D-\E R)\one+\sqrt{pq}\sqrt{\operatorname{Var}(Pg')}$,
+and $\E Y_1=\allowbreak 1-d+D_1+D\le\allowbreak  M_1:=\allowbreak 1-(13/20)d+d^2\le\allowbreak 1$.
+The sum of the two constant remainders is at most
+$2D-d+d^2+\delta_2\le\allowbreak (57/160)d$. The norm estimate follows from
+$|P|^2\le\allowbreak (1+x^2)^2+x^3\le\allowbreak 1493553/1048576<\allowbreak 36/25$.
+Thus $W_1=\allowbreak \alpha Y_1$ satisfies part~\ref{part:Q175.2}, with coefficient
+$17/2$.
+The nonconstant symbol of $Y_1$ is $Q_2=\allowbreak 1+zP$, with real coordinate
+$1-x^2U$ and imaginary coordinate $1-B_0+x^2V$. Finite same-kernel
+coordinates give
+\fitdisplay{
+|Q_2|^2\le1+(1-B_0)^2x-\eta x^2,\qquad\eta=215/1024.
+\label{eq:Q175:T180.12}
+}{Q175.T180.12}
+Using $U\ge\allowbreak 1-x,\allowbreak V\le\allowbreak 1$, expansion gives
+$1+(1-B_0)^2x-2x^2+(4-2B_0)x^3+x^4-x^5+x^6$.
+Then use $4x^3\le\allowbreak 13x^2/8$, $x^4\le\allowbreak \theta^2x^2$, and $x^6\le\allowbreak  x^5$.
+In particular $\|Q_2\|^2\le\allowbreak 11/8$.
+The covariance is nonpositive:
+\fitdisplay{
+\operatorname{Re}(G_aQ_2)
+\ge(1-x)(1-x^2U)-x(1-B_0+x^2V)
+\ge1-2x-x^2\ge23/1024,
+}{}
+and its mean term $-\beta_{a+1}(d-D_1)$ is nonpositive.
+Let $v=\allowbreak \delta_2/d\in[d,\allowbreak \theta]$. Spectral Cauchy--Schwarz gives
+$\delta_3\ge\allowbreak \delta_2^2/d$. Retaining the negative square yields
+\fitdisplay{
+\operatorname{Var}Y_1\le dV(v,d),\quad
+V=1+v-\eta v^2-2v(1-v)d+v(1-v)^2d^2-d(1-d)^2.
+\label{eq:Q175:T180.13}
+}{Q175.T180.13}
+This uses $B_0\ge\allowbreak \tau=\allowbreak (1-v)d$ and
+$(d-D_1)^2\ge\allowbreak  d^2(1-d)^2$. The upper $V>\allowbreak 0$ has $v$ derivative at
+least $9/32>\allowbreak 0$, using $\eta<\allowbreak 1/4$, $v\le\allowbreak 5/12$, $d\le\allowbreak 1/4$ and
+$1-4v+3v^2\ge\allowbreak -1/6$.
+Thus the receiving upper $\E C_a\le\allowbreak 1-2(1-v)d$, the bound on
+$e^{-\Gamma}$ and $V$ all increase in $v$ in this upper estimate.
+At $v=\allowbreak \theta$, relax to
+$V\le\allowbreak 11/8-(47/32)d+(69/32)d^2$. Consequently
+\fitdisplay{
+\E[f_aW_1^4]\le e^{-4\gamma d}(1-19d/16)M_1^4
++(17/2)de^{-2\gamma d}[11/8-(47/32)d+(69/32)d^2].
+}{}
+The reference arm occurs once. Use
+$M_1^4\le\allowbreak 1-(13/5)d+(1307/200)d^2-(39/5)d^3+6d^4$.
+Let $A$ be this polynomial times $1-19d/16$ and
+$V_0=\allowbreak 11/8-(47/32)d+(69/32)d^2$. Clearing the denominator gives
+\fitdisplay{
+H^2-A-(17/2)dV_0H
+=d[17/20+g_2d+g_3d^2+g_4d^3+g_5d^4],
+}{}
+where
+\fitdisplay{
+\begin{gathered}
+g_2=-31967/3200>-10,\quad g_3=1215413/51200>237/10,\\
+g_4=9471771/81920,\quad g_5=-1378557/8192,
+\quad g_4+g_5d\ge73.
+\end{gathered}
+}{}
+The bracket is at least $17/20-10d+(237/10)d^2+73d^3$.
+For $d\le\allowbreak 1/12$ it is at least $1/60$.
+For $d\ge\allowbreak 1/12$ it is at least
+$17/20-10d+(1787/60)d^2$, whose real-line minimum is
+$379/35740>\allowbreak 1/100$. Thus the cleared difference is at least $d/100$;
+$H^2<\allowbreak 8$ gives
+\fitdisplay{
+\E[f_a(TF_c)^4]\le1-d/800.
+\label{eq:Q175:T180.14}
+}{Q175.T180.14}
+
+\paragraph{Q175.7 The centered structures at $L=\allowbreak 2,\allowbreak 3,\allowbreak 4$}\label{part:Q175.7}
+Let $R_0(z)=\allowbreak -B_0-z^3G_m(-z)$, so $R=\allowbreak R_0(z)g'$; all expressions
+below use this finite polynomial, without division by $g'$.
+Collect the propagation terms as $Y_j=\allowbreak C_jq+zP_j(z)g'+c_j\one$.
+The polynomials are
+\fitdisplay{
+Q_2=G_2+zR_0,\qquad Q_3=G_3+z^2R_0,\qquad Q_4=G_4+z^3R_0,
+}{}
+\fitdisplay{
+\begin{aligned}
+C_2&=1+D,&P_2&=Q_2,&c_2&=D_1-d=\E(P_2g'),\\
+C_3&=1-d+D+D_1,&P_3&=Q_3+D,&c_3&=D_2-d=\E(P_3g'),\\
+C_4&=1-2d+D+D_1+D_2,&P_4&=Q_4-\lambda+Dz,
+&c_4&=-\tau-Dd+D_3=\E(P_4g'),\\
+&&\lambda&=d-D-D_1\in[2d/5,d].
+\end{aligned}\label{eq:Q175:T180.15}
+}{Q175.T180.15}
+Each $c_j$ is the actual mean $\E(P_jg')$, so the free constant in
+\eqref{eq:Q175:T180.3} cancels; $C_j+\E(P_jg')=\allowbreak \E Y_{j-1}\le\allowbreak 1$.
+Direct finite coordinates give
+\fitdisplay{
+\|Q_2\|^2\le11/8,\qquad\|Q_3\|\le1,\qquad\|Q_4\|\le1,
+\qquad\|P_4\|\le1+d/4<6/5.
+\label{eq:Q175:T180.16}
+}{Q175.T180.16}
+The $Q_3$ coordinates are $1-(1-B_0)x-x^3V$ and $1-x^2U$;
+they are positive and their squared bound is
+$(1-3x/4)^2+x\le\allowbreak 1$.
+The $Q_4$ coordinates are $1-x+x^3U$ and $1-(1-B_0)x-x^3V$.
+After subtracting one and dividing by $x$, the square is at most
+$-1-x/2+(41/16)x^2-2x^3+x^5<\allowbreak 0$.
+Since $\operatorname{Re}Q_4\ge\allowbreak \kappa$ and $0\le\allowbreak \lambda\le\allowbreak  d$,
+$\|Q_4-\lambda\|\le\allowbreak 1$; adding $Dz$ costs
+$D\sqrt\theta\le\allowbreak  d/4$. This includes $m=\allowbreak 1,\allowbreak a=\allowbreak 3$ and the full quarter-domain.
+The actual means satisfy
+\fitdisplay{
+\E Y_2\le1-(7/5)d+d^2\le1-(23/20)d,\quad
+\E Y_3\le1-(7/4)d,\quad\E Y_4\le1-2d.
+\label{eq:Q175:T180.17}
+}{Q175.T180.17}
+For $Y_2$ use the exact mean $-d+D_2$ and $D_1\le\allowbreak  d^2$.
+For $Y_3$ use $\E\bar f_4=\allowbreak 1-3d+\delta_2$,
+$D_1\le\allowbreak  d^2$, $D_2\le\allowbreak \delta_3$, $D_3\le\allowbreak \delta_4$.
+For $Y_4$ use $\E\bar f_5=\allowbreak 1-4d+2\delta_2+d^2$ and $D_4\le\allowbreak 0$.
+The rational comparisons are $\theta+\theta^2+\theta^3<\allowbreak 13/20$
+and $2\theta+\theta^2+\theta^3<\allowbreak 21/20$; all means are nonnegative.
+Every $W_j=\allowbreak \alpha Y_j$ satisfies the stronger version of
+part~\ref{part:Q175.2}, with the $57/160$ constant replaced by zero,
+and coefficient $17/2$.
+Retaining the actual mean terms, the covariance and variance bounds are
+\fitdisplay{
+\begin{aligned}
+\operatorname{Cov}(C_a,W_2)&\le(55/1024)\alpha d,
+&\operatorname{Var}Y_2&\le d-d^2/10+(49/400)d^3,\\
+\operatorname{Cov}(C_a,W_3)&\le\alpha d(1/16+d),
+&\operatorname{Var}Y_3&\le d,\\
+\operatorname{Cov}(C_a,W_4)&\le\alpha d(1/16+9d/4),
+&\operatorname{Var}Y_4&\le d[45/32-2d+(27/20)d^2].
+\end{aligned}\label{eq:Q175:T180.18}
+}{Q175.T180.18}
+The full original variance is
+$\int|C_j+zP_j|^2\,\allowbreak d\nu-(\int\operatorname{Re}P_j\,\allowbreak d\nu)^2$;
+the covariance is
+$-\int\operatorname{Re}\{G_a(C_j+zP_j)\}\,d\nu
+-\beta_{a+1}\int\operatorname{Re}P_j\,d\nu$.
+For these three short cases, $\operatorname{Re}P_j>\allowbreak 0$, so the last
+covariance term is nonpositive.
+At $L=\allowbreak 2$, $U-(1-x)V\ge\allowbreak 0$ gives
+$\operatorname{Re}\{G_a(C_2+zQ_2)\}\ge\allowbreak 1-3x+x^2\ge\allowbreak -55/1024$.
+Also $\operatorname{Im}_{z}Q_2\ge\allowbreak 1-B_0$, and $\|Q_2\|^2\le\allowbreak 11/8$,
+so $|C_2+zQ_2|^2\le\allowbreak  C_2^2-x/8$.
+The negative mean square is at least $(1-\theta^2)^2d^2$;
+use $\delta_2\ge\allowbreak  d^2$ and
+$7/10-1/8-(855/1024)^2<\allowbreak -1/10$ to obtain the variance bound.
+At $L=\allowbreak 3$, $C_3\ge\allowbreak 1-17d/20$, the normalized imaginary coordinate of
+$P_3$ is at least $1-\theta^2$, and $\|P_3\|\le\allowbreak 1+D$.
+Then $2C_3(1-\theta^2)\ge\allowbreak (1+D)^2$, so the squared symbol is at most
+$C_3^2$ and the variance at most $d$.
+The receiving real part is at least $1-3x+x^2-d$.
+At $L=\allowbreak 4$, $C_4\ge\allowbreak 1-11d/6$, $\operatorname{Re}P_4\le\allowbreak 1$, its
+normalized imaginary coordinate is at most $1+D$, and
+$C_4-x\operatorname{Im}_{z}P_4>\allowbreak 0$.
+The receiving real part is at least $1-3x+x^2-(9/4)d$.
+The variance symbol is bounded by $C_4^2+\theta\|P_4\|^2$;
+$C_4\le\allowbreak 1-23d/20$ and $\|P_4\|\le\allowbreak 1+d/4$ give the stated variance.
+Here $\operatorname{Im}_{z}$ denotes the real coefficient of $z$
+in a symbol $R+zI$. These relaxations discard only the displayed
+nonpositive terms, retaining each actual mean.
+
+\paragraph{Q175.8 Finite payments at the three short connectors}\label{part:Q175.8}
+For the positive covariances in \eqref{eq:Q175:T180.18}, use
+$\mu\le\allowbreak \alpha M\le\allowbreak \alpha$. The fourth-expansion contributions are at
+most $\alpha^4$ times $(55/256)d$, $d/4+4d^2$, and $d/4+9d^2$.
+For $L=\allowbreak 2$ put $M=\allowbreak 1-23d/20$.
+Using $M^4\le\allowbreak 1-(23/5)d+(1587/200)d^2$ and the original receiving
+mean, the upward quadratic bound is
+$A_2=\allowbreak 1-(7133/1280)d+(5359/400)d^2$.
+Relax the variance to $d+(49/400)d^3$, and set
+\fitdisplay{
+G_2=H^2-A_2-(17/2)d[1+(49/400)d^2]H.
+}{}
+Its coefficients at degrees one through five are at least
+$29/5,\allowbreak -25/2,\allowbreak 0,\allowbreak 0,\allowbreak -10$. Thus $G_2\ge\allowbreak 2d$ for $d\le\allowbreak 1/4$, giving
+$\E[f_a(T^2F_c)^4]\le\allowbreak 1-d/4$.
+For $L=\allowbreak 3$, $M=\allowbreak 1-7d/4$ gives the mean-plus-covariance bound
+$A_3=\allowbreak 1-(127/16)d+(491/16)d^2$; relax the variance to $d$.
+The coefficients of $G_3=\allowbreak H^2-A_3-(17/2)dH$ at degrees one through
+four are at least $8,\allowbreak -30,\allowbreak 0,\allowbreak 0$.
+Thus $G_3\ge\allowbreak  d/2$ and $\E[f_a(T^3F_c)^4]\le\allowbreak 1-d/16$.
+For $L=\allowbreak 4$, set $M=\allowbreak 1-2d$,
+$A_4=\allowbreak 1-(143/16)d+(85/2)d^2$ and
+$V_4=\allowbreak 45/32-2d+(27/20)d^2$.
+The five nonzero coefficients of $G_4=\allowbreak H^2-A_4-(17/2)dV_4H$ are at
+least $57/10,\allowbreak -40,\allowbreak 32,\allowbreak 200,\allowbreak -110$. Hence
+\fitdisplay{
+G_4/d\ge57/10-40d+32d^2+(345/2)d^3,
+}{}
+where $-110d^4$ is paid using $d\le\allowbreak 1/4$.
+The cubic on the right at $d_0=\allowbreak 9/40$ is $36465/128000>\allowbreak 1/4$;
+its derivative is $383/640<\allowbreak 1$, and its second derivative is at least $64$.
+Completing the square gives a lower bound
+$1/4-1/128=\allowbreak 31/128$, so $\E[f_a(T^4F_c)^4]\le\allowbreak 1-d/64$.
+These are explicit rational coefficient comparisons on continuous domains.
+
+\paragraph{Q175.9 Every finite tail $L\ge\allowbreak 5$}\label{part:Q175.9}
+Positive convolution retains $\bar f_0,\allowbreak \bar f_1,\allowbreak \bar f_2,\allowbreak \bar f_3$.
+For $n=\allowbreak L+1\ge\allowbreak 6$,
+\fitdisplay{
+\bar f_n\le(1-3\tau)q+z[G_L-\tau(2+z)]g'-\tau(1-d)\one.
+}{}
+Let $P_{\rm cost}=\allowbreak 2D+2\sum_{i\ge\allowbreak 1}(D_i)_+$,
+$C=\allowbreak 1-3\tau$, $a_1=\allowbreak 1-2\tau$, and define the actual finite polynomial
+\fitdisplay{
+P_L=G_L-\tau(2+z)-B_0z^{L-1}-z^{L+2}G_m(-z).
+}{}
+Then $Y_L\le\allowbreak  Z_L=\allowbreak Cq+zP_Lg'+c\one\ge\allowbreak 0$, where
+$c=\allowbreak P_{\rm cost}-\tau(1-d)$.
+We prove $\|P_L\|\le\allowbreak  a_1$ throughout $d\le\allowbreak 1/4$.
+For $L=\allowbreak 5$, the nonnegative coordinate uppers are
+$a_1-x+x^2+x^4$ and $1-\tau-x+x^3$.
+The squared difference from $a_1^2$, divided by $x$, increases with
+$\tau$; at $\tau=\allowbreak 1/4$ it is at most
+\fitdisplay{
+-7/16+x/2-x^2+(7/2)x^3-4x^4+2x^5+x^6+x^7.
+}{}
+Use $x\le\allowbreak 5/12$ and $2x^3+x^4+x^5\le\allowbreak 5/24$ to bound it by
+$-7/16+x/2+(2/3)x^2<\allowbreak 0$.
+The actual coordinates are nonnegative using $a_1\ge\allowbreak 1/2,\allowbreak B_0\le\allowbreak 1/4$.
+For $L=\allowbreak 6$, the coordinate uppers are
+$a_1-x+x^2$ and $1-\tau-x+x^2+x^4$.
+The analogous difference increases with $\tau$; at $1/4$ it is at most
+$-7/16+x/2+x^2/2-x^3+(5/2)x^4$, and hence at most
+$-7/16+x/2+(11/12)x^2\le\allowbreak -121/1728$.
+For $L\ge\allowbreak 7$ use only as a comparison the rational symbol
+$P_\infty=\allowbreak 1/(1-z)-\tau(2+z)$.
+The exact identity
+$a_1^2-|P_\infty|^2=\allowbreak x[a_1/(1+x)-\tau^2]$ gives
+$a_1-|P_\infty|\ge\allowbreak 211x/720$.
+For all finite $m\ge\allowbreak 1,\allowbreak L\ge\allowbreak 7$, the finite remainder divided by $x$ is
+at most
+$x^{5/2}+x^2/4+(6/5)x^{7/2}\le\allowbreak 125/576<\allowbreak 211/720$,
+using $\sqrt x<\allowbreak 2/3$ and $x<\allowbreak 5/12$.
+This comparison proves the norm bound for every finite tail.
+Its normalized imaginary coordinate $I$ is positive and at most $9/8$;
+its real coordinate satisfies
+$R\ge\allowbreak \kappa-1/16-(2+\theta^2)d\ge\allowbreak -1/96$.
+For these bounds use $(6/5)\theta^{7/2}<\allowbreak 1/16$ and
+$I\ge\allowbreak \kappa-(1+\theta^2)d-1/12\ge\allowbreak 7/32>\allowbreak 0$.
+
+\paragraph{Q175.10 Long-connector means, centered rows and covariance}\label{part:Q175.10}
+By \eqref{eq:Q175:T180.9},
+$P_{\rm cost}\le\allowbreak  a_{\rm cost}d+b_{\rm cost}d^2$, where
+$a_{\rm cost}=\allowbreak 7/10+169/304<\allowbreak 63/50$ and
+$b_{\rm cost}=\allowbreak 2048/855<\allowbreak 12/5$.
+Therefore
+\fitdisplay{
+\E Z_L\le1-(3/2)d+6d^2=:M_L\le1.
+\label{eq:Q175:T180.19}
+}{Q175.T180.19}
+A more precise common bound is
+$\E Z_L\le\allowbreak 1-(1317/800)d+(167/30)d^2$.
+For $d\le\allowbreak 1/8$ it is at most $1-9d/10$, and for $d\le\allowbreak 1/4$ at most
+$1-d/4$.
+This uses $\E Z_L=\allowbreak C+c-\int R\,\allowbreak d\nu$,
+$R\ge\allowbreak \kappa-1/16-(2+\theta^2)d$, and $\tau\ge\allowbreak \kappa d$.
+The actual mean $\E P_Lg'=\allowbreak -\int I\,\allowbreak d\nu$ lies in $[-9d/8,\allowbreak 0]$.
+In the low domain $c\le\allowbreak 35d/32$; throughout the quarter-domain
+$c\le\allowbreak 49d/32$. The centered row \eqref{eq:Q175:T180.3} gives
+\fitdisplay{
+\alpha Z_L+\E(\alpha Z_L)
+\le\alpha\{q+1+\sqrt{pqd}+bd\},
+}{}
+with $b=\allowbreak 3/2$ for $d\le\allowbreak 1/8$ and $b=\allowbreak 5/2$ for $d\le\allowbreak 1/4$.
+Thus the coefficients in part~\ref{part:Q175.3} are nine and eleven,
+respectively.
+Since $I\ge\allowbreak 0$, the full original variance satisfies
+\fitdisplay{
+\begin{aligned}
+\operatorname{Var}Z_L
+&=\int|C+zP_L|^2\,d\nu-(\int R\,d\nu)^2\\
+&\le d\{(1-3\kappa d)^2+\theta(1-2\kappa d)^2\}=:dV_L.
+\end{aligned}\label{eq:Q175:T180.20}
+}{Q175.T180.20}
+The upper is
+$V_L=\allowbreak 45/32-(1159/256)d+(30685/8192)d^2$; the negative mean square
+was displayed before this relaxation.
+For covariance write $P_L=\allowbreak R+zI$ and $G_a=\allowbreak A_0+zB_1$.
+If $C-xI\ge\allowbreak 0$, use $A_0\ge\allowbreak 1-x,\allowbreak B_1\le\allowbreak 1$.
+Otherwise the extra error is at most $x(xI-C)_+$.
+The full finite coordinates give
+\fitdisplay{
+\int\operatorname{Re}\{G_a(C+zP_L)\}\,d\nu
+\ge-d/10-(7/8)d^2-(17/16)d^2.
+}{}
+Before the last sign correction, the main expression
+$1-3x+x^2-\tau(3-6x+x^2)$ decreases throughout the frequency interval.
+At $\theta$ its constant error is $1219/12288<\allowbreak 1/10$,
+its $\tau$ coefficient is $745/1024<\allowbreak 3/4$, and the remaining $d$ error
+is $\theta^3(1+\kappa)<\allowbreak 1/8$.
+The sign correction is
+$x(xI-C)_+\le\allowbreak \theta(3-\theta)\tau<\allowbreak (17/16)d$.
+The mean term $-\beta_{a+1}\int R\,\allowbreak d\nu$ adds at most $d^2/96$.
+Combining gives
+\fitdisplay{
+\operatorname{Cov}(C_a,\alpha Z_L)\le\alpha(d/10+2d^2).
+\label{eq:Q175:T180.21}
+}{Q175.T180.21}
+The actual $\beta$ and sign terms are retained.
+
+\paragraph{Q175.11 Two complete long-connector payments}\label{part:Q175.11}
+The positive covariance contribution in the fourth expansion is at most
+$\alpha^4[(2/5)d+8d^2]$.
+Use $M_L^4\le\allowbreak 1-6d+(75/2)d^2-108d^3+216d^4$ and
+$\E C_a\le\allowbreak 1-19d/16$. With the covariance contribution this gives
+\fitdisplay{
+A_L=1-(543/80)d+(421/8)d^2-(4881/32)d^3
++(1377/4)d^4-(513/2)d^5.
+}{}
+For $d\le\allowbreak 1/8$ use $K_0=\allowbreak 9$ and $G=\allowbreak H^2-A_L-9dV_LH$.
+Its five coefficients have lower bounds $14/5,\allowbreak -29,\allowbreak 259,\allowbreak -11,\allowbreak -67$.
+Hence $G/d\ge\allowbreak 14/5-29d+256d^2>\allowbreak 1$, giving reference fourth
+at most $1-d/4$.
+For $1/8\le\allowbreak  d\le\allowbreak 1/4$ use $K_0=\allowbreak 11$.
+The five coefficient bounds are $1/16,\allowbreak -129/4,\allowbreak 264,\allowbreak 43,\allowbreak -138$, so
+\fitdisplay{
+G/d\ge1/16-(129/4)d+264d^2+43d^3-138d^4.
+}{}
+This polynomial increases on the interval: its derivative is at least
+$201/8>\allowbreak 0$. The left endpoint is $423/2048>\allowbreak 1/5$.
+Thus $G\ge\allowbreak  d/5$ and $H^2<\allowbreak 8$ give reference fourth at most $1-d/40$.
+Every $L\ge\allowbreak 5,\allowbreak c\ge\allowbreak 4$ uses the same fixed direction and payment.
+
+\paragraph{Q175.12 The high domain at every length}\label{part:Q175.12}
+For $d\ge\allowbreak 1/4$ the actual arm satisfies
+$h_c\le\allowbreak 2\E f_{c-1}\le\allowbreak 2(1-2d)\le\allowbreak 1$.
+Thus $TF_c\le\allowbreak  T(qf_3)\le\allowbreak 2\E(qf_3)$, and
+$\E(qf_3)=\allowbreak 1-3d+\delta_2\le\allowbreak 1-(83/32)d$ gives $TF_c\le\allowbreak  M\le\allowbreak 45/64$.
+Positivity yields $T^LF_c\le\allowbreak  M\bar f_{L-1}$.
+For $n\ge\allowbreak 1$, $\bar f_n\le\allowbreak 2$ and
+$\E[f_a\bar f_n]=\allowbreak \mu_{a+n}\le\allowbreak 1-2d$, so
+$\E[f_a\bar f_n^4]\le\allowbreak 8\E[f_a\bar f_n]\le\allowbreak 4$.
+For $n=\allowbreak 0$, $\E f_a\le\allowbreak 1\le\allowbreak 4$. Therefore every $L\ge\allowbreak 1$ obeys
+\fitdisplay{
+\E[f_a(T^LF_c)^4]\le4(45/64)^4<47/48\le1-d/16.
+\label{eq:Q175:T180.22}
+}{Q175.T180.22}
+This is a same-reference original path integral; it uses no conversion
+from an ordinary eighth moment.
+
+\paragraph{The genuine receiving arm of length two}
+\label{part:Q175:f2-extension}
+The same actual direction \(F_c=qf_3h_c\) also satisfies
+\begin{equation}\label{eq:Q175:f2-extension}
+ \E[f_2\{T^LF_c\}^4]\le1-d/800
+ \qquad(c\ge4,\ L\ge1).
+\end{equation}
+Use the finite packet and positive upper functions already constructed
+above, with \(B=-K\), \(u=B\one\), and \(D=7d/20\).
+Here the receiving factor is exactly
+\(C_2=f_2=1-u+Bu\), with \(\E C_2=1-d\) and
+\(C_2\le p+\sqrt d\). Thus the pointwise coefficient proofs in
+paragraphs~\ref{part:Q175.2} and~\ref{part:Q175.3} apply to it.
+
+For \(Y=c+Q(B)u\), write \(\alpha=-\E[Q(B)u]\).
+Lemma~\ref{lem:reference-common:receiving}, with \(a=2,t=0\), gives
+\begin{equation}\label{eq:Q175:f2-covariance}
+ \operatorname{Cov}(C_2,Y)
+ =-\int\operatorname{Re}\{(1+z)Q(z)\}\,d\nu-d\alpha,
+ \qquad z=i\sqrt x.
+\end{equation}
+We use Lemma~\ref{lem:reference-common:mass-transfer} at the
+actual mean, before any mean endpoint or \(\delta_2/d\) substitution.
+
+On \(0<d\le1/4\), the same finite polynomials give the following
+covariances and comparison budgets for the unscaled positive uppers:
+\begin{equation}\label{eq:Q175:f2-budgets}
+\begin{array}{c|c|c|c}
+ L&\text{new covariance upper}&v_0&\eta\\\hline
+ 1&-d/3&0&2(1-\delta_2/d)\\
+ 2&-d/10&55d/1024&19/16\\
+ 3&-3d/16+(127/128)d^2&d/16+d^2&19/16\\
+ 4&-3d/16+(11/6+7\theta/20)d^2&d/16+9d^2/4&19/16\\
+ \ge5&-11d/40+(289/96)d^2&d/10+2d^2&19/16.
+\end{array}
+\end{equation}
+All these uppers have nonnegative actual mean at most one.
+
+Here are finite checks of the new column. Write the actual packet
+polynomial as \(R_0=-\beta-z^3G_{c-3}(-z)\),
+\(\beta=\beta_{c-1}\). At \(L=1\), the full output symbol is
+\(Q=1+z(1+R_0)\). If \(G_{c-3}(-z)=U-zV\), its real and
+normalized imaginary coordinates are
+\(1-x^2U,1-\beta+x^2V\), with \(U,V\in[0,1]\), including
+\((U,V)=(1,0)\) at \(c=4\). Its genuine product is at least
+\(1-x-x^2-x^3>1/3\), and \(\alpha=d-D_1>0\).
+At \(L=2\), the full symbol is \(G_3+D+z^2R_0\). Its genuine
+product is at least \(1-2x-x^3>1/10\), and its normalized
+imaginary coordinate \(1-x^2U\) is positive. These give the
+first two rows of \eqref{eq:Q175:f2-budgets} on the whole spectrum.
+
+At \(L=3,4\), use the actual form
+\(Y_L=C_Lq+BP_L(B)u+c_L\) in
+\eqref{eq:Q175:T180.15}. Its full symbol is \(C_L+zP_L\),
+and its mean parameter \(\int\operatorname{Re}P_L\,d\nu\)
+is positive. At length three,
+\(C_3\ge1-17d/20\), \(\operatorname{Re}P_3\le1+D\), and
+\(\operatorname{Im}_zP_3\le1\); at length four,
+\(C_4\ge1-11d/6\), \(\operatorname{Re}P_4\le1\), and
+\(\operatorname{Im}_zP_4\le1+D\).
+Since the genuine product is
+\(C_L-x(\operatorname{Re}P_L+\operatorname{Im}_zP_L)\),
+these bounds give precisely the third and fourth rows.
+
+For \(L\ge5\), the full symbol of the positive upper in
+paragraph~\ref{part:Q175.9} is
+\[
+ G_{L+1}-\tau(3+2z+z^2)
+       -\beta z^L-z^{L+3}G_{c-3}(-z).
+\]
+The finite even/odd formulas give
+\(\operatorname{Re}(G_2G_n)\ge(1-x)^2\ge\kappa^2>7/20\)
+for every \(n\ge4\): for even \(n\) the two coordinates of
+\(G_n\) agree and are at least \(1-x\); for odd \(n\ge5\), they
+give the lower \(1-2x+2x^2-2x^3\ge(1-x)^2\).
+The retained subtraction costs at most \(3\tau d\), since
+\(\operatorname{Re}[G_2(3+2z+z^2)]=3-3x\le3\).
+The two finite tails together cost less than \((3/40)d\):
+\[
+ \frac65\left\{d\theta^{L/2}+\frac65\theta^{(L+3)/2}\right\}
+ \le\frac65\left\{\frac1{36}+\frac1{30}\right\}
+ =\frac{11}{150}<\frac3{40}.
+\]
+Here the shortest length is \(L=5\); later powers decrease.
+The actual bound \(\operatorname{Re}P_L\ge-1/96\) gives an
+adverse signed-mean term of at most \(d^2/96\), rather than
+discarding that term. This proves the last covariance row.
+
+The first row improves its comparison budget by at least \(d/4\).
+Rows two through four improve theirs by more than \(3d/64\).
+For the last row the gain after the same fee is
+\[
+ \left(\frac38-\frac3{64}\right)d-\frac{97}{96}d^2
+ \ge\frac{29}{384}d>0.
+\]
+Thus every bracket comparison is valid with \(M=1\).
+The unchanged variance and pointwise coefficients can now be
+used in the scalar payments of paragraphs~\ref{part:Q175.6},
+\ref{part:Q175.8}, and~\ref{part:Q175.11}. They give the
+respective deficits \(d/800,d/4,d/16,d/64\), and at least
+\(d/40\) for every long length.
+
+For \(d\ge1/4\), the same direction has \(h_c\le1\) and
+\(TF_c\le45/64\), as in paragraph~\ref{part:Q175.12}.
+For \(n\ge1\), the actual adjoint identity gives
+\[
+ \E[f_2\bar f_n^4]\le8\E[f_2\bar f_n]
+ =8\mu_{n+2}\le8(1-2d)\le4;
+\]
+for \(n=0\), use \(\E f_2\le1\).
+Hence the high-domain moment is at most
+\(4(45/64)^4<47/48\le1-d/16\).
+At \(d=0\), leaf integration gives equality.
+The original equal-pair insertions and full reversal use positivity
+exactly as above, retaining the same receiving arm and connector.
+
+\paragraph{Q175.13 Completion, decorations and reversal}\label{part:Q175.13}
+On the low domain the deficits are $d/800$ at $L=\allowbreak 1$, at least $d/4$
+at $L=\allowbreak 2$, $d/16$ at $L=\allowbreak 3$, $d/64$ at $L=\allowbreak 4$, and $d/40$ at $L\ge\allowbreak 5$.
+The high-domain deficit is at least $d/16$ for every $L$.
+This proves \eqref{eq:Q175:T180.0} for all stated integers and original kernels.
+The terminal unit arm points inward, its three-edge arm outward throughout,
+and its $c$-arm has first edge inward and the remaining edges outward.
+Every connector edge points terminal-to-receiver; the receiving arm is
+outward. The analytic intervals estimate this one fixed message.
+The factors $E_t,\allowbreak E_o\in[0,\allowbreak 1]$ are restored by positivity of $T$.
+If the equal-pair half-length sums are $S_t,\allowbreak S_o$, an original component
+has $a+c+L+4+2S_t+2S_o$ edges and one more vertex.
+Its fourth-moment test tree has $a+4c+4L+16+8S_t+2S_o$ edges and one
+more vertex; the receiving arm occurs once.
+Complete reversal replaces $K$ by $-K$, $F_c$ by
+$p\bar f_3W_c$ with $W_c=\allowbreak A\bar f_{c-1}$, $T^L$ by $A^L$ and
+$f_a$ by $\bar f_a$, with all decorations reversed.
+The $d=\allowbreak 0$ leaf integration, arbitrary original joint-label laws,
+original edge counts and noninjective maps retain their original meanings.
+The proof gives this local reference interface and does not itself assign
+compound-half-tree moments or other skeleton closures.
+For comparison, for $4\le\allowbreak  b<\allowbreak c$ finite positive convolution retains
+\fitdisplay{
+f_b+h_c\le(2-\Gamma_{bc})\one+R_{bc},\quad
+\Gamma_{bc}=\beta_b+\beta_c+\beta_{b-1}+\beta_{c-1},
+}{}
+\fitdisplay{
+R_{bc}=(\beta_{c-1}-\beta_{b-1})g-K^bG_{c-b}(K)g.
+}{}
+This different residual requires its own first-row error and finite signed
+$D_i$; the preceding $b=\allowbreak 3$ data are not its input.
+The $(1,\allowbreak b,\allowbreak c)$ family with $b\ge\allowbreak 4$ is supplied separately in
+Section~\ref{proof:Q5-C178}.

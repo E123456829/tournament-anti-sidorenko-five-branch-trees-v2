@@ -1,0 +1,140 @@
+% Insert once before the odd-root catalogue.  The path-calculus inputs are
+% q3:lem:spectral and q3:app:foundations; no new kernel hypothesis is used.
+\subsection{Finite calculus for the odd-root estimates}
+\label{sec:odd-common-calculus}
+
+Work on a finite probability space after deleting zero-mass atoms. Let
+\(B=-K\), where \(K\) is a real antisymmetric kernel with \(|K|\le1\),
+and write
+\[
+ T=J+B,\quad A=J-B=T^*,\quad u=B\one,\quad p=1-u,\quad q=1+u,
+ \qquad d=\E u^2,\quad \delta_j=\|B^j\one\|_2^2.
+\]
+The four arm messages are
+\(f_n=A^n\one\), \(\bar f_n=T^n\one\),
+\(h_n=Tf_{n-1}\) and \(W_n=A\bar f_{n-1}\).
+Thus \(f_n\) points outward, \(\bar f_n\) inward, \(h_n\) first
+inward and then outward, and \(W_n\) first outward and then inward.
+The path calculus in Section~\ref{q3:app:foundations} gives
+\begin{equation}\label{eq:odd-common:inputs}
+\begin{gathered}
+ 0\le d\le\tfrac13,\quad d^2\le\delta_2\le\theta d,
+ \quad\delta_{j+1}\le\theta\delta_j,
+ \quad\|B\|^2\le\theta=\tfrac{13}{32},\quad\kappa=\tfrac{19}{32},\\
+ |BV(x)|\le\|V\|_2,\qquad
+ 0\le f_n,\bar f_n,h_n,W_n\le2,\qquad
+ \E f_n=\E\bar f_n\le1,\\
+ 0\le f_nh_n,\bar f_nW_n\le1.
+\end{gathered}
+\end{equation}
+Here the path bounds concern \(n\ge1\), and the mean bound also holds
+at \(n=0\). The last line permits only genuine equal-length pair
+decorations. All operators and expectations below use the original
+measure. Since \(p(x),q(x)\ge\mu(x)>0\), actual tree messages and the
+upper bounds dominating them are positive. When \(d=0\), leaf
+integration gives density one; subsequent estimates take \(d>0\).
+
+\begin{lemma}[Finite spectral coordinates]\label{lem:odd-common:spectral}
+Let \(G_n(z)=\sum_{j=0}^{n-1}z^j\), \(G_0=0\), and
+\[
+ \beta_n=\sum_{j=1}^{\lfloor(n-1)/2\rfloor}(-1)^{j-1}\delta_j
+ \quad(n\ge1).
+\]
+Empty sums are zero. With \(\tau=d-\delta_2\),
+\begin{equation}\label{eq:Q188:conv}
+ S_n:=\one+G_n(B)u
+   =\bar f_n+\sum_{j=3}^{n}\beta_j\bar f_{n-j},\qquad
+ \tau\le\beta_j\le d\quad(j\ge3),\qquad
+ \kappa d\le\tau\le\tfrac29.
+\end{equation}
+There is a positive measure \(\nu\) on \([0,\theta]\) of mass \(d\)
+such that \(\int x^j\,d\nu=\delta_{j+1}\). If
+\(P(i\sqrt x)=a(x)+i\sqrt x\,b(x)\), then
+\begin{equation}\label{eq:odd-common:coordinates}
+\begin{aligned}
+ \E[P(B)u]&=-\int b\,d\nu,&
+ \E[BP(B)u]&=-\int a\,d\nu,\\
+ \|P(B)u+c\one\|_2^2
+   &=\int(a^2+xb^2)\,d\nu-2c\int b\,d\nu+c^2.
+\end{aligned}
+\end{equation}
+For \(G_m=E+zC\), \((E,C)=(1,0)\) at \(m=1\). For \(m\ge2\),
+\(1-x\le E,C\le1\); even \(m\) has \(E=C\), and odd \(m\ge3\)
+has \(E=1-xC\). In particular \(G_2=1+z\) and
+\(|G_2|^2=1+x\); no contraction bound is imposed at this index.
+For \(m\ge3\), \(E\le1-x+x^2\) and \(|G_m|\le1\).
+\end{lemma}
+
+\begin{proof}
+Skew-adjointness gives
+\(\E B^{2j+1}\one=0\) and
+\(\E B^{2j}\one=(-1)^j\delta_j\).
+Hence \(TS_n=S_{n+1}-\beta_{n+1}\one\), which proves the finite
+convolution by induction. The alternating sums lie between
+\(d-\delta_2\) and \(d\). Also
+\(\tau\le d-d^2\le2/9\).
+The spectral measure of \(-B^2\) at \(u\) gives \(\nu\) and the norm
+identity. Skew-adjointness then gives the two means and the displayed
+constant cross term. The coordinate relations follow directly by
+separating the finite even and odd powers of \(G_m\).
+For odd \(m\ge3\),
+\(|G_m|^2=(1-xC)^2+xC^2\le1\).
+For even \(m\ge4\), use \(C\le1-x+x^2\) and
+\[
+ 1-(1+x)(1-x+x^2)^2
+ =x(1-x-x^2+x^3-x^4)\ge3x/16\ge0
+ \quad(0\le x\le1/2).
+\]
+\end{proof}
+
+\begin{lemma}[One finite mask]\label{lem:odd-common:mask}
+For every finite polynomial \(P(z)=\sum_j\epsilon_jz^j\),
+\(\epsilon_j\in\{0,1\}\), and every \(0\le x\le\theta\),
+\begin{equation}\label{eq:odd-common:mask}
+ |P(i\sqrt x)|^2\le\frac{1+x}{(1-x^2)^2}
+ \le\frac{32768}{16245}<\frac{101}{50}.
+\end{equation}
+Consequently, for every integer \(r\ge0\),
+\(\|B^rP(\pm B)u\|^2\le(101/50)\theta^r d\).
+The constants are independent of the number of nonzero coefficients.
+\end{lemma}
+\begin{proof}
+In each real or imaginary coordinate, separate the two alternating
+signs and take the larger same-sign subseries. Each such series is
+bounded by \((1-x^2)^{-1}\). This proves the first inequality;
+its two positive factors increase on \([0,\theta]\).
+Integrate against the original spectral measure for the norm bound.
+The geometric series bound finite sums only; no path or message is
+replaced by an infinite one.
+\end{proof}
+
+\begin{lemma}[A joint finite path bound]\label{lem:odd-common:joint-paths}
+For every \(n\ge3\), \(m\ge1\) and \(0\le x\le\theta\),
+\begin{equation}\label{eq:odd-common:joint-paths}
+ |G_n(z)-zG_m(z)|\le\tfrac65,\qquad z=i\sqrt x.
+\end{equation}
+When \(m=1\), the bound improves to one.
+\end{lemma}
+\begin{proof}
+The difference is \(1+z^{m+1}G_{n-1-m}\) if \(n-1\ge m\), and
+\(1-z^nG_{m-n+1}\) otherwise. The empty tail gives one.
+For a nonempty tail, the finite coordinate bounds above give the
+following bounds for the square:
+\[
+\begin{array}{c|c}
+ \text{tail term}&\text{squared upper bound}\\ \hline
+ +z^2G_l&(1-x+x^2)^2+x^3\le1\\
+ -z^3G_l&1+x^3\\
+ +z^3G_l&1+2x^2+x^3+x^4\\
+ \pm z^kG_l,\ k\ge4&1+2x^2+x^4(1+x).
+\end{array}
+\]
+The third row is at most \(1493553/1048576<36/25\) at
+\(x=\theta\); the last is at most
+\(345857/248832<7/5<36/25\) even at \(x=5/12\).
+The second row is smaller still. For the first row,
+the difference from one is
+\(x[-2+3x-x^2+x^3]\le0\) on \([0,1/2]\).
+When \(m=1\), use this first row on
+\(G_n-z=1+z^2G_{n-2}\). These bounds include \(G_1\) and \(G_2\).
+\end{proof}

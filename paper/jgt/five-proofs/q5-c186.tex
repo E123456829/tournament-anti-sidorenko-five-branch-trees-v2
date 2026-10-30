@@ -1,0 +1,192 @@
+\subsection{Odd internal roots of minimum one}
+\label{proof:Q5-C186}
+
+Take ordered root lengths
+\[
+ 3\le a<b<s_1<t_1<\cdots<s_k<t_k,\qquad k\ge0,
+ \tag{Q186.0.2}
+\]
+and a terminal residual list $\Sigma$ of at least two distinct
+lengths. Orient its arms by Table~\ref{tab:odd186:directions}.
+For genuine equal-pair decorations $E_o,E_t$, set
+\[
+ H_k=E_o pW_a\bar f_b
+          \prod_{i=1}^kW_{s_i}\bar f_{t_i}\,
+          T^L(E_tF_{\Sigma,L}).
+ \tag{Q186.0.3}
+\]
+All means and operators use the original finite probability measure
+and the original skew kernel; $d=\E u^2$.
+
+\begin{proposition}\label{prop:odd-complete:minimum-one-root}
+For every such residual list, every finite $k$ and all independent
+positive integers $L,M$,
+\[
+ \E H_0^4\le e^{-27d/5},\qquad
+ \tag{Q186.0.4}
+\]
+\[
+ \E H_k^4\le e^{-[27/5+\zeta_k]d}\quad(k\ge1),\qquad
+ \zeta_k=2737/3840+64(k-1)/5.
+ \tag{Q186.0.5}
+\]
+Writing $\lambda_0=27/5$ and $\lambda_k=27/5+\zeta_k$ for
+$k\ge1$, the outgoing message satisfies
+\[
+ I_q(T^MH_k)^3\le e^{-[2\lambda_k-c(M)]d}\le e^{-6d/95},
+ \qquad I_q(X)=\E[q^{-1/3}|X|^{8/3}],
+ \tag{Q186.0.6}
+\]
+where $c(1)=204/19$, $c(2)=10$, $c(3)=0$, $c(4)=7$ and
+$c(M)=6$ for $M\ge5$.
+\end{proposition}
+
+\paragraph{Q186.1 Literal directions and exhaustive terminal table}\label{part:Q186.1}
+
+An \(f_n\) arm has every edge away from its root; \(\bar f_n\) has every edge toward its
+root; \(h_n\) has its first edge toward the root and its remaining edges away
+from the first neighbor; \(W_n\) has its first edge away from the root and its
+remaining edges toward that neighbor. \(T^L\) means every original inner edge
+points from the terminal toward the internal root. \(T^M\) means every outer
+edge points from that root toward the receiving center. The original unit
+arm at the internal root points away from the root, giving p.
+
+In the table, every displayed residual list is strictly increasing. The
+indices used for terminal lengths are independent of the root a, b.
+
+% Replace only q5-c186.tex's description at baseline lines 81--101.
+% Keep the surrounding part:Q186.1 anchor and its explanatory text.
+\begingroup\small
+\renewcommand{\arraystretch}{1.15}
+\begin{longtable}{@{}>{\raggedright\arraybackslash}p{.44\linewidth}
+                      >{\raggedright\arraybackslash}p{.50\linewidth}@{}}
+\caption{Terminal directions at a minimum-one internal root.
+All residual lists are strictly increasing; their indices are independent
+of the internal root lengths \(3\le a<b\).
+The root pair is always \(W_a\bar f_b\).}
+\label{tab:odd186:directions}\\
+\toprule
+Terminal residual and length condition&Actual terminal message \(F\)\\
+\midrule\endfirsthead
+\toprule
+Terminal residual and length condition&Actual terminal message \(F\)\\
+\midrule\endhead
+\bottomrule\endfoot
+\((1,t)\), \(t\ge2\)&\(qf_t\)\\
+\((2,t)\), \(t\ge4\)&\(\bar f_2W_t\)\\
+\((2,3)\)&\(h_2f_3\)\\
+\((3,t)\), \(t\ge5\), \(L=1\)&\(h_3f_t\)\\
+\((3,t)\), \(t\ge5\), \(L\ge2\)&\(\bar f_3W_t\)\\
+\((3,4)\)&\(h_3f_4\)\\
+Even \((\alpha_1,\beta_1,\ldots,\alpha_j,\beta_j)\),
+\(\alpha_1\ge4\), \(j\ge1\)
+  &\(\prod_{i=1}^j h_{\alpha_i}f_{\beta_i}\)\\
+The same even list, \(\alpha_1\le3\), \(j\ge2\)
+  &\(\prod_{i=1}^j h_{\alpha_i}f_{\beta_i}\)\\
+\((1,s,t)\), \(1<s<t\)&\(qf_sh_t\)\\
+\((1,\alpha_1,\beta_1,\ldots,\alpha_j,\beta_j)\), \(j\ge2\),
+\((\alpha_1,\beta_1,\alpha_2)=(2,3,4)\)
+  &\(\begin{aligned}[t]
+       &qf_2h_{\beta_2}h_3f_4\\
+       &\quad\cdot\prod_{i=3}^j h_{\alpha_i}f_{\beta_i}
+     \end{aligned}\)\\
+The same minimum-one odd list, all other cases
+  &\(qf_{\alpha_1}h_{\beta_1}
+        \prod_{i=2}^j h_{\alpha_i}f_{\beta_i}\)\\
+Nonunit odd \((s,\beta_1,\gamma_1,\ldots,\beta_j,\gamma_j)\),
+\(s\ge2\), \(\beta_1=3\) (hence \(s=2\))
+  &\(\bar f_2 f_3h_{\gamma_1}
+        \prod_{i=2}^j h_{\beta_i}f_{\gamma_i}\)\\
+The same nonunit odd list, \(\beta_1\ge4\)
+  &\(\bar f_s\prod_{i=1}^j h_{\beta_i}f_{\gamma_i}\)\\
+\end{longtable}
+\endgroup
+
+
+The fixed cross in the tenth row is part of the original direction, not an
+analytical switch. Every list with at least two residual arms occurs in exactly
+one row after the displayed conditions are applied. The separate (3, t) rows
+depend only on whether \(L=1\). No direction depends on d, \(\mu\), K or a frequency.
+For all of them the new internal root direction is exactly \(W_a \bar f_b\).
+
+\begin{proof}
+\paragraph{Complete root and terminal certificates}
+\label{part:Q186.3}\label{part:Q186.4}
+Use the full constant split and the minimum-one root transfer in
+Section~\ref{sec:odd-complete:comparison}. The positive finite
+propagation in each terminal family provides its own $C,c,Q$;
+the transfer is applied to those complete parameters.
+
+\paragraph{Q186.5 Two-arm terminals $(1,t)$}\label{part:Q186.5}
+For every $3\le a<b$, $t\ge2$ and $L\ge1$, the actual message is
+$H_0=pW_a\bar f_bT^L(qf_t)$. Apply
+Proposition~\ref{prop:root-post:square-moments} with one root pair
+$(u_1,v_1)=(a,b)$ and terminal parameter $t$. It gives
+\fitdisplay{
+ \E H_0^4\le e^{-705d/128}.
+}{Q186.5.1}
+The root and terminal lengths are independent in that proposition.
+Its pointwise conclusion \eqref{eq:root-post:canonical-certificate}
+also supplies the whole vector required for later root pairs. In the
+present $B=-K$ notation, set $V=-Z$. Then
+\begin{equation}\label{eq:odd186:short-one-certificate}
+ \begin{gathered}
+ H_0\le e^{a_0+BV},\qquad \|V\|^2\le9d/4,\\
+ 4a_0+4\E BV+(17/4)\|V\|^2\le-705d/128.
+ \end{gathered}
+\end{equation}
+There is no separate curvature term in this certificate. It holds
+on the entire host domain, including all short inner lengths, and
+therefore applies to the low-domain restoration in part~\ref{part:Q186.11}.
+For $a\ge4$, the direct fourth payment in
+part~\ref{part:root-post:payments} also gives the stronger loss $7d$.
+
+\paragraph{Q186.6 All remaining two-arm terminals of minimum two or three}
+
+\paragraph{Q186.6.1 Every terminal \((2,t)\), \(t\ge4\)}\label{part:Q186.6.1}
+Use the same actual root \(pW_a\bar f_b\) and terminal
+\(F=\bar f_2W_t\). The minimum-one instance of
+Theorem~\ref{thm:odd-two:roots} proves, for all \(3\le a<b\)
+and every inner length,
+\begin{equation}\label{eq:odd186:terminal-two}
+ \E[pW_a\bar f_bT^LF]^4\le e^{-6d}.
+\end{equation}
+Its complete vectors have norm at most \(2\sqrt d\), with any
+used \(p\)-curvature payment kept separate. Thus this is also
+an input for the paid restoration of later root pairs below.
+
+\paragraph{Q186.6.2 The actual terminal \((2,3)\)}
+Choose \(F=h_2f_3\), as in the direction table. Its actual arm
+sum is \(2-d-B^2u\), equal to the arm sum for \(\bar f_2W_3\).
+Theorem~\ref{thm:odd-two:roots} treats this genuine alternative
+with the same \(6d\) fourth loss and the same complete-vector
+bound. It uses this common positive envelope, not an equality of
+the two different terminal products.
+
+\paragraph{The remaining terminal families}
+\label{part:Q186.7}\label{part:Q186.8}\label{part:Q186.9}
+Theorem~\ref{thm:odd-three:roots} proves loss six for the actual
+$(3,t)$ directions, including the fixed $(3,4)$ direction.
+Proposition~\ref{prop:odd-even:roots} proves loss eight for even
+lists of minimum at least four and at least $11/2$ for the other
+even multipair lists. The $q$-first-row packets of
+Section~\ref{sec:odd-complete:q-terminals} give $705/128$ for
+every minimum-one odd terminal, with the fixed cross prescribed
+in the table. Section~\ref{sec:odd-complete:inward-anchor} gives
+$13/2$ for every nonunit-minimum odd terminal. All these are
+complete fourth certificates at the same root $pW_a\bar f_b$.
+
+\paragraph{Complete ordered root and outgoing connector}
+\label{part:Q186.11}
+The losses in \eqref{eq:odd-complete:catalogue} are at least
+$27/5$, proving \textup{(Q186.0.4)}.
+Lemma~\ref{lem:odd-complete:vector-cap} supplies the pointwise
+low-domain certificate with its full vector norm at most
+$(7/2)\sqrt d$. The paid restoration in
+Section~\ref{sec:odd-complete:assembly} gives the additional
+$\zeta_k$ and restores the genuine equal pairs.
+Finally \eqref{eq:odd-common:outlet} applies to the actual real
+message with the independent outgoing length $M$.
+Since $54/5-204/19=6/95$, it gives \textup{(Q186.0.6)}.
+\end{proof}
+

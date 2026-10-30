@@ -1,0 +1,384 @@
+\subsection{The unit-connector eighth moment for odd terminals with a unit arm and multiple pairs}\label{proof:Q5-C067}
+
+\paragraph{Q67.1 Directions and bounds.}
+Use the finite probability space, real skew kernel \(K\), and
+operators and messages of Appendix~\ref{proof:Q5-C064}:
+\(A=\allowbreak J+K\), \(T=\allowbreak J-K=\allowbreak A^*\), \(g=\allowbreak K\one\), \(p=\allowbreak 1+g\), \(q=\allowbreak 1-g\),
+\(f_n=\allowbreak A^n\one\), \(\bar f_n=\allowbreak T^n\one\), \(h_n=\allowbreak Tf_{n-1}\),
+\(\delta_j=\allowbreak \|K^j\one\|_2^2\), \(d=\allowbreak \delta_1\),
+\(\theta=\allowbreak 13/32\), \(\kappa=\allowbreak 19/32\), and \(\tau=\allowbreak d-\delta_2\).
+Fix any finite \(k\ge\allowbreak 2\) and strictly increasing list
+\(1<\allowbreak b_1<\allowbreak c_1<\allowbreak b_2<\allowbreak c_2<\allowbreak \cdots<\allowbreak b_k<\allowbreak c_k\).
+Let \(E_0,\allowbreak E_r\) be arbitrary finite genuine equal-pair products,
+with any lengths and multiplicities; the empty product is one.
+Set
+\begin{equation}\tag{Q67.1.1}\label{eq:Q67:1.1}
+F=E_0qf_{b_1}h_{c_1}\prod_{i=2}^kh_{b_i}f_{c_i},
+\qquad H_D=E_rpTF.
+\end{equation}
+The terminal unit arm points inward. In the first pair the short arm
+is outward, while the long arm has its first edge inward and its
+remaining edges outward. Every later pair has the short arm first
+inward and then outward, and the long arm outward. The unit connector
+points from terminal to root; the root unit arm points outward.
+Each equal pair consists of an outward arm and an arm first inward
+and then outward. These directions depend only on the arm list.
+For all such parameters,
+\begin{equation}\tag{Q67.1.2}\label{eq:Q67:1.2}
+\boxed{\E H_D^8\le e^{-d/2}\le1-2d/5.}
+\end{equation}
+On \(d\ge\allowbreak 1/24\), the stronger bound is \(e^{-9d}\).
+Combining the multiple-pair result with the triple bounds of
+Q5-C062, Q5-C063 and Appendix~\ref{proof:Q5-C065} gives, for every
+odd distinct residual list of at least three arms and minimum one,
+in these same directions,
+\begin{equation}\tag{Q67.1.3}\label{eq:Q67:1.3}
+\boxed{\E H_D^8\le1-d/601.}
+\end{equation}
+Three residual arms use the triple bounds; at least five use
+\eqref{eq:Q67:1.2}. Residual zero and one follow the reduction to
+fewer branch vertices.
+
+The finite convolution, the all-index mean bound
+\(\mu_n\le\allowbreak 1-83d/32\) for \(n\ge\allowbreak 4\), and the finite-mask norm are
+proved in Appendix~\ref{proof:Q5-C090}.
+Its long-pair estimate \eqref{eq:L90:pair} supplies in particular
+\(h_af_c\le\allowbreak  e^{R_{ac}-3d}\) for \(4\le\allowbreak  a<\allowbreak c\), where
+\(R_{ac}=\allowbreak \sum_{j=\allowbreak a}^{c-1}K^jg\).
+We use the finite identity
+\(S_n=\allowbreak f_n+\sum_{j=\allowbreak 3}^n\beta_jf_{n-j}\), with
+\(S_n=\allowbreak \sum_{j=\allowbreak 0}^nK^j\one\),
+\(\beta_1=\allowbreak \beta_2=\allowbreak 0\),
+\(\beta_n=\allowbreak \sum_{j=\allowbreak 1}^{\lfloor(n-1)/2\rfloor}(-1)^{j-1}\delta_j\),
+and \(\tau\le\allowbreak \beta_n\le\allowbreak  d\) for \(n\ge\allowbreak 3\).
+
+\paragraph{Q67.3 Unit propagation retaining the negative mean.}
+Suppose \(0<\allowbreak d\le\allowbreak 1/24\) and a nonnegative message \(F\) satisfies
+\begin{equation}\tag{Q67.3.1}\label{eq:Q67:3.1}
+F\le e^{R-\Gamma},\quad |R|\le5/4,\quad
+\E R^2\le A_0d,\quad\E(gR)\le0,\qquad A_0>0.
+\end{equation}
+Put \(N=\allowbreak -KR\). Row and spectral bounds, followed by Cauchy in the
+same inner product, give
+\begin{equation}\tag{Q67.3.2}\label{eq:Q67:3.2}
+|N|\le\sqrt{A_0d},\quad \E N^2\le\theta A_0d,\quad
+\E N=\E(gR)\le0,\quad|\E N|\le\sqrt{A_0}d.
+\end{equation}
+The negative-mean lemma \eqref{eq:Q65:2.4}, including its two-point
+comparison, Hermite interpolation and degenerate cases, gives
+\begin{equation}\tag{Q67.3.3}\label{eq:Q67:3.3}
+\E e^{8N}\le\exp\{8\E N+\lambda(\sqrt d)A_0d\},\qquad
+\lambda(x)=\frac{188}{25}\left(2-\frac{\kappa}{1+x}\right)^2.
+\end{equation}
+Since \(\lambda\) increases and \(\sqrt d\le\allowbreak 5/24\),
+\begin{equation}\tag{Q67.3.4}\label{eq:Q67:3.4}
+\lambda(\sqrt d)\le\lambda(5/24)=57575/3364<69/4,
+\end{equation}
+where \(230300<\allowbreak 232116\).
+For every real \(u\le\allowbreak 5/4\), one has \(e^u\le\allowbreak 1+u+(4/5)u^2\).
+Indeed,
+\((e^u-1-u)/u^2=\allowbreak \int_0^1(1-t)e^{tu}\,\allowbreak dt\) increases with \(u\),
+so it suffices that \(e^{5/4}<\allowbreak 7/2\).
+The exponential series through degree four sums to \(21249/6144\);
+starting with degree five, adjacent tail terms have ratio at most
+\(5/24\). Thus the total is at most
+\fitdisplay{21249/6144+3750/116736=407481/116736<7/2.}{}
+Positivity of \(T\) and \(|K(R^2)|\le\allowbreak \E R^2\) give
+\begin{equation}\tag{Q67.3.5}\label{eq:Q67:3.5}
+Te^R\le q+\E R-KR+(8/5)\E R^2=q+C+N,
+\qquad C=\E R+(8/5)\E R^2.
+\end{equation}
+The right side is nonnegative. Since \(p+q=\allowbreak 2\), AM--GM gives
+\(p(q+C+N)\le\allowbreak [1+(C+N)/2]^2\) with nonnegative base.
+Use \((1+v)^{16}\le\allowbreak  e^{16v}\) for \(v\ge\allowbreak -1\), obtaining
+\begin{equation}\tag{Q67.3.6}\label{eq:Q67:3.6}
+\boxed{\E[(pTF)^8]\le
+\exp\{-8\Gamma+8\E R+8\E(gR)+(601/20)A_0d\}.}
+\end{equation}
+Here \(601/20=\allowbreak 64/5+69/4\). A zero base satisfies the comparison
+directly. Both signed means remain in this bound.
+
+\paragraph{Q67.4 The odd-table envelope and high domain.}
+First take \(E_0=\allowbreak E_r=\allowbreak 1\). Write \(b=\allowbreak b_1\), \(c=\allowbreak c_1\),
+\(B=\allowbreak \beta_{c-1}\), and define
+\begin{equation}\tag{Q67.4.1}\label{eq:Q67:4.1}
+\begin{gathered}
+W=\sum_{j=b}^{c-1}K^jg,\qquad
+S=\sum_{i=2}^k\sum_{j=b_i}^{c_i-1}K^jg,\\
+\Delta=\beta_b+\beta_c+B,\quad\alpha=1-B,\quad
+R=-\alpha g-W+S,\quad\Gamma=\Delta+3(k-1)d.
+\end{gathered}
+\end{equation}
+Finite convolution and \(h_c=\allowbreak Tf_{c-1}\) give
+\(f_b+h_c\le\allowbreak 2-\Delta+Bg-W\).
+Apply AM--GM, \(q\le\allowbreak  e^{-g}\), and the long-pair bound to obtain
+\begin{equation}\tag{Q67.4.2}\label{eq:Q67:4.2}
+qf_bh_c\prod_{i=2}^kh_{b_i}f_{c_i}\le e^{R-\Gamma}.
+\end{equation}
+The later exponent intervals are disjoint, so
+\(S=\allowbreak K^{c+1}Q(K)g\), where \(Q\) has coefficients zero or one and
+may have initial zero coefficients. The finite-mask bound is
+\begin{equation}\tag{Q67.4.3}\label{eq:Q67:4.3}
+\|Q(K)\|^2\le\frac{1+\theta}{(1-\theta^2)^2}
+=32768/16245<101/50<(10/7)^2.
+\end{equation}
+For \(c\ge\allowbreak 3\), this implies
+\(|S|\le\allowbreak (10/7)\theta^{3/2}\sqrt d<\allowbreak (3/8)\sqrt d\);
+the squared comparison is \(14060800<\allowbreak 14450688\).
+If \(d\ge\allowbreak 1/24\), \(\sqrt d\le\allowbreak \sqrt{24}d<\allowbreak 5d\), so
+\begin{equation}\tag{Q67.4.4}\label{eq:Q67:4.4}
+\prod_{i=2}^kh_{b_i}f_{c_i}
+\le e^{S-3(k-1)d}\le e^{-9d/8}.
+\end{equation}
+Positivity and the same-direction unit eighth moments of Q5-C062
+for \((b,\allowbreak c)=\allowbreak (2,\allowbreak 3)\), Q5-C063 for \(b=\allowbreak 2,\allowbreak c\ge\allowbreak 4\), and
+Appendix~\ref{proof:Q5-C065} for \(b\ge\allowbreak 3\), give
+\begin{equation}\tag{Q67.4.5}\label{eq:Q67:4.5}
+\E[(pTF)^8]\le e^{-9d}\E[(pT(qf_bh_c))^8]\le e^{-9d}.
+\end{equation}
+
+\paragraph{Q67.5 Signs, pointwise bounds and finite frequencies on the low domain.}
+Now let \(0<\allowbreak d\le\allowbreak 1/24\), so \(23/24\le\allowbreak \alpha\le\allowbreak 1\).
+Every finite \(G_m\) satisfies \(\|G_m(K)\|\le\allowbreak \sqrt{1+\theta}<\allowbreak 6/5\).
+Apply the original row bound to the outermost \(K\) in \(W\) and \(S\):
+\begin{equation}\tag{Q67.5.1}\label{eq:Q67:5.1}
+|R|\le1+\left((6/5)\sqrt\theta+(10/7)\theta^{3/2}\right)\sqrt d
+<1+(6/5)\sqrt d\le5/4.
+\end{equation}
+The middle coefficient is bounded using \(\sqrt\theta<\allowbreak 2/3\),
+which gives \(997/840<\allowbreak 6/5\).
+For the single interval \(W\), alternating sums give
+\(-\E(gW)\le\allowbreak \delta_2\). The positive mixed-mean terms of \(S\)
+begin at \(K^4g\), and their sum is at most
+\(\delta_3/(1-\theta^2)<\allowbreak \delta_2/2\). Therefore
+\begin{equation}\tag{Q67.5.2}\label{eq:Q67:5.2}
+\E(gR)\le-\alpha d+(3/2)\delta_2\le-67d/192<0.
+\end{equation}
+We next prove, for all finite intervals and masks,
+\begin{equation}\tag{Q67.5.3}\label{eq:Q67:5.3}
+\E R^2\le A_0d,\qquad
+A_0=\begin{cases}
+1,&b=2,\\33/20,&b=3,\\19/12,&b=4,\\5/4,&b\ge5.
+\end{cases}
+\end{equation}
+On a skew-operator rotation block, put \(z=\allowbreak i\sqrt x\),
+\(0\le\allowbreak  x\le\allowbreak \theta\), and write \(W=\allowbreak W_0(K)g\), \(S=\allowbreak U(K)g\).
+The polynomial representing \(-R\) is
+\(P(z)=\allowbreak \alpha+W_0(z)-U(z)\), where
+\(W_0=\allowbreak \sum_{j=\allowbreak b}^{c-1}z^j\), and the zero-one coefficients of \(U\)
+begin at degree at least \(c+1\). Finite sums in the four residue
+classes give the coordinate bounds below. We use
+\begin{equation}\tag{Q67.5.4}\label{eq:Q67:5.4}
+\begin{gathered}
+\frac{x^2}{1-x^2}\le169/855<1/5,\quad
+\frac{x}{1-x^2}\le416/855<1/2,\quad
+\frac{x^3}{1-x^2}<1/12,\\
+x^2<1/6,\quad x^3<1/14,\quad x^4<1/32,\quad
+x^5<1/90,\quad\frac{x^4}{1-x^2}<1/30.
+\end{gathered}
+\end{equation}
+The third fraction is at most \(2197/27360<\allowbreak 1/12\).
+For \(x^3\) and \(x^5\), the integer comparisons are
+\(30758<\allowbreak 32768\) and \(33416370<\allowbreak 33554432\); the remaining bounds
+follow by cross multiplication.
+
+\paragraph{Q67.5.1 The class \(b=\allowbreak 2,\allowbreak c\ge\allowbreak 3\).}
+At \(c=\allowbreak 3\), \(B=\allowbreak 0\), \(P=\allowbreak 1+z^2-U\), with \(U\) starting at degree
+four. The real part is positive and at most \(1-4x/5\), and the
+imaginary magnitude is at most \(x^{5/2}/(1-x^2)\). Hence
+\fitdisplay{
+\frac{|P|^2-1}{x}\le-8/5+16x/25+\frac{x^4}{(1-x^2)^2}
+\le-8/5+8/25+1/25<0.
+}{}
+At \(c=\allowbreak 4\), \(W_0=\allowbreak z^2+z^3\), with \(U\) starting at degree five.
+The real part is positive and at most \(1-4x/5\); the imaginary
+part is negative, with magnitude at most \((3/2)x^{3/2}\). Thus
+\fitdisplay{
+\frac{|P|^2-1}{x}\le-8/5+16x/25+9x^2/4
+\le-8/5+8/25+3/8<0.
+}{}
+For \(c\ge\allowbreak 5\), the real part of \(W_0\) lies in
+\([-x,\allowbreak -x+x^2]\), and its imaginary part in
+\([-x^{3/2},\allowbreak -x^{3/2}(1-x)]\).
+The mask \(U\) starts at least at degree six, with positive imaginary
+terms starting at nine and negative imaginary terms at seven.
+The real part of \(P\) is positive and
+\fitdisplay{\operatorname{Re}P\le1-x+x^2+\frac{x^3}{1-x^2}
+\le1-3x/8.}{}
+Here \(1-x-x^2/(1-x^2)\ge\allowbreak 1-\theta-1/5=\allowbreak 63/160>\allowbreak 3/8\).
+Its imaginary part remains nonpositive because
+\(1-x>\allowbreak x^2/(1-x^2)\), and
+\fitdisplay{|\operatorname{Im}P|\le
+x^{3/2}\left(1+\frac{x^3}{1-x^2}\right)
+\le(13/12)x^{3/2}.}{}
+Consequently
+\fitdisplay{
+\frac{|P|^2-1}{x}\le-3/4+9x/64+169x^2/144
+\le-3/4+9/128+169/864=-1673/3456<0.
+}{}
+The real-part positivity used above follows from
+\(1-x-x^2/(1-x^2)>\allowbreak 0\) or
+\(23/24-x-x^4/(1-x^2)>\allowbreak 0\), respectively. At zero the bound is direct.
+This proves \(A_0=\allowbreak 1\) for every finite \(c\).
+
+\paragraph{Q67.5.2 The class \(b=\allowbreak 3,\allowbreak c\ge\allowbreak 4\).}
+At \(c=\allowbreak 4\), \(W_0=\allowbreak z^3\), and \(U\) starts at degree five.
+The real part is positive and at most \(13/12\), and the imaginary
+magnitude is at most \((3/2)x^{3/2}\). Thus
+\(|P|^2\le\allowbreak 169/144+9/56=\allowbreak 1345/1008<\allowbreak 33/20\).
+For \(c\ge\allowbreak 5\), \(\operatorname{Re}W_0\in[0,\allowbreak x^2]\),
+\(\operatorname{Im}W_0\in[-x^{3/2},\allowbreak -x^{3/2}(1-x)]\).
+The mask starts at least at degree six, with negative real terms
+starting at six and positive imaginary terms at nine.
+The real part of \(P\) is positive and at most
+\(1+x^2+x^3/(1-x^2)\le\allowbreak 5/4\).
+As above its imaginary part is nonpositive, of magnitude at most
+\((13/12)x^{3/2}\). Therefore
+\fitdisplay{|P|^2\le25/16+169/2016=3319/2016<33/20,}{}
+where \(66380<\allowbreak 66528\).
+
+\paragraph{Q67.5.3 The class \(b=\allowbreak 4,\allowbreak c\ge\allowbreak 5\).}
+Here \(\operatorname{Re}W_0\in[x^2(1-x),\allowbreak x^2]\) and
+\(\operatorname{Im}W_0\in[0,\allowbreak x^{5/2}]\); the latter is zero at
+\(c=\allowbreak 5\). The mask begins at least at degree six.
+The real part is at least \(23/24-x^4/(1-x^2)>\allowbreak 0\), and at most
+\fitdisplay{1+x^2+\frac{x^3}{1-x^2}\le319/256.}{}
+This uses \(\theta^2=\allowbreak 169/1024\) and
+\(2197/27360<\allowbreak 83/1024\), with \(2249728<\allowbreak 2270880\).
+The imaginary magnitude is at most
+\(x^{5/2}[1+x/(1-x^2)]\le\allowbreak (3/2)x^{5/2}\). Thus
+\begin{equation}\tag{Q67.5.5}\label{eq:Q67:5.5}
+|P|^2\le101761/65536+1/40<19/12,
+\end{equation}
+where the final comparison is \(12211320<\allowbreak 12255232\).
+
+\paragraph{Q67.5.4 The class \(b\ge\allowbreak 5,\allowbreak c>\allowbreak b\).}
+The contiguous \(W_0\) has real part in \([-x^3,\allowbreak x^4]\) and imaginary
+magnitude at most \(x^{5/2}\).
+The mask begins at least at degree seven: its negative real terms
+start at ten, its positive real terms at eight, and its imaginary
+magnitude is at most \(x^{7/2}/(1-x^2)\).
+Thus the real part of \(P\) is positive and
+\fitdisplay{\operatorname{Re}P\le1+x^4+\frac{x^5}{1-x^2}
+<1+1/32+1/70<21/20.}{}
+The imaginary magnitude is at most \((3/2)x^{5/2}\).
+For positivity use \(23/24-x^3-x^4/(1-x^2)>\allowbreak 0\).
+It follows that \(|P|^2\le\allowbreak 441/400+1/40=\allowbreak 451/400<\allowbreak 5/4\).
+These four classes prove \eqref{eq:Q67:5.3} for arbitrary finite
+degree, pair count and gaps.
+
+\paragraph{Q67.6 The common linear functional and continuous low-domain bounds.}
+Write \(a_j=\allowbreak \E K^j\one\), so \(a_{2j}=\allowbreak (-1)^j\delta_j\) and every
+odd \(a_j\) is zero. Skew adjunction gives the telescoping identity
+\begin{equation}\tag{Q67.6.1}\label{eq:Q67:6.1}
+\E W+\E(gW)=a_{b+1}-a_{c+1}.
+\end{equation}
+Put \(V=\allowbreak a_{c+1}-a_{b+1}\). Then
+\begin{equation}\tag{Q67.6.2}\label{eq:Q67:6.2}
+\E R+\E(gR)=-\alpha d+V+\E S+\E(gS).
+\end{equation}
+For \((b,\allowbreak c)=\allowbreak (2,\allowbreak 3)\), \(S\) starts at degree four. The positive
+\(\E S\) terms begin at degree seven with \(\delta_4\), while the
+positive \(\E(gS)\) terms begin at degree four with \(\delta_3\).
+Therefore
+\begin{equation}\tag{Q67.6.3}\label{eq:Q67:6.3}
+\E S+\E(gS)\le\frac{\delta_3+\delta_4}{1-\theta^2}
+\le\frac{\theta^2}{\kappa}d=169d/608<7d/25.
+\end{equation}
+For the other branches \(c\ge\allowbreak 4\), the mask starts at least at degree
+five. The positive \(\E S\) terms start at seven with \(\delta_4\),
+and the positive \(\E(gS)\) terms at eight with \(\delta_5\). Thus
+\begin{equation}\tag{Q67.6.4}\label{eq:Q67:6.4}
+\E S+\E(gS)\le\frac{\delta_4+\delta_5}{1-\theta^2}
+\le\frac{\theta^3}{\kappa}d=2197d/19456<23d/200.
+\end{equation}
+The integer comparisons are \(4225<\allowbreak 4256\) and \(439400<\allowbreak 447488\).
+Discarding the negative terms of the finite mask gives these upper
+bounds for the common moments.
+Equations~\eqref{eq:Q67:3.6}, \eqref{eq:Q67:4.1} and
+\eqref{eq:Q67:6.2} give
+\begin{equation}\tag{Q67.6.5}\label{eq:Q67:6.5}
+\begin{aligned}
+\log\E[(pTF)^8]\le{}&-8(\Delta-V)-8d+8Bd-24(k-1)d\\
+ &+8(\E S+\E(gS))+(601/20)A_0d.
+\end{aligned}
+\end{equation}
+At zero expectation, take the logarithm to be \(-\infty\);
+the tree messages on positive-mass atoms are positive.
+All following bounds hold on \(0<\allowbreak d\le\allowbreak 1/24\), using \(k\ge\allowbreak 2\).
+
+For \((b,\allowbreak c)=\allowbreak (2,\allowbreak 3)\), \(\Delta=\allowbreak d\), \(B=\allowbreak 0\), \(V=\allowbreak \delta_2\).
+Use \eqref{eq:Q67:6.3} and \(A_0=\allowbreak 1\). Dividing the upper exponent
+by \(d\) gives
+\begin{equation}\tag{Q67.6.6}\label{eq:Q67:6.6}
+-40+8\theta+56/25+601/20=-223/50<-1/2.
+\end{equation}
+For \(b=\allowbreak 2,\allowbreak c\ge\allowbreak 4\), \(\Delta\ge\allowbreak 2\tau\) and
+\(V=\allowbreak a_{c+1}\le\allowbreak \delta_4\), since the first positive even moment for
+\(c+1\ge\allowbreak 5\) is at \(c+1=\allowbreak 8\). Thus \(\Delta-V\ge\allowbreak 2\tau-\delta_4\).
+With \eqref{eq:Q67:6.4}, \(8B\le\allowbreak 1/3\), and \(A_0=\allowbreak 1\), the coefficient is at most
+\begin{equation}\tag{Q67.6.7}\label{eq:Q67:6.7}
+-48+16\theta+8\theta^3+1/3+23/25+601/20<-9<-1/2.
+\end{equation}
+Use \(16\theta=\allowbreak 13/2\) and \(8\theta^3<\allowbreak 4/7\) for the last bound.
+For \(b=\allowbreak 3\), \(\Delta\ge\allowbreak  d+2\tau\) and
+\(V=\allowbreak a_{c+1}-\delta_2\le\allowbreak \delta_4-\delta_2\).
+Hence \(\Delta-V\ge\allowbreak 3d-\delta_2-\delta_4\), and \(A_0=\allowbreak 33/20\) gives
+\begin{equation}\tag{Q67.6.8}\label{eq:Q67:6.8}
+-56+8\theta+8\theta^3+1/3+23/25+19833/400
+<-11279/8400<-1<-1/2.
+\end{equation}
+Substituting \(8\theta=\allowbreak 13/4\), \(8\theta^3<\allowbreak 4/7\) gives the stated
+\(-11279/8400\).
+For \(b=\allowbreak 4\), \(V=\allowbreak a_{c+1}\). At \(c=\allowbreak 5,\allowbreak 6\), \(V\le\allowbreak 0\) and
+\(\Delta\ge\allowbreak 3d-2\delta_2\).
+For \(c\ge\allowbreak 7\), \(\beta_c\ge\allowbreak \tau+\kappa\delta_3\),
+\(\beta_{c-1}\ge\allowbreak \tau\), and \(V\le\allowbreak \delta_4\le\allowbreak \theta\delta_3\).
+Since \(\kappa>\allowbreak \theta\), this gives throughout
+\begin{equation}\tag{Q67.6.9}\label{eq:Q67:6.9}
+\Delta-V\ge3d-2\delta_2.
+\end{equation}
+The extra term in \(\beta_c\) is the alternating tail
+\(\delta_3-\delta_4+\cdots\ge\allowbreak \delta_3-\delta_4\), with precisely
+\(+\delta_3\) at \(c=\allowbreak 7\). This preserves the common-moment relation.
+With \(A_0=\allowbreak 19/12\), the coefficient is at most
+\begin{equation}\tag{Q67.6.10}\label{eq:Q67:6.10}
+-56+16\theta+1/3+23/25+11419/240=-267/400<-1/2.
+\end{equation}
+Its margin below \(-1/2\) is \(67/400\).
+For \(b\ge\allowbreak 5\), \(\Delta\ge\allowbreak 3\tau\), \(V\le\allowbreak \delta_3+\delta_4\):
+the first positive contribution of \(-a_{b+1}\) is \(\delta_3\),
+and that of \(a_{c+1}\) is \(\delta_4\).
+Using \(A_0=\allowbreak 5/4\), the coefficient is at most
+\begin{equation}\tag{Q67.6.11}\label{eq:Q67:6.11}
+-56+24\theta+8\theta^2+8\theta^3+1/3+23/25+601/16<-5<-1/2.
+\end{equation}
+For this bound use \(\theta^2<\allowbreak 1/6\), \(\theta^3<\allowbreak 1/14\).
+Equations~\eqref{eq:Q67:6.6}--\eqref{eq:Q67:6.11} prove
+\(\E[(pTF)^8]\le\allowbreak  e^{-d/2}\) on the low domain.
+
+\paragraph{Q67.7 Completion and the full odd unit-arm list.}
+The high-domain bound \eqref{eq:Q67:4.5} and the low-domain proof
+cover \(d>\allowbreak 0\) with the same directions.
+At \(d=\allowbreak 0\), \(g=\allowbreak 0\) and \(K\) may be nonzero; leaf integration
+makes all path, spider and tree messages one.
+Since \(0\le\allowbreak  E_0,\allowbreak E_r\le\allowbreak 1\) and \(T\) is positive,
+\fitdisplay{
+0\le E_rpT\left(E_0qf_bh_c\prod_{i=2}^kh_{b_i}f_{c_i}\right)
+\le pT\left(qf_bh_c\prod_{i=2}^kh_{b_i}f_{c_i}\right).
+}{}
+Thus all genuine equal-pair decorations satisfy the bound. Moreover,
+\begin{equation}\tag{Q67.7.1}\label{eq:Q67:7.1}
+e^{-d/2}\le(1+d/2)^{-1}\le1-3d/7\le1-2d/5
+\qquad(0\le d\le1/3).
+\end{equation}
+Apply the theorem to \(-K\), exchanging \(A/T\), \(p/q\) and every
+edge together, to obtain the reversed \(qAF^-\) ordinary eighth moment.
+The same multiple-pair direction is that of Q4-C138, whose
+all-positive-length fourth moment is proved in Section~\ref{loc:S35}:
+\fitdisplay{\E[p(T^LF)^4]\le1\qquad(L\ge1).}{}
+The triple directions have the fourth moments of Q4-C125, Q4-C129
+and Q4-C134. For their unit eighth moments, Q5-C062 gives
+\(1-d/601\), and Q5-C063 and Q5-C065 give \(1-d/500\).
+Together with \(1-2d/5\) for every list of at least five arms,
+these yield \eqref{eq:Q67:1.3}.

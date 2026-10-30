@@ -1,0 +1,1111 @@
+\subsection{The full-mean exponential lemma and the minimum-two root catalogue}\label{proof:Q5-C081}
+\paragraph{Q81.0 Local message bounds}\label{part:Q81:local-roles}
+Use the finite skew-kernel model of Section~\ref{proof:Q5-C064} and put
+\(W_n=A\bar f_{n-1}\). The root has distinct residual arm lengths
+\(2,u_1,v_1,\ldots,u_j,v_j\), where
+\[
+2<u_1<v_1<\cdots<u_j<v_j,\qquad j\ge1.
+\]
+The terminal has residual arm lengths \((1,b)\), with \(b\ge2\).
+
+For a unit connector, set \(P_{\rm unit}=\prod_{i=1}^jW_{u_i}\bar f_{v_i}\),
+except that when \(b=2,j=1,u_1=5\), take
+\(P_{\rm unit}=h_5f_{v_1}\). The message and bound are
+\begin{equation}\tag{Q81.0.1}\label{eq:Q81:unit-role}
+Y_{\rm unit}=f_2P_{\rm unit}T(p\bar f_b),\qquad
+\E Y_{\rm unit}^8\le e^{-191d/24}.
+\end{equation}
+
+For a connector of length \(L\ge2\), restrict to \(u_1=3\) and write
+\(v=v_1\). The message is
+\begin{equation}\tag{Q81.0.2}\label{eq:Q81:nonunit-message}
+Y_{\rm nonunit}=W_2\bar f_3W_v
+\prod_{i=2}^jW_{u_i}\bar f_{v_i}\,T^L(qf_b).
+\end{equation}
+It satisfies \eqref{eq:Q81:nonunit-bound}. The first pair is
+\(\bar f_3W_v\), and its direction is fixed by the arm lengths and L.
+
+These bounds include arbitrary genuine equal-pair products at the terminal
+and root. Insert the terminal product inside T or \(T^L\) and multiply
+the root product outside. Each product lies in \([0,1]\), so positivity
+bounds the decorated message by the displayed undecorated message.
+
+\paragraph{Q81.1 Original finite calculus and finite masks}
+
+Delete zero-mass atoms and use the measure on the remaining atoms. Since diagonal
+kernel entries vanish, \(p(x),\allowbreak  q(x)\ge\mu(x)>0\). All finite tree
+messages are positive: the all-equal labeling has positive mass and
+diagonal edge factors one. Both A and T are positive operators.
+
+Set
+
+\fitdisplay{
+r=Kg,\quad \sigma=Kr,\quad t=K\sigma,\quad
+ \delta_i=\|K^{i}\one\|_2^2,\quad
+ \theta=13/32,\quad \kappa=19/32,\quad \tau=d-\delta_2.
+}{}
+
+The C014 calculus supplies
+
+\fitdisplay{
+\|K\|^2\le\theta,\quad0\le d\le1/3,\quad
+ d^2\le \delta_2\le\theta d,\quad \delta_{i+1}\le\theta \delta_i,
+ \quad |KV(x)|\le\|V\|_2,
+}{Q81.1.1}
+\fitdisplay{
+Er=-d,\quad E\sigma=0,\quad Et=\delta_2,\quad Egr=0,
+ \qquad\kappa d\le\tau\le d-d^2\le2/9.
+}{Q81.1.2}
+
+The original two-row bound \(|K^2V(x)|^2\le\|V\|^2/3\) is used
+only in quoting specified already-paid original scalar certificates.
+It is not a spectral bound for an arbitrary compression.
+
+Define the finite quantities
+
+\fitdisplay{
+G_n(z)=\sum_{i=0}^{n-1}z^i,\quad
+ \beta_1=\beta_2=0,\quad
+ \beta_n=\sum_{i=1}^{\lfloor(n-1)/2\rfloor}(-1)^{i-1}\delta_i.
+}{}
+
+For either sign the exact finite positive convolution is
+
+\fitdisplay{
+\sum_{i=0}^n(\pm K)^i1
+ =f_n^{\pm}+\sum_{i=3}^n\beta_i f_{n-i}^{\pm},
+ \qquad \tau\le\beta_n\le d\quad(n\ge3),
+}{Q81.1.3}
+
+where \(f_n^+=f_n,\allowbreak  f_n^-=\bar f_n\). This finite identity applies at every integer length.
+
+For a rotation frequency write \(z=i\sqrt x\), \(0\le x\le\theta\),
+and \(G_n(z)=a_n+z c_n\). For \(n\ge2\),
+
+\fitdisplay{
+1-x\le a_n,c_n\le1;\qquad a_1=1,\ c_1=0.
+}{Q81.1.4}
+
+For \(n\ge3\), \(a_n\le1-x+x^2\) and \(|G_n(z)|\le1\).
+For \(n\ge4\), both coordinates are at most \(1-x+x^2\).
+The finite geometric formula proves these statements: odd indices
+have squared numerator \(1+x^n\), and even indices have
+\((1\pm x^{n/2})^2\), all divided by \(1+x\). In the positive-ending
+even case \(n\ge6\), use \(2x^2+x^5\le1\).
+We will also use
+
+\fitdisplay{
+|G_n(z)|^2\le1-7x/15\qquad(n\ge3).
+\label{eq:Q81:finite-geometric-loss}
+}{Q81.1.5}
+
+For \(n=3\), the left side is \(1-x+x^2\), and \(1-x\ge7/15\).
+For \(n=4\), it is \((1-x^2)^2/(1+x)\le1/(1+x)\le1-7x/15\).
+For every \(n\ge5\), the finite numerator is bounded by
+\((1+x^3)^2\). The remaining comparison is equivalent to
+\(8-7x-30x^2-15x^5\ge0\); this decreases on the interval and its
+value at \(13/32\) is \(1311885/33554432>0\).
+These arguments cover every integer tail.
+
+The spectral measure of g is denoted by \(\nu\). It has mass d and
+\(\int x^i\,\allowbreak  d\nu=\delta_{i+1}\). Apply the frequency inequalities through the spectral theorem for this kernel.
+
+\paragraph{Q81.1.1 Actual extra pairs and their finite masks}
+
+C067 gives \(h_u f_v\le e^{R_{uv}-3d}\) for every \(4\le u<v\),
+where \(R_{uv}=\sum_{a=u}^{v-1}K^a g\). C014 gives the exact exceptional
+loss \(2d-\delta_2\) at \(u=3\). Full reversal gives, for negative pairs,
+
+\fitdisplay{
+\prod_i W_{u_i}\bar f_{v_i}\le e^{S-\Gamma},\quad
+ S=K U(-K)g,\quad
+ U(z)=\sum_i\sum_{a=u_i}^{v_i-1}z^{a-1},
+}{Q81.1.6}
+\fitdisplay{
+\Gamma=3jd\ (u_1\ge4),\qquad
+ \Gamma=2d-\delta_2+3(j-1)d\ (u_1=3).
+}{Q81.1.7}
+
+The intervals are disjoint, so U is a finite zero-one mask. Separating
+the four residue classes at \(i\sqrt x\) gives, for every finite
+zero-one or [0, 1]-coefficient mask Q,
+
+\fitdisplay{
+|Q(i\sqrt x)|^2\le\frac{1+x}{(1-x^2)^2},\qquad
+ \|Q(K)\|^2\le\frac{32768}{16245}<\frac{100}{49}.
+}{Q81.1.8}
+
+Geometric series bound the finite positive subcollections in these sums. Consequently
+
+\fitdisplay{
+\|U(-K)g\|\le
+ \begin{cases}(3/8)\sqrt d,&u_1\ge4,\\
+ (1/4)\sqrt d,&u_1\ge5,\\
+ (3/5)\sqrt d,&u_1=3,
+ \end{cases}
+}{Q81.1.9}
+\fitdisplay{
+ES\le d/12\ (u_1\ge4),\qquad
+ ES\le \delta_2+d/12\ (u_1=3).
+}{Q81.1.10}
+
+The positive mean terms after excluding the first quadratic term are
+at most \(\delta_4/(1-\theta^2)<d/12\). For a single pair starting at three,
+\(U=z^2G_h(z)\), \(h=v-3\ge1\), and \(ES\le \delta_2\).
+
+When \(u_{1}=3\) the mandatory quadratic coefficient gives
+
+\fitdisplay{
+U=u-i\sqrt x\,w,\quad
+ -6x/5\le u\le-x/2,\qquad -x/2\le w\le6x/5.
+}{Q81.1.11}
+
+For a single such pair, the stronger form is
+\(U=-x(a_h+z c_h)\), where \(a_h\in[1-x,\allowbreak  1]\),
+\(c_h\in[0,\allowbreak  1]\), and \(c_h\ge1-x\) if \(h\ge2\).
+
+At \(d=0,\allowbreak  g=0\) on every retained atom. K need not be zero. Successive
+leaf integration nevertheless makes every actual message in this
+manuscript equal to one. All endpoint assertions follow directly.
+Every subsequent division by d assumes \(d>0.\)
+
+\paragraph{Q81.2 A signed-mean exponential lemma}\label{part:Q81.2}
+
+Theorem T086.1. Let W be any finite real variable with
+\(|W|\le U\) and \(EW^2\le\theta U^2\), where \(\theta=13/32\).
+For every \(s\ge0\),
+
+\fitdisplay{
+\boxed{Ee^{sW}\le
+ \exp\{sEW+(17/64)s^2U^2\}.}
+}{Q81.2.1}
+
+Consequently, for every real vector V in the original kernel model,
+
+\fitdisplay{
+\boxed{Ee^{8KV}\le e^{8E(KV)+17\|V\|_2^2}.}
+}{Q81.2.2}
+
+The case \(U=0\) is immediate. For \(U>0\), put \(m=EW\),
+\(v=E(W-m)^2\), \(M=U-m\). The cases \(M=0\) or \(v=0\) follow
+directly. Otherwise the quadratic Hermite interpolant tangent to
+\(e^{sw}\) at \(m-v/M\) and agreeing at U majorizes it on \([-U,U]\):
+its remainder has the sign of \((w-m+v/M)^2(w-U)\le0\).
+The lower contact lies in the interval since \(v\le U^2-m^2\).
+Matching the first two moments therefore gives
+
+\begin{equation}\tag{Q81.2.3}\label{eq:Q102:3.3}
+Ee^{sW}\le e^{sm}Ee^{sL(B-\pi)},\qquad
+L=M+v/M,\qquad \pi=\frac{v}{M^2+v},
+\end{equation}
+
+where B is Bernoulli with mean pi. For \(m\ge0\),
+\(L\le(1+\theta)U\). The centered two-point log moment has second
+derivative at most \(L^2/4\); integrating twice gives the coefficient
+\((1+\theta)^2/8<17/64\).
+
+For \(m\le0\), put \(u=-m/U\in[0,\sqrt\theta]\). Increasing the raw
+second moment to \(\theta U^2\) enlarges L and decreases \(y=1-2\pi\),
+giving
+
+\begin{equation}\tag{Q81.2.4}\label{eq:Q102:3.4}
+\begin{gathered}
+L/U\le\ell(u)=\frac{1+\theta+2u}{1+u},\qquad
+y\ge y(u)=\frac{\kappa+2u+2u^2}{1+\theta+2u}\ge0.
+\end{gathered}
+\end{equation}
+
+The Bernoulli bound is
+
+\begin{equation}\tag{Q81.2.5}\label{eq:Q102:3.5}
+Ee^{t(B-\pi)}\le
+\exp\left\{\frac{1-2\pi}{4\log((1-\pi)/\pi)}t^2\right\}.
+\end{equation}
+
+Indeed, put \(a=\frac12\log((1-\pi)/\pi)\). The function
+\(z\mapsto\log\cosh\sqrt z\) is concave on \(z\ge0\), since
+\(\tanh a/a\) decreases; the derivative test is
+\((\tanh a-a\operatorname{sech}^2a)'=2a\operatorname{sech}^2a\tanh a\ge0\).
+Apply the tangent inequality at \(a^2\) to \((a-t/2)^2\) in
+\(Ee^{t(B-\pi)}=e^{t\tanh(a)/2}\cosh(a-t/2)/\cosh a\).
+The endpoints follow by continuity.
+
+The positive-term integral for arctanh gives
+
+\fitdisplay{
+\log\frac{1+y}{1-y}\ge2(y+y^3/3),\qquad0\le y<1.
+}{}
+
+Thus the coefficient in (Q81.2.3) is at most
+\(L^2/[8(1+y^2/3)]\). It remains to prove
+
+\begin{equation}\tag{Q81.2.6}\label{eq:Q102:3.6}
+8\ell(u)^2\le17(1+y(u)^2/3)
+\qquad(0\le u\le\sqrt\theta).
+\end{equation}
+
+Set \(A_0=45+64u\) and \(B_0=19+64u+64u^2\). Then
+\(\ell=A_0/[32(1+u)]\) and \(y(u)=B_0/A_0\). Clearing positive
+denominators reduces (Q81.2.6) to \(\mathcal R(u)\ge0\), where
+
+\fitdisplay{
+\mathcal R(u)=2176(1+u)^2(3A_0^2+B_0^2)-3A_0^4.
+}{}
+
+Expansion gives the certificate
+
+\begin{equation}\tag{Q81.2.7}\label{eq:Q102:3.7}
+\begin{aligned}
+\mathcal R(u)={}&1167597+918784u+1048576u^3+919552u^4\\
+&+35651584u^5+8912896u^6
++8564224(2u^2-1/4)^2.
+\end{aligned}
+\end{equation}
+
+Every term is nonnegative for \(u\ge0\), proving (Q81.2.1).
+Applying the row and spectral bounds in (Q81.1.1) with
+\(W=KV\), \(U=\|V\|_2\), and \(s=8\) gives (Q81.2.2).
+
+\paragraph{Q81.3 The unit terminal and a complete correlated frequency estimate}
+
+For \eqref{eq:Q81:unit-role}, use only the terminal comparisons of
+Lemma~\ref{lem:ordinary-unit-inner-terminal}. For \(b\ge3\), take
+\(\bar R,\allowbreak m_b,\allowbreak k_b,\allowbreak t_0,\allowbreak e,\allowbreak V_b,\allowbreak\gamma\) from
+\eqref{eq:ordinary-unit-inner:terminal-data}, writing
+\(m=m_b\), \(k=k_b\), and \(V=V_b\).
+For \(b=2\), take \(m=k=1\), \(\gamma=d-\delta_2/2\), and
+\(\sigma=K^2g\) in \eqref{eq:ordinary-unit-inner:terminal2}.
+The terminal lemma has no restriction on the receiving length;
+the receiving factor here remains the actual \(f_2\).
+
+Since \(f_{2}=p+r,\allowbreak \) the arithmetic mean of the two positive factors yields
+
+\fitdisplay{
+f_2T(p\bar f_b)\le
+ \begin{cases}
+ [1-\gamma/2+K(1+z)g/2]^2,&b=2,\\
+ m^2[1-\gamma/2+KQ(z)g/2]^2,&b\ge3,
+ \end{cases}
+ \quad z=-K,\quad Q(z)=1+kzG_{b-1}(z).
+}{Q81.3.5}
+
+The square bases are nonnegative actual arithmetic means. Thus their
+sixteenth powers are bounded by the corresponding exponentials,
+including any zero boundary by continuity.
+
+\paragraph{Q81.3.1 Single pair starting at three, \(b\ge 3\)}
+
+For every \(N\ge 2,\allowbreak  h\ge 1,\allowbreak \) k in [1, \(6/5\)] and x in [0, theta],
+
+\fitdisplay{
+\boxed{|1+kzG_N(z)+z^2G_h(z)|^2\le1-159x/160,
+ \qquad z=i\sqrt x.}
+}{Q81.3.6}
+
+The real and normalized imaginary coordinates are
+\(1-kx c_N-xa_h\) and \(ka_N-xc_h\). They are positive:
+their lower bounds are \(17/160\) and \(3/16.\) It is therefore legitimate
+to upper-bound each coordinate before squaring.
+
+For \(h=1,\allowbreak  N=2,\allowbreak \) the squared norm minus one, divided by x, is
+
+\fitdisplay{
+k^2-2k-2+(k+1)^2x.
+}{}
+
+It is increasing in x and convex in k; at \(x=\theta\) its k endpoints
+are -\(11/8\) and -\(159/160.\)
+For \(h=1,\allowbreak  N\ge 3,\allowbreak \) the coordinate upper bounds are
+\(1-(k+1)x+kx^2\), \(k(1-x+x^2)\). The same difference quotient is
+
+\fitdisplay{
+k^2-2k-2+(-k^2+4k+1)x+(k^2-2k)x^2-k^2x^3(1-x).
+}{}
+
+The final two terms are nonpositive. The remaining endpoint values
+are -\(11/8\) and -\(951/800,\allowbreak \) both at most -\(159/160.\)
+For \(h\ge 2,\allowbreak  N=2\) use coordinates
+\(1-(k+1)x+x^2\), \(k-x+x^2\). The quotient is
+
+\fitdisplay{
+k^2-2k-2+(k^2+3)x-x^2-x^3+x^4.
+}{}
+
+Its last three terms are nonpositive. The remaining endpoints are
+-\(11/8\) and -\(37/32.\) Finally, for \(h\ge 2,\allowbreak  N\ge 3,\allowbreak \) use
+\(1-(k+1)x+(k+1)x^2\), \(k-(k+1)x+(k+1)x^2\). The quotient is
+
+\fitdisplay{
+k^2-2k-2+(-k^2+2k+3)x+(k^2-1)x^2-(k+1)^2x^3(1-x).
+}{}
+
+Drop only its last nonpositive term. The remainder increases in x
+and is convex in k; its endpoints are -\(11/8\) and -\(32733/25600,\allowbreak \)
+both at most -\(159/160.\) This covers the four cases.
+
+\paragraph{Q81.3.2 General masks for the other \(b\ge 3\) unit rows}\label{part:Q81.3.2}
+
+If \(u_{1}=3\) and \(j\ge 2,\allowbreak \) (Q81.1.11) gives
+
+\fitdisplay{
+|Q+U|^2\le(1-35x/32)^2+x(6/5+x/2)^2<3/2.
+}{Q81.3.7}
+
+The coordinates remain positive. The excess over one is
+\(-299x/400+(1225/1024+6/5)x^2+x^3/4\), at most
+\(5/12+1/56<1/2\), using \(x^2<1/6,\allowbreak  x^3<1/14.\)
+
+For every mask starting in degree at least three,
+
+\fitdisplay{
+\boxed{|Q+U|^2\le4/3.}
+}{Q81.3.8}
+
+To prove it, put \(\delta=x^2/(1-x^2)\le 6x^2/5.\) The positive upper tail
+in each coordinate is at most delta. Both total coordinates remain
+positive; the possible negative tails have magnitudes at most
+\(x^3/(1-x^2)\) and \(x/(1-x^2),\allowbreak \) respectively. For \(N=2\) the upper coordinates
+are \(1-kx+6x^2/5\), \(k+6x^2/5\). Their squared norm is
+
+\fitdisplay{
+1+(k^2-2k)x+(k^2+12/5)x^2+(36/25)(x^4+x^5).
+}{}
+
+For \(N\ge 3\) they are \(1-kx+(k+6/5)x^2\) and
+\(k-kx+(k+6/5)x^2\). Their squared norm is
+
+\fitdisplay{
+1+(k^2-2k)x+(2k+12/5-k^2)x^2+k^2x^3
+ +(k+6/5)(6/5-k)x^4+(k+6/5)^2x^5.
+}{}
+
+Both are convex in \(x\ge 0\) and in k on the specified interval.
+Thus check \(x=0,\allowbreak \) theta and \(k=1,\allowbreak  6/5.\) At \(x=\theta,\allowbreak \) with denominator
+838860800, the four numerators are respectively
+1015054740, 1089601940, 1080009045, 1111336016.
+Each is below four thirds of that denominator; for the largest,
+the cross-multiplication difference is \(21435152>0.\)
+Convexity extends these endpoint bounds to the interval.
+
+\paragraph{Q81.4 The unit-connector estimate}\label{part:Q81:unit-estimate}
+
+For \(b\ge 3\) combine (Q81.3.5) and (Q81.1.6) before using (Q81.2.2). In every case,
+
+\fitdisplay{
+\log EY^8\le
+ -8(\beta_b+\gamma-ke+d+\Gamma-ES)
+       +17\|(Q+U)g\|^2.
+}{Q81.4.1}
+
+For \(u_1=3\), \(j=1\), the last line of \eqref{eq:ordinary-unit-inner:terminal-long} and (Q81.3.6) make the right side at most
+
+\fitdisplay{
+-23d+(23093/800)\delta_2\le-10d.
+}{}
+
+For \(u_{1}=3,\allowbreak  j\ge 2\) use \(\Gamma\ge 5d-\delta_2,\allowbreak  ES\le \delta_2+d/12,\allowbreak \) and (Q81.3.7).
+The upper divided by d is at most
+\(-64+(1144/25)\theta+2/3+51/2<-10\).
+For \(u_{1}\ge 4\) use \(\Gamma\ge 3d,\allowbreak  ES\le d/12,\allowbreak \) and (Q81.3.8). The upper is
+\((-48+(744/25)\theta+2/3+68/3)d<-10d\).
+Further pairs only strengthen these losses. Thus every \(b\ge 3\) row
+has \(EY^8\le e^{-10d}\).
+
+For \(b=2\) the common logarithmic expression is
+
+\fitdisplay{
+-8\gamma-8d-8\Gamma+8ES+17\|(1+z+U)g\|^2.
+}{Q81.4.2}
+
+For a single \(u_{1}=3\) pair, \(1+z+U=G_{h+2}\). By (Q81.1.5), (Q81.4.2) is at most
+\(-15d+(181/15)\delta_2\le-(4847/480)d<-10d\).
+For \(u_{1}=3,\allowbreak  j\ge 2,\allowbreak \) (Q81.1.11) gives
+
+\fitdisplay{
+|1+z+U|^2\le(1-x/2)^2+x(1+x/2)^2<5/4.
+}{}
+
+Use \(\Gamma\ge 5d-\delta_2\) and \(ES\le \delta_2+d/12\) in (Q81.4.2); the result is below -10d.
+For \(u_{1}\ge 4,\allowbreak  j\ge 2,\allowbreak \) (Q81.1.9) and \(\sqrt{1+\theta}<6/5\) give
+\(\|(1+z+U)g\|^2<(6/5+3/8)^2d<5d/2\).
+\(\Gamma\ge 6d\) and \(ES\le d/12\) again make (Q81.4.2) below -10d.
+
+It remains to pay every single pair with \(u\ge 4.\) At \(u=4\) keep its
+negative direction, so \(U=z^3G_h(z)\). At \(u=5\) use the positive
+exception in \hyperref[part:Q81:local-roles]{paragraph Q81.0}; its primitive is
+\(U=z^4G_h(-z)\). In both cases the real coordinate of 1+z+U
+lies in [0, \(1+x^2\)], its normalized imaginary coordinate in [0, 1],
+and \(ES\le 0.\) Therefore
+
+\fitdisplay{
+|1+z+U|^2\le1+x+2x^2+x^4.
+}{}
+
+With \(\Gamma=3d,\allowbreak \) (Q81.4.2) is at most
+\(-23d+21\delta_2+34\delta_3+17\delta_5\le-8d\).
+The last comparison has surplus \(413535/1048576\) at \(x=\theta.\)
+
+For every \(u\ge 6\) keep the negative direction. The single interval has
+\(|U|\le x^{5/2}\sqrt{1+x}\), so
+
+\fitdisplay{
+|1+z+U|^2\le(1+x)(1+(2/3)x^2)^2<7/4.
+}{Q81.4.3}
+
+The upper is increasing; at theta the numerator and denominator are
+130816125 and 75497472. Its comparison with \(7/4\) has positive
+difference 1304451 in that denominator. Using \(ES\le d/12,\allowbreak \)
+(Q81.4.2) is now at most
+
+\fitdisplay{
+\left[-40+119/4+2/3+4\theta\right]d=-191d/24.
+}{}
+
+The cases above prove \eqref{eq:Q81:unit-role} for \(b\ge 2,\allowbreak \) every first short arm,
+every finite number of pairs, and every finite last arm.
+
+\paragraph{Q81.5 The exchanged first pair for the nonunit family}
+
+For \eqref{eq:Q81:nonunit-message}, exchange the first pair of arms; the preceding direction has factor \(W_3\bar f_v\).
+
+Apply A, a positive operator, to the negative finite convolution for
+\(\bar f_{v-1}\). Since
+
+\fitdisplay{
+A\sum_{i=0}^{v-1}(-K)^i1=2-\beta_v-\sum_{i=0}^v(-K)^i1,
+}{}
+
+retaining the real final term \(\beta_{v-1}W_1=\beta_{v-1}p\) gives
+
+\fitdisplay{
+W_v\le2-\beta_v-S_v^- -\beta_{v-1}p,
+ \qquad S_v^-=\sum_{i=0}^v(-K)^i1.
+}{Q81.5.1}
+
+Also \(\bar f_3=S_3^- -d\). Set
+
+\fitdisplay{
+h=v-3\ge1,\quad \alpha=\beta_v,\quad\beta=\beta_{v-1},\quad
+ U(z)=z^2G_h(z),\quad S=K U(-K)g,
+ \quad\Gamma=d+\alpha+\beta.
+}{Q81.5.2}
+
+Here \(S_v^- -S_3^-=S\). Adding (Q81.5.1) to the b3 identity and using
+AM--GM on two nonnegative actual factors proves
+
+\fitdisplay{
+\boxed{\bar f_3W_v\le\exp\{-S-\beta g-\Gamma\},\qquad
+ \Gamma\ge3d-2\delta_2\ge35d/16.}
+}{Q81.5.3}
+
+Exchanging the first pair changes the sign of S and gives the displayed loss.
+
+Write \(G_h=a_h+z c_h\), with the conventions of (Q81.1.4), and put
+\(\zeta=\delta_2/d\) when \(d>0.\) Direct skew integration gives
+
+\fitdisplay{
+S=KU g,\quad ES=\int x a_h\,d\nu\in[\kappa \delta_2,\delta_2],
+ \quad E(Ug)=-\int x c_h\,d\nu.
+}{Q81.5.4}
+
+For \(h=1,\allowbreak  \alpha=\beta=d\), \(ES=\delta_2\), \(E(Ug)=0\).
+For \(h=2,\allowbreak  \beta=d\), \(ES=\delta_2\), \(E(Ug)=-\delta_2\).
+For \(h\ge 3,\allowbreak \)
+
+\fitdisplay{
+\tau\le\beta\le d-\kappa \delta_2,\quad |G_h|\le1,
+ \quad E(Ug)\le-\kappa \delta_2.
+}{Q81.5.5}
+
+The bound on beta is the finite alternating comparison
+\(\beta_n\le d-\delta_2+\delta_3\le d-\kappa \delta_2\) for \(n\ge 5.\)
+For all \(h\ge 2,\allowbreak  E(Ug)\le-\kappa \delta_2\), while
+\(\tau\le\beta\le d\). We retain these same-variable correlations.
+
+\paragraph{Q81.6 The base table and its full-mean conversion}
+
+Put \(X=T^L(qf_b)\), \(Y_0=W_2X=(p-r)X\), \(L\ge 2.\)
+The C071/C075/C076 actual positive masks have the form
+
+\fitdisplay{
+0<X\le C[Bq+Br+Z-a],\qquad
+ Y_0\le CB\left(1+\frac{Z-a}{2B}\right)^2,
+ \quad Z=KV.
+}{Q81.6.1}
+
+The base of the square is the arithmetic mean of actual nonnegative
+upper factors. The table below records the finite envelopes and scalar bounds used in this proof.
+
+For \(b=2\) set \(\gamma=d-\delta_2/2,\allowbreak  B_2=1-\gamma\).
+For \(b\ge 3\) use the same actual positive terminal remainder
+
+\fitdisplay{
+R=KG_{b-1}(K)g,\quad m=1-\beta_b/2,\quad k=1/m,
+ \quad e=d-\beta_{b+2},\quad \rho=E(rR),
+}{}
+\fitdisplay{
+\gamma=k\beta_{b+1}-k^2ER^2/2,\quad a_1=ke,
+ \quad B_*=\gamma+a_1.
+}{Q81.6.2}
+
+Here \(1\le k\le6/5\), \(0\le e\le \delta_2\),
+\(\kappa \delta_2\le e,\allowbreak  \rho\le \delta_2\), \(\gamma\le kd\),
+\(a_1\le39d/80\), and \(1-\gamma\ge17/25\).
+At a frequency, writing \(G_{b-1}=a_N+z c_N\),
+\(e=\int x c_N\,\allowbreak  d\nu\) and \(\rho=\int x a_N\,\allowbreak  d\nu\).
+Define
+
+\fitdisplay{
+P_n(z)=G_n(z)+z^{n+1}\quad(b=2),\qquad
+ P_n(z)=G_n(z)+kz^{n+1}G_{b-1}(-z)\quad(b\ge3).
+}{Q81.6.3}
+
+
+\begingroup\small
+\setlength{\tabcolsep}{3pt}
+\setlength{\LTleft}{0pt}\setlength{\LTright}{\fill}
+\begin{longtable}{@{}>{\raggedright\arraybackslash}p{0.1200\linewidth}>{\raggedright\arraybackslash}p{0.2000\linewidth}>{\raggedright\arraybackslash}p{0.2000\linewidth}>{\raggedright\arraybackslash}p{0.2000\linewidth}>{\raggedright\arraybackslash}p{0.2000\linewidth}@{}}
+\caption{Finite masks for \(X=T^L(qf_b)\), indexed by \((b,L)\).}\label{tab:parameters:q5-c081:1}\\
+\toprule
+\((b,L)\) & C & B & a & Actual Z \\
+\midrule\endfirsthead
+\toprule
+\((b,L)\) & C & B & a & Actual Z \\
+\midrule\endhead
+\bottomrule\endfoot
+2, 2 & 1; & B2; & 0; & \(K^2(\gamma 1+r)\). \\
+\addlinespace[2pt]
+2, 3 & 1; & B2; & \(\tau\); & \(-K^2(g+\sigma)\). \\
+\addlinespace[2pt]
+2, 4 & 1; & \(B2-\tau\); & d B2; & \(K^2[\tau 1-B2 g+r+t]\). \\
+\addlinespace[2pt]
+\(2,\allowbreak L\ge 5\) & 1; & \(1-2\tau\); & \(\tau\); & \(K[\tau+z P_{L-2}(z)]g\). \\
+\addlinespace[2pt]
+\(b\ge 3,\allowbreak 2\) & \(m^2\); & \(1-\gamma\); & a1; & \(K^2(\gamma 1+kR)\). \\
+\addlinespace[2pt]
+\(b\ge 3,\allowbreak 3\) & \(m^2\); & \(1-B*\); & \(d-k \rho\); & \(K[a_{1}+z P1(z)]g\). \\
+\addlinespace[2pt]
+\(b\ge 3,\allowbreak 4\) & \(m^2\); & \(1-41d/80\); & \(\kappa d\); & \(K[41d/80+z P2(z)]g\). \\
+\addlinespace[2pt]
+\(b\ge 3,\allowbreak L\ge 5\) & \(1-d/2\); & \(1-d/2\); & \(d/2\); & \(K[d/2+z P_{L-2}(z)]g\). \\
+\end{longtable}
+\endgroup
+
+
+In this table \(z=-K\); displayed strings such as P1 designate the finite
+polynomials in (Q81.6.3), not an unspecified path input.
+
+The complete old scalar expressions are
+
+\fitdisplay{
+8\log(CB)-8a/B+8M/B+
+ \begin{cases}6D_2/B^2,&Z=K^2V_2,\\
+ (2025/128)D_1/B^2,&Z=KV_1,
+ \end{cases}
+}{Q81.6.4}
+
+with \(M\ge\max(EZ,\allowbreak  0)\) and the original specified vector bounds \(D_i.\)
+Every expression (Q81.6.4) is at most -d/10. For \(b\ge 3,\allowbreak  L=2\) it is at most
+-d/8. The improved b2L2 calculation in Section~\ref{proof:Q5-C075}, \hyperref[part:Q75.3.2]{paragraph Q75.3.2}, explicitly
+pays that original scalar, with \(D_2=\delta_2\) and
+\(M=\delta_2-\gamma d\); it is not merely a moment theorem.
+The finite positive-end-sign family \(b=2\) mod 4 is included by C071's
+same-remainder d3 payment. Its sign is not discarded here.
+
+For reference, the whole-domain normalizations for the four two-row
+rows, in their order above, are
+
+\fitdisplay{
+\frac{D_2}{B^2d}\le
+ \theta\frac{324}{169},\quad\frac{324}{169},\quad
+ \frac{217}{81}<\frac{25}{9},\quad\frac{540}{289}<2.
+}{Q81.6.5}
+
+The one-row normalizations, in their order, are
+
+\fitdisplay{
+\frac{D_1}{B^2d}\le
+ \frac{289}{256},\quad\frac{481}{400},\quad
+ \frac{27}{32},\quad\frac{18}{25};
+}{Q81.6.6}
+
+all are at most \(5/4.\) The lower B bounds are respectively
+\(13/18,\allowbreak  13/18,\allowbreak  1/2,\allowbreak  5/9,\allowbreak  17/25,\allowbreak  1/2,\allowbreak  4/5,\allowbreak  5/6.\)
+For example the b2L4 normalization is
+\((1+4/9)^2+16/27=217/81\), using \(B_2=B+\tau\).
+For \(b\ge 3,\allowbreak \) L2, use \(\theta(1+\theta)<3/5\), \(k\le 6/5,\allowbreak \)
+and \(B\ge 17/25.\) The b2 tail quotient
+\((\theta-2\theta\kappa\tau+\tau^2)/(1-2\tau)^2\)
+increases for \(0\le \tau\le 2/9\) and has endpoint \(289/256.\)
+These are the full original normalizations from Q5-C076.
+
+Set \(V_0=V/B\) in (Q81.6.1). Changing (Q81.6.4) to the exact full-mean
+17 scalar (Q81.2.2) costs at most \((17\theta-6)D_2/B^2=(29/32)D_2/B^2\)
+in a two-row case, and \((17-2025/128)D_1/B^2=(151/128)D_1/B^2\)
+in a one-row case. Actual \(EZ\le M\) is retained. Therefore
+
+\fitdisplay{
+\mathcal E_0:=8\log(CB)-8a/B+8E(KV_0)+17\|V_0\|^2
+ \le c_0d,\qquad \|V_0\|^2\le5d/4,
+}{Q81.6.7}
+\fitdisplay{
+c_0=5/2\ (b=2),\qquad
+ c_0=8/5\ (b\ge3,L=2),\qquad
+ c_0=3/2\ (b\ge3,L\ge3).
+}{Q81.6.8}
+
+The arithmetic is
+\(-1/10+(29/32)(25/9)=3481/1440<5/2\),
+\(-1/8+(29/32)(540/289)=1813/1156<8/5\), and
+\(-1/10+(151/128)(5/4)=3519/2560<3/2\).
+The norm bound in (Q81.6.7) follows from (Q81.6.5) after multiplication by
+theta and from (Q81.6.6). 
+
+\paragraph{Q81.6.1 Finite coefficient facts used below}
+
+For every finite \(n\ge 3\) in (Q81.6.3), writing \(P_n=A_P+zB_P\),
+
+\fitdisplay{
+1-x\le A_P,B_P\le1.
+}{Q81.6.9}
+
+This is the exact C075 finite coefficient lemma. One direct
+proof separates n modulo four in the finite alternating sums
+\(S_a=\sum_{i=0}^a(-x)^i\). For \(n=4a\) the two additions have signs
++,+ and magnitudes \(kx^{2a+1}c_N,\allowbreak  kx^{2a}a_N\); for \(n=4a+1\) they
+have signs -,+ and magnitudes \(kx^{2a+1}a_N,\allowbreak  kx^{2a+1}c_N\);
+for \(n=4a+2\) they have signs -,- and magnitudes
+\(kx^{2a+2}c_N,\allowbreak  kx^{2a+1}a_N\); and for \(n=4a+3\) they have signs
++,- and magnitudes \(kx^{2a+2}a_N,\allowbreak  kx^{2a+2}c_N\).
+Each fits inside the final alternating interval because \(kx<1\) and
+\(kx^2<1.\) At \(n=3\) its second coordinate is directly at least 1-x.
+The four residue classes cover every integer n. The b2 polynomial is included
+by \(k=1,\allowbreak  N=1.\) For b2 also \(A_P\le1-x+x^2\).
+
+The two short positive-terminal polynomials have exact coordinates
+
+\fitdisplay{
+P_1:\ A_P=1-kx a_N,\ B_P=kx c_N;
+ \qquad P_2:\ A_P=1-kx^2c_N,\ B_P=1-kx a_N.
+}{Q81.6.10}
+
+In particular \(A_{P_1}\ge41/80\), \(A_{P_2}\ge4/5\).
+In the later tail we may use the weaker bounds \(A_P\ge 1/2\) and
+\(B_P\ge 3/8,\allowbreak \) as well as their upper bound one.
+
+\paragraph{Q81.7 Single exchanged pair: terminal \(b=2,\allowbreak \) every \(L\ge 2\)}
+
+Let \(Y_1=Y_0\bar f_3W_v\). Combine the two actual remainders before
+applying (Q81.2.2). Define
+
+\fitdisplay{
+\Delta=\|V_0-Ug-\beta\one\|^2-\|V_0\|^2.
+}{Q81.7.1}
+
+Equations (Q81.5.3),(Q81.6.1) give the exact scalar certificate
+
+\fitdisplay{
+\log EY_1^8\le\mathcal E_0-8\Gamma+
+                         17\Delta-8ES.
+}{Q81.7.2}
+
+We prove, throughout the full continuous original domain,
+
+\fitdisplay{
+\boxed{17\Delta-8ES\le7d\qquad(b=2,L\ge2).}
+}{Q81.7.3}
+
+Together with (Q81.6.8) and \(\Gamma\ge 35d/16\) this proves
+\(EY_1^8\le e^{-8d}\).
+In the computations below \(\zeta=\delta_2/d\in[d,\allowbreak  \theta]\).
+Spectral Cauchy also gives \(\delta_3\ge \delta_2^2/d\).
+
+\paragraph{Q81.7.1 \(L=2\)}
+
+Here \(V_0=(\gamma+z^2)g/B\), \(B=B2.\) Put \(\lambda=\gamma/B.\)
+Then \(0\le\lambda\le5/13\), because
+\(\gamma\le d-d^2/2\le5/18\). Since \(EV0=0,\allowbreak \) the beta cross term is
+\(\beta^2+2\beta E(Ug)\le\beta^2\). The frequency increment is
+
+\fitdisplay{
+x^2|G_h|^2-(2/B)x^2a_h+2\lambda x a_h.
+}{Q81.7.4}
+
+For \(h=1,\allowbreak \) this gives \(\Delta\le d^2+2\lambda \delta_2-\delta_3\).
+For \(h=2,\allowbreak \) use \(|G_2|^2=1+x,\allowbreak  a_2=1\) to get
+\(\Delta\le d^2+2\lambda \delta_2-\kappa \delta_3\).
+As \(ES=\delta_2\) in both cases, their cost divided by d is at most
+
+\fitdisplay{
+17/3+(66/13)\zeta-17\kappa\zeta^2
+ \le17/3+\frac{(66/13)^2}{68\kappa}<20/3<7.
+}{Q81.7.5}
+
+For the strict comparison use \(34848<54587.\) The h1 quadratic is
+stronger. The concave quadratic bounds apply throughout the stated interval.
+
+For \(h\ge 3,\allowbreak  |G_h|^2\le1\) and \(a_h\ge\kappa\) make the d3 term
+in (Q81.7.4) nonpositive. By (Q81.5.5),
+
+\fitdisplay{
+\Delta\le2\lambda \delta_2+d^2(1-\kappa\zeta)^2.
+}{}
+
+Thus its cost divided by d is at most
+
+\fitdisplay{
+(170/13-8\kappa)\zeta+(17/3)(1-\kappa\zeta)^2.
+}{}
+
+This increases on [0, theta]: its derivative is at least
+\(170/13-8\kappa-34\kappa/3>0\).
+At theta it is \(20904801/3145728<7\). This proves the full L2 row.
+
+\paragraph{Q81.7.2 \(L=3\)}
+
+Here \(V_0=(z+z^3)g/B\), \(B=B2,\allowbreak \) and \(EV_0=\tau/B\).
+Because \(\beta\le d\) and \(2\tau/B\ge 2\kappa d>d,\allowbreak \) the entire beta cross
+\(\beta^2-2\beta EV_0+2\beta E(Ug)\) is nonpositive.
+The remaining increment is at most
+
+\fitdisplay{
+\int x^2\{1+x+(2/B)(1-x)\}\,d\nu
+ \le\int\frac{x^2(49-23x)}{13}\,d\nu.
+}{Q81.7.6}
+
+Use \(B\ge 13/18.\) After subtracting \(8ES\ge 8\kappa\) d2, the frequency
+upper has its maximum at \(x=\theta\) or zero: its quotient by x is
+increasing, since \(49-46x>0.\) At theta the value is
+\(217217/32768<7\). This proves L3.
+
+\paragraph{Q81.7.3 \(L=4\)}
+
+Now \(B=B2-\tau\) and
+\(V_0=[\tau+B_2z+z^2+z^4]g/B\), so \(EV_0=B_2d/B\).
+The frequency increment excluding beta is
+
+\fitdisplay{
+x^2|G_h|^2-(2/B)x^2(1-x)a_h+2x^2c_h
+                 +(2\tau/B)(xa_h+x^2c_h).
+}{Q81.7.7}
+
+The beta term is at most \(\tau^2-2\tau B_2d/B\): the function
+\(\beta^2-2\beta B_2d/B\) decreases on [tau, d], and \(EUg\le 0.\)
+Combining it with the last term of (Q81.7.7) gives a nonpositive quantity.
+Indeed it suffices that
+
+\fitdisplay{
+2[B_2-(1+\theta)\zeta]-B(1-\zeta)\ge0.
+}{}
+
+Its exact left side is
+\(1-(1+2\theta)\zeta-\zeta(5-3\zeta)d/2\).
+It decreases in both variables on the original rectangle, and at
+\(\zeta=\theta,\allowbreak  d=1/3\) equals \(47/6144>0.\)
+
+In the remainder of (Q81.7.7), use \(B\le 1,\allowbreak  a_h\ge 1-x,\allowbreak  c_h\le 1,\allowbreak \) and \(|G_h|^2\le 1+x.\) This gives
+
+\fitdisplay{
+\Delta\le\int x^2(1+5x-2x^2)\,d\nu.
+}{}
+
+After subtraction of 8kappa d2 the frequency quotient by x increases,
+and its endpoint value is \(2961647/524288<7\). This proves L4.
+
+\paragraph{Q81.7.4 Every \(L\ge 5\)}
+
+Here \(V_0=[\tau+zP_n]g/B\), \(n=L-2\ge 3,\allowbreak  B=1-2\tau\ge 5/9.\)
+Write \(Pn=A+zC.\) In this b2 family,
+\(1-x\le A,\allowbreak  C\le1\), \(A\le1-x+x^2\), and \(EV_0\ge\kappa d/B\).
+For \(h=1,\allowbreak \) the frequency term is at most
+\((1-2\kappa/B)\delta_3+(2\tau/B)\delta_2\).
+With \(\beta=d,\allowbreak \) the constant term is at most \(d^2-2\kappa d^2/B\).
+Since \(\tau \delta_2\le\kappa d^2\), these give \(\Delta\le d^2\).
+Thus \(17\Delta-8ES\le9d^2\le3d\).
+
+For \(h\ge 2,\allowbreak \) the frequency cross satisfies
+
+\fitdisplay{
+A c_h-C a_h\le(1-x+x^2)-(1-x)^2=x.
+}{Q81.7.8}
+
+The terms involving tau and beta together are at most
+
+\fitdisplay{
+\tau d\{1-2\kappa\zeta-(2/B)(\kappa-\zeta)\}
+ \le(73/512)\tau d\le(73/2304)d.
+}{Q81.7.9}
+
+To see this, use \(\beta^2\le \beta\) d, \(\beta\ge \tau,\allowbreak  EUg\le -\kappa\) d2,
+\(EV0\ge \kappa\) d/B, \(ES\le \delta_2,\allowbreak \) and \(B\le 1.\) The coefficient of beta
+before this substitution is negative. Its final upper is
+\(1-2\kappa+2\theta\zeta\le73/512\).
+
+Equations (Q81.7.8)--(Q81.7.9) therefore give
+
+\fitdisplay{
+\Delta\le \delta_3+(23/5)\delta_4+(73/2304)d.
+}{}
+
+Consequently
+
+\fitdisplay{
+17\Delta-8ES\le
+ \left[17\theta^2+(391/5)\theta^3+1241/2304-8\kappa\theta\right]d
+ =\frac{9817163}{1474560}d<7d.
+}{Q81.7.10}
+
+Use \(d3\le \theta\) d2, \(d4\le \theta^2\delta_2,\allowbreak \) followed by \(\delta_2\le \theta\) d;
+the coefficient being multiplied by d2 is positive. This proves
+every integer \(L\ge 5\) and completes (Q81.7.3).
+
+\paragraph{Q81.8 Single exchanged pair: every \(b\ge 3\) and every \(L\ge 2\)}
+
+For these rows we prove
+
+\fitdisplay{
+\boxed{17\Delta-8ES\le8d.}
+}{Q81.8.1}
+
+The same exact definition (Q81.7.1) and the same actual terminal parameters
+are used. Together with (Q81.6.8), this yields exp(-79d/10) at L2 and exp(-8d)
+at every \(L\ge 3.\)
+
+\paragraph{Q81.8.1 \(L=2\)}
+
+Put \(c=k/B\) and \(\lambda=\gamma/B.\) Then
+\(c\le30/17\), \(\lambda\le cd\), and
+
+\fitdisplay{
+V_0=[\gamma+kz^2G_N(-z)]g/B,\quad N=b-1\ge2,
+ \qquad EV_0=c e\ge c\kappa \delta_2.
+}{Q81.8.2}
+
+Its frequency increment is
+
+\fitdisplay{
+x^2|G_h|^2+2\lambda x a_h
+       -2c x^2(a_Na_h-xc_Nc_h).
+}{Q81.8.3}
+
+For \(h=1,\allowbreak  \beta=d\) and \(EUg=0.\) Combining the gamma and beta terms
+gives at most \(d^2+2c\theta d \delta_2\), since \(e\ge \kappa\) d2.
+The remaining frequency contribution is at most \(-3\delta_3/16\).
+Thus
+
+\fitdisplay{
+17\Delta-8ES
+ \le17d^2+60\theta d \delta_2-8\delta_2-(51/16)\delta_3
+ \le(17/3)d+\delta_2/8<6d.
+}{Q81.8.4}
+
+For \(h=2,\allowbreak  \beta=d\) and \(EUg=-\delta_2.\) The gamma plus constant part is
+at most \(d^2,\allowbreak \) because \(ctheta<1.\) The cross in (Q81.8.3) is nonnegative
+before its minus sign: \(a_N-xc_N\ge1-2x>0\). Hence
+\(\Delta\le d^2+\delta_3+\delta_4\), and
+
+\fitdisplay{
+17\Delta-8ES\le[17/3+\{17\theta(1+\theta)-8\}\theta]d<7d.
+}{Q81.8.5}
+
+For \(h\ge 3,\allowbreak  |Gh|\le 1\) and
+\(a_Na_h-xc_Nc_h\ge1-3x+x^2\ge-55/1024\).
+The part of (Q81.8.3) not involving gamma is at most
+\((5177/4352)\delta_3<(6/5)\delta_3\).
+The gamma and beta terms together are at most \(d^2.\) For this bound, Write \(\beta=t\) d,
+\(1-\zeta\le t\le1-\kappa\zeta\). After using \(\lambda\le cd,\allowbreak  EUg\le -\kappa\) d2, and (Q81.8.2), their upper divided by \(d^2\) is
+
+\fitdisplay{
+t^2+(60/17)\zeta-(893/272)t\zeta.
+}{Q81.8.6}
+
+It is convex in t. At \(t=1-\zeta\) its excess over one is
+\(\zeta[-477+1165\zeta]/272\le0\).
+At \(t=1-\kappa\) zeta that excess is
+\(\zeta[-16/17+(40071/17408)\zeta]\le0\).
+At theta the two brackets are strictly negative, with numerators
+-\(119/32\) and -\(3365/557056,\allowbreak \) respectively. Thus (\(Q81.8.6)\le 1\) throughout.
+It follows that
+
+\fitdisplay{
+17\Delta-8ES\le
+ [17/3+(102/5)\theta^2-8\kappa\theta]d
+ =\frac{54557}{7680}d<8d.
+}{Q81.8.7}
+
+This proves every \(b\ge 3\) terminal, including all finite end signs, at L2.
+
+\paragraph{Q81.8.2 \(L=3\)}
+
+Here \(V_0=[\delta+zP_1]g/B\), \(\delta=ke,\allowbreak  B\ge 1/2.\)
+Use (Q81.6.10). The general frequency increment, before beta, is
+
+\fitdisplay{
+x^2|G_h|^2+(2\delta/B)x a_h
+            +(2/B)x^2(A_Pc_h-B_Pa_h).
+}{Q81.8.8}
+
+For \(h\ge 2,\allowbreak \) all terms involving delta and beta have nonpositive sum.
+To verify this fully, write \(\beta=t\) d, \(1-\zeta\le t\le 1.\) Since
+\(EV_0=(d-k\rho)/B\ge(d-k\delta_2)/B\) and \(\delta\le k\) d2, their upper
+divided by \(d^2\) is
+
+\fitdisplay{
+t^2-2\kappa t\zeta-(2/B)[t(1-k\zeta)-k\zeta^2].
+}{}
+
+The bracket is at least \(1-(1+k)\zeta\ge17/160>0\).
+Since \(B\le 1,\allowbreak \) the last display is at most
+
+\fitdisplay{
+t^2-2t+2(k-\kappa)t\zeta+2k\zeta^2.
+}{Q81.8.9}
+
+At \(t=1\) it is \(-1+2(k-\kappa)\zeta+2k\zeta^2\);
+at \(t=1-\zeta\) it is \(-1+2(k-\kappa)\zeta+(1+2\kappa)\zeta^2\).
+Both increase in k, zeta and are negative at \(k=6/5,\allowbreak  \zeta=\theta.\)
+Convexity in t proves the assertion on the full interval.
+
+For \(h=1\) the same terms are at most \(d^2,\allowbreak \) since
+\(1-k\zeta(1+\zeta)>0\); the remaining cross in (Q81.8.8) is
+nonpositive. Thus \(\Delta\le d^2+\delta_3\), which pays (Q81.8.1).
+
+For \(h=2,\allowbreak  A_P-B_P\le1-2\kappa x\). Using \(2/B\le 4\) gives
+\(\Delta\le5\delta_3-15\delta_4/4\). As \(ES=\delta_2,\allowbreak \)
+
+\fitdisplay{
+17\Delta-8ES\le(852501/131072)d<8d.
+}{Q81.8.10}
+
+For \(h\ge 3,\allowbreak  |G_h|^2\le1\), and
+\(A_Pc_h-B_Pa_h\le1-\kappa(1+\kappa)x\).
+Hence \(\Delta\le5\delta_3-(969/256)\delta_4\), and
+
+\fitdisplay{
+17\Delta-8ES\le(65299507/8388608)d<8d.
+}{Q81.8.11}
+
+For both endpoint comparisons, the frequency upper divided by x is
+increasing on [0, theta]. Its derivative is positive there:
+respectively \(85-(255/2)x>0\) and
+\(85-(16473/128)x>0\). The estimate follows for every frequency and h.
+
+\paragraph{Q81.8.3 \(L=4\)}
+
+Now \(V_0=[\delta+zP_2]g/B\), \(\delta=41d/80,\allowbreak  B=1-41d/80\ge199/240>4/5\).
+The delta and beta terms in (Q81.8.8) have nonpositive sum for every h.
+For \(h=1,\allowbreak \) their upper divided by \(d^2\) is
+
+\fitdisplay{
+1-(2/B)[1-(k\theta+41/80)\zeta]\le-1+2\zeta<0.
+}{}
+
+For \(h\ge 2\) use \(t=\beta/d\) in [1-zeta, 1], \(EUg\le -\kappa\) d2, and
+\(EV_0\ge(d-k\delta_3)/B\). The bracket
+\(t(1-k\theta\zeta)-(41/80)\zeta\) is positive: at its smallest
+permitted t it is at least \(1-2\zeta+(39/80)\zeta^2>0\).
+Replace 1/B by one only in its negative contribution. The resulting
+upper is
+
+\fitdisplay{
+t^2-2t+2(k\theta-\kappa)t\zeta+(41/40)\zeta
+ \le-\kappa+(41/40)\theta<0.
+}{Q81.8.12}
+
+For \(h=1\) the remaining frequency cross is nonpositive, so (Q81.8.1)
+is immediate. For \(h\ge 2,\allowbreak \) the exact coordinates in (Q81.6.10) give
+
+\fitdisplay{
+A_Pc_h-B_Pa_h
+ \le x[11/5-(153/80)x].
+}{Q81.8.13}
+
+Indeed its upper is \(A_P-B_P(1-x)\), then use \(a_N\le 1,\allowbreak  c_N\ge \kappa,\allowbreak \) and maximize the resulting expression in k.
+The right side is nonnegative. With \(2/B\le 5/2\) and \(|Gh|^2\le 1+x,\allowbreak \)
+
+\fitdisplay{
+\Delta\le \delta_3+(13/2)\delta_4-(153/32)\delta_5.
+}{}
+
+Subtracting \(8ES\ge 8\kappa\) d2 gives an increasing frequency quotient
+by x and endpoint value
+
+\fitdisplay{
+17[\theta^2+(13/2)\theta^3-(153/32)\theta^4]
+       -8\kappa\theta
+ =203700679/33554432<8.
+}{Q81.8.14}
+
+The derivative test is \(1+13x-(459/32)x^2>0\). This proves L4.
+
+\paragraph{Q81.8.4 Every \(L\ge 5\)}
+
+Here \(B=1-d/2\ge 5/6,\allowbreak  \delta=d/2,\allowbreak \) and \(V_0=[\delta+zP_n]g/B\),
+\(n=L-2\ge 3.\) Use \(A_P\ge 1/2,\allowbreak  B_P\ge 3/8,\allowbreak \) and \(A_P,\allowbreak  B_P\le 1.\)
+For \(h\ge 2\) the delta and beta terms have nonpositive sum. Their upper
+divided by \(d^2\) is
+
+\fitdisplay{
+t^2-2\kappa t\zeta-(t-\zeta)/B
+ \le t^2-t+\zeta-2\kappa t\zeta.
+}{Q81.8.15}
+
+Here \(t\ge 1-\zeta>\zeta.\) At \(t=1\) its value is (\(1-2\kappa)\zeta\le 0\);
+at \(t=1-\zeta\) it is \(\zeta[(1+2\kappa)\zeta-2\kappa]\le0\).
+Convexity gives the bound between these endpoints.
+
+For \(h=1\) that sum is at most \((6/5)\zeta d^2\), and the frequency
+part is at most d3. Therefore its cost is at most
+\((913/160)\zeta d<8d\).
+
+For \(h\ge 2,\allowbreak  A_Pc_h-B_Pa_h\le5/8+3x/8\). Since \(2/B\le 12/5,\allowbreak \)
+
+\fitdisplay{
+\Delta\le(5/2)\delta_3+(19/10)\delta_4,
+}{}
+\fitdisplay{
+17\Delta-8ES\le
+ [ (85/2)\theta^2+(323/10)\theta^3-8\kappa\theta]d
+ =2375711d/327680<8d.
+}{Q81.8.16}
+
+The finite coefficient lemma gives these bounds for every \(n\ge 3\). This completes
+(Q81.8.1) and every terminal \(b\ge 3,\allowbreak \) inner \(L\ge 2\) single-pair case.
+
+\paragraph{Q81.9 Further pairs in the nonunit message}
+
+The single-pair proof gives a scalar bound for the combined remainder. Its primitive is
+\(V_*=V_0-Ug-\beta\one\). From (Q81.6.7), (Q81.1.4), and \(\beta\le d,\allowbreak \)
+
+\fitdisplay{
+\|V_*\|\le(9/8+1/2+3/5)\sqrt d
+             =(89/40)\sqrt d<(9/4)\sqrt d.
+}{Q81.9.1}
+
+For the middle term use
+\(\|Ug\|\le\theta\sqrt{1+\theta}\sqrt d<\sqrt d/2\);
+for the last use \(\sqrt d<3/5\). These are original norm bounds.
+
+All remaining pairs satisfy \(u_2\ge v+1\ge5\). Their complete
+disjoint mask has primitive Vtail of norm at most \(\sqrt{d}\)/4, mean
+\(E(KV_{tail})\le d/12\), and actual total loss \(3(j-1)d\).
+Combining it with V* before (Q81.2.2) adds at most
+
+\fitdisplay{
+\left[\frac23+17\left(2\cdot\frac94\cdot\frac14+\frac1{16}\right)
+                  -24(j-1)\right]d
+ =\left[\frac{1001}{48}-24(j-1)\right]d.
+}{Q81.9.2}
+
+For \(j\ge 2\) this is at most -151d/48. The bound is uniform in the number, gaps, and largest length of the remaining arms. Combining (Q81.7.2)--(Q81.8.16) with (Q81.9.2) yields
+
+\fitdisplay{
+\boxed{E\left[W_2\bar f_3W_v\prod_{i=2}^jW_{u_i}\bar f_{v_i}
+                         T^L(qf_b)\right]^8\le e^{-79d/10}
+ \quad(b\ge2,L\ge2,j\ge1).}\label{eq:Q81:nonunit-bound}
+}{Q81.9.3}
+
+This proves \eqref{eq:Q81:nonunit-bound}, including every finite short connector and
+both infinite integer tails. All continuous payments used only the
+original domain \(d\le 1/3,\allowbreak  d\le \zeta\le 13/32,\allowbreak \) and the stated same-kernel
+spectral moments. 

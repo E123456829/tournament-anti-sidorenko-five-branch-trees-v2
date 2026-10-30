@@ -1,0 +1,90 @@
+\subsection[The residual pair (2,4)]{The residual pair $(2,4)$}\label{loc:S3}
+We prove $\E[pP^6]\le1$ for $P=h_2f_4$. Use the common notation and put
+$s=K^2g$, $t=K^3g$, $m=1-d$ and $R=s+t-dg$.
+The exact path formulas give $h_2+f_4=2m+R$, so AM--GM gives
+\[
+ 0\le P\le(m+R/2)^2\le e^{R-2d}.
+\]
+Skew symmetry and the row bound yield
+\begin{align*}
+ \E R&=\delta_{2},&\E[gR]&=-\delta_{2}-d^2,&\E[pR]&=-d^2,\\
+ \|R\|_\infty^2&\le M_0^2=\delta_{2}+\delta_{3}+3d^2,&
+ V=\E R^2&=\delta_{3}+\delta_{4}+2d\delta_{2}+d^3.
+\end{align*}
+Indeed $R=K[(K+K^2)g-d\one]$,
+$\langle Kg,K^2g\rangle=0$, and $\E[(K+K^2)g]=-d$.
+With $c=\theta+\theta^2=585/1024$, these formulas imply
+\[
+ \begin{gathered}
+ M_0^2\le cd+3d^2,\qquad
+ V/d\le v(d)=7605/32768+(13/16)d+d^2,\\
+ V_p:=\E[pR^2]\le V+M_0\sqrt{dV}.
+ \end{gathered}
+\]
+The two polynomial bounds \eqref{eq:compact-power-bound} are
+\[
+ \E[pP^6]\le H(d)+B_{12}(m,M)V_p,\qquad
+ \E[pP^3]\le F(d)+B_6(m,M)V_p,
+\]
+where
+\[
+ H=(1-d)^{12}-6d^2(1-d)^{11},\qquad
+ F=(1-d)^6-3d^2(1-d)^5.
+\]
+Both are convex on $[0,1/3]$, since
+\[
+ H''=12(1-d)^9(10+13d-78d^2)>0,\qquad
+ F''=6(1-d)^3(4+7d-21d^2)>0.
+\]
+For $0<d\le1/32$, the exponential criterion applies because
+\[
+ (2d+d^2)-3M_0^2
+ \ge d(2-3\theta-3\theta^2-8d)\ge37d/1024.
+\]
+For $1/32\le d\le1/8$, the following table proves the sixth moment.
+In each row $m\le1-\inf I$; $M$ bounds $M_0$, and $B$ bounds
+$B_{12}(1-\inf I,M)$. The last column bounds the resulting convex
+function at the two endpoints, except in the first row, where
+$(1-d)^{12}\le1-8d$ gives the displayed bound directly.
+\begin{center}
+\begin{tabular}{@{}ccccc@{}}
+\toprule
+$I$ & $M$ & $V_p/d$ & $B$ & final bound\\\midrule
+$[1/32,1/16]$ & $7/32$ & $5/12$ & $19$ & $1-d/12$\\
+$[1/16,3/32]$ & $2/7$ & $12/25$ & $31/2$ & $193/200,\ 399/400$\\
+$[3/32,7/64]$ & $8/25$ & $13/25$ & $13$ & $747/800,\ 1583/1600$\\
+$[7/64,1/8]$ & $7/20$ & $14/25$ & $45/4$ & $601/640,\ 396/400$\\
+\bottomrule
+\end{tabular}
+\end{center}
+These entries use $v(d)$ and \eqref{eq:compact-weighted-variance}.
+For the remainder sums, the first five terms are
+$\frac{33}2m^{10}$, $\frac{55}2m^9M$, $\frac{495}{16}m^8M^2$,
+$\frac{99}4m^7M^3$, $\frac{231}{16}m^6M^4$; consecutive tail terms
+have ratio at most $\frac58(M/2)$. This supplies every omitted term.
+
+For the remaining range, completing a square gives
+$\sqrt{cd+3d^2}\le2d+c/6$, and consequently
+\[
+ P\le(1+c/12)^2=(4291/4096)^2<(22/21)^2,
+ \quad(22/21)^6<4/3,\quad(22/21)^{10}<8/5.
+\]
+On $[1/8,1/4]$, apply the third-moment bound with the following data;
+$B$ now bounds $B_6$. Convexity of $F$ gives $\E[pP^3]<3/4$.
+\begin{center}
+\begin{tabular}{@{}ccccc@{}}
+\toprule
+$I$ & $M$ & $V_p/d$ & $B$ & endpoint bounds\\\midrule
+$[1/8,3/16]$ & $1/2$ & $91/120$ & $13/4$ & $3/4,\ 11/15$\\
+$[3/16,1/4]$ & $7/12$ & $11/12$ & $8/3$ & $29/40,\ 3/4$\\
+\bottomrule
+\end{tabular}
+\end{center}
+Thus $\E[pP^6]<(4/3)(3/4)=1$ there. Finally, the global bounds
+$v(d)<5/8$, $M_0<3/4$ give $V_p/d<49/40$ and
+\[
+ \E[pP]\le1-2d+d^3+V_p/4
+ <1-2279d/1440\le1-3d/2.
+\]
+For $d\ge1/4$ this is less than $5/8$, and therefore
+$\E[pP^6]<(8/5)(5/8)=1$. The intervals exhaust $[0,1/3]$.

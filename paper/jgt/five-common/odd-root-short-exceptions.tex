@@ -1,0 +1,107 @@
+\subsection{The remaining short terminal directions}
+\label{sec:odd-complete:short-exceptions}
+
+The positive-root convention for a terminal $(1,t)$ is separate
+from that for the other terminal lists. Write
+$P_-^{(N)}=\prod_{i=1}^N W_{b_i}\bar f_{c_i}$,
+$a<b_1<c_1<\cdots<b_N<c_N$, $a\ge3$, $N\ge1$.
+The actual messages are
+\begin{equation}\label{eq:odd-short:directions}
+ H_N=\begin{cases}
+ f_aP_-^{(N)}T(p\bar f_t),&L=1,\\
+ W_aP_-^{(N)}T^L(qf_t),&L\ge2.
+ \end{cases}
+\end{equation}
+The correlated square packets of Sections~\ref{proof:Q5-C079}
+and~\ref{proof:Q5-C080} give respective fourth losses
+\begin{equation}\label{eq:odd-short:whole-pairs}
+ 33337/3840+64(N-1)/5,\qquad
+ 22897/3840+64(N-1)/5.
+\end{equation}
+To see the complete-vector payment, at $L=1$ the actual square
+for $f_aT(p\bar f_t)$ has an unscaled real precursor $V$ with
+$\|V\|^2\le d$ and already paid exponent
+$E_0=8\log C-8\ell+8\E KV+20\|V\|^2\le0$.
+The full finite mask of $P_-^{(N)}$ contributes $KV_S$,
+$\|V_S\|<3\sqrt d/8$, $\E KV_S\le d/12$, and scalar
+$-16Nd/5$. At fourth order, $E_0/2$ pays the base exponent;
+the extra mean and norm payments are
+$d/3+(17/4)(57/64)d$. Subtracting these from $64Nd/5$
+gives the first displayed loss.
+For $L\ge2$ the actual $W_a$ square has normalized precursor
+norm at most $3\sqrt d/2$ and exponent $E_0\le9d/4$.
+The added mask has the same norm and signed mean, so the payment
+is $9d/8+d/3+(17/4)(81/64)d$, giving the second loss.
+At $a=3$ its separate packet has norm at most $9\sqrt d/8$
+and $E_0\le-13d/16$, hence is stronger. The finite square
+packets include $t=2$, $L=2,3,4$ and the full finite tail.
+
+For every other positive-root terminal the root is $f_a h_bf_c$,
+$3\le a<b<c$. Two remaining short terminals use the actual
+bare-exponent rows of Section~\ref{proof:Q5-C160} or
+Section~\ref{proof:Q5-C168}. We give their complete payments.
+
+\paragraph{The terminal $(2,t)$, $t\ge4$.}
+Take the actual $F=\bar f_2W_t$ and its remainder
+$R=(\beta_{t-1}+xA+zxC)u$.
+The actual constants satisfy
+\[
+ \Gamma=\beta_t+\beta_{t-1},\quad
+ \sigma<5d/8,\quad |\delta|\le8d/15,\quad
+ -13d/16\le\epsilon\le0,\quad D_1<0,
+ \quad\Gamma-2\delta_+\ge5d/6.
+\]
+All finite losses $\beta_i-D_{i-1}$ are at least $17d/32$,
+including the mean index. The four actual $C,c,Q$ rows are
+\eqref{eq:odd-even:rows}, with $h=17/32$, interpreted in the
+full-constant convention. Their auxiliary losses are
+$45/8$, $629/96$, $2021/256$ and $301/48$.
+
+At $L=1$, $Q=r$ is rectangular and $\gamma=0$, saving $d$.
+At $L=2$ the coordinates are
+$1-x^2C$, $\beta_{t-1}+xA$ and remain rectangular.
+The full $\gamma=\delta$ cross correction is less than
+$3d^2\le d$, paid by that saving.
+At $L=3$ the coordinates are
+$1+\delta-\beta_{t-1}x-x^2A$, $1-x^2C$.
+Only real overshoot $\delta_+$ occurs; its fee is less than
+$16d^2/3$. The signed $\epsilon\one$ correction costs less
+than $4d^2$. The full increment is therefore at most
+$-d+28d^2/3\le19d/9$.
+The residual loss satisfies
+\[
+ 2021/256-19/9=23/4+77/2304.
+\]
+For the long row $n=L-1=3$ the actual coordinates are
+$1-x+x^3C$, $1-x\beta_{t-1}-x^2A$; both lie in $[0,1]$.
+For $n\ge4$ the finite tail is at most $x^2(1/3+x)$,
+absorbed by the adjacent alternating-prefix margins since
+$(4/3)x+x^2<1$. The constant $-(17d/32)\one$ costs less
+than $3d^2\le d$. Thus every $L,t$ has loss at least $23/4$.
+
+\paragraph{The terminal $(2,3)$.}
+Take the actual $F=h_2f_3$. Its packet is
+$R=xu$, $\Gamma=d$,
+$\delta=8\delta_3/7<d/5$ and
+$\epsilon=\delta-\delta_2\in[-\delta_2,0]$.
+All finite losses are at least $d/2$.
+The curved auxiliary losses are
+$25/4$, $15/2$, $27/4$ and $4903/720$.
+At $L=1$ the polynomial is rectangular and $\gamma=0$.
+At $L=2$, $Q=1+zx$ is rectangular and the actual new virtual
+coordinate lies in $[-1,0]$; therefore
+$0\le\E V_*\le d$.
+The curved $\delta\ge0$ correction is at most
+$(521/300)d^2<d$.
+At $L=3$ the real overshoot and the actual
+$\epsilon\one$ correction total less than $(767/180)d^2$.
+Its increment, including the saved $d$, is at most
+$227d/540$. For the long row,
+$Q=G_n-z^{n+2}$ is rectangular, including its separate
+$n=3$ coordinates $1-x$, $1-x^2$.
+The curved coefficient $-d/2$ has correction less than
+$11d^2/4\le11d/12$, paid by the saved $d$.
+Every resulting loss exceeds six.
+
+These short proofs retain their original signed means and their
+full or curved convention. At $d=0$ the same finite messages are one.

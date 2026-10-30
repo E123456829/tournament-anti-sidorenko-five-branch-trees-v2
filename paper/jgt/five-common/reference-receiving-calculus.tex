@@ -1,0 +1,148 @@
+% Shared finite receiving identities and fourth-moment comparisons.
+% This lemma supplies algebra; each row must still prove its finite data.
+\subsection{The receiving weight and its two mean endpoints}
+\label{sec:reference-common:receiving}
+Work on the original finite probability space, with zero-mass atoms
+deleted, and let \(K\) be the real antisymmetric kernel with
+\(|K|\le1\) used in Lemma~\ref{q3:lem:spectral}. Write
+\[
+ \begin{gathered}
+ B=-K,\quad u=B\one,\quad A=J-B,\quad T=J+B,\\
+ p=1-u,\quad q=1+u,\quad f_n=A^n\one,\quad
+ d=\E u^2,\quad\delta_j=\|B^j\one\|_2^2.
+ \end{gathered}
+\]
+Put \(G_0=0\), \(G_n(z)=\sum_{j=0}^{n-1}z^j\), and
+\[
+ \beta_n=\sum_{j=1}^{\lfloor(n-1)/2\rfloor}
+             (-1)^{j-1}\delta_j\quad(n\ge1),\qquad
+ \theta=\tfrac{13}{32},\quad\kappa=\tfrac{19}{32},\quad
+ \tau=d-\delta_2.
+\]
+In particular \(\beta_1=\beta_2=0\). The finite path and spectral
+calculus of Lemma~\ref{lem:odd-common:spectral} and
+\eqref{eq:odd-common:inputs} gives \(0\le d\le1/3\),
+\(\kappa d\le\tau\le\beta_n\le d\) for \(n\ge3\), and a
+positive measure \(\nu\) on \([0,\theta]\) of mass \(d\) such that
+\(\int x^j\,d\nu=\delta_{j+1}\) for every integer \(j\ge0\).
+Thus the measure in each integral below is the actual spectral measure
+of \(-B^2\) at \(u\), not a separately chosen moment distribution.
+The finite convolution \eqref{eq:Q188:conv} also holds with \(B\)
+replaced by \(-B\), since this leaves every \(\delta_j\) and
+\(\beta_n\) unchanged. All expectations and inner products use the
+original measure, with spectral means and norms as in
+\eqref{eq:odd-common:coordinates}. When \(d=0\), leaf integration
+gives all the tree densities below directly; divisions by \(d\) in
+individual parameter tables concern \(d>0\).
+
+\begin{lemma}[A finite receiving arm]
+\label{lem:reference-common:receiving}
+For an integer \(a\ge2\), let
+\[
+ S_a=1-G_a(-B)u,\qquad C_{a,t}=S_a-\beta_a-tp,
+ \qquad 0\le t\le\beta_{a-1}.
+\]
+The case \(a=2\) has \(t=\beta_1=0\), so
+\(C_{2,0}=f_2\). In every case \(C_{a,t}\ge f_a\ge0\), and
+\begin{equation}\label{eq:reference-common:mass}
+ \E C_{a,t}=1-\beta_a-\beta_{a+1}-t.
+\end{equation}
+For a real finite polynomial \(Q\), put
+\(Z=c+Q(B)u\) and \(\alpha=-\E[Q(B)u]\). Then
+\begin{align}
+ \operatorname{Var}Z&=\int|Q(i\sqrt x)|^2\,d\nu-\alpha^2,
+ \label{eq:reference-common:variance}\\
+ \operatorname{Cov}(C_{a,t},Z)
+ &=-\int\operatorname{Re}(G_a(i\sqrt x)Q(i\sqrt x))\,d\nu
+   -\beta_{a+1}\alpha
+   +t\int\operatorname{Re}Q(i\sqrt x)\,d\nu.
+ \label{eq:reference-common:covariance}
+\end{align}
+\end{lemma}
+\begin{proof}
+The reversed finite convolution \eqref{eq:Q188:conv} gives
+\[
+ S_a=f_a+\sum_{j=3}^{a}\beta_j f_{a-j}.
+\]
+When \(a\ge4\), remove its terms \(\beta_a f_0\) and
+\(t f_1=tp\); the latter is at most the available term
+\(\beta_{a-1}f_1\). For \(a=2,3\), the displayed assertions
+follow from \(\beta_1=\beta_2=0\). This proves nonnegativity
+without introducing any arm. The finite spectral mean is
+\(\E[G_a(-B)u]=\beta_{a+1}\), proving
+\eqref{eq:reference-common:mass}.
+Skew-adjointness gives
+\[
+ \langle G_a(-B)u,Q(B)u\rangle
+   =\int\operatorname{Re}(G_a(i\sqrt x)Q(i\sqrt x))\,d\nu,
+ \qquad
+ \langle u,Q(B)u\rangle=\int\operatorname{Re}Q\,d\nu.
+\]
+The norm identity gives \eqref{eq:reference-common:variance}.
+Subtracting the two actual means gives
+\eqref{eq:reference-common:covariance}; its signed term
+\(-\beta_{a+1}\alpha\) is retained. Constants in \(Z\) do
+not change its covariance or variance.
+\end{proof}
+
+\begin{lemma}[A reference fourth-moment payment]
+\label{lem:reference-common:fourth}
+Suppose \(0\le X\le sZ\), \(s>0\), \(Z\ge0\),
+\(C\ge f_a\ge0\), and \(\mu=\E Z\in[0,M]\). Assume
+\[
+ \E C\le h,\quad h\ge0,\qquad
+ \operatorname{Cov}(C,Z)\le b,\qquad
+ \operatorname{Var}Z\le V,
+\]
+where \(b\) can have either sign. If
+\(C[(Z+\mu)^2+2\mu^2]\le K_0\), then
+\begin{equation}\label{eq:reference-common:two-endpoints}
+ \E[f_aX^4]\le
+ s^4\bigl[K_0V+\max\{0,hM^4+4bM^3\}\bigr].
+\end{equation}
+If instead \(s=e^{-\Gamma}\) and the pointwise coefficient
+\(K_0\) has been proved on \(sZ\), then the corresponding bound is
+\begin{equation}\label{eq:reference-common:scaled-endpoints}
+ \E[f_aX^4]\le
+ e^{-4\Gamma}\max\{0,hM^4+4bM^3\}
+       +K_0e^{-2\Gamma}V.
+\end{equation}
+In the scaled assertion, the pointwise hypothesis is
+\(C[(sZ+s\mu)^2+2s^2\mu^2]\le K_0\).
+\end{lemma}
+\begin{proof}
+Taylor's exact fourth identity at the actual mean gives
+\[
+ \E[CZ^4]=(\E C)\mu^4+4\mu^3\operatorname{Cov}(C,Z)
+   +\E[C(Z-\mu)^2\{(Z+\mu)^2+2\mu^2\}].
+\]
+The derivative of \(hy^4+4by^3\) is
+\(4y^2(hy+3b)\); on \([0,M]\), its maximum is at an
+endpoint, including when \(b<0\) or \(h=0\). This proves
+\eqref{eq:reference-common:two-endpoints}. Applying the same
+identity to \(sZ\) gives
+\eqref{eq:reference-common:scaled-endpoints}. In particular a
+pointwise coefficient proved on the scaled message multiplies
+the variance with its second-power scale.
+\end{proof}
+
+The actual \(f_2\) row has mass \(1-d\). The weak rows
+\(a\ge3,t=0\) have mass \(1-\beta_a-\beta_{a+1}\), while
+the strengthened rows retain the additional term \(-t\).
+These weights share the displayed algebra but retain different
+finite covariance and pointwise hypotheses in their row proofs.
+
+\begin{lemma}[Changing the receiving mass]
+\label{lem:reference-common:mass-transfer}
+Suppose \(1\le\eta\le2\), \(0\le\mu\le M\), and
+the scalar comparison bracket is
+\((1-\eta d)\mu^4+4b_0\mu^3\).
+For a receiving factor of mass \(1-d\), this same bracket
+remains an upper if its covariance with the unscaled positive
+upper is at most \(b_0-(\eta-1)Md/4\).
+\end{lemma}
+\begin{proof}
+The new bracket minus the comparison bracket is at most
+\((\eta-1)d\mu^3(\mu-M)\le0\). No endpoint substitution for
+\(\mu\) or for a spectral moment was used in this comparison.
+\end{proof}

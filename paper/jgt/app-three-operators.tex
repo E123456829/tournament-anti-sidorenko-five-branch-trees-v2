@@ -1,0 +1,530 @@
+\section{All positive-length connector estimates}\label{q3:app:operators}
+We give the operator certificates needed for Proposition~\ref{q3:prop:operators}. In this appendix put
+\[
+ Q=I-J,\quad C=QKQ,\quad {r_0}=Cg=Kg+d\one,\quad s=\norm{r_0}_2^2,
+ \quad \alpha=19/32,\quad \rho=5/12 .
+\]
+Thus $r_0=QKg$ is centered; the uncentered $r=Kg$ retains its meaning from Section~\ref{sec:prelim}. We have $s+d^2\le\theta d$, $\norm K^2\le\theta<\rho<1/2$ and $Kg=-d\one+{r_0}$.
+
+\subsection{Schur certificates and normalized propagation}
+If $P_0$ is a nonnegative symmetric kernel and $v>0$ satisfies $P_0v\le\lambda v$, then
+$\ip z{P_0z}\le\lambda\norm z_2^2$: apply $2ab\le a^2+b^2$ after inserting $v(x)/v(y)$ in the two terms. We use this only with positive semidefinite symmetric kernels.
+
+Write $P=A^*A$, so $Pz=q\E z-\E(gz)-K^2z$. Weighted propagation \eqref{q3:eq:energy}, its reversal and ordinary adjoints give
+\[
+ \norm{B_q}\le1,\quad B_q=q^{-1/2}A^*\sqrt q,\qquad
+ \norm Y\le1,\quad Y=q^{-1/2}A^*p^{-1/2}.
+\]
+For the last assertion, integrate $(A^*v)^2\le qA^*(v^2)$ after setting $v=z/\sqrt p$. Consequently
+\begin{equation}\label{q3:eq:normalizedpositive}
+ Y_j=q^{-1/2}(A^*)^jp^{-1/2}=B_q^{j-1}Y,\qquad \norm{Y_j}\le1\quad(j\ge1).
+\end{equation}
+The index range starts at one.
+
+\subsection{An ordinary one-step certificate}
+We first prove
+\begin{equation}\label{q3:eq:ordinaryoperator}
+ \norm{f_nA^*}^2\le1-d/72\qquad(n\ge2).
+\end{equation}
+For $n\ge3$ put $H=S_n$, $a=H-1$, $R=(I+K^2)^{-1}$,
+\[
+ \begin{gathered}
+ e=-R(K^{n+1}+K^{n+2})\one,\quad u=1+e,\quad t=1-\E H,\\
+ v=\E(gH),\quad b=\E(He),\quad c_0=\E(ge),\quad a_0=\E|ae|.
+ \end{gathered}
+\]
+Direct expansion, using $(I-K^2)a-g-Kg=(I+K^2)e$, yields
+\begin{equation}\label{q3:eq:ordinaryresidual}
+ M_HP M_Hu-u=-a^2+ae+H\{q(b-t)-(v+c_0)+A^*K(ae)\}.
+\end{equation}
+The geometric-sum bounds give $\norm a_2\le\sqrt d$, $|e|\le6\sqrt d/7\le18/35$, and hence $17/35\le u\le53/35$. The exact formula
+\[
+ b=-\E RK^{n+1}\one+(-1)^{n+1}\E RK^{2n+2}\one
+\]
+and $\norm e_2^2/d\le\rho^n(1+\rho)/(1-\rho)^2$ give
+\[
+\begin{array}{c|c|c|c}
+n&b\text{ upper bound}&a_0\text{ upper bound}&a_0+b\text{ upper bound}\\\hline
+n\equiv3\pmod4&0&4d/7&4d/7\\
+n\ge4\text{ even}&3d/56&5d/14&23d/56\\
+n\equiv1\pmod4,\ n\ge5&9d/28&5d/21&47d/84 .
+\end{array}
+\]
+All last entries are at most $7d/12\le t$. For $n=2m-1$ or $2m$ the full spectral measure $\nu$ at $\one$ gives
+\[
+ v+c_0=\int\left[\frac{x}{1+x}
+       +(-1)^{m+1}\frac{2x^{m+1}}{1-x^2}\right]\,d\nu(x)\ge2d/7.
+\]
+In the negative branch the weakest case is $m=2$, where the integrand is $x(1-2x)/(1-x)\ge2x/7$. Since $A^*K(ae)\le qa_0$, \eqref{q3:eq:ordinaryresidual} is at most
+$-a^2+a(e-2d/7)-2d/7$. The bound $|e-2d/7|\le36\sqrt d/35$ and a completed square give a residual at most $-26d/1225$. Schur's argument gives
+$\norm{HA^*}^2\le1-26d/1855$. Since $0<f_n/H\le1$, this proves \eqref{q3:eq:ordinaryoperator} for $n\ge3$.
+
+For $n=2$, let $F=f_2=1-d+g+{r_0}$, $a=F-1$, $R_C=(I+C^2)^{-1}$ and
+$e=-C^2R_C(g+{r_0})$, $u=1+e$. With the spectral measure $\eta$ of $-C^2$ at $g$, put $\kappa=\int x^2/(1-x)\,d\eta$. Then
+\[
+ \ip {r_0} e=\kappa,\quad\ip g e=s+\kappa,\quad
+ \kappa\le13s/19,\quad\norm e_2^2\le585s/361.
+\]
+The row bound gives $|e|\le2(1+\sqrt d)\sqrt s\le13/20<312/475$, so $163/475<u<787/475$. Exact expansion yields
+\[
+ M_FP M_Fu-u=-a^2+ae-F[2d+s-d(g+a)+\kappa g]+FA^*K(ae).
+\]
+Here $\norm a_2^2\le45d/32$, $\E|ae|\le585d/608$, $\kappa\le169d/608$, and
+$\E|ae|+|d-\E|ae|-\kappa|\le5d/4$. The residual is therefore at most
+\[
+ -(1-d)a^2+a(e+d/4-s)-3d/4-s.
+\]
+Completing the square leaves, after division by $d$, the positive quantity
+\[
+ 3(1-d)-8(\sqrt d+d)s/d-(1+\sqrt d)\sqrt s-d/16.
+\]
+Split $8(\sqrt d+d)s/d$ into $8s/\sqrt d$ and $8s$. These and the next two losses are at most $8/9$, $25/72$, $1/3$ and $1/48$, respectively, whereas $3(1-d)\ge2$. Their sum is $229/144$, leaving $59/144$. Thus the residual is at most $-59d/576$. The same $u$ gives $\norm{FA^*}^2\le1-(28025/453312)d$, which implies \eqref{q3:eq:ordinaryoperator}. Reversal and adjoints preserve the displayed operator order.
+
+\subsection{Half-step certificates for lengths two to four}
+We prove $\norm{\sqrt H A^*}\le1$ by finding $u>0$ with $M_HP u\le u$ and applying Schur to $\sqrt H P\sqrt H$ with vector $u/\sqrt H$. For $H=f_2$, $h_2=A^*p=2-f_2$ and $f_2h_2\le1$; hence
+$AM_{f_2}A^*p=A(f_2h_2)\le p$, which proves the length-two case.
+
+For the other short lengths, set
+\[
+ a_0=\theta-d,\quad z=\alpha+d,\quad Z_3=R_C{r_0},\quad
+ \beta=\ip {r_0}{Z_3},\quad L=\norm{Z_3}_2^2.
+\]
+The Schur complement of $\theta I+K^2$ gives
+\[
+ -C^2+g\otimes g+({r_0}\otimes {r_0})/a_0\le\theta I.
+\]
+Since $g\perp Z_3$, it follows that
+\begin{equation}\label{q3:eq:centerbounds}
+ \beta\ge\alpha L+\beta^2/a_0,\quad
+ \beta^2\le sL,\quad
+ \beta\le da_0/z,\quad L\le da_0/z^2,\quad\beta/d\le13/19.
+\end{equation}
+If $\beta=0$, then ${r_0}=Z_3=0$ and no division by $\beta$ is made.
+
+For length three and $0<d\le1/5$, put $c=1-d$, $G=f_3$, $x=Kf_2=G-c$,
+$e=C^2R_Cg=KZ_3$. Then $\E e=0$, $\ip g e=-\beta$, $|e|\le13/38$ and
+\[
+ P(1+e)=2-G+e-dp+\beta q.
+\]
+Cauchy--Schwarz gives $L\ge\beta+\beta^2/d$. For $\beta>0$ define
+\[
+ \lambda=dL/\beta-d-\beta,\quad u_2=dL/\beta,\quad b=u_2/c,\quad
+ u=1+e+\lambda,\quad V=(b-\lambda)g+b{r_0},
+\]
+\[
+ \mathcal A=(1+b)x^2+cd(1+b)-\beta,\qquad
+ \Psi=(x-d)Z_3+(c+x)V.
+\]
+Then $\lambda\ge0$, $u>0$, and the exact row residual is
+\[
+ -(M_GP u-u)=\mathcal A-K\Psi,\qquad
+ \norm\Psi_2^2=Lx^2/c^2+E'(c+x)^2,
+\]
+where
+\[
+ c^2E'=d^2u_2+su_2^2-d(1-2d)\lambda u_2+dc^2\lambda^2.
+\]
+Since $u_2\le d/\alpha$ and $\lambda\le\theta d/\alpha$, the last two terms together are nonpositive; thus $E'\le d^3/(\alpha^2c)<10d^3/(3c)$. Set
+\[
+ j=1-ca_0/z,\qquad \eta=a_0/(cz^2)+30d^2.
+\]
+Using $(c+x)^2\le9c^2/8+9x^2$ gives
+$\mathcal A\ge x^2/c+dj$ and
+$\norm\Psi_2^2\le(d\eta/c)x^2+(15/4)cd^3$.
+Their squared comparison reduces to
+\begin{equation}\label{q3:eq:p10condition}
+ \eta(4j-\eta)-15dc>0.
+\end{equation}
+Here is an exact certificate over the entire interval. Put $t=d/(1-d)\in[0,1/4]$,
+\[
+ W=19+51t,\quad J_0=6+89t+51t^2,\quad
+ U=32(13-19t)(1+t)^4+30t^2W^2,\quad D_0=4J_0(1+t)W.
+\]
+The left side of \eqref{q3:eq:p10condition} is $P_{10}/[(1+t)^4W^4]$, where
+$P_{10}=U(D_0-U)-15t(1+t)^2W^4$. Its coefficients from degree zero upward are
+\[
+\begin{split}
+(&16640,1160833,-8704266,-35377737,232713992,819741071,\\
+ &-950959922,-5593930311,-4938713932,86107392,-369664).
+\end{split}
+\]
+If these coefficients are $p_i$, choose the integers $\ell_i$ in the next table and set
+$r_i=p_i-4^i\ell_i$,
+$B_i=\sum_{j\le i}\binom{10-j}{i-j}\ell_j$:
+\[
+\begin{array}{r|r|r|r}
+i&\ell_i&r_i&B_i\\\hline
+0&16640&0&16640\\1&290208&1&456608\\2&-544017&6&2816655\\
+3&-552778&55&7539374\\4&909039&8&9678989\\5&800528&399&4940960\\
+6&-232168&206&38245\\7&-341427&9657&1478051\\8&-75359&13492&3503691\\
+9&328&124160&1910221\\10&-1&678912&270993
+\end{array}
+\]
+Every $r_i\ge0$ and $B_i\ge180\binom{10}{i}$. The exact Bernstein transformation
+$P_{10}(t)=\sum_i b_i(4t)^i(1-4t)^{10-i}$, with
+$b_i=\sum_{j\le i}\binom{10-j}{i-j}p_j/4^j\ge B_i$, proves $P_{10}\ge180$. Hence $\mathcal A>\norm\Psi_2$ and the residual is nonnegative. If $\beta=0$, $u=1$ has residual $-(x-d)^2-Gdp\le0$. For $d\ge1/5$, $\mu_4\le1-(83/32)d\le77/160$ and
+$Pf_3=2\mu_4-f_5\le77/80$; the Schur vector is the actual $f_3$. This proves the full length-three case.
+
+For length four and $0<d\le1/6$, put
+\[
+ \begin{gathered}
+ c=1-2d,\quad c_1=1-d,\quad Z=(1+C)Z_3,\quad e=CZ,\\
+ L_4=\norm Z_2^2=2L-\beta,\quad H=f_4,\quad x=Kf_3=H-c.
+ \end{gathered}
+\]
+Then $\ip gZ=-\beta$, $\ip {r_0}Z=\beta$, $e=KZ-\beta$ and
+\[
+ P(1+e)=2-H+e-[2(d-\beta)+(2d+\beta)g+dKg].
+\]
+For $\beta>0$, set $T_0={r_0}+C^2g$, $D_1=(2-d)\beta-s\ge c_1\beta$ and
+\[
+ \begin{gathered}
+ b=\frac{2dL_4/c+d\beta+\beta^2}{D_1},\quad
+ \lambda=cb-2d-\beta,\quad t_0=d(1+b)+\beta,\\
+ V=t_0g+bT_0,\quad \Psi=(x-2d)Z+(c+x)V.
+ \end{gathered}
+\]
+\[
+ \mathcal A=(1+b)x^2+2d-2c_1\beta+2d\lambda.
+\]
+The exact residual is $\mathcal A-K\Psi$. The identity
+\[
+ \lambda D_1=4dL-5d\beta-(1+d)\beta^2+(2d+\beta)s
+ \ge(5/57)d\beta
+\]
+uses $L+s\ge2\beta$ and $L\ge\beta$. Thus $b,t_0,\lambda>0$, and
+$u=1+e+\lambda\ge1-\sqrt{195}/19-13/57>2/57$.
+Since $\ip ZV=2dL_4/c$,
+\[
+ \norm\Psi_2^2=L_4x^2/c^2+E'(c+x)^2,\qquad
+ E'=\norm V_2^2-4d^2L_4/c^2\ge0.
+\]
+Projection onto $Z^\perp$ gives
+$\ip{g_\perp}{(T_0)_\perp}=2(\beta^2-Ls)/L_4\le0$ and
+$\norm{(T_0)_\perp}_2^2\le\theta^2L_4/4$. Substitution of
+$\alpha\le s/\beta\le1$ and $L/\beta\le(1+\alpha-s/\beta)/\alpha$ yields
+\[
+ \begin{gathered}
+ cb/d\le11712/2261<21/4,\quad ct_0/d\le389/152<13/5,\\
+ c^2E'/d^3<169/25+55125/27648<9.
+ \end{gathered}
+\]
+Also $L_4\le da_0(2-z)/z^2$. Put
+$j=1-c_1a_0/z$ and $\eta=[a_0(2-z)/z^2+45d^2]/c$.
+Then $\mathcal A\ge x^2/c+2dj$ and
+$\norm\Psi_2^2\le(d\eta/c)x^2+45d^3/4$.
+The squared comparison is $\eta(8j-\eta)-45d>0$.
+
+Put $t=d/(1-2d)\in[0,1/4]$, $W=19+70t$, $J_0=6+101t+146t^2$,
+$V_0=585+484t-348t^2$, $U=(1+2t)^2V_0+45t^2W^2$, $D_0=8J_0W$.
+The comparison equals $P_8/[(1+2t)^2W^4]$, with
+$P_8=U(D_0-U)-45t(1+2t)W^4$. Its coefficients are
+\[
+\begin{split}
+(&191295,4353483,-12419292,-147707432,798676159,\\
+ &5703292456,1626691752,-34778574624,-48008315664).
+\end{split}
+\]
+The same Bernstein transformation is certified by
+\[
+\begin{array}{r|r|r|r}
+i&\ell_i&r_i&B_i\\\hline
+0&191295&0&191295\\1&1088370&3&2618730\\2&-776206&4&12198644\\
+3&-2307929&24&26603125\\4&3119828&191&31420693\\5&5569621&552&28250993\\
+6&397141&2216&29314622\\7&-2122716&4320&20811810\\8&-732549&15600&4426855
+\end{array}
+\]
+Here $B_i\ge100000\binom8i$, so $P_8\ge100000$. If $\beta=0$, then ${r_0}=C^2g=0$ and $H=cp-dc_1>0$ implies $2dp-d^2>d^2/c>0$; the residual at $u=1$ is $-(x-2d)^2-H(2dp-d^2)\le0$.
+For $d\ge1/6$, the exact mean gives
+$\mu_5\le1-(51/16)d+d^2\le143/288$ and $Pf_4=2\mu_5-f_6\le143/144$.
+This completes length four.
+
+\subsection{Half-step certificates for every length at least five}
+For $n\ge5$, define
+\[
+ \begin{gathered}
+ D_0=K^2\sum_{j=0}^{n-3}K^j\one,\quad
+ Y=(I+K^2)^{-1}D_0,\quad e_S=KY,\\
+ b=\E e_S,\quad c_0=-\E(ge_S),\quad
+ a_j=\int\frac{x^j}{1-x}\,d\nu(x).
+ \end{gathered}
+\]
+Alternating sums give
+\[
+ b=\sum_{j=2}^{\lfloor n/2\rfloor}(-1)^ja_j,\quad
+ c_0=\sum_{j=2}^{\lfloor(n+1)/2\rfloor}(-1)^ja_j,\quad
+ 0\le b\le13d/19,\quad 0\le c_0\le \delta_{2}+a_4,
+\]
+\[
+ b+c_0\le a_2+\delta_{2},\qquad c_0\le10101d/19456<19d/32.
+\]
+The geometric sum satisfies $x(1+x^3)^2\le(1-x)^2(1+x)$ on $[0,5/12]$; the difference is decreasing and at $5/12$ equals $105043/35831808>0$. Thus $\norm Y_2^2\le d$ and $|e_S|\le\sqrt d$.
+
+For $n=5$, $-\E Y=d$, $b=a_2$, $c_0=\delta_{2}$, and
+$\norm Y_2^2\le\kappa d$ with $\kappa=10101/11552<7/8$. Take $u=1+e_S-d$, so $0<u\le5/4$. With $\delta=f_5-1$ and $C_0=3d-b-2\delta_{2}$, exact convolution gives
+\[
+ M_{f_5}Pu-u=-\delta^2+\delta(e_S-d)-f_5[C_0+(d+b)g].
+\]
+Center $Y$ by $Y_c=Y+d$, write $v^2=\norm{Y_c}_2^2\le\kappa d-d^2$, and use the row constraint
+$e_S=-dg+\zeta$, $|\zeta|\le v\sqrt{1-g^2}$. With $T=(2d+b)\delta+d+b$, the residual is at most
+\[
+ -\delta^2-d\delta-C_0(1+\delta)-Tg+
+ |\delta|v\sqrt{1-g^2}.
+\]
+If $T\ge0$, positivity gives $f_5\le2p$, hence $g\ge(\delta-1)/2$. Put
+$C'_0=[C_0-(d+b)/2]/d\ge201/304>13/20$ and $a=1+b/(2d)\le51/38<27/20$.
+The completed-square margin
+\[
+ \Phi=4C'_0(1+ad)-
+    [\sqrt{v^2/d}+\sqrt d(C'_0+a)]^2
+\]
+is increasing in $C'_0$. Lower $C'_0$ to $13/20$ before raising $a$ to $27/20$; the resulting bound is
+$69/40+51d/100-4\sqrt{d(7/8-d)}\ge39/200$.
+Since $1+ad\le29/20$, the residual is at most $-39d/1160$.
+If $T<0$, set $x=-\delta\in(0,1)$. The row constraint and $|T|\le dx$ bound the residual by
+$-x^2+x[(5/2)d+\sqrt{\kappa d}]-3d/2\le-15d/1024$.
+Thus $\norm{\sqrt{f_5}A^*}^2\le1-3d/256$.
+
+For $n\ge6$ and $d\le1/6$, put $m_0=-\E Y$. Write the frequency sum as
+$\sum_{j=0}^{n-3}(i\sqrt x)^j=U+i\sqrt x V$.
+There are two types:
+\[
+\begin{array}{c|c|c}
+\text{type}&m_0/d&\text{correlations}\\\hline
+\mathrm I:\ n\text{ even or }n\equiv3\pmod4&
+ [1,777/608]\subset[1,41/32]&b\le c_0\le\theta m_0\\
+\mathrm {II}:\ n\equiv1\pmod4,\ n\ge9&
+ [1,1024/855]\subset[1,6/5]&c_0\le\theta m_0,\ b\le9c_0/8 .
+\end{array}
+\]
+For type I, $U\ge V$ and $1-x\le U\le1-x+x^2$.
+For type II, $(1-x)(1+x^2)\le U\le1/(1+x)$ and $1\le V/U\le9/8$; the latter follows from $9x^3-x^2+x-1\le0$ on $[0,5/12]$.
+The ratio of the density of $\norm Y_2^2$ to that of $m_0$ is at most $3/4$: in type I it is bounded by $x(1+x^3)/(1-x)$, and in type II by
+$x/(1-x^2)+(9/8)x^2(1-x+x^2)/(1-x)$.
+Consequently $v^2=\norm{Y+m_0}_2^2\le3m_0/4-m_0^2$, and $u=1+e_S-m_0$ satisfies $71/192\le u\le19/16$.
+
+Set $\tau=19d/32$, $\delta=f_n-1$ and
+\[
+ W_0=(2\tau-m_0)g+\tau {r_0},\quad w_0=\norm{W_0}_2,\quad
+ C_4=(4-2d)\tau-b-c_0,\quad C_1=C_4-w_0,
+\]
+\[
+ B=\tau(3-d)+b-m_0,\quad A_0=m_0+B,\quad T=A_0\delta+B.
+\]
+Retaining $f_0,f_1,f_2,f_3$ in the positive convolution and using the same row constraint bounds the residual by
+\begin{equation}\label{q3:eq:longhalfresidual}
+ -\delta^2-m_0\delta-C_1(1+\delta)-Tg+
+ |\delta|v\sqrt{1-g^2}.
+\end{equation}
+For $d>0$, put $m=m_0/d$, $\eta=19/32$, and
+\[
+ F(m,d)=\sqrt{d[(m-2\eta)^2+\eta^2(\theta-d)]}.
+\]
+Then $w_0/d\le F(m,d)$. For type I the correlated bounds are
+\[
+ \begin{split}
+ C_1/d&\ge(4-2d)\eta-2\theta m-F(m,d),\\
+ (C_1-B/2)/d&\ge\eta(5/2-3d/2)
+                  +(1/2-5\theta/2)m-F(m,d).
+ \end{split}
+\]
+For type II they are
+\[
+ \begin{split}
+ C_1/d&\ge(4-2d)\eta-(17\theta/8)m-F(m,d),\\
+ (C_1-B/2)/d&\ge\eta(5/2-3d/2)
+                  +(1/2-43\theta/16)m-F(m,d).
+ \end{split}
+\]
+The derivative of $F$ in $m$ has magnitude at most $\sqrt d$.
+All four linear slopes are negative with magnitude at least $33/64$,
+whereas $\sqrt d\le\sqrt{1/6}<33/64$. Thus each complete lower
+bound decreases in $m$. Evaluate these bounds at $m=41/32$ for
+type I and $m=6/5$ for type II. At these respective endpoints,
+$F(m,d)<1/8$ throughout $0\le d\le1/6$; indeed
+$d[(m-19/16)^2+(361/1024)(\theta-d)]$ is increasing on this
+interval and is less than $1/64$ at $d=1/6$.
+Using $A_0/d=\eta(3-d)+b/d$ gives the following table: 
+\[
+\begin{array}{c|c|c|c}
+&C_1/d\text{ lower}&(C_1-B/2)/d\text{ lower}&A_0/(2d)\text{ upper}\\\hline
+\mathrm I&1553/1536&1127/2048>35/64&2357/2048<37/32\\
+\mathrm {II}&1951/1920&641/1280>1/2&1491/1280<75/64 .
+\end{array}
+\]
+When $T\ge0$, again use $g\ge(\delta-1)/2$. The same $\Phi$ calculation has, in type I, $v^2/d\le123/128-(1681/1024)d$ and $\Phi\ge57/1024$. In type II, $v^2/d\le9/10-36d/25$; splitting at $d=1/8$ gives margins $31/320$ and $197/1920$. Since $1+ad\le153/128$, the residual is at most $-19d/1632$. When $T<0$, $B>0$, $x=-\delta\in(0,1)$ and $|T|\le m_0x$. The joint row bound is $x\norm Y_2\le x\sqrt d$, and \eqref{q3:eq:longhalfresidual} is at most
+$-x^2+x[(73/32)d+\sqrt d]-d\le-28823d/589824$.
+This is stronger than $-19d/1632$. Schur's argument proves
+$\norm{\sqrt{f_n}A^*}^2\le1-d/102$ in the low range.
+
+For $d\ge1/6$, retain five final convolution terms. For every $j\ge7$,
+\[
+ \mu_j\le1-(d-\delta_{2})(6-6d+\delta_{2})
+ \le1-\alpha d[6-(179/32)d]<1/2.
+\]
+The last loss is increasing in $d\in[1/6,1/3]$ and at the left endpoint is $18487/36864>1/2$. Thus
+$Pf_n=2\mu_{n+1}-f_{n+2}<1$ and the actual vector $u=f_n$ is a Schur certificate. This completes \eqref{q3:eq:half} for every $n\ge2$.
+
+\subsection{Mixed half-step certificates}
+For a positive $H$ put $X_H=\sqrt H A^*\sqrt q$ and $T=M_qAM_HA^*$. The operator $T$ is similar to $X_H^*X_H$ via multiplication by $\sqrt q$. If $u>0$ and $Tu\le\lambda u$, apply Schur with $u/\sqrt q$.
+
+First take a full-space correction
+\[
+ Z=(I+K^2)^{-1}(H-1-g),\quad e=KZ,\quad
+ b=\E e,\quad D=-\E Z,\quad L=\norm Z_2^2,\quad u=1+e.
+\]
+Writing $\delta=H-1$, $t=g+Ke$, $m=\E(\delta t)$, exact expansion gives
+\[
+ Tu-u=-g^2-ge+q[-D+bAH-m-K(\delta t)].
+\]
+Since $\delta-t=Z$ and $|vw|-vw\le(v-w)^2/2$,
+\begin{equation}\label{q3:eq:fullmixedresidual}
+ Tu-u\le-g^2-ge-q[D-L/2-bAH].
+\end{equation}
+For $H=f_2$, $Z=(I+K^2)^{-1}K^2\one$, $b=0$, and
+\[
+ D=\int\frac{x}{1-x}\,d\nu,\quad
+ L=\int\frac{x^2}{(1-x)^2}\,d\nu,\quad
+ d\le D\le32/57,\quad L\le(13/19)D<25/64.
+\]
+Hence $|e|<5/8$, $3/8<u<13/8$. With $a=D-L/2$,
+$4a\ge50D/19$, whereas $(\sqrt L+a)^2\le(569/228)D$.
+Completing the square in \eqref{q3:eq:fullmixedresidual} leaves $-31D/912$, so
+$\norm{X_{f_2}}^2\le1-d/48$.
+
+For $n\ge3$ use the centered correction
+\[
+ \begin{gathered}
+ Z=R_C(QH-g),\quad e=CZ,\quad b_0=\ip gZ,\quad L=\norm Z_2^2,\\
+ D=1-\E H+\ip {r_0}Z,\quad B=(L+D^2)/2,\quad u=1+e.
+ \end{gathered}
+\]
+Now $Z$ is centered, $e=KZ+b_0$, and $\delta-t=Z-D$. The exact residual and its row upper bound are
+\[
+ Tu-u=-g^2-ge-q[D+b_0+\E(\delta t)+Dg+K(\delta t)],
+\]
+\begin{equation}\label{q3:eq:centerresidual}
+ Tu-u\le-(1-D)g^2-g(KZ+B)-D-b_0+B.
+\end{equation}
+If $D<1$, the completed-square margin is
+\[
+ \Phi=4(1-D)(D+b_0-B)-(\sqrt L+B)^2.
+\]
+When $0\le D<1$, $0<u<2$ and $\Phi\ge d/100$, \eqref{q3:eq:centerresidual} implies
+$\norm{X_H}^2\le1-d/800$.
+
+The following uniform spectral bounds supply this margin. Write
+$R(x)=1/(1-x)$, $a=\int xR\,d\nu$, $W=1+a=\int R\,d\nu$,
+$U_j(x)=\sum_{\ell=0}^{j-1}(-x)^\ell$, $F_j=xU_j$, $F_0=0$.
+For $H=S_n-c$, let $m=\lfloor n/2\rfloor$, $\ell=\lfloor(n-1)/2\rfloor$,
+$D_n=\int RF_m\,d\nu$, $\mathfrak b_n=\int xRF_\ell\,d\nu$,
+$d_s=D_n/W$, $\mathfrak b_s=\mathfrak b_n/W$. Direct centering of the full resolvent gives
+\[
+ Z=(I+K^2)^{-1}(S_n-1-g)+\mathfrak b_s(I+K^2)^{-1}g+
+ d_s(I+K^2)^{-1}\one,\quad D=c+d_s,\quad b_0=-\mathfrak b_s,
+\]
+\[
+ L=\int R^2(F_m-d_s)^2\,d\nu+
+       \int xR^2(F_\ell-\mathfrak b_s)^2\,d\nu.
+\]
+Each $F_j$ is nondecreasing and $1$-Lipschitz, with $0\le F_j\le x$. To compare variances, put $\pi=R\nu/W$ and use
+\[
+ \E_\pi[R(F-\E_\pi F)^2]
+ =\frac12\E_{\pi,\pi}[(R_x+R_y-\E_\pi R)(F_x-F_y)^2].
+\]
+Its coefficient is positive because $2-1/\alpha>0$. For the odd part, put
+$\rho_0=xR\nu/a$, $\kappa=a/W$ and use
+\[
+\begin{split}
+ \E_{\rho_0}[R(F-\kappa\E F)^2]
+ ={}&\frac\kappa2\E_{\rho_0,\rho_0}
+ [(R_x+R_y-\kappa\E R)(F_x-F_y)^2]\\
+ &+(1-\kappa)\E_{\rho_0}[(R-\kappa\E R)F^2].
+\end{split}
+\]
+Here $\kappa\E R\le\theta/\alpha<1$, so both coefficients are nonnegative. Replacing $F$ by $x$ in these two formulas proves $L(S_n-c)\le L(S_3)$.
+From \eqref{q3:eq:centerbounds},
+\[
+ L(S_3)=(2+2d+d^2)L_{r_0}+(d^2-1)\beta+d^3,\qquad
+ L_{r_0}=\norm{R_C{r_0}}_2^2\le(\beta-\beta^2/a_0)/\alpha .
+\]
+The resulting concave quadratic increases up to $\beta=da_0/z$; its endpoint derivative, after multiplication by $\alpha z$, is at least $6472/27648$. Thus
+\[
+ L\le d\,\ell(d),\qquad
+ \ell(d)=\frac{585/1024-d}{(19/32+d)^2}.
+\]
+This convex function has the upper chords
+\[
+ \ell(d)\le
+ \begin{cases}
+ 13/8-6d,&0\le d\le1/10,\\
+ 7/5-4d,&1/10\le d\le1/5,\\
+ 4/3-11d/3,&1/8\le d\le1/5.
+ \end{cases}
+\]
+Independently, centering the full spectral even and odd parts does not increase their norms, giving
+\[
+ L\le\int\frac{x^2[U_m^2+xU_\ell^2]}{(1-x)^2}\,d\nu.
+\]
+For $n\ge5$ this is less than $(15/16)d$, since $U_j\le1-x+x^2$ for $j\ge2$; for $n=4$ it is at most $(10101/11552)d<(7/8)d$.
+
+For $n\ge5$ and $d\le1/5$, take $H=S_n-\alpha d\ge f_n$. Then
+\[
+ \frac43d\le D\le\frac{15}8d,\qquad
+ D+b_0\ge(11/20)D+(171/640)d,\qquad 0<u<2.
+\]
+The ratio bound $\mathfrak b_n\le(9/20)D_n$ follows pointwise from the finite alternating sums: the only additional even-index ratio is $(x+x^4)/(1-x^4)$, at most $454545/1020015<9/20$. The margin is bounded below by
+\[
+ \mathcal F(D,L)=4(1-D)[(11/20)D+(171/640)d-(L+D^2)/2]
+                  -[\sqrt L+(L+D^2)/2]^2.
+\]
+It decreases in $L$ and is concave in $D\le3/8$. At $D=td$, $L\le l d$, write
+$c_t=11t/20+171/640$, $b_t=l/2+t^2d/2$; then
+\[
+ \mathcal F(td,ld)/d=4(1-td)(c_t-b_t)-(\sqrt l+b_t\sqrt d)^2.
+\]
+The two endpoints $t=4/3,15/8$ suffice. On $d\le1/10$ use $l=15/16$: the first term is greater than $3/2$, and the square is at most $(311/256)^2$, leaving $1583/65536>1/100$. On $1/10\le d\le1/5$, use $l=7/5-4d$. The respective bounds are
+\[
+\begin{array}{c|c|c|c}
+t&\text{first term lower}&\text{square upper}&\text{margin lower}\\\hline
+4/3&57/40&(1337/1125)^2&637865/50625000\\
+15/8&3/2&(973/800)^2&13271/640000 .
+\end{array}
+\]
+The first terms are concave quadratics and the square-root sums decrease; the table follows by their interval endpoints. Both margins exceed $1/100$.
+
+For $n=4$ choose $H=S_4-d=f_4+dp$. Then
+$(5/3)d\le D\le2d$, $D+b_0\ge(6/19)D+(13/19)d$ and $0<u<2$.
+Use the same concavity argument with $t=5/3,2$ and $c_t=(6t+13)/19$. On $d\le1/8$, $l=7/8$ gives first terms at least $205/108,573/304>15/8$ and square at most $(161/128)^2$, leaving $4799/16384$. On $1/8\le d\le1/5$, take $l=4/3-11d/3$: the first terms are at least $3/2$ and $702/475$ respectively, while the square is below $23/16$. The uniform margin is at least $307/7600>1/100$.
+
+For $n=3$ use the actual $H=f_3=S_3-d$. With $D_2=a/W$,
+\[
+ D=d+D_2,\quad b_0=-[(1+d)D_2-d],\quad
+ D+b_0=d(2+d-D),\quad D\le d(43/16-2d).
+\]
+On $d\le1/10$, $1-D>7/10$, $(D+b_0)/d>9/5$, $L/d\le13/8-6d$ and $B/d<7/8$. Thus the first term of $\Phi/d$ is at least $259/100$, and the square at most $(191/120)^2$, leaving $815/14400>1/100$. On $1/10\le d\le1/5$, $1-D\ge217/400$, $(D+b_0)/d\ge697/400$, $L/d\le7/5-4d$ and $B/d<5/6$. The corresponding bounds are $236747/120000$ and $(11/8)^2=226875/120000$, leaving $9872/120000>1/100$. In both cases $L\le1/5$ gives $0<u<2$.
+
+Finally for $d\ge1/5$ a Hilbert--Schmidt bound on the actual message gives
+$\norm{X_{f_n}}^2\le2\mu_{n+2}$. Positive convolution bounds this by $191/200$ for $n\ge4$, and the exact $\mu_5$ bounds it by $161/200$ for $n=3$. Both are below $1-d/800$. This proves \eqref{q3:eq:mixed} for $n\ge2$. For $n=1$, the factorization
+$X_1=[\sqrt p A^*p^{-1/2}]\sqrt{pq}$ and weighted propagation prove the assertion.
+
+\subsection{Opposite types and every positive connector length}
+Let $X_i=\sqrt{f_i}A^*\sqrt q$ and let $X_j^-=\sqrt{\bar f_j}A\sqrt p$. Every case of \eqref{q3:eq:opposite} is covered by the following factorizations:
+\[
+\begin{array}{c|l}
+\text{indices}&\text{factorization or estimate}\\\hline
+i=j=1&[\sqrt p A^*p^{-1/2}]^L\sqrt{pq}\\
+i\ge2,j=1&X_i B_q^{L-1}\\
+i=1,j\ge2&\text{reversal and adjoint of the preceding case}\\
+i,j\ge2,L=2&(\sqrt{f_i}A^*)(\sqrt{\bar f_j}A)^*\\
+i,j\ge2,L\ge3&X_iY_{L-2}(X_j^-)^* .
+\end{array}
+\]
+For $i,j\ge2,L=1$, Cauchy--Schwarz on the nonnegative edge kernel yields
+\[
+ |\ip u{\sqrt{f_i}A^*\sqrt{\bar f_j}v}|^2
+ \le\ip{|u|}{M_{f_i}A^*|v|}\,
+     \ip{|u|}{A^*M_{\bar f_j}|v|}
+ \le\norm u_2^2\norm v_2^2
+\]
+by \eqref{q3:eq:ordinaryoperator} and its reversed adjoint. All factors have already been proved contractions. The connector has $L$ steps; at $L=3$ the factor is $Y_1$, while $Y_0$ lies outside the positive-index range. This finishes Proposition~\ref{q3:prop:operators}.

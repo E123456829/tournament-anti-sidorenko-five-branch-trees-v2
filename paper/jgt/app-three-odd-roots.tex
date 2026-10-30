@@ -1,0 +1,126 @@
+\subsection{Odd roots with a long anchor or a separated second arm}\label{q3:app:odd}
+\subsubsection{Ordinary cubic envelopes for every path of length at least three}
+For $n\ge3$ put $t_j=1-\E S_j$, $a=t_n$, $b=t_{n-1}$ and $y=S_n-b$. Positive convolution gives $0<f_n\le y$ and $\E y=1-a-b$, with $(1-\theta)d\le a,b\le d$. For odd $n$, $a=b$; for even $n=2m$, $a-b=(-1)^{m-1}\delta_{m}$.
+
+Let $C=\norm{S_n-1}_2^2$ and $v=S_n-\E S_n$. Since $S_n-1=KS_{n-1}$ and $\norm{S_{n-1}}_2\le1$, we have $|S_n-1|\le1$. Thus $\E v^2=C-a^2$ and $v^3\le(1+a)v^2$, giving
+\begin{equation}\label{q3:eq:pathcubicenvelope}
+ \E f_n^3\le\E y^3
+ \le(1-a-b)^3+(4-2a-3b)(C-a^2).
+\end{equation}
+The coefficient is positive. The spectral formulas for $G_n$ give
+\[
+\begin{array}{c|c|c}
+n\bmod4&\text{relation of deficits}&C\text{ upper bound}\\\hline
+3&a=b&b\\
+0&a-b=-\delta_{n/2}\le0&a\\
+1&a=b&b+\delta_{3}\\
+2&a=b+c,\ 0\le c=\delta_{n/2}\le \delta_{3}&a+\theta c.
+\end{array}
+\]
+For example, for odd $n=2m+1$,
+$C=\int x(1+x^{2m+1})/(1+x)\,d\nu$ and
+$a=b=\int x[1-(-x)^m]/(1+x)\,d\nu$; subtracting yields the two odd rows. For even $n=2m$, the two integrands are $x[1-(-x)^m]^2/(1+x)$ and $x[1-(-x)^m]/(1+x)$, which prove the even rows.
+
+Write $H(a,b)=(1-a-b)^3+(4-2a-3b)(a-a^2)$. Direct expansion gives
+\[
+ H(b+\delta,b)=1-2b+3b^2-3b^3+
+ \delta(1-3b)-3(1-b)\delta^2+\delta^3.
+\]
+For $0\le b\le1/3$, $2-3b+3b^2\ge4/3$. In the first two rows all additional $\delta$ terms are nonpositive. In the third row the excess is at most $4\delta_{3}$; in the fourth it is at most $(1+4\theta)\delta_{3}$. Consequently the respective deficit coefficients, relative to $d$, are
+\[
+ 19/24,\quad19/24,\quad101/768,\quad8809/24576.
+\]
+We have proved, for the same positive envelope $y$,
+\begin{equation}\label{q3:eq:allpathcubic}
+ \E y^3\le1-(101/768)d,\qquad
+ \E y\ge1-2d,\qquad \norm{S_n-1}_2^2\le d.
+\end{equation}
+
+\subsubsection{A scalar estimate for an anchored cubic}
+\begin{lemma}\label{q3:lem:tiltedcubic}
+Suppose $y,P>0$, $P\le e^{R-\Delta}$ and $|R|\le M$. Put $x=\E y^3$ and let $B\ge\E[y^3R]$. Then
+\[
+ \log\E[y^3P^3]\le\log x+\frac{3B}{x}+\frac92M^2-3\Delta.
+\]
+If $x>3B$ and $x\le u$, the first two terms are at most $\log u+3B/u$. If also $B\ge0$ and $u\ge1$, they are at most $\log u+3B$.
+\end{lemma}
+\begin{proof}
+Apply \eqref{q3:eq:hoeffding} to the probability measure $y^3\mu/x$. The derivative of $\log x+3B/x$ is $(x-3B)/x^2$. All operator estimates remain on $\mu$.
+\end{proof}
+We also use, for $z\ge0$,
+\begin{equation}\label{q3:eq:logbound}
+ \log(1+z)\le z-\frac{z^2}{2(1+z)}.
+\end{equation}
+The derivative of the difference is $z^2/[2(1+z)^2]\ge0$.
+
+\subsubsection{The smallest residual arm has length at least three}
+Let $F=E_0f_aP$, where $a\ge3$ is smaller than every paired residual length, and let there be $\ell$ pairs. If $\ell=0$, use \eqref{q3:eq:allpathcubic}. Otherwise their shortest length is at least four, so
+\[
+ P\le e^{R-\Delta},\quad \Delta=2\ell d\ge2d,\quad
+ \norm R_\infty^2\le d/7,\quad \E R^2\le d/18,\quad \E R\le d/12.
+\]
+The first two norm bounds follow from $C_*\theta^3<1/7$ and $C_*\theta^4<1/18$; the mean bound follows by retaining positive means from degree eight onward, using
+$\delta_{4}/(1-\theta^2)\le d/12$.
+If $d\ge1/28$, then $\norm R_\infty\le2d\le\Delta$, hence $P\le1$ and the path cubic suffices.
+
+For $0<d\le1/28$, use the actual envelope $y$ in \eqref{q3:eq:allpathcubic}, put $t=y-1$ and $Z_0=\E y^3$. Then $|t|\le1$,
+$\E t^2\le d+3d^2\le31d/28$ and $Z_0\ge(1-2d)^3\ge(13/14)^3>4/5$. Expanding the cubic weight gives
+\[
+ \E[y^3R]=\E R+3\E(tR)+\E[t^2(3+t)R]
+ \le\left(\frac1{12}+\frac34+\frac13\right)d=\frac76d.
+\]
+Here $3|\E(tR)|\le3\sqrt{31/504}\,d\le3d/4$ and the last term is at most
+$4(1/14)(31/28)d\le d/3$. Thus its normalized tilted mean is at most $35d/24$. Applying \eqref{q3:eq:hoeffding} under $y^3\mu/Z_0$ yields
+\[
+ \E[y^3P^3]\le Z_0\exp[-3\Delta+3(35/24)d+(9/14)d]
+ \le Z_0e^{-(55/56)d}\le1-(101/768)d.
+\]
+Restoring $E_0\le1$ proves the required full root cubic.
+
+\subsubsection{A short anchor followed by a residual arm of length at least four}
+Suppose the residual list is $a<b_1<c_1<\cdots<b_t<c_t$ with $a=1$ or $2$. Write $b=b_1$ and $P=\prod_{i} h_{b_i}f_{c_i}$. For $b=4$ choose the inward anchor $y=\bar f_a$; for $b\ge5$ choose $y=f_a$. We prove $\E(yP)^3\le1$.
+
+For $z=y-1$ and $x=\E y^3$ the elementary short-path bounds are
+\[
+ |z|\le1,\quad \E z^2\le3d/2,\quad
+ (1-d)^3\le x\le1+4d.
+\]
+For a unit anchor $x\ge1$; for a two-edge anchor $x\le1+(21/8)d$. Indeed $\E z=-d$, $\E z^2=d+\delta_{2}$, and $x=1+3\delta_{2}+\E z^3$ in the latter case.
+
+If $b\ge5$, the disjoint-mask bounds give
+\[
+ M^2\le d/18,\quad \E R^2\le d/40,\quad
+ \E R\le d/12,\quad \E(gR)\le d/30,\quad \Delta=2td.
+\]
+For $y=p$, expansion gives $\E[y^3R]\le d/5+4Md=:B$. If $d\le1/8$, then $M\le1/12$, $3B\le1/5<x$, and Lemma~\ref{q3:lem:tiltedcubic} gives a logarithmic bound at most $-(3/20)d$. If $d\ge1/8$, $M\le2d/3$ and the pointwise bound gives
+$\E[y^3P^3]\le(1+4d)e^{-4d}\le1$.
+
+For $y=f_2$, ordinary Cauchy--Schwarz gives
+$\E[y^3R]\le(2/3)d+6Md=:B$. Put $D=32/729$. If $d\le D$, then $M\le4/81$, $3B\le832/6561<1/2<x$, and the logarithmic bound is
+$[-9/8+18M]d\le-(17/72)d$. For $d\ge D$, $M\le9d/8$ and
+$\E[y^3P^3]\le[1+(21/8)d]e^{-(21/8)d}\le1$.
+
+Now take $b=4$ and one pair. The contiguous remainder is $R=S_c-S_4$, $c\ge5$, with $M^2\le(1+\theta)\theta^3d<d/10$, $\Delta=2d$. For the inward anchors, the linear cubic-weight term is
+\[
+ \E[(1+3z)R]=
+ \begin{cases}
+ \sum_{j=5}^c(u_j+3u_{j+1}),&a=1,\\
+ \sum_{j=5}^c(u_j+3u_{j+1}+3u_{j+2}),&a=2.
+ \end{cases}
+\]
+For $c=5$ these equal $-3\delta_{3}$. For $c\ge6$ they are at most
+$-4\delta_{3}+7\delta_{4}/(1-\theta^2)=-(508/855)\delta_{3}\le0$. Hence $B=4Md$ or $6Md$ is valid.
+For the unit anchor, $d\ge9/40$ gives the pointwise estimate as before. In the other range $M\le3/20$, $3B<x$, and \eqref{q3:eq:logbound} gives
+\[
+ \log\E[y^3P^3]\le d[-31/20+(12/\sqrt{10})\sqrt d-(80/19)d]
+ \le-(139/200)d.
+\]
+For the two-edge anchor use the threshold $D=32/405$. Above it, $M\le9d/8$ gives the pointwise estimate. Below it, $M\le4/45$, $3B<1/2<x$, and the logarithmic bound is at most $[-117/40+18M]d\le-(53/40)d$.
+
+Finally suppose $b=4$ and $t\ge2$. Then $\Delta\ge4d$, $M^2\le d/7$, and counting the positive linear-weight coefficients gives
+$\E[(1+3z)R]\le7\delta_{4}/(1-\theta^2)\le7d/12$. Thus $B=7d/12+6Md$ works for both anchors.
+For $d\ge1/16$, $M\le2d$ and $(1+4d)e^{-6d}\le1$. For $d\le1/16$, $M<1/10$, $3B\le71/320<1/2<x$, and Lemma~\ref{q3:lem:tiltedcubic} bounds the logarithm by
+\[
+ [4+7/4+9/5+9/14-12]d=-(533/140)d.
+\]
+All short-anchor configurations with $b\ge4$ are covered, in the fixed directions stated at the beginning. Restoring $E_0$ proves the complete middle-root statement in the coverage table.

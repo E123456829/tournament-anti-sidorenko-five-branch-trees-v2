@@ -1,0 +1,285 @@
+\subsection{The short bare inward paths under the reference $f_2$}\label{proof:Q5-C101}
+Use the finite model and notation of Section~\ref{proof:Q5-C099}, with
+$z=\allowbreak -K$, $u=\allowbreak z\one=\allowbreak -g$, $\delta_j=\allowbreak \|K^j\one\|_2^2$,
+$\theta=\allowbreak 13/32$, $\kappa=\allowbreak 19/32$, and $\tau=\allowbreak d-\delta_2$.
+The following bounds hold for every real skew $|K|\le\allowbreak 1$:
+\begin{equation}\tag{Q101.0.1}\label{eq:Q101:short}
+ \E[f_2\bar f_3^4]\le1-d/8,\qquad
+ \E[f_2\bar f_4^4]\le1-2d/5,\qquad
+ \E[f_2\bar f_5^4]\le1-7d/10.
+\end{equation}
+Together with \eqref{eq:Q99:bare}, these give
+\begin{equation}\tag{Q101.0.2}\label{eq:Q101:bare-all}
+ \E[f_2\bar f_n^4]\le1-d/20\qquad(n\ge3).
+\end{equation}
+All adjoints and moments use the same finite measure. In particular,
+$d^2\le\allowbreak \delta_2\le\allowbreak \theta d$, $\delta_3\ge\allowbreak \delta_2^2/d$ for $d>\allowbreak 0$,
+and $\delta_{j+1}\le\allowbreak \theta\delta_j$.
+At $d=\allowbreak 0$, the result follows by leaf integration.
+Actual equal-arm factors satisfy $f_\ell h_\ell\le\allowbreak 1$.
+
+\paragraph{Q101.1 Finite convolution and the coefficient ten}\label{part:Q101.1}
+Write $G_n(z)=\allowbreak \sum_{i=\allowbreak 0}^{n-1}z^i$. The finite positive convolution is
+\[
+ S'_n=1+G_n(z)u
+ =\bar f_n+\sum_{j=3}^n\beta_j\bar f_{n-j},\qquad
+ \beta_3=\beta_4=d,\quad \beta_5=\beta_6=\tau,\quad
+ \beta_7=\beta_8=\tau+\delta_3.
+\]
+For $n=\allowbreak 4,\allowbreak 5$, positivity and $\|G_{n-1}\|\le\allowbreak 1$ give
+\[
+ 0\le\bar f_n\le S'_n-\tau(1+q)
+ \le(1-\tau)q-\tau+\sqrt d.
+\]
+Their means below satisfy $m\le\allowbreak 1-3cd$, where $c=\allowbreak 19/48$.
+Since $\tau\ge\allowbreak \kappa d\ge\allowbreak  cd$, the pointwise coefficient
+\eqref{eq:Q99:coefficient} applies:
+\[
+ f_2[(Z+m)^2+2m^2]\le10,\qquad Z=\bar f_4\ \hbox{or}\ \bar f_5.
+\]
+For clarity, that coefficient uses $f_2\le\allowbreak  w(q)=\allowbreak 2-q^2/2$,
+$x=\allowbreak \sqrt d$, $y=\allowbreak q+1$, and
+\[
+ (Z+m)^2+2m^2\le y^2+2+2yx-A(q)x^2,\qquad
+ A(q)=\frac{5111}{6912}q^2+\frac{3059}{864}q+\frac{17767}{3456}.
+\]
+The full coefficient proof is given in
+\hyperref[part:Q99.3]{the coefficient calculation of Section~\ref{proof:Q5-C099}}.
+The Taylor identity is
+\begin{equation}\tag{Q101.1.1}\label{eq:Q101:taylor}
+ \E[f_2Z^4]=(1-d)m^4+4m^3\operatorname{Cov}(f_2,Z)
+ +\E[f_2(Z-m)^2\{(Z+m)^2+2m^2\}].
+\end{equation}
+For $n=\allowbreak 4,\allowbreak 5$ the covariances are nonpositive, so their middle terms
+can be discarded.
+
+\paragraph{Q101.2 Length four}\label{part:Q101.2}
+The exact message is
+\[
+ \bar f_4=S'_4-d(1+q)=1-2d+P_4(z)u,\qquad P_4=G_4-d,
+\]
+and its mean satisfies
+\[
+ m_4=1-3d+\delta_2\le1-(83/32)d\le1-5d/2.
+\]
+Here $m_4$ denotes a path mean; ordinary powers are written explicitly.
+At $z=\allowbreak i\sqrt x$,
+\[
+ |P_4|^2=(1-d)^2+(-1+2d)x-x^2+x^3.
+\]
+Consequently,
+\[
+ \operatorname{Var}(\bar f_4)
+ =(1-d)^2d-(1-2d)\delta_2-\delta_3+\delta_4-\tau^2,
+\]
+and
+\[
+ \operatorname{Cov}(f_2,\bar f_4)=-d+2\delta_2-\delta_3+d\delta_2.
+\]
+Put $t=\allowbreak \delta_2/d\in[d,\allowbreak \theta]$. Since $\delta_3\ge\allowbreak  t^2d$,
+\[
+ \frac{\operatorname{Cov}(f_2,\bar f_4)}d
+ \le-1+2t-t^2+td\le-\kappa^2+\theta d
+ \le-667/3072<0.
+\]
+The derivative $2-2t+d$ is positive, justifying the endpoint $t=\allowbreak \theta$.
+For the variance, use $\delta_4\le\allowbreak \theta\delta_3$ and
+$\delta_3\ge\allowbreak  t^2d$:
+\[
+ \frac{\operatorname{Var}(\bar f_4)}d
+ \le(1-d)^2-(1-2d)t-\kappa t^2-d(1-t)^2.
+\]
+Its derivative in $t$ is $-1+4d-2(\kappa+d)t$.
+For $t\ge\allowbreak  d$ this is at most $-1+(45/16)d-2d^2$, which increases
+on $[0,\allowbreak 1/3]$ and equals $-41/144<\allowbreak 0$ at its right endpoint.
+Thus the maximum occurs at $t=\allowbreak d$, giving
+\[
+ \operatorname{Var}(\bar f_4)\le
+ v_4(d):=d-4d^2+(141/32)d^3-d^4.
+\]
+Apply the coefficient ten and $m_4\le\allowbreak 1-5d/2$:
+\[
+ \E[f_2\bar f_4^4]\le(1-d)(1-5d/2)^4+10v_4(d).
+\]
+The increment over one, divided by $d$, expands as
+\[
+ -1+(15/2)d-(895/16)d^2+(1465/16)d^3-(625/16)d^4.
+\]
+Use $d^3\le\allowbreak  d^2/3$ and discard the negative quartic term:
+\[
+ \frac{\E[f_2\bar f_4^4]-1}d
+ \le-1+(15/2)d-(305/12)d^2\le-109/244<-2/5.
+\]
+The last comparison is $545>\allowbreak 488$.
+
+\paragraph{Q101.3 Length five}\label{part:Q101.3}
+The finite convolution retains its actual coefficients:
+\[
+ \bar f_5=S'_5-d(\bar f_1+\bar f_2)-\tau
+ =1-2d-\tau+P_5(z)u,\qquad P_5=G_5-d(2+z).
+\]
+Its mean satisfies
+\[
+ m_5=1-4d+2\delta_2+d^2
+ \le1-(51/16)d+d^2\le1-(137/48)d\le1-14d/5.
+\]
+At $z=\allowbreak i\sqrt x$,
+\[
+ \frac{|P_5|^2-(1-2d)^2}{x}
+ =-1+2d+d^2+(1-2d)x-x^2+x^3.
+\]
+This increases with $d$, because $2+2d-2x>\allowbreak 0$.
+At $d=\allowbreak 1/3$ it is at most $-2/9+x/3\le\allowbreak -25/288<\allowbreak 0$, using
+$0\le\allowbreak  x\le\allowbreak \theta<\allowbreak 1$ and $-x^2+x^3\le\allowbreak 0$.
+Hence $\|P_5\|\le\allowbreak 1-2d$.
+The exact mean of $P_5u$ is $-\tau+d^2$, so
+\[
+ \operatorname{Var}(\bar f_5)\le(1-2d)^2d-(\tau-d^2)^2
+ \le v_5(d):=d-(4457/1024)d^2+(83/16)d^3-d^4.
+\]
+Here $\tau\ge\allowbreak \kappa d>\allowbreak d^2$. The exact covariance is
+\[
+ \operatorname{Cov}(f_2,\bar f_5)=-d+2\delta_2-2\delta_3+d^2+d^3.
+\]
+With $t=\allowbreak \delta_2/d$,
+\[
+ \frac{\operatorname{Cov}(f_2,\bar f_5)}d
+ \le-1+2t-2t^2+d+d^2
+ \le-265/512+d+d^2\le-337/4608<0.
+\]
+The derivative $2-4t$ is positive for $t\le\allowbreak \theta$.
+The coefficient ten therefore gives
+\[
+ \E[f_2\bar f_5^4]\le(1-d)(1-14d/5)^4+10v_5(d).
+\]
+The increment over one, divided by $d$, is
+\[
+ -11/5+(188347/12800)d-(82973/1000)d^2
+ +(87046/625)d^3-(38416/625)d^4.
+\]
+Absorb the cubic using $d\le\allowbreak 1/3$. The negative quadratic coefficient
+becomes $548227/15000>\allowbreak 73/2$, and $188347/12800<\allowbreak 59/4$. Thus
+\[
+ \frac{\E[f_2\bar f_5^4]-1}d
+ \le-11/5+(59/4)d-(73/2)d^2
+ \le-11/5+3481/2336<-7/10,
+\]
+with final margin $23/2336$.
+
+\paragraph{Q101.4 Length three}\label{part:Q101.4}
+Put $\eta=\allowbreak \sqrt{45/32}$, $x=\allowbreak \sqrt d$, and $m=\allowbreak 1-2d$.
+The exact message and row norm are
+\[
+ \bar f_3=q-d+K(g-Kg),\qquad
+ \|g-Kg\|^2=d+\delta_2\le45d/32.
+\]
+Hence $0\le\allowbreak \bar f_3\le\allowbreak  q-d+\eta\sqrt d$.
+Using $f_2\le\allowbreak  w(q)=\allowbreak 2-q^2/2$ and $c=\allowbreak \eta x-3x^2$ gives
+\[
+ f_2[(\bar f_3+m)^2+2m^2]
+ \le H(q,d):=w(q)[(q+1+c)^2+2m^2].
+\]
+We establish, for $0\le\allowbreak  q\le\allowbreak 2$, $0\le\allowbreak  d\le\allowbreak 1/3$,
+\begin{equation}\tag{Q101.4.1}\label{eq:Q101:coefficient-three}
+ H(q,d)\le C(d):=10-15d+8d^2.
+\end{equation}
+Concavity of $c$ as a function of $x$ gives $-1/3\le\allowbreak  c\le\allowbreak 1/8$:
+the lower endpoint uses $\sqrt{15/32}>\allowbreak 2/3$, and its maximum is
+$\eta^2/12=\allowbreak 15/128<\allowbreak 1/8$. Differentiation gives
+\[
+ H_q=(q+1+c)[4-2q^2-q(1+c)]-2qm^2.
+\]
+For $0\le\allowbreak  q\le\allowbreak 4/5$ the bracket is positive and
+\[
+\begin{gathered}
+H_q\ge(q+2/3)(4-2q^2-9q/8)-2q\\
+=8/3+5q/4-59q^2/24-2q^3\\
+\ge8/3-(599/300)q\ge1604/1500>0.
+\end{gathered}
+\]
+For $q\ge\allowbreak 3/2$ the derivative is negative, since $1+c\ge\allowbreak 2/3$.
+It remains to prove \eqref{eq:Q101:coefficient-three} for
+$4/5\le\allowbreak  q\le\allowbreak 3/2$. Put $y=\allowbreak q+1$.
+After moving $15x^2-8x^4$ to the left, the cubic and quartic terms are
+\[
+ -6\eta wx^3+(17w-8)x^4\le0.
+\]
+Indeed $x\le\allowbreak 1/\sqrt3$, $w\le\allowbreak 42/25$, $\eta\sqrt3>\allowbreak 41/20$, and
+$(17-6\eta\sqrt3)w<\allowbreak (47/10)(42/25)=\allowbreak 1974/250<\allowbreak 8$.
+Thus
+\[
+ H+15d-8d^2\le w(y^2+2)+2\eta wyx-A(q)x^2,\qquad
+ A(q)=w(q)(6q+403/32)-15.
+\]
+Put $v=\allowbreak q-1\in[-1/5,\allowbreak 1/2]$. Then
+\[
+\begin{gathered}
+A=(825-614v-979v^2-192v^3)/64\ge997/256>0,\qquad\\
+D:=10-w(y^2+2)=1+11v^2/2+3v^3+v^4/2.
+\end{gathered}
+\]
+The bound for $A$ follows from its negative derivative on this interval.
+Completing the square in $x$ reduces the claim to
+$AD\ge\allowbreak \eta^2w^2y^2$. The exact expansion is
+\begin{equation}\tag{Q101.4.2}\label{eq:Q101:polynomial-three}
+ \begin{split}
+ 128(AD-\eta^2w^2y^2)
+ ={}&30-688v+9232v^2-2008v^3-14438v^4\\
+ &-8960v^5-2176v^6-192v^7.
+ \end{split}
+\end{equation}
+For $-1/5\le\allowbreak  v\le\allowbreak 0$, the odd-degree terms are nonnegative, and
+absorbing the negative even powers leaves quadratic coefficient at least
+$9232-14438/25-2176/625>\allowbreak 0$.
+For $0\le\allowbreak  v\le\allowbreak 1/4$, absorbing degrees at least three into $v^2$
+leaves coefficient $7678+15/16>\allowbreak 7600$. Hence the right side of
+\eqref{eq:Q101:polynomial-three} is at least
+$30-688v+7600v^2>\allowbreak 14$, since $688^2=\allowbreak 473344<\allowbreak 486400$.
+For $1/4\le\allowbreak  v\le\allowbreak 1/2$, the coarser absorption leaves $6713/2$;
+using $v\le\allowbreak 4v^2$ gives a lower bound
+$30+(6713/2-2752)v^2>\allowbreak 0$.
+This proves the coefficient on the middle interval, and the
+monotonicity in $q$ covers the two tails.
+
+For the actual $\bar f_3$, the exact moments are
+\[
+ \E\bar f_3=m=1-2d,\qquad
+ \operatorname{Cov}(f_2,\bar f_3)=-d+2\delta_2-d^2,\qquad
+ \operatorname{Var}(\bar f_3)=d-\delta_2+\delta_3-d^2
+ \le d-d^2-\kappa\delta_2.
+\]
+Apply \eqref{eq:Q101:taylor} with coefficient $C(d)$.
+The coefficient of $\delta_2$ in the resulting upper bound is
+\[
+ B(d)=8(1-2d)^3-\kappa C(d)
+ =33/16-(1251/32)d+(365/4)d^2-64d^3.
+\]
+For $0\le\allowbreak  d\le\allowbreak 1/16$, use $B(d)\le\allowbreak 33/16$ and
+$\delta_2\le\allowbreak \theta d$ when $B\ge\allowbreak 0$; when $B<\allowbreak 0$ discard
+$B\delta_2$. This gives
+\[
+ \frac{\E[f_2\bar f_3^4]-1}d
+ \le-1107/512+27d-57d^2+24d^3+16d^4
+ \le-1919/4096<-2/5.
+\]
+For the last step, discard the negative quadratic and use
+$-1107/512+27/16+3/512+1/4096=\allowbreak -1919/4096$.
+For $1/16\le\allowbreak  d\le\allowbreak 1/3$, the function $B$ is convex because
+$B^{\prime\prime}=\allowbreak 365/2-384d>\allowbreak 0$.
+Its endpoint values are $B(1/16)=\allowbreak -41/1024$ and
+$B(1/3)=\allowbreak -2765/864$, so $B\le\allowbreak 0$.
+Using $\delta_2\ge\allowbreak  d^2$ gives the quotient
+\[
+ P(d)=-3+(465/16)d-(3075/32)d^2+(461/4)d^3-48d^4.
+\]
+Set $t=\allowbreak d-1/4\in[-3/16,\allowbreak 1/12]$. Its exact expansion is
+\[
+ P=-65/512-(3/8)t-(885/32)t^2+(269/4)t^3-48t^4.
+\]
+For $t\le\allowbreak 0$, drop the negative cubic and quartic terms and complete
+the quadratic to obtain $P\le\allowbreak -65/512+3/2360<\allowbreak -1/8$,
+where the last comparison is $1536<\allowbreak 2360$.
+For $t\ge\allowbreak 0$, use $t^3\le\allowbreak  t^2/12$; every nonconstant term is then
+nonpositive, giving $P\le\allowbreak -65/512<\allowbreak -1/8$.
+This proves the length-three bound and completes
+\eqref{eq:Q101:short} and \eqref{eq:Q101:bare-all}.

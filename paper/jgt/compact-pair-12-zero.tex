@@ -1,0 +1,144 @@
+\subsection[The pair (1,2) and the complete even catalogue]{The pair $(1,2)$ and the complete even catalogue}\label{loc:S13}
+For $P=qf_2=q(p+r)$ we prove
+\begin{equation}\label{eq:compact-P12-fourth}
+ \E[pP^4]\le1-d/360.
+\end{equation}
+The argument also retains an intermediate envelope estimate used in
+Section~\ref{loc:S17}.
+The row geometry is $|r|\le\min\{\sqrt d,pq/2\}$,
+$c=pq+2r\in[0,2pq]$, $\E c=1-3d$, and $f_2=(p^2+c)/2$.
+Since $q+f_2=2+r$, $P\le(1+r/2)^2$.
+
+\proofpart{Orthogonal residual variance}
+For $0<d\le1/4$,
+\begin{equation}\label{eq:compact-orthogonal-budget}
+ |\E[gr^2]|^2\le d(d-\delta_{2})(\delta_{2}-d^2)/(1-d).
+\end{equation}
+If $V=\delta_{2}-d^2=0$ then $r=-d$ identically and the left side vanishes.
+Otherwise put $U=d-\delta_{2}>0$, $H=\E r^3+d\delta_{2}$.
+The function $g$ is orthogonal to $1,r+d$, and the residual of $r^2$
+from their span has squared norm $\E r^4-\delta_{2}^2-H^2/V$.
+For every real $k$,
+\[
+ 0\le\E[(d-r^2)(r-k)^2]
+ =d\delta_{2}-\E r^4-2k(d\E r-\E r^3)+k^2U.
+\]
+Complete the square first in $k$, then in $H$, to obtain
+\[
+ \E r^4\le d\delta_{2}-(H+dU)^2/U,\quad
+ \E r^4-\delta_{2}^2-H^2/V\le UV/(1-d).
+\]
+Cauchy--Schwarz against $g$ proves \eqref{eq:compact-orthogonal-budget}.
+With $t=\sqrt d$, $a=\delta_{2}/d\in[d,\theta]$, the resulting bound is
+\[
+ \E[pr^2]/d\le a+t\sqrt{(1-a)(a-t^2)/(1-t^2)}.
+\]
+It increases with $a$, since $1+t^2-2a>0$. Thus
+\begin{gather*}
+ \E[pr]=-t^2,\quad\E[pr^2]\le t^2v(t),\quad
+ v=\theta+ts(t),\quad
+ s(t)=\sqrt{(1-\theta)(\theta-t^2)/(1-t^2)}.
+\end{gather*}
+
+\proofpart{Fixed Hermite envelope}
+Interpolate $\phi(y)=(1+y/2)^8$ quadratically at $-2t/3$ (double) and $t$.
+Its cubic Rolle remainder is nonpositive on $[-t,t]$ and its quadratic
+coefficient is nonnegative. Substituting the preceding moments gives
+\begin{equation}\label{eq:compact-P12-aux}
+ \E[pP^4]\le\E[p\phi(r)]\le1+t^2\mathcal F(t),\qquad
+ \mathcal F=Av+B,
+\end{equation}
+where the complete polynomials are
+\begin{align*}
+ A={}&7-7t/3+35t^2/8-35t^3/108+455t^4/1296+t^5/1296+457t^6/186624,\\
+ B={}&-4+28t/9-371t^2/54+7t^3/54-1295t^4/972
+                     -73t^5/729-613t^6/15552-67t^7/46656.
+\end{align*}
+For reconstruction, the coefficients of $\phi$ are
+$1,4,7,7,35/8,7/4,7/16,1/16,1/256$.
+For $y^j$, put $u=-2/3$ and
+$\eta_j=\sum_{k=0}^{j-2}(k+1)u^k$.
+Its interpolant expectation is
+$t^j[\alpha_j+\eta_jv+\beta_jt]$, where
+$\alpha_j=(1-j)u^j+4\eta_j/9$,
+$\beta_j=-ju^{j-1}-4\eta_j/3$.
+This finite formula supplies every coefficient in $A,B$.
+
+\proofpart{The small interval}
+On $[0,1/2]$, $A\ge7-7t/3+455t^2/108>13/2$ and
+$v\le\theta+t/2$.
+The exact coefficients of $B+A(\theta+t/2)$ are
+\begin{gather*}
+ -37/32,\quad1631/288,\quad-43267/6912,\quad7553/3456,\\
+ -168175/124416,\quad28261/373248,\quad-227147/5971968,\quad-79/373248.
+\end{gather*}
+For $t\le1/4$ these give
+$\mathcal F\le-37/32+1631t/288-17t^2/3\le-109/1152$.
+The last quadratic increases up to $1/4$, so the bound covers the full interval.
+
+\proofpart{Curvature on the middle interval}
+Set $c_0=19/32$. Direct differentiation gives
+\begin{align*}
+ v'&=s-c_0^2t^2/[s(1-t^2)^2],\\
+ v''&=-3c_0^2t/[s(1-t^2)^2]-4c_0^2t^3/[s(1-t^2)^3]
+                         -c_0^4t^3/[s^3(1-t^2)^4].
+\end{align*}
+On $[1/4,1/2]$ all denominators are positive. The full derivative bounds are
+\[
+ v<3/5,\quad v'\le1/2,\quad v''\le-361/600,\quad
+ A''<28/3,\quad A'<9/4,\quad B''\le-721/54.
+\]
+For $v<3/5$ use $t^2s^2<9/256$, equivalent to the positive quadratic
+$(19/32)D^2-(283/1024)D+9/256$ in $D=t^2$,
+whose discriminant is $-7463/1048576$.
+For $v''$ retain only its first negative term and use $s\le1/2$.
+The polynomial derivative bounds follow termwise at the appropriate
+endpoints; their rational upper values are
+$A''\le4640045/497664<28/3$ and $A'\le2207545/995328<9/4$.
+If $A'<0$ then $t<1/3$, where $v'\ge0$ because
+$\theta-2t^2+t^4\ge53/288>0$.
+Otherwise $2A'v'\le A'<9/4$.
+Together with $A>13/2$ this gives
+\[
+ \mathcal F''=A''v+2A'v'+Av''+B''
+ \le28/5+9/4-4693/1200-721/54<-9.
+\]
+At the single rational center $t_0=3/8$, direct substitution gives
+\begin{gather*}
+ 673/100\le A\le6731/1000,\quad B\le-19099/5000,\\
+ 22/25\le A'\le9/10,\quad-23/10\le B'\le-9/4,\\
+ s^2=323/1760,\quad107/250<s<3/7,\\
+ 113/200<v\le127/224<567/1000,\quad27/100\le v'\le34/125.
+\end{gather*}
+In particular $\mathcal F(t_0)\le-3991/1120000<-1/300$ and
+$143/10000\le\mathcal F'(t_0)\le22783/250000<1/10$.
+Strong concavity therefore proves
+\[
+ \mathcal F(t)\le-1/300+|t-t_0|/10-9(t-t_0)^2/2\le-1/360
+\]
+throughout $[1/4,1/2]$.
+This also proves the auxiliary assertion
+$\E[p(1+r/2)^8]\le1-d/360$ for every $d\le1/4$.
+
+\proofpart{Large parameters and the full even catalogue}
+For fixed $g$, chord convexity in $c\in[0,2pq]$ gives
+\[
+ pP^4\le p(qp^2/2)^4+L_4(g)c,\quad
+ L_4\le q^3(4-q^2)^4/32<8/3.
+\]
+The maximum in the last inequality occurs at $q^2=12/11$;
+there $q^3<231/200$, $(4-q^2)^4<72$, yielding $2079/800<8/3$.
+Also $(qp^2/2)^4\le(16/27)^4<1/8$.
+Thus $\E[pP^4]\le1/8+(8/3)(1-3d)\le19/24$ for $d\ge1/4$,
+which is stronger than \eqref{eq:compact-P12-fourth}.
+Together with the two Hermite ranges and $d=0$ this proves the stated bound.
+
+\phantomsection\label{loc:even-zero-catalogue}
+Consequently every even canonical message, including its actual $E_0$,
+has $\E[pF^4]\le1$. Indeed all cases other than the sole $(1,2)$ have
+the compatible sixth moment: Appendix~\ref{q3:app:foundations} covers
+minimum at least three and empty residuals, Section~\ref{loc:S2} covers
+multiple pairs and $(2,3)$, Sections~\ref{loc:S3}--\ref{loc:S5} cover
+$(2,b\ge4)$, and Sections~\ref{loc:S7}--\ref{loc:S9} cover $(1,b\ge3)$.
+H\"older under $p\mu$ supplies the fourth moment; full reversal supplies
+the corresponding $q$-weighted catalogue.

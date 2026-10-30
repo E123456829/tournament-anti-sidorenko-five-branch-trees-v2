@@ -1,0 +1,274 @@
+\section{Shared calculus for local moments}\label{app:local-calculus}\label{app:catalogue-map}\label{app:local-catalogue}
+This appendix collects the scalar tools shared by the local estimates and
+records where each one is used. In every statement, the direction and the
+weight are part of the hypotheses. References to Appendices~\ref{sec:three}--\ref{app:five-remaining-outlets} point to
+the technical appendix that accompanies this article.
+\begin{table}[htbp]
+\centering
+\caption{Local estimates and their uses in the assembly.}\label{tab:proof-index}
+
+\begin{tabular}{@{}p{30mm}p{74mm}p{43mm}@{}}\toprule
+Location & Estimates & Used in\\\midrule
+Appendix~\ref{app:path-moments} & Path fourth moments; singleton fifth and cubed weights & terminal and center bounds\\
+Appendix~\ref{app:zero-moments} & Unpropagated even and odd messages & zero-step supply; canonical roots\\
+Appendix~\ref{app:even-propagation} & Even residual lists after positive propagation & terminal supply\\
+Appendix~\ref{app:odd-propagation} & Odd residual lists after positive propagation & terminal supply\\
+Appendix~\ref{app:center-moments} & Cubed-weight estimates for nonsingleton centers & four-branch star assembly\\
+Appendix~\ref{app:five-directions} & Index to direction tables and short-length exceptions & all five-branch constructions\\
+Appendices~\ref{app:five-local-proofs}--\ref{app:five-remaining-outlets} & Reference fourths, ordinary eighths and common-reference outlets & five-branch boundary estimates\\\bottomrule
+\end{tabular}
+
+\end{table}
+The common spectral and rooted-spider foundations are in
+Appendix~\ref{q3:app:foundations}.\label{loc:S1}
+The scalar tools below carry no arm parameters; each application supplies
+its own messages, signed means and parameter interval. A finite
+coefficient table records a polynomial identity or a bound on a
+continuous domain.
+
+\input{compact-common-calculus}
+\subsection{Scalar and propagation tools}\label{calc:logtools}
+The scalar inequalities used for odd-root and propagation estimates are
+\begin{equation}\label{eq:compact-log-tools}
+ \begin{gathered}
+ \log(1-x)\le-x-3x^2/10\quad(-1\le x<1),\\
+ \log(1+x)\le x-3x^2/10\quad(-1<x\le1),\\
+ e^{y-y^2/7}\le1+y+3y^2/8,\qquad e^{y-y^2/8}\le1+y+5y^2/12.
+ \end{gathered}
+\end{equation}
+For the logarithm, differentiate
+$\log(1-x)+x+3x^2/10$; its derivative is $-x(2+3x)/[5(1-x)]$,
+and its only possible maxima are $-1,0$, with $\log2<7/10$.
+For the last two inequalities the positive quadratic polynomials $Q_7,Q_8$
+have logarithmic differences with derivatives
+$y(2-5y+6y^2)/(56Q_7)$ and $y(4-8y+5y^2)/(48Q_8)$,
+respectively. Each quadratic factor is positive, proving the global bounds.
+
+We also need the sharper global bound, for every real $x$,
+\begin{equation}\label{eq:shared-exp-eighth}
+ e^{x-x^2/8}\le Q(x):=1+x+13x^2/32,
+\end{equation}
+because $[\log Q-x+x^2/8]'=x(13x^2-20x+8)/(128Q)$ has the sign of $x$.
+
+\input{compact-propagation-calculus}
+\subsection{A fourth-power coefficient}\label{calc:pathscalar}
+Set $c=19/32$, $x=\sqrt d$, $x_*=2/\sqrt{19}$,
+$m=1-3cx^2$, $b_0=1-cx^2$ and $a_0=1+m+x$.
+For $B_x(q)=a_0-b_0q$ put
+\begin{equation}\label{eq:compact-pathscalar}
+ H_x(q)=q[B_x(q)^2+2mB_x(q)+3m^2]\le7-10x^2
+ \quad(0\le x\le x_*,\ 0\le q\le2).
+\end{equation}
+Here $B_x\ge0$, and
+$H_x''=6b_0^2q-4b_0(a_0+m)\le4b_0x(3cx-1)\le0$.
+At $q=3/2$ the value and derivative are
+\begin{align*}
+ H_0(x)&=51m^2/8+9mx/2+3x^2/2,\\
+ D(x)&=-1/4-221x^2/64-57x^3/16+35739x^4/4096.
+\end{align*}
+The derivative $(-D)'=x[221/32+171x/16-35739x^2/1024]$ is positive:
+the bracket is concave, and its endpoint lower bound at $x_*$ is
+$93233/24320>0$. Thus $D\le-1/4$ and the maximum in $q$ lies in
+$[0,3/2]$. On that interval $H_x''\le-1813/704<-5/2$, using
+$b_0\ge7/8$ and the endpoint bound
+$-3-4x+15cx^2\le-259/88$.
+The tangent bound is therefore $\max H_x\le H_0+D^2/5$.
+The two derivative certificates are $-D(1/3)<2/3$ and
+$-D(x_*)<89205/92416<1$.
+Write
+\[
+ Q=H_0+10x^2-7
+ =-5/8+9x/2-1435x^2/128-513x^3/64+165699x^4/8192.
+\]
+For $x\le1/3$ its last two terms have nonpositive sum, so
+$Q+D^2/5<-5/8+1/2+4/45=-13/360$.
+For $1/3\le x\le x_*$ its quadratic part is at most $-427/1152$;
+the last two terms sum to less than $2/15$, using $x_*<6/13$.
+Hence $Q+D^2/5<-427/1152+2/15+1/5=-43/1152$.
+This proves the full continuous domain of \eqref{eq:compact-pathscalar}.
+
+\subsection{A common fourth-moment comparison}\label{calc:fourthcomparison}
+Set $c=19/32$, $\tau=d-\delta_{2}$ and $g'=-g$. Suppose $Z=S-a-bq\ge0$, with
+\begin{gather*}
+ \E S=1-\alpha,\quad\E[g'S]=\eta,\quad
+ a,b,\alpha,\eta\in[\tau,d],\quad\|S-1\|^2\le d,\\
+ |S-1-g'|\le\sqrt d.
+\end{gather*}
+For $\mu=\E Z$, $w=Z-\mu$ the exact identities imply
+\begin{gather*}
+ 0\le\mu\le m=1-3cd,\quad \E[g'w]\ge h=cd-d^2,\\
+ \E w^2=\|S-1\|^2-\alpha^2+b^2d-2b\eta
+                  \le d-3c^2d^2+d^3,\\
+ Z\le(1-cd)q-cd+\sqrt d.
+\end{gather*}
+More generally, the four displayed output bounds on the mean, covariance,
+variance and pointwise envelope alone suffice for the conclusion below;
+the coefficient conditions $a,b,\alpha,\eta\in[\tau,d]$ are one
+sufficient route to those outputs. In particular, later applications
+may have $b>d$ if they verify the outputs directly.
+The coefficient $p(Z^2+2\mu Z+3\mu^2)$ is bounded by $7-10d$ on the
+whole $0\le d\le1/3$. For $d\le4/19$ this is
+\eqref{eq:compact-pathscalar}. For the extension put $x=\sqrt d$ and use
+the same polynomials $H_0,D,Q$ from its proof. On
+$[2/\sqrt{19},1/\sqrt3]$, $-D$ increases to less than $7/6$,
+$H'_x(2)<0$, and $H''_x\le-3/2$ on $[0,3/2]$.
+The latter follows from $b_0\ge77/96$ and
+$-3-4x+15cx^2\le-519/224$.
+Also $Q'<0$: it is convex and has negative endpoint values
+\[
+ Q'(2/\sqrt{19})=-171/304-(52421/9728)(2/\sqrt{19}),\quad
+ Q'(1/\sqrt3)=-225/64+(9313/2048)/\sqrt3.
+\]
+Since $Q(2/\sqrt{19})<-3/4$, the tangent remainder is at most
+$-3/4+49/108=-8/27<0$.
+In the fourth expansion the combined function
+$\Phi(u)=u^3(u-4h)$ is maximized on $[0,m]$ at $m$:
+$m-4h=1-7cd+4d^2\ge17/288>0$.
+It follows that
+\begin{equation}\label{eq:compact-fourth-comparison}
+ \E[pZ^4]\le R_0:=m^3(1-7cd+4d^2)+(7-10d)(d-3c^2d^2+d^3)
+ \le1-d/9.
+\end{equation}
+The divided coefficients of $R_0-1$ are bounded by
+$-5/2,37/2,-49,52,-22$. The resulting polynomial is at most
+$-5/2+(37/2)d-36d^2\le-71/576$ for $d\le1/4$.
+For $d=1/4+h$, $h\le1/12$, its exact expansion is
+$-27/128+19h/8-73h^2/4+30h^3-22h^4$;
+using $30h^3\le5h^2/2$ bounds it by $-979/8064<-1/9$.
+
+\proofpart{An enlarged short tail}
+The same comparison holds if the row tail is $(13/12)\sqrt d$ and
+$d\le1/10$. At $p=3/2$ the modified derivative and remainder are
+\begin{align*}
+ D_\lambda&=-1/4-1889x^2/576-247x^3/64+35739x^4/4096,\\
+ Q_\lambda&=-5/8+39x/8-4205x^2/384-2223x^3/256+165699x^4/8192.
+\end{align*}
+Here $|D_\lambda|\le2/3$, the maximum is in $p\le3/2$, and
+$H''\le-14/5$. The cubic and quartic sum in $Q_\lambda$ is nonpositive;
+the remaining quadratic and tangent gain leave
+$-5/8+4563/8410+5/63=-6499/2119320<0$.
+
+\subsection{Five short-connector coefficient profiles}\label{calc:coefficientprofiles}
+For each row below put $x=\sqrt d$, $u$ equal to its mean bound,
+$B$ equal to its row envelope, and $H(\xi)=\xi(B^2+2uB+3u^2)$, with $q=2-\xi$.
+All rows have $H\le7$. This follows from concavity, $H'(3/2)<0$,
+and the tangent estimate $H\le H(3/2)+D^2/(2\kappa)$ when
+$H''\le-\kappa$ below $3/2$.
+The displayed formulas define every coefficient in the table; bounds
+are on $D=-|D|$ and $Q=H(3/2)-7$.
+\begin{table}[htbp]
+\centering
+\caption{Scalar coefficient profiles for short connectors.}\label{tab:profiles}
+\small
+\begin{tabular}{@{}cllll@{}}
+\toprule
+ & $(u,B)$ & range of $x$ & $(|D|,\kappa)$ & upper bound for $Q$\\\midrule
+A & $(1-d,(1-d/3)q-d/3+x)$ & all & $(9/10,8/3)$ & $-7/40$\\
+B & $(1-3d/2,(1-d/2)q-d/2+13x/12)$ & all & $(11/10,5/2)$ & $-53/200$\\
+C & $(1-9d/8,(1-3d/10)q+x)$ & $x\le1/3$ & $(21/40,27/10)$ & $-1/8$\\
+ & & $x\ge1/3$ & $(1,27/10)$ & $-2/5$\\
+D & $(1-5d/8,q+4x/5-3d/8)$ & all & $(1,3)$ & $-13/72$\\
+E & $(1-d,q+x-2d/3)$ & $x\le1/3$ & $(2/3,3)$ & $-13/64$\\
+ & & $x\ge1/3$ & $(7/5,3)$ & $-1/2$\\\bottomrule
+\end{tabular}
+
+\end{table}
+Differentiation gives
+$H''=6b^2\xi-4b(A+u)$ when $B=A-b\xi$.
+In each row $-D$ increases; its derivative divided by $x$ is an
+endpoint-positive concave quadratic. On the upper intervals of C and E,
+$Q'$ is convex with negative endpoints, giving the tabulated bounds;
+for A, D and the lower intervals of C and E, discard the nonpositive
+cubic/quartic sum and maximize the remaining quadratic.
+For B instead use $x\le3/5$ to bound that sum by $(207/160)x^3$;
+then $Q_B\le-5/8+39x/8-(9953/600)x^2<-53/200$.
+\input{compact-cycle-budget}
+\input{compact-score-transport}
+
+\subsection{Constants and arithmetic certificates}\label{sec:certificate-scope}
+\begin{table}[htbp]\centering\small
+\caption{Fixed constants and their roles. The rational relaxations are sufficient bounds.}\label{tab:constants}
+\begin{tabular}{@{}p{26mm}p{55mm}p{65mm}@{}}\toprule
+Constant & Origin & Use\\\midrule
+$2/\pi$ & Skew-kernel norm bound, Appendix~\ref{q3:app:foundations} & Spectral estimates.\\
+$\theta=13/32$ & Rational upper bound for $(2/\pi)^2$ & Geometric control of $\delta_{j+1}/\delta_j$.\\
+$\alpha=19/32$ & $1-\theta$ & Centered resolvent and fourth-moment losses.\\
+$\rho=5/12$ & Convenient relaxation of $\theta$ & Geometric tails in Appendix~\ref{q3:app:operators}.\\
+$C_*=101/50$ & Relaxed spectral mask bound in the four-branch estimates & Pair and multiple-arm envelopes.\\
+$C_*=32768/16245$ & Sharper finite-mask bound used in the five-branch estimates & Joint terminal and root-mask estimates.\\
+$\eta_*=1/500$ & Common sufficient outlet loss, Appendix~\ref{app:five-directions} & Two compatible outlets give loss $d/2000$.\\
+$7/15$ & Residue-class geometric deficit, \eqref{eq:compact-G-loss} & Finite spectral polynomials.\\
+$625$ & Negative-part estimate, Section~\ref{loc:S35} & Signed odd-table auxiliaries.\\\bottomrule
+\end{tabular}
+\end{table}
+Each certificate follows the same pattern: a nonnegative message
+envelope, a spectral polynomial, signed mean and variance bounds, and a
+scalar moment comparison. Rational endpoints keep the last stage finite
+while covering the whole continuous parameter domain.
+Appendix~\ref{app:worked} works out one example in full.
+
+
+The full local arguments are in the technical appendix.
+
+\input{polynomial-certificates}
+
+\subsection{Two reference curvature bounds}
+\label{sec:reference-curvature-nine}
+
+\begin{lemma}\label{lem:reference-coefficient-nine}
+Let \(0\le d\le1/3\), \(t=\sqrt d\), and let \(q,C,Z\) be
+nonnegative functions on a probability space, with \(q\le2\)
+and \(\mu=\E Z\). Define the following scalar functions:
+\begin{equation}\label{eq:reference-coefficient-nine:data}
+\begin{aligned}
+ \mathcal C_w&=2-q+6t/5,&
+ \mathcal M_w&=1-3t^2/2,\\
+ \mathcal S_w&=q+1+13t/12-(2+5q/8)t^2,\\
+ \mathcal C_s&=2-q+6t/5-19t^2/32,&
+ \mathcal M_s&=1-11t^2/8,\\
+ \mathcal S_s&=q+1+t-(13/8+3q/8)t^2.
+\end{aligned}
+\end{equation}
+If, for one \(i\in\{w,s\}\),
+\[
+ C\le\mathcal C_i,\qquad Z+\mu\le\mathcal S_i,
+ \qquad \mu\le\mathcal M_i,
+\]
+then
+\begin{equation}\label{eq:reference-coefficient-nine:bound}
+ C\{(Z+\mu)^2+2\mu^2\}\le9.
+\end{equation}
+\end{lemma}
+\begin{proof}
+Enlarge the scalar domain to \(0\le t\le3/5\), \(0\le q\le2\).
+Both \(\mathcal M_i\) are at least \(23/50\), and both
+\(\mathcal S_i\) are at least \(93/100\): their coefficient of
+\(q\) is positive, and their remaining concave quadratics have
+these endpoint lower bounds. The two \(\mathcal C_i\) are
+nonnegative as well, since \(6/5-19t/32>0\).
+Thus the asserted coefficient is at most
+\(\mathcal C_i(\mathcal S_i^2+2\mathcal M_i^2)\).
+
+Put \(D_i=9-\mathcal C_i(\mathcal S_i^2+2\mathcal M_i^2)\).
+Divide the enlarged domain at \(t=3/10\) and \(q=1\).
+On each of the four rectangles, map both variables affinely to
+\([0,1]\) and apply \eqref{eq:bernstein-coefficients}.
+The complete coefficient lists have the following bounds:
+\begin{table}[htbp]\centering\small
+\caption{Complete coefficient bounds for the reference curvature comparisons.}
+\label{tab:reference-coefficient-nine:bernstein}
+\begin{tabular}{@{}ccccc@{}}
+\toprule
+Polynomial&Bidegree&Rectangles&Total coefficients&Lower bound\\
+\midrule
+\(D_w\)&\((5,3)\)&4&96&\(1/2\)\\
+\(D_s\)&\((6,3)\)&4&112&\(1/2\)\\
+\bottomrule
+\end{tabular}
+\end{table}
+
+Lemma~\ref{lem:bernstein-certificate} gives \(D_i\ge1/2\)
+throughout the enlarged domain, including its boundary.
+This proves \eqref{eq:reference-coefficient-nine:bound} on
+the original domain \(t\le1/\sqrt3<3/5\).
+\end{proof}

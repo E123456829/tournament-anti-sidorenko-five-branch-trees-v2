@@ -1,0 +1,52 @@
+\subsection{Four unit-root ordinary-eighth families}
+\label{proof:Q5-C096-ordinary}
+After maximal genuine equal pairing let the residual lengths be
+\begin{equation}\tag{Q96.0.1}\label{eq:Q96:0.1}
+ \Sigma=(1,b_1,c_1,\ldots,b_k,c_k),\qquad
+ 1<b_1<c_1<\cdots<b_k<c_k,\quad k\ge1 .
+\end{equation}
+All \(L\ge1\) connector edges point from terminal to receiver,
+whose existing unit arm is outward. For genuine equal-pair
+products at the two roots, including empty products, put
+\begin{equation}\tag{Q96.0.2}\label{eq:Q96:0.2}
+ H=E_rpT^L(E_tF).
+\end{equation}
+The following directions are fixed by the residual lengths:
+\[
+\begin{array}{c|c|c}
+\text{range}&F&\E H^8\text{ upper}\\\hline
+b_1\ge4,\ k\ge1&q\prod_i h_{b_i}f_{c_i}&e^{-d}\\
+b_1=3,\ k\ge2&qf_3h_{c_1}\prod_{i\ge2}h_{b_i}f_{c_i}&e^{-d/2}\\
+b_1=2,\ k\ge3&qf_2h_{c_1}\prod_{i\ge2}h_{b_i}f_{c_i}&e^{-d/2}\\
+\Sigma=(1,3,4)&qf_3h_4&1-d/601 .
+\end{array}
+\]
+The first row retains the stronger all-domain rates
+\begin{equation}\tag{Q96.0.3}\label{eq:Q96:0.3}
+\begin{array}{ll}
+b_1=4,k=1:&\E H^8\le e^{-2d},\\
+b_1\ge4,k\ge2:&\E H^8\le e^{-[18+128(k-2)/5]d},\\
+b_1\ge5,k\ge1:&\E H^8\le e^{-[3+128(k-1)/5]d}.
+\end{array}
+\end{equation}
+Every instance of the first row keeps its displayed \(h_bf_c\) direction
+even at \(L=1\). In each of the other rows the first pair has direction
+\(f_bh_c\).
+
+\begin{proof}
+Apply Theorem~\ref{thm:unit-p:catalogue} with the actual terminal
+minimum \(a=1\). Lemma~\ref{lem:unit-p:minimum-four} and
+Section~\ref{part:unit-p:minimum-four-payments} give the three
+strong rates in \eqref{eq:Q96:0.3}. Section~\ref{part:unit-p:three-later} gives the second row for every
+finite \(L\), on the intervals meeting at \(d=1/6\).
+Section~\ref{part:unit-p:two-many} gives the third row in the
+same way. The fourth row is the genuine \(G_1\) case of
+Section~\ref{part:unit-p:three-single}; its low-domain
+finite continuation and the same-direction high comparison
+meet at \(d=1/8\).
+
+The original measure, terminal factor \(q\) and connector \(T^L\)
+are retained throughout. Positivity restores \(E_t,E_r\);
+complete reversal and \(d=0\) follow as in
+Section~\ref{part:unit-p:decorations}.
+\end{proof}

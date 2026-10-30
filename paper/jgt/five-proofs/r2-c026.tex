@@ -1,0 +1,1219 @@
+\subsection{All terminal pairs with minimum one at a unit root and a two-edge outlet}\label{proof:R2-C026}
+For every terminal residual $(1,b)$, $b\ge2$, every inner length $L\ge1$, an internal root with exactly one residual unit side arm and an outer path of exactly two edges, the direction table below gives an actual output $U$ with $I_q(U)^3\le1$, where $I_q(V)=\E[q^{-1/3}|V|^{8/3}]$. Equal pairs remain at their original vertices.
+
+\paragraph{R26.2 Original finite facts and the cubic certificate}
+
+\paragraph{R26.2.1 The actual probability space and same-kernel moments}
+
+Throughout this proof, \(ER^2\) means E[\(R^2\)]; the square of a mean is
+written (\(ER)^2.\) All such expectations are on the same original mu.
+
+Delete zero-mass atoms only. Then p(x), \(q(x)\ge \mu(x)>0\) because the diagonal
+contribution has K(x, \(x)=0\) and all off-diagonal factors 1+/-K are nonnegative.
+Thus inverse weights are legitimate without a uniform lower bound on p, q.
+
+The C014 calculus gives, on the original L2(mu),
+\[
+\begin{gathered}
+0\le d\le\tfrac13,\quad d^2\le \delta_2,\quad\\
+\|K\|^2\le\theta=\tfrac{13}{32},\quad\\
+\delta_{i+1}\le\theta \delta_i.
+\end{gathered}
+\]
+Write \(k_i=K^i1,\allowbreak  r=k_2,\allowbreak  s=k_3,\allowbreak  t=k_4,\allowbreak  v=k_5.\)
+Skew-adjointness gives
+\[
+Er=-d,\quad Et=\delta_2,\quad Eg=Es=Ev=0,
+\]
+\[
+E(gr)=E(gt)=E(rv)=0,\quad E(gs)=-\delta_2,\quad E(gv)=\delta_3.
+\]
+The three further inequalities used below follow directly:
+\[
+\delta_4\ge \delta_2^2,\qquad d\delta_3\ge \delta_2^2,\qquad \delta_3\ge d\delta_2.
+\]
+The last follows from the second and \(\delta_2\ge d^2\) when \(d>0\); \(d=0\) is immediate.
+
+For \(EV=0,\allowbreak \) subtract the row mean g(x) before Cauchy:
+\[
+\begin{gathered}
+|KV(x)|^2\\
+\le E_y(K(x,y)-g(x))^2\,EV^2\\
+\le(1-g(x)^2)EV^2=p(x)q(x)EV^2.
+\end{gathered}\tag{R26.A.1}
+\]
+For any original real R, a direct calculation gives the useful identity
+\[
+T^2R=(ER)q+E(gR)+K^2R,\qquad T^21=q+r=\bar f_2.     \tag{R26.A.2}
+\]
+In particular, a constant is propagated to \(\bar f_2,\allowbreak \). Also, for any
+nonnegative \(R^2,\allowbreak \)
+\[
+T^2(R^2)\le 2E(R^2)q,                            \tag{R26.A.3}
+\]
+by first using \(T(R^2)\le 2E(R^2),\allowbreak \) then applying the positive T.
+
+\paragraph{R26.2.2 Derivation of the entire cubic expansion}
+
+Suppose \(h=aq+j\ge 0,\allowbreak  a>0,\allowbreak  j=KV,\allowbreak  EV=0,\allowbreak \) and write
+\[
+Ej=-\beta d,\quad C_1=E(gj)\ge0,\quad
+N=EV^2,\quad J_2=Ej^2.
+\]
+The parameters a and beta need not agree. From (R26.A.1),
+\[
+E(j^4/q)\le N E(pj^2)\le2NJ_2.                  \tag{R26.A.4}
+\]
+Put
+\[
+W=2j-ag=K(2V-a),\qquad z=a+2N/a.
+\]
+The original row norm yields |\(W|\le \sqrt{a^2+4N}\le z,\allowbreak \) while
+\[
+EW=-2\beta d,\qquad EW^2=a^2d+4J_2-4aC_1.
+\]
+The pointwise polynomial (W+2 beta \(d)^2(W-z)\le 0\) therefore gives
+\[
+EW^3\le(z-4\beta d)EW^2-4z\beta^2d^2+8\beta^3d^3.
+\]
+All cubic terms in the exact \(h^4/q\) expansion combine as
+\[
+-a^4Eg^3+4a^3E(g^2j)-6a^2E(gj^2)+4aEj^3
+=\frac a2\{EW^3+a^2E(g^2W)\}.
+\]
+Using \(E(g^2W)\le zd\) and (R26.A.4), we obtain
+\[
+\begin{gathered}
+E(h^4/q)\le\mathcal A+(8a^2+6N-8a\beta d)J_2\\
+-2a^2(4a+z-4\beta d)C_1,
+\end{gathered}\tag{R26.A.5}
+\]
+where
+\[
+\begin{aligned}
+\mathcal A={}&a^4+4a^3(a-\beta)d+2a^2Nd
+-2a^3\beta d^2-2a^2\beta^2d^2\\
+&-4N\beta^2d^2+4a\beta^3d^3\\
+={}&a^4+2a^2d(N-\beta^2d)
++4a^3(a-\beta)d-4N\beta^2d^2\\
+&-2a\beta d^2(a^2-2\beta^2d).
+\end{aligned}                                                        \tag{R26.A.6}
+\]
+No fourth term or unfavorable cubic remainder is omitted, and the signed \(C_1\) term is kept.
+
+Cauchy applied to \(Ej=-<g,\allowbreak  V>\) gives \(N\ge \beta^2\) d. Consequently
+\[
+z-4\beta d
+\ge a\{1-2d+2d(\beta/a-1)^2\}>0.
+\]
+Under \(a\le \beta\le 6a/5\) and \(N\le 4a\) beta d/3, every remainder discarded from
+(R26.A.5)-(R26.A.6) is nonpositive: in particular
+\[
+a^2-2\beta^2d\ge a^2/25,\qquad
+6N-8a\beta d\le0.
+\]
+This gives
+\[
+E(h^4/q)\le a^4+8a^2J_2+2a^2d(N-\beta^2d).       \tag{R26.A.7}
+\]
+If \(a\le \beta\) is not available, retain \(4a^3(a-\beta)_+d\); this is precisely
+the positive-part variant of the displayed certificate.
+
+For the broader variant, assume only \(0<a\le 1,\allowbreak  0<\beta\le 1,\allowbreak  C_1\ge 0\) and
+\[
+(a-\beta)_+\le w,\qquad N\le nd,\qquad J_2\le jd.
+\]
+Dropping only the explicit negative terms of (R26.A.6), and retaining the
+positive cubic term as \(4ad^3,\allowbreak \) gives
+\[
+E(h^4/q)\le
+a^4+(4wa^3+8ja^2)d+(2na^2+6nj)d^2+4ad^3.       \tag{R26.A.8}
+\]
+This is the broader variant above.
+
+The following coefficient formula provides an independent check on the
+later displayed polynomials. Substitution \(a=1-\rho\) d in (R26.A.8) has
+coefficients, after the constant 1,
+\[
+\begin{array}{c|l}
+d&-4\rho+4w+8j\\
+d^2&6\rho^2-12w\rho-16j\rho+2n+6nj\\
+d^3&-4\rho^3+12w\rho^2+8j\rho^2-4n\rho+4\\
+d^4&\rho^4-4w\rho^3+2n\rho^2-4\rho .
+\end{array}                                                        \tag{R26.A.9}
+\]
+The comparisons in the sequel substitute into the monotone expression
+(R26.A.8) before using the resulting signed polynomial.
+
+\paragraph{R26.3 New row \(b=2,\allowbreak  L=1\)}\label{part:R26.3}
+
+Set \(\gamma=d-\delta_2/2,\allowbreak  c=1-\gamma/2\) and \(\beta=c^2.\) Since \(p+\bar f_2=2+r,\allowbreak \)
+\[
+p\bar f_2\le(1+r/2)^2,\qquad
+A(p\bar f_2)\le p-\gamma+s.
+\]
+Apply Corollary~\ref{cor:unit-two-step:first-square} to the inner
+operator $A=J+K$ (inner kernel $-K$ in the common notation). It gives
+\[
+qA(p\bar f_2)\le(c+s/2)^2.
+\]
+Using \(T^2s=-\delta_2+v,\allowbreak \) (R26.A.2)-(R26.A.3) give
+\[
+0<U_*\le h=aq+j,
+\]
+\[
+\begin{gathered}
+a=\beta-c\delta_2+\delta_3/2,\quad\\
+V=\beta g+c(t-\delta_2),\quad\\
+j=KV=\beta r+c(v-\delta_2g).
+\end{gathered}\tag{R26.A.10}
+\]
+The exact covariance data are
+\[
+Ej=-\beta d,\quad C_1=c(\delta_3-d\delta_2)\ge0,
+\]
+\[
+\begin{gathered}
+N=\beta^2d+c^2(\delta_4-\delta_2^2),\\
+\quad\\
+J_2=\beta^2\delta_2+c^2(\delta_5-2\delta_2\delta_3+\delta_2^2d)\\
+\le\beta^2\delta_2+c^2\delta_5.
+\end{gathered}
+\]
+Both omitted cross terms vanish by skew parity, rather than by an
+independence assumption.
+
+The certificate hypotheses are paid as follows:
+\[
+\begin{gathered}
+\tfrac56\le c\le1,\quad\tfrac{25}{36}\le\beta\le1,\quad\\
+\tfrac a\beta\ge\tfrac{67}{80}>\tfrac56,\quad a\le\beta,
+\end{gathered}
+\]
+\[
+\begin{gathered}
+\frac{N}{a\beta d}\\
+\le\frac65\left(1+\frac{36}{25}\theta^3\right)\\
+<\frac{831}{625}<\frac43.
+\end{gathered}
+\]
+The divisions are used only for \(d>0.\) Also \(N\ge \beta^2d\) is immediate from
+its exact expression.
+
+Applying (R26.A.7), \(\delta_5\le \theta^3\delta_2\) and \(\delta_4\le \theta^3d\) yields
+\[
+\begin{gathered}
+E(h^4/q)\le\\
+a^4+a^2\left(\frac{559}{160}d+\frac3{20}d^2\right).
+\end{gathered}\tag{R26.A.11}
+\]
+The exact scalar is
+\[
+a=1-d-\frac12\delta_2+\frac14d^2+\frac14d\delta_2-\frac3{16}\delta_2^2+\frac12\delta_3.
+\]
+Using \(d^2\le \delta_2\) and \(d\le 1/3\) gives
+\[
+a\le1-d+\frac7{192}\delta_2
+\le1-\frac{6053}{6144}d
+\le1-\frac{63}{64}d.
+\]
+
+For \(0\le z<1,\allowbreak \)
+\[
+(1-z)^{-2}\ge1+2z+3z^2.
+\]
+With \(\rho=63/64,\allowbreak  C=559/160,\allowbreak  D=3/20,\allowbreak \) this proves
+\[
+\begin{gathered}
+1-(1-\rho d)^2\{(1-\rho d)^2+Cd+Dd^2\}\\
+\ge(1-\rho d)^2\{(4\rho-C)d+(2\rho^2-D)d^2\}.
+\end{gathered}
+\]
+Here \(4\rho-C=71/160,\allowbreak  2\rho^2-D>0\) and 1-rho \(d\ge 43/64.\)
+Thus the loss is at least
+\[
+\frac{131279}{655360}d>\frac15d.
+\]
+It follows that \(E(U_*^4/q)\le 1-d/5\) on the entire legal host domain.
+
+
+\paragraph{R26.4 The new finite inner lengths \(L=2,\allowbreak \) 3, 4}
+
+\paragraph{R26.4.1 Two same-measure difference-moment facts}
+
+Since \(E(r+d)=0,\allowbreak \)
+\[
+\delta_3-2d\delta_2+d^3=\|K(r+d)\|^2\le\theta(\delta_2-d^2).
+\]
+Subtracting this bound from the desired upper expression leaves
+(\(1-\theta-d)(\delta_2-d^2)\ge 0.\) Hence
+\[
+\begin{gathered}
+\delta_3\le(1+d)\delta_2-d^2,\qquad\\
+\delta_2-\delta_3\ge d(d-\delta_2).
+\end{gathered}\tag{R26.A.12}
+\]
+Let sigma be the spectral measure of g for -\(K^2.\) Cauchy for the
+nonnegative measure (1-x)d sigma gives
+\[
+(\delta_2-\delta_3)^2\le(d-\delta_2)(\delta_3-\delta_4).
+\]
+For \(d>0,\allowbreak \) (R26.A.12) then gives
+\[
+\delta_3-\delta_4\ge d(\delta_2-\delta_3).                            \tag{R26.A.13}
+\]
+These are actual moment inequalities. They are not the false assertion
+that every original spectral point satisfies \(x\ge d.\)
+
+\paragraph{R26.4.2 \(L=2\)}
+
+Put
+\[
+B=1-d+\delta_2/2,\quad\tau=d-\delta_2,\quad R=r+t,\quad
+V_R=ER^2=\delta_2-2\delta_3+\delta_4.
+\]
+Positive propagation from the preceding row yields
+\[
+A^2(p\bar f_2)\le Bp+R,\qquad
+qA^2(p\bar f_2)\le B(1+R/(2B))^2.
+\]
+Using \(T^2r=-dq+t\) and \(T^2t=\delta_2q+k_6\) gives the actual upper bound
+\[
+\begin{gathered}
+U_*\le aq+j,\quad a=B-\tau+V_R/(2B),\\
+\quad V=Bg+s+v,\quad j=KV=Br+t+k_6.
+\end{gathered}\tag{R26.A.14}
+\]
+For \(d>0\) write \(x=\delta_2/d,\allowbreak  y=\delta_3/d.\) The odd filter is
+\(phi(z)=B-z+z^2,\allowbreak \) and \(\beta=B-x+y.\) On \(0\le z\le \theta,\allowbreak  0<phi(z)\le B\le 1.\) Therefore
+\[
+\begin{gathered}
+Ej=-\beta d,\quad C_1=0,\quad\\
+N=\int\phi^2\,d\sigma,\quad J_2=\int z\phi^2\,d\sigma,
+\end{gathered}
+\]
+\[
+\beta^2d\le N\le d,\qquad J_2\le\theta d.
+\]
+Equation (R26.A.12) gives \(a\ge \beta>0.\) Also \(V_R\le \delta_2\) and
+\(2Btau>\delta_2\) show \(0\le a-\beta\le x\le \theta.\)
+
+To verify the nontrivial certificate condition, set \(\kappa=19/32\) and
+\(m=B-\theta+\theta^2\ge B/2.\) Since \(B-phi(z)\ge \kappa\) z,
+\[
+N\le B\beta d-\kappa m \delta_2
+\le\beta d(B-\kappa x/2)
+\le\beta d(B-\kappa d/2).
+\]
+The exact sufficient comparison is
+\[
+4a-3B+\tfrac32\kappa d
+\ge1-\frac{263}{64}d+\frac92d^2\ge\frac{25}{192}>0.
+\]
+It follows that \(N\le 4a\) beta d/3; \(\beta/a\le 1\) is already known.
+
+For the scalar loss, log-convexity and \(\delta_4\le \theta \delta_3\) give
+\[
+V_R\le dx\{1-(2-\theta)x\},\qquad B\ge(4+x)/6,
+\]
+so
+\[
+a\le1-d\left[2-\frac32x-
+\frac{3x\{1-(2-\theta)x\}}{4+x}\right]\le1-\frac54d.
+\]
+The final inequality is equivalent to \(264x-105x^2\le 96.\) Its left side is
+increasing on [0, theta], and the endpoint margin is \(6225/1024.\)
+
+The retained-remainder form of (R26.A.7) now gives
+\[
+E(h^4/q)\le a^4+a^2\left(\frac{39}{8}d+2d^2\right).
+\]
+The same reciprocal-square comparison as in \mbox{\hyperref[part:R26.3]{part R26.3}}, now with
+\(\rho=5/4,\allowbreak  C=39/8,\allowbreak  D=2,\allowbreak \) supplies loss
+\[
+(7/12)^2(1/8)d=\frac{49}{1152}d>\frac1{24}d.
+\]
+Thus \(E(U_*^4/q)\le 1-d/24.\)
+
+\paragraph{R26.4.3 \(L=3,\allowbreak \) including the propagated constant}\label{part:R26.4.3}
+
+Let \(\omega_2=\delta_2-\delta_3\) and retain B, tau. This time
+\[
+A^3(p\bar f_2)\le Bp+R-\tau,\qquad R=Br+s+v.
+\]
+The root upper envelope is \(B(1+(R-\tau)/(2B))^2.\) With
+\[
+V_R=E(R-\tau)^2
+=B^2\delta_2+\delta_3-2\delta_4+\delta_5+2\tau Bd+\tau^2,
+\]
+the exact propagated upper bound is
+\[
+\begin{aligned}
+a&=B(1-d)-\tau-\omega_2+V_R/(2B),\\
+j&=(B-\tau)r+Bt+v+k_7-\omega_2g,\\
+V&=(B-\tau)g+Bs+(t+k_6-\omega_2),\qquad j=KV.
+\end{aligned}                                                        \tag{R26.A.15}
+\]
+The coefficient of r is B-tau, as it must be because the constant -tau
+propagates to -tau \(\bar f_2.\) Replacing it by -tau q would change this row.
+
+The odd filter \(phi(z)=B(1-z)-\tau\) is between \(1/16\) and 1. Its mean
+coefficient is \(\beta=(B-d)(1-x)>0,\allowbreak \) and
+\[
+C_1=\delta_3-\delta_4-d(\delta_2-\delta_3)\ge0
+\]
+by (R26.A.13). The odd and centered even components of V are orthogonal.
+Their squared norms give
+\[
+N\le d+\delta_4\le\frac{43}{40}d,\qquad
+J_2\le\frac{559}{1280}d.
+\]
+Since \(h\ge U_*>0\) and \(Eh=a-\beta\) d, \(a>0.\)
+
+The exact scalar expansion is
+\[
+a=1-3d+2d^2+(1-2d+\delta_2/4)\delta_2+\delta_3
++\frac{\delta_3-2\delta_4+\delta_5+\tau^2}{2B}.
+\]
+Use \(\delta_3-2\delta_4+\delta_5\le 4\delta_2/27\) and \(B\ge 2/3.\) After collecting the d terms before
+substituting \(d\le 1/3,\allowbreak \) one obtains
+\[
+\begin{gathered}
+\frac{a-1+3d}{d}\\
+\le\frac{11}{12}+(\theta-1/18)x+\frac13x^2\\
+\le\frac{325}{288}<\frac54.
+\end{gathered}
+\]
+Thus \(a\le 1-7d/4.\) Also
+\[
+a-\beta\le Bx+d(1/4-3x/2).
+\]
+For \(x\ge 1/6\) this is at most x; for \(x<1/6,\allowbreak  d\le x\) makes it at most 5x/4.
+Hence (\(a-\beta)_+\le \theta.\)
+
+Apply (R26.A.8) with
+\[
+\rho=\tfrac74,\quad w=\theta,\quad n=\tfrac{43}{40},
+\quad j=\tfrac{559}{1280}.
+\]
+Formula (R26.A.9) gives exactly
+\[
+\begin{gathered}
+E(h^4/q)\le\\
+1-\frac{301}{160}d+\frac{66111}{25600}d^2\\
++\frac{1707}{2560}d^3+\frac{651}{2560}d^4.
+\end{gathered}
+\]
+The three positive coefficients are respectively less than 3, 1, 1.
+Consequently the loss is at least
+\[
+\begin{gathered}
+\left(\frac{301}{160}-1-\frac19-\frac1{27}\right)d\\
+=\frac{3167}{4320}d>\frac7{10}d.
+\end{gathered}
+\]
+This proves the \(L=3\) row, retaining every cubic and quartic term.
+
+\paragraph{R26.4.4 \(L=4\)}
+
+Set \(C=B-\tau=1-2d+3\delta_2/2\ge 1/2\) and
+\[
+R=B(r+s)+t+k_6.
+\]
+The true propagated envelope is
+\[
+A^4(p\bar f_2)\le Cp+R-Bd,\qquad
+qA^4(p\bar f_2)\le C(1+(R-Bd)/(2C))^2.
+\]
+With \(V_R=E(R-Bd)^2,\allowbreak \) (R26.A.2) gives
+\[
+\begin{aligned}
+a&=C-2Bd+(1-B)\delta_2-\delta_3+V_R/(2C),\\
+j&=(C-Bd)r+Bt+k_6+k_8+B(v-\delta_2g),\\
+V&=(C-Bd)g+Bs+v+k_7+B(t-\delta_2).
+\end{aligned}                                                        \tag{R26.A.16}
+\]
+Again, the constant -Bd contributes -Bd \(\bar f_2,\allowbreak \) including its r term.
+
+The odd filter
+\[
+\phi(z)=C-Bd-Bz+z^2-z^3
+\]
+decreases on [0, theta], because phi'\ensuremath{\le}-\(B+1/3<0.\) Its endpoint has the
+strict original-parameter lower bound
+\[
+\begin{gathered}
+\phi(\theta)\ge\\
+(1-\theta)-(3-\theta)d+2d^2+\theta^2(1-\theta)\\
+\ge\frac{14563}{294912}>0.
+\end{gathered}
+\]
+It is also at most 1. The centered even component gives
+\[
+\begin{gathered}
+0<\beta\le1,\quad\\
+C_1=B(\delta_3-d\delta_2)\ge0,\quad\\
+N\le\frac{43}{40}d,\quad J_2\le\frac{559}{1280}d.
+\end{gathered}
+\]
+
+The even filter in R is \(B-z+z^2,\allowbreak \) between 0 and B, so
+\[
+ER^2\le B^2(\delta_2+\delta_3),\quad ER=-Bd+\delta_2-\delta_3,
+\]
+\[
+V_R\le B^2(\delta_2+\delta_3)+3B^2d^2-2Bd(\delta_2-\delta_3).
+\]
+Since \(B^2-C\le d^2/2\) and \(C\ge 1/2,\allowbreak  B^2/C\le 1+d^2\le 10/9.\) Substitution gives
+\[
+\begin{gathered}
+a\le1-4d+\frac{11}{3}d^2+\frac{37}{18}\delta_2\\
+-\frac49\delta_3-\frac12\delta_2^2\\
+\le1-\frac{373}{192}d\le1-\frac74d.
+\end{gathered}
+\]
+Writing \(\beta=C-Bd-Bx+y-z\) with \(y=\delta_3/d,\allowbreak  z=\delta_4/d\) and retaining \(z\le \theta\) y,
+\[
+a-\beta\le x+d(5/4-3x/2)
+\le\frac94x-\frac32x^2
+\le\frac{1365}{2048}<\frac23.
+\]
+
+Apply (R26.A.8) with the previous n, j, rho and \(w=2/3.\) The exact polynomial is
+\[
+\begin{gathered}
+1-\frac{403}{480}d-\frac{73889}{25600}d^2\\
++\frac{26207}{2560}d^3-\frac{40922}{7680}d^4.
+\end{gathered}
+\]
+The last three coefficients are bounded above by -2, 11, 0.
+The convex function -\(2d+11d^2\) has maximum \(5/9\) on [0, \(1/3\)]. Therefore
+\[
+E(h^4/q)\le1-\frac{409}{1440}d\le1-\frac14d.
+\]
+This completes all finite inner lengths \(L=1,\allowbreak \) 2, 3, 4 without a change of
+host-dependent direction.
+
+\paragraph{R26.5 New row \(b=3,\allowbreak  L=1\)}
+
+The genuine three-edge inward arm is
+\[
+\bar f_3=q+r-s-d.
+\]
+Both the scalar -d here and both propagated \(\delta_2\) terms below are retained.
+Put \(m=1-d/2,\allowbreak  S=s-t,\allowbreak  D=\delta_2+\delta_3.\) From
+\(p+\bar f_3=2m+r-s\) and positivity,
+\[
+p\bar f_3\le(m+(r-s)/2)^2,\qquad
+A(p\bar f_3)\le m^2p-md+mS+D/2.
+\]
+The same first-square corollary, with inner kernel $-K$, gives
+\[
+qA(p\bar f_3)\le(c+S/2)^2,\qquad
+c=1-d+\frac{\delta_2+\delta_3}{4m}.
+\]
+The correct two-step identity is
+\[
+T^2S=-\delta_2-\delta_2q+v-k_6.
+\]
+Consequently
+\[
+\begin{gathered}
+a=c^2-2c\delta_2+(\delta_3+\delta_4)/2,\quad\\
+V=c^2g-cv+c(t-\delta_2),\quad\\
+j=c^2r-ck_6+c(v-\delta_2g).
+\end{gathered}\tag{R26.A.17}
+\]
+The odd filter is \(c^2-cz^2.\) The bounds
+\[
+\begin{gathered}
+1-d\le c\le1-d+\frac{27}{64}\delta_2\le1,\qquad\\
+c\ge1-d+(d^2+d^3)/4\ge\frac{19}{27}>\frac7{10}
+\end{gathered}
+\]
+make it positive. Thus
+\[
+\begin{gathered}
+\beta=c^2-c\delta_3/d>0,\quad\\
+C_1=c(\delta_3-d\delta_2)\ge0,\quad\\
+N\le\frac{43}{40}d,\quad J_2\le\frac{559}{1280}d.
+\end{gathered}
+\]
+Also \(a\le c^2,\allowbreak \) (\(a-\beta)_+\le \theta^2\le \theta,\allowbreak \) and positivity of h gives \(a>0.\)
+
+Using \(\lambda=1-c,\allowbreak \) the exact available scalar losses yield
+\[
+a\le1-2d+d^2-\frac{2771}{10240}\delta_2
+\le1-\frac{53971}{30720}d\le1-\frac74d.
+\]
+The parameters of (R26.A.8) are therefore exactly those of \mbox{\hyperref[part:R26.4.3]{part R26.4.3}}.
+Its already checked polynomial proves
+\[
+E(U_*^4/q)\le1-\frac7{10}d.
+\]
+This is a separate actual-message calculation for terminal (1, 3), not a
+reuse of the terminal (1, 2), \(L=3\) message.
+
+\paragraph{R26.6 Every original inner length \(L\ge 5\) with terminal (1, 2)}
+
+\paragraph{R26.6.1 Finite convolution and the actual two losses}
+
+Define
+\[
+\begin{gathered}
+\zeta_1=\zeta_2=0,\quad\\
+\zeta_j=\sum_{i=1}^{\lfloor(j-1)/2\rfloor}(-1)^{i-1}\delta_i,\quad\\
+S_L=\sum_{j=0}^Lk_j.
+\end{gathered}
+\]
+The identity \(S_j=A S_{j-1}\)+\(\zeta_j\) follows by taking the actual mean of
+\(S_{j-1}\). Iteration gives
+\[
+f_L=S_L-\sum_{j=3}^L\zeta_jf_{L-j},\qquad
+\tau\le\zeta_j\le d.
+\]
+The latter bounds are finite alternating-sum bounds, with \(\tau=d-\delta_2.\)
+The finite Duhamel formula applied to r gives
+\[
+A^Lr=k_{L+2}-df_{L-1}+\delta_2f_{L-3}-\delta_3f_{L-5}+\cdots,
+\]
+with nonnegative indices only. Combining this with \(p\bar f_2\le (1+r/2)^2\)
+and \(A(r^2)\le 2\delta_2\) gives
+\[
+\begin{gathered}
+A^L(p\bar f_2)\le S_L+k_{L+2}-\gamma f_{L-1}\\
+-\sum_{j=3}^L\omega_jf_{L-j},
+\end{gathered}\tag{R26.A.18}
+\]
+where \(\omega_j=\zeta_j\) for even j and \(\omega_j= \zeta_{j+2}\) for odd j.
+Every \(\omega_j\) is at least \(\tau\). This verifies the truncation-end signs.
+
+For \(L\ge 5\) the \(j=L\) and \(j=L-1\) terms exist. Retain their tau multiples of
+\(f_0\) and \(f_1\) and discard only other nonnegative subtractions. With
+\[
+B=1-\tau,\qquad R=\sum_{j=2}^Lk_j+k_{L+2},
+\]
+the resulting genuine nonnegative upper bound is
+\[
+\begin{gathered}
+A^L(p\bar f_2)\le Bp+R-\tau,\\
+\qquad H_*\le B(1+(R-\tau)/(2B))^2.
+\end{gathered}\tag{R26.A.19}
+\]
+These are two losses already present in the original path expansion;
+they are not additional tree arms.
+
+\paragraph{R26.6.2 Every finite mask, rather than a length cutoff}
+
+Let \(m=L-1\ge 4\) and \(P_m(z)=G_m(z)+ z^{m+1}\), where
+\(G_m(z)=1+...+ z^{m-1}\). Then \(R=KP_m(K)g.\) For \(z=i\) sqrt(x),
+\[
+|P_m(z)|^2=
+\frac{1+x^m(1-x+x^2)-2\Re[z^m(1-x-z)]}{1+x}.     \tag{R26.A.20}
+\]
+This identity is obtained by putting the whole finite numerator over 1-z;
+it includes the final extra monomial.
+
+The four residue classes of m give a complete proof:
+
+
+\begingroup\small
+\setlength{\tabcolsep}{3pt}
+\setlength{\LTleft}{0pt}\setlength{\LTright}{\fill}
+\begin{longtable}{@{}p{0.1200\linewidth}p{0.8000\linewidth}@{}}
+\caption{All terminal pairs with minimum one at a unit root and a two-edge outlet: parameter values.}\label{tab:parameters:r2-c026:1}\\
+\toprule
+Entry & Numerator bound in (R26.A.20) \\
+\midrule\endfirsthead
+\toprule
+Entry & Numerator bound in (R26.A.20) \\
+\midrule\endhead
+\bottomrule\endfoot
+0 & At most 1; the subtraction is \(2x^{m/2}(1-x).\). \\
+\addlinespace[2pt]
+1 & At most 1; the subtraction is \(2x^{(m+1)/2}.\). \\
+\addlinespace[2pt]
+2 & At most \(1+2x^3+x^6,\allowbreak \) because \(m\ge 6.\). \\
+\addlinespace[2pt]
+3 & At most \(1+2x^4+x^7,\allowbreak \) because \(m\ge 7.\). \\
+\end{longtable}
+\endgroup
+
+
+For the last two rows, \(2\theta^2+\theta^5<1\) proves |\(P_m|\le 1.\)
+For the second weighted bound the only larger required expression is
+\[
+2x+6x^4+3x^7
+\le\frac{13}{16}+\frac16+\frac{13}{2304}
+=\frac{2269}{2304}<1.
+\]
+The other bad-residue expression is smaller. The first two rows use
+\(x/(1+x)\le 13/45<1/3.\) Thus every finite \(m\ge 4\) satisfies
+\[
+\begin{gathered}
+|P_m(i\sqrt x)|^2\le1,\qquad\\
+x|P_m(i\sqrt x)|^2\le\tfrac13.
+\end{gathered}\tag{R26.A.21}
+\]
+
+
+For \(A_k(x)=\sum_{i=0}^{k-1}(-x)^i\),
+\[
+1-x\le A_k(x)\le1\quad(k\ge1),
+\]
+and the exact real parts are
+\[
+\begin{array}{c|cc}
+m&\Re P_m&\Re(i\sqrt xP_m)\\ \hline
+2h&A_h&-xA_{h+1}\\
+2h+1&A_{h+2}&-xA_h .
+\end{array}
+\]
+The relevant indices are at least two. Therefore, on the same sigma,
+\[
+\begin{gathered}
+-d\le ER\le-\tau,\quad E(gR)\le-(\delta_2-\delta_3),\\
+\quad ER^2\le d/3.
+\end{gathered}\tag{R26.A.22}
+\]
+
+\paragraph{R26.6.3 The covariance is on the spectral measure of 1}
+
+It is necessary to retain the correct spectral measure in the sign
+argument. For every finite k,
+\[
+A_k'(x)\ge-\frac1{(1-x)^2},
+\]
+so, on [0, theta],
+\[
+\begin{gathered}
+\frac{d}{dx}(x^2A_k(x))\\
+\ge x\left(2\kappa-\frac{\theta}{\kappa^2}\right)\ge0,\\
+\quad 2\kappa^3-\theta=\frac{406}{32768}>0.
+\end{gathered}\tag{R26.A.23}
+\]
+Let nu be the original probability spectral measure of 1 for -\(K^2.\)
+Then d \(\sigma=x\) d nu and integral x d \(\nu=d.\) For increasing F,
+\[
+\begin{gathered}
+\int(x-d)F(x)\,d\nu\\
+=\tfrac12\iint(x-y)(F(x)-F(y))\,d\nu(x)d\nu(y)\ge0.
+\end{gathered}\tag{R26.A.24}
+\]
+The legitimate choice is \(F=x^2A_k.\) This proves an integrated covariance
+sign even when nu has spectral mass below d.
+
+\paragraph{R26.6.4 Actual \(T^2\) propagation and its scalar payment}
+
+Put \(\alpha=B-\tau=1-2\tau\) and \(V_R=E(R-\tau)^2.\) Since \(\tau\le 2/9,\allowbreak  \alpha\ge 5/9.\) Expanding (R26.A.19) with (R26.A.2) gives
+\[
+\begin{aligned}
+a&=\alpha+ER+E(gR)+V_R/(2B),\\
+j&=\alpha r+K^2R+E(gR)g,\\
+V&=\alpha g+KR+E(gR),\qquad EV=0.
+\end{aligned}                                                        \tag{R26.A.25}
+\]
+With \(\beta=\alpha- d^{-1}\) integral x \(Re(P_m)d\) sigma,
+\[
+Ej=-\beta d,\quad 0<5/9-\theta\le\beta\le1.
+\]
+The exact covariance is
+\[
+C_1=E[(s+dg)R]
+=\int x^2(x-d)A_\ell(x)\,d\nu(x)\ge0
+\]
+by (R26.A.23)-(R26.A.24).
+
+The vector V is the centered version of
+(\(\alpha+K^2P_m(K))g.\) By \(Re(P_m)\ge \kappa>1/2\) and (R26.A.21),
+\[
+\begin{aligned}
+N&\le\int|\alpha-xP_m|^2\,d\sigma\\
+&\le\int(\alpha^2-\alpha x+x^2)\,d\sigma
+\le\alpha^2d\le d,\qquad J_2\le\theta d,
+\end{aligned}
+\]
+because \(x\le \theta<\alpha.\) Positivity of h again gives \(a>0.\)
+
+Combining the same ER terms before discarding signs is essential:
+\[
+a=\alpha+\frac{\alpha}{B}ER+E(gR)
++\frac{ER^2+\tau^2}{2B}.
+\]
+Equation (R26.A.22) gives
+\[
+\begin{gathered}
+a\le1-3\tau-(\delta_2-\delta_3)\\
++\frac{d/6+(3/2)\tau^2}{B}.
+\end{gathered}\tag{R26.A.26}
+\]
+In particular,
+\[
+a-\alpha\le
+\frac{-\tau+(5/2)\tau^2+d/6}{B}
+\le-\frac{7d}{72B}\le0,
+\]
+so (\(a-\beta)_+\le \theta.\)
+
+For \(x=\delta_2/d,\allowbreak  y=\delta_3/d,\allowbreak \) (R26.A.26) also gives
+\[
+a\le1-d\left[
+3-2x-y-\frac{1/6+(3/2)d(1-x)^2}{1-d(1-x)}
+\right]\le1-\frac32d.
+\]
+To verify the last inequality over the entire domain, use \(y\le \theta\) x,
+the monotonicity of the displayed fraction in d, and \(d\le 1/3.\)
+After multiplication by 2+x, the remaining expression is
+\[
+1-\frac5{16}x-\frac{125}{32}x^2
+\ge\frac{7483}{32768}>0.
+\]
+
+In (R26.A.8), take \(\rho=3/2,\allowbreak  w=\theta,\allowbreak  n=1,\allowbreak  j=\theta.\) The full polynomial is
+\[
+E(h^4/q)\le
+1-\frac98d+\frac78d^2+\frac{89}{32}d^3-\frac{123}{64}d^4.
+\]
+Discard the negative quartic term and use \(d^2\le d/3,\allowbreak  d^3\le d/9.\) The loss is
+at least \(151d/288>d/2.\) Thus, for every original integer \(L\ge 5,\allowbreak \)
+\[
+E(U_*^4/q)\le1-\frac12d.
+\]
+
+\paragraph{R26.7 Every original terminal length \(b\ge 4\) with \(L=1\)}
+
+\paragraph{R26.7.1 The finite arm and its genuine envelope}
+
+From the finite convolution for T, retaining only its last nonnegative
+loss,
+\[
+\bar f_b\le\sum_{j=0}^b(-K)^j1-\zeta_b.
+\]
+Let
+\[
+n=b-1\ge3,\quad m=1-\zeta_b/2,\quad
+R=KG_n(-K)g=\sum_{j=2}^b(-K)^j1,
+\]
+\[
+t_0=-ER=\zeta_{b+1},\quad V_R=ER^2,\quad S=KR,\quad
+c=m-t_0/2+V_R/(4m).
+\]
+The sum \(p+\bar f_b\) is bounded by 2m+R, which is nonnegative because it
+dominates that nonnegative sum. Thus
+\[
+p\bar f_b\le(m+R/2)^2,\quad
+A(p\bar f_b)\le m^2p-mt_0+mS+V_R/2,
+\]
+\[
+0<H_*\le(c+S/2)^2.                              \tag{R26.A.27}
+\]
+
+For every \(n\ge 3\) the finite geometric sum has |\(G_n(i \sqrt{x})|\le 1\) on
+[0, theta]. Odd n gives numerator \(1+x^n\); n divisible by four gives
+(\(1-x^{n/2})^2\); the remaining \(n\ge 6\) satisfies
+\(2x^{n/2-1}+x^{n-1}\le 2\theta^2+\theta^5<1.\) Therefore
+\[
+ER^2\le \delta_2,\qquad ES^2\le \delta_3.                 \tag{R26.A.28}
+\]
+Writing
+\[
+\begin{gathered}
+G_n(-i\sqrt x)=B_0(x)-i\sqrt xA_0(x),\\
+\quad B_0=A_{\lceil n/2\rceil},\quad A_0=A_{\lfloor n/2\rfloor},
+\end{gathered}
+\]
+both \(A_0,\allowbreak  B_0\) lie in [1-x, 1]. The exact means are
+\[
+e=-ES=E(gR)=\int xA_0\,d\sigma,\quad
+\ell=-E(gS)=\int xB_0\,d\sigma,
+\]
+\[
+\delta_2-\delta_3\le e,\ell\le \delta_2.                       \tag{R26.A.29}
+\]
+In this row E(gR) is positive, unlike the long-inner-path row. The
+calculation retains this sign change.
+
+The same finite arm supplies
+\[
+1-d+\delta_2/2\le c\le1-d+\frac{13}{10}\delta_2
+\le1-\frac{151}{320}d.
+\]
+For the lower bound, when \(b=4\) the two zeta terms sum to \(2d-\delta_2.\)
+For \(b\ge 5\) their sum is at most \(2d-2\delta_2+2\delta_3\le 2d-\delta_2.\)
+Thus \(c\ge 13/18\); in particular \(c>\theta^2.\)
+
+\paragraph{R26.7.2 The necessary variance improvement survives}\label{part:R26.7.2}
+
+Use \(T^2S=-e q-\ell+K^2S\) in (R26.A.27). The actual nonnegative upper bound is
+\[
+\begin{aligned}
+a&=c^2-c(e+\ell)+ES^2/2,\\
+j&=c^2r+cK^2S-c\ell g,\\
+V&=c^2g+cKS-c\ell,\qquad EV=0,\quad j=KV.
+\end{aligned}                                                        \tag{R26.A.30}
+\]
+Its odd Krylov component is (\(c^2-cx^2A_0(x))g.\) Its centered even component
+is \(c(K^3B_0(-K^2)g-\ell).\) They are orthogonal. Consequently, with
+\(\xi= d^{-1}\) integral \(x^2A_0\) d sigma,
+\[
+Ej=-\beta d,\quad\beta=c^2-c\xi,\quad0<\beta\le1.
+\]
+The same original spectral covariance proof (R26.A.23)-(R26.A.24) gives
+\[
+C_1=c\int x^2(x-d)B_0(x)\,d\nu(x)\ge0.
+\]
+
+The stronger variance bound is not optional. Put \(z=x^2A_0(x),\allowbreak \) so
+\(0\le z\le \theta^2<c.\) Then
+\[
+(c^2-cz)^2\le c^4-c^3z.
+\]
+Using \(A_0\ge \kappa\) and the centered even variance at most \(c^2\delta_4,\allowbreak \)
+\[
+N\le c^4d-c^3\kappa \delta_3+c^2\delta_4
+\le c^4d+c^2(\theta-c\kappa)\delta_3\le c^4d,
+\]
+since c \(\kappa\ge 247/576>\theta=234/576.\)
+For \(\lambda_0=151/320,\allowbreak \) the complete fourth expansion, with \(d\le 1/3,\allowbreak \) gives
+\[
+c^4\le(1-\lambda_0d)^4
+\le1-(4\lambda_0-2\lambda_0^2)d
+\le1-\frac75d.
+\]
+The cubic-plus-quartic remainder discarded here is
+-\(\lambda_0^3d^3(4-\lambda_0d)\le 0,\allowbreak \) and
+\(4\lambda_0-2\lambda_0^2=73839/51200>7/5.\) Therefore
+\[
+\begin{gathered}
+N\le d(1-7d/5),\qquad\\
+J_2\le\theta d(1-7d/5).
+\end{gathered}\tag{R26.A.31}
+\]
+
+Equations (R26.A.28)-(R26.A.29) also give \(a\le c^2,\allowbreak \) because
+2c \(\kappa>\theta/2.\) Hence (\(a-\beta)_+\le c \xi\le \theta^2.\)
+As in the other rows, positivity of h and \(Eh=a-\beta\) d give \(a>0.\)
+
+\paragraph{R26.7.3 Scalar loss and the retained second-order budget}
+
+Let \(\lambda=1-c.\) Then \(d-13\delta_2/10\le \lambda\le d,\allowbreak \) and
+\[
+a\le(1-\lambda)^2-2(1-\lambda)(\delta_2-\delta_3)+\delta_3/2.
+\]
+This expression decreases with lambda because
+\(\lambda+(\delta_2-\delta_3)\le d+\delta_2<1.\) Substitute its lower bound.
+The resulting \(\delta_3\) coefficient is positive, allowing \(\delta_3/d\le \theta\) x.
+The exact result is
+\[
+a\le1-d\left[
+2-\frac{517}{320}x
+-d(1-13x/10)(1-9x/80)
+\right].
+\]
+Both factors in the last product are nonnegative. With \(d\le 1/3,\allowbreak \) the
+bracket is at least
+\[
+\begin{gathered}
+\frac53-\frac{1099}{960}x-\frac{39}{800}x^2\\
+\ge\frac{2933267}{2457600}>\frac{19}{16}.
+\end{gathered}
+\]
+Thus \(a\le 1-19d/16.\)
+
+In (R26.A.5)-(R26.A.6), retain (R26.A.31) specifically in \(8a^2J_2\) and use the
+coarser \(N\le d,\allowbreak  J_2\le \theta\) d only elsewhere. This gives
+\[
+\begin{gathered}
+E(h^4/q)\le\\
+a^4+4\theta^2a^3d\\
++a^2\left(8\theta d-\frac{51}{20}d^2\right)\\
++6\theta d^2+4ad^3.
+\end{gathered}\tag{R26.A.32}
+\]
+The coefficient in parentheses is at least 12d/5, so substitution of
+the upper bound for a is legitimate. The complete resulting polynomial is
+\[
+\begin{gathered}
+1-\frac{215}{256}d-\frac{35269}{20480}d^2\\
++\frac{3517247}{327680}d^3-\frac{39126719}{5242880}d^4.
+\end{gathered}
+\]
+Direct expansion gives these coefficients. The second, third and fourth
+coefficients are respectively at most -\(3/2,\allowbreak \) 11,-7.
+The function -\(3d/2+11d^2-7d^3\) is convex on [0, \(1/3\)], since its second
+derivative is \(22-42d\ge 8.\) Its endpoint maximum is \(25/54.\) Therefore
+\[
+\begin{gathered}
+E(h^4/q)\le1-\\
+\left(\frac{215}{256}-\frac{25}{54}\right)d\\
+=1-\frac{2605}{6912}d\\
+\le1-\frac38d.
+\end{gathered}
+\]
+This proves every finite \(b\ge 4.\) It would not be justified to replace
+(R26.A.31) by \(N\le d\) throughout: the retained negative quadratic coefficient
+in (R26.A.32) is part of the proof.
+
+\paragraph{R26.8 The exact old C094 row and its three ordinary-fourth inputs}
+
+The following argument proves the required bridge and its scalar estimates.
+
+\paragraph{R26.8.1 The unweighted fourth-to-Iq bridge}
+
+For any original positive kernel operator B, \(h=B1,\allowbreak \) and any original real
+Y, row Cauchy and original-measure Holder give
+\[
+|BY|^2\le hB(|Y|^2),
+\]
+\[
+I_q(BY)^3
+\le E(h^4/q)\,\|B\|^4(E|Y|^4)^2.                \tag{R26.A.33}
+\]
+This is an ordinary L2(mu) operator norm and an ordinary fourth input.
+There is no change of adjoint or input weight.
+
+For \(B=T^2,\allowbreak  h=\bar f_2=q+r.\) Taking \(W=2r-g\) and \(z=1+2d\) in the cubic argument,
+and retaining the actual row relation \(r^2\le pqd,\allowbreak \) gives
+\[
+E(\bar f_2^4/q)\le1-2d^2+(8-2d)\delta_2.                 \tag{R26.A.34}
+\]
+More explicitly,
+\[
+E(\bar f_2^4/q)=1-d+6\delta_2+\mathcal C+E(r^4/q),
+\]
+\[
+\mathcal C\le d-2d^2+2(1-2d)\delta_2,\quad
+E(r^4/q)\le2d\delta_2.
+\]
+These reproduce C094 (2.1)-(2.4).
+
+The exact C064 \mbox{\hyperref[part:Q64.7.2]{part Q64.7.2}} norm proof is compatible with this original
+space. On the cyclic subspace generated by 1 under K, split even and odd
+Krylov vectors. Multiplication of \(T^2\) by the orthogonal sign operator
+\(\operatorname{diag}(I_{\rm even},\allowbreak -I_{\rm odd})\) gives the self-adjoint block matrix
+\[
+\begin{pmatrix}
+J-S_{\rm even}&1\otimes g\\
+g\otimes1&S_{\rm odd}
+\end{pmatrix},\qquad S=-K^2.
+\]
+The orthogonal complement has \(T^2=K^2\) and norm at most theta.
+For \(\lambda\ge 1,\allowbreak \) the positive and negative Schur complements reduce the
+only nonautomatic condition to
+\[
+\begin{gathered}
+\lambda h_\lambda t_\lambda\le1,\quad\\
+h_\lambda=\int\frac{d\nu(x)}{\lambda-x},\quad\\
+t_\lambda=\int\frac{d\nu(x)}{\lambda+x}.
+\end{gathered}
+\]
+Writing \(\alpha=int x^2/(\lambda^2-x^2)d\) nu and \(\eta=int x/(\lambda^2-x^2)d\) nu,
+\[
+\begin{gathered}
+\lambda h_\lambda t_\lambda\\
+=\frac{(1+\alpha)^2}{\lambda}-\lambda\eta^2\\
+\le\frac{(1+\alpha)^2}{\lambda}.
+\end{gathered}
+\]
+For \(k_2=(1-\theta^2)^{-1}=1024/855\) and
+\(\lambda=(1+k_2\delta_2)^2,\allowbreak  \alpha\le k_2\delta_2.\) Thus
+\[
+\|T^2\|\le(1+1024\delta_2/855)^2.
+\]
+Together with (R26.A.33)-(R26.A.34), this gives exactly
+\[
+I_q(T^2Y)^3\le B_2(E|Y|^4)^2,
+\]
+\[
+B_2=\{1-2d^2+(8-2d)\delta_2\}(1+1024\delta_2/855)^8.      \tag{R26.A.35}
+\]
+
+For the claimed logarithmic cost, the first factor is at most
+\(R=1+(13/4)d-(45/16)d^2.\) If \(u=R-1,\allowbreak \) then
+\(0\le u\le 37/48\) and \(u\ge (37/16)d.\) The elementary integral remainder inequality
+\(\log(1+u)\le u-u^2/\)[2(1+u)] gives
+\[
+\log R\le\frac{13}{4}d-\frac{11757}{2720}d^2.
+\]
+For \(\lambda_2=416/855,\allowbreak  12/25<\lambda_2<1/2\) and
+\[
+8\log(1+\lambda_2d)
+\le8\lambda_2d-\frac34d^2.
+\]
+Since \(11757/2720+3/4>5,\allowbreak \) the precise result is
+\[
+B_2\le\exp\left(\frac{24427}{3420}d-5d^2\right). \tag{R26.A.36}
+\]
+
+\paragraph{R26.8.2 Which actual messages enter this bridge}
+
+The old row uses, for all \(b\ge 3,\allowbreak  L\ge 2,\allowbreak \)
+\[
+Y=pT^L(qf_b).
+\]
+C058 fixes this same actual direction: terminal unit arm
+toward the terminal, long arm outward, inner connector toward the
+internal root, internal-root unit arm outward. The two outer edges
+remain directed from that root to the receiver.
+
+The actual square-envelope estimates of Q5-C058 supply the following same-input data to Q5-C094:
+
+
+\begingroup\small
+\setlength{\tabcolsep}{3pt}
+\setlength{\LTleft}{0pt}\setlength{\LTright}{\fill}
+\begin{longtable}{@{}p{0.1200\linewidth}p{0.8000\linewidth}@{}}
+\caption{All terminal pairs with minimum one at a unit root and a two-edge outlet: parameter values.}\label{tab:parameters:r2-c026:2}\\
+\toprule
+Entry & Actual upper envelope \(Y\le (c+N/2)^2\) \\
+\midrule\endfirsthead
+\toprule
+Entry & Actual upper envelope \(Y\le (c+N/2)^2\) \\
+\midrule\endhead
+\bottomrule\endfoot
+\(L\ge 4\) & \(c=1-3d/4,\allowbreak  N=R_L\); Pointwise and moment data: \(N^2\le d,\allowbreak  EN\le -d/2,\allowbreak  EN^2\le \theta d\). \\
+\addlinespace[2pt]
+\(L=3\) & \(c=1-4d/5,\allowbreak  N=V_3-\gamma r-q\); Pointwise and moment data: \(N^2\le (71/63)d,\allowbreak  EN^2\le \theta(71/63)d,\allowbreak  EN\le -(4/5-d)d\). \\
+\addlinespace[2pt]
+\(L=2\) & \(c=1-37d/64,\allowbreak  N=mR_2/\sqrt{B},\allowbreak  R_2=r+kK^2R,\allowbreak  B=1-\gamma\); Pointwise and moment data: \(N^2\le d,\allowbreak  EN\le -41d/96,\allowbreak  EN^2\le 3d/10\). \\
+\end{longtable}
+\endgroup
+
+
+The scalar envelope base is nonnegative because it arises from a sum of
+actual nonnegative factors. The L3 mean improvement uses the same R:
+\(V\ge t_0^2,\allowbreak  u=kt_0\le d/(1-d/2),\allowbreak \) and
+\[
+\gamma\le u-u^2/2
+\le d(1-d)/(1-d/2)^2\le d.
+\]
+For $L=2$, the original ratio $m^2/B\le9/8$ and $ER_2^2\le4d/15$ are retained, giving $EN^2\le3d/10$. These are the exact finite-envelope premises of Q5-C058 for the stated direction.
+
+\paragraph{R26.8.3 Three compatible square moments}
+
+Use the three actual envelopes and their same-input moment data from
+paragraph R26.8.2. They are rows I, II and III of
+Table~\ref{tab:unit-square-data}, for $L\ge4$, $L=3$ and $L=2$,
+respectively. Their bases satisfy $c>U/2$; the compatibility
+$\alpha^2\le hU^2$ also follows from the actual first and second
+moments. Lemma~\ref{lem:unit-square-hermite} and the three continuous
+certificates in Table~\ref{tab:unit-square-certificates} give
+\begin{align}
+ \E Y^4&\le(1-15d/32)^8,
+ &&L\ge4,\tag{R26.A.39}\label{eq:unit-R26:fourth-long}\\
+ \E Y^4&\le(1-9d/20)^8,
+ &&L=3,\tag{R26.A.40}\label{eq:unit-R26:fourth-three}\\
+ \E Y^4&\le(1-15d/32+3d^2/8)^8,
+ &&L=2.\tag{R26.A.41}\label{eq:unit-R26:fourth-two}
+\end{align}
+These bounds hold on $0\le d\le1/3$ for the original direction
+$Y=pT^L(qf_b)$, $b\ge3$. At $d=0$, its actual leaf integration
+gives equality.
+
+\paragraph{R26.8.7 Final exponents and the literal old union}
+
+Use only (R26.A.39)-(R26.A.41) in (R26.A.35)-(R26.A.36). For \(L=2,\allowbreak \)
+\[
+\log I_q(T^2Y)^3
+\le-\frac{1223}{3420}d+d^2
+\le-\frac{83}{3420}d.
+\]
+For \(L=3\) the linear coefficient is -\(197/3420,\allowbreak \) and for \(L\ge 4\) it is
+-\(1223/3420\); both also retain the nonpositive -\(5d^2\) term.
+Thus the old row uniformly supplies
+\[
+I_q(T^2[pT^L(qf_b)])^3\le e^{-83d/3420}
+\qquad(b\ge3,L\ge2).
+\]
+The transcription of \(B_2,\allowbreak \) all three ordinary-fourth inputs,
+the inner direction and the final exponent is exact. No inverse-fourth
+conclusion for this old direction follows from this argument, and none
+is included in this derivation.
+
+\paragraph{R26.9 Complete local directions, original pairs and reversal}
+
+The complete direction table is:
+
+
+\begingroup\small
+\setlength{\tabcolsep}{3pt}
+\setlength{\LTleft}{0pt}\setlength{\LTright}{\fill}
+\begin{longtable}{@{}p{0.2200\linewidth}p{0.7000\linewidth}@{}}
+\caption{All terminal pairs with minimum one at a unit root and a two-edge outlet: parameter values.}\label{tab:parameters:r2-c026:5}\\
+\toprule
+Entry & Inner L \\
+\midrule\endfirsthead
+\toprule
+Entry & Inner L \\
+\midrule\endhead
+\bottomrule\endfoot
+(1, 2) & 1; Actual bare root H: \(qA(p\bar f_2)\); New inverse fourth: \(\le 1-d/5\); \(Iq(U)^3\) bound, \(U=T^2H\): \(\le (1-d/5)^2\). \\
+\addlinespace[2pt]
+(1, 2) & 2; Actual bare root H: \(qA^2(p\bar f_2)\); New inverse fourth: \(\le 1-d/24\); \(Iq(U)^3\) bound, \(U=T^2H\): \(\le (1-d/24)^2\). \\
+\addlinespace[2pt]
+(1, 2) & 3; Actual bare root H: \(qA^3(p\bar f_2)\); New inverse fourth: \(\le 1-7d/10\); \(Iq(U)^3\) bound, \(U=T^2H\): \(\le (1-7d/10)^2\). \\
+\addlinespace[2pt]
+(1, 2) & 4; Actual bare root H: \(qA^4(p\bar f_2)\); New inverse fourth: \(\le 1-d/4\); \(Iq(U)^3\) bound, \(U=T^2H\): \(\le (1-d/4)^2\). \\
+\addlinespace[2pt]
+(1, 2) & every \(L\ge 5\); Actual bare root H: \(qA^L(p\bar f_2)\); New inverse fourth: \(\le 1-d/2\); \(Iq(U)^3\) bound, \(U=T^2H\): \(\le (1-d/2)^2\). \\
+\addlinespace[2pt]
+(1, 3) & 1; Actual bare root H: \(qA(p\bar f_3)\); New inverse fourth: \(\le 1-7d/10\); \(Iq(U)^3\) bound, \(U=T^2H\): \(\le (1-7d/10)^2\). \\
+\addlinespace[2pt]
+(1, b), every \(b\ge 4\) & 1; Actual bare root H: \(qA(p\bar f_b)\); New inverse fourth: \(\le 1-3d/8\); \(Iq(U)^3\) bound, \(U=T^2H\): \(\le (1-3d/8)^2\). \\
+\addlinespace[2pt]
+(1, b), every \(b\ge 3\) & every \(L\ge 2\); Actual bare root H: \(pT^L(qf_b)\); New inverse fourth: not bounded; \(Iq(U)^3\) bound, \(U=T^2H\): \(\le \exp(-83d/3420)\). \\
+\end{longtable}
+\endgroup
+
+
+The integer partition is exhaustive: \(b=2\) uses the first five rows; if
+\(b\ge 3,\allowbreak \) either \(L=1\) uses one of the next two rows or \(L\ge 2\) uses the last row.
+All tests in this direction selection depend only on original integer
+lengths. The analytic d intervals estimate this fixed direction.
+
+For the new rows the literal directions are:
+
+\begin{itemize}
+\item The terminal's original unit arm points away from the terminal.
+\item Its complete original b-edge arm points toward the terminal.
+\item Every one of the L inner edges points from the internal root toward the terminal.
+\item The internal root's one residual unit arm points toward that root.
+\item Both original outer edges point from the internal root toward the receiver.
+\end{itemize}
+
+At a root, a genuine equal pair contributes \(f_l h_l\le 1.\) Full reversal
+of the pair contributes \(\bar f_l W_l\le 1,\allowbreak  W_l=A \bar f_{l-1}\). These are actual
+two-arm products, not arbitrary functions chosen to satisfy a budget.
+Thus the new decorated message is exactly
+\[
+H_D=E_r^-qA^L(E_t^-p\bar f_b),\qquad U_D=T^2H_D.
+\]
+The terminal factor stays inside \(A^L\); the root factor stays at that root.
+Original nonnegativity gives \(0<U_D\le U_*\) and therefore preserves every
+new inverse-fourth bound.
+The old row has, instead,
+\[
+H_{o,D}=E_r^+pT^L(E_t^+qf_b),\qquad U_{o,D}=T^2H_{o,D},
+\]
+with the exact same positivity comparison for its ordinary-fourth and
+Iq bounds.
+
+The outer operator is the actual original two-edge kernel:
+\[
+T^2H(x)=\sum_{z,y}\mu(z)\mu(y)
+(1-K(x,z))(1-K(z,y))H(y).
+\]
+By antisymmetry these factors are exactly the directed edges \(y->z->x.\)
+No independent row choices or tilted measures have been introduced.
+
+Complete component reversal substitutes -K simultaneously in every
+factor. It swaps p, q and A, T, leaves d unchanged, reverses every
+decoration, and changes the outer \(T^2\) to \(A^2.\) Thus the new reversed
+message is
+\[
+A^2[E_r^+pT^L(E_t^+qf_b)]
+\]
+with denominator p and the corresponding \(I_p\) budget. The reversed old
+row is \(A^2\)[\(E_r^-qA^L(E_t^-p\bar f_b)\)] and has the corresponding old \(I_p\)
+statement only. Reversing just the inner component does not effect this
+global weight swap.

@@ -1,0 +1,385 @@
+\subsection{Minimum-two odd roots with every large-minimum even terminal}\label{proof:R2-C002}
+\paragraph{R2.0 Statement and fixed directions}
+
+% Replace a pure model-definition block only; keep local root/terminal data.
+Use the original finite-space model and arm messages of
+Section~\ref{sec:odd-common-calculus}.
+When the original \(K\)-notation is used, \(K=-B\) and
+\(g=K\one=-u\); in either notation
+\(\delta_j=\|B^j\one\|_2^2=\|K^j\one\|_2^2\).
+All means, norms, adjoints and spectral integrals use the same
+original probability measure.
+The distinct residual arm list at the internal root is
+
+\[
+\begin{gathered}
+(2,b,c,s_1,t_1,\cdots,s_k,t_k),\\
+3\le b<c<s_1<t_1<\cdots<s_k<t_k,k\ge 0
+\end{gathered}
+\]
+
+The distinct residual list at the distant terminal is
+
+\[
+\begin{gathered}
+(a_1,z_1,\cdots,a_j,z_j),4\le a_1<z_1<\cdots<a_j<z_j,j\ge 1
+\end{gathered}
+\]
+
+The inner length \(L\ge1\) and outer length \(M\ge1\) are independent. Arbitrary genuine equal-pair products \(E_r,\allowbreak \allowbreak  E_t\) are allowed at their original roots.
+
+Fix \(F=\prod_{i=1}^j h_{a_i}f_{z_i}\), and choose the root pair product as follows:
+
+\[
+\begin{gathered}
+P=\bar f_3 W_c \prod_{i=1}^{k} W_{s_i}\bar f_{t_i},\quad\text{if} b=3;\\
+P=W_b \bar f_c \prod_{i=1}^{k} W_{s_i}\bar f_{t_i},\quad\text{if} b\ge 4
+\end{gathered}
+\]
+
+The shortest root arm, of length two, has the actual message \(W_2=Aq\). Every inner edge points from the terminal toward the internal root; every outer edge points from that root toward the receiver. Thus the actual half-tree message is
+
+\[
+\begin{gathered}
+H=E_r W_2 P T^L(E_t F)
+\end{gathered}
+\]
+
+An \(f\) arm points entirely outward; a \(\bar f\) arm entirely toward its root; an \(h\) arm has its first edge toward the root and all remaining edges toward the leaf; a \(W\) arm has its first edge away from the root and all remaining edges toward the first neighbour. The direction depends only on the original lengths and on whether \(b=3\) or \(b\ge4\). For all these parameters and hosts, put
+
+\[
+\begin{gathered}
+\lambda_j=15/2+64(j-1)/5
+\end{gathered}
+\]
+
+Then
+
+\[
+\begin{gathered}
+EH^4\le \exp(-\lambda_j d), 
+\end{gathered}\tag{R2.0.1}
+\]
+\[
+\begin{gathered}
+I_q(T^M H)^3\le \exp[-(2\lambda_j-c(M))d]\\
+\le \exp[-(81/19+128(j-1)/5)d], 
+\end{gathered}\tag{R2.0.2}
+\]
+\[
+\begin{gathered}
+I_q(X)=E[q^{-1/3}|X|^{8/3}]
+\end{gathered}
+\]
+
+The all-positive-length outlet of Q5-C164 gives \(c(1)=204/19\), \(c(2)=10\), \(c(3)=0\), \(c(4)=7\), and \(c(M)=6\) for \(M\ge5\).
+
+\paragraph{R2.1 Finite identities and root-pair inputs}\label{part:R2.1}
+
+Use the original finite-space bounds of Section~\ref{sec:odd-common-calculus},
+the positive convolution \eqref{eq:Q188:conv}, and the signed mean and
+complete-vector square \eqref{eq:odd-common:coordinates}.
+At \(n=1\), \(G_n=(1,0)\); \(|G_2|^2=1+x\), and
+the contraction is used only at \(n\ge3\).
+Every full-vector fourth estimate below is
+\eqref{eq:oc:signed-moments}, including its constant component.
+
+\paragraph{R2.1.1 The root pair when \(b=3\)}
+
+Q5-C188, Section 1, equation (10), gives the following estimate for the same actual pair \(\bar f_3W_c\), \(c\ge4\):
+
+\[
+\begin{gathered}
+\bar f_3 W_c\le \exp[-\Gamma_r+B(U_r+\beta\one)],\\
+\Gamma_r=d+\beta_c+\beta_{c-1}\ge 3d-2\delta_2\ge 35d/16,\\
+\beta=\beta_{c-1},\tau\le \beta\le d,\\
+U_r=(xE+zxD)(B)u,G_{c-3}=E+zD 
+\end{gathered}\tag{R2.1.4}
+\]
+
+This is the direction \(\bar f_3W_c\). For all later root pairs, whose shorter lengths satisfy \(s_i\ge5\), Q5-C188, Sections 1--2, gives
+
+\[
+\begin{gathered}
+\prod W_{s_i}\bar f_{t_i}\le \exp[-16kd/5+B U_+],\\
+\|U_+\|\le \sqrt{d}/4,EBU_+\le d/12,\quad\text{if} k\ge 1 
+\end{gathered}\tag{R2.1.5}
+\]
+
+\paragraph{R2.1.2 The root pairs when b is at least four}
+
+Combining the first and all later pairs in one actual finite mask \(U\), Q5-C096 and Q5-C188 give
+
+\[
+\begin{gathered}
+P\le \exp[-16(k+1)d/5+B U],\\
+\|U\|\le 3\sqrt{d}/8,EBU\le d/12 
+\end{gathered}\tag{R2.1.6}
+\]
+
+Each unequal pair retains its negative scalar loss and its finite mask.
+
+\paragraph{R2.2 One finite terminal packet for every pair count}
+
+Q5-C180, Sections 1--2, gives, for the same actual terminal \(F\),
+
+\[
+\begin{gathered}
+F\le \exp(R-\Gamma),\Gamma=16jd/5,\\
+R=\sum_{i=1}^{j} \sum_{r=a_i+1}^{z_i} K^r1
+\end{gathered}
+\]
+
+Define \(D_i=EB^iR\), \(\sigma=ER^2\), \(\delta=D_0+5\sigma/4\), and \(\epsilon=\delta+D_1\). The complete finite-mask estimates are
+
+\[
+\begin{gathered}
+\sigma<d/18,\|R\|<\sqrt{d}/4,|R|<1/4,\\
+-d/5\le D_0\le d/12,-d/12\le D_1\le d/5,\\
+D_i\le d/12 (all i\ge 2),\\
+|\delta|\le d/5,\delta\le 11d/72,\\
+|\epsilon|\le 3d/8,\epsilon\le 127d/360,\\
+\gamma_l:=\beta_l-D_{l-1}\ge d/2 (allfinite l\ge 3) 
+\end{gathered}\tag{R2.2.1}
+\]
+
+The index range for \(\gamma_l\) includes \(L+1\). The upper bound for \(D_1\) is \(d/5\). The bounds are independent of \(j\) because the original power intervals are disjoint. These finite \(R\) bounds give the intermediate estimates of Q5-C180.
+
+The actual Taylor bound \(e^R\le1+R+5R^2/8\) and positivity give
+the finite majorant \eqref{eq:oc:fourth-duhamel}, with \(c=5/4\).
+At \(L=1\) it is \(q+BR+\delta\). Every bracket is positive
+because it dominates the same positive actual message.
+
+\paragraph{R2.3 The complete exponential table}\label{part:R2.3}
+
+Apply Lemma~\ref{lem:odd-common:w2} to the actual terminal packet,
+with \(c_T=5/4\) and \(h=1/2\).
+The four rows of \eqref{eq:odd-common:w2-table} give
+\(\log(W_2T^LF)\le a+B(V_0+c_0\one)\) for
+\(L=1,2,3\) and \(L\ge4\), respectively.
+In the long row \(n=L-1\), its exact mean is
+\[
+ \E BV_0=d-\beta_{L+1}+D_L=d-\gamma_{L+1}\le d/2.
+ \tag{R2.3.1}
+\]
+The constant \(c_0=-d/2\) stays in the full vector.
+Every row uses the fixed directions stated above.
+
+\paragraph{R2.4 The root \(b=3\) for every inner length}\label{part:R2.4}
+
+First take \(k=0\). Add the scalar and full vector of the root-pair bound to the same exponent in \mbox{\hyperref[part:R2.3]{part R2.3}} and apply the full-vector exponential bound once. Write \(S=a-\Gamma_r+EBV_{\rm full}\) and \(N=\|V_{\rm full}\|^2\). We give the weakest scalar case \(j=1\). Each additional terminal pair subtracts \(16d/5\) from the scalar, without changing the vector or mean estimates, and hence adds \(64d/5\) to the fourth-moment loss.
+
+\paragraph{R2.4.1 Three root norms and a finite path norm}\label{part:R2.4.1}
+
+The spectral identities and \(1-x\le E\le1\), \(0\le D\le1\), including \(G_1\), imply
+
+\[
+\begin{gathered}
+\|U_r\|^2\le \theta^2(1+\theta)d<d/4,\\
+\|-u+U_r\|^2\le d,\\
+\|Bu+U_r\|^2\le d,EBU_r\le 0,EU_r\le 0 
+\end{gathered}\tag{R2.4.1}
+\]
+
+For the second inequality, the frequency bound is \((1-x+x^2)^2+x^3=1+x(-2+3x-x^2+x^3)\le1\), since \(-2+3x-x^2+x^3\le-2+3\theta+\theta^3<0\). For the third it is \(x+3x^2+x^3\le31733/32768<1\). The first uses \(\theta^2(1+\theta)=7605/32768<1/4\). The real coordinate one and imaginary coordinate zero of \(G_1\) are both included.
+
+For \(n\ge3\), \(G_n-1=zG_{n-1}\). At \(n=3\), its squared modulus is \(x+x^2\le585/1024<16/25\); for \(n\ge4\), use \(|G_{n-1}|\le1\). Therefore
+
+\[
+\begin{gathered}
+\|(G_n-1)u\|\le 4\sqrt{d}/5
+\end{gathered}
+\]
+
+Also \(\|BR\|<\sqrt d/6\), \(\|B^2R\|<5\sqrt d/48\), and \(\|B^nR\|<\sqrt d/15\) for \(n\ge3\). These follow respectively from \(\theta/16<1/36\), \(\theta/4<5/48\), and \(\theta^3/16<1/225\), which are rational comparisons on the whole interval.
+
+\paragraph{R2.4.2 The unit inner length and its constant component}
+
+Here \(V_{\rm full}=R-u+U_r+\beta\one\). The nonconstant part has norm at most \(5\sqrt d/4\) and mean \(E(R-u+U_r)=D_0+EU_r\le d/12\). Thus its constant square and cross term give
+
+\[
+\begin{gathered}
+N\le 25d/16+2\beta(d/12)+\beta^2\\
+\le 25d/16+7d^2/6\le 281d/144 
+\end{gathered}\tag{R2.4.2}
+\]
+
+The actual \(B\)-mean is at most \(D_1+d+EBU_r\le6d/5\), so
+
+\[
+\begin{gathered}
+S\le (-16/5-35/16+11/72+6/5)d=-581d/144
+\end{gathered}
+\]
+
+Consequently
+
+\[
+\begin{gathered}
+\log EH^4\le -[581/36-(17/4)(281/144)]d\\
+=-4519d/576<-15d/2 
+\end{gathered}\tag{R2.4.3}
+\]
+
+\paragraph{R2.4.3 Inner length two}
+
+Now \(V_{\rm full}=BR+U_r+(\beta+\delta)\one\). We have \(\|BR+U_r\|\le2\sqrt d/3\) and \(|\beta+\delta|\le6d/5\). Using \(\sqrt d\le3/5\) gives \(\|V_{\rm full}\|\le7\sqrt d/5\). The constant has zero \(B\)-mean, hence \(EBV_{\rm full}\le D_2\le d/12\). Therefore
+
+\[
+\begin{gathered}
+S\le (-16/5-35/16+3/8+1/12)d=-1183d/240,\\
+\log EH^4\le -[1183/60-833/100]d=-854d/75<-15d/2 
+\end{gathered}\tag{R2.4.4}
+\]
+
+\paragraph{R2.4.4 Inner length three and the signed constant cross term}
+
+Write \(V_{\rm full}=V_0+c_0\one\), where \(V_0=(B+\delta)u+B^2R+U_r\) and \(c_0=\beta+\epsilon\). The terminal packet gives \(7d/32\le c_0\le11d/8\), while
+
+\[
+\begin{gathered}
+EV_0=-d+D_2+EU_r\le -11d/12
+\end{gathered}
+\]
+
+Thus \(2c_0EV_0+c_0^2\le c_0(c_0-11d/6)\le0\). This pays the actual constant square and cross term. The preceding norms give
+
+\[
+\begin{gathered}
+\|V_0\|\le (1+1/15+5/48)\sqrt{d}<6\sqrt{d}/5,\\
+N\le 36d/25
+\end{gathered}
+\]
+
+Also \(EBV_{\rm full}=-\delta d+D_3+EBU_r\le d^2/5+d/12\). Combining this with the actual scalar \(D_2\), we obtain
+
+\[
+\begin{gathered}
+S\le (-16/5-35/16+3/8-1+1/6+1/15)d=-1387d/240,\\
+\log EH^4\le -[1387/60-153/25]d=-5099d/300<-15d/2 
+\end{gathered}\tag{R2.4.5}
+\]
+
+\paragraph{R2.4.5 Every finite inner length at least four}
+
+Write \(V_{\rm full}=V_0+c_0\one\), where \(V_0=(G_n-1)u+B^nR+U_r\), \(c_0=\beta-d/2\), and \(n=L-1\ge3\). Then \(3d/32\le c_0\le d/2\), and
+
+\[
+\begin{gathered}
+EV_0=-\beta_{n+1}+D_n+EU_r\le -49d/96
+\end{gathered}
+\]
+
+Hence \(2c_0EV_0+c_0^2\le0\) and \(N\le\|V_0\|^2\le(41/30)^2d\). The exact terminal mean and \(EBU_r\le0\) give
+
+\[
+\begin{gathered}
+S\le (-16/5-35/16+11/36+2/5-1+1/2)d=-3731d/720
+\end{gathered}
+\]
+
+It follows that
+
+\[
+\begin{gathered}
+\log EH^4\le -[3731/180-28577/3600]d\\
+=-46043d/3600<-15d/2 
+\end{gathered}\tag{R2.4.6}
+\]
+
+The terminal packet supplies \(\gamma_{L+1}\); the terminal mean at the end of the finite path is retained.
+
+\paragraph{R2.5 The root b at least four, including all later pairs}
+
+Add the complete root-pair mask to the table in \mbox{\hyperref[part:R2.3]{part R2.3}}. The weakest scalar is \(j=1,\allowbreak \allowbreak  k=0\); arbitrary \(j,\allowbreak \allowbreak  k\) subtract a further \(16(j-1)d/5+16kd/5\). Every vector in the following table includes its displayed constant. Direct triangle bounds suffice.
+
+
+\begingroup\small
+\setlength{\tabcolsep}{3pt}
+\setlength{\LTleft}{0pt}\setlength{\LTright}{\fill}
+\begin{longtable}{@{}>{\raggedright\arraybackslash}p{0.1200\linewidth}>{\raggedright\arraybackslash}p{0.8000\linewidth}@{}}
+\caption{Complete-vector bounds for roots with \(b\ge4\), indexed by inner length \(L\).}\label{tab:parameters:r2-c002:2}\\
+\toprule
+\(L\) & full \(V_{\rm full}\) \\
+\midrule\endfirsthead
+\toprule
+\(L\) & full \(V_{\rm full}\) \\
+\midrule\endhead
+\bottomrule\endfoot
+1 & \(R-u+U\); upper bound for S/d: \(-1787/360\); upper bound for \(\lVert V_{\rm full}\rVert /\sqrt{d}\): \(13/8\). \\
+\addlinespace[2pt]
+2 & \(BR+U+\delta\one\); upper bound for S/d: \(-703/120\); upper bound for \(\lVert V_{\rm full}\rVert /\sqrt{d}\): \(2/3\). \\
+\addlinespace[2pt]
+3 & \((B+\delta)u+B^2R+U+\epsilon\one\); upper bound for S/d: \(-161/24\); upper bound for \(\lVert V_{\rm full}\rVert /\sqrt{d}\): \(3/2\). \\
+\addlinespace[2pt]
+\(\ge 4\) & \((G_n-1)u+B^nR+U-(d/2)\one\); upper bound for S/d: \(-55/9\); upper bound for \(\lVert V_{\rm full}\rVert /\sqrt{d}\): \(8/5\). \\
+\end{longtable}
+\endgroup
+
+
+Here are the four scalar and norm calculations.
+
+At \(L=1\), scalar plus mean is \(-32d/5+\delta+D_1+d+EBU\), at most \((-32/5+11/72+1/5+1+1/12)d=-1787d/360\). The norm coefficient is \(1/4+1+3/8=13/8\).
+
+At \(L=2\), it is \(-32d/5+\epsilon+D_2+EBU\), at most \((-32/5+3/8+1/6)d=-703d/120\). The norm coefficient is \(1/6+3/8+3/25<2/3\).
+
+At \(L=3\), it is \(-32d/5+\epsilon-d+D_2-\delta d+D_3+EBU\), at most \((-32/5+3/8-1+1/4+1/15)d=-161d/24\). Its norm coefficient is \(13/20+1/15+5/48+3/8+9/40=341/240<3/2\). Here \(\sqrt\theta<13/20\), and the full constant \(|\epsilon|\le3d/8\) has been included.
+
+For \(L\ge4\), the expression is \(-32d/5+2\delta_++2(D_1)_+-d+EBV_{\rm full}\). The exact terminal mean and \(EBU\le d/12\) give coefficient \(-32/5+11/36+2/5-1+1/2+1/12=-55/9\). The norm coefficient is \(4/5+1/15+3/8+3/10=37/24<8/5\).
+
+The full-vector exponential bound therefore gives fourth-moment losses at least
+
+\[
+\begin{gathered}
+99451/11520,1939/90,829/48,3052/225,
+\end{gathered}
+\]
+
+All four exceed \(15/2\). This treats all \(b\ge4\), all root-pair counts and every \(L\).
+
+\paragraph{R2.6 Arbitrarily many later root pairs when \(b=3\)}\label{part:R2.6}
+
+Every full vector in \mbox{\hyperref[part:R2.4]{part R2.4}} has norm at most \(2\sqrt d\): use respectively the bound \(281d/144\), coefficient \(7/5\), coefficient \(6/5\) after the cross term is retained, and coefficient \(41/30\). Adding the one mask \(U_+\) for all later pairs gives the additional fourth exponent
+
+\[
+\begin{gathered}
+-64kd/5+4EBU_++(17/4)(2\|V_{\rm full}\|\|U_+\|+\|U_+\|^2)\\
+\le [931/192-64k/5]d<0,k\ge 1 
+\end{gathered}\tag{R2.6.1}
+\]
+
+The bound uses the full old vector and therefore includes its constant cross terms.  Together with parts R2.4--R2.5, it proves the stated ordinary fourth bound and the complete \(\lambda_j\) formula.
+
+\paragraph{R2.7 Decorations, outer propagation and the path-skeleton consequence}
+
+Genuine equal pairs have their Q3-C014 directions and actual factors in \([0,\allowbreak \allowbreak  1]\). Positivity gives \(E_rW_2PT^L(E_tF)\le W_2PT^LF\), retaining every original edge and vertex in the actual tree. Apply the Q5-C164 outlet to this actual \(H\). Its worst cost gives \(2\lambda_1-204/19=15-204/19=81/19\).
+
+Suppose the two sides satisfy this theorem, with independent original core lengths \(L_-,\allowbreak \allowbreak  M_-,\allowbreak \allowbreak  M_+,\allowbreak \allowbreak  L_+\). Let the central residual list be empty or have at least two arms. The exact negative zero-step table of Q4-C143 gives an actual center \(C\) with \(E[qC^4]\le1\). Write \(X_i=T^{M_i}H_i\).
+
+Leaf integration gives \(Z_D=E[CX_-X_+]\), and Hölder with the same original \(q\) gives
+
+\[
+\begin{gathered}
+Z_D\le (E[qC^4])^{1/4} I_q(X_-)^{3/8} I_q(X_+)^{3/8}\\
+\le \exp[-(2\lambda_{j_-}+2\lambda_{j_+}-c(M_-)-c(M_+))d/8]\\
+\le \exp(-81d/76) 
+\end{gathered}\tag{R2.7.1}
+\]
+
+The center direction follows \hyperref[part:C180:dirs]{the rules of Q5-C180}: an empty residual uses reversed equal pairs; an even residual uses the reversed pair product; an odd residual with minimum one uses \(p\bar f_sW_t\) and later reversed pairs; an odd residual with minimum at least two uses \(f_a\) and later \(h_sf_t\) pairs.
+
+\paragraph{R2.8 Original counts, boundaries and entropy}\label{part:R2.8}
+
+The original half-tree, before adding its outer connector, has edge count
+
+\[
+\begin{gathered}
+e_half=2+b+c+sum_i(s_i+t_i)+L+sum_i(a_i+z_i)+2S_r+2S_t
+\end{gathered}
+\]
+
+Here \(S_r,\allowbreak \allowbreak  S_t\) are the sums of one length from each original equal pair. The outer connector adds \(M\) original edges. For the full tree, the four core lengths plus all original side-arm lengths, with their multiplicities, give \(e(U)\), and \(|V(U)|=e(U)+1\). Branch vertices are counted by their original degrees.
+
+At \(d=0\), \(B\one=0\), hence \(A\one=T\one=\one\), and leaf integration makes all actual messages one. This allows nonzero \(K\). Every positive atom, the one-atom host and arbitrarily small atom masses are included. Complete reversal reverses all original edges, arms, connectors, weights and decorations simultaneously by replacing \(K\) with \(-K\); it leaves \(d\) unchanged.
+
+For any correlated original joint label law \(\rho\), the actual edge product \(W_D\) and \(P_0=\mu^{V(U)}\), Gibbs gives \(E_\rho\log W_D\le D(\rho\|P_0)+\log Z_D\).  If \(W_D=0\) on positive \(\rho\)-mass, the left side is minus infinity; lack of absolute continuity gives infinite KL. Constant labels ensure \(Z_D>0\) on positive support. For a loopless tournament on \(N\) vertices, apply \(1_{\rm arc}\le(1+K)/2\) to each original edge and sum over all original maps to obtain \(\homc(D,\allowbreak \allowbreak  \mathcal T)\le2^{-e(U)}N^{e(U)+1}Z_D\). Nonadjacent original vertices may have the same image.

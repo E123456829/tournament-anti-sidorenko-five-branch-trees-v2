@@ -1,0 +1,9 @@
+\begin{tikzpicture}[>=Stealth,every node/.style={font=\small},box/.style={draw,rounded corners,align=center,minimum width=36mm,minimum height=13mm}]
+\node[box] (l) at (0,0) {$H_\ell$ at $u_2$\\$N_+(H_\ell)\le1$};
+\node[box] (r) at (7,0) {$H_r$ at $u_3$\\$N_-(H_r)\le1$};
+\draw[->,thick] (l)--node[above]{$L_{23}\ge1$}(r);
+\node[align=center] at (0,-1.4) {left terminal + side table\\weighted fourth moments};
+\node[align=center] at (7,-1.4) {right terminal + side table\\weighted fourth moments};
+\draw[->] (0,-.95)--(l);\draw[->] (7,-.95)--(r);
+\node at (3.5,.9) {$Z_D=\langle H_\ell,A^{L_{23}}H_r\rangle\le1$};
+\end{tikzpicture}

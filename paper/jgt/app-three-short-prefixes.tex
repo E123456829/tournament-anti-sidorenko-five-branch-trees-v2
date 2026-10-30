@@ -1,0 +1,250 @@
+\subsection{Short anchors followed by an arm of length three}\label{q3:app:prefix}
+We treat every residual list beginning with $a,3,c$, where $a=1$ or $2$ and $c\ge4$. The anchor is always inward: $y=\bar f_a$. All remaining ordered pairs have their positive canonical directions. Put $z=y-1$ and $x=\E y^3$. As in Section~\ref{q3:app:odd}, $|z|\le1$; for $a=1$, $\E z^2=d$ and $1\le x\le1+4d$; for $a=2$, $\E z^2=d+\delta_{2}\le3d/2$ and $(1-d)^3\le x\le1+(21/8)d$.
+
+\subsubsection{The first pair has lengths three and four}
+Writing $h=Kg$, direct recursion gives
+\[
+ h_3+f_4=2-3d+R_0,\qquad R_0=K^3g-dg.
+\]
+Thus $h_3f_4\le e^{R_0-3d}$ and
+\[
+ M^2=\norm{R_0}_\infty^2\le \delta_{3}+d^2\le\theta^2d+d^2.
+\]
+The row vector here is $K^2g-d\one$, whose mean cross term is zero. Skewness gives
+$\E R_0=\delta_{2}$, $\E(gR_0)=-d^2$, $\E(hR_0)=-\delta_{3}$. Hence
+\[
+ \E[(1+3z)R_0]\le \delta_{2}+3d^2,
+\]
+and valid budgets for Lemma~\ref{q3:lem:tiltedcubic} are
+$B_1=\delta_{2}+3d^2+4Md$ and $B_2=\delta_{2}+3d^2+6Md$.
+
+For the unit anchor, $d\ge3/32$ implies $M\le5d/3$ and the pointwise estimate gives $(1+4d)e^{-4d}\le1$. Below this threshold, $M\le5/32$, $3B_1<x$, and \eqref{q3:eq:logbound} gives
+\[
+ \log\E[y^3(h_3f_4)^3]
+ \le d[-6223/2048+(169/22)d+12M]\le-(847/2048)d.
+\]
+For the two-edge anchor, $d\ge1/20$ implies $M\le17d/8$ and the pointwise bound pays $1+(21/8)d$. Below the threshold, $M<1/9$, $3B_2<1/2<x$, and
+\[
+ \log\E[y^3(h_3f_4)^3]
+ \le d[-9039/2048+(27/2)d+18M]\le-(3407/2048)d.
+\]
+
+If there are further ordered pairs, put
+\[
+ \bar R=K^3g+\sum_{i=2}^t(S_{c_i}-S_{b_i}),\quad
+ R=\bar R-dg,\quad \Delta=3d+2(t-1)d\ge5d .
+\]
+Then $P\le e^{R-\Delta}$. Since $\bar R=K^3Q(K)g$ with a zero-one mask, setting $V=K^2Q(K)g$ gives $\norm V_2^2\le17d/50$ and $\E V\ge-d/5$. Therefore
+\[
+ M^2\le(17/50)d+(7/5)d^2.
+\]
+Counting positive moments in $\E[(1+3z)\bar R]$ gives a coefficient one at $u_4=\delta_{2}$ and at most seven at each later positive moment. Since $\delta_{4}/(1-\theta^2)\le d/12$ and $\E(zg)=-d$,
+\[
+ \E[y^3R]\le d+3d^2+6Md=:B.
+\]
+For $d\ge1/16$, $M\le3d$ and $(1+4d)e^{-6d}\le1$. For $d\le1/16$, $M<1/6$, $(9/2)M^2<2d$, $3B\le105/256<1/2<x$, and Lemma~\ref{q3:lem:tiltedcubic} gives a logarithmic bound at most $-(39/16)d$. This proves all residual lists starting with $a,3,4$.
+
+\subsubsection{A nonempty tail after the first pair}
+Suppose the residual list is $a,3,c_1,b_2,c_2,\ldots,b_t,c_t$, with $t\ge2$ and $c_1\ge5$. The general pair envelope gives
+\[
+ \Delta=2td-\delta_{2}\ge(115/32)d,\qquad
+ M^2\le C_*\theta^2d\le17d/50 .
+\]
+For the inward unit anchor the linear cubic-weight mean is at most
+$\delta_{2}+4\delta_{4}/(1-\theta^2)<3d/4$. For the inward two-edge anchor it is at most
+$\delta_{2}+7\delta_{4}/(1-\theta^2)<d$. Thus
+\[
+ B_1=3d/4+4Md,\qquad B_2=d+6Md
+\]
+are valid. For $a=1$, split at $d=1/14$. Above it $M\le9d/4$ and $\Delta-M\ge43d/32>4d/3$. Below it $M<1/6$ and $3B_1\le17/56<x$; Lemma~\ref{q3:lem:tiltedcubic} gives
+\[
+ \log\E[y^3P^3]\le
+ [4+9/4+153/100-345/32+2]d=-(801/800)d.
+\]
+For $a=2$, split at $d=1/16$. Above it $M\le5d/2$ and $\Delta-M\ge35d/32>7d/8$. Below it $M<3/20$, $3B_2\le57/160<1/2<x$, and the logarithmic bound is
+\[
+ [21/8+3+153/100-345/32+27/10]d=-(741/800)d.
+\]
+This proves all nonempty-tail cases.
+
+\subsubsection{An endpoint version of the scalar estimate}
+For the remaining three-arm lists we retain the denominator in Lemma~\ref{q3:lem:tiltedcubic}. If $0<L\le x\le U$ and $B\ge0$, then
+\begin{equation}\label{q3:eq:endpointscalar}
+ 3B\le\frac{2LU}{L+U}
+ \quad\Longrightarrow\quad
+ \log x+3B/x\le\log U+3B/U.
+\end{equation}
+Indeed the function has only a minimum, so its maximum on an interval is at an endpoint. The inequality
+$\log t\ge2(t-1)/(t+1)$ for $t\ge1$ proves that the upper endpoint is larger under the displayed condition. We will also use
+\begin{equation}\label{q3:eq:thirdlog}
+ \log(1+s)\le s-\frac{s^2}{2(1+s)}-\frac{s^3}{6(1+s)^2}
+ \qquad(s\ge0).
+\end{equation}
+The derivative of the difference for the first two terms is $s^2/[2(1+s)^2]$; its integral is at least $s^3/[6(1+s)^2]$.
+
+\subsubsection{The single pair of lengths three and five}
+Set $h=Kg$, $j=K^2g$, $k=K^3g$, $\ell=K^4g$. Exact recursion gives
+\[
+ h_3+f_5=2-\Delta+R,\qquad
+ \Delta=4d-\delta_{2},\qquad R=k+\ell-d(2g+h).
+\]
+Thus $P=h_3f_5\le e^{R-\Delta}$ and $\Delta\ge115d/32$.
+The two linear cubic-weight means are
+\[
+ \E[(1+3z)R]=
+ \begin{cases}
+ \delta_{2}-3\delta_{3}+7d^2\le d/12+7d^2,&a=1,\\
+ \delta_{2}-6\delta_{3}+7d^2-3d\delta_{2}\le d/24+7d^2,&a=2.
+ \end{cases}
+\]
+Here the spectral inequalities are $x-3x^2\le1/12$ and $x-6x^2\le1/24$.
+The full row vector gives
+\[
+ M^2\le \delta_{3}+\delta_{4}-2d\delta_{2}+4d^2+d^3
+ \le\max\{(4+d)d^2,S(d)\},
+\]
+\[
+ S(d)=C_0d+(51/16)d^2+d^3,\qquad C_0=(1+\theta)\theta^2=7605/32768.
+\]
+The last bound follows by applying the endpoint chord of the convex polynomial $x^2+x^3-2dx$ on $[0,\theta]$ to the spectral measure of $g$. For $d\le2/15$ the second expression is larger. Valid cubic-weight budgets are
+$B_1=d/12+7d^2+4Md$ and $B_2=d/24+7d^2+6Md$.
+
+For $a=1$ and $d\ge2/15$, both row bounds are at most $(81/16)d^2$: use $C_0<209/900\le d(15/8-d)$. Hence $M\le9d/4$ and the pointwise estimate proves the cubic. For $d\le2/15$, $M^2\le S(d)$, $M\le3/10$ and $3B_1<1\le x$. Put $U=1+4d$ and retain $3B_1/U$. Lemma~\ref{q3:lem:tiltedcubic} and \eqref{q3:eq:logbound} give
+\[
+\begin{split}
+ \frac1d\log\E[y^3P^3]\le{}&
+ 4-\frac{345}{32}+\frac92C_0+
+ \frac{1/4+13d+12\sqrt{S(d)}}{1+4d}\\
+ &+\frac{459}{32}d+\frac92d^2.
+\end{split}
+\]
+Every varying term increases. For the square-root quotient, differentiate its square; the sign numerator is
+$C_0+(2(51/16)-4C_0)d+3d^2+4d^3>0$.
+At $d=2/15$ the quotient is at most $335/92<73/20$, and the other terms give
+$-917/160+73/20+153/80+2/25=-71/800<0$.
+
+For $a=2$ and $d\ge1/16$, use $C_0<139/576\le d(565/144-d)$ to get $M\le8d/3$; hence $\Delta-M\ge89d/96>7d/8$ and the pointwise estimate pays $1+(21/8)d$.
+For $d\le1/16$, $S(d)\le14261/524288<1/36$, $M\le1/6$ and $3B_2<1/2<x$. The logarithmic bound is
+\[
+ [11/4+(9/2)C_0-345/32]+(1131/32)d+18M+(9/2)d^2
+ \le-1369/800.
+\]
+This proves both single-pair cases at length five.
+
+\subsubsection{The single pair with every longer length}
+Assume $c\ge6$. Put
+\[
+ r=\delta_{2}/d,\quad \tau=d-\delta_{2}=d(1-r),\quad d\le r\le\theta .
+\]
+Here $r$ is a scalar ratio. Retaining $f_0,f_1,f_2$ in positive convolution gives
+\[
+ h_3+f_c\le2-\Delta+R,\quad
+ \Delta=(4-3r)d,\quad
+ R=R_0-\tau(2g+Kg),\quad R_0=S_c-S_3.
+\]
+For $m=c-3\ge3$, the exact geometric formulas imply
+\[
+ |G_m(i\sqrt x)|^2\le H(x)=\frac{(1+x^3)^2}{1+x}.
+\]
+The function $xH(x)$ increases and $H(\theta)\le13/16$.
+Let $\Gamma=169/512$ and $U_0=K^2G_{c-3}(K)g$. Then
+\[
+ \norm{U_0}_2^2\le\Gamma \delta_{2},\quad
+ \E U_0\ge \delta_{2}-\delta_{3},\quad \ip g{U_0}\ge-\delta_{2}.
+\]
+Since $R=K[U_0-\tau g-2\tau\one]$, the complete row expansion yields
+\begin{equation}\label{q3:eq:Vcoupled}
+ M^2\le dV(d,r),\quad
+ V(d,r)=\Gamma r+d[(1-r)^2(4+d)-(3/8)(1-r)r].
+\end{equation}
+The cross terms have been retained. The convex quadratic $V$ in $r$ has coefficients
+\[
+ A_r=d(35/8+d),\quad B_r=\Gamma-d(67/8+2d),\quad C_r=d(4+d).
+\]
+Its endpoint formulas are
+\[
+ V(d,\theta)=v_0+v_1d+v_2d^2,\quad
+ (v_0,v_1,v_2)=(2197/16384,10811/8192,361/1024),
+\]
+\[
+ V(d,d)=dW(d),\qquad W(d)=4+\Gamma-(59/8)d+(19/8)d^2+d^3.
+\]
+On $[0,1/5]$, $W>5/2$, $-59/8\le W'<0$, $(dW)'>0$ and $2W+dW'>0$.
+Also $v_0<1/7$, $1<v_1<4/3$, $v_2<3/8$,
+$V(1/5,\theta)<33/80$, $V(1/16,\theta)<7/32$,
+$W(1/5)<3$ and $W(1/16)<4$.
+
+For the linear cubic weights, finite alternating sums give
+\[
+ \E[(1-3g)R_0]\le \delta_{2}-4\delta_{3}+4\delta_{4}\le d/10,
+\]
+\[
+ \E[(1-3g+3Kg)R_0]\le \delta_{2}-7\delta_{3}+7\delta_{4}\le d/20.
+\]
+For example, when $c=2m$, the first expression is
+$\delta_{2}+4\sum_{j=3}^m(-1)^j\delta_{j}$; for odd $c$ add $3(-1)^{m+1}\delta_{m+1}$. Grouping each later positive term with its preceding negative proves the bound. The spectral scalar estimates are $x(1-2x)^2\le2/27<1/10$ and $x-7x^2+7x^3\le1/21<1/20$ on $[0,1/2]$.
+The correction $-\tau(2g+Kg)$ contributes at most $7\tau d$, so valid budgets are
+\begin{equation}\label{q3:eq:singlepairbudgets}
+ B_1=d/10+7\tau d+4Md,\qquad B_2=d/20+7\tau d+6Md.
+\end{equation}
+
+For $a=2,d\ge1/16$, we claim $M\le[(11-13r)/3]d$. By \eqref{q3:eq:Vcoupled}, it suffices that
+\[
+ d[(85/9-d)+(-1685/72+2d)r+(1037/72-d)r^2]-\Gamma r\ge0.
+\]
+This decreases in $r\le\theta$, so set $r=\theta$. The result is
+$d[((61/32)^2-v_1)-v_2d]-v_0$, increasing on $[1/16,1/3]$ and positive at $1/16$ because $V(1/16,\theta)/(1/16)<7/2<(61/32)^2$.
+Thus $\Delta-M\ge(1+4r)d/3$, which pays the sharper short-path bound $x\le1+(1+4r)d$.
+For $d\le1/16$, convexity and the endpoint formulas give $V\le1/4$, so $M\le1/8$. The budget has $3B_2\le297/1280<1/2<x$; Lemma~\ref{q3:lem:tiltedcubic} gives
+\[
+ \frac1d\log\E[y^3P^3]\le
+ 21/8+3/20+21/16+18/8+9/8-267/32=-141/160.
+\]
+
+For $a=1,d\ge1/5$, the analogous bound is $M\le(8/3-3r)d$. Its squared difference is
+\[
+ d[(28/9-d)+(-61/8+2d)r+(37/8-d)r^2]-\Gamma r,
+\]
+again decreasing in $r$. At $r=\theta$ it is increasing in $d\le1/3$ and positive at $1/5$, because $V(1/5,\theta)/(1/5)<33/16<(139/96)^2$. Thus $\Delta-M\ge4d/3$ and the pointwise estimate proves the result.
+
+It remains to handle $a=1,d\le1/5$, where $1+2d\le x\le U=1+4d$. We justify the upper-endpoint substitution before using it. For $d\le1/10$, \eqref{q3:eq:Vcoupled} gives $M\le1/4$, so $3B_1\le27/50<x$. For $1/10\le d\le1/5$, $\partial_rV\le\Gamma-(617/128)d<0$, and hence
+\[
+ B_1\le\bar B(d)=d[1/10+7d(1-d)+4d\sqrt{W(d)}].
+\]
+Both $\bar B/d$ and $d/H$ increase, where
+$H=(1+2d)(1+4d)/(1+3d)$.
+At $d=1/5$, $\bar B\le131/250$ and $3\bar B\le393/250<63/40=H$. Criterion~\eqref{q3:eq:endpointscalar} therefore proves
+$\log x+3B_1/x\le\log U+3B_1/U$ throughout this range.
+
+For $d\le1/48$, $V<1/4$ and $M\le1/12$, so the logarithmic bound divided by $d$ is at most
+$4+139/80+9/8-267/32=-237/160$.
+For $1/48\le d\le1/5$, \eqref{q3:eq:thirdlog} bounds it by
+\[
+ \Psi(d,r)=-8+9r+\frac92V(d,r)
+ +\frac{3/10+(13-21r)d+12\sqrt{dV(d,r)}}{1+4d}
+ -\frac{32d^2}{3(1+4d)^2}.
+\]
+This is convex in $r$: the only nonautomatic term is the square root, whose second derivative has the sign of
+\[
+ 4A_rC_r-B_r^2=-\Gamma^2+(67\Gamma/4)d+(151/128)d^2>0
+\]
+because $(67/4)d-\Gamma\ge29/1536$. It is enough to check $r=d,\theta$.
+Both endpoint functions increase in $d\le1/5$. For $r=\theta$, the polynomial $V(d,\theta)$ increases and
+$\sqrt{dV(d,\theta)}/(1+4d)$ increases since the derivative of its square has numerator
+$v_0+(2v_1-4v_0)d+3v_2d^2+4v_2d^3>0$.
+The derivative of $(9/2)V$ exceeds $9/2$, while the magnitude of the last negative derivative is at most $64/15$. The remaining linear quotient also increases.
+For $r=d$, the ordinary quotient has derivative numerator
+$59/5-42d-84d^2\ge1/25$, and the square-root quotient increases because
+$2W+d(1+4d)W'\ge5-(9/25)(59/8)>0$.
+The derivative of $9d$ pays the same last negative term.
+Finally, at $d=1/5$,
+\[
+ \Psi(1/5,\theta)\le-199/80+743/288-32/243
+ =-1529/38880<0,
+\]
+\[
+ \Psi(1/5,1/5)\le-7/2+313/90-32/243=-1/45-32/243<0.
+\]
+This completes the single-pair proof for every $c\ge6$ and both short anchors.
+
+Every orientation in this subsection depends only on the residual lengths. The estimates include shared interval endpoints, $d=0$ gives equality, and multiplying by the actual equal-pair product preserves the full cubic.

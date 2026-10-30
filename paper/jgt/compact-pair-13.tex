@@ -1,0 +1,149 @@
+\subsection[The pair (1,3): a sixth moment]{The pair $(1,3)$: a sixth moment}\label{loc:S9}
+Let $P=qf_3$, $R=r+s$ and $m=1-d/2$. Exact recursion gives
+\[
+ P\le(m+R/2)^2,\quad\E[pR]=-d-\delta_{2},\quad
+ \E R^2=\delta_{2}+\delta_{3},\quad\|R\|_\infty^2\le d+\delta_{2}.
+\]
+
+\proofpart{The large-variance range}
+Let $c=pq+2r$ be the nonnegative cycle marginal and
+$\mathcal T(x)=\E_{y,z}[C(x,y,z)(g(y)+g(z))/2]$.
+Symmetrizing gives $\mathcal T=K(g^2)+s-gr$ and $|\mathcal T|\le c$.
+The exact path decomposition is
+\[
+ f_3=p^3/6+(p+2)c/6+(Ac+\mathcal T)/3.
+\]
+Its remainder after $p^3/6$ is nonnegative, since it is at least
+$pc/6+Ac/3$. Put $a_0=qp^3/6\le9/32$.
+Using $\mathcal T\le c$ and $T(pq)=q-d+K(g^2)\le q$ in the adjoint integral gives
+\[
+ \E[p(P-a_0)]\le(113/96)(1-3d).
+\]
+Here the scalar coefficient is $(7-g-5g^2-g^3)/6\le113/96$.
+The row bound gives $P<7/5$ globally. The chord of $x^6$ on
+$[a_0,7/5]$ has slope at most
+$(7/5)^6/(7/5-9/32)<27/4$.
+Thus $\E[pP^6]<1/1000+(3051/384)(1-3d)<1$ for $d\ge7/24$.
+
+\proofpart{Centered variance and a Hermite upper bound}
+Now $0<d\le7/24$. Write $a=\delta_{2}/d\in[d,\theta]$, $c_0=45/32$.
+Centering $R^2$ gives
+\[
+ \E[pR^2]\le B_a=c_0ad+d^{3/2}\sqrt{c_0a(1-\theta a)}.
+\]
+The variance substitution is valid because $c_0a/(1+a)\le\theta<1/2$;
+also $B_\theta-B_a\ge c_0d(\theta-a)$.
+Set
+\begin{gather*}
+ t=\sqrt{c_0d},\quad k=16/45,\quad b=13/32,\quad c=5/12,\quad
+ v=b+ct,\quad D=1+2t+v,\\
+ s_0=-t(t+v)/(1+t),\quad w=(v-t^2)/D,\quad
+ U=1+t/2-kt^2,\quad W=1-kt^2+s_0/2.
+\end{gather*}
+The actual $t$ range is contained in $[0,13/20]$.
+Here $v<1$, $v-t^2>0$, $-9/16\le s_0\le0$,
+$m-t/2\ge61/120>0$ and $m+s_0/2\ge53/96$.
+The quadratic Hermite interpolant of $\phi(x)=(m+x/2)^{12}$ at
+the double node $s_0$ and upper node $t$ majorizes $\phi$ on $[-t,t]$,
+because $\phi'''\ge0$ and the remainder has sign
+$(x-s_0)^2(x-t)\le0$. Write it as $\alpha x^2+\beta x+\gamma$.
+Then $\alpha\ge\phi''(s_0)/2>0$ and
+\[
+ \beta/\alpha\le4m/11-20s_0/11\le61/44<c_0.
+\]
+Hence the combined mean/variance substitution, including a possibly
+negative $\beta$, has the correct sign:
+\[
+ \alpha B_a-\beta(1+a)d+\gamma
+ \le\alpha t^2v-\beta t^2+\gamma.
+\]
+The two-node law on $t,s_0$ of masses $w,1-w$ has mean $-t^2$ and second
+moment $t^2v$. Consequently
+$\E[pP^6]\le H(t)=wU^{12}+(1-w)W^{12}$.
+
+\proofpart{The full small interval}
+For $t\le1/3$, another Hermite interpolant, at $-t/2$ (double) and $t$,
+gives $H\le Q$ with
+\[
+ Q=\omega\phi(t)+(1-\omega)\phi(-t/2)+h\phi'(-t/2),\quad
+ \omega=7/24-7t/27,\quad h=t/16-11t^2/18.
+\]
+For $x^j$ its expectation is $t^j(A_j+B_jt)$, where
+\[
+ A_j=7/24+(17-3j)(-1/2)^j/24,\qquad
+ B_j=-7/27+(7+33j)(-1/2)^j/27.
+\]
+For $j\ge5$, $A_j\le3/10$, $B_j\le0$.
+For even $j\ge6$ the latter follows from $7+33j\le7\,2^j$;
+odd $j$ are immediate. Let $x=kt^2$, and let $E_{n,r}(x)$ be the
+degree-$r$ Taylor polynomial of $(1-x)^n$ at zero.
+Even truncations are upper bounds and odd truncations lower bounds.
+The following finite table specifies all retained terms, including their
+required truncation direction:
+\begin{center}\small
+\begin{tabular}{@{}cc@{}}\toprule
+term in $Q$&bound for its factor $m^n$\\\midrule
+$m^{12}$&$E_{12,4}$\\
+$-6t^2m^{11}$&$E_{11,3}$ (lower)\\
+$(33/2)t^2(b+ct)m^{10}$&$E_{10,2}$\\
+$(55/8)t^3m^9-(165/8)t^4m^9$&$E_{9,2}$; $E_{9,1}$ (lower)\\
+$\widehat A_4t^4m^8+\widehat B_4t^5m^8$&$E_{8,2}$\\
+$\widehat A_5t^5m^7-\widehat N_5t^6m^7$&$E_{7,2}$; $E_{7,1}$ (lower)\\
+$\widehat A_6t^6m^6-\widehat N_6t^7m^6$&$1$; $E_{6,1}$ (lower)\\
+$j=7$&discard $B_7\le0$, then $m^5\le1$\\
+$j\ge8$&$A_j\le3/10$, $B_j\le0$, $m^{12-j}\le1$\\\bottomrule
+\end{tabular}
+\end{center}
+The coefficient symbols here are scalar constants:
+\begin{gather*}
+ \widehat A_4=19305/2048,\ \widehat B_4=495/256,\ \widehat A_5=3663/512,\ \widehat N_5=363/32,\\
+ \widehat A_6=34419/8192,\ \widehat N_6=2079/1024,\ \widehat A_7=7425/4096.
+\end{gather*}
+Substitution gives coefficient upper bounds for powers $t^2,\ldots,t^9$
+equal, respectively, to
+\[
+ -57/16,\quad55/4,\quad-3,\quad-37,\quad19,\quad50,\quad116,\quad32.
+\]
+For example the first exact coefficient is $-3421/960<-57/16$;
+the other entries follow from the finite table and the displayed constants.
+The entire $j=10,11,12$ positive tail is at most
+$2449t^{10}/122880<t^{10}/50$.
+Thus
+\begin{align*}
+ Q&\le1+t^2[-57/16+55t/4-3t^2-37t^3
+                          +19t^4+50t^5+116t^6+32t^7+t^8/50]\\
+ &\le1+t^2[-57/16+55t/4-3t^2-20t^3]
+ \le1-23t^2/432.
+\end{align*}
+The second line uses $t\le1/3$ to bound the last five positive terms by
+$17t^3$; the final bracket increases to $-23/432$ at $1/3$.
+
+\proofpart{A rational maximum bracket on the remaining interval}
+The function $U$ increases and $w$ decreases on $[0,13/20]$.
+For $A=wU^{12}$,
+\[
+ A'=U^{11}N(t)/D^2,\quad
+ N=4657/1536+73t/48-84049t^2/4320-2441t^3/216+580t^4/27.
+\]
+The exact integer polynomial $69120N$ is
+$209565+105120t-1344784t^2-781120t^3+1484800t^4$.
+It is positive up to $1/10$; thereafter
+$N'<73/48-(4623/200)t<0$.
+At $17/40$, $-1/200<N<0$; on $[53/125,17/40]$ we have $N'<-7$,
+so $N(53/125)>1/500$.
+Thus the unique maximum of $A$ lies in that rational bracket.
+Its value satisfies
+\[
+ A\le w(53/125)U(17/40)^{12}
+ <(83/500)(263/50)=21829/25000<7/8.
+\]
+The certificates are $w(53/125)<83/500$ (the reduced numerator is
+$-783/4000$), $U(17/40)=20669/18000$ and
+$(20669/18000)^3<53/35$, $(53/35)^4<263/50$.
+For $B=(1-w)W^{12}$, $W'\le-b/2$ and $W\le1$ give
+$B'/B\le2-6b=-7/16<0$.
+At $1/3$, $w=125/637$, $W=88199/103680<23/27$,
+and $(23/27)^3<5/8$, whence $B(1/3)<625/5096<1/8$.
+Therefore $H<1$ on $[1/3,13/20]$.
+The two scalar intervals cover $0<d\le7/24$; the cycle argument covers
+$d\ge7/24$. Hence $\E[p(qf_3)^6]\le1$ in the full finite model.

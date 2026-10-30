@@ -1,0 +1,213 @@
+\subsection{The single residual triples with third length at least four}\label{q3:app:triples}
+Within this subsection write
+\[
+ r=Kg,\quad k=K^2g,\quad \ell=K^3g,\quad
+ u=1+r/2,\quad H_c=qf_2h_c .
+\]
+The direction is the same for every parameter value: the unit arm is inward, the two-edge arm is outward throughout, and the length-$c$ arm is inward on its first edge and outward thereafter. The exact identity
+\begin{equation}\label{q3:eq:shortsquare}
+ qf_2=u^2-(g+r/2)^2\le u^2
+\end{equation}
+will be used only as an upper bound on the actual product.
+
+\subsubsection{Two scalar estimates for a cubic expansion}
+Suppose $h_c\le m-r+w$ and $|w|\le M$. Set $Y=(m-r+w)u^2$ and
+\[
+ B(r)=(m-r)^2u^6,\qquad C(r)=[3(m-r)+M]u^6.
+\]
+Since $w^3\le Mw^2$,
+\begin{equation}\label{q3:eq:Yexpansion}
+ h_c^3u^6\le Y^3\le[(m-r)u^2]^3+3B(r)w+C(r)w^2.
+\end{equation}
+If $m=1-\delta$, $0\le\delta\le3/4$ and $|r|\le1/2$, then
+\begin{equation}\label{q3:eq:Aenvelope}
+ (m-r)u^2
+ =1-\delta-\delta r-\frac{3+\delta+r}{4}r^2
+ \le A_0(\delta):=1-\delta+\frac25\delta^2.
+\end{equation}
+The real cube is increasing, so this remains valid when $m-r<0$. The function $A_0$ is positive and decreasing on $[0,3/4]$.
+
+For $1/4\le m\le1$ and $|r|\le1/2$,
+\begin{equation}\label{q3:eq:Buniform}
+ |B(r)-m^2-m(3m-2)r|\le(9/4)r^2 .
+\end{equation}
+Here is a proof over the full rectangle. Put $v=1+r/2$ and
+\[
+ A_1(v)=\frac{v^6-6v+5}{4(v-1)^2},\quad
+ B_1(v)=\frac{v^6-1}{2(v-1)},\quad C_1(v)=v^6.
+\]
+The remainder divided by $r^2$ is $A_1m^2-2B_1m+C_1$, with continuous values at $v=1$. For its lower bound, complete the square in $m$. The condition
+$(C_1+9/4)A_1-B_1^2\ge0$ is equivalent to
+\[
+ (37-24v)v^6+41-54v=(v-1)^2Q_1(v)\ge0,
+\]
+\[
+ Q_1(v)=-24v^5-11v^4+2v^3+15v^2+28v+41 .
+\]
+On $[3/4,5/4]$, $Q_1''<0$, $Q_1'(3/4)=-85/32<0$ and $Q_1(5/4)=831/256>0$.
+For the upper bound use convexity in $m$. At $m=1$, the logarithmic derivative of
+$(1-r)^2(1+r/2)^6/(1+r)$ is
+$-r(5+7r)/[2(1-r)(1+r/2)(1+r)]$, so the remainder is at most zero.
+At $m=1/4$ its exact polynomial is
+\[
+ -17/64+(41/32)r+(655/256)r^2+(523/256)r^3+
+ (865/1024)r^4+(23/128)r^5+r^6/64 .
+\]
+Replacing $r$ by $|r|\le1/2$ bounds it by $21769/16384<3/2$. This proves \eqref{q3:eq:Buniform}.
+
+If $r^2\le d$ and $3m+M\le4-(123/16)d$, then
+\begin{equation}\label{q3:eq:Cuniform}
+ C(r)\le45/8.
+\end{equation}
+For $r\le0$, use $(4-3r)(1+r/2)^6\le4$. For $r\ge0$, bound by
+$c_0(r)=(4-3r-(123/16)r^2)(1+r/2)^6$.
+Its coefficients after the linear term are all negative:
+\[
+\begin{split}
+ c_0(t)={}&4+9t-(27/16)t^2-(389/16)t^3-(2085/64)t^4\\
+ &-(681/32)t^5-(1973/256)t^6-(381/256)t^7-(123/1024)t^8 .
+\end{split}
+\]
+At $t=1/4$, $c_0=376791669/67108864$ and $1<c_0'=2302911/2097152<9/8$.
+The function is concave, increases up to $1/4$, and has $c_0''<-64$ for $t\ge1/4$. Its quadratic tangent therefore bounds it by
+$376791669/67108864+81/8192<45/8$.
+
+\subsubsection{The third length is four}
+Assume $d\le1/4$ and put
+\[
+ m=1-2d,\quad w=-(1-d)g-k-\ell,\quad M_0=1-(27/16)d.
+\]
+Then $h_4=m-r+w$, and skewness gives
+\[
+ \begin{aligned}
+ \E w&=-\delta_{2},\quad \E(rw)=\delta_{3},\\
+ \E w^2&=(1-d)^2d-2(1-d)\delta_{2}+\delta_{3}+\delta_{4}\\
+ &\le(1-d)^2d-(1463/1024-2d)\delta_{2} .
+ \end{aligned}
+\]
+Writing $w=-K[(1-d)\one+r+k]$, the squared reference norm is
+$1-4d+3d^2+\delta_{2}+\delta_{3}\le1-(3511/1024)d+3d^2$.
+Its difference from $M_0^2$ is $(55/1024)d-(39/256)d^2\ge0$, so $|w|\le M_0$.
+
+We need the sharper bound
+\begin{equation}\label{q3:eq:Bfour}
+ |B(r)-m^2-m(3m-2)r|\le(171/80)r^2 .
+\end{equation}
+For $m=1-2d$, the coefficients $b_2,\ldots,b_8$ of $B$ are
+\[
+\begin{array}{c|l}
+2&-5/4-3d+15d^2\\3&-2+5d+10d^2\\
+4&-5/16+(25/4)d+(15/4)d^2\\
+5&13/16+3d+(3/4)d^2\\6&37/64+(11/16)d+d^2/16\\
+7&5/32+d/16\\8&1/64 .
+\end{array}
+\]
+For $d\le1/16$, $|r|\le1/4$ and these coefficients bound the absolute remainder divided by $r^2$ by $19/10+10027/262144<2$.
+For $1/16\le d\le1/4$, $b_4\ge0$. Bounding the terms with $d^{3/2}$ and $d^{5/2}$ using $\sqrt d\le1/2$, all terms except $-b_3\sqrt d$ are at most
+\[
+ P(d)=5/4+(99/32)d-(211/32)d^2+(311/64)d^3+d^4/16.
+\]
+Here $P''<0$, $P'(1/4)=729/1024>0$ and $P(1/4)=27/16$.
+The remaining term $(2-5d-10d^2)\sqrt d$ has derivative in $\sqrt d$ equal to $-50(d-1/10)(d+2/5)$ and maximum $7/(5\sqrt{10})\le9/20$. Their sum is $171/80$, proving \eqref{q3:eq:Bfour}.
+
+The identity $3m+M_0=4-(123/16)d$ permits \eqref{q3:eq:Cuniform}. Also \eqref{q3:eq:Aenvelope} gives $a(d)=1-2d+(8/5)d^2$ for the constant factor. Retaining the exact first two moments of $w$ in \eqref{q3:eq:Yexpansion} yields
+\[
+ \E Y^3\le a(d)^3+(45/8)(1-d)^2d+K(d)\delta_{2},
+\]
+\[
+ K=-3m^2+3\theta[m(3m-2)]_+
+ +(513/80)M_0-(45/8)(1463/1024-2d).
+\]
+For $d\le1/6$ this equals
+$-139479/40960+(3429/1280)d+(21/8)d^2\le-29/12$.
+For $1/6\le d\le1/4$ it is
+$-189399/40960+(15909/1280)d-12d^2$, increasing with value
+$-92847/40960<-2$ at $1/4$. Thus $K\le-2$. Use $\delta_{2}\ge d^2$ to get
+\[
+ \E Y^3\le a(d)^3+(45/8)(1-d)^2d-2d^2.
+\]
+After subtracting one and dividing by $d$, the polynomial is
+\[
+ -3/8+(71/20)d-(863/40)d^2+(672/25)d^3
+ -(384/25)d^4+(512/125)d^5.
+\]
+For $d\le1/4$ it is at most $-3/8+(18/5)d-14d^2\le-201/1400$.
+By \eqref{q3:eq:shortsquare}, $\E H_4^3\le1-(201/1400)d$.
+
+For $d\ge15/64$, $h_4\le2\mu_3=2(1-2d)$ and \eqref{q3:eq:quantshort} give
+\[
+ \E H_4^3\le8(1-2d)^3(1-\alpha_*d)
+ \le(17/16)^3(133/160)=653429/655360<1.
+\]
+The factors decrease and the two parameter ranges overlap, proving the full length-four case.
+
+\subsubsection{The third length is five}
+For $d\le3/16$ put
+\[
+ \delta=3d-\delta_{2},\quad m=1-\delta,\quad a=1-2d,\quad
+ w=-ag+dr-k-\ell-K^4g .
+\]
+Then $h_5=m-r+w$, $m\ge7/16$ and $\gamma d\le\delta\le3d$, where $\gamma=83/32$. Exact moments are
+\[
+ \E w=-\delta_{2}-d^2,\quad \E(rw)=d\delta_{2}+\delta_{3},
+\]
+\[
+ \E w^2=a^2d+(-2+4d+d^2)\delta_{2}+(3-2d)\delta_{3}-\delta_{4}+\delta_{5}
+ \le a^2d-L(d)\delta_{2},
+\]
+\[
+ L(d)=25/32-(51/16)d-d^2\ge19/128.
+\]
+The reference $w=-K[a\one-dg+r+k+\ell]$ has squared norm
+$1-6d+8d^2+d^3+(3-2d)\delta_{2}-\delta_{3}+\delta_{4}\le a^2-L(d)d$, so $|w|\le a$.
+
+Use \eqref{q3:eq:Buniform} with the weaker constant three. The $C$ estimate here is sharper:
+$3m+a\le4-(313/32)d$, whence $C(r)\le27/5$.
+For verification, the positive-$r$ comparison polynomial is
+\[
+\begin{split}
+ \Phi(t)={}&(4-3t-(313/32)t^2)(1+t/2)^6\\
+ ={}&4+9t-(121/32)t^2-(979/32)t^3-(5175/128)t^4\\
+ &-(1697/64)t^5-(4951/512)t^6-(963/512)t^7-(313/2048)t^8 .
+\end{split}
+\]
+For $t\le1/8$ it is at most $41/8$. For $t\ge1/8$, $\Phi''<-39$.
+At $t=1/4$, $\Phi=717976791/134217728<107/20$ and $|\Phi'|=7263027/4194304<7/4$. Thus $\Phi\le107/20+49/1248<27/5$. Negative $r$ gives the bound four as before.
+
+Since $[m(3m-2)]_+\le m^2$ and $m\ge1-3d$, the linear contribution satisfies
+\[
+ 3\E[B(r)w]\le[9a-3(1-\theta-d)(1-3d)^2]\delta_{2}
+                       -3(1-3d)^2d^2.
+\]
+Combining with the second moment and \eqref{q3:eq:Aenvelope},
+\[
+ \E(h_5u^2)^3\le A_0(\gamma d)^3+(27/5)(1-2d)^2d
+          +B_*(d)\delta_{2}-3(1-3d)^2d^2,
+\]
+\[
+ B_*(d)=3+(129/10)d-(4581/160)d^2+27d^3\ge3.
+\]
+Thus $\delta_{2}$ may be replaced by $\theta d$. After subtracting one and dividing by $d$, the first four coefficients are
+$-93/80$, $45549/5120$, $-5138011/163840$, $1572999882/26214400$;
+the last two are $-(12/25)\gamma^5$, $(8/125)\gamma^6$.
+This is at most
+\[
+ -93/80+9d-31d^2+61d^3+20d^5
+ \le-93/80+9d-19d^2\le-183/1280
+\]
+for $d\le3/16$. It follows that $\E H_5^3\le1-(183/1280)d$ in that range.
+For $d\ge3/16$, $h_5\le2\mu_4\le2-(83/16)d$, and
+\begin{equation}\label{q3:eq:largetriple}
+ \E H_5^3\le[2-(83/16)d]^3(1-\alpha_*d)
+ \le(263/256)^3(139/160)<1 .
+\end{equation}
+Both factors decrease, proving the full length-five case.
+
+\subsubsection{A uniform path mean for the large parameter range}
+We record the all-length estimate
+\begin{equation}\label{q3:eq:uniformmean}
+ \mu_n\le1-(83/32)d\qquad(n\ge4).
+\end{equation}
+This is the common path-mean estimate
+\eqref{eq:compact-strong-path-means}, proved from the convolution and
+the initial means in Appendix~\ref{app:local-calculus}.

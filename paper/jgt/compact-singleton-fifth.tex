@@ -1,0 +1,310 @@
+\subsection{Singletons with the fifth boundary weight}\label{loc:S19}
+We prove $\E[q^5f_a^4]=\E[q(qf_a)^4]\le1$ for $a\ge3$.
+Together with Section~\ref{loc:S17} and $q^5p^4=q(pq)^4\le q$, this gives
+\eqref{eq:S}. The auxiliary pair integral has weight $q$ throughout.
+
+\proofpart{Lengths at least six}
+Put $\alpha=19/32$, $\epsilon=\alpha d$, $P=qf_a$ and
+\begin{gather*}
+ T_0=S_a-S_1=KG_{a-1}(K)g,\quad V_0=3g+2r+s,\quad
+ R=T_0-\epsilon V_0,\quad m_0=1-2\alpha d+\alpha d^2/2.
+\end{gather*}
+The actual convolution and the unweighted envelopes of Section~\ref{loc:S7} give
+\begin{gather*}
+ q+f_a\le2m_0+R,\quad P\le(m_0+R/2)^2,\\
+ \|R\|_\infty^2\le U=d+4d^2,\quad
+ V:=\E R^2\le dW,\quad W=11/32+33d/80+3d^2,\\
+ P\le(13/12)^2,\qquad P\le1\quad(d\ge4/19).
+\end{gather*}
+The last bound includes $a=6$, whose separate threshold $16/83$ is smaller.
+The alternating tails give $\beta_{a+1},\beta_{a+2}\ge d-\delta_{2}+\delta_{3}-\delta_{4}$.
+Consequently
+\begin{align*}
+ \E[qT_0]&=d-\beta_{a+1}-\beta_{a+2}
+ \le-d+2\delta_{2}-2\delta_{3}+2\delta_{4}\le-3d/8,\\
+ \E[qV_0]&=-5d+\delta_{2},\qquad
+ \E[qR]\le-3d/8+95d^2/32.
+\end{align*}
+Indeed $-1+2x-2x^2+2x^3$ increases on $[0,\theta]$ and its endpoint
+value is $-6283/16384<-3/8$.
+For $V_q=\E[qR^2]$, Cauchy--Schwarz gives
+$V_q/d\le W+\sqrt{UW}$.
+On $d\le4/19$ we have $3/4\le m_0\le m=1-9d/8$.
+Apply the finite binomial rule \eqref{eq:compact-power-bound} with
+$r=8$ and $r=6$, using $B_r$ as defined in \eqref{eq:compact-binomial}.
+When the mean is nonpositive, discard its linear contribution before
+increasing the center. When $\E[qR]\le\ell d$ and $\ell\ge0$,
+the cubic main term is bounded by $(1-cd)^5(1-bd)$,
+where $c=9/8$, $b=c-3\ell$.
+Its second derivative is $5c(1-cd)^3(4c+2b-6bcd)>0$ on the intervals used.
+For $d\le1/16$, take $M=9/32$, $V_q/d<9/16$, $B_8<75/8$.
+The endpoint certificate $(119/128)^8<3/5$ gives
+\[
+ \E[qP^4]\le(1-9d/8)^8+675d/128\le1-721d/640,
+\]
+since $3/5+675/2048=9519/10240<1$ and the function is convex.
+For the cubic intervals the complete rational inputs are
+\begin{center}\small
+\begin{tabular}{@{}cccccc@{}}\toprule
+$I$&$\bar m$&$M$&$V_q/d$&$B_6$&$\ell$\\\midrule
+$[1/16,1/8]$&$15/16$&$7/16$&$3/4$&$4$&$0$\\
+$[1/8,5/32]$&$7/8$&$17/32$&$7/8$&$10/3$&$3/32$\\
+$[5/32,3/16]$&$5/6$&$23/40$&$19/20$&$3$&$3/16$\\
+$[3/16,4/19]$&$4/5$&$5/8$&$26/25$&$21/8$&$1/4$\\\bottomrule
+\end{tabular}
+\end{center}
+The endpoint upper bounds for the convex main term plus
+$dB_6(V_q/d)$ are, in row order,
+\begin{gather*}
+ (17/20,19/24),\quad(1247/1536,6167/7680),\\
+ (1037/1280,3197/3840),\quad(7889/9600,1169/1425).
+\end{gather*}
+Thus $\E[qP^3]\le17/20$ and
+$\E[qP^4]\le(169/144)(17/20)=2873/2880<1$ there.
+For $d\ge4/19$ use $P\le1$.
+
+\proofpart{Length four}
+For $P_4=qf_4$, $R_4=r+s+K^3g-dg$ and the exact center $m=1-d$,
+Section~\ref{loc:S8} supplies the unweighted bounds, while the actual mean is
+\begin{gather*}
+ q+f_4=2m+R_4,\quad \E[qR_4]=-d+2\delta_{2}+d^2\le-3d/16+d^2,\\
+ \|R_4\|_\infty^2\le U_4=d+77d^2/32,\quad
+ \E R_4^2\le dW_4,\quad W_4=10101/32768+13d/16+d^2,\\
+ P_4\le(13/12)^2.
+\end{gather*}
+For any $|R|\le M$, $V=\E R^2$, centering $R^2$ proves
+\begin{equation}\label{eq:compact-centered-variance}
+ |\E[gR^2]|\le\sqrt{dV(M^2-V)}.
+\end{equation}
+The resulting $V+\sqrt{dV(M^2-V)}$ increases for $V\le M^2/2$.
+Here this condition follows from
+$1-2(10101/32768)+25d/32-2d^2>0$. Hence
+\[
+ \E[qR_4^2]/d\le W_4+\sqrt{dW_4V_4},\qquad
+ V_4=1-10101/32768+51d/32-d^2.
+\]
+Both polynomials increase on $[0,1/3]$.
+For $d\le1/16$, the same $M,V_q/d,B_8$ bounds as above, with
+$(15/16)^8<3/5$, give $\E[qP_4^4]\le1-721d/640$.
+For the other intervals use the following data for $B_6$ and the main
+function $(1-d)^5(1-bd)$. Its convexity follows from $4+2b-6bd>0$.
+In the first row the negative mean is retained at the exact center;
+the remaining rows use nonnegative mean upper bounds.
+\begin{center}\small
+\begin{tabular}{@{}cccccc@{}}\toprule
+$I$&$b$&$\bar m$&$M$&$V_q/d$&$B_6$\\\midrule
+$[1/16,1/8]$&$19/16$&$15/16$&$13/32$&$7/10$&$4$\\
+$[1/8,3/16]$&$1$&$7/8$&$21/40$&$7/8$&$10/3$\\
+$[3/16,7/32]$&$29/32$&$13/16$&$7/12$&$1$&$27/10$\\
+$[7/32,1/4]$&$13/16$&$25/32$&$41/64$&$17/16$&$99/40$\\
+$[1/4,9/32]$&$23/32$&$3/4$&$11/16$&$21/20$&$9/4$\\
+$[9/32,5/16]$&$5/8$&$23/32$&$3/4$&$8/7$&$65/32$\\
+$[5/16,1/3]$&$9/16$&$11/16$&$7/9$&$6/5$&$29/16$\\\bottomrule
+\end{tabular}
+\end{center}
+Its endpoint upper bounds, after adding each row's remainder, are
+\begin{gather*}
+ (1493/1760,2537/3200),\quad(391/480,271/320),\\
+ (2061/2560,8511/10240),\quad(16833/20480,277389/327680),\\
+ (25515/131072+189/320,4219/5120),\quad
+ (7327/8960,2473/2912),\quad(671/832,8087/9720).
+\end{gather*}
+All are at most $17/20$. The pointwise cap converts this cubic bound to
+$\E[qP_4^4]\le2873/2880<1$.
+
+\proofpart{Length five}
+Set $P_5=qf_5$, $R_5=r+s+K^3g+K^4g-d(2g+r)$ and
+$m_0=1-(3d-\delta_{2})/2\le m=1-5d/4$. The data are
+\begin{gather*}
+ q+f_5=2m_0+R_5,\quad P_5\le(m_0+R_5/2)^2,\quad P_5\le(16/15)^2,\\
+ \|R_5\|_\infty^2\le U_5=d+5d^2,\quad
+ \E R_5^2\le dW_5,\quad W_5=1/4+d/2+9d^2/2,\\
+ \E[qR_5]=-d+2\delta_{2}-\delta_{3}+3d^2\le-11d/32+3d^2.
+\end{gather*}
+The last step uses the increasing polynomial $-1+2x-x^2$ and
+$(1-\theta)^2>11/32$. Since $1+5d-2W_5=1/2+4d-9d^2>0$,
+\[
+ \E[qR_5^2]/d\le W_5+\sqrt{dW_5V_5},\qquad V_5=3/4+9d/2-9d^2/2.
+\]
+For $d\le1/16$, $M=3/10$, $V_q/d<1/2$, $B_8(1,3/10)<10$ and
+$(59/64)^8<3/5$ give $\E[qP_5^4]\le1-7d/5$ by convexity.
+For the subsequent cubic estimates, the main functions in the first row,
+second row, and remaining rows respectively are
+\begin{gather*}
+ (1-5d/4)^5(1-37d/32),\qquad (1-5d/4)^5(1-19d/32),\\
+ H=(1-5d/4)^5(1-73d/32+9d^2).
+\end{gather*}
+All mean upper bounds here are nonnegative, so the center substitution is
+valid. The first two functions are convex by the preceding formula.
+For $H$, the bracket in $H''/(1-5d/4)^3$ is
+$4977/64-96495d/256+4725d^2/8$; it exceeds
+$77-378d+590d^2>0$, whose discriminant is $-38836$.
+\begin{center}\small
+\begin{tabular}{@{}ccccc@{}}\toprule
+$I$&$\bar m$&$M$&$V_q/d$&$B_6$\\\midrule
+$[1/16,1/8]$&$12/13$&$11/24$&$27/40$&$4$\\
+$[1/8,3/16]$&$17/20$&$5/8$&$24/25$&$13/4$\\
+$[3/16,7/32]$&$10/13$&$11/16$&$65/64$&$49/20$\\
+$[7/32,1/4]$&$3/4$&$3/4$&$75/64$&$75/32$\\
+$[1/4,9/32]$&$11/16$&$5/6$&$43/32$&$31/16$\\
+$[9/32,19/64]$&$13/20$&$55/64$&$10/7$&$27/16$\\
+$[19/64,5/16]$&$19/30$&$9/10$&$61/40$&$8/5$\\
+$[5/16,31/96]$&$61/100$&$23/25$&$8/5$&$29/20$\\
+$[31/96,1/3]$&$3/5$&$19/20$&$317/192$&$17/12$\\\bottomrule
+\end{tabular}
+\end{center}
+The endpoint upper bounds for the main functions plus their remainders are
+\begin{gather*}
+ (3023/3840,14577/20480),\quad(81411/102400,7891/9600),\\
+ (8645/12288,6367/8192),\quad(54639/65536,89381/106496),\\
+ (21393/26624,14189/16384),\quad(5819/7168,237197/286720),\\
+ (171207/204800,15455/17920),\quad(14783/17920,8115/9600),\quad
+ (7/8,149719/172800).
+\end{gather*}
+They are at most $7/8$, proving $\E[qP_5^4]\le(256/225)(7/8)=224/225<1$.
+Every interval table above specifies a finite binomial sum, an increasing
+variance envelope, and both rational endpoint bounds. Convexity extends these bounds throughout each interval.
+
+\proofpart{Length three: Hermite reduction}
+For $P=qf_3$, $R=r+s$ and $m=1-d/2$, the exact data are
+\[
+ P\le(m+R/2)^2,\quad \E[qR]=-d+\delta_{2},\quad
+ \E R^2=\delta_{2}+\delta_{3},\quad \|R\|_\infty^2\le d+\delta_{2}.
+\]
+Writing $a=\delta_{2}/d\le\theta$, $c_0=45/32$, the centered variance bound gives
+\[
+ \E[qR^2]\le c_0ad+d^{3/2}\sqrt{c_0a(1-\theta a)}.
+\]
+Here $c_0a/(1+a)\le\theta<1/2$, and both terms increase with $a$.
+Put
+\begin{gather*}
+ t=\sqrt{45d/32},\quad k=16/45,\quad\kappa=19/45,\quad
+ b=13/32,\quad c=29/70,\quad v=b+ct,\\
+ D=1+b+(2\kappa+c)t,\quad s_0=-t(v+\kappa t)/(1+\kappa t),\\
+ w=(v-\kappa^2t^2)/D,\quad U=1+t/2-kt^2,\quad
+ W=1-kt^2-t(v+\kappa t)/[2(1+\kappa t)].
+\end{gather*}
+On $[0,11/16]$, $v<1$, $v-\kappa^2t^2>0$, $-t\le s_0\le0$,
+$0<w<1$, and $1-kt^2-t/2\ge703/1440>0$.
+Our moment bounds are $|R|\le t$, $\E[qR]\le-\kappa t^2$,
+$\E[qR^2]\le t^2v$, using $\sqrt{247/1440}<29/70$.
+For $\phi(x)=(1-kt^2+x/2)^8$, the quadratic Hermite interpolant at
+the double node $s_0$ and upper node $t$ majorizes $\phi$ on $[-t,t]$:
+the remainder has the sign of $(x-s_0)^2(x-t)$ since $\phi'''\ge0$.
+Its quadratic and linear coefficients are positive
+($\beta=\phi'(s_0)-2\alpha s_0>0$).
+The two-node law of masses $w,1-w$ has exactly the substituted moments.
+Thus
+\[
+ \E[qP^4]\le H(t):=wU^8+(1-w)W^8.
+\]
+The actual range $t\le\sqrt{15/32}$ lies in $[0,11/16]$.
+
+\proofpart{Low-interval coefficient certificate}
+For $t\le11/20$, Hermite interpolation at $-2t/3$ (double) and $t$ gives
+$H\le Q$, where
+\begin{gather*}
+ Q=\omega\phi(t)+(1-\omega)\phi(-2t/3)+h\phi'(-2t/3),\\
+ \omega=49/160-281t/5250,\qquad h=5t/32-1049t^2/3150.
+\end{gather*}
+This is an expectation of an upper interpolant, so $h$ need not be positive.
+Set $z=1-kt^2$ and
+\[
+ A_j=49/160+(222-75j)(-2/3)^j/320,\quad
+ B_j=-562/10500+(562+5245j)(-2/3)^j/10500.
+\]
+An exact generator retaining every coefficient is
+\[
+ Q=\sum_{j=0}^8\binom8j2^{-j}z^{8-j}t^j(A_j+B_jt)
+   =1+\sum_{j=2}^{16}C_jt^j.
+\]
+Its rational coefficient upper bounds are
+\begin{center}\small
+\begin{tabular}{@{}c*{7}{c}@{}}\toprule
+$j$&2&3&4&5&6&7&8\\
+$C_j\le$&$-811/480$&$7291/1440$&$-197/250$&$-196/25$&$13/5$&$137/25$&$-9/5$\\\midrule
+$j$&9&10&11&12&13&14&15\quad16\\
+$C_j\le$&$-11/5$&$3/5$&$29/50$&$0$&$0$&$0$&$3/500\quad3/2000$\\\bottomrule
+\end{tabular}
+\end{center}
+For example $C_4=-81709/103680$, $C_5=-6102127/777600$,
+$C_6=40432717/15552000$; the same finite generator supplies every other
+rational comparison. Therefore $Q\le1+t^2S(t)$, with
+\begin{align*}
+ S={}&-811/480+7291t/1440-197t^2/250-196t^3/25\\
+ &+13t^4/5+137t^5/25-9t^6/5-11t^7/5\\
+ &+3t^8/5+29t^9/50+3t^{13}/500+3t^{14}/2000.
+\end{align*}
+Using $t^2\le121/400$ gives $S'\ge P_0$ and
+\begin{gather*}
+ P_0=7291/1440-197t/125-588t^2/25+7133t^3/1000+45483t^4/2000,\\
+ P_0'\le-197/125-1550667t/200000<0,\qquad P_0(11/20)>349/1000>1/3.
+\end{gather*}
+Rational substitution gives $S(11/20)<-944/100000<-1/200$;
+its last two positive terms sum to less than $1/100000$.
+Consequently $H\le1-t^2/200$ on the whole low interval.
+
+\proofpart{Curvature and a critical-point bracket}
+Write $H=A_0+B_0$, with $A_0=wU^8$, $B_0=(1-w)W^8$.
+Set $A=45/32$, $B=793/630$, $e=6703/10080$, $h=527/630$.
+The exact derivatives are
+\begin{align*}
+ w'&=[c-2\kappa b-2\kappa^2At-\kappa^2Bt^2]/D^2,&w''&=-2e^2/D^3,\\
+ U'&=1/2-2kt,&U''&=-32/45,\\
+ W'&=-2kt-[b+2ht+\kappa ht^2]/[2(1+\kappa t)^2],&
+ W''&=-32/45-e/(1+\kappa t)^3.
+\end{align*}
+On $[11/20,5/8]$ the rational endpoint bounds are
+\begin{gather*}
+ 27/100\le w\le7/25,\quad w'\le-3/50,\quad-1/10\le w''\le-1/12,\\
+ 7/6\le U\le47/40,\quad1/18\le U'\le11/100,\\
+ 5/8\le W\le7/10,\quad |W'|\ge17/20,\quad |W''|\le11/10,\quad W''\le-32/45,
+\end{gather*}
+and $-W'(11/20)<7/8$.
+Substitution in the exact second derivatives gives
+\begin{align*}
+ A_0''&=w''U^8+16w'U^7U'+w[56U^6(U')^2+8U^7U'']\le-71/16,\\
+ B_0''&=-w''W^8-16w'W^7W'+(1-w)[56W^6(W')^2+8W^7W'']\le889/250.
+\end{align*}
+For the latter bound, $W^6(W')^2$ decreases because
+$3(W')^2+WW''\ge559/400>0$ and $W'<0$.
+Thus $H''<-4/5$. At $t_0=3/5$,
+\begin{gather*}
+ U=293/250,\ U'=11/150,\ w=744211/2723475,\ W=3445933/5264000,\\
+ w'=-19710732160/296692643025,\qquad W'=-32/75-1936883/3958528.
+\end{gather*}
+These give $U^8<89/25$, $W^8<27/800$, $273/1000\le w\le2733/10000$,
+$-67/1000\le w'\le-33/500$, and $-23/25\le W'\le-9/10$.
+Using also $3<U^7<31/10$ and $1/20<W^7<13/250$ gives
+$6/25<A_0'<27/100$ and $1/4<-B_0'<7/25$ there.
+Hence $H(t_0)<399/400$, $|H'(t_0)|\le1/25$, and
+\[
+ H(t)\le399/400+|t-t_0|/25-2(t-t_0)^2/5\le1997/2000<1
+\]
+on the middle interval.
+
+On $[5/8,11/16]$, $w',w''<0$, $U'>0$, and
+$56(U')^2+8UU''\le56/324-(256/45)(7/6)<0$, so $A_0''<0$.
+Its unique maximum lies in $[81/125,13/20]$.
+Indeed at $13/20$,
+\[
+ w=6806449/25224975,\quad -w'=39948064688/565599434445,
+\]
+giving $269/1000<w<27/100$ and $7/100<-w'<71/1000$.
+The derivative signs follow from
+$(-w')/w<71/269<4/15<8U'/U$ at $81/125$, and
+$(-w')/w>7/27>2720/10573=8U'/U$ at $13/20$.
+Since $w$ decreases and $U$ increases,
+\[
+ A_0\le w(81/125)U(13/20)^8<(27/100)(98/27)=49/50.
+\]
+The two certificates are
+\[
+ w(81/125)<27/100\quad\text{and}\quad(10573/9000)^8<98/27.
+\]
+The first is equivalently $-22661/3500000<0$.
+Finally $-w'\le1/10$, $w\le7/25$, $W\le1$, $W'\le-4/9$ imply
+$B_0'/B_0\le5/36-32/9<0$. At $5/8$, $W<19/30$, $w\ge27/100$ and
+$(19/30)^8<2/75$, so $B_0<73/3750<1/50$.
+Thus $H<1$ also on the high interval. This completes the three closed
+intervals, the length-three case, and the singleton supply.

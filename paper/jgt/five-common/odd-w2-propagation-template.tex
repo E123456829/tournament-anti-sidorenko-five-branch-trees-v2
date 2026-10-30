@@ -1,0 +1,82 @@
+% Insert once after odd-q-packet-template.tex and before the local modules.
+\subsection{Finite rows with a two-edge root arm}
+\label{sec:odd-common:w2}
+
+\begin{lemma}[Continuation from an anchored first row]
+\label{lem:odd-common:anchored-continuation}
+Let \(s\ge1\), and suppose an actual terminal has the positive upper bound
+\(TF\le e^\alpha[\bar f_s+\mu BR+D]\), where \(R\) is real.
+Put \(D_i=\E B^iR\). For every integer \(L\ge1\),
+\begin{equation}\label{eq:odd-common:anchored-continuation}
+ 0<e^{-\alpha}T^LF\le
+ \bar f_{s+L-1}+\mu B^LR+D\bar f_{L-1}
+       +\mu\sum_{i=1}^{L-1}D_i\bar f_{L-1-i}.
+\end{equation}
+The constants \(\alpha,\mu,D\) are those of the proved first row.
+\end{lemma}
+\begin{proof}
+Apply \(T^{L-1}\) to that row and use
+\eqref{eq:oc:finite-duhamel} with the vector \(BR\).
+
+\end{proof}
+
+For the actual two-edge arm \(W_2=1-u-Bu\), any positive upper bound
+\(T^LF\le e^{-\Gamma}[Cq+BV+c]\) gives
+\begin{equation}\label{eq:odd-common:w2-majorant}
+ \log(W_2T^LF)\le-\Gamma+C+c-1
+                   +B[V-u+(C-1)\one].
+\end{equation}
+This follows by adding \(\log W_2\le-u-Bu\) to
+\(\log(Cq+BV+c)\le Cq+BV+c-1\).
+The complete bracket, rather than each summand, is required to be positive.
+
+\begin{lemma}[The ordinary terminal at a \(W_2\) root]
+\label{lem:odd-common:w2}
+Suppose \(F>0\), \(F\le e^{R-\Gamma}\), and the actual remainder
+satisfies \(e^R\le1+R+(c_T/2)R^2\).
+Write \(\sigma,D_i,\delta,\epsilon\) as in
+\eqref{eq:oc:fourth-data}, with \(c=c_T\).
+Then \(\log(W_2T^LF)\le a+B(V_0+c_0\one)\), where
+\begin{equation}\label{eq:odd-common:w2-table}
+\begin{array}{c|c|c|c}
+ L&a&V_0&c_0\\ \hline
+ 1&-\Gamma+\delta&R-u&0\\
+ 2&-\Gamma+\epsilon&BR&\delta\\
+ 3&-\Gamma+\epsilon-d+D_2&(B+\delta)u+B^2R&\epsilon\\
+ L\ge4&-\Gamma+2\delta_++2(D_1)_+-2hd
+          &(G_{L-1}-1)u+B^{L-1}R&-hd
+\end{array}
+\end{equation}
+The last row assumes \(h\ge0\) and
+\(\gamma_j=\beta_j-D_{j-1}\ge hd\) for every \(j\ge3\).
+With \(n=L-1\), its two means are
+\begin{equation}\label{eq:odd-common:w2-long-means}
+ \E BV_0=d-\gamma_{L+1}\le(1-h)d,
+ \qquad \E V_0=-\gamma_{n+1}\le-hd.
+\end{equation}
+At a unit-length row whose actual arm is \(f_2\), replace only
+\(R-u\) by \(R+u\).
+If the actual root-pair product has envelope
+\(P\le e^{-\Gamma_r+BV_r}\), including its full constant,
+\begin{equation}\label{eq:odd-common:w2-complete}
+\begin{gathered}
+ V=V_0+c_0\one+V_r,\qquad S=a-\Gamma_r+\E BV,\\
+ \log\E[(PW_2T^LF)^4]\le4S+\tfrac{17}{4}\|V\|^2.
+\end{gathered}
+\end{equation}
+For the unit \(f_2\) exception the same conclusion uses that actual arm.
+\end{lemma}
+\begin{proof}
+The finite positive majorant is \eqref{eq:oc:fourth-duhamel}; its
+derivation needs only the displayed remainder bound and
+\(T(R^2)\le2\sigma\).
+Expand its first three lengths and add \(\log W_2\le-u-Bu\).
+For \(L\ge4\), use \eqref{eq:odd-common:long-parameters}; adding
+\(\log W_2\) subtracts one \(u\) from its primitive and gives
+the last row of \eqref{eq:odd-common:w2-table}.
+The signed means follow from \eqref{eq:odd-common:coordinates}.
+The unit exception uses \(\log f_2\le-u+Bu\) instead.
+Finally add the actual pair envelope and apply
+Lemma~\ref{lem:odd-common:fourth} to the whole vector \(V\).
+There is no independent unit-arm curvature payment at this root.
+\end{proof}

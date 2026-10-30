@@ -1,0 +1,210 @@
+\subsection{The exceptional terminal pair (3,4) at a root (1,2,v)}\label{proof:Q5-C170}
+% Common local aliases for the former repeated C168.1--C168.3 prefaces.
+Use the original-measure calculus of
+Section~\ref{sec:odd-common-calculus} and the complete root-pair
+certificates of Section~\ref{sec:odd-common:fourth}.
+For a root \((1,2,v)\), write \(m=v-2\), \(G_m=E+zD\),
+\(\beta=\beta_{v-1}=\int D\,d\nu\),
+\(\beta_v=\int E\,d\nu\),
+\(P_+=h_2f_v\), \(P_-=\bar f_2W_v\),
+\(\ell_+=\ell_a\), and \(\ell_-=\ell_s\).
+The two vectors, their signed means and full constants are
+\eqref{eq:odd-common:root-standard}--\eqref{eq:odd-common:root-losses}.
+At \(v=3\), \((E,D)=(1,0)\) and \(\beta=0\).
+All subsequent direction choices and packet estimates retain their
+stated integer and parameter ranges.
+\paragraph{C170.0 The actual terminal (3, 4)}
+
+% Replace a pure model-definition block only; keep local root/terminal data.
+Use the original finite-space model and arm messages of
+Section~\ref{sec:odd-common-calculus}.
+When the original \(K\)-notation is used, \(K=-B\) and
+\(g=K\one=-u\); in either notation
+\(\delta_j=\|B^j\one\|_2^2=\|K^j\one\|_2^2\).
+All means, norms, adjoints and spectral integrals use the same
+original probability measure.
+The genuine arms are \(f_n,\allowbreak \allowbreak  \bar f_n,\allowbreak \allowbreak  h_n,\allowbreak \allowbreak  W_n\). The internal residual is \((1,\allowbreak \allowbreak  2,\allowbreak \allowbreak  v)\), \(v\ge3\), and the terminal residual is \((3,\allowbreak \allowbreak  4)\). Original positive \(L,\allowbreak \allowbreak  M\) are independent, and all equal pairs, multiplicities and subdivisions remain.
+
+Fix the following actual directions using only the original integers:
+\[
+F=h_3f_4,\qquad
+P_{v,L}=\begin{cases}h_2f_v,&L=2,\\ \bar f_2W_v,&L=1\text{ or }L\ge 3,\end{cases}
+\qquad H=pP_{v,L}T^LF.
+\]
+All inner edges point from terminal to root, and outer edges from root to receiver; the root unit arm supplies its original p.
+
+For every listed direction and legal original host,
+\[
+\boxed{\begin{gathered}
+EH^4\le e^{-13d/2},\\
+I_q(T^MH)^3\le e^{-2d}\\
+(M\ge 1),
+\end{gathered}}\tag{C170.T178.1}
+\]
+Use \(I_q(X)=E[q^{-1/3}|X|^{8/3}]\). Restore genuine decorations and reversal by the common positivity argument.
+
+
+\paragraph{C170.3 The same terminal polynomial and finite propagation}
+
+The actual expansions are
+\[
+h_3=1-d+u-Bu+B^2u,
+\quad f_4=1-2d-(1-d)u+Bu-B^2u+B^3u.
+\]
+Their sum is \(2-3d+R\), with \(R=du+B^3u\), so
+\[
+F\le e^{-3d+R}.                                      \tag{C170.T178.8}
+\]
+The row bound gives \(|R|\le d+\sqrt{\delta_3}<1/3+1/4=7/12<3/5\). For \(0\le t\le3/5\), the Taylor-tail ratio is at most \(t/5\), yielding
+\[
+\frac{e^t-1-t}{t^2}\le\frac12+\frac t6+
+\frac{t^2}{24(1-t/5)}\le543/880<5/8.
+\]
+For negative \(t\), the integral remainder is at most \(t^2/2\). Hence \(e^R\le1+R+5R^2/8\) pointwise.
+
+Put \(\sigma=ER^2\), \(D_j=EB^jR\), \(\delta=D_0+5\sigma/4\), \(\epsilon=\delta+D_1\). The exact same-polynomial data are
+\[
+\begin{gathered}
+\sigma=d^3+\delta_4,\quad D_0=\delta_2,\quad D_1=-d^2,\\
+\quad D_2=-\delta_3,\quad D_3=d\delta_2,\\
+\quad \delta=\delta_2+(5/4)(d^3+\delta_4),\quad \epsilon=\delta-d^2.
+\end{gathered}\tag{C170.T178.9}
+\]
+Using \(\theta^3<27/400\), \(d^2\le1/9\),
+\[
+\begin{gathered}
+\sigma<(643/3600)d<(9/50)d,\quad\\
+0\le\epsilon\le\delta<(101/160)d,\quad\delta^2<(2/5)d^2.
+\end{gathered}\tag{C170.T178.10}
+\]
+The nonnegative \(\epsilon\) follows from \(\delta_2\ge d^2\); the squared-delta comparison is \(10201<10240\).
+
+The first positive propagation, with kernel bounded by two, is \(TF\le e^{-3d}(q+\delta+BR)\). Iterating the actual \(T\) gives
+\[
+\begin{gathered}
+T^LF\le e^{-3d}Z_L,\quad\\
+Z_L=\bar f_L+B^LR+\delta \bar f_{L-1}+\sum_{j=1}^{L-1}D_j\bar f_{L-1-j}>0.
+\end{gathered}\tag{C170.T178.11}
+\]
+The right side dominates the actual positive message. Every step is finite original propagation.
+
+\paragraph{C170.4 The unit connector}
+
+Use the standard pair at \(L=1.\) The full parameters in the curvature formula are
+\[
+\begin{gathered}
+Q=[d+xC+z(-x-E)]u,\quad c=\beta,\\
+\quad S=-3d+\delta-d^2-\ell_s.
+\end{gathered}\tag{C170.T178.12}
+\]
+For every \(m\ge1\), \(0\le C,\allowbreak \allowbreak  E\le1\), hence
+\[
+\|Q\|^2\le d^3+(1+2d)\delta_2+3\delta_3+\delta_4<(7/5)d.
+\]
+The final coefficient is at most \(1/9+25/36+1/2+1/14=347/252<7/5\), using \(\theta<5/12\), \(\theta^2<1/6\), \(\theta^3<1/14\). Also \(S\le-539d/160-d^2\), \(c^2\le d^2\). Retain the common negative quadratic term to obtain
+\[
+\begin{gathered}
+\log EH^4\le-(539/40)d-4d^2+(119/20)d+(10/3)d^2\\
+\le-(301/40)d<-13d/2.
+\end{gathered}\tag{C170.T178.13}
+\]
+The \(v=3,\allowbreak \allowbreak  G_1\) and \(v=4,\allowbreak \allowbreak  G_2\) boundaries are both included.
+
+\paragraph{C170.5 Inner length two}
+
+Use the complete alternative pair. The exact second row is \(Z_2=q+\epsilon+B(\delta\one+u+BR)\), giving
+\[
+\begin{gathered}
+Q=[1-xC+x^2+z(d-E)]u,\quad c=\delta+\beta,\\
+\quad S=-4d+\delta-d^2-\delta_3-\ell_a.
+\end{gathered}\tag{C170.T178.14}
+\]
+For \(v\ge4\), \(0<1-xC+x^2\le1-x+2x^2\le1\). Since \(E\ge1-x\ge19/32>d\), \(|d-E|\le1-d\), so \(\|Q\|^2\le d+(1-d)^2\delta_2\le45d/32<9d/5\). At \(v=3\), \(E=1,\allowbreak \allowbreak  C=0\), and the exact squared norm \(d+2\delta_3+\delta_5+(1-d)^2\delta_2\) is at most
+\[
+(1+\theta+2\theta^2+\theta^4)d<(1+5/12+1/3+1/36)d=(16/9)d<9d/5.
+\]
+This separately includes the genuine G1 case and keeps the actual G2 coordinates.
+
+For every \(v\), \(0\le c<261d/160\), so
+\[
+(10/3)c^2<(7569/2560)d<3d,
+\]
+Here \(d^2\le d/3\); the final margin is \(111/2560\). The root and terminal scalar bounds give \(S\le-689d/160\). Combining all terms,
+\[
+\log EH^4<-(689/40)d+(153/20)d+3d
+=-(263/40)d<-13d/2.
+\tag{C170.T178.15}
+\]
+
+\paragraph{C170.6 Inner length three}
+
+Return to the standard pair. Finite propagation gives the complete parameters
+\[
+Q=[1+xC-dx+\delta+z(1-E+x^2)]u,\quad c=\beta+\epsilon,
+\]
+\[
+S=-5d+\delta-d^2-\delta_3+d\delta_2-\delta d-\ell_s.
+\tag{C170.T178.16}
+\]
+Since \(\delta_2<d\), \(-d^2+d\delta_2\le0\), and the other favorable negative terms may be dropped. Hence \(S\le-859d/160\). Remove only \(\delta u\) to form \(Q_0\). For every \(m\ge1\), \(0<1+xC-dx\le1+x\), \(0\le1-E+x^2\le x+x^2\), giving
+\[
+\|Q_0\|^2\le(1+\theta)^2(1+\theta^3)d<17d/8.
+\]
+The last comparison has cross-product difference \(3992344>0\), namely \(8\cdot70804125<17\cdot33554432\). Retain the full square and cross term of \(\delta u\):
+\[
+\|Q\|^2<17d/8+(9/5)d^2+(2/5)d^3
+\le(997/360)d<14d/5.
+\tag{C170.T178.17}
+\]
+Indeed \(2\delta(1+\theta)d<9d^2/5\), \(\delta^2d<2d^3/5\); the final margin is \(11/360\). Since \(0\le c\le d+\delta\), its curvature cost is still less than \(3d\). Therefore
+\[
+\log EH^4<-(859/40)d+(119/10)d+3d
+=-(263/40)d<-13d/2.
+\tag{C170.T178.18}
+\]
+All terms associated with the positive epsilon remain paid.
+
+\paragraph{C170.7 Every finite longer connector}\label{part:C170.7}
+
+Use the complete finite-difference proof in Lemma~\ref{lem:odd-common:joint-paths}. It proves, for all \(n\ge3,\allowbreak \allowbreak  m\ge1\),
+\[
+|G_n(z)-zG_m(z)|\le6/5.                              \tag{C170.T178.19}
+\]
+
+
+For the actual present R, the full moment formulas are
+\[
+D_{2k}=(-1)^k \delta_{k+2}\ (k\ge 0),\qquad
+D_{2k-1}=(-1)^k d \delta_k\ (k\ge 1).
+\]
+Put \(\gamma_j=\beta_j-D_{j-1}\). Then \(\gamma_3=d+\delta_3\ge d\), \(\gamma_4=d-d\delta_2\ge d/2\). For every \(j\ge5\), a nonzero \(D_{j-1}\) is \(\delta_k\), \(k\ge4\), or \(d\delta_k\), \(k\ge3\); its absolute value is at most \(\theta^3d<d/14\), using \(d\le1/3<\theta\). Thus \(\gamma_j\ge\kappa d-d/14=117d/224>d/2\) for every finite \(j\ge3\).
+
+For \(L\ge4\), put \(n=L-1\ge3\) and group the exact positive convolution:
+\[
+Z_L=S_L+B^LR+\delta \bar f_{L-1}+D_1\bar f_{L-2}
+-\sum_{j=3}^L\gamma_j \bar f_{L-j}.
+\]
+Retain \(\gamma_L\bar f_0\), \(\gamma_{L-1}\bar f_1\), use \(\delta\ge0\), \(\bar f_{L-1}\le2\), and drop the negative \(D_1\) term and other nonnegative subtracted terms:
+\[
+Z_L\le1+u+2\delta-d+B[G_n(B)u+B^nR-(d/2)1].
+\]
+This remains a positive upper bound; the exact vector \(B\)-mean is \(-\gamma_{L+1}\le-d/2\). Adding the actual \(p\) and standard root pair gives
+\[
+\begin{gathered}
+Q=(G_n-BG_m)u+B^nR,\quad c=\beta-d/2,\\
+\quad S\le-9d/2+2\delta-\ell_s\le-339d/80.
+\end{gathered}\tag{C170.T178.20}
+\]
+At \(L=4\), the retained terms are exactly \(\gamma_4\bar f_0\) and \(\gamma_3\bar f_1\).
+
+For n at least three the same-polynomial variance bound gives
+\[
+\|B^nR\|^2\le\theta^3\sigma<(243/20000)d<(9/625)d.
+\]
+Hence \(\|Q\|<(6/5+3/25)\sqrt d=33\sqrt d/25<4\sqrt d/3\). Also \(|c|\le d/2\), with curvature cost at most \(5d^2/6\le5d/18\). Therefore
+\[
+\log EH^4<-(339/20)d+(68/9)d+(5/18)d
+=-(547/60)d<-13d/2.
+\tag{C170.T178.21}
+\]
+Together with the three short rows, this covers every positive inner length.

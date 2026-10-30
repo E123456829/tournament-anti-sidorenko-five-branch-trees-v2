@@ -1,0 +1,360 @@
+\subsection{Higher even lists: both ordinary moments and outer outlets}\label{proof:R2-C039}
+
+\paragraph{R39.1 Original problem and complete new local statements}
+
+The original \(Q_{5}\) problem asks, for every finite original tree \(U\) with at most five vertices of original degree at least three, for a direction of every original edge fixed from \(U\) before any host, such that every finite original probability \(\mu\) and real skew pointwise \(\lvert K\rvert \le 1\) satisfy \(Z_D=E_\mu^V \prod_{v\to w}(1+K(x_v,\allowbreak \allowbreak x_w))\le 1\). Every original arm, repetition, subdivision, four independent positive core lengths, arbitrary correlated original joint-label law and noninjective tournament map remains. We prove the following families.
+
+Use on the same original \(L=2(\mu)\)
+
+\fitdisplay{
+\begin{gathered}
+B=-K,\quad u=B\one,\quad T=J+B,\quad A=J-B=T^*,\quad\\
+p=1-u,\quad q=1+u,\quad \delta_i=\|B^i\one\|^2,\quad d=\delta_1,
+\end{gathered}
+}{R39.L80}
+
+\fitdisplay{
+\begin{gathered}
+f_n=A^n\one,\quad \bar f_n=T^n\one,\quad h_n=Tf_{n-1},\quad W_n=A\bar f_{n-1},\\
+\qquad I_q(U)=E[q^{-\frac{1}{3}}\lvert U\rvert ^{8/3}].
+\end{gathered}
+}{R39.L84}
+
+After maximal equal-arm pairing, let the terminal residual be
+\(4\le a_1<b_1<\cdots<a_j<b_j\), \(j\ge1\), with actual message
+\(F=\prod_i h_{a_i}f_{b_i}\). At the receiver there is an existing
+arm of length \(m\ge3\) and an optional negative post block
+\(P=\prod_iW_{u_i}\bar f_{v_i}\), where
+\(4\le u_1<v_1<\cdots<u_k<v_k\) and \(k\ge0\).
+The two length masks and $m$ may overlap. Let \(E_t,E_r\) be the equal-pair products at
+the terminal and receiver.
+
+For every original inner \(L\ge 1\) choose exactly
+
+\fitdisplay{
+H_D=E_rP\begin{cases}
+W_m T^L(E_tF),&m\le L,\\
+\bar f_m A T^{L-1}(E_tF),&m>L.
+\end{cases}
+}{R39.1.1}
+
+In an \(A T^{L-1}\) row, only the root-adjacent connector edge is A; all remaining \(L-1\) edges are \(T\). The \(m\) arm is the actual inward \(\bar f_m\) or its specified \(W_m\) direction. Every \(f\) arm is outward, every \(b\) arm inward, \(h\) has its first edge toward the root and all remaining edges away from that first neighbor, and \(W\) is its full reversal. These are directions on the original edges, not substitute arms.
+
+Theorem A. For every stated table, every \(m\ge3\), every
+\(L\ge1\) and every finite host,
+\fitdisplay{
+\boxed{EH_D^8\le e^{-2d},\qquad EH_D^4\le e^{-6d}.}
+}{R39.1.2}
+The eighth moment is the estimate of Section~\ref{proof:R2-C036}.
+The fourth moment is proved below for the same direction.
+
+Theorem B. For every independent \(M\ge1\), append \(M\)
+outer \(T\) edges and put \(U_D=T^MH_D\). Then
+\fitdisplay{
+\boxed{I_q(U_D)^3\le e^{-24d/19}.}
+}{R39.1.3}
+
+The stronger exact statements are
+
+\fitdisplay{
+I_q(U_D)^3\le\begin{cases}
+e^{-24d/19},&M=1,\\
+e^{-16613d/3420-5d^2},&M=2,\\
+e^{-(3+\lfloor M/3\rfloor/4)d},&M\ge3.
+\end{cases}
+}{R39.1.4}
+
+The same \(H_D\) is used for every \(M\). The direction depends
+only on the original integer data.
+
+\paragraph{R39.2 Precisely finite data and actual higher-even masks}\label{part:R39.2}
+
+The original finite calculus gives \(\theta=\frac{13}{32},\allowbreak \allowbreak \kappa=\frac{19}{32},\allowbreak \allowbreak  0\le d\le \frac{1}{3},\allowbreak \allowbreak d^2\le \delta_2\le \theta d,\allowbreak \allowbreak \delta_{i+1}\le \theta \delta_i,\allowbreak \allowbreak  \lVert B\rVert ^2\le \theta\) and \(\lvert Bv(x)\rvert \le \lVert v\rVert_2\). Only \(f_n,\allowbreak \allowbreak \bar f_n\) have means \(\mu_n\) in[0,1]. All four path types are nonnegative and at most \(2; h_{2},\allowbreak \allowbreak W_{2}\) have mean \(1+d\) and are not assigned the \(f/b\) mean property. The genuine equal-pair products \(f_n h_n\) and \(\bar f_n W_n\) lie in[0,1].
+
+For \(G_n(z)=\sum_{r=0}^{n-1}z^r,\allowbreak \allowbreak  G_{0}=0\), put \(\beta_{1}=\beta_{2}=0\) and \(\beta_n=\sum_{i=1}^{{\lfloor (n-1)/2\rfloor}}(-1)^{i-1}\delta_i\). The finite identity
+
+\fitdisplay{
+\begin{gathered}
+1+G_n(B)u=\bar f_n+\sum_{r=3}^n\beta_r \bar f_{n-r},\qquad\\
+\tau:=d-\delta_2\le\beta_n\le d\quad(n\ge3)
+\end{gathered}
+}{R39.2.1}
+
+has actual nonnegative remainder terms. The finite \(G_n\) norm is at most one for \(n=1\) or \(n\ge 3; G_{2}\) alone has squared norm at most \(1+\theta=\frac{45}{32}\). These finite statements hold without imposing a maximum arm length.
+
+Use the actual intermediate finite certificates in parts R36.3–R36.7, and their English reconstruction in E006, Sections 3–8.
+
+The true terminal product has one finite mask \(R\) and loss \(\Gamma\):
+
+\fitdisplay{
+\begin{gathered}
+F\le e^{R-\Gamma},\qquad\\
+R=\sum_i\sum_{n=a_i+1}^{b_i}K^n\one=-B^4Q(-B)u,\\
+\qquad\Gamma\ge16jd/5.
+\end{gathered}
+}{R39.2.2}
+
+\(Q\) has finite zero-one coefficients because intervals within the actual strict terminal table are disjoint. The stronger first loss \(69d/20\) at \(a_{1}=4\) is valid but unnecessary for the fourth-moment estimate. On the original spectral measure \(\nu\) of \(-B^2\) at \(u\), write \(z=i \sqrt{x},\allowbreak \allowbreak  Q(-z)=U(x)-zV(x)\). The actual bounds are
+
+\fitdisplay{
+\begin{gathered}
+-x/(1-x^2)\le U,V\le1/(1-x^2),\quad\\
+\lvert Q\rvert ^2\le C_*:=\frac{32768}{16245},\quad0\le x\le\theta.
+\end{gathered}
+}{R39.L194}
+
+Let \(\sigma=ER^2\) and \(D_i=EB^iR\). The same finite coordinates give
+
+\fitdisplay{
+\begin{gathered}
+D_0=-\int x^2V,\quad D_1=\int x^2U,\quad D_2=\int x^3V,\\
+\quad\sigma<d/18,\quad\lvert R\rvert <\frac{1}{4},
+\end{gathered}
+}{R39.2.3}
+
+\fitdisplay{
+\begin{gathered}
+\lvert D_0\rvert ,\lvert D_1\rvert <d/5,\quad D_0<d/12,\quad D_0-D_1<d/6,\\
+\quad D_0+D_1-D_2<d/2.
+\end{gathered}
+}{R39.2.4}
+
+\(At d=0\) we use the exact original boundary separately. The crucial genuine propagated vector is \(TR=D_0\cdot 1+BR\). Its complete square, including the possibly positive constant cross, has already been proved as
+
+\fitdisplay{
+\|TR\|^2=D_0^2+2D_0D_1+\|BR\|^2
+<(\frac{341}{5400})d<(\frac{4}{15})^2d.
+}{R39.2.5}
+
+It is not permissible to replace \(D_0\cdot 1\) by \(D_0\cdot u\). We retain (R39.2.5). The needed original power bounds are \(\lVert T^n\rVert \le 1\) for \(n\ge 3\) and \(\lVert T^2\rVert <\frac{7}{5}\); the latter covers the genuine inner \(L=3\) exception.
+
+For either actual \(S_L=T^L\) or \(A T^{L-1}\), positivity and \(e^R\le 1+R+3R^2/5\) give the true nonnegative upper
+
+\fitdisplay{
+0\le S_LF\le e^{-\Gamma}Y_L,\quad
+Y_L=S_L1+S_LR+\omega_L\ge0,
+}{R39.2.6}
+
+where \(\omega_1<d/15\) and \(\omega_L<2d/15\) for \(L\ge 2\). These follow by applying the last original positive row, bounded by twice the preceding mean; \(E[f_{L-1}R^2]\le 2\sigma\). For \(L=1\) the preceding input is just \(R^2\). The upper is nonnegative as a whole; its summands need not be.
+
+Put \(V_R=T^{L-1}R\) and \(a_R=EV_R\). Then \(S_LR=a_R+BV_R\) in a \(T\) row and \(a_R-BV_R\) in an A row. \(At L=1,\allowbreak \allowbreak  E AR<d/6\); at \(L=2,\allowbreak \allowbreak  E ATR<d/2\) and \(\lVert V_R\rVert <4\sqrt{d}/15\). For every \(L\ge 3\) the exact finite Duhamel identity with coefficients \(\mu_i\) in[0,1] gives
+
+\fitdisplay{
+a_R=\langle f_{L-1},R\rangle
+\le d/12+3\sqrt{d\sigma}<5d/6.
+}{R39.2.7}
+
+The finite identity is \(f_k=\mu_{k-1}1+\sum_{j=1}^{k-1}\mu_{k-1-j}(-B)^j\one+(-B)^k\one\); its nonconstant norm is at most \(\sqrt{d}\sum_{j=0}^{k-1}\theta^{j/2} <3\sqrt{d}\). A geometric tail bounds this finite path on the original measure.
+
+Two convenient valid consequences for all \(L\ge 3\) are
+
+\fitdisplay{
+\|V_R\|<(\frac{7}{20})\sqrt d,\quad ES_LR<71d/60,
+}{R39.2.8}
+
+and the newly sharpened, same-direction bounds
+
+\fitdisplay{
+\|V_R\|<(\frac{7}{5})\sqrt{d/18}<\sqrt d/3,\qquad ES_LR<7d/6.
+}{R39.2.9}
+
+The first strict comparison in(R39.2.9) use \(s_{49}/450<\frac{1}{9}\); the mean uses \(\lvert EBV_R\rvert \le \sqrt{d}\lVert V_R\rVert \). It holds for either last-edge sign.
+
+Finally the actual negative root posts have their own finite mask:
+
+\fitdisplay{
+\begin{gathered}
+P\le e^{S-\Gamma_r},\quad\Gamma_r\ge16kd/5,\quad S=BV_p,\\
+\quad ES<d/12,\quad\|V_p\|<(\frac{3}{8})\sqrt d.
+\end{gathered}
+}{R39.2.10}
+
+For \(k0\) take \(\Gamma_r=S=V_p=0\).  All cross terms below are paid in the square of one combined vector on the same original \(\mu\).
+
+\paragraph{R39.3 One actual positive upper gives both ordinary moment certificates}
+
+The supplied all-real signed exponential statement is
+
+\fitdisplay{
+\begin{gathered}
+Ee^{4BV}\le e^{4EBV+(\frac{17}{4})\|V\|^2},\qquad\\
+Ee^{8BV}\le e^{8EBV+17\|V\|^2}.
+\end{gathered}
+}{R39.3.1}
+
+The second follows by applying the first to \(2V\). Both allow nonzero mean, either mean sign, and a constant-vector coordinate.
+
+Temporarily omit only the genuine equal pairs. Let \(X\) be the actual anchor \(\bar f_m\) or \(W_m\), and suppose its true bare sum obeys
+
+\fitdisplay{
+X+S_L1\le2+c_b+BV_b.
+}{R39.3.2}
+
+Equation(R39.2.6) gives \(H\le P e^{-\Gamma} X Y_L\) with \(X,\allowbreak \allowbreak Y_L\ge 0\). Their actual sum is at most \(2+c_b+a_R+\omega_L+B(V_b+/-V_R)\). That upper is nonnegative because it dominates the nonnegative sum. Thus AM-GM and \((1+t)^2\le e^{2t}\) for \(1+t\ge 0\) give a pointwise bound
+
+\fitdisplay{
+\begin{gathered}
+H\le\exp[-\Gamma-\Gamma_r+c_b+a_R+\omega_L\\
++B(V_b\mathbin{\pm}V_R+V_p)].
+\end{gathered}
+}{R39.3.3}
+
+The sign is minus in an A row and plus in a \(T\) row. Applying(R39.3.1) once, on the same combined vector, yields for \(r=4\) or 8
+
+\fitdisplay{
+\begin{gathered}
+\log EH^r\le-r(\Gamma+\Gamma_r)\\
++r(c_b+EBV_b)+r\omega_L+rES_LR+rES\\
++C_r\|V_b\mathbin{\pm}V_R+V_p\|^2,
+\end{gathered}
+}{R39.3.4}
+
+where \(C_{4}=\frac{17}{4}\) and \(C_{8}=17\). The fourth moment is proved directly from this formula.
+
+\paragraph{R39.4 Every \(m\ge 3\): new ordinary fourth at the unchanged C036 direction}\label{part:R39.4}
+
+C036/E006 supply the following actual bare-sum data in(R39.3.2):
+
+\begin{description}[style=nextline,leftmargin=1.6em,before=\raggedright]
+\item[{\(L=1\)}] Bare sum: \(\bar f_m+p\);\par\noindent \(c_b+EBV_b\) upper: \(-19d/16\);\par\noindent Norm/cross data: \(At m=3\) retain \(G_{2}\);\par\noindent combined square with \(-R\) at most \(2777d/1440\) for terminal minimum \(4,\allowbreak \allowbreak 751d/480\) for minimum \(\ge 5; m\ge 4\) is smaller.
+\item[{\(L=2\)}] Bare sum: \(\bar f_m+W_{2}\);\par\noindent \(c_b+EBV_b\) upper: \(-3d/16\);\par\noindent Norm/cross data: \(\lVert V_b\rVert <4\sqrt{d}/5\);\par\noindent genuine \(\lVert TR\rVert <4\sqrt{d}/15\).
+\item[{\(L\ge 3\)}] Bare sum: \(W_{\min(m,\allowbreak \allowbreak L)}+\bar f_{\max(m,\allowbreak \allowbreak L)}\);\par\noindent \(c_b+EBV_b\) upper: \(-19d/16\);\par\noindent Norm/cross data: \(\lVert V_b\rVert \le \sqrt{d}/2\), including \(m=L\) and the finite \(G_{2}\) exception.
+\end{description}
+
+For the first line the bound is actually \(c_b+EBV_b=-\beta_m-\beta_{m+1}\le -2\tau\). For the second it follows from \(-\beta_m+\delta_2\le -d+2\delta_2\). For the third the actual loss \(51d/32\) and mean allowance \(13d/32\) give \(-19d/16\). These are all the original structural rows, not selected from the host's \(d-\) domain.
+
+With no root posts, put \(r=4\) in(R39.3.4). \(At L=1\) the combined norm square is less than \(2d\), and the two other fees are at most \(14d/15\). Thus the fourth loss is greater than
+
+\fitdisplay{
+\frac{64}{5}+\frac{19}{4}-\frac{14}{15}-\frac{17}{2}=\frac{487}{60}>8.
+}{R39.4.1}
+
+\(At L=2\) use \(\lVert V_b-V_R\rVert <16\sqrt{d}/15\) and both actual short means:
+
+\fitdisplay{
+\frac{64}{5}+\frac{3}{4}-\frac{8}{15}-2-(\frac{17}{4})(\frac{16}{15})^2=\frac{5563}{900}>6.
+}{R39.4.2}
+
+For every \(L\ge 3\), the weaker proved bounds(R39.2.8) suffice. The vector norm is at most \(17\sqrt{d}/20\), the other fee \(79d/15\), so
+
+\fitdisplay{
+\frac{64}{5}+\frac{19}{4}-\frac{79}{15}-\frac{4913}{1600}>\frac{551}{60}>9,
+}{R39.4.3}
+
+where \(\frac{4913}{1600}<\frac{31}{10}\) gives the displayed weaker rational coefficient. These estimates include every finite terminal pair count; extra pairs only enlarge \(\Gamma\) while the finite-mask estimates are uniform.
+
+With at least one root post pair, C036/E006 paid the full combined vectors without a cross-block disjointness assumption. Their norm bounds are \(71\sqrt{d}/40\) at \(L=1,\allowbreak \allowbreak 173\sqrt{d}/120\) at \(L=2\), and \(49\sqrt{d}/40\) at \(L\ge 3\). The corresponding eighth norm costs are less than \(54d,\allowbreak \allowbreak 36d,\allowbreak \allowbreak  26d\), so the fourth costs are less than \(27d/2,\allowbreak \allowbreak 9d,\allowbreak \allowbreak 13d/2\) respectively. The fourth other fees, including \(4ES\), are \(19d/15,\allowbreak \allowbreak 43d/15,\allowbreak \allowbreak 28d/5\). The exact resulting weaker losses are
+
+\fitdisplay{
+\begin{gathered}
+\frac{128}{5}+\frac{19}{4}-\frac{19}{15}-\frac{27}{2}=\frac{187}{12}>15\\
+(L1),
+\end{gathered}
+}{R39.L370}
+
+\fitdisplay{
+\frac{128}{5}+\frac{3}{4}-\frac{43}{15}-9=\frac{869}{60}>14\quad(L2),
+}{R39.L373}
+
+\fitdisplay{
+\begin{gathered}
+\frac{128}{5}+\frac{19}{4}-\frac{28}{5}-\frac{13}{2}=\frac{73}{4}>18\\
+(L\ge3).
+\end{gathered}
+}{R39.4.4}
+
+All larger root pair counts improve \(\Gamma_r\). Thus the same
+message of Section~\ref{proof:R2-C036} has
+\(EH_D^4\le e^{-6d}\) for every \(m\ge3\) and \(L\ge1\), with
+all its stated posts. That section gives \(EH_D^8\le e^{-2d}\) for
+the same direction. This proves Theorem A.
+
+\paragraph{R39.6 A fully paid one-edge bridge and all original outer lengths}
+
+\paragraph{R39.6.1 General real ordinary-fourth transfer on the original measure}
+
+Let \(P_{\rm op}\) be any original positive operator with positive row mass \(h=P_op1\) and let \(Y\) be a real original function. Original row Cauchy gives \(\lvert P_{\rm op}Y\rvert ^2\le h P_{\rm op}(\lvert Y\rvert ^2)\). Raise this to \(\frac{4}{3}\), multiply by \(q^{-\frac{1}{3}}\), then use original \(H\)ölder with exponents 3 and \(\frac{3}{2}\):
+
+\fitdisplay{
+\begin{gathered}
+I_q(P_{op}Y)\\
+\le E[(h^4/q)^{1/3}(P_{\rm op}\lvert Y\rvert ^2)^{4/3}]\\
+\le[E(h^4/q)]^{1/3}[E(P_{\rm op}\lvert Y\rvert ^2)^2]^{2/3}.
+\end{gathered}
+}{R39.L560}
+
+Cubing and applying the ordinary original \(L=2(\mu)\) norm gives
+
+\fitdisplay{
+\boxed{\begin{gathered}
+I_q(P_{op}Y)^3\le E(h^4/q)\|P_{\rm op}\|^4\\
+(E\lvert Y\rvert ^4)^2.
+\end{gathered}}
+}{R39.6.1}
+
+In the middle display \(E(P_{\rm op}\lvert Y\rvert ^2)^2\) means the expectation of the square of that actual function, not the square of its expectation. This reproduces exact C094(2.5), fixing its operator order, measure and input exponent. The input \(Y\) may be any real vector.
+
+For one original \(T\) edge, \(h=q\), and the exact finite moments give
+
+\fitdisplay{
+Eq^3=E(1+u)^3=1+3d+Eu^3\le1+4d,
+}{R39.6.2}
+
+since \(Eu=0\) and \(\lvert u\rvert \le 1\) implies \(u^3\le u^2\). The supplied original ordinary norm is \(\lVert T\rVert \le 1+32d/19\). Therefore(R39.6.1) proves the new useful same-input inequality for every real \(Y\):
+
+\fitdisplay{
+\begin{gathered}
+I_q(TY)^3\le(1+4d)(1+32d/19)^4(E\lvert Y\rvert ^4)^2\\
+\le e^{(\frac{204}{19})d}(E\lvert Y\rvert ^4)^2.
+\end{gathered}
+}{R39.6.3}
+
+Apply (R39.6.3) to the actual \(H_D\) of Theorem A:
+\fitdisplay{
+I_q(TH_D)^3\le e^{(\frac{204}{19}-12)d}=e^{-24d/19}.
+}{R39.6.4}
+The outer edge is retained when the inner connector has length one.
+
+\paragraph{R39.6.2 Exactly two original outer edges}
+
+The exact C094 all-real bridge, on the unchanged original measure, is
+
+\fitdisplay{
+\begin{gathered}
+I_q(T^2Y)^3\le[1-2d^2+(8-2d)\delta_2]\\
+(1+1024\delta_2/855)^8(E\lvert Y\rvert ^4)^2\\
+\le e^{(\frac{24427}{3420})d-5d^2}(E\lvert Y\rvert ^4)^2.
+\end{gathered}
+}{R39.6.5}
+
+The actual \(T^2\) kernel retains both outer edges and their
+middle vertex. For the same \(H_D\), Theorem A and (R39.6.5) give
+\fitdisplay{
+I_q(T^2H_D)^3\le e^{-(\frac{16613}{3420})d-5d^2}.
+}{R39.6.6}
+This is the existing \(m\ge3\) two-edge output, and its rate is
+stronger than the common rate in Theorem B.
+
+\paragraph{R39.6.3 Every finite outer \(M\ge 3\)}
+
+The exact original C079 positive-operator eighth transfer is
+
+\fitdisplay{
+I_q(T^MY)^3\le\|T^M\|^2 E\lvert Y\rvert ^8
+\{E[\bar f_M^3/\sqrt q]\}^2.
+}{R39.6.7}
+
+Its complete actual row proof gives the last brace squared at most \(1-d\) for every \(M\ge 3\). For \(M=3\) it uses the actual inverse fourth and actual second of \(\bar f_{3}; M=4,\allowbreak \allowbreak 5\) use their respective supplied ordinary fourths, and every \(M\ge 6\) uses the finite tail. 
+
+The power bound is
+\(\|T^M\|\le(1-d/8)^{\lfloor M/3\rfloor}\). Combining
+(R39.6.7) with Theorem A gives
+\fitdisplay{
+\begin{gathered}
+I_q(T^MH_D)^3\le(1-d)(1-d/8)^{2\lfloor M/3\rfloor}e^{-2d}\\
+\le e^{-(3+\lfloor M/3\rfloor/4)d}.
+\end{gathered}
+}{R39.6.8}
+Together with (R39.6.4) and (R39.6.6), this proves Theorem B.
+The direction is \(H_D\) followed by the \(M\) outer \(T\) edges.
+

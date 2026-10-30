@@ -1,0 +1,694 @@
+\subsection{Root multipliers and all outer connectors}\label{proof:Q5-C066}
+\paragraph{Q66.1 Original model and exact old interfaces}
+
+Let \(X\) be a nonempty finite probability space \((X,\allowbreak  \mu)\), with
+zero-mass atoms deleted. Assume
+\fitdisplay{
+K(x,y)=-K(y,x),\qquad |K(x,y)|\le1.
+}{}
+All expectations, inner products, and adjoints use the same original
+measure \(\mu\). Put
+\fitdisplay{
+Jv=(Ev)1,\quad A=J+K,\quad T=J-K=A^*,\quad
+ g=K1,\quad p=1+g,\quad q=1-g,
+}{}
+\fitdisplay{
+f_n=A^{n}\one,\quad \bar f_n=T^{n}\one,\quad h_n=T f_{n-1},\quad
+ f_0=\bar f_0=1,\qquad
+ I_q(X)=E[q^{-1/3}|X|^{8/3}].
+}{Q66.1.1}
+Since \(K(x,\allowbreak  x)=0\), \(p(x),\allowbreak  q(x)\ge\mu(x)>0\).
+All actual path messages are positive, and \(A,\allowbreak  T\) preserve order.
+
+Write
+\fitdisplay{
+\delta_j=\|K^{j}\one\|_2^2,\quad d=\delta_1,\quad r=Kg,\quad s=Kr,\quad t=Ks,
+}{}
+\fitdisplay{
+\theta=13/32,\quad c=19/32,\quad k=32/19,\quad \tau=d-\delta_2.
+}{Q66.1.2}
+The original spectral estimate and elementary moment
+relations give
+\fitdisplay{
+\|K\|^2\le\theta,\quad 0\le d\le1/3,\quad
+ d^2\le \delta_2\le\theta d,\quad \delta_{j+1}\le\theta \delta_j,\quad
+ cd\le\tau\le d-d^2\le2/9.
+}{Q66.1.3}
+
+
+We use the following exact interfaces.
+
+1. The ordinary path multiplier, from the Q3 operator
+   estimate T061 and Q4 C115 formula (8.3), after global sign reversal
+   and ordinary adjunction:
+\fitdisplay{
+\|T M_{\bar f_a}\|_{2\to2}^2\le1-d/72,\qquad a\ge2.
+}{Q66.1.4}
+   Multiplication and propagation are in precisely this order.
+
+2. The C064 positive-kernel transfer. For a positive operator \(B\)
+   with row \(a=B\one>0\),
+\fitdisplay{
+I_q(BY)^3\le\|B\|_{2\to2}^2E|Y|^8
+                       \left(E[a^3/\sqrt q]\right)^2.
+}{Q66.1.5}
+   Indeed \(|BY|^4\le a^3B(|Y|^4)\), followed by Hölder with
+   exponents \(3,\allowbreak  3/2\), proves it. In particular, if
+   \(\beta(X)=E[X^2/q]\),
+\fitdisplay{
+\left(E[\bar f_n^3/\sqrt q]\right)^2
+    \le\beta(\bar f_n)E\bar f_n^4,\qquad \beta(\bar f_n)\le1-d\quad(n\ge2).
+}{Q66.1.6}
+   The latter follows from row Cauchy
+   \(\beta(TX)\le E[pX^2]\le\beta(X)\),
+   \(\bar f_2=q+r\), and \(r^2\le pqd\).
+
+3. The two Q5-C064 ordinary short norms:
+\fitdisplay{
+\|T\|^2\le(1+d+k\delta_2)^2\le(1+kd)^2,
+    \qquad \|T^2\|^2\le(1+d/2)^4.
+}{Q66.1.7}
+   The second inequality in the first chain uses \(\delta_2\le\theta d\) and
+   \(1+k\theta=k\). These are ordinary \(L^2(\mu)\) norms, not
+   a generic weighted two-step contraction.
+
+4. C064 already gives (0.2) for \(a=2\), all \(M\ge1\),
+   and for every \(a\ge2\) when \(M=1\) or \(M\ge4\).
+
+5. C058 gives, with the same actual terminal \(qf_b\)
+   at every inner length,
+\fitdisplay{
+E[(pT^L(qf_b))^8]\le1-d/12000,\qquad b\ge2,L\ge1.
+}{Q66.1.8}
+   C049/C050 give \(1-d/500\) when \(b=2,\allowbreak  L\ge1\), and
+   \(1-d/50\) when \(b=2,\allowbreak  L\ge2\).
+
+6. C143 supplies its exact zero-step R directions with
+   \(E[q(C^-)^4]\le1\), and actual equal pairs
+   \(f_\ell h_\ell\le1\), including their complete reversals.
+
+If \(d=0\), then \(g=0\), \(p=q=1\), and all \(f_n=\bar f_n=1\).
+The kernel need not vanish. All actual tree messages are then one
+by leaf integration. New expressions involving \(\delta_2/d\) or \(\tau/d\)
+below are restricted to \(d>0\); the all-real maps at \(d=0\)
+follow directly from (Q66.1.4)--(Q66.1.6).
+
+\paragraph{Q66.2 Full path convolution and a sharper geometric-sum estimate}
+
+Define
+\fitdisplay{
+S_n=\sum_{j=0}^nK^{j}\one,\qquad G_n(z)=\sum_{j=0}^{n-1}z^j,
+}{}
+\fitdisplay{
+\gamma_1=\gamma_2=0,\qquad
+ \gamma_j=\sum_{i=1}^{\lfloor(j-1)/2\rfloor}(-1)^{i-1}\delta_i
+ \quad(j\ge3).
+}{}
+Skewness gives \(ES_n=1-\gamma_{n+1}\), and
+\(S_n=AS_{n-1}+\gamma_n1\) gives the full finite identity
+\fitdisplay{
+S_n=f_n+\sum_{j=3}^n\gamma_j f_{n-j},\qquad
+ \tau\le\gamma_j\le d\quad(j\ge3).
+}{Q66.2.1}
+Every summand is nonnegative. This proves statements for every
+integer \(n\), without assuming ordinary path means decrease.
+For the same finite skew spectral decomposition,
+\fitdisplay{
+\|G_n(K)\|\le1\quad(n\ge3),\qquad
+ \|S_j\|_2\le1\quad(j\ge2),\qquad 0\le S_n\le2\quad(n\ge3).
+}{Q66.2.2}
+The scalar verification uses
+\fitdisplay{
+|G_n(i\sqrt x)|^2=
+ \begin{cases}
+ (1+x^n)/(1+x),&n\text{ odd},\\
+ (1-(-1)^{n/2}x^{n/2})^2/(1+x),&n\text{ even},
+ \end{cases}
+ \quad0\le x\le\theta.
+}{}
+For \(n=2\bmod4,\allowbreak  \ n\ge6\), the required inequality follows from
+\(2x^2+x^5<1\); the other cases are immediate. Finally
+\(|KS_{n-1}|\le\|S_{n-1}\|_2\) proves the pointwise bound in
+(Q66.2.2). Positivity in (Q66.2.1) gives \(0<f_n\le2\) for \(n\ge3\).
+
+We need a uniform improvement which retains \(\delta_2\):
+\fitdisplay{
+\boxed{|G_n(i\sqrt x)|^2\le1-\frac7{15}x,
+ \quad n\ge5,\quad0\le x\le\theta.}
+}{Q66.2.3}
+For every \(n\ge5\), its numerator is at most \((1+x^3)^2\).
+For odd \(n\) use \(x^n\le2x^3+x^6\); for \(4\mid n\)
+use a numerator at most one; the remaining even case has
+\(n/2\ge3\). It therefore suffices to check
+\fitdisplay{
+8-7x-30x^2-15x^5\ge0.
+}{Q66.2.4}
+The polynomial decreases on \([0,\allowbreak  \theta]\), and its endpoint is
+\fitdisplay{
+\frac{1311885}{33554432}>0.
+}{}
+This proves (Q66.2.3), including \(x=0\).
+Integration against the spectral measure at \(g\) gives
+\fitdisplay{
+\|G_n(K)g\|^2\le d-\frac7{15}\delta_2\quad(n\ge5).
+}{Q66.2.5}
+
+A second uniform improvement is needed for \(n\ge6\). Put
+\(P(z)=3+2z+z^2\). Then, for \(z=i\sqrt x\),
+\fitdisplay{
+|P(z)|^2=9-2x+x^2\le9,\qquad
+ \operatorname{Re}\{(1-z)^{-1}\overline{P(z)}\}
+ =\frac{3+x}{1+x}\ge\frac{109}{45}.
+}{}
+The geometric tail is bounded by \(3\theta^3=6591/32768\).
+Since
+\fitdisplay{
+\frac{109}{45}-\frac{6591}{32768}-\frac{11}{5}
+ =\frac{6217}{294912}>0,
+}{}
+we obtain the all-length statement
+\fitdisplay{
+\boxed{\operatorname{Re}\{G_n(z)\overline{P(z)}\}\ge11/5,
+ \qquad n\ge6.}
+}{Q66.2.6}
+
+\paragraph{Q66.3 Every row length at least six: a uniform joint payment}
+
+\paragraph{Q66.3.1 The actual finite mask and its variance}
+
+For \(n\ge6\), retain the four final terms in (Q66.2.1):
+\fitdisplay{
+0<f_n\le Z:=S_n-\tau(1+p+f_2+f_3).
+}{Q66.3.1}
+Here
+\fitdisplay{
+1+p+f_2+f_3=4-d+3g+2r+s.
+}{}
+With \(\alpha=\gamma_{n+1}\in[\tau,\allowbreak  d]\),
+\fitdisplay{
+EZ=1-\alpha-\tau(4-3d)
+ \le m:=1-(5-3d)\tau,\qquad Z\le U:=2-\tau.
+}{Q66.3.2}
+Moreover \(m\ge1/9\): the maximum of
+\((d-d^2)(5-3d)\) on \([0,\allowbreak  1/3]\) is \(8/9\), since its
+derivative \(5-16d+9d^2\) is positive there.
+
+The nonconstant part of \(Z\) is
+\(G_n(K)g-\tau P(K)g\). Equations (Q66.2.5)--(Q66.2.6) give
+\fitdisplay{
+\|G_n(K)g-\tau P(K)g\|^2
+ \le d-\frac7{15}\delta_2-\frac{22}{5}\tau d+9\tau^2d
+ \le d-\frac7{15}\delta_2-\frac{12}{5}\tau d,
+}{}
+where \(9\tau^2\le2\tau\). Its mean is
+\(-\alpha+2\tau d\), whose absolute value is at least
+\(\tau(1-2d)\). Hence
+\fitdisplay{
+\operatorname{\operatorname{Var}}Z\le
+ V(d,\tau):=d-\frac7{15}\delta_2-\frac{12}{5}\tau d
+                   -\tau^2(1-2d)^2.
+}{Q66.3.3}
+Using \(\delta_2=d-\tau\), this is
+\fitdisplay{
+V=\frac8{15}d+
+       \left(\frac7{15}-\frac{12}{5}d\right)\tau
+       -(1-2d)^2\tau^2.
+}{Q66.3.4}
+
+This variance majorant is positive over the full continuous region
+\fitdisplay{
+0<d\le1/3,\qquad cd\le\tau\le d-d^2.
+}{Q66.3.5}
+Indeed \(\delta_2/d\le\theta\), \(\tau\le2/9\), \(\tau\le d\), and
+\(d(1-2d)^2\le2/27\) imply
+\fitdisplay{
+V/d\ge\frac{389}{480}-\frac8{15}-\frac2{27}
+       =\frac{877}{4320}>0.
+}{Q66.3.6}
+The bound \(d(1-2d)^2\le2/27\) follows by differentiating on
+\([0,\allowbreak  1/3]\); the only interior maximum occurs at \(d=1/6\).
+
+For \(0\le W\le U\), with mean \(\mu_W\), the exact identity
+\fitdisplay{
+EW^4=\mu_W^4+
+ E[(W-\mu_W)^2(W^2+2\mu_WW+3\mu_W^2)]
+}{}
+gives
+\fitdisplay{
+EW^4\le\mu_W^4+(U^2+2\mu_WU+3\mu_W^2)\operatorname{\operatorname{Var}}W.
+}{Q66.3.7}
+Its right side is increasing in a nonnegative mean majorant.
+Thus, putting \(C=U^2+2mU+3m^2\),
+\fitdisplay{
+Ef_n^4\le EZ^4\le F(d,\tau):=m^4+C\,V(d,\tau).
+}{Q66.3.8}
+
+\paragraph{Q66.3.2 A full-region monotonicity proof in the shared moment}
+
+We prove that \(F(d,\allowbreak  \tau)\) decreases with \(\tau\) throughout
+(Q66.3.5). This is a statement about an explicit fourth-moment majorant,
+not monotonicity of a mean-plus-variance functional.
+
+Put \(B=5-3d\), so \(B\ge4\), \(m=1-B\tau\), \(U=2-\tau\).
+Since \(0\le m\le1\), \(0\le U\le2\),
+\fitdisplay{
+-C_\tau=2(U+m)+2B(U+3m)\ge4C.
+}{Q66.3.9}
+For a direct verification, after replacing \(B\) by four the difference
+from \(4C\) is
+\fitdisplay{
+10U+26m-4U^2-8mU-12m^2\ge0.
+}{}
+For fixed \(m\), this is concave in \(U\), so its minimum is on
+\(U=0,\allowbreak  2\). At \(U=0\) it is \(26m-12m^2\ge0\).
+At \(U=2\) it is \(4+10m-12m^2\), whose endpoint values on
+\(0\le m\le1\) are four and two.
+
+Write \(V=v_0+v_1\tau-w\tau^2\), where
+\fitdisplay{
+v_0=8d/15,\quad v_1=7/15-(12/5)d,\quad w=(1-2d)^2.
+}{}
+If \(v_1<0\), then \(V_\tau<0\), and (Q66.3.6), (Q66.3.9) immediately
+give \(F_\tau<0\). If \(v_1\ge0\), then
+\fitdisplay{
+V_\tau-4V
+ =v_1-4v_0-4v_1\tau-2w\tau(1-2\tau)
+ \le\frac{7-68d}{15}.
+}{Q66.3.10}
+For \(d\ge7/68\), this again proves \(F_\tau<0\).
+For \(0\le d\le7/68\), use \(C\le11\),
+\(m\ge1-5d\), and (Q66.3.9) to obtain
+\fitdisplay{
+F_\tau\le
+ -16(1-5d)^3+\frac{11}{15}(7-68d)=:q_0(d).
+}{}
+On this interval
+\fitdisplay{
+q_0'(d)=240(1-5d)^2-\frac{748}{15}
+ \ge\frac{461648}{69360}>0.
+}{}
+Thus \(q_0(d)\le q_0(7/68)=-16(33/68)^3<0\).
+All cases are covered, proving
+\fitdisplay{
+F(d,\tau)\le F(d,cd)=:F_*(d).
+}{Q66.3.11}
+The exact same \(\delta_2\) was retained through (Q66.3.3)--(Q66.3.11).
+No independent replacement of its variance contribution by zero
+was made.
+
+\paragraph{Q66.3.3 The complete finite scalar certificate}
+
+At \(\tau=cd\), the quantities in (Q66.3.8) are
+\fitdisplay{
+m=1-5cd+3cd^2,\quad U=2-cd,
+}{}
+\fitdisplay{
+V=\frac{389}{480}d-\left(\frac{12}{5}c+c^2\right)d^2
+       +4c^2d^3-4c^2d^4,\qquad c=19/32.
+}{Q66.3.12}
+Expanding \(F_*=m^4+(U^2+2mU+3m^2)V\), its coefficients after
+the constant one are as follows:
+
+
+\begingroup\small
+\setlength{\tabcolsep}{3pt}
+\setlength{\LTleft}{0pt}\setlength{\LTright}{\fill}
+\begin{longtable}{@{}>{\raggedright\arraybackslash}p{0.1200\linewidth}>{\raggedright\arraybackslash}p{0.4000\linewidth}>{\raggedright\arraybackslash}p{0.4000\linewidth}@{}}
+\caption{Coefficients of \(d^j\) in the fourth-moment envelope \(F_*(d)\).}\label{tab:parameters:q5-c066:1}\\
+\toprule
+\(j\) & Exact coefficient & Convenient upper coefficient \\
+\midrule\endfirsthead
+\toprule
+\(j\) & Exact coefficient & Convenient upper coefficient \\
+\midrule\endhead
+\bottomrule\endfoot
+1 & \(-1421/480\); & \(-59/20\). \\
+\addlinespace[2pt]
+2 & \(207461/15360\); & \(271/20\). \\
+\addlinespace[2pt]
+3 & \(-26785934/491520\); & \(-1089/20\). \\
+\addlinespace[2pt]
+4 & \(575254583/5242880\); & \(2196/20\). \\
+\addlinespace[2pt]
+5 & \(-1837517436/15728640\); & \(-2336/20\). \\
+\addlinespace[2pt]
+6 & \(303421583/5242880\); & \(1158/20\). \\
+\addlinespace[2pt]
+7 & \(-48c^4\); & \(0\). \\
+\addlinespace[2pt]
+8 & \(-27c^4\); & \(0\). \\
+\end{longtable}
+\endgroup
+
+
+Each entry in the last column is at least the exact coefficient.
+Let \(\mathcal P(d)\) be the degree-six upper polynomial with constant
+one and that column's coefficients. It is nonnegative because it
+majorizes \(F_*(d)>0\).
+
+Since \(k=32/19<17/10\),
+\fitdisplay{
+(1-d)(1+kd)^2F_*(d)
+ \le (1-d)(1+17d/10)^2\mathcal P(d).
+}{Q66.3.13}
+The factor on the right outside \(\mathcal P\) is
+\(1+(12/5)d-(51/100)d^2-(289/100)d^3\).
+The right side of (Q66.3.13), minus one, is \(dQ(d)/2000\), where
+\fitdisplay{
+\begin{aligned}
+ Q(d)={}&-1100+11920d-46631d^2-38530d^3+270660d^4\\
+       &-242115d^5-237588d^6+616046d^7-334662d^8.
+ \end{aligned}
+}{Q66.3.14}
+For \(d\le1/3\),
+\fitdisplay{
+-237588d^6+616046d^7\le-\frac{96718}{3}d^6\le0.
+}{}
+Dropping this pair and the final negative term leaves the
+degree-five upper polynomial
+\fitdisplay{
+Q_5=-1100+11920d-46631d^2-38530d^3+270660d^4-242115d^5.
+}{}
+For \(z=3d\in[0,\allowbreak  1]\), its degree-five Bernstein coefficients are
+\fitdisplay{
+-1100,\quad-\frac{916}{3},\quad-\frac{2591}{90},\quad
+ -\frac{111529}{270},\quad-\frac{755394}{810},\quad
+ -\frac{112574}{81}.
+}{Q66.3.15}
+Each is at most \(-2591/90\).
+Here a Bernstein list \((B_i)_{i=0}^n\) means the exact identity
+\fitdisplay{
+Q_5(z/3)=\sum_{i=0}^nB_i\binom ni z^i(1-z)^{n-i}.
+}{}
+Consequently, with \(\eta=2591/180000\),
+\fitdisplay{
+\boxed{
+ (1-d)(1+kd)^2Ef_n^4\le1-\eta d,\qquad n\ge6.}
+}{Q66.3.16}
+Global sign reversal gives the same bound for \(E\bar f_n^4\).
+The \(d=0\) boundary is direct. These are common bounds under sign
+reversal, not an equality of opposite fourth moments for a fixed
+kernel.
+
+\paragraph{Q66.4 The remaining row length five}
+
+We need a stronger global fifth-path fourth budget than the one
+used in C064:
+\fitdisplay{
+\boxed{Ef_5^4,\ E\bar f_5^4\le1-\frac32d.}
+}{Q66.4.1}
+The exact convolution gives
+\fitdisplay{
+f_5=S_5-d(f_2+p+1)+\delta_2
+     =S_5-d(f_2+p)-\tau.
+}{}
+Therefore
+\fitdisplay{
+Ef_5=1-4d+2\delta_2+d^2\le m:=1-\frac{51}{16}d+d^2,\qquad
+ 0<f_5\le U:=2-cd.
+}{Q66.4.2}
+The mean majorant is positive throughout the interval; at \(d=1/3\)
+it is \(7/144\), and it is decreasing on the whole interval.
+
+The nonconstant polynomial is \(G_5(K)g-d(2g+r)\).
+For \(z=i\sqrt x\),
+\fitdisplay{
+|G_5(z)|^2\le1-\frac7{15}x,\quad
+ \operatorname{Re}\{G_5(z)\overline{(2+z)}\}
+ =2-x+x^2\ge7/4,\quad |2+z|^2\le9/2.
+}{}
+Thus, dropping the nonnegative square of the mean,
+\fitdisplay{
+\operatorname{\operatorname{Var}}f_5
+ \le d-\frac7{15}\delta_2-\frac72d^2+\frac92d^3
+ \le d-\frac{37}{15}d^2=:V_5.
+}{Q66.4.3}
+The last quantity is nonnegative, and positive for \(d>0\).
+Apply (Q66.3.7) with (Q66.4.2)--(Q66.4.3).
+The coefficients of the resulting polynomial after its constant one
+are
+
+
+\begingroup\small
+\setlength{\tabcolsep}{3pt}
+\setlength{\LTleft}{0pt}\setlength{\LTright}{\fill}
+\begin{longtable}{@{}>{\raggedright\arraybackslash}p{0.1200\linewidth}>{\raggedright\arraybackslash}p{0.4000\linewidth}>{\raggedright\arraybackslash}p{0.4000\linewidth}@{}}
+\caption{Coefficients of \(d^j\) in the fifth-path fourth-moment envelope.}\label{tab:parameters:q5-c066:2}\\
+\toprule
+\(j\) & Exact coefficient & Convenient upper coefficient \\
+\midrule\endfirsthead
+\toprule
+\(j\) & Exact coefficient & Convenient upper coefficient \\
+\midrule\endhead
+\bottomrule\endfoot
+1 & \(-7/4\); & \(-7/4\). \\
+\addlinespace[2pt]
+2 & \(4589/1920\); & \(12/5\). \\
+\addlinespace[2pt]
+3 & \(-91549/2560\); & \(-143/4\). \\
+\addlinespace[2pt]
+4 & \(99070783/983040\); & \(504/5\). \\
+\addlinespace[2pt]
+5 & \(-352321/3072\); & \(-573/5\). \\
+\addlinespace[2pt]
+6 & \(36839/640\); & \(288/5\). \\
+\addlinespace[2pt]
+7 & \(-51/4\); & retained with degree eight. \\
+\addlinespace[2pt]
+8 & \(1\); & retained with degree seven. \\
+\end{longtable}
+\endgroup
+
+
+The final two terms sum to \(d^7(-51/4+d)\le0\).
+After discarding them, the difference from \(1-3d/2\), divided
+by \(d>0\), is at most
+\fitdisplay{
+Q_{\rm five}(d)
+ =-\frac14+\frac{12}{5}d-\frac{143}{4}d^2
+       +\frac{504}{5}d^3-\frac{573}{5}d^4+\frac{288}{5}d^5.
+}{Q66.4.4}
+The degree-five Bernstein coefficients of \(Q_{\rm five}(z/3)\)
+are
+\fitdisplay{
+-\frac14,\quad-\frac9{100},\quad-\frac{589}{1800},\quad
+ -\frac{353}{600},\quad-\frac{1057}{1350},\quad-\frac{13}{15}.
+}{Q66.4.5}
+They are all negative. This proves (Q66.4.1) on the whole domain,
+including \(d=0\) separately. The improved pointwise upper bound
+\(f_5\le2-\tau\), which follows from the exact positive convolution,
+is retained in this proof.
+
+\paragraph{Q66.5 Additional strict ordinary loss for the actual root \(\bar f_3\)}
+
+We prove the strengthened ordinary multiplier
+\fitdisplay{
+\boxed{
+ \|T M_{\bar f_3}\|^2\le(1-d/2)^2(1-d/72).}
+}{Q66.5.1}
+We use the \(S_3\) case of the Q3 T061 Schur argument below.
+
+Set
+\fitdisplay{
+H=S_3=1+g+r+s,\quad a=H-1,\quad
+ R=(I+K^2)^{-1},\quad e=-R(K^4+K^5)1,\quad u=1+e.
+}{}
+The inverse exists by \(\|K\|^2\le13/32<1\).
+Let
+\fitdisplay{
+P=T A,\quad t_0=1-EH=d,\quad v=E(gH),\quad
+ b=E(He),\quad c_0=E(ge),\quad a_0=E|ae|.
+}{}
+The elementary exact formulas are
+\fitdisplay{
+Pz=qEz-E(gz)-K^2z,\qquad
+ (I-K^2)a-g-r=(I+K^2)e.
+}{Q66.5.2}
+Expanding by (Q66.5.2) gives
+\fitdisplay{
+M_H P M_Hu-u
+ =-a^2+ae+H\{q(b-t_0)-(v+c_0)+T K(ae)\}.
+}{Q66.5.3}
+For a direct check, write
+\(E(Hu)=1-t_0+b\),
+\(E(gHu)=v+c_0+E(gae)\), and
+\(K^2(Hu)=K^21+K^2a+K^2e+K^2(ae)\).
+The last two \(ae\) contributions form \(TK(ae)\);
+the remaining terms inside \(P(Hu)\) reduce to \(1-a+e\).
+Multiplying by \(H=1+a\) and subtracting \(u\) yields (Q66.5.3).
+
+Let \(\nu\) be the finite spectral measure of \(-K^2\) at \(1\).
+Using skewness and the explicit powers in \(H,\allowbreak  e\),
+\fitdisplay{
+b=-\delta_2-\delta_3\le0,\qquad
+ v+c_0=\int\frac{x(1-2x)}{1-x}\,d\nu(x)\ge\frac27d.
+}{Q66.5.4}
+For the second bound use \(x\le\theta<\rho:=5/12\) and
+\((1-2\rho)/(1-\rho)=2/7\).
+Also \(\|a\|_2\le\sqrt d\), since
+\(a=G_3(K)g\) and \(|G_3(i\sqrt x)|^2=(1+x^3)/(1+x)\le1\).
+
+The exact spectral formulas for \(e\) give
+\fitdisplay{
+\|e\|_2^2=\int\frac{x^4(1+x)}{(1-x)^2}\,d\nu(x)
+ \le\frac{2125}{7056}d\le\frac{16}{49}d,
+}{}
+and, writing \(e=-KR(K^3+K^4)1\),
+\fitdisplay{
+|e|^2\le\|R(K^3+K^4)1\|_2^2
+ \le\frac{425}{588}d\le\frac{36}{49}d.
+}{Q66.5.5}
+The two rational bounds are obtained by evaluating the increasing
+scalar factors at \(\rho=5/12\). They imply
+\fitdisplay{
+a_0\le4d/7,\quad |e|\le6\sqrt d/7\le18/35,\quad
+ 17/35\le u\le53/35.
+}{Q66.5.6}
+Here \(\sqrt d\le3/5\) follows from \(d\le1/3\).
+
+Pointwise \(|K(ae)|\le a_0\), and positivity of \(T\) gives
+\(TK(ae)\le q a_0\). Since \(b-d+a_0\le0\), (Q66.5.3)--(Q66.5.4) imply
+\fitdisplay{
+M_H P M_Hu-u
+ \le-a^2+a(e-2d/7)-2d/7.
+}{}
+Moreover \(|e-2d/7|\le(36/35)\sqrt d\). Completing the square,
+\fitdisplay{
+M_H P M_Hu-u
+ \le\frac{324}{1225}d-\frac27d
+ =-\frac{26}{1225}d.
+}{Q66.5.7}
+Because \(u\le53/35\), this is at most
+\(-26du/1855\).
+
+The operator \(M_H P M_H\) is positive semidefinite and has a
+nonnegative kernel. Indeed \(P=T A=A^*A\), and \(H=f_3+d>0\).
+The elementary weighted Schur argument therefore gives
+\fitdisplay{
+\|M_H T\|^2=\|M_H P M_H\|\le1-\frac{26}{1855}d.
+}{Q66.5.8}
+For clarity, if a symmetric nonnegative kernel \(Q\) satisfies
+\(Qu\le\lambda u\) with \(u>0\), the inequality
+\(2z(x)z(y)\le(u(y)/u(x))z(x)^2+(u(x)/u(y))z(y)^2\), integrated against
+\(Q(x,\allowbreak  y)\mu(x)\mu(y)\), gives
+\(\langle z,\allowbreak  Qz\rangle\le\lambda\|z\|^2\).
+Positive semidefiniteness then controls the full operator norm.
+
+Finally \(f_3=H-d\), \(0<H\le2\), so
+\fitdisplay{
+0<f_3/H\le1-d/2.
+}{}
+Thus
+\fitdisplay{
+\|M_{f_3}T\|^2\le(1-d/2)^2(1-26d/1855).
+}{}
+Global sign reversal followed by the ordinary adjoint gives the
+same estimate for \(T M_{\bar f_3}\). Since \(26/1855\ge1/72\),
+(Q66.5.1) follows. 
+
+\paragraph{Q66.6 All short outer lengths for every \(a\ge3\)}
+
+Put \(B_{M,\allowbreak  a}=T^M M_{\bar f_a}\); its actual row is \(\bar f_{M+a}\).
+Using (Q66.1.4)--(Q66.1.6),
+\fitdisplay{
+I_q(B_{M,a}Y)^3
+ \le(1-d/72)\|T^{M-1}\|^2(1-d)E\bar f_{M+a}^4\,E|Y|^8.
+}{Q66.6.1}
+
+If \(M=2,\allowbreak  a\ge4\), the row length is at least six. Equations
+(Q66.1.7) and (Q66.3.16) show
+\fitdisplay{
+I_q(T^2(\bar f_aY))^3
+ \le(1-d/72)(1-\eta d)E|Y|^8
+ \le(1-d/72)E|Y|^8.
+}{Q66.6.2}
+If \(M=3,\allowbreak  a\ge3\), again the row length is at least six, and
+\fitdisplay{
+(1+d/2)^2\le1+\frac{13}{12}d\le1+kd.
+}{}
+Therefore the same payment proves
+\fitdisplay{
+I_q(T^3(\bar f_aY))^3
+ \le(1-d/72)(1-\eta d)E|Y|^8.
+}{Q66.6.3}
+This covers every such \(a\), not merely sufficiently long roots.
+
+It remains to consider \(a=3,\allowbreak  M=2\). Use (Q66.5.1) in place of the
+weaker ordinary multiplier in (Q66.6.1), and use (Q66.4.1):
+\fitdisplay{
+I_q(T^2(\bar f_3Y))^3
+ \le(1-d/72)(1-d/2)^2(1+kd)^2(1-d)(1-3d/2)E|Y|^8.
+}{Q66.6.4}
+All displayed factors are nonnegative. We have
+\fitdisplay{
+(1-d)(1-3d/2)\le(1-5d/4)^2,
+}{}
+and \(k<7/4\), so the square root of the extra factor in (Q66.6.4)
+is at most
+\fitdisplay{
+(1-d/2)(1+7d/4)(1-5d/4)
+ =1-\frac{39}{16}d^2+\frac{35}{32}d^3\le1.
+}{Q66.6.5}
+The last step uses \(d\le1/3\).
+This proves the final short case on the whole continuous domain.
+
+The regular case follows directly from (Q66.1.4)--(Q66.1.6).
+Equations (Q66.6.2)--(Q66.6.5) prove (0.1). Together with the exact
+C064 cases, they prove the complete all-\(a\), all-\(M\) map (0.2).
+The argument uses the operator order
+\(T^{M-1}(T M_{\bar f_a})\), the row \(\bar f_{M+a}\), and the
+fixed measure.
+
+
+\paragraph{Q66.10.1 A complete outer-length interface for every negative even root}
+
+Let an actual even residual root table be
+\fitdisplay{
+1\le s_1<t_1<s_2<t_2<\cdots<s_j<t_j,\qquad j\ge1.
+}{}
+The negative canonical pair orientation has factor
+\fitdisplay{
+C_\Sigma^-=E_r\prod_{i=1}^j\bar h_{s_i}\bar f_{t_i},
+ \qquad \bar h_s=A \bar f_{s-1}.
+}{Q66.10.1}
+Thus each shorter arm has its first edge away from the root and all
+remaining edges toward the root; each longer arm is wholly toward
+the root. Equal pairs in \(E_r\) are the actual reversed pairs.
+Every original arm and its length is retained.
+
+Choose the first longer arm \(t_1\ge2\) and set
+\fitdisplay{
+W_\Sigma=E_r\bar h_{s_1}
+                     \prod_{i=2}^j\bar h_{s_i}\bar f_{t_i}.
+}{}
+For any fixed actual terminal message \(F\) and any \(L,\allowbreak  M\ge1\),
+the actual half-tree factor and output are
+\fitdisplay{
+H_\Sigma=C_\Sigma^-T^L F
+          =\bar f_{t_1}(W_\Sigma T^L F),\qquad T^M H_\Sigma.
+}{}
+The full multiplier theorem proves the unconditional analytic bound
+\fitdisplay{
+\boxed{
+ I_q(T^M H_\Sigma)^3
+ \le(1-d/72)E[(W_\Sigma T^L F)^8],\qquad M\ge1.}
+}{Q66.10.2}
+There is no short-outer exception left in this interface, and
+\(L,\allowbreak  M\) are independent. The missing responsibility for these more
+general roots is now an explicit ordinary eighth input, not an
+unspecified outer-propagation claim.
+
+For the terminal family
+\(F=E_tqf_b\), \(b\ge2\), the precise sufficient new input is
+\fitdisplay{
+E\!\left[\left\{
+ E_r(A \bar f_{s_1-1})
+ \left(\prod_{i=2}^j(A \bar f_{s_i-1})\bar f_{t_i}\right)
+ T^L(E_tqf_b)\right\}^{8}\right]\le1.
+}{Q66.10.3}
+When \(j=1,\allowbreak  s_1=1\), this is exactly the input with factor
+\(p=A1\), and parts Q66.8--9 finish all outer lengths. For \(s_1\ge2\), or \(j\ge2\), (Q66.10.3) is a sufficient local condition, not a necessary condition for
+the full mapping or for the existence of an orientation of the
+original tree.
+
+The following two symbolic examinations show why the missing factors matter in the current positive comparison.

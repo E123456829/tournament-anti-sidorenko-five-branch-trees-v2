@@ -1,0 +1,249 @@
+\subsection{Unit connectors for every short-one terminal}\label{proof:Q5-C051}
+Work on the original finite probability space with a real antisymmetric kernel \(|K|\le\allowbreak 1\). Put
+\[
+A=J+K,\quad T=J-K,\quad g=K\one,\quad p=1+g,\quad q=1-g,
+\]
+\[
+r=Kg,\quad s=K^2g,\quad t=K^3g,\quad
+d=\E g^2,\quad \delta_j=\|K^j\one\|_2^2,\quad
+\theta=13/32,\quad f_b=A^b\one.
+\]
+For each integer \(b\ge\allowbreak 2\), use
+\(F_b=\allowbreak qf_b\) and \(H_b=\allowbreak pTF_b\).
+The terminal unit arm points inward, its \(b\)-edge arm outward, the unit connector toward the receiving root, and the receiving unit arm outward. We prove
+\[
+\E H_b^8\le1-d/500.
+\tag{Q51.1.1}\label{eq:Q51:1.1}
+\]
+Genuine equal-length pairs may be restored at their roots by positivity.
+The case \(b=\allowbreak 2\) is Section~\ref{proof:Q5-C049}. Its row estimate \eqref{eq:Q49:2.3} applies to \(K^2\) on every real input; the spectral input remains \(\|K\|^2\le\allowbreak \theta\).
+
+\paragraph{Q51.2 The signed-mean scalar input}
+Let \(0\le\allowbreak  d\le\allowbreak 1/3\), and suppose the real function \(Z\) satisfies
+\[
+\E Z\ge0,\qquad |Z|^2\le d/3,\qquad \E Z^2\le\theta^2d.
+\tag{Q51.2.1}\label{eq:Q51:2.1}
+\]
+For \(c=\allowbreak 1-51d/128\),
+\[
+\E(c-Z/2)^{16}\le1-d/500.
+\tag{Q51.2.2}\label{eq:Q51:2.2}
+\]
+At \(d=\allowbreak 0\), \(Z=\allowbreak 0\). For \(d>\allowbreak 0\), take
+\(x=\allowbreak \sqrt{d/12}/c\), \(\eta=\allowbreak -Z/(2c)\), and \(\alpha=\allowbreak 507/1024\), as in Section~\ref{proof:Q5-C049}.
+Now \(\E\eta\le\allowbreak 0\), so the linear term \(16\E\eta\) in the binomial expansion is nonpositive. The same termwise estimate gives
+\[
+\E(1+\eta)^{16}
+\le1+\alpha[(1+x)^{16}-1-16x].
+\tag{Q51.2.3}\label{eq:Q51:2.3}
+\]
+The scalar comparisons \eqref{eq:Q49:4.4}--\eqref{eq:Q49:5.2} use only \(c,\allowbreak d,\allowbreak x\). In particular,
+\[
+\begin{gathered}
+x\le64/333<1/5,\qquad w=1/c,\qquad w^2-w=(153/32)x^2,\\
+w^{16}-1-\alpha[(1+x)^{16}-1-16x]\ge(263/1152)x^2,\qquad c^{14}>1/8,\\
+(263/1152)c^{16}x^2\ge(263/110592)d\ge d/500.
+\end{gathered}
+\]
+Together with \eqref{eq:Q51:2.3}, this proves \eqref{eq:Q51:2.2} with the stated one-sided mean condition.
+
+\paragraph{Q51.3 Finite positive convolution}
+Define
+\[
+\beta_1=\beta_2=0,\qquad
+\beta_j=\sum_{i=1}^{\lfloor(j-1)/2\rfloor}(-1)^{i-1}\delta_i
+\quad(j\ge3),\qquad
+S_b=\sum_{j=0}^bK^j\one.
+\]
+Apply Lemma~\ref{lem:odd-common:spectral} after full reversal,
+\((B,u,T,\bar f_n)\mapsto(K,g,A,f_n)\). Its recursion gives
+\[
+1-\E S_{b-1}=\beta_b,\qquad S_b=AS_{b-1}+\beta_b.
+\tag{Q51.3.1}\label{eq:Q51:3.1}
+\]
+and \eqref{eq:Q188:conv} gives
+\[
+S_b=f_b+\sum_{j=3}^b\beta_jf_{b-j}.
+\tag{Q51.3.2}\label{eq:Q51:3.2}
+\]
+with
+\[
+\tau:=d-\delta_2\le\beta_j\le d\qquad(j\ge3).
+\tag{Q51.3.3}\label{eq:Q51:3.3}
+\]
+Retaining the \(j=b\) term, since \(f_\ell\ge0\), yields
+\[
+f_b\le S_b-\beta_b.
+\tag{Q51.3.4}\label{eq:Q51:3.4}
+\]
+
+\paragraph{Q51.4 Every $b\ge\allowbreak 4$}
+Fix \(b\ge\allowbreak 4\) and set
+\[
+R=\sum_{j=2}^bK^j\one,\qquad
+a=1-\beta_b/2,\qquad t_0=\beta_{b+1}=-\E R,\qquad
+V=\E R^2,\qquad Z=KR.
+\]
+Equation \eqref{eq:Q51:3.4} gives
+\(q+f_b\le\allowbreak 2-\beta_b+R=\allowbreak 2a+R\).
+AM--GM therefore yields \(F_b=\allowbreak qf_b\le\allowbreak (a+R/2)^2\).
+Using positivity and \(T(R^2)\le\allowbreak 2V\), we obtain
+\[
+TF_b\le a^2q-at_0-aZ+V/2.
+\tag{Q51.4.1}\label{eq:Q51:4.1}
+\]
+Its right side is nonnegative. Apply AM--GM to \(ap\) and that right side divided by \(a\):
+\[
+H_b\le[a-t_0/2-Z/2+V/(4a)]^2.
+\tag{Q51.4.2}\label{eq:Q51:4.2}
+\]
+The bracket is half the sum of these two nonnegative quantities.
+
+For \(G_N(z)=\allowbreak \sum_{j=\allowbreak 0}^{N-1}z^j\), every \(N\ge\allowbreak 3\) satisfies
+\[
+|G_N(i\sqrt x)|^2\le1\qquad(0\le x\le\theta).
+\tag{Q51.4.3}\label{eq:Q51:4.3}
+\]
+At \(x=\allowbreak 0\), this is direct. For odd \(N\), the ratio is
+\((1+x^N)/(1+x)\le\allowbreak 1\).
+For \(4\mid N\), the numerator is \((1-x^{N/2})^2\le\allowbreak 1\), with denominator \(1+x\).
+For \(N\equiv2\pmod4\), \(N\ge\allowbreak 6\), the required inequality is
+\(2x^{N/2-1}+x^{N-1}\le\allowbreak 1\).
+Its left side is at most \(2\theta^2+\theta^5<\allowbreak 1/2<\allowbreak 1\), because
+\(\theta^2=\allowbreak 169/1024<\allowbreak 1/6\) and \(\theta^5<\allowbreak \theta^2<\allowbreak 1/6\).
+The finite-dimensional spectral theorem gives \(\|G_N(K)\|\le\allowbreak 1\).
+
+Since \(R=\allowbreak KG_{b-1}(K)g\) and \(b-1\ge\allowbreak 3\),
+\[
+V\le\theta d,\qquad
+\E Z^2=\|KR\|_2^2\le\theta^2d,\qquad
+|Z(x)|^2=|K^2G_{b-1}(K)g(x)|^2\le d/3.
+\tag{Q51.4.4}\label{eq:Q51:4.4}
+\]
+The final bound uses \eqref{eq:Q49:2.3}.
+Moreover, \(\E Z=\allowbreak \E KR\) is the nonempty alternating sum beginning with \(\delta_2\), so
+\[
+\delta_2-\delta_3\le\E Z\le\delta_2,\qquad \E Z\ge0.
+\tag{Q51.4.5}\label{eq:Q51:4.5}
+\]
+
+Using \(\beta_b,\allowbreak t_0\ge\allowbreak \tau\ge\allowbreak 19d/32\), \(a\ge\allowbreak 1-d/2\ge\allowbreak 5/6\), and
+\eqref{eq:Q51:4.4},
+\[
+a-t_0/2+V/(4a)
+\le1-\tau+(3/10)\theta d
+\le1-(151/320)d
+\le1-(51/128)d=:c.
+\tag{Q51.4.6}\label{eq:Q51:4.6}
+\]
+The last coefficient difference is \(151/320-51/128=\allowbreak 47/640>\allowbreak 0\).
+Enlarging the nonnegative bracket in \eqref{eq:Q51:4.2} gives
+\[
+0\le H_b\le(c-Z/2)^2.
+\tag{Q51.4.7}\label{eq:Q51:4.7}
+\]
+The conditions \eqref{eq:Q51:4.4}--\eqref{eq:Q51:4.5} allow
+\eqref{eq:Q51:2.2}, proving \eqref{eq:Q51:1.1} for every \(b\ge\allowbreak 4\).
+
+\paragraph{Q51.5 The remaining arm length $b=\allowbreak 3$}
+Here \(f_3=\allowbreak p-d+r+s\), so
+\[
+q+f_3=2-d+r+s=2a+R,\qquad
+a=1-d/2,\quad R=r+s,\quad V=\delta_2+\delta_3,\quad Z=KR=s+t.
+\]
+Positivity and the same AM--GM step give
+\[
+H_3\le[a-d/2-Z/2+V/(4a)]^2.
+\tag{Q51.5.1}\label{eq:Q51:5.1}
+\]
+We have \(\E R=\allowbreak -d\), \(\E(rs)=\allowbreak 0\), \(a\ge\allowbreak 5/6\), and
+\(V\le\allowbreak \theta(1+\theta)d\). Thus
+\[
+a-d/2+V/(4a)
+\le1-d+(3/10)\theta(1+\theta)d
+=1-(1697/2048)d
+\le1-(4/5)d=:c.
+\tag{Q51.5.2}\label{eq:Q51:5.2}
+\]
+The last coefficient difference is \(1697/2048-4/5=\allowbreak 293/10240>\allowbreak 0\).
+Since the original bracket is nonnegative,
+\[
+0\le H_3\le(c-Z/2)^2.
+\tag{Q51.5.3}\label{eq:Q51:5.3}
+\]
+Skewness gives \(\E(gr)=\allowbreak 0\) and \(\E(st)=\allowbreak 0\). The row bound yields
+\[
+\begin{gathered}
+\E Z=\delta_2\ge0,\qquad
+|Z(x)|^2=|K^2(g+r)(x)|^2\le(d+\delta_2)/3\le Bd,\\
+\E Z^2=\delta_3+\delta_4
+\le\theta^2(1+\theta)d=\alpha Bd,\\
+B=(1+\theta)/3=15/32,\qquad \alpha=3\theta^2=507/1024.
+\end{gathered}
+\tag{Q51.5.4}\label{eq:Q51:5.4}
+\]
+The case \(d=\allowbreak 0\) is equality. For \(d>\allowbreak 0\), put
+\[
+x=\frac{\sqrt{Bd}}{2c},\qquad
+\eta=-\frac Z{2c},\qquad w=1/c,\qquad
+k=\frac{4(4/5)}B=\frac{512}{75}.
+\]
+Then \(|\eta|\le\allowbreak  x\), \(\E\eta\le\allowbreak 0\), \(\E\eta^2\le\allowbreak \alpha x^2\), and
+\[
+w^2-w=kx^2.
+\tag{Q51.5.5}\label{eq:Q51:5.5}
+\]
+The variable \(x\) increases with \(d\). At \(d=\allowbreak 1/3\), \(c=\allowbreak 11/15\), giving
+\[
+x^2\le1125/15488<1152/15488=(3/11)^2.
+\tag{Q51.5.6}\label{eq:Q51:5.6}
+\]
+The binomial terms after degree five have consecutive ratio at most
+\((11/6)(3/11)=\allowbreak 1/2\). Hence
+\[
+\sum_{j=5}^{16}\binom{16}{j}x^j\le8736x^5<9000x^5.
+\tag{Q51.5.7}\label{eq:Q51:5.7}
+\]
+The Lucas identity \eqref{eq:Q49:4.5} gives, for this \(k\),
+\[
+w^{16}\ge1+16kx^2+104k^2x^4+352k^3x^6.
+\tag{Q51.5.8}\label{eq:Q51:5.8}
+\]
+Since \(k>\allowbreak 34/5\) and \(\alpha<\allowbreak 1/2\),
+\[
+\begin{aligned}
+16k-120\alpha&>16(34/5)-60=244/5>48,\\
+560\alpha&<280,\\
+104k^2-1820\alpha&>104(34/5)^2-910=97474/25>3800,\\
+9000\alpha&<4500,\\
+352k^3&>352(34/5)^3=13835008/125>110000.
+\end{aligned}
+\]
+Combining the tail estimate and the Lucas lower bound,
+\[
+w^{16}-1-\alpha[(1+x)^{16}-1-16x]
+\ge x^2[48-280x+3800x^2-4500x^3+110000x^4].
+\tag{Q51.5.9}\label{eq:Q51:5.9}
+\]
+The bracket equals
+\[
+(48-280x+1000x^2)+x^2(2800-4500x+110000x^2).
+\]
+The first quadratic has minimum
+\(48-280^2/4000=\allowbreak 142/5>\allowbreak 28\).
+The second is positive for every real \(x\), because
+\[
+4500^2=20250000<1232000000=4\cdot2800\cdot110000.
+\]
+Thus the difference in \eqref{eq:Q51:5.9} is at least \(28x^2\).
+The binomial expectation bound \eqref{eq:Q51:2.3} applies with \(\E\eta\le\allowbreak 0\), giving
+\[
+\E H_3^8\le1-28c^{16}x^2=1-7Bc^{14}d.
+\tag{Q51.5.10}\label{eq:Q51:5.10}
+\]
+Finally \(c\ge\allowbreak 11/15>\allowbreak 2/3\), and
+\((2/3)^{14}=\allowbreak 16384/4782969>\allowbreak 1/300\), since
+\(16384\cdot300=\allowbreak 4915200>\allowbreak 4782969\).
+Therefore
+\(7Bc^{14}>\allowbreak 7(15/32)/300=\allowbreak 7/640>\allowbreak 1/500\).
+This proves \eqref{eq:Q51:1.1} for \(b=\allowbreak 3\), and completes the unit-connector catalogue together with \(b=\allowbreak 2\) and \(b\ge\allowbreak 4\).

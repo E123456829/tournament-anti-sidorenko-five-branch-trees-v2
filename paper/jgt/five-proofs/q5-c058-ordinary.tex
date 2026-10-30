@@ -1,0 +1,417 @@
+\subsection{Ordinary eighth moments for every short-one terminal}\label{proof:Q5-C058-ordinary}
+Let \(K\) be a real antisymmetric kernel with \(|K|\le\allowbreak 1\) on a nonempty finite probability space \((X,\allowbreak \mu)\). Use the finite notation, square envelope and signed coefficients of Section~\ref{proof:Q5-C058}, in particular \eqref{eq:L58:finiteinputs}, \eqref{eq:L58:propagation} and \eqref{eq:L58:receiving}. In this calculation write \(B_0=\allowbreak -K\) and \(g'=\allowbreak B_0\one=\allowbreak -g\). Put
+\[
+F_b=qf_b,\qquad X_{b,L}=T^L(qf_b),\qquad H_{b,L}=pX_{b,L}.
+\tag{Q58O.0.1}\label{eq:Q58O:0.1}
+\]
+The terminal unit arm points inward, the \(b\)-edge arm points outward, every connector edge points toward the receiving root, and the receiving unit arm points outward. These directions are fixed by the original structure.
+
+We prove the ordinary-eighth bound for every \(b\ge\allowbreak 3,\allowbreak L\ge\allowbreak 2\), with deficits \(d/2000\) for \(L\ge\allowbreak 4\), \(d/12000\) for \(L=\allowbreak 3\), and \(d/3000\) for \(L=\allowbreak 2\).
+The \(b=\allowbreak 2,\allowbreak L\ge\allowbreak 2\) rows follow from Section~\ref{proof:Q5-C050}; the \(L=\allowbreak 1\) rows for every \(b\ge\allowbreak 2\) follow from Section~\ref{proof:Q5-C051}, using the scalar estimate of Section~\ref{proof:Q5-C049}. Their combination gives
+\[
+\boxed{\E H_{b,L}^8\le1-d/12000\qquad(b\ge2,\ L\ge1).}
+\tag{Q58O.0.2}\label{eq:Q58O:0.2}
+\]
+All calculations below use \(\mu\). At \(d=\allowbreak 0\), leaf integration gives every message equal to one; divisions by \(d\) are used only for \(d>\allowbreak 0\).
+
+\paragraph{Q58O.2 Fixed-node Hermite comparison and the Lucas polynomial}
+Suppose \(N\) is real with \(|N|\le\allowbreak  u\), \(\E N\le\allowbreak -a\) and
+\(\E N^2\le\allowbreak  hu^2\), where \(0<\allowbreak h\le\allowbreak 1/2\) and \(a\ge\allowbreak 0\).
+Take \(c>\allowbreak 0\) and \(x=\allowbreak u/(2c)<\allowbreak 1\).
+For \(f(z)=\allowbreak (1+z/(2c))^{16}\), quadratic Hermite interpolation with double contact at \(-hu\) and single contact at \(u\) is an upper bound on \([-u,\allowbreak u]\), since \(f'''\ge\allowbreak 0\) and \(z-u\le\allowbreak 0\).
+Both the quadratic and the mean coefficients are nonnegative. Consequently
+\[
+E(1+N/(2c))^{16}\le M_h(x)-\frac a uD_h(x),
+\tag{Q58O.2.1}\label{eq:Q58O:2.1}
+\]
+
+Here
+\[
+\begin{aligned}
+M_h(x)&=\frac{h(1+x)^{16}+(1-hx)^{16}}{1+h},\\
+D_h(x)&=\frac{1-h}{1+h}\,16x(1-hx)^{15}
++\frac{2h}{(1+h)^2}\bigl[(1+x)^{16}-(1-hx)^{16}\bigr].
+\end{aligned}
+\]
+In this scalar comparison, write the degree-\(j\) coefficients as
+\(\binom{16}{j}M_j\) and \(\binom{16}{j}D_j\). Then
+\[
+M_j=\frac{h+(-h)^j}{1+h},\quad
+D_j=\frac{1-h}{1+h}j(-h)^{j-1}
++\frac{2h}{(1+h)^2}(1-(-h)^j).
+\tag{Q58O.2.2}\label{eq:Q58O:2.2}
+\]
+
+We have \(M_0=\allowbreak 1\), \(M_1=\allowbreak 0\), \(M_2=\allowbreak h\), \(M_3=\allowbreak h(1-h)\), and
+\(M_j\le\allowbreak  M_4=\allowbreak h(1-h+h^2)\) for \(j\ge\allowbreak 4\).
+Every \(D_j\ge\allowbreak 0\). For even \(j\ge\allowbreak 4\), after factoring
+\(h(1-h)/(1+h)^2\), the remainder is
+\[
+2\sum_{i=0}^{j-1}h^i-jh^{j-2}(1+h)>0,
+\]
+because \(jh^{j-2}\le\allowbreak 1\).
+The low-degree values used below are
+\[
+D_1=1,\ D_2=0,\ D_3=h(2-h),\ D_4=2h(1-h)^2,
+\quad D_5=2h-4h^2+6h^3-3h^4.
+\tag{Q58O.2.3}\label{eq:Q58O:2.3}
+\]
+
+
+If \(c=\allowbreak 1-Ad\), \(u^2=\allowbreak Md\) and \(w=\allowbreak 1/c\), then
+\(w^2-w=\allowbreak k_0x^2\), where \(k_0=\allowbreak 4A/M\).
+Put \(v=\allowbreak w-1\ge\allowbreak 0\) and \(t=\allowbreak k_0x^2=\allowbreak wv\). The finite Lucas identity gives
+\[
+w^{16}+v^{16}=1+16t+104t^2+352t^3+660t^4
++672t^5+336t^6+64t^7+2t^8.
+\]
+
+Since \(v^{16}\le\allowbreak  t^8\),
+\[
+w^{16}\ge1+16t+104t^2+352t^3+660t^4
++672t^5+336t^6+64t^7+t^8.
+\tag{Q58O.2.4}\label{eq:Q58O:2.4}
+\]
+
+The identity follows from \(S_0=\allowbreak 2\), \(S_1=\allowbreak 1\) and
+\(S_n=\allowbreak S_{n-1}+tS_{n-2}\).
+
+If \(\E N\le\allowbreak -b(d)d\), then
+\(a/u\ge\allowbreak [2b(d)c/M]x\). Denote the coefficient in brackets by \(\ell(d)\).
+Equations \eqref{eq:Q58O:2.1} and \eqref{eq:Q58O:2.4} reduce the estimate to a positive lower bound for
+\(w^{16}-M_h(x)+\ell(d)xD_h(x)\), using the mean, second moment and row bound of the same \(N\).
+
+\paragraph{Q58O.3 Three scalar estimates on the full continuous domains}
+\emph{Scalar I.}
+Assume \(|N|^2\le\allowbreak  d\), \(\E N\le\allowbreak -d/2\), \(\E N^2\le\allowbreak \theta d\), and set \(c=\allowbreak 1-3d/4\).
+Then \(h=\allowbreak \theta\), \(k_0=\allowbreak 3\), \(c\ge\allowbreak 3/4\), \(x<\allowbreak 1\), and
+\(\ell(d)=\allowbreak c\ge\allowbreak 3/4\).
+Also \(M_4<\allowbreak 5/16\), \(560M_3<\allowbreak 136\), and \(560D_3>\allowbreak 350\).
+After division by \(x^2\), the difference from \eqref{eq:Q58O:2.4} is at least
+\[
+\begin{aligned}
+Q_I(x)&=45/4-136x+629x^2-1365x^3+7000x^4\\
+&\quad -3575x^5+49000x^6-3575x^7+160000x^8\\
+&\quad -1365x^9+244000x^{10}-175x^{11}+139000x^{12}-5x^{13}+6500x^{14}.
+\end{aligned}
+\]
+
+The quartic coefficient is at least
+\(936-1820(5/16)+(3/4)350=\allowbreak 629.75\).
+From degree six onward, retain the positive Lucas terms and use \(M_j\le\allowbreak 5/16\).
+The polynomial decomposes as
+\[
+\begin{aligned}
+Q_I={}&(45/4-136x+420x^2)+x^2(209-1365x+2400x^2)\\
+&+x^4(4600-3575x+1000x^2)+x^6(48000-3575x+100x^2)\\
+&+x^8(159900-1365x+10x^2)+x^{10}(243990-175x+x^2)\\
+&+x^{12}(138999-5x+x^2)+6499x^{14}.
+\end{aligned}
+\tag{Q58O.3.1}\label{eq:Q58O:3.1}
+\]
+
+Every bracket has negative discriminant; the first has minimum \(101/420\).
+Thus every nonnegative \(H\le\allowbreak (c+N/2)^2\) satisfies
+\[
+EH^8\le1-(101/1680)c^{14}d\le1-d/2000.
+\tag{Q58O.3.2}\label{eq:Q58O:3.2}
+\]
+
+Here \((3/4)^{14}>\allowbreak 1/64\).
+
+\emph{Scalar II.}
+Let \(M=\allowbreak 71/63\), and suppose
+\[
+|N|^2\le Md,\qquad \E N^2\le\theta Md,\qquad
+\E N\le-(4/5-6d/5)d,\qquad c=1-4d/5.
+\]
+Then \(k_0=\allowbreak 1008/355>\allowbreak 17/6\), \(c\ge\allowbreak 11/15\), \(x<\allowbreak 1\), and
+\[
+\ell(d)=\frac{2c(4/5-6d/5)}M\ge\frac{44}{75M}>13/25.
+\]
+
+Since \(d=\allowbreak 4c^2x^2/M\le\allowbreak 4x^2/M\), we also have
+\[
+\ell(d)\ge\frac8{5M}-\frac{368}{25M^2}x^2.
+\tag{Q58O.3.3}\label{eq:Q58O:3.3}
+\]
+
+Use \eqref{eq:Q58O:3.3} for \(D_1\), and \(\ell>\allowbreak 13/25\) for
+\(D_3,\allowbreak D_4,\allowbreak D_5\); discard the remaining positive terms.
+The difference divided by \(x^2\) is at least
+\[
+\begin{aligned}
+Q_{II}(x)&=155/8-(1351/10)x+274x^2-960x^3+6500x^4\\
+&\quad -3575x^5+38000x^6-3575x^7+120000x^8\\
+&\quad -1365x^9+170000x^{10}-175x^{11}+90000x^{12}-5x^{13}+4000x^{14}.
+\end{aligned}
+\]
+
+The quadratic coefficient is
+\(384/(5M)-195/4>\allowbreak 155/8\), and
+\(560M_3=\allowbreak 8645/64<\allowbreak 1351/10\).
+The quartic coefficient is at least
+\[
+20736/(25M^2)-1820M_4+560D_3\cdot44/(75M)>274,
+\]
+using \(M^2<\allowbreak 1271/1000\), \(20736/(25M^2)>\allowbreak 652\),
+\(M_4<\allowbreak 31/100\), and \(D_3>\allowbreak 16/25\).
+The magnitude of the negative quintic coefficient is below
+\[
+4368(9/32)-1820(2/7)(13/25)=958.1<960,
+\]
+because \(M_5<\allowbreak 9/32\) and \(D_4>\allowbreak 2/7\).
+The sextic coefficient exceeds \(8000-2483+1067=\allowbreak 6584>\allowbreak 6500\), by
+\(352k_0^3>\allowbreak 8000\), \(M_6<\allowbreak 31/100\), and
+\(D_5=\allowbreak 495885/1048576>\allowbreak 47/100\).
+The remaining even coefficients, using \(k_0>\allowbreak 17/6\), exceed
+\(38000,\allowbreak 120000,\allowbreak 170000,\allowbreak 90000,\allowbreak 4000\), respectively.
+The magnitudes of the remaining negative odd coefficients, using
+\(M_j<\allowbreak 31/100\), are below \(3575,\allowbreak 3575,\allowbreak 1365,\allowbreak 175,\allowbreak 5\).
+
+The decomposition is
+\[
+\begin{aligned}
+Q_{II}={}&(155/8-(1351/10)x+237x^2)+x^2(37-960x+6400x^2)\\
+&+x^4(100-3575x+32000x^2)+x^6(6000-3575x+600x^2)\\
+&+x^8(119400-1365x+10x^2)+x^{10}(169990-175x+x^2)\\
+&+x^{12}(89999-5x+x^2)+3999x^{14}.
+\end{aligned}
+\tag{Q58O.3.4}\label{eq:Q58O:3.4}
+\]
+
+Every bracket is positive. The first has minimum
+\(11549/94800>\allowbreak 1/10\), and the second has minimum one.
+For \(0\le\allowbreak  H\le\allowbreak (c+N/2)^2\), this gives
+\[
+EH^8\le1-(M/40)c^{14}d\le1-d/12000.
+\tag{Q58O.3.5}\label{eq:Q58O:3.5}
+\]
+
+Use \(c\ge\allowbreak 11/15>\allowbreak 2/3\) and \((2/3)^{14}>\allowbreak 1/300\).
+
+\emph{Scalar III.}
+Assume
+\[
+|N|^2\le d,\qquad \E N\le-41d/96,\qquad
+\E N^2\le3d/10,\qquad c=1-37d/64.
+\]
+Then \(h=\allowbreak 3/10\), \(k_0=\allowbreak 37/16\), \(c\ge\allowbreak 155/192\), \(x<\allowbreak 1\), and
+\(\ell(d)\ge\allowbreak 6355/9216>\allowbreak 11/16\).
+The difference divided by \(x^2\) is at least
+\[
+\begin{aligned}
+Q_{III}(x)&=12-118x+321x^2-632x^3+3500x^4\\
+&\quad -2720x^5+15800x^6-2720x^7+42000x^8\\
+&\quad -1040x^9+50000x^{10}-133x^{11}+22000x^{12}-4x^{13}+800x^{14}.
+\end{aligned}
+\]
+
+Here
+\[
+\begin{gathered}
+M_3=21/100,\quad M_4=237/1000,\quad M_5=2289/10000,\quad\\
+D_3=51/100,\quad D_4=147/500,\quad D_5=3777/10000>3/8.
+\end{gathered}
+\]
+The quadratic coefficient exceeds \(37-36+11=\allowbreak 12\).
+The quartic coefficient exceeds
+\(17797/32-431.34+196.35=\allowbreak 321.16625\).
+The magnitude of the negative quintic coefficient is below
+\[
+4368(2289/10000)-(11/16)1820(147/500)=631.9677<632.
+\]
+The sextic coefficient exceeds \(557183/128-1898+1126>\allowbreak 3500\).
+Using \(k_0^4>\allowbreak 200/7\) and \(k_0^2>\allowbreak 53/10\), the subsequent even coefficients exceed
+\(15800,\allowbreak 42000,\allowbreak 50000,\allowbreak 22000,\allowbreak 800\); the remaining odd terms use
+\(M_j\le\allowbreak 237/1000\).
+
+We have the decomposition
+\[
+\begin{aligned}
+Q_{III}={}&(12-118x+291x^2)+x^2(30-632x+3330x^2)\\
+&+x^4(170-2720x+11000x^2)+x^6(4800-2720x+400x^2)\\
+&+x^8(41600-1040x+10x^2)+x^{10}(49990-133x+x^2)\\
+&+x^{12}(21999-4x+x^2)+799x^{14}.
+\end{aligned}
+\tag{Q58O.3.6}\label{eq:Q58O:3.6}
+\]
+
+Every bracket is positive, and the first has minimum \(11/291\).
+Thus \(0\le\allowbreak  H\le\allowbreak (c+N/2)^2\) implies
+\[
+EH^8\le1-(11/1164)c^{14}d\le1-d/3000.
+\tag{Q58O.3.7}\label{eq:Q58O:3.7}
+\]
+
+Use \(c>\allowbreak 4/5\) and \((4/5)^{14}>\allowbreak 1/25\).
+The displayed terminating decimals denote exact finite rational numbers.
+
+\paragraph{Q58O.4 Every $b\ge\allowbreak 3$ and $L\ge\allowbreak 4$}
+In the finite envelope \eqref{eq:L58:propagation}, retain
+\(\varepsilon_L\bar f_0\) and \(\varepsilon_{L-1}\bar f_1\).
+Both coefficients are at least \(d/2\).
+Moreover, \(R_L=\allowbreak V_L-q\) satisfies
+\[
+\E R_L\le-\tau\le-d/2,\qquad |R_L|^2\le d,\qquad
+\E R_L^2\le\theta d.
+\]
+Hence
+\[
+X_{b,L}\le m^2[(1-d/2)q+R_L-d/2].
+\]
+
+From \(\beta_b\le\allowbreak  d\) and \(\beta_b\ge\allowbreak \kappa d\),
+\[
+m^2=1-\beta_b+\beta_b^2/4\le1-(11\kappa/12)d\le1-d/2.
+\]
+AM--GM gives
+\[
+H_{b,L}\le(1-3d/4+R_L/2)^2.
+\tag{Q58O.4.1}\label{eq:Q58O:4.1}
+\]
+
+The square base is the average of two nonnegative factors, and
+\(m^2/(1-d/2)\le\allowbreak 1\). Scalar I now gives
+\(\E H_{b,\allowbreak L}^8\le\allowbreak 1-d/2000\).
+
+\paragraph{Q58O.5 Every $b\ge\allowbreak 3$ at $L=\allowbreak 3$}
+Expanding \(\bar f_2=\allowbreak q+r\) in \eqref{eq:L58:propagation} gives
+\[
+X_{b,3}\le m^2[V_3-\gamma r-a-B_*q],\quad a=d-k\rho\ge41d/80.
+\]
+
+Put \(N=\allowbreak V_3-\gamma r-q\). Its row polynomial is \(P_2-\gamma\).
+The real part of \(P_2\) is at least \(1-(6/5)\theta^2>\allowbreak 4/5\), while
+\(\gamma\le\allowbreak 2/5\); subtracting \(\gamma\) therefore does not increase the modulus.
+Thus \(|N|^2\le\allowbreak  Md\) and \(\E N^2\le\allowbreak \theta Md\), where \(M=\allowbreak 71/63\).
+Also
+\[
+-EN=d-kD_3-\gamma d
+\ge(4/5-6d/5)d.
+\tag{Q58O.5.1}\label{eq:Q58O:5.1}
+\]
+
+Here \(D_3\le\allowbreak \delta_3\le\allowbreak \theta^2d\) and
+\(1-(6/5)\theta^2>\allowbreak 4/5\).
+Let \(B=\allowbreak 1-(209/384)d\). The bound above gives \(m^2\le\allowbreak  B\), and
+\(B_*\ge\allowbreak 5d/8>\allowbreak (209/384)d\).
+The positive envelope and AM--GM give
+\[
+H_{b,3}\le[B-(41/160)d+N/2]^2
+\le(1-4d/5+N/2)^2,
+\tag{Q58O.5.2}\label{eq:Q58O:5.2}
+\]
+
+Indeed \(209/384+41/160=\allowbreak 1537/1920>\allowbreak 4/5\).
+Scalar II proves \(\E H_{b,\allowbreak 3}^8\le\allowbreak 1-d/12000\).
+
+\paragraph{Q58O.6 Every $b\ge\allowbreak 3$ at $L=\allowbreak 2$}
+Keep the dependence between \(m,\allowbreak \gamma\) and the finite arm tail.
+Let \(B=\allowbreak 1-\gamma>\allowbreak 0\) be a scalar, distinct from the operator \(B_0=\allowbreak -K\), and put \(R_2=\allowbreak r+kK^2R\).
+The envelope is
+\[
+X_{b,2}\le m^2[Bq+R_2-a_1].
+\]
+
+AM--GM gives \(H_{b,\allowbreak 2}\le\allowbreak (c_*+N/2)^2\), where
+\[
+N=\frac m{\sqrt B}R_2,\quad
+c_*=m\sqrt B-\frac{ma_1}{2\sqrt B}
+\le m(1-B_*/2)\le1-\frac{1777}{3072}d\le1-37d/64.
+\tag{Q58O.6.1}\label{eq:Q58O:6.1}
+\]
+
+This uses \(m\le\allowbreak 1-\kappa d/2\), \(B_*\ge\allowbreak 5d/8\), and \(d\le\allowbreak 1/3\).
+
+\emph{The row bound.}
+Write \(R_2=\allowbreak Kw\), \(w=\allowbreak g+kKR\), so
+\(\|w\|_2^2=\allowbreak d-2k\rho+k^2U\).
+For all \(b\ge\allowbreak 3\),
+\(2m\rho-U\ge\allowbreak 7\delta_2/12\):
+when \(b\ge\allowbreak 4\), use \(V\le\allowbreak \delta_2\) and \(\rho\ge\allowbreak \kappa\delta_2\);
+when \(b=\allowbreak 3\), use \(\rho=\allowbreak \delta_2\) and
+\(U\le\allowbreak \theta(1+\theta)\delta_2\), giving a stronger bound.
+Also \(t_0-\beta_b\le\allowbreak \delta_3\le\allowbreak \theta\delta_2\) and \(t_0\le\allowbreak  d\), hence
+\[
+1-m^2-\gamma\ge-\beta_b^2/4-\theta \delta_2-(3/5)\beta_b d.
+\]
+
+Therefore
+\[
+Bd-m^2\|w\|^2\ge[7/12-(17/20+\theta)d]\delta_2
+\ge79\delta_2/480\ge0.
+\tag{Q58O.6.2}\label{eq:Q58O:6.2}
+\]
+
+The row Cauchy--Schwarz inequality gives \(|N|^2\le\allowbreak  d\).
+
+\emph{The second-order filter and its coupled ratio.}
+At \(z=\allowbreak i\sqrt x\), write
+\(G_{b-1}(-z)=\allowbreak a_x-i\sqrt x\,\allowbreak b_x\), with
+\(\kappa\le\allowbreak 1-x\le\allowbreak  a_x,\allowbreak b_x\le\allowbreak 1\).
+Since \(P_1=\allowbreak 1+kz^2G_{b-1}(-z)\),
+\[
+|P_1|^2\le[1-kx(1-x)]^2+k^2x^3
+\le(1-x+x^2)^2+x^3.
+\]
+
+The middle expression decreases for \(1\le\allowbreak  k\le\allowbreak 6/5\), because
+\((6/5)x\le\allowbreak 1-x\).
+Multiplying the last expression by \(x\) gives
+\(x-2x^2+3x^3-x^4+x^5\), whose derivative is
+\((1-2x)^2+x^2(5-4x+5x^2)>\allowbreak 0\).
+Consequently
+\[
+ER_2^2\le(4/15)d,
+\tag{Q58O.6.3}\label{eq:Q58O:6.3}
+\]
+
+The endpoint value is \(8762429/33554432<\allowbreak 4/15\), with cross-product difference \(2781293>\allowbreak 0\).
+
+To bound the ratio \(m^2/B\), set
+\(C=\allowbreak m^2B=\allowbreak m^2-mt_0+V/2\).
+For \(b=\allowbreak 3,\allowbreak 4\), \(\beta_b=\allowbreak d\), \(m=\allowbreak 1-d/2\), and
+\(C\ge\allowbreak  m^2-md+d^2/2\).
+For \(b=\allowbreak 3\), use \(V\ge\allowbreak \delta_2\ge\allowbreak  d^2\).
+For \(b=\allowbreak 4\), \(t_0=\allowbreak d-\delta_2\), so the difference between
+\(-mt_0\) and \(-md\) is \(m\delta_2\ge\allowbreak  d^2/2\).
+Thus
+\[
+C-(8/9)m^4\ge1/9-(2/9)d-d^2/12+(4/9)d^3-d^4/18
+\ge79/2916>0.
+\]
+
+For \(b\ge\allowbreak 5\), \(\beta_b\le\allowbreak  d-\kappa\delta_2\le\allowbreak 77/288\), so
+\(m\ge\allowbreak 499/576>\allowbreak 6/7\).
+The function \(f(m)=\allowbreak 3m^2-2m-(8/9)m^4\) increases on \([6/7,\allowbreak 1]\), with
+\(f(6/7)=\allowbreak 24/2401\).
+If \(t_0\le\allowbreak \beta_b\), then
+\(C-(8/9)m^4\ge\allowbreak  f(m)>\allowbreak 0\).
+If \(t_0>\allowbreak \beta_b\), then \(b\equiv2\pmod4\), \(b\ge\allowbreak 6\), and
+\(t_0-\beta_b\le\allowbreak \theta\delta_2\).
+Now \(b-1\) is odd, and
+\[
+|G_{b-1}(i\sqrt x)|^2=\frac{1+x^{b-1}}{1+x}\ge32/45,
+\]
+so \(V\ge\allowbreak (32/45)\delta_2\). Therefore
+\[
+C-(8/9)m^4\ge24/2401-(73/1440)\delta_2
+\ge24/2401-949/138240>0.
+\tag{Q58O.6.4}\label{eq:Q58O:6.4}
+\]
+
+This proves \(m^2/B\le\allowbreak 9/8\) for every \(b\).
+Together with \eqref{eq:Q58O:6.3}, it gives
+\(\E N^2\le\allowbreak (9/8)(4/15)d=\allowbreak 3d/10\).
+The signed mean is
+\(\E N=\allowbreak -(md-\rho)/\sqrt B\le\allowbreak -41d/96\).
+Scalar III applies to this same \(N\); using \eqref{eq:Q58O:6.1}, we obtain
+\(\E H_{b,\allowbreak 2}^8\le\allowbreak 1-d/3000\).
+
+\paragraph{Q58O.7 The ordinary-eighth catalogue}
+The estimates for \(b\ge\allowbreak 3,\allowbreak L\ge\allowbreak 2\) have common deficit \(d/12000\).
+Combine them with the \(b=\allowbreak 2\) positive-connector bounds of Section~\ref{proof:Q5-C050} and the unit-connector bounds of Section~\ref{proof:Q5-C051} to obtain \eqref{eq:Q58O:0.2}.
+The eight-copy root construction has edge cover one, nonroot cost one and root cost \(1/8\), with the joint-law relative-entropy interface of the corresponding ordinary component.
+Restore genuine equal pairs by positivity, using their fixed \(f_\ell h_\ell\le\allowbreak 1\) directions.
+Complete reversal replaces \(K\) by \(-K\) and reverses the receiving arm, terminal arms, connector and equal pairs together.

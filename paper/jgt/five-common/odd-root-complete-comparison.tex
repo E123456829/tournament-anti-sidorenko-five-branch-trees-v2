@@ -1,0 +1,264 @@
+\subsection{Comparing complete certificates at the remaining odd roots}
+\label{sec:odd-complete:comparison}
+
+All operators and vectors in this section use the original finite
+probability measure. Write $z=i\sqrt x$, $\theta=13/32$,
+$\kappa=19/32$, $\tau=d-\delta_2$, and let $\nu$ have mass $d$.
+We compare the same actual positive terminal majorant
+\begin{equation}\label{eq:odd-complete:input}
+ X\le e^\alpha[Cq+c+BQ(B)u],\qquad
+ \gamma=C-1,\quad k_0=C+c-1.
+\end{equation}
+The coefficients $C,c$ and all moments of $Q$ retain their actual
+values. In particular $\gamma\one$ is a vector of norm $|\gamma|$.
+
+\paragraph{The finite bare-exponent packet.}
+For an actual $F\le e^{R-\Gamma}$, with $R=r(B)u$, put
+$D_i=\E B^iR$, $\delta=\E R+c_T\E R^2$ and
+$\epsilon=\delta+D_1$, using the pointwise Taylor coefficient
+$c_T$ proved for that terminal.
+The positive first row and its finite continuation give
+\[
+ e^\Gamma T^LF\le\bar f_L+\delta\bar f_{L-1}+B^LR
+                    +\sum_{i=1}^{L-1}D_i\bar f_{L-1-i}.
+\]
+Substituting the exact short paths into this same majorant gives
+the parameters of \eqref{eq:odd-complete:input}, with $\alpha=-\Gamma$:
+\begin{equation}\label{eq:odd-even:rows}
+\begin{array}{c|c|c|c}
+ L&C&c&Q\\\hline
+ 1&1&\delta&r\\
+ 2&1+\delta&D_1&1+zr\\
+ 3&1+\epsilon&-d+D_2&G_2+\delta+z^2r\\
+ \ge4&1-hd&2\delta_++2(D_1)_+-hd&G_{L-1}+z^{L-1}r.
+\end{array}
+\end{equation}
+The last row assumes $\gamma_i=\beta_i-D_{i-1}\ge hd$ also
+at the mean index $i=L+1$, and retains the final two paths
+$\bar f_0,\bar f_1$ from that positive convolution. The signed
+means in the four windows are exactly
+\begin{equation}\label{eq:odd-complete:bare-means}
+ D_1,\qquad -d+D_2,\qquad -(1+\delta)d+D_3,\qquad
+ -\gamma_{L+1}.
+\end{equation}
+Both the constant $C-1$ and these moments belong to the same $R$.
+
+\begin{lemma}[One certificate with an explicit constant split]
+\label{lem:odd-complete:certificate}
+Suppose an actual root pair satisfies
+$P\le\exp(BS-\zeta u-\Gamma_r)$, and its separate unit arm is $p$.
+For any real $\eta$ put
+\[
+ V=Q(B)u+S+(\gamma-\zeta-\eta)\one.
+\]
+Then $H=pPX$ has the pointwise certificate
+\begin{equation}\label{eq:odd-complete:certificate}
+ \log H\le\alpha+k_0-\Gamma_r+BV+\eta u-3u^2/10,
+\end{equation}
+and its complete fourth exponent is at most
+\[
+ 4(\alpha+k_0-\Gamma_r+\E BV)
+       +(17/4)\|V\|^2+(10/3)\eta^2.
+\]
+For the auxiliary pair $P_0\le e^{-d-B^2u}$, the choices
+$\eta=\gamma$ and $\eta=0$ give, respectively, the curved and
+full-constant baselines
+\begin{align}
+ J_0^c&=4(\alpha+k_0+\E BQu-d)
+        +(17/4)\|(Q-B)u\|^2+(10/3)\gamma^2,
+       \label{eq:odd-complete:baseline-curved}\\
+ J_0^f&=4(\alpha+k_0+\E BQu-d)
+        +(17/4)\|(Q-B)u+\gamma\one\|^2.
+       \label{eq:odd-complete:baseline-full}
+\end{align}
+\end{lemma}
+\begin{proof}
+Apply $\log y\le y-1$ to the positive bracket in
+\eqref{eq:odd-complete:input}, and add the actual pair envelope and
+$\log p\le-u-3u^2/10$. Since $B\one=u$, this gives
+\eqref{eq:odd-complete:certificate} exactly. Apply
+Lemma~\ref{lem:odd-common:fourth} to these complete vectors.
+\end{proof}
+
+\begin{lemma}[Minimum-one root transfers]
+\label{lem:odd-complete:minimum-one}
+Take $3\le a<b$ and the actual root $pW_a\bar f_b$.
+Write $Q=A+zD$. Suppose $A\ge0$, $D\le\bar D$, $\bar D\ge1$,
+$\|Q(B)u\|\le R\sqrt d$, and $\gamma\ge-\chi d$ on
+$0<d\le d_*$, with $0\le\chi\le17/10$, $d_*\le1/3$.
+Relative to the curved baseline, the complete exponent increments
+are at most
+\begin{align}
+ J_3-J_0^c&\le d\Phi(\bar D,\chi,d_*),
+    \label{eq:odd-complete:Phi}\\
+ J_{a\ge4}-J_0^c&\le d\Psi(\bar D,R),
+    \label{eq:odd-complete:Psi}
+\end{align}
+where
+\[
+\begin{aligned}
+ \Phi(\bar D,\chi,d_*)&=-8+
+ [12+(17/4)(2\bar D-1+\theta)]\theta
+       +(10/3)d_*[\kappa^2+2\chi\kappa],\\
+ \Psi(\bar D,R)&=-127/15+
+       (17/4)[(2\bar D-1)\theta+3R/4+9/64].
+\end{aligned}
+\]
+For a full-constant baseline with $\gamma\ge-\chi d$, use instead
+$\Phi(\bar D,0,d_*)$ or $\Psi(\bar D,R)$, and add at most
+\begin{equation}\label{eq:odd-complete:full-fees}
+ (17/6)\chi d\quad(a=3),\qquad
+ (17/6)\chi(1+\theta^2)d\quad(a\ge4).
+\end{equation}
+If $A\ge-\rho_0$ replaces $A\ge0$, replace
+$2\bar D-1$ by $2\bar D-1+2\rho_0$ in $\Phi$.
+\end{lemma}
+\begin{proof}
+The actual reversed length-three pair, including its constant loss,
+is Lemma~\ref{lem:odd-common:root-three} in the form
+\[
+ W_3\bar f_b\le e^{BS-\tau u-(3d-2\delta_2)},\qquad
+ S=-x(E+zF)u,
+ \quad0\le E,F\le1.
+\]
+The scalar plus signed-mean increment is at most
+$-8d+12\delta_2$. The nonconstant norm differences satisfy
+\[
+ (A-xE)^2-A^2\le x^2,
+ \qquad
+ x[(D-xF)^2-(D-1)^2]
+   =x(1-xF)(2D-1-xF)\le(2\bar D-1)x.
+\]
+The curved choice of Lemma~\ref{lem:odd-complete:certificate}
+changes $\gamma$ to $\gamma-\tau$, costing at most
+$(10/3)(\tau^2+2\chi d\tau)$.
+Only after integrating set $t=\delta_2/d$. The resulting upper
+\[
+ -8+[12+(17/4)(2\bar D-1+\theta)]t
+       +(10/3)d_*[(1-t)^2+2\chi(1-t)]
+\]
+increases on $[0,\theta]$: its derivative is at least
+$12+(17/4)(1+\theta)-(20/9)(1+17/10)>0$.
+This proves $\Phi$ without replacing the same global moment twice.
+For $A\ge-\rho_0$, its real norm difference adds $2\rho_0x$.
+
+For $a\ge4$, the actual pair estimate \eqref{eq:L96:long} gives
+\[
+ W_a\bar f_b\le e^{BS-16d/5},\qquad
+ S=\sum_{j=a+1}^{b}B^{j-2}u.
+\]
+Its contiguous finite mask gives
+$\|S\|<3\sqrt d/8$, $\E BS\le d/12$, and
+$-\delta_3\le\E S\le\delta_2$.
+Thus the scalar plus mean improves by at least $127d/15$.
+The base norm difference is
+$\|Qu\|^2-\|(Q-B)u\|^2=\int(2D-1)x\,d\nu$;
+the further norm increment is at most
+$2R(3/8)d+9d/64$. The curvature coefficient is unchanged,
+giving $\Psi$.
+
+For the full-constant convention choose $\eta=-\tau$ at $a=3$
+and $\eta=0$ at $a\ge4$. The additional exact cross term is
+$2\gamma\E(S+Bu)$, while
+$\E(S+Bu)\in[-d,-\tau]$ or
+$[-d-\delta_3,-\tau]$, respectively. A nonnegative $\gamma$
+helps; otherwise $\gamma\ge-\chi d$ and $d\le1/3$ give
+\eqref{eq:odd-complete:full-fees}, with the constant's signed mean
+retained inside both vectors.
+\end{proof}
+
+\begin{lemma}[Positive-root transfers, with signed overshoots]
+\label{lem:odd-complete:positive}
+Take the actual root $f_a h_b f_c$, $3\le a<b<c$.
+Write $G_{a-1}(-z)=E_a-zD_a$ and
+$S_{bc}=(r+zs)u=\sum_{j=b+1}^{c}(-1)^jB^{j-2}u$.
+Put $A_*=E_a+r$, $\phi=1-D_a+s$, and
+$V_*=(Q+G_{a-1}(-B))u+S_{bc}$.
+For $Q=U+zV$ define
+\[
+ \mathcal T(Q)=\frac{17}{2}\int
+ [(1+x^2)(U-1)_+ +(x^2+x^3)(V-1)_+ +x^3(-V)_+]\,d\nu.
+\]
+The complete exponent differences are bounded by
+\begin{align}
+ J_+-J_0^f&\le-11d/10+\mathcal T(Q)
+                 -(17/2)\gamma\int\phi\,d\nu,
+       \label{eq:odd-complete:positive-full}\\
+ J_+-J_0^c&\le-11d/10+\mathcal T(Q)
+                 +(17/2)\gamma\E V_*+(11/12)\gamma^2.
+       \label{eq:odd-complete:positive-curved}
+\end{align}
+Alternatively, if $Q=Q_0+\Delta Q$ with both normalized coordinates
+of $Q_0$ in $[0,1]$, replace $-11d/10+\mathcal T(Q)$ by
+\begin{equation}\label{eq:odd-complete:positive-norm}
+ -d+(34/3)\sqrt d\,\|\Delta Q(B)u\|.
+\end{equation}
+The same full-constant or curved correction still applies.
+\end{lemma}
+\begin{proof}
+Subtract the actual exponents in
+Lemma~\ref{lem:odd-common:replacement}. This gives its exact density
+$j_Q$, together with the displayed two distinct constant corrections.
+On $0\le U,V\le1$ the three actual finite root blocks have upper
+polynomials
+\[
+\begin{array}{c|l}
+ (a,b)&j_Q\text{ upper}\\\hline
+ (3,4)&-81/20+13x^2+(17/4)x^3+(17/4)x^4,\\
+ (3,b\ge5)&-81/20+13x^2+(17/2)x^3+(17/4)x^4+(17/4)x^5,\\
+ a\ge4&-81/20-5x+22x^2+(17/2)x^3+(17/4)x^4+(17/4)x^5.
+\end{array}
+\]
+For the first block $E_a=D_a=1$, $r=x^2F$, $s=xE$,
+with $0\le E,F\le1$, including the finite gap one.
+For $b\ge5$ the four starting residues give $|r|,|s|\le x^2$.
+Convexity selects $r=x^2$, then $U=1$; the imaginary part is
+affine in $V$ and convex in $D_a-s$.
+For $a\ge4$, $E_a\le1-x+x^2$, $D_a\ge1-x$; decreasing $E_a$
+from one saves at least $9x(1-x)$, while relaxing $-4D_a$ costs
+at most $4x$. These give the three displayed polynomials.
+The first two are below $-11/10$ using
+$\theta^2<1/6$, $\theta^3<1/14$, $\theta^4<1/36$.
+The third is convex on $[0,5/12]$; at its right endpoint its
+excess over $-3/2$ is $-87307/4976640$.
+
+All finite blocks also give
+$0<A_*\le1+x^2$, $-x^2\le\phi\le x+x^2$.
+The dependence of the exact density on the terminal coordinates is
+\[
+ \Delta j=(17/2)(A_*\Delta U+x\phi\Delta V).
+\]
+Clipping $Q$ into the unit rectangle therefore gives the three
+signed charges in $\mathcal T$. A negative real coordinate only
+helps. For the norm version the coefficient is at most
+$(17/2)\sqrt{A_*^2+x\phi^2}<34/3$; use $|\phi|\le2x$ and
+$(1+\theta^2)^2+4\theta^3<16/9$, then Cauchy with the same
+spectral measure of mass $d$. The $L^2$ tail is used in this
+integral Cauchy inequality.
+\end{proof}
+
+\begin{corollary}[Bare comparisons in the same directions]
+\label{cor:odd-complete:bare}
+For $n\ge3$ the actual $pW_a\bar f_b\bar f_n$, $3\le a<b$,
+has fourth loss at least $29/10$.
+For the positive root $f_a h_bf_c$, $3\le a<b<c$, the actual
+bare input $\bar f_n$ has respective losses
+\[
+ 419/128\ (n=1),\quad387/128\ (n=2),\quad35/4\ (n=3),
+ \quad11/2\ (n\ge4).
+\]
+\end{corollary}
+\begin{proof}
+Retain $\beta_n\bar f_0$ in the positive convolution:
+$\bar f_n\le q-\beta_n+BG_{n-1}(B)u$.
+At the auxiliary root the actual exponents have losses
+$291/128$, $259/128$, $31/4$, and at least $9/2$, respectively.
+For $n\ge4$ this uses
+$\beta_n+\beta_{n+1}\ge2\kappa d$ and
+$|G_{n-1}-z|^2\le(1-x+x^2)^2+x^3\le1$.
+Every $G_{n-1}$ is in the coordinate rectangle.
+The positive transfer saves at least $d$.
+For the minimum-one root, $\gamma=0$, $\bar D=1$, $R\le6/5$;
+both $\Phi(1,0,1/3)$ and $\Psi(1,6/5)$ are negative.
+The weaker claimed $29/10$ follows.
+\end{proof}

@@ -1,0 +1,196 @@
+\subsection{A unit connector with a nonunit odd terminal starting with two and three}\label{proof:R2-C013}
+Use the original-measure notation of Module R2-C007. Let the terminal
+residual list be
+\[
+(2,3,c,s_2,t_2,\ldots,s_j,t_j),\qquad
+4\le c<s_2<t_2<\cdots<s_j<t_j,\quad j\ge1.
+\]
+The actual fixed orientation has
+\[
+F=\bar f_2f_3h_c\prod_{i=2}^jh_{s_i}f_{t_i},\qquad X=TF.
+\]
+Thus the length-two arm points inward, the length-three arm outward,
+and the $c$ arm and subsequent pairs have the specified $h,f$ messages.
+The unit connector points from the terminal to the receiving root.
+For every independent finite choice of these lengths and $a\ge3$,
+\begin{equation}\tag{R13.1.1}\label{eq:R13:claim}
+ \E[f_aX^4]\le1-d/5.
+\end{equation}
+Actual equal-arm decorations may be restored at both original roots.
+Only the unit connector is asserted here.
+
+Use $C_a$ from \eqref{eq:R07:receiving}, so
+$0\le f_a\le C_a$, $\E C_a\le1-57d/32$ and
+$C_a\le(1-d)p+(6/5)\sqrt d$.
+The centered row identities in \eqref{eq:R12:centered} justify this
+also at $a=3$. The terminal input is precisely Q5-C181, Sections 4--6,
+using its actual finite envelopes rather than its root-$pP$ conclusion.
+
+First suppose $0<d\le1/8$ and $j=1$. Put $m_c=c-3\ge1$,
+$\beta=\beta_{c-1}$, and write $G_{m_c}(-z)=U-zV$.
+For $m_c=1$ use $U=1,V=0$; otherwise $U,V\in[1-x,1]$.
+The actual finite vector and envelope are
+\begin{equation}\tag{R13.3.1}\label{eq:R13:terminal}
+\begin{gathered}
+R_0=\mathfrak r_0(B)u,\qquad
+\mathfrak r_0=-\beta+x^2V+zxU,\qquad
+\Gamma_0=d+\beta_c+\beta\ge35d/16,\\
+F\le\bar f_2e^{R_0-\Gamma_0},\quad
+e^{\Gamma_0}X\le Y=\bar f_3+BR_0+D,\quad D=3d/5,\quad
+D_1=\E BR_0\in[-\delta_3,d^2],\\
+m=\E Y=1-2d+D+D_1\le1-51d/40.
+\end{gathered}
+\end{equation}
+The bound on $D$ retains the three actual mixed means in Q5-C181's
+first-row calculation. In $Y=1-d+D+Q(B)u$,
+$Q=G_3+z\mathfrak r_0$ has coordinates
+$Q_e=1-x-x^2U$, $Q_o=1-\beta+x^2V$, both positive. Hence
+\[
+|Q|^2\le(1-x-x^2+x^3)^2+x(1+x^2)^2
+=1-x-x^2+6x^3-x^4-x^5+x^6\le1.
+\]
+The last difference from one is
+$-x[1+x-6x^2+x^3+x^4-x^5]$;
+$1+x-6x^2\ge213/512$ on $[0,\theta]$ and the last three terms
+are nonnegative. This covers every finite $c$, including $m_c=1$,
+and gives $\operatorname{Var}Y\le d$.
+Moreover
+\[
+\operatorname{Re}(G_aQ)\ge(1-x)(1-x-x^2)-x(1+x^2)=1-3x\ge-7/32.
+\]
+For $a\ge4$, the exact covariance is
+\[
+\operatorname{Cov}(C_a,Y)
+=-\int\operatorname{Re}(G_aQ)\,d\nu
++\beta_{a-1}\int Q_e\,d\nu-\beta_{a+1}(d-D_1).
+\]
+Since $\int Q_e\le\tau$ and $d-D_1>0$, the scalar terms are at
+most $d\tau-\tau(d-D_1)=\tau D_1\le d^3$.
+At $a=3$ the positive-beta term is absent and the actual mean product
+is $-d(d-D_1)\le0$. Therefore
+\begin{equation}\tag{R13.3.7}\label{eq:R13:covariance}
+\operatorname{Cov}(C_a,Y)\le(7/32)d+d^3\quad(a\ge3).
+\end{equation}
+The finite bound $\|G_{m_c}\|\le6/5$ and
+$\theta^{3/2}<4/15$ give
+$\|R_0\|_2/\sqrt d\le d+(6/5)\theta^{3/2}
+<1/8+8/25=89/200<9/20$.
+Using the correct identity
+$\bar f_3=q-d+B(u+Bu)$ and
+$\|u+Bu\|_2\le6\sqrt d/5$, we get
+$Y\le q+(33/20)\sqrt d-(2/5)d$.
+Since $\sqrt d\le3/8$ and $m\le1$,
+\[
+C_a[(Y+m)^2+2m^2]
+\le(p+9/20)[(579/160-p)^2+2]\le14.
+\]
+For a continuous certificate, the cubic on the right has
+$F''=6p-543/40\le-63/40<-3/2$ on $[0,2]$,
+$F(6/5)=6631977/512000<13$, and
+$F'(6/5)=-3367/25600$ of absolute value below $1/7$.
+Thus its strong concavity bound is $13+1/147<14$.
+Taylor expansion about the actual nonnegative mean $m$ now gives
+\[
+\E[C_aY^4]\le(1-57d/32)(1-51d/40)^4
++4(7/32+d^2)d+14d
+\le e^{-1101d/160}+(239/16)d.
+\]
+For a negative covariance simply omit it; use $m^3\le1$ only when
+its upper bound is nonnegative. With
+$A_0=2501/160$, $B_0=239/16$, $C_0=35/4$,
+\[
+\E[f_aX^4]\le e^{-A_0d}+B_0de^{-C_0d}.
+\]
+Here $C_0\ge A_0/2$, $A_0-B_0=111/160$, and
+$1-e^{-A_0d}\ge A_0de^{-A_0d/2}$ by $\sinh y\ge y$.
+The deficit is at least
+$(111/160)de^{-A_0d/2}>(37/160)d>d/5$, because
+$A_0d/2\le2501/2560<1$ and $e<3$.
+
+For every finite $j\ge2$, retain all subsequent disjoint finite
+intervals in one mask $S$, and put $R=R_0+S$.
+Q5-C181, Section 5, gives
+\[
+\begin{gathered}
+\Gamma\ge431d/80+(16/5)(j-2)d,\quad
+\|S\|_2<(3/20)\sqrt d,\quad\|R\|_2<(3/5)\sqrt d,\\
+e^\Gamma X\le Y=\bar f_3+BR+D\ge0,\quad D=3d/2,\\
+D_1=\E BR\le19d/120,\quad m=\E Y\le1-41d/120.
+\end{gathered}
+\]
+Since $\|BS\|_2<\sqrt d/10$, the proved $Q$ bound gives
+$\operatorname{Var}Y\le(11/10)^2d$.
+The receiving centered norm is at most
+$(1+d)\sqrt d\le9\sqrt d/8$; for $a\ge4$ use its vector
+$[-G_a(-B)+\beta_{a-1}]u$, and for $a=3$ use $\|G_3u\|_2\le\sqrt d$.
+Thus the extra covariance cost is at most $9d/80$, including all
+beta--mask cross terms, and
+\[
+\operatorname{Cov}(C_a,Y)\le(53/160)d+d^3\le(111/320)d.
+\]
+The changed $D$ is a constant and does not enter this covariance.
+The row bound gives $Y\le q+(9/5)\sqrt d+d/2$, and
+\[
+C_a[(Y+m)^2+2m^2]\le(p+9/20)[(299/80-p)^2+2]\le16.
+\]
+This cubic has $F''=6p-281/20\le-41/20<-2$,
+$F(5/4)=890817/64000<14$ and
+$F'(5/4)=-1727/6400$ of absolute value below $3/10$.
+Its strong concavity bound $14+9/400<16$ covers the full interval.
+Discarding only the favorable extra scalar for $j>2$ gives
+\[
+\E[f_aX^4]\le e^{-A_1d}+B_1de^{-C_1d},\quad
+A_1=2371/96,\ B_1=8299/400,\ C_1=431/20.
+\]
+These constants are
+$A_1=4(431/80)+57/32+4(41/120)$ and
+$B_1=16(121/100)+4(111/320)$.
+Since $C_1\ge A_1/2$ and $A_1-B_1=9481/2400$, the deficit is at least
+$(9481/2400)de^{-A_1d/2}>(9481/21600)d>d/5$;
+indeed $A_1d/2\le2371/1536<2$ and $e^2<9$.
+
+For $1/8\le d\le1/3$, use the argument of
+Q5-R2-A002, Section 7.
+\eqref{eq:C181:d} gives $f_3h_c\le e^{-d}$, and every subsequent
+$h_sf_t\le e^{-2d}$. Thus with the same actual direction,
+$F\le e^{-(2j-1)d}\bar f_2$ and
+$X\le e^{-(2j-1)d}\bar f_3$.
+The variance and signed covariance formulas
+\eqref{eq:R12:variance}--\eqref{eq:R12:a3covariance} follow directly
+from the finite path, and all these covariances are nonpositive on
+the present interval. Put $\mu_3=1-2d$.
+Since $t=\sqrt d\ge1/3$, $6t/5-3t^2\le1/15$, so
+\[
+\bar f_3+\mu_3\le q+1+(6/5)\sqrt d-3d<25/8-p,
+\quad C_a\le p+3/4,\quad\mu_3\le3/4.
+\]
+Consequently
+\[
+C_a[(\bar f_3+\mu_3)^2+2\mu_3^2]
+\le\Phi(p):=(p+3/4)[(25/8-p)^2+9/8]\le11.
+\]
+Indeed $\Phi'=3p^2-11p+397/64$, $\Phi''=6p-11$.
+On $[1,2]$ the convex quadratic derivative has endpoint values
+$-115/64,-243/64$, so $\Phi$ decreases. On $[0,1]$,
+$\Phi''\le-5$, $\Phi(3/4)=1299/128$,
+$\Phi'(3/4)=-23/64$, and the tangent bound is
+$1299/128+529/40960=416209/40960<11$.
+The actual centered Taylor formula therefore gives
+\[
+\E[f_a\bar f_3^4]\le(1-57d/32)(1-2d)^4
++11d(1-51d/32),\quad
+\E[f_aX^4]\le e^{-4d}\E[f_a\bar f_3^4].
+\]
+The first term after multiplication is at most $27/160$, using
+$e^{-4d}\le e^{-1/2}\le2/3$,
+$1-57d/32\le199/256<4/5$ and $(1-2d)^4\le(3/4)^4$.
+Completing the square gives
+$1-11d+(1021/32)d^2\ge53/1021>0$.
+Thus $15d(1-51d/32)\le1+4d+8d^2\le e^{4d}$ and
+$e^{-4d}d(1-51d/32)\le1/15$.
+The total is at most $27/160+11/15=433/480<14/15\le1-d/5$.
+This joins the low range at $d=1/8$ and proves \eqref{eq:R13:claim}.
+Decorations, $d=0$, and full reversal follow by original positivity
+and leaf integration, as in Module R2-C007. The local edge count is
+$a+1+2+3+c+\sum_{i\ge2}(s_i+t_i)$ plus every actual repeated pair.
+The high-range argument uses the finite identities of R2-C012.

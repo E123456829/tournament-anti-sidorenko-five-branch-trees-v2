@@ -1,0 +1,1277 @@
+\subsection{Odd terminal triples $(1,2,c)$ at a unit root}\label{proof:R2-C033}
+
+\paragraph{R33.1 Exact object, direction and domains}
+
+On the one original finite probability space let
+\[
+Jv=(Ev)1,\quad A=J+K,\quad T=J-K=A^*,\quad
+g=K1,\quad p=1+g,\quad q=1-g,
+\]
+\[
+\begin{gathered}
+f_n=A^n1,\quad \bar f_n=T^n1,\quad h_n=Tf_{n-1},\quad\\
+W_n=A\bar f_{n-1},\qquad I_q(V)=E[q^{-1/3}|V|^{8/3}].
+\end{gathered}
+\]
+The terminal residual is exactly \((1,\allowbreak \allowbreak  2,\allowbreak \allowbreak  c)\), \(c\ge3\). The adjacent
+internal root has exactly one residual unit arm. Its original inner
+connector has length \(L\ge1\), and its original outer connector has
+length two. Genuine equal pairs at either root are allowed with arbitrary
+finite lengths and multiplicities.
+
+The fixed actual message is
+\[
+H_D=E_r^-qA^L(E_t^-p\bar f_2W_c),\qquad U_D=T^2H_D.       \tag{R33.A1}
+\]
+The factors \(E_t^-,\allowbreak \allowbreak  E_r^-\) are the actual products of \(\bar f_\ell W_\ell\)
+on original paired arms. The literal orientation is:
+
+
+\begingroup\small
+\setlength{\tabcolsep}{3pt}
+\setlength{\LTleft}{0pt}\setlength{\LTright}{\fill}
+\begin{longtable}{@{}p{0.2200\linewidth}p{0.7000\linewidth}@{}}
+\caption{Odd terminal triples $(1,2,c)$ at a unit root: parameter values.}\label{tab:parameters:r2-c033:1}\\
+\toprule
+Entry & Direction/message \\
+\midrule\endfirsthead
+\toprule
+Entry & Direction/message \\
+\midrule\endhead
+\bottomrule\endfoot
+Terminal unit arm & Away from terminal, \(p\). \\
+\addlinespace[2pt]
+Terminal two-edge arm & Both edges toward terminal, \(\bar f_2\). \\
+\addlinespace[2pt]
+Terminal \(c\)-edge arm & First edge away from terminal; remaining edges toward its first vertex, \(W_c\). \\
+\addlinespace[2pt]
+Internal root unit arm & Toward the root, \(q\). \\
+\addlinespace[2pt]
+All \(L\) inner edges & From internal root toward terminal, \(A^L\). \\
+\addlinespace[2pt]
+Both outer edges & From internal root toward receiver, \(T^2\). \\
+\addlinespace[2pt]
+Each genuine equal pair & Entire reversal of its \(f_\ell h_\ell\) pair. \\
+\end{longtable}
+\endgroup
+
+
+The parameters \(K,\allowbreak \allowbreak  \mu,\allowbreak \allowbreak  d\) and the spectral moments vary under this fixed rule.
+
+The ordinary-fourth auxiliary is
+\[
+F_c=qf_2h_c,\qquad H_{c,L}=pT^LF_c.
+\]
+The exact intermediate assertion proved below is
+\[
+EH_{c,L}^4\le e^{-18d/5}
+\quad\begin{cases}
+0\le d\le1/3,&c=3,\\
+0\le d\le1/4,&c=4,\\
+0\le d\le1/5,&c\ge5,
+\end{cases}
+\quad L\ge1.                                      \tag{R33.A2}
+\]
+On the remaining high domains, compare \(W_c\) with one and apply
+C026 in the same direction.
+
+The final result is
+\[
+\boxed{I_q(U_D)^3\le e^{-197d/3420}\le1.}             \tag{R33.A3}
+\]
+
+\paragraph{R33.2 Original finite calculus and path means}
+
+\paragraph{R33.2.1 Finite notation and the short spectral exception}
+\label{part:R33.2.1}
+Use $B=-K$, $u=-g$, $\mathsf X=-B^2$, $\tau=d-\delta_2$ and
+\eqref{eq:odd-common:inputs}, with Lemma~\ref{lem:odd-common:spectral}.
+Its original spectral measure $\nu$ at $u$ has mass $d$,
+support $[0,\theta]$, and $\int x^j\,d\nu=\delta_{j+1}$.
+Write $S_n^-=\one+G_n(B)u$ and
+$\mu_n=\E f_n=\E\bar f_n$.
+For $Q(B)=E_0(\mathsf X)+BD_0(\mathsf X)$ its two formulas are
+\[
+ E[Q(B)u]=-\int D_0\,d\nu,\qquad
+ \|Q(B)u\|^2=\int(E_0^2+xD_0^2)\,d\nu.\tag{R33.A5}
+\]
+For $v=\delta_2/d$, Jensen gives
+$v\ge d$, $\delta_3/d\ge v^2$ and $\delta_4/d\ge v^3$.
+These are integrated moment restrictions, with no restriction $x\ge d$.
+The positive convolution is \eqref{eq:Q188:conv}; the genuine
+message and equal-pair bounds are \eqref{eq:odd-common:inputs}.
+The spectral exception used below is
+\[
+ |G_n(i\sqrt x)|\le1\quad(n=1\text{ or }n\ge3),\qquad
+ |G_2(i\sqrt x)|^2=1+x.\tag{R33.A7}
+\]
+The real coordinate for every $n\ge3$ lies in $[1-x,1]$.
+
+\paragraph{R33.2.2 The all-length mean used in the high domain}
+The stronger finite path estimate \eqref{eq:compact-strong-path-means}
+gives, on the same original measure,
+\[
+ \boxed{\mu_n\le1-83d/32\quad(n\ge4).}\tag{R33.A9}
+\]
+Its proof includes the four short indices \(n=4,5,6,7\) and every
+\(n\ge8\), with no monotonicity assumption on the integer \(n\).
+
+\paragraph{R33.3 Signed-mean moment payments}
+The common square payments
+\eqref{eq:unit-two-step:square-log-scale} and
+\eqref{eq:unit-two-step:variance-exponential} give, for every
+real vector $V$,
+\[
+ Ee^{4BV}\le e^{4EBV+(17/4)\|V\|^2},\tag{R33.A13}
+\]
+\[
+ Ee^{4BV}\le e^{4EBV+2\|V\|^2+6\|BV\|^2}.\tag{R33.A14}
+\]
+Both also hold with $K$ in place of $B$.
+
+\paragraph{R33.4 Exact positive propagation and the ordinary-fourth outlet}
+
+\paragraph{R33.4.1 The retained q square and all finite Duhamel coefficients}
+
+Suppose a true nonnegative \(F\) obeys
+\[
+F\le q(m-U/2)^2,\qquad m>0,\quad k=1/m,\quad
+V=EU^2,\quad R=-kU.
+\]
+Every application below obtains this square from the sum of two
+nonnegative original arms; the square base is nonnegative.
+Use the QS row of Table~\ref{tab:unit-two-step:parameters}:
+$w=q$, $r=2$, $s_0=m^2$, $s_1=-m$, $s_2=1/4$ and $\lambda=1$.
+The first row is
+\[
+ TF/m^2\le\bar f_2+BR+\delta,\qquad
+ \delta=-k(EU-EgU)+k\sqrt{dV}+k^2V.\tag{R33.A15}
+\]
+Choose $D\ge\max(\delta,0)$ and put $D_i=EB^iR$.
+The common finite continuation gives
+\begin{align}
+0\le T^LF/m^2\le Y_L
+ &=\bar f_{L+1}+B^LR+D\bar f_{L-1}
+       +\sum_{i=1}^{L-1}D_i\bar f_{L-1-i},\tag{R33.A16}\\
+ Y_L&=S^-_{L+1}+B^LR+D\bar f_{L-1}
+       -\sum_{j=3}^{L+1}\gamma_j\bar f_{L+1-j}.\tag{R33.A17}
+\end{align}
+Here $\gamma_j=\beta_j-D_{j-2}$. The index is $j-2$ because
+the initial path is $\bar f_2$. Each local case below proves the
+signs it uses before discarding a path term.
+
+\paragraph{R33.4.2 The two fourth-moment payment formulas}
+
+If $Y_L\le Cq+BPu+c$, $C>0$, apply
+\eqref{eq:unit-two-step:unit-pairing} and the log-scale square
+payment with scale $m^2C$:
+\[
+\begin{aligned}
+ \log E(pT^LF)^4
+ &\le8\log m+4\log C+\frac4C(c+EBPu)
+                   +\frac{17}{4C^2}\|Pu\|^2.
+\end{aligned}\tag{R33.A18}
+\]
+Increasing $C$ to a specified larger positive value keeps the
+comparison because $q>0$. If instead $p+Y_L\le2+c+BV$,
+the same payment with scale $m^2$ gives
+\[
+ \log E(pT^LF)^4
+ \le8\log m+4(c+EBV)+(17/4)\|V\|^2.\tag{R33.A19}
+\]
+
+\paragraph{R33.4.3 The ordinary-fourth outlet with its exact curvature}
+For an original positive kernel operator \(M\), row Cauchy and
+H\"older with exponents \(3,3/2\) give
+\[
+ I_q(MY)^3\le\E[(M\one)^4/q]\,\|M\|^4(\E|Y|^4)^2.
+ \tag{R33.A20}
+\]
+Apply the complete same-measure calculation in
+paragraph~\ref{part:R29.11}. Its inverse row and ordinary norm use
+\(\bar f_2=T^2\one\) and
+\(\|T^2\|\le(1+1024\delta_2/855)^2\); the latter's Schur
+proof is also given in Section~\ref{proof:R2-C026}, paragraph R26.8.1.
+Thus, for every original real \(Y\),
+\[
+ I_q(T^2Y)^3\le B_2(\E|Y|^4)^2,\qquad
+ B_2=[1-2d^2+(8-2d)\delta_2](1+1024\delta_2/855)^8,
+\]
+\[
+ B_2\le\exp\{(24427/3420)d-5d^2\}.\tag{R33.A21}
+\]
+Consequently the ordinary-fourth input \(\E|Y|^4\le e^{-18d/5}\)
+gives
+\[
+ I_q(T^2Y)^3\le e^{-(197/3420)d-5d^2}.\tag{R33.A22}
+\]
+The input is unweighted and real, and the outer operator and weight
+remain the original \(T^2\) and \(q\).
+
+\paragraph{R33.5 Terminal (1, 2, 3): every L and the whole original d domain}\label{part:R33.5}
+
+\paragraph{R33.5.1 \(L=1:\) true positive square, actual moments and both continuous domains}
+
+Let \(r=Kg,\allowbreak \allowbreak  \ s=K^2g,\allowbreak \allowbreak  \ t=1-d/2,\allowbreak \allowbreak  \ k=1/t\). The original paths are
+\[
+f_2=p+r,\qquad h_3=q-d-r-s,\qquad \bar f_3=q-d+r-s.
+\]
+Thus \(f_2+h_3=2-d-s\) and
+\[
+F_3\le q(t-s/2)^2.
+\]
+Apply Corollary~\ref{cor:unit-two-step:first-square} with
+$m=t$, $a=0$, $W=s$, and $\Delta=\gamma$:
+\[
+ TF_3\le t^2q+tK(tg+s)+\gamma,\qquad
+ \gamma=t(\sqrt{d\delta_3}-\delta_2)+\delta_3\ge0.
+ \tag{R33.A23}
+\]
+Here $d\delta_3\ge\delta_2^2$. The resulting positive square is
+\[
+ H_{3,1}\le(c+N/2)^2,\qquad
+ c=t+\gamma/(2t),\quad N=K(tg+s).\tag{R33.A24}
+\]
+The complete upper bound dominates $TF_3>0$; the corollary
+therefore supplies the nonnegative square base.
+
+The complete-square inequality
+\(\sqrt{\theta v}-v\le\theta/4\), \(v=\delta_2/d\), yields
+\[
+c\le1-\left(\frac12-\frac{\theta}{8}
+-\frac35\theta^2\right)d
+=1-\frac{1793}{5120}d\le1-\frac7{20}d.
+\]
+For \(w=\delta_3/d\),
+\[
+EN=-(t-v)d,\quad
+\|tg+s\|^2=d(t^2-2tv+w)\le d[t^2-(2t-\theta)v].
+\]
+Furthermore
+\[
+EN^2=\int x(t-x)^2\,d\nu\le dv(t-v)^2.            \tag{R33.A25}
+\]
+This is Jensen for the concave function \(x(t-x)^2\):
+its second derivative is \(-4t+6x<0\) for
+\(t\ge5/6,\allowbreak \allowbreak  \ x\le13/32\).
+
+For \(v\le1/5\), (R33.A14) and the nonnegative base in (R33.A24) give
+\[
+\frac{\log EH_{3,1}^4}{d}
+\le-\frac{14}{5}-4t+2t^2
++(4-4t+2\theta)v+6v(t-v)^2.
+\]
+The constant term is at most \(-427/90\);
+\(4-4t+2\theta\le71/48\);
+and \(v(1-v)^2\) is increasing on \([0,\allowbreak \allowbreak  1/5]\), with endpoint
+\(16/125\). Therefore
+\[
+\begin{gathered}
+\frac{\log EH_{3,1}^4}{d}\\
+\le-\frac{427}{90}+\frac{71}{240}+\frac{96}{125}\\
+=-\frac{18}{5}-\frac{1451}{18000}.
+\end{gathered}\tag{R33.A26}
+\]
+
+For \(v\ge1/5\), retaining the exact \(\gamma\) and using (R33.A13) first
+gives
+\[
+\begin{gathered}
+-4-4t+\frac{17}{4}t^2+4\sqrt w\\
+-\frac{17}{2}tv+\left(\frac4t+\frac{17}{4}\right)w.
+\end{gathered}
+\]
+Only now use \(w\le\theta v\). The resulting \(\Phi(t,\allowbreak \allowbreak  v)\) is convex
+in \(t\), with second derivative \(17/2+8\theta v/t^3>0\).
+At its two endpoints:
+\[
+\Phi(1,v)=-15/4+4\sqrt{\theta v}-(659/128)v,
+\]
+\[
+\Phi(5/6,v)=-631/144+4\sqrt{\theta v}-(6541/1920)v.
+\]
+Both decrease on \(v\ge1/5\), since
+\(2\sqrt{\theta/v}<3\) while both subtracted coefficients exceed three.
+The rational comparison \(\sqrt{13/160}<2/7\) follows from \(637<640\).
+It gives
+\[
+\begin{gathered}
+\Phi(1,1/5)<-\frac{18}{5}-\frac{33}{896},\\
+\qquad\\
+\Phi(5/6,1/5)<-\frac{31}{8}<-\frac{18}{5}.
+\end{gathered}\tag{R33.A27}
+\]
+Thus every actual \(v\in[d,\allowbreak \allowbreak  \theta]\) is covered, with no spectral
+support restriction beyond \([0,\allowbreak \allowbreak  \theta]\).
+
+\paragraph{R33.5.2 All \(L\ge 2:\) the complete coefficient signs}
+
+In (R33.A15) use
+\[
+m=1-d/2,\quad k=1/m,\quad U=s=\mathsf Xu,\quad
+R=-k\mathsf Xu=kB^2u.
+\]
+Then \(EU-EgU=\delta_2\), \(EU^2=\delta_3\), and
+\[
+\begin{gathered}
+\delta=-k\delta_2+k\sqrt{d\delta_3}+k^2\delta_3,\qquad\\
+\frac{\delta}{d}\\
+\le\frac{k\theta}{4(1-k\theta)}\\
+\le\frac{39}{164}<\frac14.
+\end{gathered}\tag{R33.A28}
+\]
+The first inequality completes the square in
+\(k[\sqrt{\theta v}-(1-k\theta)v]\).
+The exact finite coefficients are
+\[
+D_i=kEB^{i+3}1,\quad
+D_1=k\delta_2,\ D_2=0,\ D_3=-k\delta_3,\ D_4=0.
+\]
+Every positive \(D_i\), \(i\ge3\), is at most
+\(k\delta_4\le k\theta^3d<d/12\). Consequently
+\[
+\begin{gathered}
+\gamma_3\ge41d/80,\quad \gamma_4=d,\quad\\
+\gamma_j\ge49d/96=:\sigma\quad(j\ge5).
+\end{gathered}\tag{R33.A29}
+\]
+The first bound exceeds \(\sigma\), since
+\(41\cdot96-49\cdot80=16>0\).
+For \(L=2\) I take \(D=d/4\); for all \(L\ge 3\) I take \(D=3d/8\).
+Both dominate the actual \(\delta\).
+
+\paragraph{R33.5.3 \(L=2\) in the canonical h3 direction}
+
+The exact (R33.A16) reads
+\[
+Y_2=Cq+BQu+c,\quad
+C=1+D,\quad c=k\delta_2-d,\quad Q=1+B+kB^3,\quad D=d/4.
+\]
+Thus
+\[
+c+EBQu=k\delta_2-2d\le-121d/80.
+\]
+At a frequency, \(Q=1+z(1-kx)\) and
+\(0\le1-kx\le1-x\). Hence
+\[
+\|Qu\|^2\le d\left[1+\max_{0\le x\le1}x(1-x)^2\right]
+=31d/27.
+\]
+Use \(C\le13/12\), \(\log m\le-d/2\), \(\log C\le d/4\)
+in (R33.A18). The full payment is
+\[
+\begin{gathered}
+\frac{\log EH_{3,2}^4}{d}\\
+\le-4+1-\frac{363}{65}+\frac{527}{108}\\
+=-\frac{26009}{7020}<-\frac{37}{10}<-\frac{18}{5}.
+\end{gathered}\tag{R33.A30}
+\]
+This gives the canonical \(qf_2h_3\) fourth estimate.
+The C106/C102 \(L=2\) eighth row concerns the direction
+\(qf_2\bar f_3\).
+
+\paragraph{R33.5.4 \(L=3\)}
+
+The exact finite form is
+\[
+Y_3=Cq+BPu-d,\quad
+C=1-d+D+k\delta_2\le\bar C=1-d/8,
+\]
+\[
+P=1+D+B+(1-k\mathsf X)B^2,\qquad D=3d/8.
+\]
+After using \(d=2(1-1/k)\), the frequency difference
+\((|P|^2-(1+D)^2)/x\) equals
+\[
+-5/2+3/(2k)+(7k/2-1/2)x-2kx^2+k^2x^3.
+\]
+It is convex in \(k\in[1,\allowbreak \allowbreak  6/5]\). Each endpoint is increasing in
+\(x\in[0,\allowbreak \allowbreak  \theta]\), and its final value is respectively
+\[
+-1451/32768,\qquad -9507/204800.
+\]
+Thus \(\|Pu\|^2\le(1+D)^2d\).
+The exact signed mean is
+\[
+-d+EBPu=-(2+D)d+\delta_2-k\delta_3\le-(7/4+D)d,
+\]
+using \(\delta_3/d\ge v^2\) and \(v-kv^2\le1/(4k)\le1/4\).
+The ratio \((1+D)/\bar C\) increases to \(27/23<6/5\).
+Since \(\bar C\le1\), division strengthens the negative mean, and
+\[
+\begin{gathered}
+\frac{\log EH_{3,3}^4}{d}\\
+\le-4-\frac12-7-4D+\frac{17}{4}\left(\frac65\right)^2\\
+\le-\frac{269}{50}<-\frac{18}{5}.
+\end{gathered}\tag{R33.A31}
+\]
+
+\paragraph{R33.5.5 \(L=4\)}
+
+The actual finite expression is
+\[
+\begin{gathered}
+Y_4=Cq+BPu+c,\quad C=1-2d+D+k\delta_2,\quad A_0=C+d,\\
+P=A_0+(1+D)B+B^2+(1-k\mathsf X)B^3,\\
+c=-\tau-Dd-k\delta_3,\qquad D=3d/8.
+\end{gathered}
+\]
+At a frequency,
+\[
+|P|^2=A_0^2+x[(1+D-x+kx^2)^2+x-2A_0].
+\]
+The bracket is convex in \(x\); its second derivative is
+\(2(-1+2kx)^2+4k(1+D-x+kx^2)>0\).
+At zero it is at most
+\(-1+2d+D^2\le-1/3+1/64<-1/4\).
+At \(\theta\), use
+\[
+1+D-\theta+k\theta^2\le2347/2560<15/16,\quad A_0\ge19/24
+\]
+to obtain at most \(-229/768<-1/4\). Thus
+\[
+\|Pu\|^2\le A_0^2d-\delta_2/4.
+\]
+The legal enlarged coefficient is \(\bar C=1-9d/8\ge C\), and
+\(A_0\le1-d/8\). The exact mean plus constant is
+\[
+c+EBPu=-2d+2\delta_2+d^2-2Dd-kd\delta_2-k\delta_3.
+\]
+Using the same \(v=\delta_2/d\), \(\delta_3/d\ge v^2\), \(v\ge d\) and
+\(v\le\theta\), it is at most
+\[
+d[-19/16+d/4-2d^2]\le-53d/48.
+\]
+Also
+\[
+\|Pu\|^2/d\le1-d/2+d^2/64,\qquad
+\frac{1-d/2+d^2/64}{(1-9d/8)^2}\le481/225.
+\]
+The last ratio increases, because the derivative numerator has the
+sign of \(7/4-17d/32>0\), and its value at \(d=1/3\) is \(481/225\).
+Therefore
+\[
+\begin{gathered}
+\frac{\log EH_{3,4}^4}{d}\\
+\le-4-\frac92-\frac{53}{12}+\frac{8177}{900}\\
+=-\frac{862}{225}<-\frac{18}{5}.
+\end{gathered}\tag{R33.A32}
+\]
+
+\paragraph{R33.5.6 Every finite \(L\ge 5,\allowbreak \) with no length cutoff}
+
+The needed shifted finite-geometric assertion is
+\[
+\begin{gathered}
+|G_n(i\sqrt x)-s_0(2+i\sqrt x)|\le1-2s_0\\
+\quad(0\le s_0\le3/16,\ n\ge3).
+\end{gathered}\tag{R33.A33}
+\]
+This finite two-term shift, including zero frequency and every
+\(n\ge3\), is proved in paragraph~\ref{part:Q178.3.2}.
+
+Retain the final four actual losses \(\bar f_0,\allowbreak \allowbreak  \bar f_1,\allowbreak \allowbreak  \bar f_2,\allowbreak \allowbreak  \bar f_3\) in (R33.A17),
+using (R33.A29), and replace \(D\bar f_{L-1}\) by \(DS^-_{L-1}\).
+The identity
+\[
+\bar f_0+\bar f_1+\bar f_2+\bar f_3=1+3q+B(2+B)u-d
+\]
+gives
+\[
+C=1+D-3\sigma=1-37d/32,\quad c=-\sigma(1-d),
+\]
+\[
+P=G_L-k\mathsf XB^{L-1}+DG_{L-2}-\sigma(2+B).
+\]
+At every frequency \(0\le kx\le39/80\), and
+\[
+G_L-kxz^{L-1}=(1-kx)G_L+kxG_{L-1}.
+\]
+Apply (R33.A33) with \(s_0=\sigma=49d/96\le49/288<3/16\)
+to both terms; \(G_{L-2}\) contracts because \(L-2\ge3\).
+It follows that
+\[
+\|Pu\|^2\le a^2d,\qquad a=1-2\sigma+D=1-31d/48.
+\]
+The actual signed mean is
+\[
+EBPu=-\beta_{L+2}+D_L-D\beta_L+2\sigma d,
+\]
+so
+\[
+c+EBPu
+\le d[-49/48+(335/256)d]\le-449d/768.
+\]
+Here \(-\beta_{L+2}+D_L=-\gamma_{L+2}\le-\sigma\);
+every discarded loss has already been paid.
+Finally \(0<C\le1\), \(a/C\le226/177<13/10\), and
+\[
+\begin{gathered}
+\frac{\log EH_{3,L}^4}{d}\\
+\le-4-\frac{37}{8}-\frac{449}{192}\\
++\frac{17}{4}\left(\frac{13}{10}\right)^2\\
+=-\frac{18149}{4800}<-\frac{18}{5}.
+\end{gathered}\tag{R33.A34}
+\]
+Equations (R33.A26)-(R33.A34) complete every \(c=3\) row on \(0<d\le1/3\).
+
+\paragraph{R33.6 Terminal (1, 2, 4): every L on \(0<d\le 1/4\)}
+
+\paragraph{R33.6.1 \(L=1\)}
+
+Let \(r=Kg,\allowbreak \allowbreak  \ s=K^2g,\allowbreak \allowbreak  \ w=K^3g,\allowbreak \allowbreak  \ W=s+w\),
+\(m=1-d,\allowbreak \allowbreak  \ k=1/m,\allowbreak \allowbreak  \ t=1-2d\).
+The actual sum is
+\[
+f_2+h_4=2-2d+dg-W.
+\]
+Thus \(F_4\le q(m+U_0/2)^2\), \(U_0=dg-W\).
+Put
+\[
+ \mathcal D=\theta(1+\theta)=585/1024<3/5,\qquad
+ v=\delta_2/d,\quad y=\sqrt{\mathcal Dv}<1/2.
+\]
+The actual moments are $EW=\delta_2$,
+$E(gU_0)=d^2+\delta_2$, and
+$\|U_0\|\le\sqrt d(d+y)$.
+Thus the q-square corollary permits
+\[
+ \Delta=\delta d,\qquad
+ \delta=m(y-v)+(d+y)^2\ge0,
+\]
+since $\sqrt{d\|U_0\|^2}\le d(d+y)$.
+For $N=K(tg+W)$ it gives directly
+\[
+ TF_4\le m^2q+mN-m\delta_2+\delta d,
+ \qquad EN=-td+\delta_2,
+\]
+\[
+ H_{4,1}\le(c_*+N/2)^2,\qquad
+ c_*=m-\delta_2/2+\delta d/(2m),
+\]
+with the unchanged signed-vector bound
+\[
+ \|tg+W\|^2\le d[t^2-(2t-\mathcal D)v]\le dt^2.
+\]
+Its base is the arithmetic mean of $mp$ and the complete
+positive upper factor.
+
+Using (R33.A13), the two linear \(\delta_2\) terms cancel exactly:
+\[
+\begin{gathered}
+\frac{\log EH_{4,1}^4}{d}\\
+\le-8-4t+4(y-v)+4(d+y)^2/m\\
++\frac{17}{4}[t^2-(2t-\mathcal D)v].
+\end{gathered}
+\]
+Because \(y-v\le\mathcal D/4<3/20\),
+\(d+y<3/4\), \(m\ge3/4\), this is at most
+\[
+-22/5-4t+(17/4)t^2.
+\]
+This convex quadratic has maximum \(-83/20<-18/5\) on
+\(t\in[1/2,\allowbreak \allowbreak  1]\). This proves the unit row without using the old
+eighth bound as a fourth budget.
+
+\paragraph{R33.6.2 The normalized input, quadratic error and every coefficient}
+
+For \(L\ge 2\) use
+\[
+U=s+w-dg=(d+\mathsf X-\mathsf XB)u,\quad R=-kU,
+\]
+\[
+EU^2=d^3+2d\delta_2+\delta_3+\delta_4,\qquad EU-EgU=d^2+2\delta_2.
+\]
+The symbols \(d^3\) and \(\delta_3\) are distinct.
+Let \(J_0=EU^2/d\), \(v=\delta_2/d\). Then
+\[
+J_0\le d^2+[2d+\theta(1+\theta)]v.
+\]
+The scalar inequality
+\(\sqrt{J_0}\le3/8+(2/3)J_0\), together with \(k\le4/3\), gives
+\[
+\delta/(kd)
+\le3/8-d+2d^2+v[-2+4d+2\theta(1+\theta)]\le3/8.
+\]
+If the coefficient of \(v\) is nonpositive, discard it.
+Otherwise use \(v\le\theta\); the remaining quadratic increases
+in \(d\) and its value at \(d=1/4\) is
+\(-1099/16384<0\). Thus \(D=d/2\) dominates \(\delta\).
+
+For every \(j\ge1\), direct skew moments give
+\[
+D_{2j-1}=(-1)^{j+1}k(d\delta_j+\delta_{j+1}),\qquad
+D_{2j}=(-1)^{j+1}k\delta_{j+2}.
+\]
+In particular
+\[
+D_1\le7d/8,\quad D_2<d/4,\quad
+D_3=-k(d\delta_2+\delta_3),\quad D_4=-k\delta_4.
+\]
+The first later positive odd term is at most
+\[
+D_5\le(4/3)(1/4+\theta)\theta^2d
+=1183d/8192<d/6,
+\]
+and \(D_6\le(4/3)\theta^4d<d/6\).
+Each subsequent member of either positive class contracts by at
+least \(\theta^2\) every four indices. Therefore
+\[
+\begin{gathered}
+\gamma_3\ge d/8,\quad\gamma_4\ge3d/4,\quad\\
+\gamma_j\ge41d/96=:\sigma\quad(j\ge5).
+\end{gathered}\tag{R33.A35}
+\]
+
+\paragraph{R33.6.3 \(L=2\) and \(L=3\)}
+
+For \(L=2,\allowbreak \)
+\[
+Y_2=Cq+BQu+c,\quad C=1+D,\quad
+c=k(d^2+\delta_2)-d,
+\]
+\[
+Q=(1-k\mathsf X^2)+[1-k(d+\mathsf X)]B.
+\]
+Both frequency coordinates are nonnegative:
+\(k(d+x)\le7/8\) and \(kx^2\le169/768\).
+Hence
+\[
+|Q|^2\le(1-x^2)^2+x(1-x)^2
+=1+x-4x^2+x^3+x^4\le1+x-3x^2\le13/12.
+\]
+The actual mean is
+\[
+c+EBQu=-2d+k(d^2+\delta_2+\delta_3)\le-695d/768.
+\]
+Use \(C\le9/8,\allowbreak \allowbreak  \ \log m\le-d,\allowbreak \allowbreak  \ \log C\le d/2\) in (R33.A18):
+\[
+\begin{gathered}
+\frac{\log EH_{4,2}^4}{d}\\
+\le-8+2-\frac{695}{216}+\frac{221}{48}\\
+=-\frac{1993}{432}<-\frac{18}{5}.
+\end{gathered}\tag{R33.A36}
+\]
+
+For \(L=3,\allowbreak \)
+\[
+Y_3=Cq+BPu+c,\quad
+C=1-d+D+D_1\le\bar C=1+3d/8,\quad c=-d+k\delta_3,
+\]
+\[
+P=1+D+B+[1-k(d+\mathsf X)]B^2+k\mathsf XB^3.
+\]
+Its real coordinate is in \([0,\allowbreak \allowbreak  1+D]\), and its imaginary coefficient
+is \(1-kx^2\in[0,\allowbreak \allowbreak  1]\).
+Thus \(\|Pu\|^2\le d[(1+D)^2+\theta]\). The exact rational comparison
+\[
+\frac{(1+d/2)^2+\theta}{(1+3d/8)^2}\le45/32
+\]
+has positive cleared difference \(d(112-107d)/2048\).
+The \(k\delta_3\) terms cancel in the signed mean:
+\[
+c+EBPu=-(2+D)d+(1-kd)\delta_2\le-51d/32.
+\]
+With \(\bar C\le35/32\),
+\[
+\begin{gathered}
+\frac{\log EH_{4,3}^4}{d}\\
+\le-8+\frac32-\frac{204}{35}+\frac{765}{128}\\
+=-\frac{28457}{4480}<-\frac{18}{5}.
+\end{gathered}\tag{R33.A37}
+\]
+
+\paragraph{R33.6.4 Every finite \(L\ge 4\)}\label{part:R33.6.4}
+
+The finite filter is
+\[
+Q_L=G_L-k(d+\mathsf X)B^{L-1}+k\mathsf XB^L.
+\]
+At a frequency set \(a=k(d+x)\), \(b=kx\), so
+\(0\le b\le a\le7/8\). Then
+\[
+\begin{gathered}
+Q_L=(1-a)G_L+(a-b)G_{L-1}\\
++b[G_{L-1}+z^L].
+\end{gathered}\tag{R33.A38}
+\]
+The coefficients are nonnegative and sum to one.
+The extra finite polynomial \(H_L=G_{L-1}+z^L\) is
+\(P_{L-1}\) of Section~\ref{proof:Q5-C033}.
+For \(L\ge5\), the estimate following \eqref{eq:L33:finiteP} gives
+\(|H_L|^2\le1-7x/15\le1\).
+At \(L=4\), its squared modulus minus one is
+\[
+ x[-1+3x-2x^2+x^3]\le0;
+\]
+the bracket increases to \(-1451/32768\) at \(x=\theta\).
+Thus \(|H_L|\le1\), hence \(|Q_L|\le1\), for every finite \(L\ge4\).
+
+Retain the final \(\gamma_{L+1}\bar f_0\) loss in (R33.A17), and use
+\(D\bar f_{L-1}\le DS^-_{L-1}\). The resulting true upper is
+\[
+Y_L\le(1+D)q+BPu-\gamma_{L+1},\qquad
+P=Q_L+DG_{L-2}.
+\]
+By (R33.A35),
+\[
+EBPu=-\beta_{L+2}+D_L-D\beta_L\le-\sigma,
+\quad c+EBPu\le-2\sigma.
+\]
+The exceptional \(G_2\) occurs only at \(L=4,\allowbreak \) and
+\(\|G_2\|<6/5\). Uniformly,
+\[
+\frac{\|Pu\|}{(1+D)\sqrt d}
+\le\frac{1+6D/5}{1+D}\le46/45.
+\]
+Substitution into (R33.A18) gives
+\[
+\begin{gathered}
+\frac{\log EH_{4,L}^4}{d}\\
+\le-8+2-\frac{82}{27}\\
++\frac{17}{4}\left(\frac{46}{45}\right)^2\\
+=-\frac{9307}{2025}<-\frac{18}{5}.
+\end{gathered}\tag{R33.A39}
+\]
+This completes the entire \(c=4\) low domain.
+
+\paragraph{R33.7 Every \(c\ge 5,\allowbreak  L=1:\) the full continuous moment rectangle}
+
+\paragraph{R33.7.1 Actual finite endpoints and positive auxiliary function}
+
+Put
+\[
+\begin{gathered}
+\alpha=\beta_c,\quad a=\beta_{c-1},\quad\\
+m=1-(\alpha+a)/2,\quad k=1/m,\quad t=m-a,
+\end{gathered}
+\]
+\[
+\begin{gathered}
+W=\sum_{j=3}^cK^j1=K^2G_{c-2}(K)g,\quad\\
+U_0=ag-W,\quad\\
+e_1=d-\beta_{c+1},\quad e_2=d-\beta_{c+2}.
+\end{gathered}
+\]
+Here \(e_1,\allowbreak \allowbreak  e_2\) denote the short means called \(D_1,\allowbreak \allowbreak  D_2\) in
+R2-C033 \mbox{\hyperref[part:R33.5]{part R33.5}}; they are not the later Duhamel sequence.
+The actual positive convolution, retaining \(aq\), gives
+\[
+\begin{gathered}
+h_c\le(1-a)q-r-W-\alpha,\qquad\\
+f_2+h_c\le2m+U_0,\qquad\\
+F_c\le q(m+U_0/2)^2.
+\end{gathered}\tag{R33.A40}
+\]
+
+The first-connector square now follows from
+Corollary~\ref{cor:unit-two-step:first-square}; its actual moments
+are evaluated next.
+
+\paragraph{R33.7.2 Same-moment errors, finite spectral loss and endpoint coupling}\label{part:R33.7.2}
+
+Let \(v=\delta_2/d\in[d,\allowbreak \allowbreak  \theta]\), \(y=\sqrt{\theta v}\).
+Since \(c-2\ge3\), (R33.A7) gives
+\[
+\|U_0\|\le\sqrt d(a+y),\qquad
+E(gU_0)=ad+e_2\ge(a+\kappa v)d.
+\]
+The same expansion as in the c4 unit row therefore permits
+\[
+\delta=m(y-\kappa v)+(a+y)^2\ge0,
+\]
+\[
+N=K(tg+W),\quad TF_c\le m^2q+mN-me_1+\delta d,\quad EN=-td+e_2,
+\]
+\[
+\begin{gathered}
+H_{c,1}\le(c_*+N/2)^2,\quad\\
+c_*=m-e_1/2+\delta d/(2m).
+\end{gathered}\tag{R33.A42}
+\]
+Again the square is a nonnegative arithmetic mean of the actual
+positive factors.
+
+For every finite \(n\ge3\),
+\[
+\begin{gathered}
+|G_n(i\sqrt x)|^2\\
+\le\frac{(1+x^3)^2}{1+x}\le1-\eta x,\qquad\eta=7/16.
+\end{gathered}\tag{R33.A43}
+\]
+The first bound follows separately from the three finite parity
+formulas in \mbox{\hyperref[part:R33.2.1]{part R33.2.1}}.
+For the second, clear \(1+x\): the remaining inequality is
+\(9-7x-32x^2-16x^5\ge0\).
+It decreases on \([0,\allowbreak \allowbreak  \theta]\), and
+\[
+9-7\theta-32\theta^2=7/8,\qquad16\theta^5<1/2.
+\]
+Thus it holds on the complete continuous interval.
+Using also \(\Re G_n\ge1-x\),
+\[
+|t-xG_n|^2\le t^2-2tx+(2t+1)x^2-\eta x^3.
+\]
+Integration with the same \(\nu\), then \(\delta_3\le\theta \delta_2\) and
+\(\delta_4/d\ge v^3\), gives
+\[
+\begin{gathered}
+\|tg+W\|^2\le dA(t,v),\qquad\\
+A=t^2-(2\kappa t-\theta)v-\eta v^3.
+\end{gathered}\tag{R33.A44}
+\]
+Here \(m\ge4/5,\allowbreak \allowbreak  \ t\ge3/5\), so \(2\kappa t-\theta>0\).
+The bound is positive on the entire enlarged rectangle:
+it increases in \(t\), decreases in \(v\), and at
+\(t=3/5,\allowbreak \allowbreak  v=\theta\) exceeds
+\[
+9/25-1/8-3/100=41/200.
+\]
+
+The short endpoint difference must be coupled to \(\alpha\):
+\[
+e_2-e_1\le h(\alpha-\tau),\qquad h=\theta/\kappa=13/19. \tag{R33.A45}
+\]
+For \(c=5,\allowbreak \) 6, \(\alpha=\tau\) and the difference is nonpositive.
+For \(c\ge 7,\allowbreak \) the alternating endpoints give \(e_2-e_1\le \delta_4\),
+while \(\alpha-\tau\ge\kappa \delta_3\) and \(\delta_4\le\theta \delta_3\).
+This verifies (R33.A45) for every finite c and preserves the same-kernel
+relation rather than separately maximizing its two terms.
+
+\paragraph{R33.7.3 Monotonicity in both structural parameters and the whole v interval}
+
+By (R33.A13) and (R33.A42)-(R33.A45), the logarithmic fourth bound divided by d
+is at most
+\[
+\begin{gathered}
+\mathcal E=\\
+-4(\alpha+a)/d-4t+4h(\alpha-\tau)/d\\
++4(y-\kappa v)+4(a+y)^2/m+(17/4)A(t,v).
+\end{gathered}\tag{R33.A46}
+\]
+Enlarge to the full rectangle \(\alpha,\allowbreak \allowbreak  a\in[\tau,\allowbreak \allowbreak  d]\), with the
+original \(d,\allowbreak \allowbreak  v\) fixed.
+There \(m\ge4/5,\allowbreak \allowbreak  \ t\ge3/5,\allowbreak \allowbreak  \ (a+y)/m<4/5\), and \(t-\kappa v>0\).
+Direct differentiation gives
+\[
+\mathcal E_\alpha
+=-4(1-h)/d+2+2[(a+y)/m]^2-(17/4)(t-\kappa v)<0,
+\]
+\[
+\mathcal E_a
+=-4/d+6+8(a+y)/m+2[(a+y)/m]^2-(51/4)(t-\kappa v)<0.
+\]
+The first is bounded above, after discarding its negative final term, by
+\(-120/19+2+32/25<0\); the second by
+\(-20+6+32/5+32/25<0\).
+Hence the single upper bound (R33.A46) is maximized at
+\(\alpha=a=\tau=(1-v)d\).
+
+Now
+\[
+m=1-(1-v)d,\quad t=1-2(1-v)d,\quad z=(1-v)d+y.
+\]
+With \(y'=\frac12\sqrt{\theta/v}\ge1/2\),
+\[
+(z^2/m)'=(z/m)[2y'-2d-dz/m]>0.
+\]
+Also
+\[
+A'=4d(t-\kappa v)-(2\kappa t-\theta)-3\eta v^2>-1.
+\]
+Indeed \(2\kappa-\theta=25/32\) and
+\(3\eta\theta^2<7/32\). The total derivative of (R33.A46) is therefore
+bounded below by
+\[
+8-\frac85-\frac38-\frac{17}{4}=\frac{71}{40}>0.
+\]
+This pays the entire \(v\) interval, so it is enough to set
+\(v=\theta,\allowbreak \allowbreak  \ \alpha=a=\kappa d,\allowbreak \allowbreak  \ y=\theta\).
+
+\paragraph{R33.7.4 The final continuous d interval}
+
+At those endpoints, (R33.A44) becomes
+\[
+P(d)=342509/524288-(14763/8192)d+(361/256)d^2.
+\]
+The remaining bound is exactly
+\[
+\begin{gathered}
+\mathcal E_*(d)=\\
+-8\kappa-4(1-2\kappa d)+4\theta^2\\
++\frac{4(\kappa d+\theta)^2}{1-\kappa d}\\
++(17/4)P(d).
+\end{gathered}\tag{R33.A47}
+\]
+It is convex on \([0,\allowbreak \allowbreak  1/5]\): \(P''>0\), and the square of an affine
+function divided by a positive affine function has nonnegative
+second derivative here.
+At zero, \(P(0)<2/3\), \(8\theta^2<4/3\), so
+\[
+\mathcal E_*(0)<-35/4+25/6=-55/12.
+\]
+At \(d=1/5\),
+\[
+t=61/80,\quad m=141/160,\quad z=21/40,\quad
+P(1/5)=4577893/13107200<7/20,
+\]
+\[
+4z^2/m=294/235<13/10,\qquad4\theta^2<2/3.
+\]
+Thus
+\[
+\begin{gathered}
+\mathcal E_*(1/5)\\
+<-39/5+2/3+13/10+119/80\\
+=-1043/240<-18/5.
+\end{gathered}\tag{R33.A48}
+\]
+Convexity proves the entire d interval. Together with the preceding
+monotonicities and finite-tail arguments, this completes every
+\(c\ge 5\) unit-inner row in the exact low domain.
+
+\paragraph{R33.8 Every \(c\ge 5,\allowbreak  L\ge 2:\) all retained masks and signed propagation}
+
+Throughout this section \(0<d\le1/5\), \(m=1-9d/8\), and
+\(k=1/m\le40/31\).
+
+\paragraph{R33.8.1 Genuine retained coefficients for every finite c}
+Use Lemma~\ref{lem:unit-retained-pair} with $n=c$ and $\sigma=9/4$.
+Its genuine coefficients $a_1,a_2,a_3$, sums $C_0,D_0,E_0$, and
+actual vector $U$ are used here. It includes $c=5$ with $a_3=0$,
+and every $c\ge6$ with $0\le\lambda\le1$. The second actual arm sum gives
+\[
+ f_2+h_c\le2m-U,\qquad F_c\le q(m-U/2)^2.\tag{R33.A49}
+\]
+Its exact constant loss and coefficient ranges are
+\[
+ \beta_c+a_1+a_2+(1-d)a_3=9d/4,
+\]
+\[
+ C_0=9d/4-\beta_c+dE_0,\quad
+ D_0=9d/4-\beta_c-\beta_{c-1}+dE_0,
+\]
+\[
+ \begin{gathered}
+ 5d/4+dE_0\le C_0\le(53/32)d+dE_0,\\
+ d/4\le D_0\le(17/16+d)d,\qquad0\le E_0\le d.
+ \end{gathered}\tag{R33.A50}
+\]
+The ranges follow from $\tau\le\beta_j\le d$ and $E_0\le d$.
+
+\paragraph{R33.8.2 Every finite frequency mask, including $c=5$}
+Write $U=[a(\mathsf X)-b(\mathsf X)B]u$. The same lemma gives
+\[
+ a=5d/4+\delta_2+x-x^2,\qquad b=d/4+\delta_2+x
+ \quad(c=5),\tag{R33.A51}
+\]
+and, for $c\ge6$, with $G_{c-2}(i\sqrt x)=a_f+i\sqrt x\,b_f$,
+\[
+ a=C_0+x(a_f-E_0),\qquad b=D_0+xb_f.\tag{R33.A52}
+\]
+The finite alternating sums obey
+$1-x\le a_f,b_f\le1-x+x^2$ and $a_f\ge(1-x)b_f$. In both cases,
+\[
+ a,b\ge0,\qquad a-(1-x)b\ge a_1+a_2x\ge\tau.\tag{R33.A53}
+\]
+The following two paragraphs prove the full-frequency bounds and the
+quadratic error for these same actual coefficients, with the original
+global $\delta_2$ fixed.
+
+\paragraph{R33.8.3 Strong retained norms}
+Lemma~\ref{lem:reference-retained:strong-norm} applies to this same actual
+\(U=[a(\mathsf X)-b(\mathsf X)B]u\), with the original global
+\(d,\delta_2\) fixed during every frequency maximization. It gives
+\[
+ \sqrt{a^2+xb^2}\le u_0:=3/8+9d/5\le147/200,
+ \qquad b\le z_0:=\theta+13d/16\le91/160.\tag{R33.A54}
+\]
+
+\paragraph{R33.8.4 The retained first-row allowance}\label{part:R33.8.4}
+The \(\sigma=9/4\) row of Lemma~\ref{lem:reference-retained-packet}
+proves, for these actual coordinates and the whole frequency interval,
+\[
+ \frac{15}{7}(a^2+xb^2)\le a+b.\tag{R33.A57}
+\]
+With \(V=\E U^2\), the actual first-row error is
+\[
+ \delta=-k\int(a+b)\,d\nu+k\sqrt{dV}+k^2V
+       \le3kd/10\le12d/31<2d/5.
+\]
+Thus the same positive continuation uses
+\[
+ D=2d/5.\tag{R33.A59}
+\]
+
+\paragraph{R33.8.5 Signed finite path losses}
+Use the exact four sign classes in
+\eqref{eq:reference-retained:signed-moments} for this same \(R=-kU\).
+The coordinate bounds of that lemma imply the original strong estimates
+\[
+ D_1\le(147/155)d<d,\quad D_2\le(1183/3968)d<d/3,
+ \quad D_1+D_2\le(24731/19840)d<5d/4.\tag{R33.A61}
+\]
+Every subsequent positive class is below \(d/6\), so
+\[
+ \gamma_3>0,\quad\gamma_4\ge2d/3,\quad
+ \gamma_j\ge41d/96\quad(j\ge5).\tag{R33.A62}
+\]
+
+\paragraph{R33.8.6 Every finite \(L\ge 4\)}
+
+The filter is
+\[
+Q_L=G_L-kaB^{L-1}+kbB^L.
+\]
+At each frequency \(0\le ka\le147/155<1\) and
+\(0\le kb\le91/124<1\). It is exactly the convex combination of
+\[
+G_{L-1},\quad G_L,\quad G_{L-1}+z^L,\quad G_{L+1}
+\]
+with respective weights
+\[
+(ka)(1-kb),\quad(1-ka)(1-kb),\quad(ka)(kb),\quad(1-ka)(kb).
+\]
+The four weights sum to one. All four finite polynomials contract:
+the G polynomials by (R33.A7), the missing-term polynomial by the
+complete proof in \mbox{\hyperref[part:R33.6.4]{part R33.6.4}}.
+Therefore \(\|Q_Lu\|^2\le d\) for every finite \(L\ge 4.\)
+
+Retain the final loss in (R33.A17) and use \(D\bar f_{L-1}\le2D\):
+\[
+p+Y_L\le2+c+BQ_Lu,\qquad c=2D-\gamma_{L+1}.
+\]
+The exact mean is
+\[
+EBQ_Lu=-\beta_{L+2}+D_L=-\gamma_{L+2}\le-\sigma.
+\]
+Hence
+\[
+c+EBQ_Lu\le4d/5-82d/96=-13d/240.
+\]
+The right side is a true nonnegative upper sum. Since
+\(8\log m\le-9d\), (R33.A19) gives
+\[
+\begin{gathered}
+\frac{\log EH_{c,L}^4}{d}\\
+\le-9-\frac{13}{60}+\frac{17}{4}\\
+=-\frac{149}{30}<-\frac{18}{5}.
+\end{gathered}\tag{R33.A63}
+\]
+
+\paragraph{R33.8.7 The two short connectors}
+The retained bounds give \(0\le ka\le147/155<1\) and
+\(0\le kb\le91/124<1\). At \(z=i\sqrt x\), the two filters are
+\[
+ Q_2=1-kbx+z(1-ka),\qquad
+ Q_3=1-x+kax+z(1-kbx).
+\]
+Their real and normalized imaginary coordinates lie in \([0,1]\).
+Consequently
+\[
+ |Q_j|^2\le1+x\le45/32,\qquad
+ \|Q_ju\|^2\le(45/32)d\quad(j=2,3).                 \tag{R33.A64}
+\]
+
+For \(L=2\), the original finite expansion is
+\[
+\begin{gathered}
+ p+Y_2=2+c+BV,\qquad
+ c=D+D_1-d,\qquad V=Q_2u+D\,1_{\rm const},\\
+ EBV=-d+D_2,\qquad EQ_2u=-d+D_1\le0 .
+\end{gathered}                                                     \tag{R33.A65}
+\]
+Thus \(c+EBV\le-7d/20\), and the constant-vector cross term is
+nonpositive:
+\[
+ \frac{\|V\|^2}{d}\le\frac{45}{32}+\frac4{25}d
+ \le\frac{5753}{4000}<\frac32.
+\]
+Here and below \(D=2d/5\). Formula (R33.A19), with
+\(8\log m\le-9d\), gives
+\[
+ \frac{\log EH_{c,2}^4}{d}
+ \le-9-\frac75+\frac{51}{8}
+ =-\frac{161}{40}<-\frac{18}{5}.                    \tag{R33.A66}
+\]
+
+\paragraph{R33.8.8 The connector \(L=3\)}
+The exact expansion, including its constant vector, is
+\[
+\begin{gathered}
+ p+Y_3=2+c+BV,\quad
+ \lambda_0=d-D-D_1,\quad P=Q_3+D,\\
+ c=D+D_1+D_2-2d,\qquad V=Pu-\lambda_0 1_{\rm const},\\
+ EBV=-\tau+D_3-Dd,\qquad EPu=-d+D_2 .
+\end{gathered}                                                     \tag{R33.A70}
+\]
+The signed-moment bounds give
+\[
+ c+EBV\le[2/5+5/4-2-\kappa]d
+ =-151d/160.                                         \tag{R33.A71}
+\]
+Since \(0\le D_1<d\) and \(0\le D_2<d/3\),
+\( |\lambda_0|\le3d/5\) and \(|EPu|\le d\).
+The constant-vector correction therefore satisfies
+\[
+ -2\lambda_0 EPu+\lambda_0^2\le(39/25)d^2.
+\]
+Using \(\sqrt{45/32}<6/5\) for the additional \(Du\) term gives
+\[
+\begin{aligned}
+ \|V\|^2/d
+ &\le45/32+(24/25)d+(4/25)d^2+(39/25)d\\
+ &\le38333/20000<2.
+\end{aligned}
+\]
+Finally (R33.A19) gives
+\[
+ \frac{\log EH_{c,3}^4}{d}
+ \le-9-\frac{151}{40}+\frac{17}{2}
+ =-\frac{171}{40}<-\frac{18}{5}.                    \tag{R33.A73}
+\]
+Together with part R33.7 and the preceding long rows, these two
+estimates prove every \(c\ge5\) low-domain case.
+
+\paragraph{R33.9 The same actual direction on the low and high domains}
+
+\paragraph{R33.9.1 Low-domain inner reversal followed by the original outer \(T^2\)}\label{part:R33.9.1}
+
+parts R33.5-8 prove (R33.A2) for the actual canonical input.
+Apply that statement to the legal kernel \(-K\). Then
+\[
+p\leftrightarrow q,\quad A\leftrightarrow T,\quad
+f_2\mapsto \bar f_2,\quad h_c\mapsto W_c,
+\]
+and all original moments \(\delta_i\) stay unchanged. Thus
+\[
+E[qA^L(p\bar f_2W_c)]^4\le e^{-18d/5}                 \tag{R33.A74}
+\]
+in precisely the stated low domains.
+This step reverses the inner component only.
+The actual output is then obtained by applying the
+original \(T^2\), with the original receiver weight q.
+For the genuine decorations,
+\[
+0<H_D=E_r^-qA^L(E_t^-p\bar f_2W_c)\le qA^L(p\bar f_2W_c),
+\]
+because \(0<E_t^-,\allowbreak \allowbreak  E_r^-\le1\) and \(A^L\) is positive.
+Hence \(EH_D^4\le e^{-18d/5}\).
+Apply the original ordinary-fourth bridge (R33.A21)-(R33.A22) directly to
+this actual \(H_D\):
+\[
+I_q(U_D)^3\le e^{-(197/3420)d-5d^2}.              \tag{R33.A75}
+\]
+This proves all \(c=3\) hosts, the \(c=4\) hosts with \(d\le 1/4,\allowbreak \) and all \(c\ge 5\)
+hosts with \(d\le 1/5.\)
+
+\paragraph{R33.9.2 Actual high-domain path comparison}
+
+For \(c=4\) and \(d\ge 1/4,\allowbreak \)
+\[
+W_4=A\bar f_3\le2E\bar f_3=2(1-2d)\le1.
+\]
+For \(c\ge 5\) and \(d\ge 1/5,\allowbreak \) the all-finite mean bound (R33.A9) gives
+\[
+\begin{gathered}
+W_c=A\bar f_{c-1}\le2\mu_{c-1}\\
+\le2(1-83d/32)\le77/80<1.
+\end{gathered}\tag{R33.A76}
+\]
+Consequently the very same direction satisfies
+\[
+0<U_D\le U_{12,L}:=T^2[qA^L(p\bar f_2)].              \tag{R33.A77}
+\]
+This is a comparison inside a nonnegative integral. The actual
+long arm and all its original edges have not been removed from
+the oriented object or its final edge count.
+
+The right side of (R33.A77) is the actual terminal $(1,2)$ direction of Section~\ref{proof:R2-C026}, with the same original $q$ and outer $T^2$.
+
+The high-domain comparison table is:
+
+\begin{description}[style=nextline,leftmargin=1.6em]
+\item[$L=1$.] $\E[U_{12,L}^4/q]\le1-d/5$, by R26.3.
+\item[$L=2$.] $\E[U_{12,L}^4/q]\le1-d/24$, by R26.4.2.
+\item[$L=3$.] $\E[U_{12,L}^4/q]\le1-7d/10$, by R26.4.3.
+\item[$L=4$.] $\E[U_{12,L}^4/q]\le1-d/4$, by R26.4.4.
+\item[$L\ge5$.] $\E[U_{12,L}^4/q]\le1-d/2$, by R26.6.
+\end{description}
+
+The proofs at $L=3,4$ propagate constants as $T^2\one=\bar f_2$. The proof for every $L\ge5$ retains its finite final monomial and the covariance sign on the spectral measure of $\one$. Only these five actual terminal $(1,2)$ entries are used here.
+
+All entries are at most \(1-d/24\). Positivity, \(q>0\) and (R33.A77)
+therefore give
+\[
+E(U_D^4/q)\le1-d/24.
+\]
+Hölder with exponents \(3/2,\allowbreak \allowbreak  3\), using \(Eq=1\), is exactly
+\[
+I_q(U_D)
+=E[(U_D^4/q)^{2/3}q^{1/3}]
+\le[E(U_D^4/q)]^{2/3}.
+\]
+Thus the high-domain payment is
+\[
+\begin{gathered}
+I_q(U_D)^3\\
+\le(1-d/24)^2\le e^{-d/12}\\
+\le e^{-197d/3420}.
+\end{gathered}\tag{R33.A78}
+\]
+The final coefficient margin is
+\(1/12-197/3420=22/855>0\).
+Both split endpoints \(d=1/4\) and \(d=1/5\) belong to both domains.
+Combining (R33.A75) and (R33.A78) proves (R33.A3).
+
+\paragraph{R33.10 Original decorations, reversal, KL and exact gluing responsibilities}
+
+\paragraph{R33.10.1 Original edges and all repeated arms}
+
+Each genuine pair is formed from two actually present equal-length
+arms. The pointwise inequality
+\[
+\bar f_\ell W_\ell\le1
+\]
+is the complete reversal of \(f_\ell h_\ell\le1\).
+It permits comparison at the same root label, followed by positive
+propagation.
+The terminal pair factor remains inside \(A^L\), and the internal-root
+pair factor remains outside \(A^L\) and before \(T^2\).
+
+If repeated arms need a tie-breaking choice, any fixed labeling or
+structure-based choice may be made before the host is supplied.
+Every original arm in each pair is still oriented, and every original
+subdivision vertex is still integrated over the original \(\mu\).
+
+
+Without paired decorations the component has
+\[
+e_B=(1+2+c)+L+1+2=L+c+6
+\]
+original edges. If \(S_{\rm pair}\) is the sum of one arm length from
+each actual pair at both roots, then
+\[
+e_B=L+c+6+2S_{\rm pair},\qquad |V_B|-1=e_B.         \tag{R33.A79}
+\]
+Every two-edge path, every internal connector edge and every long-arm
+subdivision edge appears exactly once in (R33.A1).
+
+\paragraph{R33.10.2 Complete component reversal is a separate operation}
+
+Reversing every original edge means substituting \(-K\) throughout
+the complete component, including both outer edges and every
+decoration. The fully reversed output is
+\[
+U_D^{\rm rev}
+=A^2[E_r^+pT^L(E_t^+qf_2h_c)],
+\]
+and its budget is
+\[
+I_p(U_D^{\rm rev})^3\le e^{-197d/3420},\qquad
+I_p(V)=E[p^{-1/3}|V|^{8/3}].
+\]
+This is different from the inner reversal in \mbox{\hyperref[part:R33.9.1]{part R33.9.1}}.
+The outer operator and the receiver weight must both swap in a
+complete reversal. Keeping \(T^2\) while changing only the weight,
+or keeping q while changing only the outer path, is not approved.

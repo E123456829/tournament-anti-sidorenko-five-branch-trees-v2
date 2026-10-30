@@ -1,0 +1,350 @@
+\subsection{Short even multipairs with a nonunit ordinary anchor}\label{proof:R2-C038}
+\paragraph{R38.1 Actual objects and directions}
+
+Let the original receiving arm have length \(m\ge3\), and let the terminal's strict residual list be
+\fitdisplay{
+a_1<b_1<\cdots<a_j<b_j,\qquad j\ge2,\qquad a_1\in\{2,3\},\qquad
+F=\prod_{i=1}^j h_{a_i}f_{b_i}.
+}{R38.L74}
+An optional negative root-post block is
+\fitdisplay{
+P=\prod_{i=1}^k W_{u_i}\bar f_{v_i},\qquad
+4\le u_1<v_1<\cdots<u_k<v_k,\qquad k\ge0.
+}{R38.L76}
+All counts and lengths are finite. The two masks may overlap each other and the anchor length. Genuine equal-pair products \(E_t,\allowbreak E_r\in[0,\allowbreak 1]\) remain at their original vertices. Define the decorated message by inserting \(E_tF\) in the following connector and multiplying by \(E_rP\) at the receiving root:
+\fitdisplay{
+H_D=E_rP\begin{cases}
+\bar f_mA(E_tF),&a_1=2,\ L=1,\\
+W_mT^L(E_tF),&a_1=2,\ L\ge2,\\
+W_mT^L(E_tF),&a_1=3,\ m\le L,\\
+\bar f_mAT^{L-1}(E_tF),&a_1=3,\ m>L.
+\end{cases}
+}{R38.L78}
+Every \(f\) arm points outward, every \(\bar f\) arm inward. An \(h\) arm has its first edge toward the root and all later edges toward the leaf; \(W\) reverses that entire arm. A \(T\) connector points toward the receiving root. In an \(AT^{L-1}\) row, only its root-adjacent edge is \(A\). These choices depend only on the original integers, and satisfy
+\fitdisplay{
+\boxed{EH_D^8\le e^{-2d},\qquad d=\|K\one\|_2^2.}
+}{R38.L87}
+
+\paragraph{R38.2 Finite inputs and one actual terminal mask}
+
+Use the finite packet of R2-C025 and the unequal-pair envelopes of Q5-C090. The first pair has loss \(\kappa d\) at minimum two and \((2-\theta)d=51d/32\) at minimum three; every later shorter arm has length at least four and pays \(16d/5\). Thus
+\fitdisplay{
+F\le e^{R-\lambda d},\qquad
+\lambda_2=607/160,\quad\lambda_3=767/160,\qquad
+R=\sum_i\sum_{r=a_i+1}^{b_i}K^r\one.
+}{R38.L104}
+Extra pairs only enlarge the available loss. The intervals within this single finite mask are disjoint. Work throughout on the original measure, with
+\fitdisplay{
+\begin{gathered}
+B=-K,\quad u=B\one,\quad T=J+B,\quad A=J-B,\quad p=1-u,\quad q=1+u,\\
+\delta_i=\|B^i\one\|^2,\quad d=\delta_1,\quad
+\theta=13/32,\quad\kappa=19/32,\quad\tau=d-\delta_2,\\
+f_n=A^n\one,\quad\bar f_n=T^n\one,\quad h_n=Tf_{n-1},\quad W_n=A\bar f_{n-1}.
+\end{gathered}
+}{R38.L106}
+The finite calculus gives \(0\le d\le1/3\), \(d^2\le\delta_2\le\theta d\), \(\delta_{i+1}\le\theta\delta_i\), \(\|B\|^2\le\theta\), and \(|BV(x)|\le\|V\|\). Only \(f_n,\allowbreak \bar f_n\) have means at most one; \(Eh_2=EW_2=1+d\). All four path types lie in \([0,\allowbreak 2]\). The common zero-boundary argument handles \(d=0\); below take \(d>0\).
+
+At \(z=i\sqrt x\), let \(\nu\) be the original spectral measure of \(-B^2\) at \(u\), with mass \(d\) and \(\int x^i\,\allowbreak d\nu=\delta_{i+1}\). If \(R=U(B)u\), \(U=\alpha+z\beta\), skew adjunction gives
+\fitdisplay{
+ER=-\int\beta\,d\nu,\qquad
+\|R\|^2=\int(\alpha^2+x\beta^2)\,d\nu.
+}{R38.L115}
+All masks are finite; positive geometric tails only bound them. Set
+\fitdisplay{
+G_0=0,\quad G_n(z)=\sum_{r=0}^{n-1}z^r,\quad\beta_1=\beta_2=0,\quad
+\beta_n=\sum_{i=1}^{\lfloor(n-1)/2\rfloor}(-1)^{i-1}\delta_i.
+}{R38.L124}
+The exact finite positive convolution, equivalently \(S_n^-=\sum_{r=0}^nB^r\one=1+G_n(B)u\), is
+\fitdisplay{
+1+G_n(B)u=\bar f_n+\sum_{r=3}^n\beta_r\bar f_{n-r},\qquad
+\tau\le\beta_r\le d\quad(r\ge3).
+}{R38.L126}
+Four alternating residue classes give \(|Q(i\sqrt x)|^2\le(1+x)/(1-x^2)^2\le32768/16245\) for every finite zero-one mask \(Q\). This supplies the norms below. At minimum two the mandatory term is \(K^3\one\). The short pair retains the actual \(\beta_bf_0\) term; \(\beta_2=0\) is never charged as a positive loss.
+
+For minimum two, the full actual packet is
+\fitdisplay{
+\begin{gathered}
+\sigma=ER^2<d/3,\quad |R|<3/5,\quad e^R\le1+R+5R^2/8,\\
+R=U(B)u,\quad U=\alpha+z\beta,\quad
+x/2\le\alpha\le6x/5,\quad-6x/5\le\beta\le x/2,\\
+D_i=EB^iR,\quad a_0=-D_1\in[0,d/2],\quad
+\rho=-D_2\in[-d/12,d/5],\\
+D_3\in[0,d/5],\quad |D_i|\le d/12\ (i\ge4),\quad D_0\in[-d/5,d/2],\\
+D=D_0+5\sigma/4\in[-d/5,11d/12],\qquad
+\epsilon=D+D_1\in[-7d/10,7d/10].
+\end{gathered}
+}{R38.L134}
+These are correlated quantities from the same \(R\). Positive propagation gives
+\fitdisplay{
+\begin{gathered}
+e^{\lambda d}T^LF\le Y_L,\quad Y_1=q+D+BR,\\
+Y_L=\bar f_L+B^LR+D\bar f_{L-1}
+ +\sum_{i=1}^{L-1}D_i\bar f_{L-1-i},\\
+Q_n=G_n+z^nU+\epsilon G_{n-2}+Dz^{n-2}\quad(n\ge2),\\
+Q_2=G_2+D+z^2U,\qquad Q_{n+1}=1+\epsilon+zQ_n,\\
+Y_L=1+\epsilon+Q_L(B)u-\sum_{n=3}^L\gamma_n\bar f_{L-n}.
+\end{gathered}
+}{R38.L142}
+The exact signed coefficients satisfy
+\fitdisplay{
+\begin{gathered}
+\gamma_3=d-D_2\ge11d/12,\qquad
+\gamma_4=d+Dd-D_3\ge11d/15,\\
+\gamma_n=\beta_n+D\beta_{n-1}-a_0\beta_{n-2}-D_{n-1}\ge d/4
+\quad(n\ge5).
+\end{gathered}
+}{R38.L148}
+The long bound uses \(\gamma_n/d\ge\kappa-1/12-(7/10)d\ge133/480>1/4\). The short \(\gamma_4\) bound retains \(D\ge-d/5\), \(D_3\le d/5\), \(d\le1/3\). Moreover \(EQ_n(B)u=-\gamma_{n+1}\) for all \(n\ge2\). At every \(L\ge4\), retaining the last two actual losses with \(h=1/4\) yields
+\fitdisplay{
+Y_L\le(1+\epsilon-hd)q-hd+BQ_{L-1}(B)u.
+}{R38.L154}
+Every discarded loss has its proved nonnegative sign at every finite index.
+
+Positive convolution followed by \(A\) gives, for every \(m\ge3\),
+\fitdisplay{
+W_m\le p-\beta_m-BG_{m-1}(B)u,\qquad\beta_m\in[\kappa d,d].
+}{R38.L158}
+The actual increment \(\Delta_m=\beta_{m+1}-\beta_m\le\delta_3<d/6\): odd \(m\) gives zero, \(m=4\) gives \(-\delta_2\), and positive even increments first occur at \(m=6\), with \(\delta_3\) or later \(\delta_5,\allowbreak \ldots\). Every \(G_n\) contracts except \(G_2\), whose squared bound is \(1+\theta\), with \(\sqrt{1+\theta}<6/5\). The finite difference identity \(G_n-G_r=\pm z^{\min(n,\allowbreak r)}G_{|n-r|}\), or zero, gives
+\fitdisplay{
+\|(G_n-G_r)u\|<\sqrt d/2\quad(n,r\ge2),
+\qquad\theta\sqrt{1+\theta}<1/2.
+}{R38.L163}
+
+\paragraph{R38.3 Full-mean eighth-exponent payment}
+
+If the actual anchor plus its nonnegative propagated upper is at most \(2+c+BV\), then AM--GM and the all-real signed exponential lemma give
+\fitdisplay{
+\log EH^8\le-8\lambda d+8(c+EBV)+17\|V\|^2,
+\qquad Ee^{8BV}\le e^{8EBV+17\|V\|^2}.
+}{R38.L169}
+The second inequality is the full fourth-exponent lemma applied to \(2V\). The actual nonnegative average also satisfies \(y^{16}\le e^{16(y-1)}\). The precursor and its signed mean are retained. A root-post block adds \(-8\Gamma_r+8ES\) and the single vector \(V_p\), as paid in \mbox{\hyperref[part:R38.8]{part R38.8}}.
+
+\paragraph{R38.4 Minimum two, unit connector}
+
+Use \(\bar f_mAF\). The positive Taylor error and actual mean are
+\fitdisplay{
+S_1R=AR,\quad\omega_1=5\sigma/4<5d/12,\quad
+EAR=D_0-D_1\le d,
+}{R38.L180}
+using \(D_0,\allowbreak a_0\le d/2\). The bare sum has \(\bar f_m+p\le2-\beta_m+BV_b\), \(V_b=G_{m-1}u\), \(EBV_b=-\beta_{m+1}\). At \(m=3\), \(\beta_3+\beta_4=2d\); at \(m\ge4\) that sum is at least \(2\tau\ge19d/16\).
+
+For \(m=3\),
+\fitdisplay{
+\langle G_2u,R\rangle=\int(\alpha+x\beta)\,d\nu\ge0,
+\qquad\alpha+x\beta\ge x-\frac{2x^2}{1-x^2}\ge0.
+}{R38.L187}
+Here \(2\theta<1-\theta^2\) is the rational comparison \(832<855\) in units of \(1024\). Hence \(\|G_2u-R\|^2\le(45/32+1/3)d=167d/96\). For \(m\ge4\), \(\operatorname{Re}G\ge\kappa\), the normalized imaginary coefficient has modulus at most one, and the finite coordinate bounds imply
+\fitdisplay{
+\langle G_{m-1}u,R\rangle\ge-d/12.
+}{R38.L191}
+Indeed the concave function \(\kappa x/2-(6/5)x^2\) has its minimum at zero or \(\theta\), and its latter value is \(-793/10240>-1/12\); \(\beta\ge0\) only improves the dot product. Thus \(\|V_b-R\|^2\le d+d/3+d/6=3d/2\). The two complete loss payments are
+\fitdisplay{
+\begin{gathered}
+607/20+16-17(167/96)-10/3-8>14/3>2\quad(m=3),\\
+607/20+19/2-51/2-10/3-8=181/60>2\quad(m\ge4).
+\end{gathered}
+}{R38.L197}
+For the first, \(607/20>30\) and \(17(167/96)<30\). All \(j\ge2\) are already included in the one finite mask.
+
+\paragraph{R38.5 Minimum two, length-two connector}
+
+Keep the actual \(W_mT^2F\) direction. From the genuine \(Y_2\),
+\fitdisplay{
+\begin{gathered}
+W_m+Y_2\le2+c+BV,\quad c=\epsilon-\beta_m,\\
+V=D\one-B(G_{m-2}u-R),\quad V'=B(G_{m-2}u-R),\\
+EBV'=d-\beta_{m+1}-D_2,\\
+c+EBV=\epsilon-d+\Delta_m+D_2\le\epsilon-3d/4\le-d/20.
+\end{gathered}
+}{R38.L204}
+For \(n=m-2\ge1\), including \(n=1,\allowbreak 2\), each \(G_n\) has real coordinate in \([\kappa,\allowbreak 1]\) and normalized imaginary coordinate in \([0,\allowbreak 1]\), whereas \(\alpha\le6\theta/5=39/80<\kappa\). Thus
+\fitdisplay{
+|G_n-U|^2\le(1-x/2)^2+x(1+6x/5)^2
+=1+(53/20)x^2+(36/25)x^3<8/5.
+}{R38.L213}
+This uses \(\theta^2<1/6\), \(\theta^3<7/100\), and \(53/120+63/625<3/5\). Hence \(\|V'\|^2\le13d/20\), while \(EV'=-\beta_m+a_0\) and \(\beta_m-a_0\ge3d/32>0\). Retain the full constant cross:
+\fitdisplay{
+\|V\|^2=\|V'\|^2+D^2+2D(\beta_m-a_0).
+}{R38.L220}
+If \(D<0\), the cross is nonpositive and \(D^2\le d/75\). If \(D\ge0\), use \(D\le11d/12\), \(\beta_m-a_0\le d\), \(d\le1/3\), so the extra cost is at most \(385d/432\). Consequently
+\fitdisplay{
+\begin{gathered}
+\|V\|^2\le(13/20+385/432)d=3329d/2160<25d/16,\\
+607/20+2/5-17(3329/2160)>17/4>2,
+\end{gathered}
+}{R38.L225}
+where \(17(3329/2160)<53/2\).
+
+\paragraph{R38.6 Minimum two, every longer connector}
+
+At \(L=3\),
+\fitdisplay{
+\begin{gathered}
+Y_3=(1+\epsilon)q+BQ_2u-\gamma_3,\quad c=\epsilon-\beta_m-\gamma_3,\\
+V=V_0+\epsilon\one,\qquad
+V_0=(G_2-G_{m-1})u+Du+B^2R,\\
+\|V_0\|<(1/2+11/36+6/25)\sqrt d<21\sqrt d/20.
+\end{gathered}
+}{R38.L233}
+The \(B^2R\) term uses \(\theta^2/3<36/625\). The mean \(EV_0=\beta_m-\gamma_3\in[-2d/3,\allowbreak d/12]\), with \(\gamma_3\in[11d/12,\allowbreak 6d/5]\). For \(\epsilon\ge0\), its constant correction is at most \(((7/10)^2+(7/10)/6)d^2\le91d/450\); for \(\epsilon\le0\), it is at most \(((7/10)^2+(4/3)(7/10))d^2\le427d/900\). Therefore
+\fitdisplay{
+\begin{gathered}
+\|V\|^2<[(21/20)^2+427/900]d<169d/100,\\
+c+EBV=\epsilon-\gamma_3-\gamma_4+\Delta_m
+\le\epsilon-89d/60\le-47d/60,\\
+607/20+94/15-17(169/100)>457/60>2.
+\end{gathered}
+}{R38.L243}
+The last comparison uses \(17(169/100)<29\).
+
+For every \(L\ge4\), put \(n=L-1\ge3\), \(h=1/4\), and retain
+\fitdisplay{
+c=\epsilon-2hd-\beta_m,\quad
+V=V_0+(\epsilon-hd)\one,\quad V_0=(Q_n-G_{m-1})u.
+}{R38.L251}
+The four terms in \(V_0\) are the geometric difference, \(B^nR\), \(\epsilon G_{n-2}u\), and \(DB^{n-2}u\). Their respective bounds are
+\fitdisplay{
+\begin{gathered}
+\theta\sqrt{1+\theta}<1/2,\quad \theta^3/3<9/400,\\
+(7/10)(1/3)(6/5)=7/25,\quad
+(11/12)(1/3)(13/20)=143/720<1/5.
+\end{gathered}
+}{R38.L256}
+The actual \(G_2\) exception is paid by \(6/5\). Hence \(\|V_0\|<113\sqrt d/100\). Also \(EV_0=\beta_m-\gamma_L\in[-d,\allowbreak 3d/4]\): at \(L=4\), \(\gamma_4\le d+11d^2/12\) because \(D_3\ge0\); at \(L\ge5\), \(\gamma_L\le13d/12+11d^2/12\le25d/18\). Combining with \(\beta_m\ge\kappa d\) gives the lower mean bound, and \(\gamma_L\ge hd\) gives the upper. The signed exponent mean is
+\fitdisplay{
+c+EBV=\epsilon-2hd-\gamma_{L+1}+\Delta_m\le\epsilon-7d/12.
+}{R38.L263}
+Put \(t=\epsilon/d-1/4\in[-19/20,\allowbreak 9/20]\) and \(C=113/100\). The full squared norm obeys
+\fitdisplay{
+\frac{\|V\|^2}{d}\le N(t)=\begin{cases}
+C^2+(t^2-2t)/3,&t\le0,\\
+C^2+(t^2+3t/2)/3,&t\ge0.
+\end{cases}
+}{R38.L270}
+The fee \(8(t-1/3)+17N(t)\) is convex on each closed half. At the negative, zero and positive endpoints, the pairs \((N,\allowbreak \text{mean fee})\) are
+\fitdisplay{
+(C^2+1121/1200,-154/15),\quad(C^2,-8/3),\quad(C^2+117/400,14/15).
+}{R38.L276}
+Every fee is less than \(607/20-2\). Indeed \(17C^2=217073/10000<87/4\); the positive endpoint uses \(17(117/400)=1989/400<5\), \(14/15<1\), giving fee \(<111/4\) and loss \(>13/5\). The negative endpoint uses \(17(1121/1200)<16\), \(154/15>41/4\), giving fee \(<55/2\) and loss \(>57/20\). At zero the fee is \(<87/4-8/3<20\), giving loss \(>207/20\). Convexity covers every allowable correlated \((\epsilon,\allowbreak D)\). This proves all finite \(L\ge4\) for minimum two in the same \(W_mT^L\) direction.
+
+\paragraph{R38.7 Minimum three, every connector length}\label{part:R38.7}
+
+The actual R2-C025 packet gives
+\fitdisplay{
+\begin{gathered}
+\sigma<9d/64,\quad |R|<1/3,\quad e^R\le1+R+3R^2/5,\\
+D_0\in[-d/5,d/2],\quad D_1\in[-d/12,d/5],\quad-D_2\in[-d/12,d/5].
+\end{gathered}
+}{R38.L293}
+with \(\lambda=767/160\). Keep the structural comparison \(m\le L\) versus \(m>L\). The ordinary power bounds are \(\|T^n\|\le1\) for \(n\ge3\) and
+\fitdisplay{
+\|T^2\|\le(1+1024\delta_2/855)^2
+\le(2981/2565)^2<(7/6)^2<7/5.
+}{R38.L297}
+The genuine positive Taylor errors have the exact scopes
+\fitdisplay{
+\omega_1=(6/5)\sigma<27d/160,\qquad
+\omega_L<27d/80\quad(L\ge2).
+}{R38.L301}
+Moreover \(EAR\le7d/12\), \(EATR=D_0+D_1-D_2\le9d/10\), and
+\fitdisplay{
+\|TR\|^2=D_0^2+2D_0D_1+\|BR\|^2
+\le(3/20+117/2048)d<(11/24)^2d.
+}{R38.L302}
+For \(L\ge3\), the power bounds give \(\|T^{L-1}R\|<21\sqrt d/40\). The finite Duhamel expansion
+\fitdisplay{
+f_k=\mu_{k-1}\one+\sum_{r=1}^{k-1}\mu_{k-1-r}(-B)^r\one+(-B)^k\one
+}{R38.L310}
+has coefficients in \([0,\allowbreak 1]\), whence \(\|f_k-\mu_{k-1}\one\|\le\sqrt d\sum_{r=0}^{k-1}\theta^{r/2}<3\sqrt d\). It gives \(a_R=Ef_{L-1}R\le d/2+3\sqrt{d\sigma}<13d/8\), and thus, for either actual last-edge sign,
+\fitdisplay{
+ES_LR\le13d/8+21d/40=43d/20\quad(L\ge3).
+}{R38.L305}
+Positivity and the last row bounded by two give \(S_LF\le e^{-\lambda d}(S_L\one+S_LR+\omega_L)\), nonnegative as a whole. At \(L\ge2\), the error uses \(E[f_{L-1}R^2]\le2\sigma\); at \(L=1\), it uses \(\sigma\). Retain \(S_LR=a_R\pm BT^{L-1}R\), including its true constant and the displayed constant cross in \(TR\).
+
+The exact bare sums are:
+\fitdisplay{
+\begin{gathered}
+\bar f_m+p\le2-\beta_m+BG_{m-1}u\quad(L=1),\\
+8(\beta_m+\beta_{m+1})=16d\ (m=3),\qquad
+8(\beta_m+\beta_{m+1})\ge19d/2\ (m\ge4),\\
+\bar f_m+W_2\le2-\beta_m+BV_b,\quad
+V_b=BG_{m-2}u,\quad\|V_b\|\le4\sqrt d/5,\\
+-8\beta_m+8EBV_b\le-3d/2\quad(L=2),\\
+W_h+\bar f_H\le2-(51/32)d+BV_b,\quad
+EBV_b\le\theta d,\quad\|V_b\|\le\sqrt d/2\quad(L\ge3),\\
+h=\min(m,L)\ge3,\qquad H=\max(m,L).
+\end{gathered}
+}{R38.L321}
+For \(h=H\), the exact sum is \(2\mu_{h-1}\le2-2d\); otherwise the finite vector is \(B^{h-1}G_{H-h}u\). The \(G_2\) exception uses \(\theta^2(1+\theta)<1/4\), and the signed mean uses \(\delta_2\le\theta d\).
+
+The four complete payments, in order \((L=1,\allowbreak m=3)\), \((L=1,\allowbreak m\ge4)\), \(L=2\), \(L\ge3\), are
+\fitdisplay{
+\begin{gathered}
+\|G_2u-R\|<(6/5+3/8)\sqrt d=63\sqrt d/40,\\
+767/20+16-17(63/40)^2-27/20-14/3>2,\\
+\|G_{m-1}u-R\|<11\sqrt d/8,\quad
+767/20+19/2-17(11/8)^2-27/20-14/3>2,\\
+\|V\|\le(4/5+11/24)\sqrt d=(151/120)\sqrt d,\\
+767/20+3/2-17(151/120)^2-27/10-36/5>2,\\
+\|V\|\le(1/2+21/40)\sqrt d=(41/40)\sqrt d,\\
+767/20+19/2-17(41/40)^2-27/10-86/5>2.
+\end{gathered}
+}{R38.L333}
+Their norm costs are less than \(43,\allowbreak 33,\allowbreak 27,\allowbreak 18\), and their other fees are less than \(7,\allowbreak 7,\allowbreak 10,\allowbreak 20\). The resulting weaker losses are \(87/20,\allowbreak 157/20,\allowbreak 57/20,\allowbreak 197/20\), each greater than two. Equality \(m=L\) and every finite connector are included.
+
+\paragraph{R38.8 Every finite negative root-post block}\label{part:R38.8}
+
+For \(k\ge1\), the strong actual pair envelope and its one finite reversed mask give
+\fitdisplay{
+\begin{gathered}
+P\le e^{S-\Gamma_r},\quad\Gamma_r\ge16kd/5,\quad
+S=BV_p=B^4Q_p(B)u,\quad V_p=B^3Q_p(B)u,\\
+C_\star=32768/16245,\quad C_\beta=1024/855,\\
+\|V_p\|^2\le C_\star\theta^3d=2197d/16245<9d/64,\qquad
+ES\le C_\beta\delta_4<d/12.
+\end{gathered}
+}{R38.L347}
+Add \(V_p\) to the same actual \(V\) and pay every cross by the triangle inequality. Its intervals may overlap the terminal intervals and \(m\).
+
+For minimum two, the short rows use base norm bounds \(4/3,\allowbreak 5/4,\allowbreak 13/10\), in units of \(\sqrt d\), and combined bounds \(41/24,\allowbreak 13/8,\allowbreak 67/40\). The full losses are
+\fitdisplay{
+\begin{gathered}
+607/20+128/5+19/2-17(41/24)^2-(10/3+8+2/3)>69/20>2,\\
+607/20+128/5+2/5-17(13/8)^2-2/3>207/20>2,\\
+607/20+128/5+94/15-17(67/40)^2-2/3>793/60>2.
+\end{gathered}
+}{R38.L357}
+The respective norm costs are below \(50,\allowbreak 45,\allowbreak 48\); the first other fees total twelve, and the last two use \(2/3<1\).
+
+At minimum two and \(L\ge4\), complete the squares:
+\fitdisplay{
+N=C^2-1/3+(t-1)^2/3\quad(t\le0),\qquad
+N=C^2-3/16+(t+3/4)^2/3\quad(t\ge0).
+}{R38.L367}
+Both residual constants are positive, so \(\sqrt N\) and \((\sqrt N+3/8)^2\) are convex on each half. Hence so is the full fee \(8(t-1/3)+17(\sqrt N+3/8)^2+2/3\). At the negative, positive and zero endpoints, respectively, the combined norms are less than \(15/8,\allowbreak 327/200,\allowbreak 301/200\), using \(\sqrt N<3/2\) and \(\sqrt N<63/50\) at the first two. Their fees are bounded by
+\fitdisplay{
+\begin{gathered}
+17(15/8)^2-154/15+2/3,\\
+17(327/200)^2+14/15+2/3,\\
+17(301/200)^2-8/3+2/3.
+\end{gathered}
+}{R38.L375}
+The norm costs are below \(60,\allowbreak 46,\allowbreak 39\), so the complete fees are below \(252/5,\allowbreak 238/5,\allowbreak 37\). Subtracting from \(607/20+128/5=1119/20\) leaves losses greater than \(111/20,\allowbreak 167/20,\allowbreak 379/20\), all greater than two. Composition with the increasing convex square on nonnegative arguments justifies the convexity and covers every actual \(\epsilon\).
+
+For minimum three, the four combined norms are \(39/20,\allowbreak 7/4,\allowbreak 49/30,\allowbreak 7/5\), in the same order as \mbox{\hyperref[part:R38.7]{part R38.7}}. The complete payments are
+\fitdisplay{
+\begin{gathered}
+767/20+128/5+16-17(39/20)^2-27/20-14/3-2/3>2,\\
+767/20+128/5+19/2-17(7/4)^2-27/20-14/3-2/3>2,\\
+767/20+128/5+3/2-17(49/30)^2-27/10-36/5-2/3>2,\\
+767/20+128/5+19/2-17(7/5)^2-27/10-86/5-2/3>2.
+\end{gathered}
+}{R38.L385}
+Their norm costs are below \(65,\allowbreak 53,\allowbreak 46,\allowbreak 34\), and the remaining fees below \(7,\allowbreak 7,\allowbreak 11,\allowbreak 21\). The starting losses and resulting net losses satisfy
+\fitdisplay{
+\begin{gathered}
+\text{starting losses: }1599/20,\ 1469/20,\ 1309/20,\ 1469/20,\\
+\text{net losses: }>159/20,\ >269/20,\ >169/20,\ >369/20.
+\end{gathered}
+}{R38.L393}
+Extra terminal or root pairs increase the available loss. Restore the actual \(E_r,\allowbreak E_t\le1\) by positive operators to finish the theorem.

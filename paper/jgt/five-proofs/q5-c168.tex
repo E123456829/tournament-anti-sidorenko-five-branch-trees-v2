@@ -1,0 +1,204 @@
+% Complete replacement draft for q5-c168.tex. Insert both shared files first.
+\subsection{The terminal pair (2,3) at a root (1,2,v)}
+\label{proof:Q5-C168}
+
+Let \(v\ge3\) and let the original inner and outer connector lengths
+\(L,M\ge1\) be independent. Either terminal direction may be fixed:
+\begin{equation}\label{eq:odd168:directions}
+ F=\bar f_2W_3\quad\hbox{or}\quad F=h_2f_3,
+ \qquad
+ P_{v,L}=\begin{cases}h_2f_v,&L=2,\\
+                       \bar f_2W_v,&L=1\text{ or }L\ge3.
+          \end{cases}
+\end{equation}
+Use the outward unit arm \(p\), direct inner edges from terminal to
+root and outer edges from root to receiver, and put
+\begin{equation}\label{eq:odd168:statement}
+ H=pP_{v,L}T^LF.
+ \qquad
+ \E H^4\le e^{-25d/4},\qquad
+ I_q(T^MH)^3\le e^{-3d/2}.
+\end{equation}
+The directions depend only on the original lengths. Arbitrary genuine
+equal pairs and subdivision vertices are allowed. We use the notation
+and path inputs of Section~\ref{sec:odd-common-calculus}.
+
+\begin{proof}
+The arm sums for both terminal directions are \(2-d+R\), with
+\(R=-B^2u\):
+\[
+ \bar f_2=1+u+Bu,\quad W_3=1-d-u-Bu-B^2u,
+ \quad h_2=1+u-Bu,\quad f_3=1-d-u+Bu-B^2u.
+\]
+Thus \(F\le e^{R-d}\). The row bound gives
+\(|R|\le\sqrt{\delta_2}\le\sqrt{13/96}<3/8\).
+On \([0,3/8]\), the Taylor remainder coefficient is at most
+\[
+ \tfrac12+\tfrac t6+\frac{t^2}{24(1-t/5)}
+ \le\tfrac{1347}{2368}<\tfrac47;
+\]
+on negative arguments it is at most \(1/2\).
+Use the positive majorant \eqref{eq:oc:fourth-duhamel}, with the
+coefficient \(c=\eta=8/7\) permitted at \(t=3/8\), and data
+\begin{equation}\label{eq:odd168:terminal-data}
+\begin{gathered}
+ \Gamma=d,\quad\eta=8/7,\quad\sigma=\delta_3,
+ \quad D_{2k}=0,\quad D_{2k-1}=(-1)^k\delta_{k+1}\ (k\ge1),\\
+ \delta=8\delta_3/7\le169d/896<d/5,
+ \quad\delta\le13\delta_2/28,
+ \quad\epsilon=\delta-\delta_2<0.
+\end{gathered}
+\end{equation}
+Write \(m=v-2\), \(G_m=E+zC\), and \(\beta=\int C\,d\nu\).
+The standard and alternative root losses are \(\ell_s,\ell_a\)
+from Lemma~\ref{lem:odd-common:root-pairs}.
+
+For the three short lengths, combine their positive majorants with
+the indicated root pair and the actual \(p\) curvature. The resulting
+parameters \((Q_L,c_L,S_L)\), where \(S_L=a_L+\E BQ_L\), are
+\begin{equation}\label{eq:odd168:short-parameters}
+\begin{aligned}
+ Q_1&=[x(1+C)-zE]u,\qquad c_1=\beta,\\
+ S_1&=-d+\delta-\delta_2-\ell_s,\\[2pt]
+ Q_2&=[1-xC+z(x-E)]u,\qquad c_2=\delta+\beta,\\
+ S_2&=-2d-\delta_2+\delta-\ell_a,\\[2pt]
+ Q_3&=[1+xC-x^2+\delta+z(1-E)]u,\qquad c_3=\beta+\epsilon,\\
+ S_3&=-3d-\delta_2+\delta+\delta_3-\delta d-\ell_s.
+\end{aligned}
+\end{equation}
+Here \(z=i\sqrt x\); the coordinate notation defines vectors by
+functional calculus, not pointwise functions of the original labels.
+In every row \eqref{eq:odd-common:curvature} gives
+\(\log\E H^4\le4S_L+(17/4)\|Q_L\|^2+(10/3)c_L^2\).
+
+\emph{Length one.}
+For \(v=3\), \((E,C,\beta)=(1,0,0)\), giving
+\[
+ \log\E H^4\le-8d+\tfrac14\delta_2+\tfrac{247}{28}\delta_3
+ <-8d+\tfrac{529}{336}d<-25d/4.
+\]
+For \(v\ge4\), pay \(\beta^2\le d\int C^2\,d\nu\) first.
+The complete frequency integrands, for even and odd \(m\), are
+\begin{align*}
+ F_e={}&-4-4x+\tfrac{32}{7}x^2-(8+4x)C
+       +\tfrac{17}{4}[x^2(1+C)^2+xC^2]+\tfrac{10}{9}C^2,\\
+ F_o={}&-8+\tfrac x4+\tfrac{247}{28}x^2-4C
+       +[\tfrac{17}{4}x^2(1+x)+\tfrac{10}{9}]C^2.
+\end{align*}
+They are convex in \(C\in[1-x,1]\). All four endpoint polynomials
+and their upper bounds on \([0,\theta]\) are
+\begin{center}\small
+\begin{tabular}{@{}p{.13\linewidth}p{.62\linewidth}p{.19\linewidth}@{}}
+\toprule
+\((m,C)\)&Endpoint polynomial&Upper bound\\ \midrule
+Even, \(1\)&\(-\tfrac{98}{9}-\tfrac{15}{4}x+\tfrac{151}{7}x^2\)
+       &\(-\tfrac{919}{126}\)\\[3pt]
+Even, \(1-x\)&\(\begin{aligned}[t]
+ &-\tfrac{98}{9}+\tfrac{73}{36}x+\tfrac{2291}{126}x^2\\
+ &\quad-\tfrac{51}{4}x^3+\tfrac{17}{4}x^4
+ \end{aligned}\)&\(-\tfrac{10349}{1512}\)\\[3pt]
+Odd, \(1\)&\(-\tfrac{98}{9}+\tfrac x4+\tfrac{183}{14}x^2+\tfrac{17}{4}x^3\)
+       &\(-\tfrac{8297}{1008}\)\\[3pt]
+Odd, \(1-x\)&\(\begin{aligned}[t]
+ &-\tfrac{98}{9}+\tfrac{73}{36}x+\tfrac{1787}{126}x^2\\
+ &\quad-\tfrac{17}{4}x^3-\tfrac{17}{4}x^4+\tfrac{17}{4}x^5
+ \end{aligned}\)&\(-\tfrac{11357}{1512}\)\\
+\bottomrule
+\end{tabular}
+\end{center}
+The bounds use \(x\le1/2\), \(x^2<1/6\), \(x^3<1/12\).
+In the second and fourth rows the final displayed tails are
+nonpositive. Every bound is below \(-25/4\).
+
+\emph{Length two.}
+For \(v\ge4\), the actual alternative root gives
+\[
+ \|Q_2\|^2\le\int[(1-x+x^2)^2+x(1-x)^2]\,d\nu
+ =\int[1-x+x^2-x^3+x^4]\,d\nu\le d.
+\]
+Indeed the last polynomial minus one is
+\(-x(1-x)(1+x^2)\le0\).
+Moreover \(0\le c_2\le6d/5\) and
+\(4\delta-4\delta_2\le-15\delta_2/7\). Therefore
+\[
+ \log\E H^4\le-\tfrac{1929}{256}d-\tfrac{15}{7}\delta_2
+                    +\tfrac{24}{5}d^2
+ \le-(\tfrac{1929}{256}-\tfrac{31}{35})d<-13d/2.
+\]
+For \(v=3\), keep the exact norm
+\(\|Q_2\|^2=d+\delta_2-2\delta_3+\delta_4\) and \(c_2=\delta\):
+\[
+ \log\E H^4\le-\tfrac{31}{4}d+\tfrac14\delta_2
+        -\tfrac{55}{14}\delta_3+\tfrac{17}{4}\delta_4
+        +\tfrac{10}{3}\delta^2<-\tfrac{303}{40}d.
+\]
+Here \(\delta_4\le\theta\delta_3\) makes the middle pair nonpositive,
+and the remaining costs are less than \(d/8+d/20\).
+
+\emph{Length three.}
+For \(v\ge4\), \(0\le c_3\le d\); for \(v=3\),
+\(c_3=\epsilon<0\) and \(|c_3|\le\delta_2\le d\).
+Removing \(\delta u\) only for the norm comparison gives
+\[
+ \|Q_3-\delta u\|^2\le
+       \int[(1+x-x^2)^2+x^3]\,d\nu
+       \le d+2\delta_2-\delta_3.
+\]
+Restoring its square and cross term adds at most
+\((5/2)\delta d+\delta^2d\le77d^2/150\).
+Drop the favorable \(-4\delta d\) from the scalar term. The full bound is
+\[
+ \log\E H^4\le-\tfrac{47}{4}d+\tfrac92\delta_2
+                 +\tfrac{121}{28}\delta_3+\tfrac{1103}{200}d^2
+ <-\tfrac{27}{4}d.
+\]
+The three positive terms are less than \(9d/4,3d/4,2d\),
+respectively. This includes the negative constant at \(v=3\).
+
+\phantomsection\label{part:C168.8}\emph{Every longer connector.}
+For \(\gamma_j=\beta_j-D_{j-1}\), the finite moments in
+\eqref{eq:odd168:terminal-data} give
+\begin{equation}\label{eq:odd168:gamma}
+ \gamma_3=d,\quad\gamma_4=d-\delta_3\ge d/2,
+ \qquad\gamma_j\ge\kappa d-\delta_4
+       >\tfrac{117}{224}d>d/2\quad(j\ge5).
+\end{equation}
+In the last inequality \(\delta_4\le\theta^3d<d/14\).
+Apply \eqref{eq:odd-common:long-parameters} with \(h=1/2\),
+\(D_1<0\), \(n=L-1\ge3\), and \(R=-B^2u\).
+The retained \(\gamma_L\bar f_0\) and
+\(\gamma_{L-1}\bar f_1\) give a terminal scalar-plus-mean bound
+\begin{equation}\label{eq:odd168:long-mean}
+ S_t\le-\tfrac52d+\tfrac{16}{7}\delta_3
+       \le-\tfrac{951}{448}d<-\tfrac{21}{10}d.
+\end{equation}
+The next mean uses \(\gamma_{L+1}\), covered by the same finite bounds.
+Adding the standard root leaves the curvature parameters
+\begin{equation}\label{eq:odd168:long-parameters}
+ Q=(G_n(B)-BG_m(B)-B^{n+2})u,
+ \qquad c=\beta-d/2,\qquad S\le S_t-\ell_s.
+\end{equation}
+Thus \(|c|\le d/2\), whose curvature cost is at most \(5d/18\).
+Also \(\|B^{n+2}u\|<11\sqrt d/100\), since
+\(\theta^5<121/10000\).
+For \(v\ge4\), Lemma~\ref{lem:odd-common:joint-paths} gives
+\(\|Q\|<131\sqrt d/100\), hence \(\|Q\|^2<7d/4\), while
+\(S<-7d/2\). Consequently
+\[
+ \log\E H^4<-14d+\tfrac{119}{16}d+\tfrac5{18}d
+        =-\tfrac{905}{144}d<-25d/4.
+\]
+For \(v=3\), the stronger \(m=1\) bound gives
+\(\|Q\|<111\sqrt d/100\), \(\|Q\|^2<5d/4\),
+\(S<-31d/10\), and hence
+\(\log\E H^4<-4903d/720<-25d/4\).
+
+All \(L\ge1\) are now covered. The uniform cost \(11\) in
+\eqref{eq:odd-common:outlet} gives
+\(I_q(T^MH)^3\le e^{[11-2(25/4)]d}=e^{-3d/2}\)
+for every independent \(M\ge1\).
+Genuine equal pairs are restored by positivity and their pointwise
+bound in \eqref{eq:odd-common:inputs}. Complete reversal applies the
+same proof to \(-K\), exchanging the corresponding directions and
+weights. The \(d=0\) boundary follows by leaf integration.
+\end{proof}

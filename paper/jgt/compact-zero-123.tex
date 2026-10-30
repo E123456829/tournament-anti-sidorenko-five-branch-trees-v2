@@ -1,0 +1,68 @@
+\subsection[Zero-step triples (1,2,c)]{Zero-step triples $(1,2,c)$}\label{loc:S12}
+For $H_c=qf_2h_c$, $c\ge3$, we prove
+\[
+ \E[pH_c^4]\le
+ \begin{cases}e^{-22\delta_{2}/9},&c=3,\\e^{-319d/96},&c=4,\\
+ e^{-7103d/20736},&c\ge5.
+ \end{cases}
+\]
+The directions are exactly those of \eqref{eq:zeroOdd}.
+Two full-domain scalar inequalities suffice:
+\[
+ (1+x)(1-x)^4\le e^{-3x-9x^2/4}\quad(|x|<1),\qquad
+ e^{y-y^2/7}\le1+y+4y^2/9.
+\]
+The logarithmic differences have derivatives
+$-x(1+3x)^2/[2(1-x^2)]$ and
+$y(11-10y+8y^2)/(63Q(y))$, respectively, where
+$Q=1+y+4y^2/9>0$. Their extrema at zero give the asserted signs.
+
+The exact inward-first path identity is
+\[
+ h_c=2-\beta_c-S_c-\sum_{j=3}^{c-1}\beta_jh_{c-j}.
+\]
+Set $B=\beta_{c-1}$, $\alpha=\beta_c$, $\Delta=\alpha+B$,
+$W=K^2G_{c-2}(K)g$, $R=Bg-W$.
+Retaining the last $Bq$ subtraction gives
+$f_2+h_c\le2-\Delta+R$; when $c=3$, $B=0$ and the same identity applies.
+Thus $f_2h_c\le e^{R-\Delta}$.
+Put $I=\|KG_{c-2}(K)g\|^2$, $J_1=\|W\|^2$, $V=3g-4R$.
+Since $3-4B\in[5/3,3]$, weighted Cauchy gives
+$V^2/7\le9g^2/4+16W^2/3\le9g^2/4+16I/3$.
+The scalar inequalities and exact skew moments therefore yield
+\begin{align*}
+ \E[pH_c^4]&\le e^{\Xi_c},\\
+ \Xi_c={}&-4\Delta+4\beta_{c+1}
+       -32(Bd+d-\beta_{c+2})/3\\
+ &+64[B^2d+2B(d-\beta_{c+2})+J_1]/9+16I/3.
+\end{align*}
+Here $\E R=\beta_{c+1}-d$, $\E[gR]=Bd+d-\beta_{c+2}$ and
+$\E R^2=B^2d+2B(d-\beta_{c+2})+J_1$; all are taken in the original measure.
+
+For $c=3$, $B=0$, $I=\delta_{2}$, $J_1=\delta_{3}$, and the exponent is
+$-16\delta_{2}/3+64\delta_{3}/9\le-22\delta_{2}/9$.
+For $c=4$, retain the exceptional $G_2$ data
+$I=\delta_{2}+\delta_{3}$, $J_1=\delta_{3}+\delta_{4}$, $\beta_5=\beta_6=d-\delta_{2}$.
+The exponent becomes
+\[
+ -4d-32d^2/3+64d^3/9+(-28/3+128d/9)\delta_{2}+112\delta_{3}/9+64\delta_{4}/9.
+\]
+After $\delta_{4}\le\theta \delta_{3}\le\theta^2\delta_{2}$, its $\delta_{2}$ coefficient is at
+most $707/432<5/3$ and the pure quadratic/cubic terms are nonpositive.
+Hence $\Xi_4\le-319d/96$.
+For $c\ge5$, use $I\le \delta_{2}$, $J_1\le \delta_{3}$ and the finite beta intervals:
+\begin{gather*}
+ -4\Delta+4\beta_{c+1}\le-4d+4\delta_{2}+4\delta_{3},\\
+ Bd+d-\beta_{c+2}\ge d^2-d\delta_{2}+\delta_{2}-\delta_{3},\\
+ B^2d+2B(d-\beta_{c+2})+J_1\le d^3+2d\delta_{2}+\delta_{3}.
+\end{gather*}
+Combine the $\delta_{3}\le\theta \delta_{2}$ terms before replacing $\delta_{2}$ by $\theta d$;
+the combined coefficient is $541/72+224d/9>0$.
+This gives
+\[
+ \Xi_c/d\le-2183/2304-5d/9+64d^2/9
+ \le-2183/2304+49/81=-7103/20736.
+\]
+The convex quadratic comparison includes every $d\in[0,1/3]$.
+Restoration and full reversal give the complete decorated statements;
+the ordinary cubic in the same direction remains the separate Q3 estimate.

@@ -1,0 +1,124 @@
+\subsection[Propagated pairs (1,b), b >= 3]{Propagated pairs $(1,b)$, $b\ge3$}\label{loc:S24}\label{proof:Q4-C127}
+In this proof \(\tau=d-\delta_2\).
+We prove \(\E[p(T^L(qf_b))^4]\le1\) for every \(b\ge3,L\ge1\).
+Use Lemma~\ref{lem:short-one:packet} with \(K'=-K\), \(g'=-g\).
+Thus \(N=b-1\), \(R=KG_N(K)g\), \(m=1-\beta_b/2\), \(k=m^{-1}\),
+\(V=\E R^2\), \(U=\|KR\|^2\), \(\rho=\E(rR)\), \(D_j=\E K'^jR\);
+the positive terminal upper is \(F_0=(m+R/2)^2\).
+Put \(Y_L=T^LF_0\), \(\gamma=k\beta_{b+1}-k^2V/2\), and
+\(B_0=\gamma+k(d-\beta_{b+2})\).
+The common finite bounds give
+\begin{equation}\label{eq:compact-1b-losses}
+3d/10\le\gamma\le6d/5,\quad5d/8\le B_0\le3d/2,\quad
+B_0\ge d-29\delta_2/32.
+\end{equation}
+They also give \(U\le\theta V\), \(\kappa\delta_2\le\rho\le\delta_2\),
+\(V\le\delta_2\) for \(b\ge4\), and
+\(V=\delta_2+\delta_3,\rho=\delta_2\) at \(b=3\).
+For \(P_n(z)=G_n(z)+kz^{n+1}G_N(-z)\),
+\[
+\|P_n(K')\|\le1\ (n\ge3),\quad
+\|P_2(K')\|^2\le71/63,\quad \|P_1(K')\|\le1.
+\]
+With \(V_L=\sum_{j=0}^LK'^j\one+kK'^LR\), \(L\ge3\),
+the exact identities \eqref{eq:short-one:means} give
+\(1-\E V_L,\E(g'V_L)\in[\tau,d]\).
+
+The coefficient profiles A--E used below are proved in Section~\ref{calc:coefficientprofiles}.
+
+We shall compare with the positive Taylor bound
+\begin{equation}\label{eq:compact-1b-taylor}
+ m^{-8}\ge1+4\beta_b+9\beta_b^2+15\beta_b^3
+ \ge1+7d/3+49d^2/16+35d^3/12.
+\end{equation}
+
+
+\proofpart{Every $L\ge2$}
+Duhamel gives
+\[
+ Y_L/m^2\le V_L-\gamma \bar f_{L-1}-k(d-\beta_{b+2})\bar f_{L-2}
+                   -\sum_{j=3}^L\varepsilon_j\bar f_{L-j},\quad
+ \varepsilon_j=\beta_j-kD_{j-1}.
+\]
+$d-k\delta_{2}\le\varepsilon_3\le d$ and
+$\varepsilon_j\in[\tau,d]$ for $j\ge4$; thus all discarded terms
+are nonnegative.
+For $L\ge4$ retain $Z=V_L-\varepsilon_L-\varepsilon_{L-1}q$.
+The mean, covariance and variance bounds are
+$1-3d/2$, $d/2-d^2$, and $d-3d^2/4+d^3$.
+Its row bound permits certificate A, so the fourth moment is at most
+\[
+ 1-d+85d^2/4-38d^3+621d^4/16-27d^5/2.
+\]
+Subtracting \eqref{eq:compact-1b-taylor} and dividing by $d$ leaves at most
+$-10/3+291d/16-401d^2/16\le-2597/76992$.
+
+For $L=3$ retain $Z=\widehat V-a-B_0q$,
+$\widehat V=V_3-\gamma r$, $a=d-kD_2$.
+Subtracting $\gamma$ from the nonnegative imaginary part of $P_3$
+and real part of $P_2$ decreases their moduli; hence
+$\|\widehat V-1\|^2\le d$, with row tail at most $13\sqrt d/12$.
+The exact mean loss of $\widehat V$ is at least $2d/5$.
+Together with \eqref{eq:compact-1b-losses} this gives
+$\mu\le1-3d/2$, covariance at least $3d/32$, and
+$\operatorname{Var}Z\le d-3d^2/4$.
+For the last claim maximize $t^2d-(19/16)t$ over
+$t=B_0/d\in[5/8,3/2]$, obtaining at most $-235/384$.
+Certificate B applies. After discarding the favorable covariance,
+the Taylor difference divided by $d$ is at least
+$4/3-83d/16+189d^2/16\ge9239/12096$.
+
+For $L=2$, use $Z=V_2-\gamma q-k(d-\beta_{b+2})$.
+It has $\mu\le1-9d/8$, covariance at least $4d/5-6d^2/5$,
+variance at most $71d/63-7d^2/10$, and the row bound of certificate C.
+The positive endpoint branch is
+\[
+ 1+17d/90+2927d^2/160-21789d^3/640
+                  +499365d^4/20480-2187d^5/320.
+\]
+Its difference above the Taylor bound, divided by $d$, is at most
+$-193/90+61d/4-57d^2/2\le-2857/27360$.
+
+\proofpart{One step and its coupled spectral budget}
+Exactly $Y_1=m^2Z$, where
+\[
+ Z=q-k\beta_{b+1}-kKR+e,\quad
+ e=(V-K(R^2))/(4m^2),\quad0\le e\le V/(2m^2).
+\]
+The original mean, covariance and variance bounds are
+\[
+ \mu\le1-d+29\delta_{2}/32,\quad h\ge d-25\delta_{2}/16,\quad
+ \operatorname{Var}Z\le d-5\delta_{2}/16.
+\]
+The covariance error coefficient is at most $1203/800<25/16$.
+Before adding $e$, the variance loss is at least $25\delta_{2}/32$ for
+$b\ge4$ and $7\delta_{2}/5$ for $b=3$.
+Centering $e$ adds at most $(k^2V/2)\sqrt d+k^4V^2/16$;
+the respective added coefficients are below $1971/4375<15/32$ and
+$243/400+1/20$, leaving the claimed loss.
+For $b\ge4$ the row bound is $q+4\sqrt d/5-25d/64$;
+for $b=3$ it is $q+\sqrt d-5d/7$. Certificates D and E apply.
+
+Put $v=\delta_{2}/d\in[d,\theta]$,
+$A_v=1-29v/32$, $B_v=5-229v/32$.
+The positive endpoint in \eqref{eq:compact-fourth-endpoints} is valid
+because $B_vd\le251/288<1$. Comparing with the sharper Taylor bound
+using $\tau=(1-v)d$ gives the complete polynomial
+\begin{gather*}
+ F(v,d)=P_0(v)+Q(v)d-H(v)d^2+J(v)d^3,\\
+ P_0=-5+187v/16,\quad Q=9-45v/2+6615v^2/512,\\
+ H=A_v^3+3A_v^2B_v+15(1-v)^3,\quad J=A_v^3B_v.
+\end{gather*}
+For $v\le1/3$, the last two terms sum to a nonpositive quantity;
+$F\le P_0+Qv$ increases to $-193/1536$.
+For $1/3\le v\le3/8$, decreasing $Q,H,J$ give
+$F\le-79/128+3d-5d^2\le-107/640$.
+For $3/8\le v\le\theta$, use
+$P_0\le-129/512$, $Q<119/50$, $H>589/100$ and $J<2/3$:
+\[
+ F\le-129/512+(119/50)d-(5101/900)d^2
+ \le-129/512+127449/510100<0.
+\]
+This covers all continuous parameters and all finite $b$.
+Positivity restores equal pairs; full reversal and the $d=0$ case
+follow from the common rules.

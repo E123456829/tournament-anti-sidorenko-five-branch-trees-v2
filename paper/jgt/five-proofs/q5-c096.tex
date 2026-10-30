@@ -1,0 +1,49 @@
+\subsection{The sharpened losses for actual pairs starting at four}\label{proof:Q5-C096}
+Use the original finite calculus and notation of Q5-C090.
+For $4\le s<c$ put $R_{sc}=\sum_{r=s+1}^cK^r\one$.
+The finite difference retains, for the shortest case $s=4$, the actual
+negative convolution term
+\[
+f_c-f_4\le R_{4c}+\delta_2(1+p)-\tau f_2.
+\]
+The original row constraint gives $f_2\ge p^2/2$.
+For $d>0$, $\delta_2/d\le13/32$, $\tau/d\ge19/32$, so
+\[
+\delta_2(1+p)-\tau f_2
+\le\delta_2+\delta_2p-\tau p^2/2
+\le\delta_2+\frac{\delta_2^2}{2\tau}\le\frac{663}{1216}d.
+\]
+Since $h_4+f_4=2\mu_3=2-4d$,
+$h_4+f_c\le2+R_{4c}-(4201/1216)d$ and
+$4201/1216-69/20=29/6080>0$.
+AM--GM on the nonnegative actual two-arm sum and $1+t\le e^t$
+therefore prove
+\begin{equation}\tag{L96.2.5}\label{eq:L96:four}
+h_4f_c\le e^{R_{4c}-69d/20}.
+\end{equation}
+For every finite $s\ge5$, the original difference's positive part
+is at most $4\delta_2/(1-\theta^2)$, and the all-integer path mean
+proved in Q5-C090 gives $2\mu_{s-1}\le2-83d/16$.
+Thus
+\begin{equation}\tag{L96.2.6}\label{eq:L96:long}
+h_sf_c\le e^{R_{sc}-\gamma d},\qquad
+\gamma=\frac{83}{16}-\frac{1664}{855}
+=\frac{16}{5}+\frac{113}{2736}>\frac{16}{5}.
+\end{equation}
+Every $s\ge4$ may consequently use the common loss $16d/5$.
+The finite-mask estimate used with these losses is
+\eqref{eq:L90:mask}, with the stronger rational comparison
+$C_*<101/50<100/49$. Useful exact original tail comparisons are
+\[
+\begin{gathered}
+\sqrt\theta<13/20<2/3,\quad\theta^2<1/6,
+\quad\theta^3<7/100<1/14,\quad\theta^{3/2}<4/15,\\
+\theta/(1-\theta^2)=416/855<1/2,\quad
+\theta^2/(1-\theta^2)=169/855<1/5,\\
+\theta^3/(1-\theta^2)=2197/27360<1/12,\quad
+\theta^4/(1-\theta^2)=28561/875520<1/30,\\
+\theta^5/(1-\theta^2)=371293/28016640<1/72.
+\end{gathered}
+\]
+The last numerator comparison is $26733096<28016640$.
+These bounds hold for every finite mask. At $d=0$ equality follows by original leaf integration.

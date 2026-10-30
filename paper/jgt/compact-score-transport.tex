@@ -1,0 +1,79 @@
+\subsection{Integer reference powers}\label{loc:S10}
+Put $c=pq+2Kg\ge0$ and
+$\sigma_m(z)=\sum_{j=0}^{m-1}2^{m-1-j}z^j$, with $\sigma_0=0$.
+For every integer $m\ge0$,
+\begin{equation}\label{eq:compact-reference-integer}
+ A(p^m)\le\frac{p^{m+1}}{m+1}+\frac c2\sigma_m(p),\qquad
+ T(q^m)\le\frac{q^{m+1}}{m+1}+\frac c2\sigma_m(q).
+\end{equation}
+These follow from the convex transport proved below: take $\phi(t)=t^m$
+and use $(2^m-p^m)/q=\sigma_m(p)$. The cases $m=0,1$ are equalities;
+in particular $f_2=(p^2+c)/2$ and $A(p^2)\le p^3/3+(p+2)c/2$.
+Multiplication by a specified nonnegative function and integration preserve
+these pointwise inequalities.
+
+\subsection{Convex reference transport}\label{loc:S11}
+For every continuous convex $\phi:[0,2]\to\mathbb R$,
+\begin{equation}\label{eq:compact-convex-transport}
+ A[\phi(p)](x)\le\int_0^{p(x)}\phi(t)\,dt+
+ \frac{c(x)}{2q(x)}[\phi(2)-\phi(p(x))].
+\end{equation}
+Complete reversal gives the corresponding $T[\phi(q)]$ bound.
+Affine tests give equality.
+
+First, if $s$ is the score of any finite skew kernel bounded in absolute value by one and $P=1+s$, then
+\[
+ \E(P-a)_+\le(2-a)^2/4\quad(0\le a\le2),\qquad
+ \E\psi(P)\le\tfrac12\int_0^2\psi(t)\,dt
+\]
+for every continuous convex $\psi$. Indeed, for $S=\{P>a\}$ and
+$z=\mu(S)$, skewness gives $\int_Ss\,d\mu\le z(1-z)$, and hence
+$\E(P-a)_+\le z(2-a-z)\le(2-a)^2/4$.
+Express a convex piecewise linear function as an affine function plus
+a nonnegative combination of $(t-a)_+$, then take uniform polygonal
+approximations. The constants and linear terms agree because $\E P=1$.
+In particular, for a scalar $0<P_0\le2$,
+\begin{equation}\label{eq:compact-scaled-score}
+ \E\phi(P_0P/2)\le P_0^{-1}\int_0^{P_0}\phi(t)\,dt.
+\end{equation}
+
+Write $B=T^2$. Its kernel is
+$B(x,y)=1-g(x)+g(y)+K^2(x,y)$; nonnegative two-step convolution gives
+$0\le B(x,y)\le2q(x)$. The cycle marginal just proved is
+\[
+ \E_y[A(x,y)B(x,y)]=c(x)\ge0.
+\]
+At a fixed $x$, set $p_x=p(x)>0$. For this scalar comparison alone use
+$d\nu_x(y)=A(x,y)d\mu(y)/p_x$. Its score is
+$\gamma_x(y)=[g(y)-K^2(x,y)]/p_x$. Put
+$a_y=p_x(1+\gamma_x(y))/2$, $b_y=B(x,y)/2$. Then
+\[
+ 0\le a_y\le p_x,\quad0\le b_y\le q_x,\quad
+ a_y+b_y=p(y),\quad \E_y[A(x,y)b_y]=c(x)/2.
+\]
+For $0\le a\le p$, $0\le b\le q$, convexity gives
+\[
+ \phi(a+b)-\phi(a)\le\frac bq[\phi(a+q)-\phi(a)]
+ \le\frac bq[\phi(2)-\phi(p)].
+\]
+The second inequality is the monotonicity of a convex increment of fixed
+length, also valid for negative increments. Integrate against
+$A(x,y)d\mu(y)$ and apply \eqref{eq:compact-scaled-score} to $\nu_x$.
+This proves \eqref{eq:compact-convex-transport}; all target operators and
+adjoints still use the original $\mu$.
+
+For $\alpha\ge1$, the tests $t^\alpha$ and $(2-t)^\alpha$ give
+\begin{align*}
+ A(p^\alpha)&\le\frac{p^{\alpha+1}}{\alpha+1}
+                  +\frac{c(2^\alpha-p^\alpha)}{2q},\\
+ A(q^\alpha)&\le\frac{2^{\alpha+1}-q^{\alpha+1}}{\alpha+1}
+                  -\frac c2q^{\alpha-1}.
+\end{align*}
+Their full reversals give the other two real-power inequalities.
+The test $(t-h)_+$, $0\le h\le2$, gives
+\[
+ A[(p-h)_+](x)\le\frac{(p(x)-h)_+^2}{2}
+ +\frac{c(x)}{2q(x)}[(2-h)-(p(x)-h)_+].
+\]
+The negative cycle term in the opposite-direction power bound is retained.
+

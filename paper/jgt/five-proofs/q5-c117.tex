@@ -1,0 +1,1611 @@
+\subsection{Short-terminal fourth moments with an arbitrary receiving arm}
+\label{proof:Q5-C117}
+
+All operators, expectations, and paths use the original finite
+probability space of Lemma~\ref{lem:reference-common:receiving}.
+Let \(a\ge3\) be the receiving-arm length, and put
+\(h_2=Tp=q-Kg\). The receiving arm and the terminal \(b\)-arm
+point outward; every connector points from terminal to receiver.
+For \(h_2\), the internal vertex of the two-edge arm points to
+the terminal and to its leaf. These directions depend only on the
+arm lengths. Let \(E_o,E_t\) denote arbitrary actual equal-pair
+products at the receiving and terminal vertices, respectively.
+
+\begin{proposition}[The three receiving families]
+\label{prop:q117-unified:families}
+For every legal original model and all the indicated integers,
+\begin{align}
+ \E[E_of_a\{T^L(E_tqf_b)\}^4]
+   &\le1-d/3000,& b\ge3,\quad L\ge1,
+   \label{eq:q117-unified:shortone}\\
+ \E[E_of_a\{T^L(E_tqf_2)\}^4]
+   &\le1-3d/800,& L\ge6,
+   \label{eq:q117-unified:shortone-two-tail}\\
+ \E[E_of_a\{T^L(E_th_2f_b)\}^4]
+   &\le1-d/400,& b\ge3,\quad L\ge2.
+   \label{eq:q117-unified:shorttwo}
+\end{align}
+\end{proposition}
+
+The proof uses nine finite positive envelopes. Their actual means,
+variances, and signed receiving covariances feed the same fourth
+identity. Tables of finite parameters then cover the short integer
+prefixes and the unbounded connector tails. The high domains use
+direct positive path comparisons.
+
+\subsubsection{A finite receiving-symbol bound}
+\label{sec:q117-unified:symbols}
+
+The reversed positive path convolution gives
+\fitdisplay{
+ S_n=1+G_n(K)g
+   =f_n+\sum_{j=3}^n\beta_jf_{n-j},\qquad
+ \tau\le\beta_j\le d\quad(j\ge3).
+ \label{eq:Q117:conv}
+}{Q117.1.1}
+Consequently the weak receiving upper is
+\fitdisplay{
+ 0\le f_a\le C_{a,0}=S_a-\beta_a\le2,\qquad
+ \E C_{a,0}=1-\beta_a-\beta_{a+1}.
+ \label{eq:Q117:receiver}
+}{Q117.1.2}
+The upper bound also follows directly from
+\(C_{a,0}=AS_{a-1}\), \(S_{a-1}\ge0\), and
+\(\E S_{a-1}=1-\beta_a\), using the original kernel bound
+\(A\le2\).
+For \(a\ge4\), the next actual positive term permits
+\(C_{a,\beta_{a-1}}=S_a-\beta_a-\beta_{a-1}p\ge f_a\).
+These are the common weights of
+Lemma~\ref{lem:reference-common:receiving}.
+The original spectral measure \(\nu\) has support
+\([0,\theta]\), mass \(d\), and
+\(\int x^j\,d\nu=\delta_{j+1}\). For \(d>0\),
+\(d\le v:=\delta_2/d\le\theta\); the lower bound follows
+from \(\E(Kg)=-d\) and Cauchy's inequality.
+This constraint concerns aggregate moments, rather than each
+spectral frequency.
+
+\begin{lemma}[All finite short-one receiving symbols]
+\label{lem:q117-unified:shortone-symbol}
+For \(b\ge3\), put \(N=b-1\ge2\) and \(1\le k\le6/5\).
+For \(b=2\), put \(N=k=1\). For every integer \(L\ge1\),
+let \(P_L(z)=G_L(z)+kz^{L+1}G_N(-z)\). Then for every
+\(a\ge3\), \(0\le x\le\theta\), and \(z=i\sqrt x\),
+\begin{equation}\label{eq:q117-unified:shortone-symbol}
+ \operatorname{Re}(G_a(z)P_L(z))
+ \ge\phi(x):=1-3x+2x^2-x^3
+ \ge1451/32768>1/25.
+\end{equation}
+\end{lemma}
+\begin{proof}
+Put \(c=1-x\). Write \(G_a=u_a+zv_a\); finite alternating
+sums give \(c\le u_a,v_a\le1\). For \(N\ge2\), write
+\(G_N(-z)=\alpha_0-z\beta_0\). The same finite sums give
+\[
+ c\le\alpha_0,\beta_0\le1,\qquad
+ 0\le\alpha_0-c\beta_0\le x,\qquad
+ c\le c\alpha_0+x\beta_0\le1.
+\]
+Indeed for \(N=2h\), both coefficients are
+\(a_h=(1-(-x)^h)/(1+x)\), so their first difference is
+\(xa_h\). For \(N=2h+1\), it is
+\((x+(-x)^h)/(1+x)\), lying in \([0,x]\) for every
+\(h\ge1\). The other inequalities are the corresponding finite
+alternating endpoints. For \(N=1\), use separately
+\(\alpha_0=1,\beta_0=0\).
+
+Write \(P_L=r_L+zs_L\). For \(N\ge2\), the first two rows are
+\((r_1,s_1)=(1-kx\alpha_0,kx\beta_0)\) and
+\((r_2,s_2)=(1-kx^2\beta_0,1-kx\alpha_0)\).
+Both coordinates are nonnegative. For \(L\ge3\), each unperturbed
+coordinate is at least \(c\), and each possible negative
+correction has magnitude at most \(kx^2\). Hence
+\(r_L,s_L\ge c-kx^2\ge1013/2560>0\).
+The same argument works for \(N=k=1\), allowing \(s_1=0\).
+It follows that
+\[
+ \operatorname{Re}(G_aP_L)=u_ar_L-xv_as_L
+ \ge cr_L-xs_L=\operatorname{Re}((c+z)P_L).
+\]
+
+Put \(B_0=(1-2x)/(1+x)\), \(A_0=(2-x)/(1+x)\), and
+\(D_0=A_0-c=(1-x+x^2)/(1+x)>0\).
+Then \(D_0+A_0x=1\), \(kx\le1\),
+and \(B_0-D_0x^2=\phi(x)\). Finite geometric division gives
+\[
+ \operatorname{Re}((c+z)G_{2m})=B_0(1-(-x)^m),\qquad
+ \operatorname{Re}((c+z)G_{2m+1})
+       =B_0+(-1)^mA_0x^{m+1}.
+\]
+When \(N\ge2\), the \(L=1\) value is at least \(c-kx\),
+whose excess over \(\phi\) is at least
+\(x(4/5-2x+x^2)\ge(781/5120)x\).
+The \(L=2\) value is
+\(1-2x+kx^2(\alpha_0-c\beta_0)\ge1-2x\ge\phi\).
+For even \(L=2m\ge4\), the correction is
+\(-k(-1)^mx^{m+1}(\alpha_0-c\beta_0)\).
+Its negative part costs at most \(kx^4\le x^3\), paid by
+the unperturbed lower bound \(c(1-2x)\).
+For odd \(L=2m+1\ge3\), put
+\(C_0=c\alpha_0+x\beta_0\in[c,1]\).
+The exact value is \(B_0+(-1)^m(A_0-kC_0)x^{m+1}\).
+For odd \(m\), this is at least \(B_0-D_0x^{m+1}\ge\phi\).
+For even \(m\ge2\), a negative correction can occur only if
+\(k>A_0\); then \((k-A_0)x\le D_0\), so it costs at most
+\(D_0x^2\).
+
+For \(N=k=1\), the even correction is
+\(-(-1)^mx^{m+1}\). At \(m=1\) the result is
+\((1-x)^2\ge\phi\); at \(m\ge2\) its negative part is at
+most \(x^3\). The odd value, including \(L=1\), is exactly
+\(B_0+(-1)^mD_0x^{m+1}\), again at least \(\phi\).
+Finally \(\phi'=-3+4x-3x^2<0\), and
+\(\phi(\theta)=1451/32768\).
+\end{proof}
+
+\paragraph{Q117.4 The wider coefficient-nine entrance}
+\label{part:Q117.4}
+This entrance also applies when the receiving upper is not one of
+the \(a\ge3\) weights of the proposition. Suppose \(C,Z\ge0\),
+\(u_0=\E Z\ge0\), and
+\fitdisplay{
+ C\le p+(6/5)\sqrt d,\qquad
+ Z\le(1-5d/8)q-d/2+(13/12)\sqrt d,\qquad
+ u_0\le1-3d/2.
+}{Q117.4.1}
+Then on \(0\le d\le1/3\),
+\fitdisplay{
+ C[(Z+u_0)^2+2u_0^2]\le9.
+ \label{eq:q117-unified:weak-nine}
+}{Q117.4.2}
+Indeed \(t=\sqrt d\) gives exactly case \(w\) of
+Lemma~\ref{lem:reference-coefficient-nine}, with the three scalar
+uppers in \eqref{eq:reference-coefficient-nine:data}.
+
+\subsubsection{The actual finite envelopes}
+\label{sec:q117-unified:envelopes}
+
+Use the original variables and receiving weights of
+Lemma~\ref{lem:reference-common:receiving}. Every table entry has
+\(Z=z_0+Q(B)u\), so its exact mean is \(z_0-\alpha\), where
+\(\alpha=-\E[Q(B)u]\). Its mass, variance, and signed covariance
+are \eqref{eq:reference-common:mass},
+\eqref{eq:reference-common:variance}, and
+\eqref{eq:reference-common:covariance}. The fourth-moment bound
+\eqref{eq:reference-common:two-endpoints} is used with \(s=m^2\);
+in particular its outside scale is \(m^8\).
+
+For the terminal \(qf_b\), write
+\[
+ \mathsf P_{L,b}(z)=G_L(z)+kz^{L+1}G_{b-1}(-z),\qquad
+ k=m^{-1},\quad m=1-\beta_b/2\quad(b\ge3).
+\]
+For \(b=2\), take \(m=k=1\). All these are finite polynomials.
+Write \(V_L=1+\mathsf P_{L,b}(B)u\), and put
+\[
+ \begin{gathered}
+ R_1=KG_{b-1}(K)g,\quad \rho=\E[(Kg)R_1],\quad
+ \gamma=k\beta_{b+1}-k^2\|R_1\|^2/2,\\
+ a_1=k(d-\beta_{b+2}),\quad B_*=\gamma+a_1,\quad
+ a_*=d-k\rho,\quad \lambda=\kappa d,\quad e_4=41d/80.
+ \end{gathered}
+\]
+These are the precise retained coefficients of
+\eqref{eq:L58:finiteinputs} and \eqref{eq:L58:propagation}.
+
+For the terminal \(h_2f_b\), use its actual positive square
+\(F\le(m+R/2)^2\). Write \(R=\mathcal R(B)u\), where
+on a rotation block \(\mathcal R(z)=A(x)-zB_0(x)\), \(x=-z^2\).
+With \(D_j=\E B^jR\), put
+\[
+ \delta=kD_0+k^2\|R\|^2/2,\quad
+ \varepsilon=\delta-k\E(KR),\quad \nu_0=1+\varepsilon,
+\]
+\[
+ \mathsf U_L=G_L+kz^L\mathcal R(z),\qquad
+ \mathsf Q_L=\mathsf U_L+\varepsilon G_{L-2}+\delta z^{L-2},
+ \quad L\ge2.
+\]
+The last expression equals
+\(\mathsf U_L+\delta G_{L-1}-k\E(KR)G_{L-2}\), by the finite
+identity \(G_{L-1}=G_{L-2}+z^{L-2}\). Also put
+\(\ell=d+k\rho_0\), \(\rho_0=-\E[(Kg)R]\).
+
+The actual square packets have four parameter choices:
+\[
+\begin{array}{c|c|c}
+ b&d\text{ range}&m\text{ and }R\\\hline
+ 3&(0,1/3]&m=1-d/2,\quad R=K^2g\\
+ 4&(0,1/4]&m=1-d,\quad R=K^2g+K^3g-dg\\
+ b\ge5&(0,1/5]&m=1-9d/8,\quad R=R_{9/4,b}\\
+ b\ge5&[1/5,1/4]&m=1-d,\quad R=R_{2,b}.
+\end{array}
+\]
+To specify the last two finite vectors, let \(c=9/4\) or \(2\).
+These quotient definitions concern \(d>0\); the degenerate model is
+handled directly by leaf integration.
+For \(b=5\), take \(C_1=d\), \(C_2=(c-2)d+\delta_2\),
+\(C_3=0\). For \(b\ge6\), take
+\[
+ C_1=\beta_{b-1},\qquad
+ \Lambda=\frac{cd-\beta_b-\beta_{b-1}}
+ {\beta_{b-2}+(1-d)\beta_{b-3}},\qquad
+ C_2=\Lambda\beta_{b-2},\quad C_3=\Lambda\beta_{b-3}.
+\]
+On the indicated domains these are retained portions of the actual
+positive convolution, with \(0\le\Lambda\le1\). Put
+\[
+ \begin{gathered}
+ C_*=C_1+C_2+C_3,\quad D_*=C_2+C_3,\quad E_*=C_3,\\
+ R_{c,b}=\sum_{j=3}^bK^j1-C_*g-D_*Kg-E_*K^2g.
+ \end{gathered}
+\]
+The exact identity
+\(\beta_b+C_1+C_2+(1-d)C_3=cd\) gives
+\(0\le h_2+f_b\le2m+R_{c,b}\). The finite retained-coefficient
+proofs are \eqref{eq:L73:retained} for \(c=9/4\) on the low domain
+and Section~\ref{loc:S25} for \(c=2\); the latter has its full
+retained construction and its stated middle-domain analytic bounds.
+The finite norm and coordinate inputs are
+\eqref{eq:L77:positivecoordinates},
+\eqref{eq:L77:correctedfrequency}, and
+\eqref{eq:L77:middleinputs}. Only those actual analytic inputs,
+not their genuine-\(f_2\) fourth-moment conclusions, are used here.
+
+\begingroup\small\setlength{\tabcolsep}{3pt}
+\begin{longtable}{p{0.17\linewidth}p{0.13\linewidth}p{0.24\linewidth}p{0.28\linewidth}p{0.08\linewidth}}
+\caption{Exact envelopes \(Z=z_0+Q(B)u\).
+The original comparison is \(0\le T^LF\le m^2Z\) in every row.}
+\label{tab:q117-unified:finite-envelopes}\\
+\hline
+Terminal and range & Scale & \(z_0\) & \(Q(z)\) & Receiver \(t\)\\
+\hline\endfirsthead
+\hline
+Terminal and range & Scale & \(z_0\) & \(Q(z)\) & Receiver \(t\)\\
+\hline\endhead
+\(qf_b,\ b\ge3,\ L\ge5\)
+ & \(1-\beta_b/2\) & \(1-2\lambda\)
+ & \(\mathsf P_{L,b}-\lambda\) & \(0\)\\
+\(qf_b,\ b\ge3,\ L=4\)
+ & \(1-\beta_b/2\) & \(1-\lambda-e_4\)
+ & \(\mathsf P_{4,b}-e_4\) & \(0\)\\
+\(qf_b,\ b\ge3,\ L=3\)
+ & \(1-\beta_b/2\) & \(1-a_*-B_*\)
+ & \(\mathsf P_{3,b}-\gamma z-B_*\) & \(t_a\)\\
+\(qf_b,\ b\ge3,\ L=2\)
+ & \(1-\beta_b/2\) & \(1-\gamma-a_1\)
+ & \(\mathsf P_{2,b}-\gamma\) & \(0\)\\
+\(qf_b,\ b\ge3,\ L=1\)
+ & \(1-\beta_b/2\) & \(1-\gamma\)
+ & \(\mathsf P_{1,b}\) & \(0\)\\
+\(qf_2,\ L\ge6\)
+ & \(1\) & \(1-\tau(4-d)\)
+ & \(\mathsf P_{L,2}-\tau(3+2z+z^2)\) & \(0\)\\
+\(h_2f_b,\ b\ge3,\ L\ge4\)
+ & Square packet & \(\nu_0-2hd\)
+ & \(\mathsf Q_L-hd\) & \(0\)\\
+\(h_2f_b,\ b\ge3,\ L=2\)
+ & Square packet & \(\nu_0\)
+ & \(\mathsf Q_2\) & See below\\
+\(h_2f_b,\ b\ge3,\ L=3\)
+ & Square packet & \(\nu_0-\ell\)
+ & \(\mathsf Q_3\) & \(0\)\\
+\hline
+\end{longtable}
+\endgroup
+
+Here \(t_a=0\) for \(a=3\), and \(t_a=\beta_{a-1}\) for
+\(a\ge4\). The \(h_2f_b,L=2\) row uses \(t=t_a\) at \(b=3\)
+and \(t=0\) at \(b\ge4\). The square packet is the actual
+\(b=3\), \(b=4\), low \(b\ge5\), or middle \(b\ge5\) packet,
+on its stated continuous domain; changing that analytic envelope leaves \(F\) and the original direction unchanged.
+
+The rows are algebraic forms of the finite positive propagation
+proofs \eqref{eq:L58:propagation}, \eqref{eq:L77:propagation}, and
+\eqref{eq:L73c:losses}, with their actual finite inputs. In the first two rows the
+last two retained losses give respectively
+\(Z=V_L-\lambda(1+q)\) and \(Z=V_4-\lambda-e_4q\).
+The third row is \(Z=V_3-\gamma Kg-a_*-B_*q\).
+The next two rows are \(Z=V_2-\gamma q-a_1\) and
+\(Z=q-kKR_1-\gamma\).
+
+For \(qf_2\), the four actual retained path losses have sum
+\[
+ \bar f_0+\bar f_1+\bar f_2+\bar f_3
+ =(4-d)+(3+2B+B^2)u.
+\]
+This gives its displayed scalar and polynomial, retaining the entire
+constant \(4-d\) before multiplying by \(-\tau\).
+The \(h_2f_b\) tail subtracts
+\(hd(1+q)\), with \(h=9/16-d/2\) at \(b=3\) and
+\(h=1/2-6d/5\) for the other low long-connector packets;
+its two short rows retain the actual scalar
+\(\ell\) at \(L=3\). Thus all means, centered variances, and
+receiving covariances follow from the same finite identities, with
+their scalar losses and signs retained.
+
+\subsubsection{The finite parameter rows}
+\label{sec:q117-unified:row-data}
+
+For \(d>0\), put \(v=\delta_2/d\); then
+\(d\le v\le\theta\). In Tables~\ref{tab:q117-unified:short1-data}--
+\ref{tab:q117-unified:short2-three-data}, use the normalization
+\begin{equation}\label{eq:q117-unified:normalized-data}
+ H_r=1-h_rd,\quad U_r=1-a_rd,\quad J_r=dj_r,\quad V_r=dv_r,
+ \qquad
+ W_r=H_rU_r^4+4J_rU_r^3+M_rV_r.
+\end{equation}
+The preceding finite receiving identities and the proofs below
+give the two actual mean endpoints \(M_rV_r\) and \(W_r\).
+Rows marked \(\dagger\) compare the actual receiving prefix after
+its own endpoint reduction. The row marked \(\ddagger\) is formed
+after the joint covariance--variance reduction in
+\eqref{eq:q117-unified:joint-low23}; its displayed \(j_r\) is part
+of that complete endpoint polynomial.
+
+The two-step short-one functions are
+\begin{equation}\label{eq:q117-unified:two-step-data}
+\begin{aligned}
+ A_2&=2-3v/2+9v^2/40,& g_2&=A_2-1,\\
+ B_2&=2-2v+v^2,& M_2&=1-2v+7v^2/8,\\
+ M_{2,f}&=1-2v+2v^2/3,& H_2&=5v/4-17v^2/20,\\
+ J_2&=1+v-63v^2/32-855v^4/1024-v^5,\\
+ a_0&=1-6v/5+57v^2/80,& e_0&=1-39v/80+57v^3/80,\\
+ D_2&=a_0^2+2g_2e_0,&
+ \mathcal V_2&=J_2-D_2d+g_2^2d^2.
+\end{aligned}
+\end{equation}
+For the long \((1,2)\) row write
+\[
+ T_6=(1-v)[2-25v/32+2d(1-v)],\qquad
+ \mathcal V_6=1-7v/15-d(1-v)[6-9d-(4+d)v+2v^2].
+\]
+
+\begin{table}[htbp]\centering\small
+\setlength{\tabcolsep}{4pt}
+\caption{Endpoint polynomials for the short-one terminals.}
+\label{tab:q117-unified:short1-data}
+\begin{tabular}{@{}cccccc@{}}
+\toprule
+Row&\(h_r\)&\(a_r\)&\(j_r\)&\(v_r\)&\(M_r\)\\
+\midrule
+S1&\(2\kappa\)&\(3\kappa\)&\(\kappa(1-\kappa)d\)
+ &\(1-3\kappa^2d+\kappa^2d^2\)&9\\
+S2&\(2\kappa\)&\(27/16\)&\((41/80-\kappa^2)d\)
+ &\(1-13d/8+d^2/4\)&9\\
+S3L&\(7/4\)&\(13/8\)&\(-1/25+81d/40+57d^2/80\)
+ &\(1-3d/2+2d^2-7d^3/5\)&9\\
+S3H&\(7/4\)&\(3/2\)&\(-1/25+81d/40+57d^2/80\)
+ &\(1-3d/2+2d^2-7d^3/5\)&9\\
+S4\(^{\dagger}\)&\(B_2\)&\(A_2\)&\(-M_2+H_2d+3d^2/5\)
+ &\(\mathcal V_2\)&9\\
+S4F\(^{\dagger}\)&\(B_2\)&\(A_2\)&\(-M_{2,f}+H_2d+3d^2/5\)
+ &\(\mathcal V_2\)&9\\
+S5&\(2(1-v)\)&\(1-779v/960\)
+ &\(-1+11v/5-57v^2/80-\kappa v(1-v)d\)
+ &\(1-41v/48-\kappa^2v^2d\)&\(37/4\)\\
+S5F&\(2(1-v)\)&1&\(-1+11v/5-v(1-v)d\)
+ &\(1-7v/5-v^2d\)&10\\
+S6&\(2(1-v)\)&\((1-v)(5-3d)\)&\(-1/10+dT_6\)
+ &\(\mathcal V_6\)&9\\
+\bottomrule
+\end{tabular}
+\end{table}
+
+For the short-two long rows put
+\(\mathcal W(N,\eta)=N^2-3\eta^2d+\eta^2d^2\),
+\(\eta_3=9/16-d/2\), and \(\eta_*=1/2-6d/5\).
+\begin{table}[htbp]\centering\small
+\caption{Endpoint polynomials for the short-two long connectors.}
+\label{tab:q117-unified:short2-tail-data}
+\begin{tabular}{@{}cccccc@{}}
+\toprule
+Row&\(h_r\)&\(a_r\)&\(j_r\)&\(v_r\)&\(M_r\)\\
+\midrule
+D4F&\(19/16\)&\(27/16-3d/2\)&\(-1/10+4d/5\)
+ &\(\mathcal W(1,\eta_3)\)&10\\
+D4B&\(19/16\)&\(4/3-18d/5\)&\(3d\)
+ &\(\mathcal W(1+d,\eta_*)\)&13\\
+D4T&\(19/16\)&\(9/10-18d/5\)&\(3d\)
+ &\(\mathcal W(1+7d/5,\eta_*)\)&13\\
+\bottomrule
+\end{tabular}
+\end{table}
+
+Let \(K_*(d)=124/15+38d\), and put
+\(C_{23}=1-2v+49v^2/100\), \(A_{23}=1+51v/64\).
+The strengthened receiving row D2F covers \(a\ge4\), using the
+actual \(a=4\) comparison proved below. D2F3L and D2F3H are the
+remaining actual \(a=3\) prefix.
+\begin{table}[htbp]\centering\small
+\caption{Endpoint polynomials for the short-two two-step connector.}
+\label{tab:q117-unified:short2-two-data}
+\begin{tabular}{@{}cccccc@{}}
+\toprule
+Row&\(h_r\)&\(a_r\)&\(j_r\)&\(v_r\)&\(M_r\)\\
+\midrule
+D2F\(^{\dagger}\)&\(3-3v+v^2\)&\(A_{23}\)&\(-C_{23}+vd\)
+ &\(1+v-7v^2/5-d\)&10\\
+D2F3L\(^{\ddagger}\)&2&\(A_{23}\)&\(-1+2v+12v^2/11-v^3-d\)
+ &\(1+v-7v^2/4-d\)&10\\
+D2F3H&2&1&\(-1/20-d\)&\(33/28-d\)&10\\
+D2BL\(^{\dagger}\)&\(19/16\)&1&\(-3/16+7d/32\)
+ &\(13/10+11d^2/10\)&\(K_*\)\\
+D2BM\(^{\dagger}\)&\(19/16\)&1&\(-3/16+7d/32\)
+ &\(13/10+11d^2/10\)&13\\
+D2TL\(^{\dagger}\)&\(19/16\)&\(7/10\)&\(-1/5+3d/4\)
+ &\(45/32+7d/5+36d^2/25\)&\(K_*\)\\
+D2TM\(^{\dagger}\)&\(19/16\)&\(2/3\)&\(-1/5+3d/5\)
+ &\(45/32+5d/3+16d^2/9\)&14\\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\begin{table}[htbp]\centering\small
+\caption{Endpoint polynomials for the short-two three-step connector.}
+\label{tab:q117-unified:short2-three-data}
+\begin{tabular}{@{}cccccc@{}}
+\toprule
+Row&\(h_r\)&\(a_r\)&\(j_r\)&\(v_r\)&\(M_r\)\\
+\midrule
+D3F&\(2(1-v)\)&\(1+25v/64\)&\(-1+3v-v^2-v^3+d/10\)
+ &\(1-6v/7-16d/25\)&11\\
+D3B&\(19/16\)&\(7/4\)&\(1/10+2d\)
+ &\(1+9d/8+3d^2/4\)&11\\
+D3TL&\(19/16\)&\(5/4\)&\(1/10+2d\)
+ &\(1+5d/2+2d^2\)&12\\
+D3TM&\(19/16\)&\(5/4\)&\(1/10+2d\)
+ &\(1+8d/3+9d^2/4\)&12\\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\subsubsection{Finite data for the short-one rows}
+\label{sec:q117-unified:short-one-data}
+
+Write \(G_a(z)=u_a(x)+zv_a(x)\), where \(z=i\sqrt x\).
+The finite alternating coefficients satisfy
+\(1-x\le u_a,v_a\le1\) for every \(a\ge3\).
+The receiving-symbol lemma above gives
+\(\operatorname{Re}(G_a\mathsf P_{L,b})\ge\phi(x)>1/25\)
+for every finite \(a,b,L\) in its stated ranges.
+For \(a\ge3\), positivity and the actual path convolution give
+\begin{equation}\label{eq:q117-unified:receiver-profile}
+ 0\le f_a\le C_{a,t}\le C_{a,0}
+ \le p+\frac65\sqrt d-\kappa d.
+\end{equation}
+Indeed \(S_a-p=KG_{a-1}(K)g\), and
+\(\|G_2(K)\|^2\le45/32<36/25\), whereas
+\(\|G_{a-1}(K)\|\le1\) for \(a\ge4\).
+Also \(\beta_a\ge\kappa d\). In particular the actual
+receiving weights are bounded by \(5/2-q\) on \(d\le1/3\)
+and by \(49/20-q\) on \(d\le1/5\).
+The increment \(6y/5-\kappa y^2\), \(y=\sqrt d\), is increasing
+on the relevant interval. At its two right endpoints use respectively
+\(y<26/45\) and \(y<9/20\) to obtain the asserted bounds.
+
+\paragraph{The longer connectors S1--S3.}
+For S1, the actual finite propagation
+\eqref{eq:L58:propagation} has nonnegative coefficients
+\(\gamma,a_1,\varepsilon_j\), with \(\varepsilon_j\ge\tau\)
+for \(j\ge4\). Retaining its last two terms gives the first
+envelope in Table~\ref{tab:q117-unified:finite-envelopes}.
+The finite inputs \eqref{eq:L58:finiteinputs} give
+\[
+ \|\mathsf P_{L,b}(B)\|\le1,\qquad
+ \alpha_L:=-\E[\mathsf P_{L,b}(B)u]\ge\tau,\qquad
+ \eta_L:=\langle u,\mathsf P_{L,b}(B)u\rangle\ge\tau,
+ \quad L\ge5.
+\]
+Thus the exact variance after subtracting \(\lambda u\) is at most
+\(d-3\kappa^2d^2+\kappa^2d^3\). Its mean is at most
+\(1-3\kappa d\). The common covariance identity and
+\(\int u_a\,d\nu\le d\) give
+\[
+ \operatorname{Cov}(C_{a,0},Z)
+ =-\int\operatorname{Re}(G_a\mathsf P_{L,b})\,d\nu
+   -\beta_{a+1}\alpha_L+\lambda\int u_a\,d\nu
+ \le\kappa(1-\kappa)d^2.
+\]
+These are the S1 data, including mass \(1-2\kappa d\).
+
+For S2 retain the actual coefficient \(\varepsilon_3\ge41d/80\).
+The finite fourth-connector calculation following
+\eqref{eq:L58:finiteinputs} gives
+\[
+ \mu\le1-17d/10\le1-27d/16,
+ \qquad
+ \operatorname{Var}Z\le d-13d^2/8+d^3/4.
+\]
+In the variance, increasing the coefficient of \(q\) from \(d/2\)
+to \(41d/80\) decreases the bound: its derivative is
+\(2ed-2\eta_4<0\) for \(e\le41d/80\), since
+\(\eta_4\ge\kappa d\). The same covariance calculation gives
+\(J=(41/80-\kappa^2)d^2\).
+
+For S3 the finite third-connector inputs of
+Section~\ref{proof:Q5-C058} give, with
+\(\widehat V=V_3-\gamma Kg\),
+\[
+ \begin{gathered}
+ 5d/8\le B_*\le3d/2,\qquad
+ 1-\E\widehat V\ge(4/5-6d/5)d,\qquad
+ \tau\le\alpha_4\le d,\\
+ \mu\le1-13d/8\quad(d\le1/4),\qquad
+ \mu\le1-3d/2\quad(d\le1/3),\\
+ \operatorname{Var}Z\le d-3d^2/2+2d^3-7d^4/5.
+ \end{gathered}
+\]
+Here \(\alpha_4=-\E[\mathsf P_{4,b}(B)u]\).
+Use \(t=t_a\) from Table~\ref{tab:q117-unified:finite-envelopes}.
+Its actual mass is \(1-2d\) for \(a=3\), and at most
+\(1-3\tau\) for \(a\ge4\), hence at most \(1-7d/4\).
+Let
+\(M_a=\int\operatorname{Re}(G_a\mathsf P_{3,b})\,d\nu\),
+\(J_a=\int xv_a\,d\nu\), and \(D_a=\int u_a\,d\nu\).
+The covariance, with every receiving correction retained, is
+\begin{equation}\label{eq:q117-unified:third-shortone-covariance}
+ \operatorname{Cov}(C_{a,t_a},Z)
+ =-M_a-\gamma J_a
+  -\beta_{a+1}(1-\E\widehat V)
+  +B_*D_a+t_a\alpha_4-t_aB_*d.
+\end{equation}
+Use \(M_a\ge d/25\), \(J_a\ge0\), \(D_a,t_a\le d\),
+and the preceding finite bounds. Dropping the nonpositive terms gives
+\[
+ \operatorname{Cov}(C_{a,t_a},Z)
+ \le-d/25+(81/40)d^2+(57/80)d^3.
+\]
+This proves S3L and S3H on their respective continuous domains.
+
+\paragraph{The two-step terminal data S4 and S4F.}
+Put \(V_R=\|R_1\|^2\), \(\rho=\langle Kg,R_1\rangle\),
+\(D_3=\E B^3R_1\), \(t_0=\beta_{b+1}\),
+and \(e=d-\beta_{b+2}\). The actual finite identities
+\eqref{eq:L58:two}--\eqref{eq:L58:twomoments} are
+\begin{equation}\label{eq:q117-unified:two-step-identities}
+\begin{aligned}
+ \alpha&=d-k\rho,& \eta&=d-kD_3,\\
+ \gamma&=kt_0-k^2V_R/2,& a_1&=ke,\\
+ \mu&=1-\alpha-\gamma-a_1,&
+ \operatorname{Var}Z
+  &=\|V_2-1\|^2-\alpha^2+\gamma^2d-2\gamma\eta.
+\end{aligned}
+\end{equation}
+In particular \(\rho=d-\beta_{b+3}\), and the finite alternating
+sums give
+\[
+ t_0+e-\rho=
+ \begin{cases}\beta_{b+1},&b\text{ odd},\\
+                \beta_{b+3},&b\text{ even}.
+ \end{cases}
+\]
+Thus \(1-\mu=d+k(t_0+e-\rho)-k^2V_R/2\).
+The finite geometric loss \eqref{eq:Q81:finite-geometric-loss}
+implies the weaker \(\|G_N(i\sqrt x)\|^2\le1-9x/20\)
+for every \(N\ge3\). For \(b\ge4\),
+\(V_R\le\delta_2-9\delta_3/20\), and
+\(k\tau-k^2V_R/2\) increases on \(1\le k\le6/5\),
+since its derivative is at least \(17d/160\).
+Jensen's moment inequality therefore gives
+\(\mu\le1-A_2d\) and \(\gamma\ge g_2d\).
+For \(b=3\), use instead \(t_0+e-\rho=d\) and
+\(V_R=\delta_2+\delta_3\). The same derivative is positive,
+and \(1-\mu\ge(2-45v/64)d\),
+\(\gamma\ge(1-45v/64)d\), which imply these same two bounds.
+
+The finite norm proof following \eqref{eq:L58:twomoments} gives
+\(\|V_2-1\|^2\le dJ_2(v)\), with the exact \(J_2\) in
+\eqref{eq:q117-unified:two-step-data}. For \(b\ge5\), the two
+finite alternating coefficients of \(G_{b-1}\) are at most
+\(1-\kappa x\); hence
+\(\rho\le\delta_2-\kappa\delta_3\) and
+\(D_3\le\delta_3-\kappa\delta_4\).
+Using \(\delta_3\ge v^2d\), \(\delta_3\le\theta vd\),
+and \(\delta_4\ge v^3d\) gives
+\(\alpha\ge a_0d\) and \(\eta\ge e_0d\).
+In \eqref{eq:q117-unified:two-step-identities}, the larger endpoint
+of the convex expression in \(\gamma\in[g_2d,6d/5]\) is
+\(\gamma=g_2d\), because
+\([(6/5)+g_2]d-2e_0<0\). Consequently
+\begin{equation}\label{eq:q117-unified:shortone-common-variance}
+ \operatorname{Var}Z\le d\mathcal V_2(v,d),\qquad b\ge3.
+\end{equation}
+The two finite prefixes in this last assertion
+use the following comparisons. At \(b=4\), put
+\(a_4=1-6v/5+6v^2/5\), \(e_*=1-39v/80\). Then
+\[
+ a_4^2-a_0^2\ge1599v^2/3200,
+ \qquad2g_2(e_0-e_*)\le57v^2/224.
+\]
+These follow from \(a_4-a_0=39v^2/80\),
+\(a_4+a_0\ge41/40\), \(g_2\le1-7v/5\), and
+\(v(1-7v/5)\le5/28\). At \(b=3\), put
+\(a_*=1-6v/5\), \(g_*=1-45v/64\). The actual comparison is
+\(dJ_2-(a_*^2+2g_*e_*)d^2+g_*^2d^3\).
+Here \(g_*-g_2\ge7v/10\), \(g_*+g_2\le2-2v\), and
+\(2e_*-(g_*+g_2)d>6/5\); the difference from
+\eqref{eq:q117-unified:shortone-common-variance} is paid by
+\((21/25)v-(1881/1120)v^2>0\).
+
+\paragraph{The two-step receiving symbols and endpoints.}
+For \(a\ge4\), every finite terminal satisfies
+\[
+ \operatorname{Re}(G_a\mathsf P_{2,b})\ge1-2x+2x^2/3;
+ \quad b\ge5\ \Longrightarrow\
+ \operatorname{Re}(G_a\mathsf P_{2,b})\ge1-2x+7x^2/8.
+\]
+Here is the finite-index verification. Write
+\(G_{b-1}(-z)=\alpha_0-z\beta_0\) and
+\(\mathsf P_{2,b}=c+ze\), with
+\(c=1-kx^2\beta_0\), \(e=1-kx\alpha_0\).
+For \(b\ge5\), \(\alpha_0-\beta_0\ge-x^3\), so
+\(c-xe>0\). At \(a=4,5\), use
+\(G_4=(1-x)(1+z)\) and \(G_5=G_4+x^2\), together with
+\(kx(1-x)\le3/10\). For \(a\ge6\), the finite coefficients
+satisfy \(v_a\ge(1-x)(1+x^2)\), \(u_a-v_a\ge-x^3\).
+The sufficient excess divided by \(x^2\) is at least
+\[
+ 9/8-3x+7x^2/10-3x^4/10
+ \ge142669/10485760>0.
+\]
+The polynomial decreases on \([0,\theta]\).
+For arbitrary \(b\ge3\), use instead
+\(\alpha_0-\beta_0\ge-x\),
+\(\alpha_0\ge(1-x)\beta_0\), and \(\beta_0\ge1-x\).
+At \(a=4\) the payment is \(kx(1-x)\le3/10<1/3\).
+For \(a\ge6\) it reduces to
+\[
+ 4/3-3x+x^2-k(1-x)x+k(1-x)x^4>0.
+\]
+Its minimum in \(k\) occurs at \(6/5\); the resulting polynomial
+decreases, and at \(\theta\) its first three combined terms are
+\(-151/15360\), while its final term exceeds \(1/60\).
+The remaining receiver \(a=5\) has the stronger bound
+\(\operatorname{Re}(G_5\mathsf P_{2,b})\ge1-2x+3x^2/2\)
+for every \(b\), from \(kx<1/2\).
+
+Let \(M_a=\int\operatorname{Re}(G_a\mathsf P_{2,b})\,d\nu\),
+\(D_a=\int u_a\,d\nu\le d-\kappa\delta_2\). The exact identity is
+\[
+ \operatorname{Cov}(C_{a,0},Z)=-M_a-\beta_{a+1}\alpha+\gamma D_a.
+\]
+Finite alternating coefficients also give
+\(V_R\ge c_G\delta_2\), \(c_G=16245/32768\).
+Keeping the same \(k\), the last two terms divided by \(d^2\)
+are at most
+\[
+ (k-1)+v[1+k(1-\kappa)]-kv^2
+ -\tfrac12k^2(V_R/d)(1-\kappa v)
+ \le H_2(v)+3d/5.
+\]
+Here \(k-1\le3d/5\),
+\(1+(6/5)\theta-c_G/2<5/4\), and
+\(1-c_G\kappa/2>17/20\). For \(a=3\), its actual mass is
+\(1-2d\), and \(-d\alpha+\gamma\tau\le(k-1)d^2\), so the
+stronger covariance is \(-(1-2v)d+3d^3/5\).
+
+For \(b\ge5\), the mass \(H=1-B_2d\) and covariance in row S4
+therefore apply directly at \(a=4\) and \(a\ge6\).
+The finite mass losses retain \(2\tau+\delta_3\): this is exact
+at \(a=6\); at \(a=4\) use \(\delta_2\ge\delta_3\); and at
+\(a\ge7\) each sum retains \(\tau+\kappa\delta_3\), with
+\(2\kappa>1\). Compare the remaining receivers only after applying
+their own two mean endpoints. Their zero endpoints are unchanged.
+At \(a=5\), the nonzero endpoint difference from S4 is at most
+\(v^2dU^3(U-5/2)\le0\). At \(a=3\), divided by \(dU^3\), it is
+\[
+ v[-2+9v/2]+dv[-1-8v/5+39v^2/20-9v^3/40]\le0,
+\]
+since \(v\le\theta<4/9\) and \((39/20)\theta<8/5\).
+This proves the complete S4 endpoints for every receiving length.
+For \(b=3,4\), replace \(M_2\) by \(M_{2,f}\) as in S4F.
+The same receiving comparisons remain valid. Its nonzero endpoint
+increases by \((5/6)v^2dU^3\), while the actual inverse scale obeys
+\begin{equation}\label{eq:q117-unified:shortone-prefix-scale}
+ (1-d/2)^{-8}-[1-(1-v)d/2]^{-8}
+ \ge4vd\ge(5/6)v^2dU^3.
+\end{equation}
+The first inequality follows termwise from the positive inverse
+binomial series. Thus the S4 certificate also pays S4F.
+
+\paragraph{The unit connector S5 and S5F.}
+For \(b\ge4\), the actual \(Z=q-kKR_1-\gamma\) satisfies
+\[
+ \mu=1-k(t_0+e)+k^2V_R/2,\qquad
+ \operatorname{Var}Z=d-2k\rho+k^2\|KR_1\|^2-k^2e^2.
+\]
+By \eqref{eq:Q81:finite-geometric-loss},
+\(V_R\le\delta_2-7\delta_3/15\) and
+\(\|KR_1\|^2\le\delta_3-7\delta_4/15<\delta_2/3\).
+The finite alternating identities give
+\(\rho,e\ge\kappa\delta_2\) and \(t_0+e\ge d-\delta_3\).
+The last sum equals \(d\) for even \(b\); its first negative
+odd correction is \(-\delta_3\), and later ones are smaller.
+Both derivatives in \(k\) have the favorable sign:
+\(t_0+e-kV_R>0\) and \(k\|KR_1\|^2<\rho\).
+At \(k=1\) these yield exactly the S5 mean and variance.
+For its receiving symbol write \(G_{b-1}(-z)=\alpha_0-z\beta_0\).
+Every finite \(b\ge4\) satisfies
+\((1-x)\alpha_0+x\beta_0\le1-\kappa x\).
+Since the two coefficients of \(\mathsf P_{1,b}\) are nonnegative,
+\[
+ \operatorname{Re}(G_a\mathsf P_{1,b})
+ \ge1-11x/5+57x^2/80.
+\]
+The common covariance identity, with
+\(\alpha_1=ke\ge\kappa\delta_2\), gives the S5 value of \(J\).
+For \(b=3\), the exact data are
+\(R_1=Kg+K^2g\), \(t_0=d\), \(e=\rho=\delta_2\),
+\(V_R=\delta_2+\delta_3\), and
+\(\|KR_1\|^2=\delta_3+\delta_4\).
+The same derivative argument gives
+\(\mu\le1-d\) and
+\(\operatorname{Var}Z\le d(1-7v/5)-v^2d^2\).
+Here \(2-\theta-\theta^2>7/5\), and the finite receiving symbol is
+\(\operatorname{Re}(G_a\mathsf P_{1,3})\ge1-11x/5\).
+Together with \(\alpha_1=k\delta_2\), these prove S5F.
+
+\paragraph{The four-loss tail S6.}
+The exact identity
+\(qf_2=(1+Kg/2)^2-(g+Kg/2)^2\), positivity of \(T\),
+and \(T((Kg)^2)\le2\delta_2\) give the finite propagation
+\[
+ 0\le T^L(qf_2)\le V_L-\gamma\bar f_{L-1}
+       -\sum_{j=3}^L\omega_j\bar f_{L-j},\qquad
+ \gamma=d-\delta_2/2,\quad
+ \omega_j=\begin{cases}\beta_j,&j\text{ even},\\
+                         \beta_{j+2},&j\text{ odd}.
+             \end{cases}
+\]
+This is the finite Duhamel expansion of the actual \(Kg\) term;
+every coefficient \(\omega_j\ge\tau\). For \(L\ge6\), the last
+four indices are at least three and give the S6 mask. Its unmodified
+mean shift is \(\alpha_L=\beta_{L+3}\) for even \(L\),
+\(\beta_{L+1}\) for odd \(L\), hence in \([\tau,d]\).
+The four retained path means sum to \(4-3d\), proving
+\(\mu\le1-\tau(5-3d)\).
+
+For every finite \(n\ge4\), the receiver-independent finite
+calculation \eqref{eq:L33:finiteP} gives
+\( |\mathsf P_{n,2}|^2\le1-7x/15\).
+For \(L\ge6\), \eqref{eq:L33:RI} gives both finite coefficients
+in \([\rho_*(x),1]\), where
+\(\rho_*(x)=1-x+x^2-x^3\).
+Those proofs include the four residue classes and their actual
+finite last exponents.
+The actual receiving symbol consequently obeys
+\(\operatorname{Re}(G_a\mathsf P_{L,2})\ge7/60\).
+Indeed its finite lower value is at least
+\(B_0-D_0x^4\), with
+\(B_0=(1-2x)/(1+x)\), \(D_0=(1-x+x^2)/(1+x)\).
+This decreases, and at \(\theta\) exceeds
+\(2/15-1/60=7/60\), because
+\(259\cdot28561<8388608\).
+
+In the S6 mask the real and imaginary coefficient subtractions
+are \(\tau(3-x)\) and \(2\tau\). The componentwise proof of
+\eqref{eq:L33:variance} permits each of its four actual retained
+coefficients to lie in \([\tau,d]\). Setting all four equal to
+\(\tau\) gives precisely this S6 polynomial. Its same-measure
+spectral integration, using \(\delta_3\ge v^2d\) and projection
+onto mean-zero functions, gives the stated S6 variance.
+The actual receiving covariance is computed separately below.
+For the covariance let \(D_a=\int u_a\,d\nu\),
+\(J_a=\int xv_a\,d\nu\), \(E_a=\int xu_a\,d\nu\).
+The actual centered mean shift is \(\alpha_L-2\tau d\), so
+\[
+ \operatorname{Cov}(C_{a,0},Z)
+ =-M_a+\tau(3D_a-2J_a-E_a)
+       -\beta_{a+1}(\alpha_L-2\tau d).
+\]
+On \(d\le5/24\), this last mean shift is positive. Use
+\(D_a\le d\), \(J_a,E_a\ge\kappa\delta_2\),
+\(\beta_{a+1},\alpha_L\ge\tau\), and \(M_a\ge7d/60\).
+Since \(3\kappa-1=25/32\), the resulting bound is exactly
+the S6 value of \(J\), after weakening \(-7d/60\) to \(-d/10\).
+
+\subsubsection{Finite data for the short-two rows}
+\label{sec:q117-unified:short-two-data}
+
+The four actual square packets in
+Table~\ref{tab:q117-unified:finite-envelopes} have the following
+finite analytic bounds. They are the propagation, coordinate, and
+moment bounds of \eqref{eq:L77:propagation},
+\eqref{eq:L77:twomoments}--\eqref{eq:L77:threemoments},
+\eqref{eq:L77:positivecoordinates},
+\eqref{eq:L77:correctedfrequency}, and
+\eqref{eq:L77:middleinputs}, together with the long-connector
+finite loss calculation \eqref{eq:L73c:losses}.
+Here \(N\) bounds both \(\|\mathsf Q_L\|\) and
+\(\|\mathsf Q_{L-1}\|\) when \(L\ge4\), and
+\(h d\) bounds the retained losses and the three actual mean
+shifts at those connector lengths.
+\begin{equation}\label{eq:q117-unified:square-packet-data}
+\begin{array}{c|c|c|c|c|c}
+ b& d\text{ range}&\varepsilon&\delta&h&N\\\hline
+ 3&(0,1/3]&-\eta&k^2\delta_3/2&9/16-d/2&1\\
+ 4&(0,1/4]&|\varepsilon|\le d/6&\le25d/24&1/2-6d/5&1+d\\
+ b\ge5&(0,1/5]&|\varepsilon|\le3d/5&\le6d/5&1/2-6d/5&1+7d/5\\
+ b\ge5&[1/5,1/4]&|\varepsilon|\le2d/3&\le4d/3&\text{not used}&\text{not used}
+\end{array}
+\end{equation}
+At \(b=3\), \(\eta=k\delta_2-k^2\delta_3/2\),
+\(0\le\eta\le39d/80\), and \(0\le\delta\le\eta/3\).
+For \(b=4\), \(A=d+x\), \(B_0=x\).
+For \(b\ge5\), both coordinates \(A,B_0\) are nonnegative.
+On the low domain \(\sqrt{A^2+xB_0^2}\le3/8+9d/5\), and
+\(k(3/8+9d/5)\le1\); the \(b=4\) packet also has
+\(k\sqrt{A^2+xB_0^2}\le1\).
+These are bounds at fixed original moments: in their finite proof
+one first maximizes the actual functions of \(x\), and only then
+uses \(\delta_2\le\theta d\). No substitution \(\delta_2=xd\)
+is made in a frequency polynomial.
+
+For all three low long-connector packets, the positive propagation
+and the actual mean shifts give
+\begin{equation}\label{eq:q117-unified:long-square-moments}
+ \mu\le\nu_0-3hd,\qquad
+ \operatorname{Var}Z\le N^2d-3h^2d^2+h^2d^3,
+ \qquad
+ Z\le(\nu_0-hd)q-hd+N\sqrt d.
+\end{equation}
+The negative square comes from the actual mean of
+\(\mathsf Q_L(B)u\), as in
+\eqref{eq:reference-common:variance}.
+
+\paragraph{Long connectors D4F, D4B, and D4T.}
+First let \(b\ge4\) in its low packet. The finite polynomial
+\(\mathsf U_L=G_L+kz^L(A-zB_0)\) satisfies
+\[
+ \operatorname{Re}(G_a\mathsf U_L)\ge1/50,
+ \qquad a\ge3,\quad L\ge4.
+\]
+At \(L=4\) the perturbation contributes
+\(kx^2(u_a A+xv_aB_0)\ge0\), and the unperturbed product is
+at least \((1-x)(1-2x)\ge57/512\).
+At \(L=5\) its unperturbed value is at least
+\(B_0^*+A_0^*x^3\ge2/15\), with
+\(B_0^*=(1-2x)/(1+x)\), \(A_0^*=(2-x)/(1+x)\).
+The perturbation costs at most \(x^{5/2}\le1/9\), leaving
+\(1/45>1/50\). At \(L=6\) the unperturbed product exceeds
+\(B_0^*\); at \(L=7\) it is at least
+\(2/15-(17/15)\theta^4>11/108\).
+For \(L\ge8\), the finite even and odd formulas give, respectively,
+\((2/15)(1-\theta^4)>7/54\) and
+\(2/15-2\theta^6>67/540\), both exceeding \(3/25\).
+The perturbation at \(L\ge6\) costs at most \(\theta^3<7/100\).
+These cover every finite connector length.
+
+In \(\mathsf Q_L=\mathsf U_L+\varepsilon G_{L-2}
+ +\delta z^{L-2}\),
+\(|\operatorname{Re}(G_aG_{L-2})|\le1\); at \(L=4\) this
+follows directly from \(0\le u_a-xv_a\le1\), and later from
+the two finite norm bounds. The last correction is bounded below
+by \(-\delta\theta\). Thus the additional receiving cost is at
+most \(151d/256\) for \(b=4\) and \(87d/80\) for \(b\ge5\).
+Using the exact centered mean \(\alpha_L\ge hd\), the covariance is
+\begin{equation}\label{eq:q117-unified:long-square-covariance}
+ \operatorname{Cov}(C_{a,0},Z)
+ =-\int\operatorname{Re}(G_a\mathsf Q_L)\,d\nu
+       -\beta_{a+1}\alpha_L+hd\int u_a\,d\nu
+ \le3d^2.
+\end{equation}
+
+For \(b=3\), \(\mathsf U_L=G_L-kz^{L+2}\) has the stronger
+finite receiving lower bound \(1/10\). The \(L=4\) correction
+is favorable. At \(L=5\), its cost \(kx^4\) is paid by
+\(A_0^*x^3\), since \(A_0^*\ge17/15>kx\).
+At \(L=6\) the lower value is
+\(B_0^*+x^3(B_0^*-kx)\ge2/15-(17/48)(7/100)>1/10\).
+At \(L=7\) the correction is favorable and the unperturbed
+value exceeds \(11/108\). For \(L\ge8\) the cost is at most
+\((6/5)\theta^5<1/50\), paid by the unperturbed \(3/25\).
+The remaining corrections cost at most
+\(\eta(1+\theta/3)\le4251d/7680\).
+Retaining \(-\beta_{a+1}\alpha_L\), rather than discarding it,
+now gives
+\[
+ \operatorname{Cov}(C_{a,0},Z)
+ \le-d/10+[4251/7680+\theta h]d^2
+ \le-d/10+4d^2/5,
+\]
+since \(4251/7680+\theta(9/16)=1001/1280<4/5\).
+Together with \eqref{eq:q117-unified:long-square-moments}, these
+are D4F, D4B, and D4T. In every case the actual receiving mass
+is at most \(1-2\tau\le1-19d/16\).
+
+\paragraph{The finite terminal \(b=3,L=2\).}
+For this packet the actual polynomial and scalar are
+\[
+ \mathsf Q_2=1+z+\delta-kz^4,\qquad
+ Z=1-\eta+\mathsf Q_2(B)u,\qquad \mu=1-d-\eta.
+\]
+Since \(k\delta_2-k^2\delta_3/2\) increases with \(k\),
+\(\eta\ge\delta_2-\delta_3/2\ge51\delta_2/64\).
+The exact variance of this same message is
+\[
+ (1+\delta)^2d+\delta_2-2k(1+\delta)\delta_3
+       +k^2\delta_5-d^2.
+\]
+It is at most \(d(1+v-7w/4-d)\) on \(d\le1/6\), and at
+most \(d(1+v-7v^2/5-d)\) on \(d\le1/3\), where
+\(w=\delta_3/d\). To see the first bound, combine the exact
+\(\delta_3\) terms before estimating them. After multiplication
+by \(m^2\), the sufficient difference is
+\(1/4-\theta^2-d/4-7d^2/16\), decreasing and equal to
+\(287/9216>0\) at \(1/6\). The full-range coefficient is
+\(7/5\), as in the finite calculation for \eqref{eq:L77:23}.
+
+For \(a\ge4\), use \(t=\beta_{a-1}\) and put
+\(M_a=\int\operatorname{Re}\{G_a(1+z-z^4)\}\,d\nu\).
+The exact receiving cancellation is
+\begin{equation}\label{eq:q117-unified:retained-receiving-cancellation}
+\begin{aligned}
+ \operatorname{Cov}(C_{a,\beta_{a-1}},Z)
+ ={}&-M_a+d(\beta_{a-1}-\beta_{a+1})\\
+ &+\delta\left(\beta_{a-1}d-\int u_a\,d\nu\right)
+ +(k-1)\int u_ax^2\,d\nu-k\beta_{a-1}\delta_3.
+\end{aligned}
+\end{equation}
+The \(\delta\) term is nonpositive, since
+\(u_a\ge\kappa>d\ge\beta_{a-1}\). The last two terms have
+nonpositive sum: \(k-1=kd/2\), \(u_a\le1\), and
+\(\beta_{a-1}\ge\tau>d/2\). The beta difference is one signed
+\(\delta_j\), \(j\ge2\). Hence the covariance is at most
+\(-M_a+vd^2\).
+For \(a=4\), the exact frequency polynomial is
+\(1-2x+x^3\), and the actual receiving mass is
+\(1-(3-v)d\). For every finite \(a\ge5\),
+\[
+ M_a\ge(1-2v+49v^2/100)d,\qquad
+ \E C_{a,\beta_{a-1}}\le1-(3-3v+v^2)d.
+\]
+The finite frequency polynomials at \(a=5,6,7\) are respectively
+\(1-2x+x^2+x^3-x^4\),
+\(1-2x+x^2-x^4\), and
+\(1-2x+x^2-x^3-x^4+x^5\).
+In the last, the coefficient after \(x^2\) is
+\((1-x)(1-x^2)\ge16245/32768>49/100\).
+For \(a\ge8\), both coefficients are at least
+\((1-x)(1+x^2)\), their difference is at least \(-x^5\),
+and the product is at least
+\(1-2x+x^2-x^3+x^7\ge1-2x+\kappa x^2\).
+Integrate and use \(\delta_3\ge v^2d\).
+The three actual beta losses at \(a=5,6,7\) retain
+\(3\tau+\delta_3\); at \(a\ge8\), each retains
+\(\tau+\delta_3-\delta_4\), and \(3\kappa>1\).
+This proves the mass bound as well.
+
+The D2F endpoints therefore apply directly at \(a\ge5\).
+At \(a=4\), after taking its own two mean endpoints, the nonzero
+endpoint difference from D2F divided by \(dU^3\) is
+\[
+ v[-(2-v)U+(49/25)v-4v^2]\le0.
+\]
+Indeed \(U\ge3433/6144>5/9\), and the bracket is at most
+\(-(2-\theta)(5/9)+(49/25)\theta=-107/1200<0\).
+The zero endpoint is the same. This extends D2F to all \(a\ge4\).
+
+For \(a=3\), the actual mass is \(1-2d\), and the covariance is
+\[
+ -d+2\delta_2+k\delta_3-k\delta_4
+       -\delta(d-\delta_2)-d^2.
+\]
+On \(d\le1/6\), \(k\le12/11\). With
+\(w=\delta_3/d\), \(w_4=\delta_4/d\), the actual joint bounds are
+\[
+ J\le d[-1+2v+(12/11)w-w_4]-d^2,\qquad
+ V\le d[1+v-7w/4-d].
+\]
+They must be combined before reducing the moments. In the complete
+nonzero endpoint, the coefficient of \(w\), divided by \(d\), is
+\((48/11)U^3-35/2\le-289/22<0\); the coefficient of \(w_4\)
+is \(-4U^3\le0\). Consequently \(w\ge v^2\) and
+\(w_4\ge v^3\) give
+\begin{equation}\label{eq:q117-unified:joint-low23}
+ HU^4+4JU^3+10V\le W_{\mathrm{D2F3L}}(d,v).
+\end{equation}
+At the zero endpoint, \(10V\) separately decreases with \(w\).
+Thus D2F3L is a joint endpoint row, not an independent covariance
+upper obtained by substituting \(w\ge v^2\) into \(J\).
+On \(d\ge1/6\), use \(w^2\le vw_4\), \(w\le\theta v\).
+The quadratic \(-1+2v+(6/5)w-w^2/v\) increases in
+\(w\in[0,\theta v]\); its resulting upper increases with \(v\).
+Thus \(-1+2v+(6/5)w-w_4\le-9257/163840<-1/20\),
+which gives D2F3H with \(\mu\le1-d\) and
+\(V\le d(33/28-d)\).
+
+\paragraph{The two-step finite symbols for \(b\ge4\).}
+The actual centered mean shift is
+\(\alpha_2=d+k\rho_0\), with
+\(\rho_0=\int xB_0\,d\nu\ge0\).
+For \(b=4\), remove the nonlinear retained constants and set
+\(k=1\) to obtain the baseline real coefficients
+\(1-x^2\), \(1+x^2\) of \(\mathsf U_2\).
+Its receiving lower bound is \(1-2x-x^2>1/50\) at \(a=3\).
+For \(a=4\) it is \(1-2x+x^4\ge3/16\), and \(a=5\) is larger.
+For \(a\ge6\), the finite lower polynomial is
+\(1-2x+x^2-3x^3+x^4+x^5+x^6\).
+It decreases on \([0,\theta]\), and its excess over \(3/16\)
+at \(\theta\) is \(\theta^2(42545/1048576)>0\).
+The baseline vector norm is at most \(1/2\). Since
+\(k-1\le4d/3\), the actual perturbation of \(\mathsf U_2\)
+has norm at most \(13d/16\). The extra real shift \(\delta\)
+has a favorable receiving sign. The common covariance formula
+therefore gives
+\[
+ J_3\le-d/50-3d^2/16,\qquad
+ J_a\le-3d/16+7d^2/32\quad(a\ge4).
+\]
+
+For \(b\ge5\), write the actual finite decomposition
+\(A=A_0+C_*-E_*x\), \(B_0=B_{00}+D_*\).
+At \(b=5\), \(A_0=x-x^2\), \(B_{00}=x\).
+At \(b\ge6\), \(A_0=xa_f\), \(B_{00}=x\bar a_f\), with
+the two finite alternating coefficients
+\(a_f,\bar a_f\in[1-x,1-x+x^2]\).
+The baseline vector norm is at most \(3/8\): at \(b=5\)
+its square is \(x^2-x^3+x^4\), and later it is at most
+\((x-x^2+x^3)^2(1+x)<(3/8)^2\).
+The receiving baseline obeys
+\[
+ \operatorname{Re}(G_3\mathsf U_2^0)
+ \ge1-2x-x^2+\kappa x^3>3/50,\qquad
+ \operatorname{Re}(G_a\mathsf U_2^0)\ge1/5\quad(a\ge4).
+\]
+For \(a=4,5\), use \(a_f+x\bar a_f\le1+x^3\), so the
+lower bound is \((1-x)(1-x-x^2-x^5)>1/5\).
+For \(a\ge6\), the finite coefficients give
+\(1-2x+x^2-2x^3+x^6-x^7+x^8\); its derivative is negative,
+and its endpoint exceeds
+\(7/20-7/50-1/500=26/125>1/5\).
+The \(a=3\) polynomial decreases and at \(\theta\) is
+\(65295/1048576>3/50\).
+
+On the low domain the true retained coefficients give
+\(0\le C_*-E_*x\le15d/8\), \(0\le D_*\le101d/80\).
+Their perturbing vector norm is at most \(21d/10\), and
+\(k-1\le45d/31\), \(k\le40/31\) give a total
+\(\mathsf U_2\) perturbation \((10491/7936)d\).
+On the middle domain the corresponding constants are
+\(C_*\le53d/32\), \(D_*\le17d/16\), vector norm
+\(9d/5\), and total perturbation \((377/320)d\).
+Including the actual mean product yields
+\[
+ \begin{array}{c|cc}
+ &a=3&a\ge4\\\hline
+ d\le1/5&J\le-3d/50+d^2/3&J\le-d/5+3d^2/4\\
+ 1/5\le d\le1/4&J\le-3d/50+d^2/5&J\le-d/5+3d^2/5.
+ \end{array}
+\]
+The unrounded quadratic coefficients are \(2555/7936,5779/7936\)
+and \(57/320,187/320\), respectively.
+The exact two-step mean and variance data from
+\eqref{eq:L77:twomoments}, \eqref{eq:L77:shiftedPtwo}, and
+\eqref{eq:L77:middleinputs} are those in D2BL, D2BM, D2TL, D2TM.
+For each \(a=3\) receiver take its own two mean endpoints first.
+The nonzero endpoint differences from the formal \(a\ge4\) rows are
+\[
+ \begin{array}{c|c}
+ b=4&-dU^3(57/400+13d/16)\\
+ b\ge5,\ d\le1/5&-dU^3(101/400+527d/480)\\
+ b\ge5,\ 1/5\le d\le1/4&-dU^3(101/400+127d/120).
+ \end{array}
+\]
+They are nonpositive, and the zero endpoints agree. This proves
+the all-receiver endpoint interpretation of those four rows.
+
+\paragraph{Three-step connectors D3B, D3TL, and D3TM.}
+The scalar \(\ell=d+k\rho_0\) is retained in the mean.
+It cancels from the covariance, which is exactly
+\[
+ J=-\int\operatorname{Re}(G_a\mathsf U_3)\,d\nu
+       -\varepsilon\int u_a\,d\nu
+       +\delta\int xv_a\,d\nu-\beta_{a+1}\alpha_3.
+\]
+For the baseline packets just used, the two coefficients are
+\(1-x-x^3\bar a_f\) and \(1-x^2a_f\).
+Use \(a_f=\bar a_f=1\) at \(b=4\), and
+\(a_f=1-x,\bar a_f=1\) at \(b=5\).
+In every finite case \(a_f-(1-x)\bar a_f\ge0\), so
+\[
+ \operatorname{Re}(G_a\mathsf U_3^0)
+ \ge1-3x+x^2+x^3[a_f-(1-x)\bar a_f]
+ \ge-55/1024>-3/50.
+\]
+The three-step perturbation is at most \(\sqrt\theta<13/20\)
+times the two-step perturbation. Thus it is below \(9d/10\)
+on the low \(b\ge5\) domain, \(4d/5\) on its middle domain,
+and \(169d/320\) at \(b=4\).
+The actual finite mean shifts satisfy \(\alpha_3\ge\kappa d\).
+The resulting covariance fees, divided by \(d^2\), are bounded by
+\[
+ 9/10+3/5+(6/5)\theta-\kappa^2,\quad
+ 4/5+2/3+(4/3)\theta-\kappa^2,\quad
+ 169/320+1/6+(25/24)\theta-\kappa^2,
+\]
+respectively; every one is below two. Hence \(J\le d/10+2d^2\).
+The actual means and centered variances of
+\eqref{eq:L77:threemoments} and \eqref{eq:L77:middleinputs}
+give D3B, D3TL, and D3TM.
+
+\paragraph{The finite three-step terminal D3F.}
+For \(b=3\), the exact polynomial is
+\[
+ \mathsf Q_3=1+z+z^2-\eta+\delta z-kz^5,\qquad
+ Z=1-\eta-d+\mathsf Q_3(B)u.
+\]
+Its centered mean shift is
+\(\alpha_3=d-k\delta_3+\delta d\ge2053d/2560>4d/5\), and
+\[
+ \mu=1-2d-k\delta_2+k\delta_3+(1-d)\delta
+ \le1-2d-25\delta_2/64\le1-(1+25v/64)d.
+\]
+Indeed \(k(1-d)\le1\), and
+\(k[\delta_2-(3/2)\delta_3]\ge25\delta_2/64\).
+Before the \(\eta,\delta\) shifts, the squared norm is at most
+\(1-x+x^2-2x^3+x^5\le1-6x/7\):
+\[
+ 1/7-x+2x^2-x^4\ge1/7-x+(11/6)x^2\ge1/154>0.
+\]
+The actual shifts change the norm by at most
+\[
+ -2\eta(1-x)+\eta^2+2\delta x(1-kx^2)+\delta^2x
+ \le-11\eta/12+\eta^2(1+\theta/9)\le0,
+\]
+using \(\delta\le\eta/3\), \(\eta\le13/80\).
+Subtracting the true mean square gives
+\(V\le d-(6/7)\delta_2-(16/25)d^2\), as in D3F.
+The baseline receiving product satisfies
+\[
+ \operatorname{Re}\{G_a(1+z+z^2-z^5)\}
+ \ge1-3x+x^2+x^3.
+\]
+Its two coordinates are nonnegative; increasing \(k\) only
+increases that product. The \(\eta,\delta\) fees are at most
+\((109/80)vd^2\), and the negative mean product is at least
+\((4\kappa/5)d^2\). Their difference is at most
+\((201/2560)d^2<d^2/10\).
+Integrating the baseline with \(\delta_3\ge v^2d\) and
+\(\delta_4\ge v^3d\) gives exactly the D3F covariance.
+
+\subsubsection{Pointwise fourth coefficients}
+\label{sec:q117-unified:point-coefficients}
+
+Write \(y=\sqrt d\), and put
+\[
+ \mathfrak C=2-q+6y/5-\kappa y^2,\qquad
+ \mathfrak C_\infty=5/2-q,\qquad
+ \mathfrak C_\ell=49/20-q.
+\]
+The receiving profiles \eqref{eq:q117-unified:receiver-profile}
+give the indicated upper for every actual \(C_{a,t}\).
+All three profiles are nonnegative on the rectangles used below.
+We prove the coefficient bounds in the row tables by bounding
+\(Z+\mu\) and its actual mean \(\mu\), then certifying the
+resulting polynomial in \((q,y)\).
+
+\paragraph{The two coefficient-nine entrances.}
+S1, S2, S3L, S3H, and S6 satisfy the hypotheses (Q117.4.1).
+For S1 and S6 their actual point upper is at most
+\((1-\kappa d)q-\kappa d+y\); the difference from the
+(Q117.4.1) upper is \(y/12+(3-q)d/32\ge0\).
+For S2 the difference is at least \(y/12-21d/160\ge0\),
+since \(y\le3/5\). S3 has exactly the required finite point
+upper from its third-connector propagation.
+Their actual means are at most \(1-3d/2\).
+Thus \eqref{eq:q117-unified:weak-nine} gives their coefficient nine.
+
+For clarity retain the stronger two-step entrance with its full
+original hypotheses. If \(C,Z\ge0\), \(\mu=\E Z\ge0\), and
+\fitdisplay{
+ C\le p+(6/5)\sqrt d-\kappa d,\qquad
+ Z+\mu\le q+1+\sqrt d-(13/8+3q/8)d,\qquad
+ \mu\le1-11d/8,
+ \label{eq:q117-unified:strong-nine-data}
+}{Q117.6.14}
+then
+\fitdisplay{
+ C[(Z+\mu)^2+2\mu^2]\le9.
+ \label{eq:q117-unified:strong-nine}
+}{Q117.6.15}
+This is Lemma~\ref{lem:reference-coefficient-nine}, case \(s\).
+The actual S4 and S4F messages satisfy these hypotheses:
+\(Z\le(1-\gamma)q+y-a_1\),
+\(\gamma\ge(1-3v/2)d\), \(a_1\ge\kappa vd\), and
+\(1-\mu\ge(2-3v/2)d\).
+At \(v\le\theta\), the resulting coefficient of \(q\) is at
+least \(25/64>3/8\), the other loss is at least
+\(1671/1024>13/8\), and the mean loss is at least
+\(89/64>11/8\).
+
+\paragraph{The remaining point prerequisites.}
+For S5, the exact data of the unit connector give
+\(\gamma\ge d-3\delta_2/2>3d/8\) and
+\(k|KR_1|\le(6/5)\sqrt{\theta d}<4y/5\).
+Its mean is at most \(1-5d/8\), so
+\(Z+\mu\le q+1+4y/5-d\).
+For S5F, \(\gamma>7d/10\) and
+\(k|KR_1|\le11y/12\); the latter follows from
+\((36/25)\theta(1+\theta)<121/144\).
+Together with \(\mu\le1-d\), this gives its point upper below.
+For D2F and its two actual \(a=3\) prefixes,
+\(\delta/(k\delta_2)\le39/160\) and
+\(\|1-kB^3\|^2\le1+(36/25)\theta^3<(21/20)^2\).
+The actual row formula therefore gives
+\(Z\le q+21y/20\), with \(\mu\le1-d\).
+
+For the D4 rows, use
+\eqref{eq:q117-unified:long-square-moments}.
+At \(b=3\), \(h\ge19/48\), \(\nu_0,N\le1\), whence
+\[
+ Z+\mu\le q+1+y-(19/48)(q+4)d\le q+22/19.
+\]
+The last inequality completes the square
+\(y-19y^2/12\le3/19\).
+At \(b=4\), \(\nu_0\le1+d/6\), and the coefficient of
+\(q\) is at most one. The remaining upper is
+\(1+y-11y^2/6+y^3+24y^4/5\), increasing on \([0,1/2]\)
+and equal to \(22/15<3/2\) at \(1/2\).
+For its derivative, use \(1-11y/3>0\) on \([0,1/4]\);
+on \([1/4,1/2]\) the lower quadratic
+\(1-11y/3+39y^2/5\) is positive.
+For \(b\ge5\), the \(q\) coefficient is at most
+\(1+d/10+6d^2/5\le267/250<107/100\).
+The remaining \(Z\) term is at most
+\((1+7d/5)\sqrt d-d/2+6d^2/5\), increasing and below
+\(131/250<21/40\) at \(d=1/5\), using \(\sqrt{1/5}<9/20\).
+In all three D4 rows \(\mu\le1\).
+
+For low two-step \(b\ge5\), the actual finite row gives
+\[
+ Z+\mu\le q+1+10y/7+e(q)d,\qquad\mu\le1,
+ \quad e(q)=\begin{cases}-1/10,&q\le1,\\6q/5-13/10,&q\ge1.
+                         \end{cases}
+\]
+It uses \(\|\mathsf U_1\|\le10/7\),
+\(\varepsilon\le3d/5\), and \(\delta\le6d/5\).
+The \(b=4\) row has the stronger upper
+\(q+1+27y/20-5d/6+\delta(q-1)\), with
+\(\delta\le25d/24\). For \(q\le1\), the difference from
+the preceding common upper is \(11y/140+11d/15\ge0\).
+For \(q\ge1\), it is
+\(11y/140+(19q/120+23/40)d\ge0\).
+On the middle \(b\ge5\) domain, use
+\(\varepsilon\le2d/3\), \(\delta\le4d/3\),
+\(\|\mathsf U_1\|\le10/7\), and
+\(\mu\le1-2d/3\le13/15\).
+The two point uppers are \(q+12/7\) for \(q\le1\), and
+\(4q/3+29/21\) for \(q\ge1\).
+At \(b=4\), the middle mean is at most \(4/5\).
+The stronger row just displayed is at most \(q+22/15\) when
+\(q\le1\), since \(27y/20-5y^2/6\le7/15\) for
+\(y\le1/2\). For \(q\ge1\), it is at most
+\(19q/15+5/4\): the difference has nonnegative \(q\) coefficient
+\(4/15-25y^2/24\ge1/160\), and at \(q=1\) is at least
+\(31/60-27y/20+5y^2/6\ge1/20\).
+
+For the three-step low \(b\ge5\) packet,
+\(\ell\ge d\), \(\|\mathsf Q_2\|\le7/5\),
+\(\varepsilon\le3d/5\), and \(\mu\le1-5d/4\) give
+\[
+ Z+\mu\le q+1+7y/5-21d/20\le q+22/15.
+\]
+On its middle domain use \(\|\mathsf Q_2\|\le3/2\),
+\(\varepsilon\le2d/3\), and \(\mu\le3/4\); then
+\(Z+\mu\le q+1+3y/2-11d/12\le q+31/20\).
+At \(b=4\), the inputs \(\|\mathsf Q_2\|<10/7\),
+\(\varepsilon\le d/6\), \(\ell\ge d\), and
+\(\mu\le1-7d/4\) give
+\(Z+\mu\le q+1+10y/7-29d/12\le q+1+3/14<q+5/4\).
+Here the maximum of the last quadratic increment is
+\(300/1421<3/14\).
+At \(b=3\), \(\delta\le13/240\) gives
+\(\|\mathsf Q_2\|^2\le87409/57600<25/16\).
+The actual row gives \(Z\le(1-\eta)q-d+5y/4\);
+using \(\mu\le1-d\),
+\(Z+\mu\le q+1+5y/4-2d\le q+153/128<q+5/4\).
+
+\paragraph{One rational certificate table.}
+In Table~\ref{tab:q117-unified:curvature-data}, let
+\(\mathcal P=M-\mathcal C(Y^2+2m_0^2)\).
+The entries \(\mathcal C,Y,m_0\) are actual point and mean
+uppers proved above. The last row is also used for the high-domain
+bare path. Each row has \(\mathcal P\ge0\) on its full rectangle.
+Here is an exact coefficient certificate: subdivide the indicated
+\(q\) and \(y\) intervals into the stated equal grid, map each
+cell affinely to \([0,1]^2\), and apply
+\eqref{eq:bernstein-coefficients} with the printed bidegree.
+Every Bernstein coefficient is nonnegative. By
+Lemma~\ref{lem:bernstein-certificate}, this proves
+\begin{equation}\label{eq:q117-unified:coefficient-bound}
+ C_{a,t}[(Z+\mu)^2+2\mu^2]\le M
+\end{equation}
+for each actual row, including every boundary.
+For the first three rows, \(0\le y\le26/45\); for the two
+low two-step rows, \(0\le y\le9/20\).
+The rows without \(y\) have degree zero in that variable.
+Their grids and bidegrees determine every coefficient by a finite rational formula.
+
+For the two low two-step entries abbreviate the already proved upper
+by \(Y_\ell(q,y)=q+1+10y/7+e(q)y^2\).
+The function \(K_*\) is defined with the row data above.
+\begingroup\small\setlength{\tabcolsep}{3pt}
+\begin{longtable}{@{}p{0.13\linewidth}p{0.10\linewidth}p{0.25\linewidth}p{0.10\linewidth}p{0.11\linewidth}p{0.10\linewidth}p{0.10\linewidth}@{}}
+\caption{Fourth-coefficient certificates. A full \(q\) interval is
+\([0,2]\); the two symbols \(-,+\) denote \([0,1],[1,2]\).
+The grid lists the number of equal subdivisions in \((q,y)\).}
+\label{tab:q117-unified:curvature-data}\\
+\toprule
+Rows & \(\mathcal C\)& \(Y\)&\(m_0\)&\(M\)&Degree&Grid\\
+\midrule\endfirsthead
+\toprule
+Rows & \(\mathcal C\)& \(Y\)&\(m_0\)&\(M\)&Degree&Grid\\
+\midrule\endhead
+S5&\(\mathfrak C\)&\(q+1+4y/5-y^2\)&\(1-5y^2/8\)&\(37/4\)&\((3,6)\)&\((2,2)\)\\
+S5F&\(\mathfrak C\)&\(q+1+11y/12-17y^2/10\)&\(1-y^2\)&10&\((3,6)\)&\((2,2)\)\\
+D2F, D2F3L/H&\(\mathfrak C\)&\(q+1+21y/20-y^2\)&\(1-y^2\)&10&\((3,6)\)&\((2,2)\)\\
+D4F&\(\mathfrak C_\infty\)&\(q+22/19\)&1&10&\((3,0)\)&\((8,1)\)\\
+D4B&\(\mathfrak C_\infty\)&\(q+3/2\)&1&13&\((3,0)\)&\((2,1)\)\\
+D4T&\(\mathfrak C_\ell\)&\(107q/100+61/40\)&1&13&\((3,0)\)&\((2,1)\)\\
+D2BL/TL \(-\)&\(\mathfrak C\)&\(Y_\ell(q,y)\)&1&\(K_*(y^2)\)&\((3,6)\)&\((1,1)\)\\
+D2BL/TL \(+\)&\(\mathfrak C\)&\(Y_\ell(q,y)\)&1&\(K_*(y^2)\)&\((3,6)\)&\((1,1)\)\\
+D2TM \(-\)&\(\mathfrak C_\infty\)&\(q+12/7\)&\(13/15\)&14&\((3,0)\)&\((1,1)\)\\
+D2TM \(+\)&\(\mathfrak C_\infty\)&\(4q/3+29/21\)&\(13/15\)&14&\((3,0)\)&\((1,1)\)\\
+D2BM \(-\)&\(\mathfrak C_\infty\)&\(q+22/15\)&\(4/5\)&13&\((3,0)\)&\((1,1)\)\\
+D2BM \(+\)&\(\mathfrak C_\infty\)&\(19q/15+5/4\)&\(4/5\)&13&\((3,0)\)&\((1,1)\)\\
+D3TL&\(\mathfrak C_\ell\)&\(q+22/15\)&1&12&\((3,0)\)&\((4,1)\)\\
+D3TM&\(\mathfrak C_\infty\)&\(q+31/20\)&\(3/4\)&12&\((3,0)\)&\((2,1)\)\\
+D3F, D3B&\(\mathfrak C_\infty\)&\(q+5/4\)&1&11&\((3,0)\)&\((2,1)\)\\
+Bare \(\bar f_2\)&\(\mathfrak C_\infty\)&\(q+5/4\)&\(3/4\)&\(75/8\)&\((3,0)\)&\((4,1)\)\\
+\bottomrule
+\end{longtable}
+\endgroup
+
+\begin{longtable}{@{}lp{0.36\linewidth}ccc@{}}
+\caption{Integer scopes, continuous domains, and inverse payments.
+Every row has \(a\ge3\) unless a smaller receiving range is printed.
+S rows use \(qf_b\); D rows use \(h_2f_b\).}
+\label{tab:q117-unified:scopes}\\
+\toprule
+Row&Integer range&\(d\)-interval&\(\sigma_r\)&\(\Delta_r\)\\
+\midrule\endfirsthead
+\toprule
+Row&Integer range&\(d\)-interval&\(\sigma_r\)&\(\Delta_r\)\\
+\midrule\endhead
+S1&\(b\ge3,\ L\ge5\)&\([0,1/3]\)&\(\kappa\)&\(\frac{1}{600}\)\\
+S2&\(b\ge3,\ L=4\)&\([0,1/3]\)&\(\kappa\)&\(\frac{1}{600}\)\\
+S3L&\(b\ge3,\ L=3\)&\([0,1/4]\)&\(\kappa\)&\(\frac{1}{600}\)\\
+S3H&\(b\ge3,\ L=3\)&\([1/4,1/3]\)&\(\kappa\)&\(\frac{1}{600}\)\\
+S4&\(b\ge5,\ L=2\)&\([0,1/3]\)&\(1-v\)&\(\frac{3}{80}\)\\
+S4F&\(b=3,4,\ L=2\)&\([0,1/3]\)&\(1\)&\(\frac{3}{80}\)\\
+S5&\(b\ge4,\ L=1\)&\([0,1/3]\)&\(1-v\)&\(\frac{1}{600}\)\\
+S5F&\(b=3,\ L=1\)&\([0,1/3]\)&\(1\)&\(\frac{1}{600}\)\\
+S6&\(b=2,\ L\ge6\)&\([0,5/24]\)&\(0\)&\(\frac{3}{800}\)\\
+D4F&\(b=3,\ L\ge4\)&\([0,1/3]\)&\(1\)&\(\frac{1}{80}\)\\
+D4B&\(b=4,\ L\ge4\)&\([0,1/4]\)&\(2\)&\(\frac{1}{40}\)\\
+D4T&\(b\ge5,\ L\ge4\)&\([0,1/5]\)&\(\frac{9}{4}\)&\(\frac{1}{50}\)\\
+D2F&\(b=3,\ L=2,\ a\ge4\)&\([0,1/3]\)&\(1\)&\(\frac{1}{80}\)\\
+D2F3L&\(b=3,\ L=2,\ a=3\)&\([0,1/6]\)&\(1\)&\(\frac{1}{80}\)\\
+D2F3H&\(b=3,\ L=2,\ a=3\)&\([1/6,1/3]\)&\(1\)&\(\frac{1}{80}\)\\
+D2BL&\(b=4,\ L=2\)&\([0,1/5]\)&\(2\)&\(\frac{1}{40}\)\\
+D2BM&\(b=4,\ L=2\)&\([1/5,1/4]\)&\(2\)&\(\frac{1}{40}\)\\
+D2TL&\(b\ge5,\ L=2\)&\([0,1/5]\)&\(\frac{9}{4}\)&\(\frac{1}{50}\)\\
+D2TM&\(b\ge5,\ L=2\)&\([1/5,1/4]\)&\(2\)&\(\frac{1}{40}\)\\
+D3F&\(b=3,\ L=3\)&\([0,1/3]\)&\(1\)&\(\frac{1}{80}\)\\
+D3B&\(b=4,\ L=3\)&\([0,1/4]\)&\(2\)&\(\frac{1}{40}\)\\
+D3TL&\(b\ge5,\ L=3\)&\([0,1/5]\)&\(\frac{9}{4}\)&\(\frac{1}{50}\)\\
+D3TM&\(b\ge5,\ L=3\)&\([1/5,1/4]\)&\(2\)&\(\frac{1}{40}\)\\
+\bottomrule
+\end{longtable}
+\begin{longtable}{@{}lcccc@{}}
+\caption{Certificates for the two whole payment polynomials.
+The bidegrees are those of \(P_r^+,P_r^0\) after the substitution
+\(v=d+(\theta-d)t\); a degree-zero second variable is omitted.
+Every coefficient in every listed cell is at least \(1/100\).}
+\label{tab:q117-unified:scalar-certificates}\\
+\toprule
+Row&Degree \((+,0)\)&Cells \((c_+,c_0)\)&Coefficients&\(d\)-cut for \(c_+=2\)\\
+\midrule\endfirsthead
+\toprule
+Row&Degree \((+,0)\)&Cells \((c_+,c_0)\)&Coefficients&\(d\)-cut for \(c_+=2\)\\
+\midrule\endhead
+S1&\(4,5\)&\(2,1\)&16&\(1/6\)\\
+S2&\(4,5\)&\(1,1\)&11&\(-\)\\
+S3L&\(5,5\)&\(1,1\)&12&\(-\)\\
+S3H&\(5,5\)&\(1,1\)&12&\(-\)\\
+S4&\((14,10),(10,5)\)&\(2,1\)&396&\(1/6\)\\
+S5&\((9,5),(10,5)\)&\(1,1\)&126&\(-\)\\
+S5F&\((6,2),(5,2)\)&\(1,1\)&39&\(-\)\\
+S6&\((13,5),(5,3)\)&\(1,1\)&108&\(-\)\\
+D4F&\(8,5\)&\(1,1\)&15&\(-\)\\
+D4B&\(8,5\)&\(1,1\)&15&\(-\)\\
+D4T&\(8,5\)&\(1,1\)&15&\(-\)\\
+D2F&\((10,6),(5,2)\)&\(1,1\)&95&\(-\)\\
+D2F3L&\((9,6),(5,2)\)&\(1,1\)&88&\(-\)\\
+D2F3H&\(4,5\)&\(1,1\)&11&\(-\)\\
+D2BL&\(4,5\)&\(1,1\)&11&\(-\)\\
+D2BM&\(4,5\)&\(1,1\)&11&\(-\)\\
+D2TL&\(4,5\)&\(2,1\)&16&\(1/10\)\\
+D2TM&\(4,5\)&\(1,1\)&11&\(-\)\\
+D3F&\((9,6),(5,1)\)&\(1,1\)&82&\(-\)\\
+D3B&\(4,5\)&\(1,1\)&11&\(-\)\\
+D3TL&\(4,5\)&\(1,1\)&11&\(-\)\\
+D3TM&\(4,5\)&\(1,1\)&11&\(-\)\\
+\bottomrule
+\end{longtable}
+S4F is paid by the S4 row and the exact stronger-prefix scale
+comparison \eqref{eq:q117-unified:shortone-prefix-scale}.
+
+\subsubsection{The common continuous payment}
+\label{sec:q117-unified:payments}
+
+Table~\ref{tab:q117-unified:scopes} specifies the complete integer
+and continuous ranges of the parameter rows. A closed interval
+starting at zero includes the polynomial extension at \(d=0\);
+the actual zero-variance model is treated below. In each row the
+finite data and point bounds just proved give
+\begin{equation}\label{eq:q117-unified:two-actual-endpoints}
+ \E[f_a\{T^LF\}^4]
+ \le m^8\max\{M_rV_r,W_r\}.
+\end{equation}
+For the rows with a receiving-endpoint comparison, this means
+the two actual endpoints followed by the proved comparison,
+rather than a replacement of the covariance at an interior mean.
+
+The outside scale in every row has
+\(m\le1-\sigma_rd/2\), with \(\sigma_r\) in the scope table.
+Define the finite inverse polynomial and its two exact payment
+polynomials by
+\begin{equation}\label{eq:q117-unified:payment-polynomials}
+\begin{aligned}
+ S_{5,r}&=\sum_{j=0}^{5}\binom{7+j}{7}(\sigma_rd/2)^j,\\
+ P_r^+&=\frac{S_{5,r}-W_r}{d}-\Delta_r,\\
+ P_r^0&=S_{5,r}-M_rV_r-\Delta_rd.
+\end{aligned}
+\end{equation}
+The quotient is a polynomial, since both numerator terms have
+constant term one in \(d\). The positive inverse-binomial series
+gives \(m^{-8}\ge(1-\sigma_rd/2)^{-8}\ge S_{5,r}\).
+All its denominators are positive on the displayed domains.
+
+For each row depending on \(v\), set
+\(v=d+(\theta-d)t\), \(0\le t\le1\).
+Since \(\theta-d\ge7/96>0\), this parametrizes exactly
+\(d\le v\le\theta\). For the other rows, the polynomial is
+constant in \(t\). Table~\ref{tab:q117-unified:scalar-certificates}
+gives a rational certificate for both entire polynomials in
+\eqref{eq:q117-unified:payment-polynomials}.
+The two bidegrees are in \((d,t)\); \(c_+,c_0\) give the number
+of closed \(d\)-cells. Subdivide only at the indicated midpoint
+when \(c_+=2\); in every cell the \(t\)-interval is \([0,1]\).
+After the affine map, compute the Bernstein coefficients by
+\eqref{eq:bernstein-coefficients}. Every coefficient is at least
+\(1/100\). The rational coefficient tables include
+their complete values and affine power coefficients.
+Lemma~\ref{lem:bernstein-certificate} therefore proves both
+payment polynomials nonnegative throughout their domains.
+Consequently
+\begin{equation}\label{eq:q117-unified:paid-endpoints}
+ \max\{M_rV_r,W_r\}\le S_{5,r}-\Delta_rd
+       \le m^{-8}-\Delta_rd.
+\end{equation}
+The finite-prefix comparison
+\eqref{eq:q117-unified:shortone-prefix-scale} extends the S4
+certificate to S4F, paying its entire additional nonzero endpoint.
+
+For S1--S5F, \(m\ge5/6\) and \((5/6)^8>1/5\).
+At S6, \(m=1\). For the short-two packets the respective
+lower bounds on \(m^8\) are \(1/5\) at \(b=3\),
+\(1/10\) at \(b=4\) or on the middle \(b\ge5\) domain,
+and \(1/8\) on the low \(b\ge5\) domain.
+Multiplying \eqref{eq:q117-unified:paid-endpoints} by the actual
+\(m^8\) therefore gives the three required deficits on every
+low and middle row. The S4 and S4F bound is stronger,
+\begin{equation}\label{eq:q117-unified:shortone-two-step-strong}
+ \E[f_a\{T^2(qf_b)\}^4]\le1-3d/400,
+ \qquad a,b\ge3.
+\end{equation}
+
+\subsubsection{The high domains}
+\label{sec:q117-unified:high-domains}
+
+These remaining ranges use the same original terminal and
+orientation. The needed path estimates are
+\eqref{eq:compact-strong-path-means},
+\eqref{eq:L56:claim}, and \eqref{eq:Q64:four}:
+\[
+ \E f_n=\E\bar f_n\le1-83d/32\quad(n\ge4),\qquad
+ \E(\bar f_3^4/q)\le1-23d/36,\qquad
+ \E\bar f_4^4\le1-d-4d^2.
+\]
+In particular \(\bar f_n\le2-5d\) for \(n\ge5\), and
+\(\E f_a\le1-2d\) for \(a\ge3\).
+From \(f_a\le5/2-q\),
+\(f_aq\le25/16<8/5\).
+
+For \(F=qf_2\), \(\E F=1-2d\). Positivity gives
+\(T^LF\le2(1-2d)\bar f_{L-1}\).
+At \(L\ge6,d\ge5/24\), its fourth moment is at most
+\[
+ (1-2d)[2(1-2d)(2-5d)]^4
+ \le45927/49152<15/16<1-3d/800.
+\]
+The factors are positive and decreasing, so it suffices to use
+their left endpoint; the displayed rational bound also uses
+\(161/144<9/8\).
+
+For \(F=h_2f_b,b\ge5,d\ge1/5\), the true terminal mean
+from Section~\ref{proof:Q5-C073-connectors} is at most \(91/200\).
+Thus \(T^LF\le(91/100)\bar f_{L-1}\).
+At \(L=4\), use the inverse \(q\)-weighted \(\bar f_3\)
+estimate and \(f_aq<8/5\); the resulting budget is below
+\(35/36\). At \(L=5\), use \(f_a\le2\) and the
+\(\bar f_4\) estimate, giving a budget below \(8/9\).
+At every \(L\ge6\), \(\bar f_{L-1}\le1\), and the budget
+is at most \((91/100)^4\). Each is below \(1-d/400\).
+For \(b=4,d\ge1/4\), the same terminal calculation gives
+\(TF\le4/5\); the identical three path ranges have common
+budget \(512/625<1-d/400\).
+
+For the two short high-domain connectors use the actual finite
+terminal estimate \eqref{eq:L77:means}:
+\(T(h_2f_b)\le13/18\) for every \(b\ge4,d\ge1/4\).
+At \(L=2\), positivity gives \(T^2F\le(13/18)q\).
+Since \(\E q^3=1+3d-\E g^3\le1+4d\le7/3\),
+\begin{equation}\label{eq:q117-unified:high-two-step}
+ \E[f_a(T^2F)^4]
+ \le(13/18)^4(25/16)(7/3)
+ =4998175/5038848<1-d/400.
+\end{equation}
+
+For \(L=3\), the actual bare \(\bar f_2=q+Kg\) has mean
+\(1-d\), variance at most \(45d/32-d^2\), and covariance
+\[
+ \operatorname{Cov}(C_{a,0},\bar f_2)
+ =-\int\operatorname{Re}\{G_a(1+z)\}\,d\nu-\beta_{a+1}d<0,
+\]
+since \(\operatorname{Re}\{G_a(1+z)\}\ge1-2x>0\).
+Its point upper satisfies
+\(\bar f_2+(1-d)\le q+1+\sqrt d-d\le q+5/4\),
+and \(1-d\le3/4\). The last row of
+Table~\ref{tab:q117-unified:curvature-data} gives coefficient
+\(75/8\). The exact fourth identity with mass at most one and
+nonpositive covariance yields
+\begin{equation}\label{eq:q117-unified:bare-high-fourth}
+ \E[f_a\bar f_2^4]
+ \le(3/4)^4+(75/8)(103/288)=1409/384.
+\end{equation}
+Here \(45d/32-d^2\) increases on \([1/4,1/3]\) and is
+at most \(103/288\). Therefore
+\begin{equation}\label{eq:q117-unified:high-three-step}
+ \E[f_a(T^3F)^4]
+ \le(13/18)^4(1409/384)
+ =40242449/40310784<1-d/400.
+\end{equation}
+The exact gaps in the last two comparisons are
+\(40673/5038848\) and \(68335/40310784\), respectively;
+both exceed \(1/1200\).
+
+\paragraph{The degenerate model, decorations, and reversal.}
+When \(d=0\), \(g=0\) on every positive-mass atom.
+Successive leaf integration makes every actual arm and terminal
+message identically one, even if \(K\ne0\). Thus each reference
+moment is one, with no moment ratio required.
+For \(d>0\), the low, middle, and high intervals above cover
+their shared boundaries. Actual equal-pair products lie in
+\([0,1]\); positivity of \(T\) restores \(E_t,E_o\) in
+the three estimates. This proves
+Proposition~\ref{prop:q117-unified:families}.
+
+Whole reversal gives the same three bounds with receiver
+\(\bar f_a\), propagation \(A^L\), and terminals
+\(p\bar f_b\), \(p\bar f_2\), and \((Aq)\bar f_b\),
+respectively. It reverses every actual edge at once.
+With short terminal-arm length \(s=1\) or \(2\), an original
+decorated component has \(a+b+L+s+2S_t+2S_o\) edges and
+one more vertex. The fourth verification tree has
+\(a+4(b+L+s)+8S_t+2S_o\) edges and one more vertex;
+the receiving arm occurs once.
+

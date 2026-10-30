@@ -1,0 +1,701 @@
+\subsection{Negative odd roots at every nonunit inner length}\label{proof:Q5-C080}
+\paragraph{Q80.0 Original objective and exact new claims}
+
+The ambient problem includes the P5, T5, and K1, 4 skeletons of Q5.
+The following estimates treat the specified root roles.
+
+Fix the finite probability space and kernel throughout. Write
+
+\fitdisplay{
+Jv=(Ev)1,\quad A=J+K,\quad T=J-K=A^*,\quad
+ g=K1,\quad p=1+g,\quad q=1-g,
+}{}
+\fitdisplay{
+f_n=A^{n}\one,\quad \bar f_n=T^{n}\one,\quad
+ h_n=T f_{n-1},\quad W_n=A \bar f_{n-1},\quad f_0=\bar f_0=1.
+}{}
+
+Take the strictly ordered original odd residual root table
+
+\fitdisplay{
+a<u_1<v_1<\cdots<u_k<v_k,\qquad k\ge1,
+ \qquad P=\prod_{i=1}^k W_{u_i}\bar f_{v_i}.
+}{Q80.0.1}
+
+The terminal has original residual arms (1, b), with every integer \(b\ge 2.\)
+For every nonunit inner length \(L\ge 2,\allowbreak \) the actual ordinary input is
+
+\fitdisplay{
+X_{b,L}=T^L(qf_b),\qquad Y_{a,b,L}=W_aP X_{b,L}.
+}{Q80.0.2}
+
+Theorem T085.1. If \(a\ge 3,\allowbreak \) all original hosts and all the independent
+finite lengths in (Q80.0.1)--(Q80.0.2) satisfy
+
+\fitdisplay{
+\boxed{EY_{a,b,L}^{8}\le e^{-97d/12},\qquad
+ I_q(T^M Y_{a,b,L})^3\le e^{-49d/228}\quad(M\ge1),}
+}{Q80.0.3}
+
+where \(d=\lVert K1\rVert _2^2\) and \(I_q(U)=\E[q^{-1/3}|U|^{8/3}]\).
+For \(a=3\) the ordinary exponent improves to \(403/48,\allowbreak \) and the all-M
+weighted exponent improves to \(481/912.\)
+
+Theorem T085.2. If \(a=2\) and \(u_1\ge 4,\allowbreak \) every \(b\ge 2,\allowbreak  L\ge 2,\allowbreak  M\ge 1\) satisfies
+
+\fitdisplay{
+\boxed{EY_{2,b,L}^{8}\le e^{-479d/60},\qquad
+ I_q(T^M Y_{2,b,L})^3\le e^{-131d/1140}.}
+}{Q80.0.4}
+
+The factors in (Q80.0.2)
+are the complete actual root input, and \(T^M\) is its original outer path.
+
+
+Theorem T085.3, exact all-length union. For every odd root table
+(Q80.0.1) with \(a\ge 3,\allowbreak \) terminal residual (1, b), \(b\ge 2,\allowbreak \) and all independent
+positive original L, M, choose the following directions from L alone:
+
+
+\begingroup\small
+\setlength{\tabcolsep}{3pt}
+\setlength{\LTleft}{0pt}\setlength{\LTright}{\fill}
+\begin{longtable}{@{}p{0.1200\linewidth}p{0.8000\linewidth}@{}}
+\caption{Negative odd roots at every nonunit inner length: parameter values.}\label{tab:parameters:q5-c080:1}\\
+\toprule
+Entry & Complete ordinary root input before the outer path \\
+\midrule\endfirsthead
+\toprule
+Entry & Complete ordinary root input before the outer path \\
+\midrule\endhead
+\bottomrule\endfoot
+\(L=1\) & \(Y=f_aP T(p\bar f_b)\). \\
+\addlinespace[2pt]
+\(L\ge 2\) & \(Y=W_aP T^L(qf_b)\). \\
+\end{longtable}
+\endgroup
+
+
+Then, including equal-arm factors at their roots by positivity,
+
+\fitdisplay{
+\boxed{I_q(T^M Y)^3\le e^{-25d/912}\le1.}
+}{Q80.0.5}
+
+All claimed root and terminal directions are literal original directions:
+
+\begin{description}[style=nextline,leftmargin=1.6em]
+\item[{\(Root a-arm\)}] Nonunit row of (Q80.0.2): First edge away from root, all later edges toward its first neighbor;\par\noindent factor \(W_a\).
+\item[{\(Root u_i-arm\)}] Nonunit row of (Q80.0.2): Same actual reversed bent pattern;\par\noindent factor \(W_{u_i}\).
+\item[{\(Root v_i-arm\)}] Nonunit row of (Q80.0.2): \(Entirely toward root; factor \bar f_{v_i}\).
+\item[{Terminal unit arm}] Nonunit row of (Q80.0.2): Toward terminal;\par\noindent factor q.
+\item[{Terminal b-arm}] Nonunit row of (Q80.0.2): Entirely away from terminal;\par\noindent factor \(f_b\).
+\item[{Inner connector}] Nonunit row of (Q80.0.2): All original L edges from terminal toward root.
+\item[{Outer connector}] Nonunit row of (Q80.0.2): All original M edges from root toward receiving root.
+\end{description}
+
+For \(L=1,\allowbreak \) replace the a-arm by its entirely outward orientation \(f_a,\allowbreak \)
+and the terminal by the actual unit-outward, b-arm-inward pattern \(p\bar f_b.\)
+The extra pairs P and both core-path directions remain as displayed.
+The original integer L, not any host parameter, determines this choice.
+
+
+
+\paragraph{Q80.1 Original calculus and one finite mask for all extra pairs}
+
+Delete zero-mass atoms. Set
+
+\fitdisplay{
+r=Kg,\quad s_0=Kr,\quad t=Ks_0,\quad
+ \delta_j=\|K^{j}\one\|_2^2,\quad d=\delta_1,\quad
+ \theta=13/32,\quad\kappa=19/32,\quad\tau=d-\delta_2.
+}{}
+
+The C014 calculus gives
+
+\fitdisplay{
+0\le d\le1/3,\quad d^2\le \delta_2\le\theta d,\quad
+ \|K\|^2\le\theta,\quad \delta_{j+1}\le\theta \delta_j,
+ \quad |Kv(x)|\le\|v\|_2.
+}{Q80.1.1}
+
+The original two-row estimate is \(|K^2v(x)|^2\le \lVert v\rVert _2^2/3.\)
+It is not an operator-norm bound \(\lVert K\rVert ^2\le 1/3.\)
+The path convolution uses the finite quantities
+
+\fitdisplay{
+\beta_1=\beta_2=0,\qquad
+ \beta_n=\sum_{j=1}^{\lfloor(n-1)/2\rfloor}(-1)^{j-1}\delta_j,
+ \quad\tau\le\beta_n\le d\quad(n\ge3),
+}{}
+\fitdisplay{
+\sum_{j=0}^n K^{j}\one=f_n+\sum_{j=3}^n\beta_jf_{n-j}.
+}{Q80.1.2}
+
+The same identity holds after complete reversal \(K->-K.\) Every path
+message here is nonnegative. In fact p, \(q\ge \mu(x)>0\)
+on each retained atom. Actual equal pairs obey \(f_l h_l\le 1\) and,
+after complete reversal, \(W_l \bar f_l\le 1.\)
+
+At \(d=0,\allowbreak  g=0\) while K may be nonzero. Nevertheless \(A\one=T\one=\one,\allowbreak \)
+and successive leaf integrations make every tree
+message here equal to one. Every displayed final bound
+holds directly. All later divisions by d are restricted to \(d>0.\)
+
+\paragraph{Q80.1.1 The exact actual pair loss and original finite mask}
+
+C067 proves, including the separate finite \(u=4\) case,
+
+\fitdisplay{
+h_u f_v\le\exp\left(\sum_{j=u}^{v-1}K^jg-3d\right)
+ \qquad(4\le u<v).
+}{Q80.1.3}
+
+We use this only with \(u\ge 4.\) Full reversal on the same original
+probability space gives
+
+\fitdisplay{
+P\le e^{S-3kd},\qquad
+ S=-\sum_{i=1}^k\sum_{j=u_i}^{v_i-1}(-K)^jg=KV_S,
+}{}
+\fitdisplay{
+V_S=U(-K)g,\qquad
+ U(z)=\sum_{i=1}^k\sum_{j=u_i}^{v_i-1}z^{j-1}.
+}{Q80.1.4}
+
+The intervals are disjoint. Thus U is a finite polynomial whose
+coefficients are zero or one, independently of the number of arms,
+the gaps, and the largest original length. 
+
+For every finite [0, 1]-coefficient polynomial Q and \(z=i \sqrt{x}\),
+\(0\le x\le \theta,\allowbreak \) separate the four sign classes. Their finite sums give
+
+\fitdisplay{
+|\Re Q(z)|\le(1-x^2)^{-1},\qquad
+ |\Im Q(z)|\le\sqrt x(1-x^2)^{-1},
+}{}
+\fitdisplay{
+\|Q(K)\|^2\le\frac{1+\theta}{(1-\theta^2)^2}
+ =\frac{32768}{16245}<\frac{100}{49}.
+}{Q80.1.5}
+
+The comparison is \(32768*49=1605632<1624500=16245*100.\)
+Only a finite polynomial is evaluated; the geometric sums are upper
+bounds for finite positive subcollections.
+
+If \(u_1\ge 4,\allowbreak \) U begins in degree at least three. If \(u_1\ge 5\) it begins
+in degree at least four. Consequently
+
+\fitdisplay{
+\|V_S\|\le
+ \begin{cases}
+ (3/8)\sqrt d,&u_1\ge4,\\
+ (1/4)\sqrt d,&u_1\ge5.
+ \end{cases}
+}{Q80.1.6}
+
+For the first, (\(10/7)\theta^{3/2}<585/1568<3/8,\allowbreak \) using
+\(\sqrt{\theta}<9/14.\) For the second,
+(\(10/7)\theta^2=845/3584<1/4.\) Original row Cauchy applies only
+to the outermost K in \(S=KV_S,\allowbreak \) not to a compressed or spectral kernel.
+
+The positive contributions to ES have \(j=3,\allowbreak \) 7, 11,... and values
+\(\delta_2,\allowbreak  \delta_4,\allowbreak  \delta_6,\allowbreak ...\) . Since \(u_1\ge 4\) excludes the first such term,
+
+\fitdisplay{
+ES\le\frac{\delta_4}{1-\theta^2}
+ \le\frac{2197}{27360}d<\frac d{12}.
+}{Q80.1.7}
+
+Equations (Q80.1.4)--(Q80.1.7) hold for every finite k and every original
+set of gaps. Unequal pairs are paid by these inequalities, rather
+than deleted from the tree or assumed pointwise at most one.
+
+\paragraph{Q80.2 A precise envelope extension with the same original fluctuation}\label{part:Q80.2}
+
+Let \(c_*=(1+\theta)^2=2025/1024<2.\) The exact C071/C075 exponential
+tool says that if \(Z=KV,\allowbreak  \lVert V\rVert ^2\le D,\allowbreak \) and \(M\ge max(EZ,\allowbreak \) 0), then
+
+\fitdisplay{
+\log Ee^{8Z/B}\le\frac{8M}{B}+\frac{8c_*D}{B^2}
+ \qquad(B>0).
+}{Q80.2.1}
+
+Its hypotheses are the original range \(|Z|^2\le D\) and original raw
+second moment \(EZ^2\le \theta\) D. It covers both signs of EZ.
+For \(Z=K^2V_2\) with \(\lVert V_2\rVert ^2\le D_2,\allowbreak \) the original two-row version is
+
+\fitdisplay{
+\log Ee^{8Z/B}\le\frac{8M}{B}+\frac{6D_2}{B^2}.
+}{Q80.2.2}
+
+Writing the same two-row variable as \(K(KV_2)\) gives a one-row
+primitive with squared norm at most theta \(D_2.\) Its scalar cost
+increases by at most
+
+\fitdisplay{
+(8c_*\theta-6)D_2/B^2
+ =\frac{1749}{4096}D_2/B^2<\frac7{16}D_2/B^2.
+}{Q80.2.3}
+
+Apply these scalar lemmas with their stated hypotheses.
+
+Lemma T085.4. Suppose an actual nonnegative base \(Y_0\) has specified
+\(C_0,\allowbreak  B>0,\allowbreak \) a real loss ell, a vector V, \(M\ge max(EKV,\allowbreak \) 0), and \(D\ge \lVert V\rVert ^2,\allowbreak \)
+with
+
+\fitdisplay{
+Y_0\le C_0\left(1+\frac{KV-\ell}{2B}\right)^2,
+ \qquad 1+\frac{KV-\ell}{2B}\ge0,
+ \quad D\le\eta^2B^2d.
+}{Q80.2.4}
+
+Let its complete specified one-row scalar expression be
+
+\fitdisplay{
+\mathcal E_0=8\log C_0-8\ell/B+8M/B+8c_*D/B^2.
+}{Q80.2.5}
+
+For the actual P in (Q80.1.4), if \(\lVert V_S\rVert \le \epsilon \sqrt{d}\), then
+
+\fitdisplay{
+\boxed{E(PY_0)^8\le
+ \exp\left[\mathcal E_0+
+ \left\{16(2\eta\epsilon+\epsilon^2)+\frac23-24k\right\}d
+ \right].}
+}{Q80.2.6}
+
+Proof. Positivity of the square base and \(\log(1+x)\le x\) give
+
+\fitdisplay{
+(PY_0)^8\le C_0^8
+ \exp\{8(KV-\ell)/B+8S-24kd\}.
+}{}
+
+At a zero square base this follows by continuity. Combine the two
+remainders before taking expectations:
+
+\fitdisplay{
+KV+BS=K(V+BV_S).
+}{}
+
+Its mean is bounded by the nonnegative M'=M+Bd/12. Its specified
+primitive norm can be bounded by
+
+\fitdisplay{
+D'=D+2\sqrt D\,B\epsilon\sqrt d+B^2\epsilon^2d
+ \le D+B^2(2\eta\epsilon+\epsilon^2)d.
+}{}
+
+Use (Q80.2.1) on this same original function, and retain (Q80.2.5) with
+its own originally paid D. The extra mean cost is 2d/3; the extra
+norm cost is at most \(8c_*(2\eta \epsilon+\epsilon^2)d,\allowbreak \) hence at most
+16(2eta \(\epsilon+\epsilon^2)d.\) This proves (Q80.2.6).
+ In particular, a
+looser norm normalization is used only for the increment; it does
+not replace D inside an already paid scalar expression. QED.
+
+\paragraph{Q80.3 The complete actual base table and its exact normalizations}
+
+We use the actual shortest-two construction of C071,
+with C075's additional all-domain \(b=2,\allowbreak  L=2\) payment and its shortest-three
+comparison. C076/T082 records the following full normalization.
+We reproduce all rows needed for the new estimates.
+
+Since \(W_2=Aq=p-r,\allowbreak \) the exact positive terminal masks give
+
+\fitdisplay{
+0<X_{b,L}\le C[Bq+Br+Z-\ell],\qquad
+ W_2X_{b,L}\le CB\left(1+\frac{Z-\ell}{2B}\right)^2.
+}{Q80.3.1}
+
+The bracket is half the sum of two actual nonnegative upper factors.
+Thus the sign condition in (Q80.2.4) is satisfied, even before subsequent
+root comparisons.
+
+For \(b=2\) put \(\gamma=d-\delta_2/2\) and \(B_2=1-\gamma.\) For \(b\ge 3\) put
+
+\fitdisplay{
+R=KG_{b-1}(K)g,\quad G_n(z)=\sum_{j=0}^{n-1}z^j,
+ \quad m_b=1-\beta_b/2,\quad k_b=1/m_b,
+}{}
+\fitdisplay{
+t_0=\beta_{b+1},\quad e=d-\beta_{b+2},\quad V_R=ER^2,
+ \quad\rho=E(rR),\quad
+ \gamma=k_bt_0-k_b^2V_R/2,\quad a_1=k_be,
+ \quad B_*=\gamma+a_1.
+}{Q80.3.2}
+
+The subscript on \(k_b\) distinguishes it from the number k of root pairs.
+The exact terminal toolkit gives \(1\le k_b\le 6/5,\allowbreak  ER=-t_0,\allowbreak  E(gR)=-e\le 0,\allowbreak  V_R=\delta_2+\delta_3\) for \(b=3\) and \(V_R\le \delta_2\) for \(b\ge 4,\allowbreak  0\le a_1\le 39d/80,\allowbreak  \gamma\le 6d/5,\allowbreak \) and \(B_*\le 3d/2.\)
+
+For the finite polynomials in the table set \(z=-K\) and
+
+\fitdisplay{
+P_n(z)=
+ \begin{cases}
+ G_n(z)+z^{n+1},&b=2,\\
+ G_n(z)+k_bz^{n+1}G_{b-1}(-z),&b\ge3.
+ \end{cases}
+}{Q80.3.3}
+
+The entire finite table, including every short connector, is:
+
+
+\begingroup\small
+\setlength{\tabcolsep}{3pt}
+\setlength{\LTleft}{0pt}\setlength{\LTright}{\fill}
+\begin{longtable}{@{}>{\raggedright\arraybackslash}p{0.1200\linewidth}>{\raggedright\arraybackslash}p{0.2667\linewidth}>{\raggedright\arraybackslash}p{0.2667\linewidth}>{\raggedright\arraybackslash}p{0.2667\linewidth}@{}}
+\caption{Finite masks and row-form scalar bounds for the terminal parameters \((b,L)\).}\label{tab:parameters:q5-c080:3}\\
+\toprule
+\((b,L)\) & C, B and ell & Same original fluctuation Z & Original row-form scalar upper \\
+\midrule\endfirsthead
+\toprule
+\((b,L)\) & C, B and ell & Same original fluctuation Z & Original row-form scalar upper \\
+\midrule\endhead
+\bottomrule\endfoot
+2, 2 & \(C=1; B=B_2; \ell=0\); & \(K^2(\gamma 1+r)\); & \(-d/8\). \\
+\addlinespace[2pt]
+2, 3 & \(C=1; B=B_2; \ell=\tau\); & \(-K^2(g+s_0)\); & \(-3d/4\). \\
+\addlinespace[2pt]
+2, 4 & \(C=1; B=1-\gamma-\tau; \ell=d(1-\gamma)\); & \(K^2[\tau 1-(1-\gamma)g+r+t]\); & \(-d\). \\
+\addlinespace[2pt]
+2, 5 & \(C=1; B=1-2\tau; \ell=\tau\); & \(K[\tau+zP_3(z)]g\); & \(-2d/3\). \\
+\addlinespace[2pt]
+\(2,\allowbreak L\ge 6\) & \(C=1; B=1-2\tau; \ell=\tau\); & \(K[\tau+zP_{L-2}(z)]g\); & \(-4d/5\). \\
+\addlinespace[2pt]
+\(b\ge 3,\allowbreak 2\) & \(C=m_b^2; B=1-\gamma; \ell=a_1\); & \(K^2(\gamma 1+k_bR)\); & \(-d/8\). \\
+\addlinespace[2pt]
+\(b\ge 3,\allowbreak 3\) & \(C=m_b^2; B=1-B_*; \ell=d-k_b \rho\); & \(K[a_1+zP_1(z)]g\); & \(-d/10\). \\
+\addlinespace[2pt]
+\(b\ge 3,\allowbreak 4\) & \(C=m_b^2; B=1-41d/80; \ell=\kappa d\); & \(K[41d/80+zP_2(z)]g\); & \(-8d/25\). \\
+\addlinespace[2pt]
+\(b\ge 3,\allowbreak L\ge 5\) & \(C=B=1-d/2; \ell=d/2\); & \(K[d/2+zP_{L-2}(z)]g\); & \(-2d/5\). \\
+\end{longtable}
+\endgroup
+
+
+Here the original row-form scalar is
+
+\fitdisplay{
+8\log(CB)-8\ell/B+8M/B+
+ \begin{cases}
+ 6D_2/B^2,&Z=K^2V_2,\\
+ 8c_*D_1/B^2,&Z=KV_1.
+ \end{cases}
+}{Q80.3.4}
+
+The \(D_j\) in (Q80.3.4) are the specified bounds for those particular vectors.
+Each paid scalar expression retains its own shared terminal parameters.
+These bounds give (Q80.3.4) directly.
+
+Nonnegative mean uppers M in the displayed order are
+\(\delta_2-\gamma\) d, 0, (theta kappa-tau)d, (theta-tau)d for both \(b=2\) tails,
+\(max(k_b\) rho-gamma d, 0), and (theta-delta)d in the last three rows,
+where \(\delta=a_1,\allowbreak \) 41d/80, d/2 respectively. They bound the original Z
+in each row and satisfy \(M\ge 0\) over the entire original domain.
+
+\paragraph{Q80.3.1 Two-row vectors and conversion costs}
+
+The four two-row vector squares have the following whole-domain
+normalizations. These upper bounds are used for increments and norm
+comparisons, not substituted into a scalar payment that used a sharper
+same-parameter expression:
+
+\fitdisplay{
+\begin{array}{c|c}
+ (b,L)&D_2/(B^2d)\\\hline
+ (2,2)&\theta\,324/169<1\\
+ (2,3)&324/169<2\\
+ (2,4)&217/81<25/9\\
+ (b\ge3,2)&540/289<2.
+ \end{array}
+}{Q80.3.5}
+
+The original lower bounds are \(B_2\ge 13/18,\allowbreak  1-\gamma-\tau\ge 1/2,\allowbreak \) and \(1-\gamma\ge 17/25\) for \(b\ge 3.\) The vector squares
+are bounded respectively by \(\delta_2,\allowbreak  d-2\delta_2+\delta_3\le d,\allowbreak \)
+[(\(1-\gamma)^2+4/27\)]d, and \(k_b^2 V_R.\)
+For \(b=2,\allowbreak  L=4,\allowbreak \) use \(1-\gamma=B+\tau\) and \(\tau/B\le 4/9,\allowbreak \) giving
+(\(1+4/9)^2+16/27=217/81.\) For \(b\ge 3,\allowbreak  L=2,\allowbreak  \theta(1+\theta)=585/1024<3/5\) gives the upper \(540/289.\)
+
+After the exact two-row to one-row conversion (Q80.2.3), the squared
+primitive normalization is multiplied by theta, while the specified
+scalar upper increases by less than (\(7/16)D_2/B^2.\)
+
+\paragraph{Q80.3.2 Every one-row tail}
+
+For \(b=2,\allowbreak  L\ge 5\) the old squared primitive is bounded by A(tau)d,
+where
+
+\fitdisplay{
+A(\tau)=A_0-2\theta\sigma\tau+\tau^2,
+ \quad(A_0,\sigma)=
+ \begin{cases}(\theta,1),&L=5,\\
+ (\theta-7\theta^2/15,\kappa),&L\ge6.
+ \end{cases}
+}{}
+
+Both are bounded above by theta-2theta kappa \(\tau+\tau^2.\)
+Its quotient by (\(1-2\tau)^2\) increases for \(0\le \tau\le 2/9:\)
+after multiplying the derivative by (\(1-2\tau)^3,\allowbreak \) its numerator is
+4theta-2theta kappa+(2-4theta \(\kappa)\tau>0.\)
+Its endpoint is \(289/256.\) The other three one-row normalizations are
+
+\fitdisplay{
+\frac{D_1}{B^2d}\le
+ \begin{cases}
+ 289/256,&b=2,L\ge5,\\
+ 481/400,&b\ge3,L=3,\\
+ 27/32,&b\ge3,L=4,\\
+ 18/25,&b\ge3,L\ge5.
+ \end{cases}
+}{Q80.3.6}
+
+The latter three follow from the actual bounds
+\(D_1/d\le 351/1280+\delta^2,\allowbreak  \theta(71/63)+\delta^2,\allowbreak  \theta+d^2/4,\allowbreak \)
+and the respective \(B\ge 1/2,\allowbreak  4/5,\allowbreak  5/6.\) All four normalizations are
+at most \(5/4.\) Thus (Q80.3.5)--(Q80.3.6) include every \(b\ge 2,\allowbreak  L\ge 2,\allowbreak \)
+including the finite cases immediately before each tail.
+
+\paragraph{Q80.3.3 The uniform base for \(a\ge 4\)}
+
+C076/T082 Lemma T082.2 proves the following particular one-row
+certificate:
+for each \(a\ge 2,\allowbreak  b\ge 2,\allowbreak  L\ge 2,\allowbreak \) the actual Y\_0=W\_\(aX_{b,\allowbreak  L}\) admits (Q80.2.4)
+with
+
+\fitdisplay{
+D\le(9/4)B^2d,\qquad \mathcal E_0\le(9/4)d.
+}{Q80.3.7}
+
+Its exact construction for \(a\ge 4\) starts from the rows above. Put
+
+\fitdisplay{
+m=a-2,\quad c=1-\tau\ge7/9,\quad
+ H=G_m(-K)g-\tau1,\quad h=B/c,
+}{}
+\fitdisplay{
+A_m=45/32\ (m=2),\qquad A_m=1\ (m\ge3).
+}{}
+
+The retained actual positive loss tau p gives
+
+\fitdisplay{
+W_aX\le CBc\left(1+
+ \frac{Z+hK^2H-\ell-h\beta_a}{2B}\right)^2.
+}{Q80.3.8}
+
+The bracket is an actual nonnegative arithmetic mean. The exact
+Q5-C075 same-kernel comparisons are \(EK^2H\le 0,\allowbreak  \lVert H\rVert ^2\le A_m\) d, and
+
+\fitdisplay{
+\|V_2+hH\|^2\le D_2+h^2A_m d,\qquad
+ \|V_1+hKH\|^2\le D_1+h^2\theta A_m d.
+}{Q80.3.9}
+
+In its original row form, (Q80.3.8) has scalar upper at most -3d/20.
+The largest normalized two-row upper is
+
+\fitdisplay{
+25/9+3645/1568<36/7,
+}{}
+
+with positive difference \(571/14112.\) Conversion adds less than
+(\(7/16)(36/7)d=9d/4,\allowbreak \) while its new one-row norm is at most
+\(\theta(36/7)=117/56<9/4.\) In an already one-row case its norm is
+at most \(5/4+47385/50176<9/4\) and no conversion is needed.
+The mean upper remains valid by \(EK^2H\le 0.\) Set \(C_0=CBc,\allowbreak \)
+replace ell by ell+h \(\beta_a,\allowbreak \) and use these actual vectors.
+This explains exactly the uniform certificate (Q80.3.7) used below.
+The finite covariance proof and all actual coefficient end cases
+are the specified C075 parts Q80.4 and 6 / C076 \mbox{\hyperref[part:Q80.2]{part Q80.2}} inputs.
+
+\paragraph{Q80.4 A sharper certificate for the actual shortest-three base}
+
+The generic normalization (Q80.3.7) loses too much for the first extra
+short arm four. We therefore retain the precise shortest-three identity
+
+\fitdisplay{
+W_3=W_2+s_0-d.
+}{}
+
+In every original row (Q80.3.1), replace Z by Z+B \(s_0\) and ell by ell+Bd:
+
+\fitdisplay{
+W_3X\le CB\left(1+
+ \frac{Z+B s_0-\ell-Bd}{2B}\right)^2.
+}{Q80.4.1}
+
+The base remains nonnegative, being the arithmetic mean of the actual
+\(W_3\) and the positive terminal upper factor. Since \(Es_0=0,\allowbreak \) the old
+nonnegative mean upper M still applies. The deterministic improvement
+in the scalar expression is exactly -8d.
+
+Lemma T085.5. For every \(b\ge 2,\allowbreak  L\ge 2,\allowbreak \) (Q80.4.1) has a specified
+one-row certificate satisfying
+
+\fitdisplay{
+\boxed{D\le(81/64)B^2d,\qquad \mathcal E_0\le-13d/16.}
+}{Q80.4.2}
+
+Proof, both \(L=2\) terminal rows. The new two-row vector is
+\(V_2+B\) g. When \(b=2,\allowbreak \) g is orthogonal to 1 and r. When \(b\ge 3,\allowbreak \)
+the additional cross term uses \(E(gR)=-e\le 0.\) Thus one may take
+the new vector upper \(D_2+B^2d.\) The old ratio in (Q80.3.5) is below
+two, so the new ratio is below three. Its original row-form
+scalar is at most
+
+\fitdisplay{
+-d/8+6d-8d=-17d/8.
+}{}
+
+Conversion to one row costs less than 21d/16, leaving -13d/16.
+The new one-row squared primitive is at most 3theta \(B^2d,\allowbreak \)
+and \(3\theta=39/32=78/64<81/64.\)
+
+Proof, \(b=2\) and \(L=3\) or 4. For \(L=3\) the vector changes from
+-(\(g+s_0)\) to -(gamma \(g+s_0).\) The squared-norm bound follows from the pointwise inequality
+
+\fitdisplay{
+(1-x)^2-(\gamma-x)^2=(1-\gamma)(1+\gamma-2x)\ge0.
+}{}
+
+For \(L=4\) the new vector is tau 1-tau g+r+t. Orthogonality of g
+to 1, r, t and \(\tau<1-\gamma\) again makes its norm no larger.
+The normalized old square is at most \(25/9<3.\) The original
+scalar is at most -8d, before conversion. After conversion it
+is at most -\(8d+21d/16=-107d/16,\allowbreak \) stronger than required.
+The squared one-row norm is at most \(\theta(25/9)<81/64.\)
+
+Proof, all remaining one-row cases. The old primitive is
+[\(\delta+zP_n(z)\)]g and the new one is [\(\delta+z(P_n(z)-B)\)]g,
+with \(z=-K.\) At frequency \(z=i \sqrt{x}\), the difference of squared
+moduli is exactly
+
+\fitdisplay{
+Bx[B-2\Re P_n(z)].
+}{}
+
+The complete C075 finite coefficient lemma gives Re \(P_n\ge 1/2\)
+for every relevant finite n, including \(n=1,\allowbreak \) 2 where needed.
+Since \(0<B\le 1,\allowbreak \) the difference is nonpositive. The norm therefore
+retains (Q80.3.6), at most \(5/4=80/64<81/64.\) Its original scalar
+retains the full extra -8d and is at most -8d.
+These cases exhaust all b, L and prove (Q80.4.2). QED.
+
+\paragraph{Q80.5 Minimum at least three, every nonunit inner connector}
+
+Take the actual input (Q80.0.2), \(k\ge 1.\)
+
+If \(a\ge 4,\allowbreak \) the first extra short arm satisfies \(u_1\ge a+1\ge 5.\)
+Use the precise certificate (Q80.3.7) in Lemma T085.4 with
+\(\eta=3/2,\allowbreak  \epsilon=1/4.\) The full exponent is at most
+
+\fitdisplay{
+\left[\frac94+
+ 16\left(2\cdot\frac32\cdot\frac14+\frac1{16}\right)
+ +\frac23-24k\right]d
+ \le\left(\frac94+13+\frac23-24\right)d
+ =-\frac{97}{12}d.
+}{Q80.5.1}
+
+If \(a=3,\allowbreak \) the first extra short arm satisfies \(u_1\ge 4.\)
+Use the sharper (Q80.4.2), \(\eta=9/8,\allowbreak  \epsilon=3/8.\) The full exponent is
+
+\fitdisplay{
+\left[-\frac{13}{16}+
+ 16\left(2\cdot\frac98\cdot\frac38+\frac9{64}\right)
+ +\frac23-24k\right]d
+ \le\left(-\frac{13}{16}+\frac{63}{4}+\frac23-24\right)d
+ =-\frac{403}{48}d.
+}{Q80.5.2}
+
+Since \(403/48>97/12,\allowbreak \) these prove the ordinary part of Theorem T085.1
+over the full original host domain. Every additional pair beyond the
+first contributes another -24d; its number never increases the finite
+mask bound. All original lengths and gaps remain arbitrary.
+
+\paragraph{Q80.6 Minimum two with first extra short arm at least four}
+
+Now take \(a=2,\allowbreak  u_1\ge 4.\) The extra mask has \(\epsilon=3/8.\)
+Each actual shortest-two row of (Q80.3.4)--(Q80.3.6) retains its own paid scalar cost.
+For a normalized primitive upper eta, the increment in (Q80.2.6) is
+
+\fitdisplay{
+16(2\eta\cdot3/8+9/64)d+(2/3)d-24kd.
+}{Q80.6.1}
+
+The following six rows exhaust every \(b\ge 2,\allowbreak  L\ge 2.\) The column \(E_0/d\)
+is an upper for the complete specified one-row scalar after any
+necessary two-row conversion.
+
+
+\begingroup\small
+\setlength{\tabcolsep}{3pt}
+\setlength{\LTleft}{0pt}\setlength{\LTright}{\fill}
+\begin{longtable}{@{}p{0.2200\linewidth}p{0.1750\linewidth}p{0.1750\linewidth}p{0.1750\linewidth}p{0.1750\linewidth}@{}}
+\caption{Negative odd roots at every nonunit inner length: parameter values.}\label{tab:parameters:q5-c080:4}\\
+\toprule
+Entry & eta & \(E_0/d\) upper & Extra norm cost divided by d & Final logarithmic upper divided by d at \(k=1\) \\
+\midrule\endfirsthead
+\toprule
+Entry & eta & \(E_0/d\) upper & Extra norm cost divided by d & Final logarithmic upper divided by d at \(k=1\) \\
+\midrule\endhead
+\bottomrule\endfoot
+Every \(L=2\); also \(b=2,\allowbreak  L=3\) & \(11/12\); & \(3/4\); & \(53/4\); & \(-28/3\). \\
+\addlinespace[2pt]
+\(b=2,\allowbreak L=4\) & \(17/16\); & \(1/4\); & 15; & \(-97/12\). \\
+\addlinespace[2pt]
+\(b=2,\allowbreak L\ge 5\) & \(17/16\); & 0; & 15; & \(-25/3\). \\
+\addlinespace[2pt]
+\(b\ge 3,\allowbreak L=3\) & \(11/10\); & \(-1/10\); & \(309/20\); & \(-479/60\). \\
+\addlinespace[2pt]
+\(b\ge 3,\allowbreak L=4\) & \(15/16\); & 0; & \(27/2\); & \(-59/6\). \\
+\addlinespace[2pt]
+\(b\ge 3,\allowbreak L\ge 5\) & \(6/7\); & 0; & \(351/28\); & \(-907/84\). \\
+\end{longtable}
+\endgroup
+
+
+The scalar and norm calculations for the table are as follows.
+
+For the first row, (Q80.3.5) has \(D_2/(B^2d)<2.\) Conversion gives a
+one-row norm at most \(2\theta=13/16<(11/12)^2.\) The weakest original
+scalar is -d/8; conversion costs less than 7d/8. Their sum is
+at most 3d/4. The extra norm cost is
+\(16(11/16+9/64)d=53d/4.\) The full sum is
+\(3/4+53/4+2/3-24=-28/3.\)
+
+For \(b=2,\allowbreak  L=4,\allowbreak \) (Q80.3.5) gives \(D_2/(B^2d)\le 217/81.\) The one-row norm
+is at most \(\theta(217/81)=2821/2592<(17/16)^2.\) Conversion costs
+at most 1519d/1296, while the original scalar is at most -d.
+Thus its scalar upper is \(223d/1296<d/4.\) The extra norm cost is
+\(16(51/64+9/64)d=15d.\) This gives \(1/4+15+2/3-24=-97/12.\)
+
+For \(b=2,\allowbreak  L\ge 5,\allowbreak \) (Q80.3.6) is exactly at most (\(17/16)^2\) and its original
+one-row scalar is nonpositive. No conversion cost is added.
+The same extra norm cost 15d gives \(15+2/3-24=-25/3.\)
+
+For \(b\ge 3,\allowbreak  L=3,\allowbreak \) (Q80.3.6) gives \(481/400<(11/10)^2,\allowbreak \) with the complete
+original scalar at most -d/10. The extra norm cost is
+\(16(33/40+9/64)d=309d/20.\) The resulting sum is
+-\(1/10+309/20+2/3-24=-479/60.\)
+
+For \(b\ge 3,\allowbreak  L=4,\allowbreak \) the squared norm is at most \(27/32<(15/16)^2\)
+and the original scalar is nonpositive. The extra norm cost
+\(16(45/64+9/64)d=27d/2\) gives \(27/2+2/3-24=-59/6.\)
+
+For \(b\ge 3,\allowbreak  L\ge 5,\allowbreak \) the squared norm is at most \(18/25<(6/7)^2\)
+and the original scalar is nonpositive. The extra norm cost
+\(16(9/14+9/64)d=351d/28\) gives \(351/28+2/3-24=-907/84.\)
+
+Every table entry is at most -\(479/60.\) In particular, the close
+second row is -\(97/12=-485/60,\allowbreak \) with surplus \(1/10.\) The first and
+third give losses \(560/60\) and \(500/60\); the fifth gives \(590/60.\)
+For the last comparison, \(907/84-479/60=1182/420>0.\)
+All \(k>1\) are stronger by 24(k-1)d. This proves the ordinary part
+of Theorem T085.2 throughout \(0\le d\le 1/3.\)
+
+The short-three exception \(u_1=3\) is excluded here: its first-pair loss is not \(3d\), so (Q80.1.3) and this table do
+not establish that boundary. No conclusion is drawn from this
+sufficient payment about whether that boundary is true or false.

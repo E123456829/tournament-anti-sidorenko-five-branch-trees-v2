@@ -1,0 +1,54 @@
+\subsection{Parameters for the unit-root catalogue}
+\label{sec:unit-two-step-applications}
+In the table below, $Z$ is the finite terminal seed, $c$ is its
+exponential-envelope constant, and $D_i=\E B^iR$ is the continuation
+sequence after normalization. In an exponential row the scalar
+$e^{-\Gamma}$ is kept outside the first comparison.
+\Needspace{12\baselineskip}
+\begingroup\small
+\setlength{\tabcolsep}{4pt}
+\begin{longtable}{@{}p{0.13\linewidth}p{0.31\linewidth}p{0.48\linewidth}@{}}
+\caption{First-row parameters for all unit-root families.}
+\label{tab:unit-two-step:parameters}\\\toprule
+Packet & Terminal upper bound and parameters & Normalized seed and scalar error \\
+\midrule\endfirsthead
+\toprule Packet & Terminal upper bound and parameters & Normalized seed and scalar error \\
+\midrule\endhead\bottomrule\endfoot
+E & $e^{Z-\Gamma}$; $w=1$, $r=1$, $\lambda=1$
+  & $R=Z$, $D=\E Z+c\|Z\|^2$. \\
+Q & $qe^{Z-\Gamma}$; $w=q$, $r=2$, $\lambda=1$
+  & $R=Z$, $D=\E(qZ)+\sqrt d\|Z\|+2c\|Z\|^2$. \\
+A & $\bar f_a e^{Z-\Gamma}$; $r=a+1$, $\lambda=\mu_a=\E\bar f_a$
+  & $R=\mu_aZ$, $D=\mu_a\E Z+2\|\bar f_a-\mu_a\one\|\|Z\|+2c\|Z\|^2$. \\
+B & $\bar f_2 e^{Z-\Gamma}$; $r=3$, $\lambda=1$
+  & $R=Z$, $D=\E(\bar f_2 Z)+\sqrt{d+\delta_2}\|Z\|+2c\|Z\|^2$. \\
+S & $(m+Z/2)^2$; $w=1$, $r=1$, $\lambda=1$, $s_0=m^2$
+  & $R=Z/m$, $D=\E Z/m+\|Z\|^2/(2m^2)$. \\
+QS & $q(m-Z/2)^2$; $w=q$, $r=2$, $\lambda=1$, $s_0=m^2$
+  & $R=-Z/m$, $D=-\E(qZ)/m+\sqrt d\|Z\|/m+\|Z\|^2/m^2$. \\
+\end{longtable}
+\endgroup
+
+E applies to Sections~\ref{proof:R2-C029} and~\ref{proof:R2-C031}
+and the multipair low-domain case in Section~\ref{proof:R2-C037},
+where $q\le e^{-g}$ is absorbed into the seed. The inward-anchor
+cases of that section use A; its precise unit-anchor and five-arm
+cases use Q. The exact $(2,3,c)$ family with $c\ge5$ uses B.
+For the centered A row at $a=2$, $\lambda=1-d$ and the variance
+is $d+\delta_2-d^2$; the B row has $\lambda=1$ and squared
+distance $\|\bar f_2-\one\|^2=d+\delta_2$.
+
+The retained squares in Sections~\ref{proof:R2-C035}
+and~\ref{proof:R2-C033} use S and QS, respectively.
+For the reversed short directions in Section~\ref{proof:R2-C026},
+the first-square corollary uses inner kernel $-K$; the outer
+$T^2$ and its weight $q$ stay original. That section proves the
+stronger inverse-fourth exit separately. Its remaining
+$(1,b)$ inputs with $b\ge3$, $L\ge2$ keep the finite data of
+Section~\ref{loc:S24} and the three compatible square payments of
+Section~\ref{sec:unit-square-payments}.
+
+The local cases check the signed coefficients of
+\eqref{eq:unit-two-step:path-ledger} before discarding paths.
+Their $G_2$ exceptions and the stronger retained inequality in
+paragraph~\ref{part:R33.8.4} retain their stated ranges.

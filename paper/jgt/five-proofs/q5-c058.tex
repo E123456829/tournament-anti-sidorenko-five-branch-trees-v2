@@ -1,0 +1,640 @@
+\subsection{The genuine $f_2$ reference for every short-one terminal}\label{proof:Q5-C058}
+Let $F_b=qf_b$, $X_{b,L}=T^L(qf_b)$, with the terminal unit arm
+inward, its $b$ arm outward, and all $L$ connector edges toward the
+receiving root. The reference-fourth bound from Q5-C058 is
+\begin{equation}\tag{L58.16.1}\label{eq:L58:claim}
+\E[f_2X_{b,L}^4]\le1\quad(b\ge2,L\ge1).
+\end{equation}
+For $b=2$, the exact base rows are Section~\ref{proof:Q5-C032} for $L=1$,
+Section~\ref{proof:Q5-C037} for $2\le L\le5$, and
+Section~\ref{proof:Q5-C033} for $L\ge6$.
+For $L=1$, the $b=3$ row is Section~\ref{proof:Q5-C035} and every
+$b\ge4$ row is Section~\ref{proof:Q5-C038}.
+The proof below treats every $b\ge3,L\ge2$ with deficit at least $d/1000$.
+Use the finite short-one packet of Lemma~\ref{lem:short-one:packet},
+with its actual \(R,m,k,t_0,e,V,\rho,\gamma,a_1,B_*,D_j,\varepsilon_j\).
+Locally write \(B=-K\), \(u=-g\), \(U=\E(KR)^2\), and \(M=71/63\).
+For \(b\ge3\) the common bounds are
+\begin{equation}\tag{L58.1.6}\label{eq:L58:finiteinputs}
+\begin{gathered}
+3d/10\le\gamma\le6d/5,\quad5d/8\le B_*\le3d/2,\quad
+\varepsilon_3=d-k\rho\ge41d/80,\\
+\tau\le\varepsilon_j\le d\quad(j\ge4).
+\end{gathered}
+\end{equation}
+In particular \(\kappa\delta_2\le\rho\le\delta_2\), \(U\le\theta V\),
+\(V\le\delta_2\) for \(b\ge4\); at \(b=3\),
+\(V=\delta_2+\delta_3,\rho=\delta_2\).
+Set \(S'_L=\sum_{j=0}^LB^j\one\) and \(V_L=S'_L+kB^LR\).
+The same finite packet gives
+\begin{equation}\tag{L58.1.7}\label{eq:L58:propagation}
+0<X_{b,L}\le m^2\left[
+V_L-\gamma\bar f_{L-1}-a_1\bar f_{L-2}
+-\sum_{j=3}^L\varepsilon_j\bar f_{L-j}\right].
+\end{equation}
+Only nonnegative path indices occur.
+Here \(V_L-1=P_L(B)u\),
+\(\|P_n\|\le1\) for \(n\ge3\),
+\(\|P_2\|^2\le M\), and \(\|P_1\|\le1\).
+For \(L\ge3\),
+\(\alpha_L=1-\E V_L,\ \eta_L=\E(uV_L)=\alpha_{L+1}\in[\tau,d]\).
+Also \(R_L=V_L-q=BP_{L-1}(B)u\), so at \(L\ge4\),
+\(|R_L|\le\sqrt d\) and \(\E R_L^2\le\theta d\).
+The exact mixed mean is
+\begin{equation}\tag{L58.1.9}\label{eq:L58:receiving}
+\E[r(V_L-1)]=d-\alpha_{L+2}.
+\end{equation}
+
+We first give two continuous curvature certificates.
+The original row constraint yields $0\le f_2\le2-q^2/2$.
+If $Z\ge0$, $\mu=\E Z$, and
+$Z\le(1-d/2)q-d/2+\sqrt d$, $\mu\le1-27d/16$, then
+\begin{equation}\tag{L58.8.3}\label{eq:L58:curvature19}
+f_2[Z^2+2\mu Z+3\mu^2]\le19/2.
+\end{equation}
+Indeed put $x=\sqrt d$, $a=27/16$, $b(q)=35/16+q/2$,
+$n=1-ax^2$. Expanding $(Z+\mu)^2+2\mu^2$, discarding its negative
+cubic and using $x^4\le x^2/3$, gives
+$q^2+2q+3+2(q+1)x-A(q)x^2$,
+$A(q)=(11/12)q^2+(223/48)q+5093/768$.
+Complete the square in $x$. The base
+$(2-q^2/2)(q^2+2q+3)\le9$ and the gain is at most $1/2$, since
+\[
+A(q)-(4-q^2)(q+1)^2
+=q^4+2q^3-(25/12)q^2-(161/48)q+2021/768>0.
+\]
+For $h=q-7/8\in[-7/8,9/8]$, the last polynomial is
+$113/4096+(35/128)h+h^2[745/96+(11/2)h+h^2]$.
+The bracket increases from $713/192>3$; the expression is at least
+$113/4096-(35/128)^2/12=4199/196608>0$ on the entire interval.
+
+For \(L=4\), \eqref{eq:short-one:norms} gives
+\(|P_4(i\sqrt\xi)|^2\le1-(7/10)\xi\).
+In \eqref{eq:L58:propagation} retain the last two losses and take
+$\delta=\kappa d$ to obtain
+$X_{b,4}\le m^2Z$, $Z=V_4-\delta-(d/2)q\ge0$.
+The actual mean is at most $u_0=1-27d/16$; the exact mixed identity
+gives
+\[
+C_f:=\E[f_2(Z-\mu)]
+=-\eta_4+d^2/2+d-\alpha_6-d\alpha_4\le-3d/16,
+\quad\operatorname{Var}Z\le d-(13/8)d^2+d^3/4.
+\]
+Before the last variance simplification the quadratic loss is
+$(7/10)\delta_2+(\kappa^2+\kappa)d^2$.
+The curvature certificate applies. Taylor expansion gives
+\[
+\E[f_2X_{b,4}^4]\le m^8W,
+\quad W=(1-d)u_0^4-(3/4)du_0^3
++(19/2)[d-(13/8)d^2+d^3/4].
+\]
+The mean polynomial has maximum at an endpoint; its nonzero endpoint
+is positive because $(1-d)u_0-(3/4)d\ge1/24$.
+The exact expansion is
+$W=1+d+(1561/128)d^2-(10327/256)d^3
++(2027349/65536)d^4-(531441/65536)d^5$.
+Using $m^{-8}\ge1+4\kappa d+9\kappa^2d^2+15\kappa^3d^3$,
+the normalized difference is at most
+$-11/8+10d-32d^2\le-19/32$.
+The intermediate exact linear coefficient is $9239/1024<10$,
+negative quadratic magnitude $1424741/32768>43$, and positive cubic
+coefficient below $33$; absorb $d^3\le d^2/3$ and discard the final
+negative quartic. Since $m^8\ge(5/6)^8>1/5$, this gives deficit $d/10$.
+
+For every $L\ge5$, the final two coefficients are at least $\tau$.
+Take $Z=V_L-\delta-\delta q$, $\delta=\kappa d$, so
+$\mu\le u_0=1-3\kappa d$,
+$C_f\le-3d/16$, and
+$\operatorname{Var}Z\le d-3\kappa^2d^2+\kappa^2d^3$.
+The curvature certificate still applies; the covariance uses the same
+$\delta\le\alpha_L$ before simplification.
+The resulting $W$ is
+$(1-d)u_0^4-(3/4)du_0^3+(19/2)[d-3\kappa^2d^2+\kappa^2d^3]$.
+Its nonzero mean endpoint is positive since
+$(1-d)u_0-(3/4)d\ge1/48$.
+Retain the inverse-power expansion through
+$(165/8)\kappa^4d^4$. A sufficient normalized difference is
+\[
+\begin{gathered}
+Q(d)=-7/4+(34713/2048)d-Ad^2+Bd^3-Cd^4,\\
+A=1591649/32768,\quad B=288139731/8388608,\quad C=10556001/1048576.
+\end{gathered}
+\]
+$Q(1/4)=-27393775/536870912<-1/20$,
+$Q'(1/4)=-204774799/134217728$, $|Q'(1/4)|<31/20$.
+Here $A>97/2$, $34<B<69/2$, $10<C<11$.
+$Q'''=6B-24Cd>6\cdot34-8\cdot11>0$, so $Q''$ increases and
+$Q''(1/3)=-2A+2B-(4/3)C<-124/3<-40$.
+The full continuous quadratic tangent bound is therefore
+$Q\le-1/20+(31/20)^2/80=-639/32000$.
+With $m^8>1/5$ this gives deficit $d/300$ for all $L\ge5$.
+
+For $L=3$ retain the actual term $\gamma r$:
+$X_{b,3}\le m^2Z$,
+$Z=\widehat V-a-B_*q$, $\widehat V=V_3-\gamma r$,
+$a=d-k\rho$.
+The exact finite means obey
+$\widehat\alpha=1-\E\widehat V=d-kD_3-\gamma d
+\ge(4/5-6d/5)d$, $\widehat\eta=\E(u\widehat V)=\alpha_4$.
+The finite alternating tail gives
+$D_4\le-(\delta_3-\delta_4)$,
+$D_5\le-(\delta_4-\delta_5)$, hence
+$\alpha_4\ge\tau+\kappa\delta_3$,
+$\alpha_5\ge\tau+\kappa\delta_4$.
+With the global ratio $v=\delta_2/d$, original moment inequalities
+give $\delta_3\ge v^2d$, $\delta_4\ge v^3d$.
+The exact covariance is
+$C_f=-\alpha_4+B_*d+d-\alpha_5-\gamma\delta_2-d\widehat\alpha$,
+so
+\[
+C_f/d\le-1+2v-\kappa(v^2+v^3)+(7/10)d+(9/10)d^2
+\le h(d):=-13/40+(7/10)d+(9/10)d^2.
+\]
+The $v$ polynomial increases up to $\theta$ and
+$\kappa\theta^2(1+\theta)=144495/1048576>11/80$ (cross-difference
+$25264$). The actual mean loss is at least
+$(31/16)d-(6/5)d^2$, so $\mu\le1-13d/8$ on $d\le1/4$ and
+$\mu\le1-3d/2$ throughout.
+The finite packet gives the stronger bound
+\(|P_3|^2\le1-\xi/8\le1-(3/25)\xi\).
+Also $\E[r(V_3-1)]=\delta_2-k|D_5|\ge(4/5)\delta_2$.
+It follows that
+$\|\widehat V-1\|_2^2\le d-(3/25+9d/25)\delta_2$.
+The exact variance is
+$\|\widehat V-1\|_2^2-\widehat\alpha^2+B_*^2d-2B_*\widehat\eta$.
+For $t=B_*/d\in[5/8,3/2]$, the convex endpoint comparison of
+$t^2d-2\kappa t$ chooses $5/8$, since the endpoint difference is
+$119d/64-7\kappa/4<0$.
+Thus
+\[
+\operatorname{Var}Z\le d-(4807/3200)d^2+(3121/1600)d^3-(36/25)d^4
+\le V_3(d):=d-(3/2)d^2+2d^3-(7/5)d^4.
+\]
+The pointwise and mean bounds are
+$Z\le(1-5d/8)q-d/2+(13/12)\sqrt d$, $\mu\le1-3d/2$.
+Expanding as above gives the curvature coefficient $29/3$.
+In detail the quadratic loss is
+$A(q)=(215/192)q^2+(53/12)q+863/144$.
+The difference from $(169/192)(4-q^2)(q+1)^2$ is
+$(169/192)q^4+(169/96)q^3-(73/48)q^2-(21/8)q+89/36$.
+At $q=1+h$, it equals
+$557/576+(301/96)h+h^2[217/24+(169/32)h+(169/192)h^2]$.
+The bracket is at least $297/64>9/2$, and the whole is at least
+$15/16-(16/5)^2/18=1327/3600>0$.
+Completing the square in $\sqrt d$ adds at most $2/3$ to the base
+nine, proving the full-rectangle coefficient $29/3$.
+For $d\le1/4$, use $u_0=1-13d/8$ and
+$W=(1-d)u_0^4+4dh(d)u_0^3+(29/3)V_3(d)$.
+The mean endpoint replacement is legitimate because
+$(1-d)u_0\ge57/128$ and $4dh(d)\ge-13/40$.
+After the inverse-power expansion through degree four, a sufficient
+normalized upper polynomial is
+\[
+Q_s=-3/2+(221/16)d-(297/8)d^2+(73/4)d^3
++(153/16)d^4-(123/8)d^5.
+\]
+For exact coefficient traceability the $W$ coefficients of degrees
+one through six are
+$13/15,\allowbreak 2717/160,\allowbreak -16331/480,\allowbreak 1278763/61440,\allowbreak 39039/4096,\allowbreak -19773/1280$.
+After subtraction the constant is $-181/120<-3/2$, linear
+$70699/5120<221/16$, quadratic magnitude
+$18266219/491520>297/8$ (cross-difference $18539$), and the cubic
+comparison has positive difference $19291$ over $125829120$.
+$Q_s(1/4)=-489/8192<-7/128$,
+$Q_s'(1/4)=-2111/2048$ of absolute value below $9/8$;
+$Q_s'''$ is a concave quadratic positive at both endpoints, so
+$Q_s''\le Q_s''(1/4)=-5697/128<-40$.
+The tangent bound is $Q_s\le-7/128+(9/8)^2/80=-199/5120$.
+For $1/4\le d\le1/3$ take $u_0=1-3d/2$.
+Here $h\ge-3/16$, so the nonzero mean endpoint remains positive
+by $(1-d)u_0+4dh\ge1/3-1/4=1/12$.
+The $W$ coefficients are
+$41/30,\allowbreak 273/20,\allowbreak -3053/120,\allowbreak 727/60,\allowbreak 783/80,\allowbreak -243/20$.
+Retain inverse-power degree five, $(99/4)\kappa^5d^5$.
+The normalized difference $Q_h$ has constant $-121/120$, linear
+coefficient below $21/2$, negative quadratic magnitude above $57/2$,
+cubic below ten, quartic below eight, and negative quintic magnitude
+above twelve. Hence $Q_h''<-57+20+32/3<0$ and
+$Q_h'(1/4)<21/2-57/4+30/16+8/16=-11/8<0$.
+At $1/4$, $W=113737/61440<1157/625$ (cross-difference $455$),
+whereas the inverse-power lower bound exceeds
+$1+19/32+1983/10000+4905/100000+1001/100000+1783/1000000>1.8528$.
+Its exact degree-two through degree-five terms are
+$3249/16384,\allowbreak 102885/2097152,\allowbreak 21502965/2147483648,\allowbreak 
+245133801/137438953472$; the displayed rational comparison
+cross-differences are $528,1969440,665368352,80146959424$.
+Thus $W-m^{-8}<-1/625$ and $Q_h<-4/625$ throughout.
+With $m^8>1/5$, the complete $L=3$ row has deficit $d/1000$.
+
+It remains to prove $L=2$ for all finite $b\ge3$.
+The actual nonnegative upper bound is
+\begin{equation}\tag{L58.12.1}\label{eq:L58:two}
+X_{b,2}\le m^2Z,\quad Z=V_2-\gamma q-a_1
+=(1-\gamma)q+R_2-a_1,\quad R_2=r+kK^2R,\quad |R_2|\le\sqrt d.
+\end{equation}
+Set $\alpha=1-\E V_2=d-k\rho$,
+$\eta=\E(uV_2)=d-kD_3$, and
+$\rho_3=-\E(rK^2R)$. Exact centering gives
+\begin{equation}\tag{L58.12.2}\label{eq:L58:twomoments}
+\begin{gathered}
+\mu=1-\alpha-\gamma-a_1,\qquad
+\operatorname{Var}Z=\|V_2-1\|_2^2-\alpha^2+\gamma^2d-2\gamma\eta,\\
+C_f=-d+\delta_2+k(D_3-\rho_3)+(\gamma-d+k\rho)d.
+\end{gathered}
+\end{equation}
+For $G_{b-1}(-z)=a_\xi-zb_\xi$,
+$D_3=\int\xi^2b_\xi\,d\nu$, $\rho_3=\int\xi^2a_\xi\,d\nu$.
+Even finite lengths have $a_\xi=b_\xi$; if $b-1=2j+1$ then
+$b_\xi-a_\xi=-(-\xi)^j$.
+Hence $D_3-\rho_3\le\delta_4$ for all $b\ge3$, and
+$D_3-\rho_3\le\delta_6$ for $b\ge7$, whose first positive terminal
+term comes from $b-1=7,j=3$.
+For $v=\delta_2/d\in[d,\theta]$ the actual $P_2$ estimate is
+\[
+\begin{gathered}
+\|V_2-1\|_2^2\le d+\delta_2-4\delta_3+5\delta_4
+-\delta_5-\delta_6+\delta_7\le dJ(v),\\
+J(v)=1+v-(63/32)v^2-(855/1024)v^4-v^5\le71/63.
+\end{gathered}
+\]
+The replacements use global original spectral Jensen and
+$\delta_{j+1}\le\theta\delta_j$, not a spectral-point lower bound.
+
+The common continuous $L=2$ curvature is
+\begin{equation}\tag{L58.12.5}\label{eq:L58:curvature29}
+f_2[Z^2+2\mu Z+3\mu^2]\le29/3.
+\end{equation}
+It suffices after expanding to have quadratic loss
+$A_0(q)=(45/64)q^2+(27/8)q+125/24$.
+Indeed
+$A_0-(3/4)(4-q^2)(q+1)^2
+=(3/4)q^4+(3/2)q^3-(99/64)q^2-(21/8)q+53/24$.
+At $q=7/8+h$ it equals
+$8437/49152+(63/512)h+h^2[747/128+(33/8)h+(3/4)h^2]$.
+The bracket increases from $717/256>11/4$, the constant exceeds
+$1/6$ and the linear coefficient is below $1/8$, so the difference
+is at least $1/6-1/704>0$.
+Completing the square adds at most $2/3$ to the base nine.
+For $b=3,4,5/6$ below use $Z\le(1-cd)q+\sqrt d$,
+$\mu\le1-ad$ with $(a,\allowbreak c)=(17/10,\allowbreak 7/10),\allowbreak (8/5,\allowbreak 7/16),\allowbreak 
+(47/32,\allowbreak 15/32)$. Expansion, dropping the nonpositive cubic and using
+$d^2\le d/3$, gives respective quadratic-loss coefficients
+\[
+\begin{array}{c|ccc}
+b&q^2&q&1\\\hline
+3&371/300&601/150&631/100\\
+4&623/768&433/120&151/25\\
+5,6&885/1024&1749/512&5791/1024.
+\end{array}
+\]
+Each dominates the corresponding coefficient of $A_0$.
+For $b\ge7$ below, $\gamma\ge(1-3v/2)d$,
+$a_1\ge\kappa vd$, and $\mu\le1-A(v)d$,
+$A(v)=2-(337/160)v+(57/80)v^2$.
+The sum $(1-3v/2)q+\kappa v+A(v)$ decreases in $v$ and at
+$\theta$ exceeds $3/2+3q/8$:
+$A(\theta)=103377/81920>5/4$,
+$\kappa\theta+A(\theta)=123137/81920>3/2$,
+$1-3\theta/2=25/64>3/8$.
+Thus $Z+\mu\le q+1+\sqrt d-(3/2+3q/8)d$,
+$\mu\le1-5d/4$, yielding exactly $A_0$.
+For every case the exact Taylor expression must pay both mean
+endpoints. If $\mu\le u_0$, $C_f\le dh\le0$ and
+$\operatorname{Var}Z\le V_0$, then
+\begin{equation}\tag{L58.12.6}\label{eq:L58:endpoints}
+\E[f_2X_{b,2}^4]\le m^8\max\{
+(29/3)V_0,(1-d)u_0^4+4dhu_0^3+(29/3)V_0\}.
+\end{equation}
+The mean polynomial $t^3[(1-d)t+4dh]$ has maximum on $[0,u_0]$
+at an endpoint. For $u_0=1-ad$, $h=h_0+h_1d+h_2d^2$, its
+degree-one through degree-six coefficients are
+\begin{equation}\tag{L58.12.7}\label{eq:L58:coefficients}
+\begin{aligned}
+c_1&=-1-4a+4h_0,&c_2&=6a^2+4a-12ah_0+4h_1,\\
+c_3&=-4a^3-6a^2+12a^2h_0-12ah_1+4h_2,
+&c_4&=a^4+4a^3-4a^3h_0+12a^2h_1-12ah_2,\\
+c_5&=-a^4-4a^3h_1+12a^2h_2,&c_6&=-4a^3h_2.
+\end{aligned}
+\end{equation}
+
+For $b=3$, $\beta_b=t_0=d$, $e=\rho=\delta_2$,
+$V=\delta_2+\delta_3$, $D_3=\rho_3=\delta_3$.
+$\gamma$ increases with $k\in[1,6/5]$, so
+$\gamma\ge[1-(1+\theta)v/2]d\ge(1463/2048)d>7d/10$.
+Since $\alpha+\gamma+a_1=d+\gamma$, $\mu\le1-17d/10$.
+Using $k-k^2/2\le1/2$ in \eqref{eq:L58:twomoments} gives
+$C_f\le d[-\kappa+(13/64)d+(3/5)d^2]$.
+The actual $P_2$ square is at most
+$1+\xi-4\xi^2+\xi^3+\xi^4$, hence
+$\|V_2-1\|_2^2\le d[1+v-(3511/1024)v^2]\le43d/40$.
+$\alpha\ge41d/80$, $\eta\ge4d/5$; the convex endpoint comparison
+in $\gamma/d\in[7/10,6/5]$ selects $7/10$, giving
+$\operatorname{Var}Z\le(43/40)d-(11/8)d^2+d^3/2$.
+The zero-mean endpoint is paid by $m^{-8}\ge1+4d+9d^2$ with
+difference at least $1-(13/2)d+20d^2\ge151/320$.
+For the nonzero endpoint use \eqref{eq:L58:coefficients} and inverse
+degree three. Its normalized coefficients are bounded by
+$-3,15,-69,35,9$, with nonpositive last coefficient;
+the exact first three are $-227/60,1108/75,-208481/3000$ and
+the next bounds use $689537/20000<35$, $677127/80000<9$.
+Absorbing higher powers using $d\le1/3$ gives
+$-3+15d-55d^2\le-3+225/220<0$.
+For $b=4$, $\beta_b=d$, $t_0=\tau$, $e=\delta_2$,
+$\rho=\delta_2-\delta_3$, $V=\delta_2-\delta_3+\delta_4$,
+$D_3-\rho_3=\delta_4$.
+Monotonicity in $k$ gives
+$\gamma\ge[1-3v/2+(\kappa/2)v^2]d\ge7d/16$
+(endpoint $28811/65536$, excess $139/65536$), and
+$\alpha+\gamma+a_1\ge[2-3v/2+(83/64)v^2]d\ge8d/5$
+(endpoint $105163/65536$, cross-difference $1527$).
+The exact identity
+$\gamma-d+k\rho=(k-1)d-k\delta_3-k^2V/2$ gives
+$C_f\le d[-1/2+(3/5)d^2]$.
+The finite square bound is
+$1+\xi-4\xi^2+3\xi^3-\xi^4+\xi^5$,
+so $\|V_2-1\|_2^2\le d[1+v-(89/32)v^2]\le12d/11$.
+With $\alpha\ge7d/10$, $\eta\ge4d/5$, the same convex endpoint
+method gives variance at most $(12/11)d-(19/16)d^2+d^3/5$.
+The zero endpoint inverse difference is at least
+$1-7d+19d^2\ge27/76$.
+The nonzero endpoint normalized coefficients are
+$-157/55,\allowbreak 13057/1200,\allowbreak -21664/375,\allowbreak 12256/625,\allowbreak 7424/625$, followed
+by a nonpositive term; bound them by $-14/5,11,-57,20,12$ to get
+$-14/5+11d-49d^2\le-14/5+121/196<0$.
+Both short values yield deficit at least $d/1000$.
+
+For $b=5,6$ keep the shared $\beta_b=\tau$ and common global ratio
+$v$. Define
+\begin{equation}\tag{L58.14.1}\label{eq:L58:middleparameters}
+\begin{gathered}
+\Gamma(v)=1-3v/2+v^2/2+(\kappa/2)v^3,\quad
+a(v)=1-6v/5+(57/80)v^2,\quad e(v)=1-3v/10,\\
+C(v)=a(v)^2+2\Gamma(v)e(v),\quad u_0(v)=1-[1+\Gamma(v)]d,
+\quad h(v)=-1+v+(3/5)d^2,\\
+V_0(v)=dJ(v)-C(v)d^2+\Gamma(v)^2d^3,
+\qquad I(v)=[1-(1-v)d/2]^{-8}.
+\end{gathered}
+\end{equation}
+The actual bounds are $\gamma\ge\Gamma(v)d$,
+$\alpha\ge a(v)d$, $\eta\ge e(v)d$,
+$\mu\le u_0(v)$, $C_f\le dh(v)$, $\operatorname{Var}Z\le V_0(v)$.
+For $b=5$ the exact values are
+$V=\delta_2-\delta_3-\delta_4+\delta_5$,
+$\rho=e=\delta_2-\delta_3$; the increasing-$k$ lower bound is
+$\gamma\ge d-(3/2)\delta_2+\delta_3/2+(\delta_4-\delta_5)/2$,
+and the mean loss is exactly $d+\gamma$.
+For $b=6$, $V=\delta_2-\delta_3+\delta_4-\delta_5+\delta_6$,
+$\rho=\delta_2-\delta_3+\delta_4$, $e=\delta_2-\delta_3$;
+the lower bounds are $[1-3v/2+(83/64)v^2]d$ and
+$[2-3v/2+(3\kappa/2)v^2]d$ for $\gamma$ and mean loss.
+They dominate the shared parameters.
+Both have $D_3=\delta_3-\delta_4$ and
+$\eta\ge d-(6/5)\theta\kappa\delta_2\ge e(v)d$,
+since $(6/5)\theta\kappa=741/2560<3/10$.
+$\rho\le\delta_2-\kappa\delta_3$ gives the $\alpha$ bound.
+For covariance, the exact $\gamma-d+k\rho$ formulas are
+$(k-1)d-k\delta_3-k^2V/2$ and
+$(k-1)d+k\delta_4-k^2V/2$.
+In the second use $V\ge\kappa\delta_2$,
+$\theta^2<\kappa/2$; together with $D_3-\rho_3\le0$,
+$k-1\le3d/5$, both yield $h(v)$.
+The variance's convex endpoint is $\Gamma(v)$ because
+$[(6/5)+\Gamma(v)]d-2e(v)<0$.
+$\Gamma$ decreases and
+$63/128<\Gamma(\theta)=1033999/2097152<1/2$,
+which provides the common curvature premises above.
+
+Set $B_0=29/3$ and
+$W(v)=(1-d)u_0^4+4dh(v)u_0^3+B_0V_0(v)$.
+With $A=1+\Gamma$, $A_-=-A'$, the exact normalized derivative is
+\begin{equation}\tag{L58.14.4}\label{eq:L58:middlederivative}
+\partial_v[(W-I)/d]
+=4u_0^2\{A_-[(1-d)u_0+3dh]+u_0\}
++B_0[J'-dC'+2\Gamma\Gamma'd^2]
++4[1-(1-v)d/2]^{-9}.
+\end{equation}
+Uniformly $J'>-1$, and for $v\le1/3$, $J'>-1/2$:
+$J'$ decreases, $J'(1/3)=-1/2+43/20736$, $J'(\theta)>-1$.
+Also $-C'>13/5$, $2\Gamma\Gamma'\ge-3$, improved to $>-3/2$
+when $v\ge1/3$.
+For $-C'$ use $a\ge5/8$, $-a'\ge3/5$, $-\Gamma'\ge9/10$,
+$e\ge7/8$, $\Gamma\ge49/100$ to get
+$3/4+63/40+147/500>13/5$.
+For $v\ge1/3$, $\Gamma<3/5$, $-\Gamma'<11/10$ gives the latter bound.
+On this interval $9/10\le A_-\le11/10$, $u_0\ge1-8d/5$,
+$h\ge-2/3$, so the bracket is at least
+$I_+=19/10-(307/50)d+(36/25)d^2>0$, decreasing to $1/75$.
+The inverse derivative is at least $4+18\kappa d$.
+Expanding gives the sufficient positive lower bound
+$29/15-(53/4)d+62d^2$,
+whose real minimum is $29/15-2809/3968>0$.
+The coefficients of $4(1-8d/5)^2I_+$ used here are
+$38/5,\allowbreak -1222/25,\allowbreak 12976/125,\allowbreak -50816/625,\allowbreak 9216/625$;
+absorb the negative cubic with $d\le1/3$.
+For $v\le1/3$, $1\le A_-\le3/2$, $u_0\ge1-2d$,
+$h\ge-1+d$, and the bracket is at least
+$I_-=2-(19/2)d+(13/2)d^2$.
+For $d\le1/5$ this is positive and the expanded lower bound is
+$7-35d+129d^2>0$: the actual constant is $43/6$, linear coefficient
+above $-35$, quadratic $181$ before absorbing $-256d^3$.
+For $d\ge1/5$, use $I_-\ge-4/9$; the three terms in the derivative
+are at least $-16/9,-29/30,4$, totaling $113/90>0$.
+Thus $W-I$ increases in the same global $v$ throughout $[d,\theta]$.
+
+The zero-mean endpoint must be paid separately.
+For $d\ge1/5$, $B_0V_0-I$ also increases in $v$.
+For $v\ge1/3$ its normalized derivative is at least
+$B_0[-1+(13/5)d-(3/2)d^2]+4+18\kappa d$,
+equal to $367/400>0$ at $1/5$ and increasing.
+For $v\le1/3$ use
+$B_0[-1/2+(13/5)d-3d^2]+4\ge91/30>0$ and increasing.
+At $\theta$, $J<21/20$, $C>5/4$,
+$\Gamma^2<1/4$; the middle comparison is
+$C>(5/8)^2+2(63/128)(7/8)=641/512>5/4$.
+So $V_0(\theta)\le(21/20)d-(5/4)d^2+d^3/4$, and inverse degree
+three gives difference at least
+$1-(311/40)d+(61/4)d^2\ge879/97600>0$.
+For $d\le1/5$, the full correlated bound is
+$V_0(v)\le Md-(3/2)d^2$.
+Indeed $C\ge3-6v+(209/50)v^2$, $\Gamma\le1-v$;
+the required expression is concave in $d$, so check zero and $1/5$.
+The second endpoint has sufficient lower polynomial
+$D(v)=1219/3150-(53/25)v+(11059/4000)v^2+(855/1024)v^4+v^5$.
+$D''>5$, $D(7/20)>1/1000$, $|D'(7/20)|<1/25$, so
+$D\ge1/1000-(1/25)^2/10>0$.
+The exact five terms at $7/20$ are
+$1219/3150,\allowbreak -371/500,\allowbreak 541891/1600000,\allowbreak 2052855/163840000,\allowbreak 
+16807/3200000$, whose sum exceeds $0.0014430625$;
+$D'=-0.184675+293265/2048000+2401/32000\in(0,1/25)$.
+These terminating decimals denote exact rationals.
+The inverse difference is then at least
+$1-(43/5)d+(35/2)d^2+3d^3$, decreasing to $1/250$ at $1/5$;
+use $2059/189-19/8<43/5$,
+$29/2+3249/1024>35/2$, $102885/32768>3$.
+For the nonzero endpoint, monotonicity reduces to $v=\theta$.
+Relax $u_0$ to $1-149d/100$, retaining the endpoint maximum;
+take $h=-\kappa+(3/5)d^2$ and
+$V_0=(21/20)d-(5/4)d^2+d^3/4$.
+Inverse degree five and \eqref{eq:L58:coefficients} give normalized
+coefficients $-39/25$, $<147/10$, $<-203/5$, $<13$, $<10$,
+with nonpositive final term.
+The linear comparison has positive numerator $113923$ over $1920000$;
+the quadratic magnitude exceeds $1951/48>203/5$;
+the raw next two coefficients are
+$3057803777/200000000<153/10$ and
+$1105587599/100000000<111/10$, with
+$\kappa^4>3/25$, $\kappa^5>3/50$ supplying their inverse costs.
+Thus the normalized difference is at most
+$-39/25+(147/10)d-35d^2\le-231/14000$.
+Both endpoints with $m^8>1/5$ give deficit $d/1000$ for $b=5,6$.
+
+Finally let every finite $b\ge7$ retain the extra alternating loss:
+\begin{equation}\tag{L58.15.1}\label{eq:L58:tailbeta}
+\beta_b\ge\tau+\kappa\delta_3\ge t(v)d,
+\quad t(v)=1-v+\kappa v^2,\quad
+t_0\le d-\kappa\delta_2.
+\end{equation}
+The third positive beta term remains, the fourth negative term is at
+most $\theta\delta_3$, and all subsequent complete pairs are
+nonnegative. Also
+$V\ge c_G\delta_2$,
+$c_G=(1+\theta)\kappa^2=16245/32768$,
+because the finite coordinates are at least $1-\xi$ and
+$(1+\xi)(1-\xi)^2$ decreases on $[0,\theta]$.
+The actual covariance is at most $dh(v,d)$, where
+\[
+h=-1+(31/30)v+d/40+(3/5)d^2.
+\]
+Indeed $k(D_3-\rho_3)/d\le(6/5)\theta^4v<v/30$.
+The remaining correlated expression
+$k(\theta v-\kappa v^2)-k^2c_Gv/2$ decreases in $k\ge1$ because
+$c_G>\theta$; its upper bound is
+$v(\theta-c_G/2)-\kappa v^2\le1/72<1/40$,
+using $c_G>23/48$, $\theta-c_G/2<1/6$, $\kappa>1/2$.
+The residual $k-1\le3d/5$ yields the stated $h$.
+Define
+\begin{equation}\tag{L58.15.4}\label{eq:L58:tailparameters}
+\begin{gathered}
+g_0=1-3v/2,\quad a=1-6v/5+(57/80)v^2,\\
+e_0=1-39v/80,\quad A=2-(337/160)v+(57/80)v^2,\\
+C=a^2+2g_0e_0,\quad u_0=1-Ad,\\
+V_0=dJ-Cd^2+g_0^2d^3,\quad I=[1-t(v)d/2]^{-8}.
+\end{gathered}
+\end{equation}
+The actual bounds are $\gamma\ge g_0d$, $\alpha\ge ad$,
+$\eta\ge e_0d$, $\mu\le u_0$, $\operatorname{Var}Z\le V_0$,
+$m^{-8}\ge I$.
+The stronger bound $B_*\ge d-(29/32)\delta_2$ follows directly
+from the finite parameters. Put $s_*=t_0+e$. Consecutive beta values
+differ by zero or one signed moment of index at least three, so
+$s_*\ge d-\delta_3$. Also $V\le\delta_2$ and
+\[
+ \frac{d}{dk}\left(ks_*-\frac{k^2V}{2}\right)
+ \ge d-\delta_3-\frac65\delta_2>0,
+\]
+where the last inequality uses $\delta_3\le\theta\delta_2$,
+$\delta_2\le\theta d$ and $1-(\theta+6/5)\theta>0$.
+Evaluating at $k=1$ therefore gives
+\[
+ B_*\ge s_*-V/2\ge d-\delta_3-\delta_2/2
+       \ge d-(29/32)\delta_2.
+\]
+Furthermore, $k(1-v)-k^2v/2$ increases for $1\le k\le6/5$, giving
+the gamma bound. The variance convex endpoint is $g_0$ since
+$[(6/5)+g_0]d-2e_0<0$.
+The curvature premise $a_1\ge\kappa\delta_2$ was included above.
+For $W=(1-d)u_0^4+4dhu_0^3+B_0V_0$, the exact normalized derivative is
+\begin{equation}\tag{L58.15.6}\label{eq:L58:tailderivative}
+\begin{aligned}
+\partial_v[(W-I)/d]
+={}&4u_0^2\{A_-[(1-d)u_0+3dh]+(31/30)u_0\}\\
+&+B_0[J'-dC'-3g_0d^2]
++4(1-2\kappa v)[1-t(v)d/2]^{-9}.
+\end{aligned}
+\end{equation}
+Here $3/2\le A_-=-A'\le17/8$, $-C'>7/2$, $J'>-1$, and
+$t(v)\ge t(\theta)=22667/32768>11/16$.
+For $-C'$ use $a\ge5/8$, $-a'\ge3/5$, $e_0\ge4/5$,
+$g_0\ge25/64$ to get $3/4+12/5+(39/40)(25/64)>7/2$.
+When $v\le1/3$, $1-2\kappa v\ge29/48$ and $v\ge d$ gives
+$u_0\ge1-2d+(21/10)d^2-(3/4)d^3$,
+$h\ge-1+(127/120)d+(3/5)d^2$.
+The bracket is at least $I_-=38/15-13d+15d^2-(5/4)d^3$;
+the stronger raw coefficients are
+$38/15,\allowbreak -1553/120,\allowbreak 24107/1600,\allowbreak -49/40,\allowbreak 9/8$.
+For $d\le1/4$, $I_->0$ and $u_0\ge1-2d$.
+Expansion gives lower bound $77/10-52d+165d^2>0$, with real
+minimum $77/10-2704/660>0$.
+The coefficients of $4(1-2d)^2I_-$ are
+$152/15,\allowbreak -1388/15,\allowbreak 4628/15,\allowbreak -453,\allowbreak 260,\allowbreak -20$;
+add $B_0[-1/2+(7/2)d-3d^2]$ and
+$(29/12)[1+(99/32)d]$, then absorb negative cubic and quintic
+using $d\le1/4$.
+For $d\ge1/4$, $I_-\ge-97/540>-1/5$; the three derivative terms
+are at least $-4/5,29/16,29/12$, with positive sum.
+When $v\ge1/3$, $A_-\le5/3$, $u_0\ge1-7d/5$, $h\ge-2/3$,
+$1-2\kappa v\ge265/512$.
+The bracket is at least $I_+=5/2-(25/3)d+(21/10)d^2$.
+For $d\le1/4$ it is nonnegative; expansion gives the lower bound
+$12/5-22d+70d^2>0$, whose real minimum is
+$12/5-484/280>0$.
+The coefficients of $4(1-7d/5)^2I_+$ are
+$10,-184/3,364/3,-6664/75,2058/125$;
+after adding the other terms the constant is $923/384>12/5$,
+linear coefficient above $-22$, and, absorbing the negative cubic,
+quadratic above seventy.
+For $d\ge1/4$, use $I_+\ge-2/45$: the three terms are at least
+$-8/45,\allowbreak -145/48,\allowbreak (265/128)(1+99/128)>18/5$, again a positive sum.
+Thus $W-I$ increases throughout the complete correlated interval.
+
+For the zero endpoint with $d\ge1/5$, $B_0V_0-I$ also increases.
+For $v\le1/3$, its variance derivative is at least
+$B_0[-1/2+(7/2)d-3d^2]$, positive at $1/5$ and increasing.
+For $v\ge1/3$, $g_0\le1/2$, so use
+$B_0[-1+(7/2)d-(3/2)d^2]$ and inverse derivative at least
+$2(1+3d+5d^2)$.
+At $1/5$ their sum is at least $-87/25+18/5=3/25>0$, increasing.
+The inverse bounds use $265/128>2$, $99/32>3$, $5445/1024>5$.
+At $\theta$, $J=1124767513/1073741824<21/20$
+(cross-difference $53228044$), $C>65/64>1$,
+$g_0^2=625/4096<5/32$.
+Thus $V_0(\theta)\le(21/20)d-d^2+(5/32)d^3$ and inverse degree
+three yields difference at least
+$1-(37/5)d+(139/10)d^2\ge21/1390>0$;
+the actual quadratic is $10691/768>139/10$ and the omitted cubic is
+positive.
+For $d\le1/5$, the full correlated variance is
+$V_0\le Md-(4/3)d^2$.
+Expand $C\ge3-(51/8)v+(465/128)v^2$;
+the needed expression is concave in $d$, so check zero and $1/5$.
+At the latter a sufficient polynomial is
+$D(v)=662/1575-(431/200)v+(8337/3200)v^2+(855/1024)v^4+v^5$.
+$D''>5$, $D(3/8)>1/500$, $|D'(3/8)|<1/12$ imply
+$D\ge1/500-(1/12)^2/10>0$.
+The exact terms there are
+$662/1575,\allowbreak -1293/1600,\allowbreak 75033/204800,\allowbreak 69255/4194304,\allowbreak 243/32768$,
+whose sum exceeds $0.00247$;
+$D'=-2573/12800+23085/131072+405/4096\in(0,1/12)$.
+Then the inverse difference is at least
+$1-(33/4)d+17d^2$, decreasing to $3/100$ at $1/5$;
+use $2059/189-11/4<33/4$ and $1089/256+116/9>17$.
+For the nonzero endpoint reduce by monotonicity to $v=\theta$,
+relax $u_0$ to $1-5d/4$, and take
+$h=-23/40+d/40+(3/5)d^2$,
+$V_0=(21/20)d-d^2+(5/32)d^3$.
+Retaining the zero endpoint justifies any relaxation of a negative
+mean polynomial. Use
+$I\ge1+(11/4)d+(1089/256)d^2+(19965/4096)d^3$.
+The normalized coefficients from \eqref{eq:L58:coefficients} are
+$-9/10$, $403/30-1089/256<46/5$,
+$-733/30-19965/4096<-29$, $1591/256<25/4$,
+$2205/256<35/4$, followed by $-75d^5/16$.
+Therefore the normalized difference is at most
+$-9/10+(46/5)d-25d^2\le-67/1250<0$.
+Both endpoints, $m^8>1/5$ and $d\le1/3$ prove the claimed deficit
+$d/1000$ for every finite $b\ge7$.
+This finishes all $b\ge3,L\ge2$; the precise base rows stated above
+give \eqref{eq:L58:claim}. At $d=0$ original leaf integration gives
+equality. Actual equal pairs $E_t\in[0,1]$ are restored inside $T^L$
+by positivity. Full reversal simultaneously reverses the actual
+reference arm, terminal and all connector and decoration edges.

@@ -1,0 +1,356 @@
+\subsection{High-domain unit eighth moments for every single pair \((2,\allowbreak b)\)}\label{proof:Q5-C057}
+Work on a nonempty finite probability space with a real antisymmetric kernel \(|K|\le\allowbreak 1\), and use
+\[
+\begin{gathered}
+A=J+K,\ T=J-K,\ g=K1,\ p=1+g,\ q=1-g,\ d=Eg^2,\quad\\
+\theta=13/32,\quad\kappa=19/32,\quad \delta_j=\|K^j1\|_2^2 .
+\end{gathered}
+\]
+Write \(f_n=\allowbreak A^n\one\) and \(h_n=\allowbreak Tf_{n-1}\). The fixed actual direction is
+\[
+F_b=h_2f_b,\qquad H_b=pT F_b,\qquad b\ge4.
+\]
+We prove
+\[
+\boxed{EH_b^8\le199/200<1-d/500
+\quad\text{for every integer }b\ge5,\quad1/4\le d\le1/3.} \tag{Q57.0.1}\label{eq:Q57:0.1}
+\]
+The finite spectral input is that of Section~\ref{proof:Q5-C081}. The finite retained-envelope construction and its high-domain estimates are given below. The low-domain bound for every \(b\ge\allowbreak 4\), and the full-domain \(b=\allowbreak 4\) bound, are proved in Section~\ref{proof:Q5-C055}. They are used only in the final union.
+
+\paragraph{Q57.1 The retained finite construction on the full domain}
+Let \(0<\allowbreak d\le\allowbreak 1/3\), \(m=\allowbreak 1-d\) and \(\tau=\allowbreak d-\delta_2\). Define
+\[
+\beta_1=\beta_2=0,\qquad
+\beta_j=\sum_{i=1}^{\lfloor(j-1)/2\rfloor}(-1)^{i-1}\delta_i .
+\]
+The finite positive convolution and its alternating terms give
+\(\tau\le\allowbreak \beta_j\le\allowbreak  d\) for \(j\ge\allowbreak 3\). For \(j\ge\allowbreak 5\), retain
+\[
+\beta_j\le d-\delta_2+\delta_3\le d-\kappa \delta_2 . \tag{Q57.1.1}\label{eq:Q57:1.1}
+\]
+If the finite sum ends earlier the first inequality still holds; each later pair begins with a negative term and has nonpositive sum. Put
+\(R_{\mathrm{base}}=\allowbreak \sum_{j=\allowbreak 3}^bK^j\one\).
+Since \(h_2=\allowbreak 2-f_2\), positive path convolution gives
+\[
+h_2+f_b=2+R_{\mathrm{base}}-\sum_{j=3}^b\beta_j f_{b-j}.
+\]
+For \(b=\allowbreak 5\), take \(C_1=\allowbreak d,\allowbreak C_2=\allowbreak \delta_2,\allowbreak C_3=\allowbreak 0\).
+For \(b\ge\allowbreak 6\), take
+\[
+\lambda=\frac{2d-\beta_b-\beta_{b-1}}
+ {\beta_{b-2}+(1-d)\beta_{b-3}},\quad
+C_1=\beta_{b-1},\ C_2=\lambda\beta_{b-2},\
+C_3=\lambda\beta_{b-3}.
+\]
+The denominator is positive and the numerator is nonnegative. The full constant from these four losses is at least
+\((4-d)\tau\ge\allowbreak (11/3)\kappa d=\allowbreak 209d/96>\allowbreak 2d\), so \(\lambda\le\allowbreak 1\).
+Thus the retained portion is valid throughout \(d\le\allowbreak 1/3\), and
+\[
+0\le C_i\le d,\quad C_1\ge\tau,\quad
+\beta_b+C_1+C_2+(1-d)C_3=2d .
+\]
+Set
+\[
+C_R=C_1+C_2+C_3,\quad D_R=C_2+C_3,\quad E_R=C_3,\quad
+R=R_{\mathrm{base}}-C_Rg-D_Rr-E_Rs .
+\]
+Here \(r=\allowbreak Kg,\allowbreak s=\allowbreak Kr\). Retaining the actual \(f_1,\allowbreak f_2,\allowbreak f_3\) terms in the positive convolution gives
+\[
+0\le h_2+f_b\le2m+R,\qquad
+0\le F_b\le(m+R/2)^2 . \tag{Q57.1.2}\label{eq:Q57:1.2}
+\]
+The base before squaring is nonnegative. Moreover,
+\[
+C_R=2d-\beta_b+dE_R,\qquad
+D_R=2d-\beta_b-\beta_{b-1}+dE_R,\qquad0\le E_R\le d .
+\tag{Q57.1.3}\label{eq:Q57:1.3}
+\]
+
+\paragraph{Q57.2 The same finite spectral representation and its positive mean}
+Let \(N=\allowbreak b-2\). On \(0\le\allowbreak  x\le\allowbreak \theta\), write
+\[
+\sum_{j=0}^{N-1}(i\sqrt x)^j=a(x)+i\sqrt x\,b(x).
+\]
+Finite alternating sums give \(1-x\le\allowbreak  a,\allowbreak b\le\allowbreak 1\); for \(N\ge\allowbreak 4\), also \(a,\allowbreak b\le\allowbreak 1-x+x^2\).
+Let \(\nu\) be the positive spectral measure relative to \(g\), with mass \(d\), first moment \(\delta_2\) and second moment \(\delta_3\). The multiplier of \(R\) is
+\[
+-A(x)-i\sqrt x\,B(x),\quad
+A=C_R+x(a-E_R),\quad B=D_R+xb .
+\]
+Since \(a\ge\allowbreak \kappa>\allowbreak d\ge\allowbreak  E_R\), both \(A,\allowbreak B\) are nonnegative.
+Put \(V=\allowbreak \E R^2,\allowbreak D_0=\allowbreak \E R,\allowbreak Z=\allowbreak KR\) and
+\(\alpha_{\rm actual}=\allowbreak \E Z\). Skew adjointness and the spectral representation give
+\[
+V=\int(A^2+xB^2)\,d\nu,\quad
+D_0=\int B\,d\nu,\quad
+\alpha_{\rm actual}=\int A\,d\nu . \tag{Q57.2.1}\label{eq:Q57:2.1}
+\]
+The mean and variance estimates below apply to this same \(R\).
+By \eqref{eq:Q57:1.1} and \eqref{eq:Q57:1.3},
+\(C_R\ge\allowbreak  d+\kappa\delta_2+dE_R\). Since \(a\ge\allowbreak 1-x\),
+\[
+\begin{aligned}
+\alpha_{\rm actual}
+&\ge d^2+\kappa(1+d)\delta_2-E_R(\delta_2-d^2)\\
+&\ge d^2+(\kappa-\theta d)\delta_2+d^3\\
+&\ge (1+\kappa+\kappa d)d^2=:\alpha .
+\end{aligned} \tag{Q57.2.2}\label{eq:Q57:2.2}
+\]
+The second step uses \(E_R\le\allowbreak  d,\allowbreak \delta_2\ge\allowbreak  d^2\); the last uses
+\(\kappa-\theta d>\allowbreak 0\).
+
+\paragraph{Q57.3 A high-domain spectral envelope for every \(b\ge\allowbreak 5\)}
+Set
+\[
+a_0(d)=3/8+3d/2,\qquad
+z_0(d)=79/256+13d/16+d^2,\qquad U=a_0\sqrt d .
+\]
+For every \(b\ge\allowbreak 5\) and \(1/4\le\allowbreak  d\le\allowbreak 1/3\), we show
+\[
+V\le d a_0^2,\qquad D_0\le d z_0,\qquad
+|Z|\le U,\qquad EZ^2\le\theta U^2 . \tag{Q57.3.1}\label{eq:Q57:3.1}
+\]
+The last two bounds follow from \(|KR|\le\allowbreak \|R\|_2\) and the spectral bound once the first is proved.
+
+For \(b=\allowbreak 5\), \(C_R=\allowbreak d+\delta_2,\allowbreak D_R=\allowbreak \delta_2,\allowbreak E_R=\allowbreak 0\), and
+\(A\le\allowbreak \theta-\theta^2+(1+\theta)d\), \(B\le\allowbreak \theta+\theta d\).
+The triangle inequality in two coordinates yields
+\[
+\sqrt{A^2+xB^2}\le3/8+3d/2.
+\]
+The constants are
+\[
+(\theta-\theta^2)^2+\theta^3
+=131313/1048576<9/64,
+\]
+\[
+(1+\theta)^2+\theta^3=66997/32768<9/4 .
+\]
+This vector estimate holds on the full legal domain. Also
+\(B\le\allowbreak \theta(1+d)\le\allowbreak  z_0\) when \(d\ge\allowbreak 1/4\): the difference is increasing, and at \(d=\allowbreak 1/4\), replacing \(79/256\) by the smaller
+\(u=\allowbreak \theta-\theta^2+\theta^3\) already leaves \(2165/32768>\allowbreak 0\).
+
+For \(b\ge\allowbreak 6\), put \(u=\allowbreak \theta-\theta^2+\theta^3=\allowbreak 10101/32768<\allowbreak 79/256\).
+By \eqref{eq:Q57:1.3} and \(a,\allowbreak b\le\allowbreak 1-x+x^2\), the nonnegative upper bounds for \(A,\allowbreak B\) increase on the spectral interval: their derivatives are at least \(2/3-E_R>\allowbreak 0\) and \(2/3\). Hence
+\[
+A^2+xB^2\le
+\{u+(1+\theta)d+E_R(d-\theta)\}^2
+ +\theta\{u+2\theta d+dE_R\}^2. \tag{Q57.3.2}\label{eq:Q57:3.2}
+\]
+The right side is a convex quadratic in \(E_R\in[0,\allowbreak d]\).
+At \(E_R=\allowbreak 0\), the triangle inequality gives
+\[
+\sqrt{\text{right side}}
+\le u\sqrt{1+\theta}
+ +d\sqrt{(1+\theta)^2+4\theta^3}
+<3/8+3d/2.
+\]
+Here \(u<\allowbreak 5/16\), \(\sqrt{1+\theta}\le\allowbreak 6/5\), and the second squared norm is
+\(18397/8192<\allowbreak 9/4\), with difference \(35/8192\).
+
+At \(E_R=\allowbreak d\), enlarge \(u\) to \(u_*=\allowbreak 79/256\). It suffices to prove
+\[
+(u_*+d+d^2)^2+\theta(u_*+2\theta d+d^2)^2
+\le(3/8+3d/2)^2,\quad0\le d\le1/3 . \tag{Q57.3.3}\label{eq:Q57:3.3}
+\]
+The right side minus the left is
+\(P(d)=\allowbreak A_0+B_0d+C_0d^2-D_0^*d^3-E_0d^4\), where
+\[
+A_0=9/64-(1+\theta)u_*^2,\quad
+B_0=9/8-2u_*(1+2\theta^2),
+\]
+\[
+C_0=5/4-4\theta^3-2(1+\theta)u_*,
+\quad D_0^*=2+4\theta^2,\quad E_0=1+\theta.
+\]
+Since \(d^3\le\allowbreak  d^2/3,\allowbreak d^4\le\allowbreak  d^2/9\),
+\(P(d)\ge\allowbreak  L(d)=\allowbreak A_0+B_0d+(C_0-D_0^*/3-E_0/9)d^2\).
+The quadratic coefficient is negative: using just
+\(u_*>\allowbreak 1/4,\allowbreak D_0^*\ge\allowbreak 2,\allowbreak E_0\ge\allowbreak 1\), it is at most
+\(5/4-1/2-2/3-1/9=\allowbreak -1/36\).
+Thus \(L\) is concave and its minimum on the interval is at an endpoint.
+The exact endpoint differences are
+\[
+L(0)=14067/2097152>0,
+\]
+\[
+L(1/3)=P(1/3)=822339/169869312>0 .
+\]
+The second denominator is \(32\cdot2304^2\). The two squared bases are
+\(1735/2304\) and \(1591/2304\); their weighted numerator is \(129233853\), whereas the target \((7/8)^2\) has numerator \(130056192\).
+This proves \eqref{eq:Q57:3.3} on the entire interval.
+Finally \(B\le\allowbreak  u+2\theta d+d^2\le\allowbreak  z_0\), and
+\eqref{eq:Q57:2.1} gives \(D_0\le\allowbreak  dz_0\).
+
+\paragraph{Q57.4 Positive propagation and Hermite domination}
+Positive propagation and AM--GM for the two nonnegative factors give
+\[
+H_b\le\{m+D_0/2-Z/2+V/(4m)\}^2
+\le(C-Z/2)^2,
+\]
+\[
+C(d)=1-d+\frac d2 z_0(d)+\frac{d a_0(d)^2}{4(1-d)}. \tag{Q57.4.1}\label{eq:Q57:4.1}
+\]
+Since \(C\ge\allowbreak  m\ge\allowbreak 2/3\) and \(U\le\allowbreak 7/8\), \(C>\allowbreak U/2\), so the square and the increase of its base are valid.
+Let \(W=\allowbreak -Z\). Then
+\(\E W\le\allowbreak -\alpha,\allowbreak \E W^2\le\allowbreak \theta U^2,\allowbreak |W|\le\allowbreak  U\), and
+\(\alpha^2\le\allowbreak \theta U^2\).
+For \(f(w)=(C+w/2)^{16}\), use \eqref{eq:oc:negative-contact}
+with \(a=\alpha\), \(v_0=\theta U^2\), and
+\(b_{-\alpha}\le f(U)/(U+\alpha)^2\). The positive base follows from
+\(C>U/2\), and the mean coefficient is \(f'(-\alpha)+2\alpha b_{-\alpha}\ge0\).
+\[
+EH_b^8\le(C-\alpha/2)^{16}
+ +\mathcal R(k)(C+U/2)^{16},\quad
+k=\alpha/U,\quad
+\mathcal R(k)=\frac{\theta-k^2}{(1+k)^2}. \tag{Q57.4.2}\label{eq:Q57:4.2}
+\]
+The denominator is positive and \(\theta-k^2\ge\allowbreak 0\). On the legal range \(k\ge\allowbreak 0\),
+\(\mathcal R'(k)=\allowbreak -2(k+\theta)/(1+k)^3<\allowbreak 0\).
+Precisely,
+\[
+k(d)=\frac{d^{3/2}(51+19d)}{12(1+4d)}
+\]
+This increases on the high domain, since its logarithmic derivative is
+\(3/(2d)+19/(51+19d)-4/(1+4d)>\allowbreak 0\).
+The first and third terms already have positive difference
+\((3+4d)/(2d(1+4d))\).
+
+The other needed monotone function is \(G(d)=\allowbreak C+U/2\).
+For \(d\ge\allowbreak 1/4\), \(C'\ge\allowbreak -1+z_0/2\) and \(z_0\ge\allowbreak 1/2\).
+Writing \(x=\allowbreak \sqrt d\),
+\((U/2)'=\allowbreak (9/8)x+(3/32)/x\ge\allowbreak 3/4\): this last function increases for \(x\ge\allowbreak 1/2\) and equals \(3/4\) at \(1/2\).
+Thus \(G'\ge\allowbreak 0\), with positive terms still retained.
+
+The function \(C\) is convex. The second derivative of \(dz_0/2\) is nonnegative, and \(da_0^2/(1-d)\) is a product of two nonnegative functions with nonnegative first and second derivatives; the remaining \(1-d\) is affine.
+Hence \(C\) is bounded by the larger endpoint value on \([1/4,\allowbreak 1/3]\):
+\[
+C(1/4)=1779/2048<113/128,\qquad
+C(1/3)=6065/6912<113/128 .
+\]
+Also \(\alpha\) increases and \(\alpha(1/4)=\allowbreak 223/2048\). Therefore
+\[
+C-\alpha/2\le3393/4096<5/6,
+\qquad(C-\alpha/2)^{16}<1/16. \tag{Q57.4.3}\label{eq:Q57:4.3}
+\]
+The power bound follows from \((5/6)^4<\allowbreak 1/2\).
+For \(d\ge\allowbreak 5/16\), \(\alpha\ge\allowbreak 22775/131072\), giving
+\[
+C-\alpha/2\le208649/262144<4/5,
+\qquad(C-\alpha/2)^{16}<3/100 . \tag{Q57.4.4}\label{eq:Q57:4.4}
+\]
+For the last power bound, use \((4/5)^8<\allowbreak 17/100\) and
+\(289/10000<\allowbreak 3/100\); the required cross comparison is
+\(6553600<\allowbreak 6640625\).
+All these bases are positive, since \(\alpha\le\allowbreak 43/216<\allowbreak 1/5\) and \(C\ge\allowbreak 2/3\).
+
+\paragraph{Q57.5 Four rational interval payments}
+Use the four closed intervals
+\[
+[1/4,2/7],\quad[2/7,5/16],\quad
+[5/16,21/64],\quad[21/64,1/3].
+\]
+The endpoint estimates below apply throughout these intervals by the proved monotonicity of \(k\) and \(G\).
+The exact lower endpoints give
+\[
+k(1/4)=223/768\ge2/7,\qquad
+k(2/7)=79\sqrt{14}/882\ge1/3,
+\]
+\[
+k(5/16)=4555\sqrt5/27648\ge11/30,\qquad
+k(21/64)=693\sqrt{21}/8192\ge31/80. \tag{Q57.5.1}\label{eq:Q57:5.1}
+\]
+The first cross difference is \(25\). The second follows from
+\(87374>\allowbreak 86436\).
+For the third, use \(\sqrt5\ge\allowbreak 67/30\), since \(4500>\allowbreak 4489\), then
+\(305185>\allowbreak 304128\).
+For the fourth, use \(\sqrt{21}\ge\allowbreak 197/43\), since \(38829>\allowbreak 38809\), then \(682605>\allowbreak 682496\).
+Thus the respective upper bounds for \(\mathcal R(k)\) are
+\[
+\frac{509}{2592},\quad\frac{85}{512},\quad
+\frac{1957}{13448},\quad\frac{1639}{12321}. \tag{Q57.5.2}\label{eq:Q57:5.2}
+\]
+
+At \(d=\allowbreak 2/7\), \(a_0=\allowbreak 45/56\); using \(\sqrt{2/7}\le\allowbreak 15/28\),
+\[
+G(2/7)\le
+\frac57+\frac{79}{1792}+\frac{13}{392}+\frac4{343}
+ +\frac{1755}{6272}
+=\frac{95097}{87808}<\frac{13}{12}. \tag{Q57.5.3}\label{eq:Q57:5.3}
+\]
+The final cross difference is \(340\); the square-root comparison is
+\(1568<\allowbreak 1575\).
+At \(d=\allowbreak 5/16\),
+\[
+C(5/16)=\frac{78537}{90112}
+<\frac{447}{512},\qquad U/2\le\frac{243}{1024},
+\]
+The second bound uses \(\sqrt5\le\allowbreak 9/4\). Hence
+\(G(5/16)\le\allowbreak 1137/1024<\allowbreak 10/9\), with cross difference \(7\).
+The same-denominator difference for the first \(C\) comparison is \(135\).
+At \(d=\allowbreak 21/64\),
+\[
+C(21/64)=\frac{19742627}{22544384}<\frac{897}{1024},
+\qquad U/2\le\frac{2035}{8192}.
+\]
+These comparisons use the same-denominator difference \(5725\) and
+\(\sqrt{21}\le\allowbreak 55/12\), since \(3024<\allowbreak 3025\).
+Consequently \(G(21/64)\le\allowbreak 9211/8192<\allowbreak 9/8\).
+At \(d=\allowbreak 1/3\), \(U/2=\allowbreak 7\sqrt3/48\); using
+\(\sqrt3\le\allowbreak 26/15\), since \(675<\allowbreak 676\), gives
+\[
+G(1/3)\le\frac{6065}{6912}+\frac{91}{360}
+=\frac{39061}{34560}<\frac{181}{160}. \tag{Q57.5.4}\label{eq:Q57:5.4}
+\]
+The final same-denominator difference is \(35\).
+The respective sixteenth-power upper bounds for the positive nodes are
+\[
+4,\qquad11/2,\qquad53/8,\qquad29/4. \tag{Q57.5.5}\label{eq:Q57:5.5}
+\]
+Indeed,
+\((13/12)^4<\allowbreak 7/5\) by \(142805<\allowbreak 145152\), so its sixteenth power is less than
+\((7/5)^4=\allowbreak 2401/625<\allowbreak 4\).
+Also \((10/9)^8<\allowbreak 7/3\) by \(300000000<\allowbreak 301327047\), so the sixteenth power is less than \(49/9<\allowbreak 11/2\).
+Next \((9/8)^8<\allowbreak 18/7\) by \(301327047<\allowbreak 301989888\), giving
+\(324/49<\allowbreak 53/8\).
+Finally \((181/160)^4<\allowbreak 41/25\) by \(1073283121<\allowbreak 1074790400\), and
+\((41/25)^4<\allowbreak 29/4\) follows from \(11303044<\allowbreak 11328125\).
+
+Substitute \eqref{eq:Q57:4.3}--\eqref{eq:Q57:4.4},
+\eqref{eq:Q57:5.2} and \eqref{eq:Q57:5.5} into
+\eqref{eq:Q57:4.2}. The four interval bounds are
+\[
+\frac1{16}+4\frac{509}{2592}=\frac{1099}{1296},
+\]
+\[
+\frac1{16}+\frac{11}{2}\frac{85}{512}=\frac{999}{1024},
+\]
+\[
+\frac3{100}+\frac{53}{8}\frac{1957}{13448}
+=1-\frac{15887}{2689600},
+\]
+\[
+\frac3{100}+\frac{29}{4}\frac{1639}{12321}
+=1-\frac{3431}{616050}.
+\tag{Q57.5.6}\label{eq:Q57:5.6}
+\]
+Each deficit exceeds \(1/200\). For the last two, the exact comparisons are
+\(3177400>\allowbreak 2689600\) and \(686200>\allowbreak 616050\); the first two are immediate.
+Thus \(\E H_b^8\le\allowbreak 199/200\) for every \(b\ge\allowbreak 5\) on the whole high domain.
+Since \(d/500\le\allowbreak 1/1500<\allowbreak 1/200\), this proves \eqref{eq:Q57:0.1}.
+
+\paragraph{Q57.6 The unit catalogue and its fixed direction}
+Combining the high-domain proof with Section~\ref{proof:Q5-C055}'s bound for every \(b\ge\allowbreak 4,\allowbreak d\le\allowbreak 1/4\) and its full-domain \(b=\allowbreak 4\) bound yields
+\[
+\boxed{EH_b^8\le1-d/500
+\quad\text{for every integer }b\ge4,\text{every finite admissible kernel}.} \tag{Q57.6.1}\label{eq:Q57:6.1}
+\]
+Here \(H_b=\allowbreak pT(h_2f_b)\) is the same actual function in both domains.
+At \(d=\allowbreak 0\), leaf messages equal one.
+
+The long terminal arm points toward its leaf.
+The intermediate vertex of the two-edge short arm points toward both the terminal and its leaf.
+The unit connector points from the terminal to the receiving root, whose original unit arm points outward.
+The undecorated component has \(b+4\) edges.
+Genuine equal-arm pairs retain their directions \(f_\ell h_\ell\le\allowbreak 1\); positivity restores any number and multiplicity of them.
+Complete reversal holds with the same original probability measure, kernel and adjoint.

@@ -1,0 +1,612 @@
+\subsection{The reference terminal $(1,\allowbreak 2,\allowbreak 3)$ at every $L\ge\allowbreak 2$}\label{proof:Q5-C176}
+% Source Q5-C176: lines 19--612.
+\paragraph{Q176.0 The original objects and the actual direction}\label{part:Q176.0}
+Fix a nonempty original finite probability space $(X,\allowbreak \mu)$ and a real
+kernel $K(x,\allowbreak y)=\allowbreak -K(y,\allowbreak x)$, $|K(x,\allowbreak y)|\le\allowbreak 1$. All means, norms, adjoints,
+covariances and spectral measures use this original $\mu$. Put
+\fitdisplay{
+Jv=(\E v)\one,\quad A=J+K,\quad T=J-K=A^*,\quad
+B=-K,\quad u=B\one,\quad p=1-u,\quad q=1+u,
+}{}
+\fitdisplay{
+f_n=A^n\one,\quad\bar f_n=T^n\one,\quad h_n=Tf_{n-1},
+\quad W_n=A\bar f_{n-1}.
+}{}
+The message $f_n$ is the outward $n$-arm, $h_n$ has its first edge inward
+and the remaining edges outward, and $\bar f_n$ is entirely inward.
+The terminal residual is $(1,\allowbreak 2,\allowbreak 3)$, the $L$ connector edges point
+terminal-to-receiver, and the receiver has a true outward arm $f_a$, $a\ge\allowbreak 3$.
+For every independently specified $a\ge\allowbreak 3,\allowbreak L\ge\allowbreak 2$, the fixed canonical
+terminal $F=\allowbreak qf_2h_3$ satisfies
+\fitdisplay{
+\E[E_of_a\{T^L(E_tF)\}^4]\le1-d/16,\qquad d=\E u^2.
+\label{eq:Q176:T182.A}
+}{Q176.T182.A}
+The genuine pair products $E_o,\allowbreak E_t$ remain at their original receiver
+and terminal. The unit terminal arm points inward, the two-edge arm
+outward, and the three-edge arm has first edge inward and the rest outward.
+These directions are fixed from the original tree before the host.
+Together with Section~\ref{proof:Q5-C165}, the structural table is
+\fitdisplay{
+\begin{array}{c|c|c}
+L&\text{actual terminal}&\text{reference fourth, all }a\ge3\\\hline
+1&qf_2\bar f_3&1-d/256\\
+L\ge2&qf_2h_3&1-d/16.
+\end{array}
+}{}
+The common bound is $1-d/256$ with directions chosen from $L$ alone.
+Delete only zero-mass atoms. Then $p,\allowbreak q\ge\allowbreak \mu(x)>\allowbreak 0$, and $A,\allowbreak T$ are
+positive. Every actual tree message is strictly positive: the configuration
+with all labels equal to the root label has positive weight.
+At $d=\allowbreak 0$, $K$ may be nonzero, but original leaf integration gives all
+messages one. Below take $d>\allowbreak 0,\allowbreak E_o=\allowbreak E_t=\allowbreak 1$, and restore decorations at the end.
+The finite framework gives
+\fitdisplay{
+0<d\le1/3,\quad\|B\|^2\le\theta=13/32,\quad
+|Bv(x)|\le\|v\|_2,\quad d^2\le\delta_2\le\theta d,
+\quad\delta_{j+1}\le\theta\delta_j,\quad\delta_j=\|B^j\one\|_2^2.
+}{}
+Let $\kappa=\allowbreak 19/32$, $\tau=\allowbreak d-\delta_2$, $G_n(z)=\allowbreak \sum_{j=\allowbreak 0}^{n-1}z^j$,
+$G_0=\allowbreak 0$, $\beta_1=\allowbreak \beta_2=\allowbreak 0$, and
+$\beta_n=\allowbreak \sum_{j=\allowbreak 1}^{\lfloor(n-1)/2\rfloor}(-1)^{j-1}\delta_j$.
+Then $\tau\le\allowbreak \beta_n\le\allowbreak  d$ for $n\ge\allowbreak 3$, and
+\fitdisplay{
+\one+G_n(B)u=\bar f_n+\sum_{j=3}^n\beta_j\bar f_{n-j}.
+}{}
+Complete reversal gives the receiving envelope
+\fitdisplay{
+0\le f_a\le C_a=\one-G_a(-B)u-\beta_a\one,\quad
+\E C_a=1-\beta_a-\beta_{a+1}\le1-19d/16,\quad C_a\le p+(6/5)\sqrt d\,\one.
+\label{eq:Q176:T182.0}
+}{Q176.T182.0}
+The $a=\allowbreak 3$ predecessor retains its true norm $\sqrt{1+\theta}<\allowbreak 6/5$;
+for $a\ge\allowbreak 4$ the finite predecessor norm is at most one.
+For every $n\ge\allowbreak 3$, $|G_n(i\sqrt x)|\le\allowbreak 1$ on $[0,\allowbreak \theta]$:
+odd $n$ has squared modulus $(1+x^n)/(1+x)$;
+even $n=\allowbreak 2j$ has $(1-(-x)^j)^2/(1+x)$, direct for even $j$, while
+odd $j\ge\allowbreak 3$ uses $2x^2+x^5<\allowbreak 1$.
+The spectral measure $\nu$ of $-B^2$ at $u$ has mass $d$, support
+$[0,\allowbreak \theta]$ and $\int x^j\,\allowbreak d\nu=\allowbreak \delta_{j+1}$.
+The symbols $x,\allowbreak z=\allowbreak i\sqrt x$ represent the same original spectral calculation;
+there is no pointwise assumption $x\ge\allowbreak  d$.
+
+\paragraph{Q176.1 An independent coefficient-ten lemma}\label{part:Q176.1}
+Suppose $C_0,\allowbreak Z\ge\allowbreak 0$, $\mu=\allowbreak \E Z\ge\allowbreak 0$, $t=\allowbreak \sqrt d\le\allowbreak 1/\sqrt3$,
+\fitdisplay{
+C_0\le p+(6/5)t,\quad Z\le q+(13/12)t,
+\quad\mu\le1-(5/4)t^2,\quad p+q=2.
+}{}
+Then
+\fitdisplay{
+C_0\{(Z+\mu)^2+2\mu^2\}\le10.
+\label{eq:Q176:T182b.1}
+}{Q176.T182b.1}
+Use the positive upper $q+1+(13/12)t-(5/4)t^2$ for $Z+\mu$.
+Expand, use $t^4\le\allowbreak  t^2/3$, retain the negative cubic, and multiply by
+$p+(6/5)t$ to get the upper
+\fitdisplay{
+\begin{aligned}
+P(q,t)&=6+q-q^3+B(q)t-D_0(q)t^2-E_0(q)t^3-(13/4)t^4,\\
+B(q)&=119/15+(137/30)q-(29/30)q^2,\\
+D_0(q)&=1247/180-(851/360)q-(5/2)q^2,\\
+E_0(q)&=167/15+(7/24)q.
+\end{aligned}
+}{}
+The squared bracket before multiplication is
+\fitdisplay{
+q^2+2q+3+(13/6)(q+1)t-[(5/2)q+343/72]t^2-(65/24)t^3.
+}{}
+Each substitution is made before multiplying by a nonnegative factor.
+For $q\le\allowbreak 1/2$, $P_q\ge\allowbreak 1/4+(18/5)t-(7/24)t^3>\allowbreak 0$.
+For $q\ge\allowbreak 1/2$,
+$P_{qq}\le\allowbreak -3-(29/15)t+5t^2\le\allowbreak -12/5$.
+The latter quadratic is convex in $t$, with endpoint values at most $-3$
+and $-4/3-29/(15\sqrt3)<\allowbreak -256/105<\allowbreak -12/5$, using $1/\sqrt3>\allowbreak 4/7$.
+Set
+\fitdisplay{
+F_0(t)=P(1,t)=6+(173/15)t-(743/360)t^2-(457/40)t^3-(13/4)t^4,
+}{}
+\fitdisplay{
+H_0(t)=P_q(1,t)=-2+(79/30)t+(2651/360)t^2-(7/24)t^3.
+}{}
+The function $H_0$ strictly increases, with
+\fitdisplay{
+H_0(3/10)=-4441/8000,\quad H_0(2/5)=479/2250,
+\quad H_0(1/2)=3229/2880<9/8,\quad H_0(1/\sqrt3)<2.
+}{}
+For the last value use $1/\sqrt3<\allowbreak 3/5$ and its exact expression
+$491/1080+913/(360\sqrt3)$.
+The function $F_0$ increases on $[0,\allowbreak 2/5]$, since $F_0''<\allowbreak 0$ and
+$F_0'(2/5)>\allowbreak 0$.
+On $[0,\allowbreak 3/10]$, $F_0\le\allowbreak 178789/20000<\allowbreak 9$ and $|H_0|\le\allowbreak 2$;
+strong concavity gives $P\le\allowbreak  F_0+(5/24)H_0^2<\allowbreak 9+5/6<\allowbreak 10$.
+On $[3/10,\allowbreak 2/5]$, $F_0\le\allowbreak 106523/11250<\allowbreak 19/2$, $|H_0|\le\allowbreak 3/5$,
+so $P<\allowbreak 19/2+3/40<\allowbreak 10$.
+On $[2/5,\allowbreak 1/2]$, $F_0''\le\allowbreak -36$,
+$F_0(1/2)=\allowbreak 3463/360$ and $F_0'(1/2)=\allowbreak -1043/1440$, of absolute value
+less than one. The upper tangent quadratic gives
+$F_0\le\allowbreak 3463/360+1/72<\allowbreak 97/10$, and $0<\allowbreak H_0\le\allowbreak 9/8$.
+Thus $P<\allowbreak 97/10+405/1536<\allowbreak 10$.
+On $[1/2,\allowbreak 1/\sqrt3]$, $H_0>\allowbreak 0$, so for $q\le\allowbreak 1$ the maximum is at most
+$P(1,\allowbreak t)$. For $q\ge\allowbreak 1$ use $P_{qq}\le\allowbreak -27/5$:
+the convex quadratic $-6-(29/15)t+5t^2$ has endpoint values
+$-343/60$ and less than $-571/105$, both below $-27/5$.
+Since $F_0$ decreases for $t\ge\allowbreak 1/2$,
+$P\le\allowbreak 3463/360+(5/54)4=\allowbreak 10789/1080<\allowbreak 10$.
+This covers every $q,\allowbreak t$ in the stated continuous domain.
+
+\paragraph{Q176.2 The canonical first row and the fourth-expansion interface}\label{part:Q176.2}
+Let $m=\allowbreak 1-d/2$, $k=\allowbreak 1/m\in[1,\allowbreak 6/5]$, and $D=\allowbreak d/4$.
+The actual arm identity $f_2+h_3=\allowbreak 2m\one+B^2u$ gives
+$R=\allowbreak kB^2u$, whose frequency symbol is $-kxu$. Hence
+\fitdisplay{
+F\le m^2q(1+R/2)^2,\qquad
+TF\le m^2[\bar f_2+BR+\delta\one],\qquad
+\delta=-k\delta_2+k\sqrt{d\delta_3}+k^2\delta_3.
+}{}
+With $s=\allowbreak \delta_2/d$, use $\delta_3\le\allowbreak \theta\delta_2$ and
+$\sqrt{\theta s}-(1-k\theta)s\le\allowbreak \theta/[4(1-k\theta)]$.
+Since $k\le\allowbreak 6/5$ and $1-k\theta\ge\allowbreak 41/80$,
+$\delta/d\le\allowbreak 39/164<\allowbreak 1/4$.
+Thus $D=\allowbreak d/4$ is valid throughout the host domain.
+For $D_i=\allowbreak \E B^iR$, the exact values include
+$D_1=\allowbreak k\delta_2,\allowbreak D_2=\allowbreak 0,\allowbreak D_3=\allowbreak -k\delta_3$.
+Successive application of the same positive $T$ gives
+\fitdisplay{
+0<T^LF/m^2\le Y_L=\bar f_{L+1}+B^LR+D\bar f_{L-1}
++\sum_{i=1}^{L-1}D_i\bar f_{L-1-i}.
+}{}
+The $Z_2,\allowbreak Z_3,\allowbreak Z_4$ below are exactly the reorganized $Y_2,\allowbreak Y_3,\allowbreak Y_4$;
+they are nonnegative before taking fourth powers.
+The same original envelope $C_a$ satisfies
+$\E C_a\le\allowbreak 1-19d/16$ and $C_a\le\allowbreak  p+(6/5)\sqrt d$.
+For $Z=\allowbreak s_0\one+Q(B)u$ with $\alpha=\allowbreak -\E[Q(B)u]>\allowbreak 0$,
+\fitdisplay{
+\operatorname{Var}Z=\|Q(B)u\|_2^2-\alpha^2,\qquad
+\operatorname{Cov}(C_a,Z)
+=-\int\operatorname{Re}(G_aQ)\,d\nu-\beta_{a+1}\alpha.
+\label{eq:Q176:T182b.2}
+}{Q176.T182b.2}
+Here $a\ge\allowbreak 3$ and $\beta_{a+1}\ge\allowbreak \tau$.
+With $\mu_Z=\allowbreak \E Z$, the exact fourth identity and the coefficient-ten
+lemma imply
+\fitdisplay{
+\E[C_aZ^4]\le(\E C_a)\mu_Z^4
++4\mu_Z^3\operatorname{Cov}(C_a,Z)+10\operatorname{Var}Z
+}{}
+when that lemma's pointwise and mean conditions have been proved.
+Since $T^LF\le\allowbreak  m^2Z$, multiply the entire right side by $m^8$;
+variance scales by $m^4$.
+For $G_a=\allowbreak E_a+zD_a$, even $a$ has $E_a=\allowbreak D_a$, odd $a$ has
+$E_a=\allowbreak 1-xD_a$, and $0\le\allowbreak  D_a\le\allowbreak 1$.
+We use
+$\psi(x)=\allowbreak 1-3x+2x^2-x^3\ge\allowbreak \psi(\theta)=\allowbreak 1451/32768>\allowbreak 0$;
+its derivative is negative throughout the interval.
+
+\paragraph{Q176.3 Two connector edges}\label{part:Q176.3}
+Finite propagation gives
+\fitdisplay{
+Z_2=C_2q+BP_2(B)u+c_2\one,\quad C_2=1+D,
+\quad P_2=1+(1-kx)z,\quad c_2=k\delta_2-d,
+}{}
+\fitdisplay{
+Q_2=C_2-x+kx^2+z,\quad\alpha_2=d,
+\quad\mu_2=1-7d/4+k\delta_2\le1-101d/80.
+\label{eq:Q176:T182b.3}
+}{Q176.T182b.3}
+One has
+$|P_2|^2=\allowbreak 1+x(1-kx)^2\le\allowbreak 1+x(1-x)^2\le\allowbreak 31/27<\allowbreak (13/12)^2$.
+Since $Dq+c_2\le\allowbreak  d/2-41d/80<\allowbreak 0$,
+$Z_2\le\allowbreak  q+(13/12)\sqrt d$; also $\mu_2\le\allowbreak 1-5d/4$.
+Thus the coefficient-ten lemma applies.
+To prove $|Q_2|\le\allowbreak  C_2$, divide the squared difference by $x$,
+put $s=\allowbreak d/2,\allowbreak k=\allowbreak 1/(1-s)$, and multiply by $(1-s)^2$. The result is
+\fitdisplay{
+\Phi(s,x)=-1+s+s^2-s^3+(1-s)(3x-2x^2)+x^3.
+}{}
+It increases in both variables on $0\le\allowbreak  s\le\allowbreak 1/6$, $0\le\allowbreak  x\le\allowbreak \theta$:
+$\Phi_s=\allowbreak (1-x)(1-2x)+2s-3s^2\ge\allowbreak 0$ and
+$\Phi_x=\allowbreak (1-s)(3-4x)+3x^2>\allowbreak 0$.
+Its upper-right value is $-2281/884736<\allowbreak 0$.
+Hence $\operatorname{Var}Z_2\le\allowbreak  C_2^2d-d^2=\allowbreak (1-d/4)^2d$.
+The real coordinate of $Q_2$ is at least $1-x+x^2$.
+Even $a$ gives $\operatorname{Re}(G_aQ_2)\ge\allowbreak  D_a(1-2x+x^2)\ge\allowbreak 0$;
+for odd $a$ the worst $D_a=\allowbreak 1$ gives the positive lower bound $\psi(x)$.
+Therefore $\operatorname{Cov}(C_a,\allowbreak Z_2)\le\allowbreak 0$, and
+\fitdisplay{
+\E[f_a(T^2F)^4]\le e^{-819d/80}+10de^{-9d/2}.
+\label{eq:Q176:T182b.4}
+}{Q176.T182b.4}
+For $d\le\allowbreak 1/6$, $k\le\allowbreak 12/11$ and $\mu_2\le\allowbreak 1-115d/88$.
+The first exponent improves to $1833/176>\allowbreak 52/5$, giving
+\fitdisplay{
+\E[f_a(T^2F)^4]\le e^{-52d/5}+10de^{-9d/2}.
+\label{eq:Q176:T182b.5}
+}{Q176.T182b.5}
+For the full continuous payment, first let $0<\allowbreak d\le\allowbreak 1/8$ and define
+$L(d)=\allowbreak [e^{9d/2}-e^{-59d/10}]/d$.
+Degree-four Taylor bounds give
+\fitdisplay{
+L(d)\ge52/5-(182/25)d+(37063/750)d^2-(250523/7500)d^3
+\ge52/5-(182/25)d+45d^2.
+}{}
+The positive degree-four Taylor sum and a tail with ratios at most $1/8$
+give $e^{3/4}<\allowbreak 17/8$. Convexity gives
+$e^{9d/2}\le\allowbreak 1+27d/4$ for $d\le\allowbreak 1/6$.
+Thus $L-10-e^{9d/2}/16$ is at least
+$27/80-(12323/1600)d+45d^2\ge\allowbreak 3663671/460800000>\allowbreak 0$.
+This pays \eqref{eq:Q176:T182b.5} by $1-d/16$.
+On $1/8\le\allowbreak  d\le\allowbreak 1/6$, its right side decreases: the derivative test
+reduces to $e^{(59/10)d}(1-9d/2)$, decreasing there, with left endpoint
+less than $e^{3/4}7/16<\allowbreak 119/128<\allowbreak 26/25$.
+At $1/8$, $e^{-13/10}<\allowbreak 11/40$ by the positive degree-five Taylor sum,
+and $e^{-9/16}<\allowbreak 4/7$ by the positive degree-three sum, with gap $3/8192$.
+The bound is less than $277/280<\allowbreak 95/96\le\allowbreak 1-d/16$.
+On $1/6\le\allowbreak  d\le\allowbreak 1/3$, the right side of \eqref{eq:Q176:T182b.4}
+also decreases. Before $2/9$ the test expression
+$e^{(459/80)d}(1-9d/2)$ decreases, starting below
+$e/4<\allowbreak 3/4<\allowbreak 819/800$; afterwards both derivatives are negative.
+At $1/6$, $e^{-273/160}<\allowbreak 3/16$, since the degree-five positive Taylor
+sum for $e^{17/10}$ exceeds $16/3$;
+and $e^{-3/4}<\allowbreak 19/40$, since its degree-four positive sum is
+$4331/2048>\allowbreak 40/19$.
+Thus the bound is less than $3/16+19/24=\allowbreak 47/48\le\allowbreak 1-d/16$.
+All $a\ge\allowbreak 3$ and the entire $d$-domain are covered at $L=\allowbreak 2$.
+
+\paragraph{Q176.4 Three connector edges}\label{part:Q176.4}
+The finite expression is
+\fitdisplay{
+Z_3=C_3q+BP_3(B)u-d\one,\quad C_3=1-d+D+k\delta_2,
+\quad P_3=1+D-x+kx^2+z,
+}{}
+\fitdisplay{
+Q_3=C_3-x+z(1+D-x+kx^2),\qquad
+\alpha_3=(1+D)d-\delta_2+k\delta_3\ge\tau,
+}{}
+\fitdisplay{
+\mu_3=1-3d+D+(k+1)\delta_2-Dd-k\delta_3\le1-297d/160,
+\qquad C_3\le1-21d/80.
+\label{eq:Q176:T182b.6}
+}{Q176.T182b.6}
+Also $C_3\ge\allowbreak 1-3d/4+d^2\ge\allowbreak 31/36$; the final difference factors as
+$(1/3-d)(5/12-d)$.
+Put $A=\allowbreak 1+D-x+kx^2$, so $0<\allowbreak A\le\allowbreak 1+D\le\allowbreak 13/12$.
+Then $|Q_3|^2-C_3^2=\allowbreak x[-2C_3+x+A^2]\le\allowbreak -(41/288)x\le\allowbreak 0$.
+Since $P_3=\allowbreak Q_2$, $|P_3|\le\allowbreak  C_2\le\allowbreak 13/12$, so
+$Z_3\le\allowbreak  q+(13/12)\sqrt d$.
+The mean is at most $1-5d/4$, and the coefficient-ten lemma applies;
+$\operatorname{Var}Z_3\le\allowbreak  C_3^2d$.
+For $Q_{30}=\allowbreak 1-x+z(1-x+x^2)$, both parity classes give
+$\operatorname{Re}(G_aQ_{30})\ge\allowbreak 0$, with odd-class lower bound $\psi$.
+The actual perturbation is
+$(-d+D+k\delta_2)+z[D+(k-1)x^2]$.
+Therefore
+\fitdisplay{
+\operatorname{Cov}(C_a,Z_3)
+\le d^2+D\delta_2+(k-1)\delta_4-\beta_{a+1}\alpha_3\le d^2.
+}{}
+Use $k-1\le\allowbreak 3d/5$,
+$\theta/4+3\theta^3/5<\allowbreak 37/240<\allowbreak 1/4<\allowbreak \kappa^2$ and
+$\beta_{a+1}\alpha_3\ge\allowbreak \kappa^2d^2$ for the last step.
+The actual negative constant has not been set to zero.
+Consequently
+\fitdisplay{
+\begin{aligned}
+\E[f_a(T^3F)^4]&\le e^{-1009d/80}+10de^{-181d/40}
++4d^2e^{-1531d/160}\\
+&\le e^{-25d/2}+(103/10)de^{-9d/2}.
+\end{aligned}\label{eq:Q176:T182b.7}
+}{Q176.T182b.7}
+The normalized covariance cost is at most $240/811<\allowbreak 3/10$, using
+$te^{-ct}\le\allowbreak 1/(ce)$, $e>\allowbreak 8/3$ and $c=\allowbreak 811/160$.
+For $0<\allowbreak d\le\allowbreak 1/4$, put $L=\allowbreak [e^{9d/2}-e^{-8d}]/d$.
+The positive and negative degree-four Taylor bounds yield
+\fitdisplay{
+\begin{aligned}
+L&\ge25/2-(175/8)d+(4825/48)d^2-(58975/384)d^3\\
+&\ge25/2-(175/8)d+62d^2
+\ge25/2-30625/15872>211/20.
+\end{aligned}
+}{}
+Since $211/20=\allowbreak 103/10+1/4$ and $e^{9/8}<\allowbreak 4$, this gives $1-d/16$.
+For $d\ge\allowbreak 1/4$, both terms decrease and at $1/4$ are less than
+$1/16+103/120=\allowbreak 221/240<\allowbreak 47/48$.
+The lower bounds $e^{25/8}>\allowbreak 16$ and $e^{9/8}>\allowbreak 3$ follow from positive
+Taylor sums through degree four; $e^{9/8}<\allowbreak 4$ follows from
+$e<\allowbreak 3$ and $e^{1/8}\le\allowbreak 8/7$.
+
+\paragraph{Q176.5 Four connector edges and the actual mean}\label{part:Q176.5}
+The finite $T^4$ contains the actual $D_3=\allowbreak -k\delta_3$:
+\fitdisplay{
+\begin{gathered}
+Z_4=C_4q+BP_4(B)u+c_4\one,\quad C_4=1-2d+D+k\delta_2,
+\quad A_1=C_4+d=C_3,\\
+P_4=A_1-x+z(1+D-x+kx^2)=Q_3,\quad
+c_4=-\tau-Dd-k\delta_3,\\
+Q_4=C_4-xA+z(A_1-x),\qquad A=1+D-x+kx^2.
+\end{gathered}
+}{}
+The exact mean loss is
+$\alpha_4=\allowbreak A_1d-\delta_2\ge\allowbreak (131/288)d>\allowbreak 5d/12$, and the mean is
+\fitdisplay{
+\mu_4=1-4d+D+(k+2)\delta_2+d^2-2Dd-kd\delta_2-k\delta_3.
+\label{eq:Q176:T182b.8}
+}{Q176.T182b.8}
+There is exactly one $-k\delta_3$ term. Since $k(1-d)\le\allowbreak 1$,
+$\mu_4\le\allowbreak 1-15d/4+3\delta_2+d^2/2\le\allowbreak 1-227d/96$ and
+$C_4\le\allowbreak 1-101d/80$.
+Also $C_4\ge\allowbreak  C_{\rm lo}:=\allowbreak 1-7d/4+d^2\ge\allowbreak 19/36>\allowbreak 0$ and $C_4\le\allowbreak 1$.
+Using $1+D-x\le\allowbreak  A\le\allowbreak 1+D$ gives
+\fitdisplay{
+\frac{|Q_4|^2-C_4^2}{x}
+\le C_4^2+[(3/2)d-2]C_4+d^2+x(1-3d/2+d^2/16)+x^2.
+}{}
+The right side increases in $x$, so set $x=\allowbreak \theta$; it is convex in
+$C_4$, so check $C_{\rm lo},\allowbreak 1$.
+At $C_4=\allowbreak 1$ it is
+$F_1(d)=\allowbreak -439/1024+(3\kappa/2)d+(1+\theta/16)d^2$,
+increasing up to $d=\allowbreak 1/3$, where it equals $-55/3072<\allowbreak 0$.
+The $C_{\rm lo}$ value exceeds this by
+$d^2(7/4-d)(1/4-d)$, nonpositive at $d\ge\allowbreak 1/4$.
+At $d\le\allowbreak 1/4$ it is at most $7d^2/16$, giving the endpoint upper
+$-939/8192<\allowbreak 0$ at $1/4$. Thus $|Q_4|\le\allowbreak  C_4$ throughout the domain.
+Since $P_4=\allowbreak Q_3$, $|P_4|\le\allowbreak  C_3\le\allowbreak 1$ and $c_4<\allowbreak 0$,
+$Z_4\le\allowbreak  q+\sqrt d$. Its mean is at most $1-5d/4$, so the
+coefficient-ten lemma again applies.
+For $Q_{40}=\allowbreak 1-x+x^2-x^3+z(1-x)$, the product with every $G_a$
+has nonnegative real part. For even $a$ its lower bound is
+$D_a(1-2x+2x^2-x^3)$; for odd $a$ it is
+$(1-x)(1-2x+x^2-x^3)>\allowbreak 0$.
+The actual perturbation has real part $s_C-Dx-(k-1)x^3$ and imaginary
+coordinate $s_A$, with
+$s_C=\allowbreak -7d/4+k\delta_2<\allowbreak 0$ and $s_A=\allowbreak -3d/4+k\delta_2<\allowbreak 0$.
+Thus the imaginary contribution $-xD_as_A$ is nonnegative, and
+\fitdisplay{
+\operatorname{Cov}(C_a,Z_4)
+\le(7/4)d^2+D\delta_2+(k-1)\delta_4-\beta_{a+1}\alpha_4
+\le(7/4)d^2.
+}{}
+Here $\beta_{a+1}\alpha_4>\allowbreak (5/24)d^2$, while the extra positive cost
+is less than $37d^2/240$.
+With $\operatorname{Var}Z_4\le\allowbreak  C_4^2d$, this yields
+\fitdisplay{
+\begin{aligned}
+\E[f_a(T^4F)^4]&\le e^{-703d/48}+10de^{-261d/40}
++7d^2e^{-355d/32}\\
+&\le e^{-703d/48}+(74/7)de^{-13d/2}.
+\end{aligned}\label{eq:Q176:T182b.9}
+}{Q176.T182b.9}
+The normalized covariance cost is at most $4/7$, using exponent gap
+$147/32$ and $e>\allowbreak 8/3$.
+Set $\alpha=\allowbreak 703/48$, $\beta=\allowbreak 13/2$ and $c=\allowbreak 391/48$.
+For $d\le\allowbreak 1/10$, the linear positive-exponential lower and quadratic
+negative-exponential upper give
+\fitdisplay{
+\frac{e^{\beta d}-e^{-cd}}d
+\ge\alpha-c^2d/2>29/2-1089/320=3551/320>74/7+1/4.
+}{}
+Since $e^{13/20}<\allowbreak 3<\allowbreak 4$, this pays by $1-d/16$.
+For $d\ge\allowbreak 1/10$ the upper decreases: before $2/13$,
+$e^{cd}(1-\beta d)$ decreases and starts below
+$3\cdot7/20=\allowbreak 21/20<\allowbreak \alpha/(74/7)$; afterwards both derivatives are negative.
+At $1/10$, the positive quadratic Taylor sums give
+$e^{-703/480}<\allowbreak 1/3$ and $e^{-13/20}<\allowbreak 5/9$.
+The upper is less than $58/63<\allowbreak 47/48$.
+This completes $L=\allowbreak 4$ for every receiving length on the full domain.
+
+\paragraph{Q176.6 Four actual losses for every $L\ge\allowbreak 5$}\label{part:Q176.6}
+Keep $m=\allowbreak 1-d/2$, $k=\allowbreak 1/m\in[1,\allowbreak 6/5]$.
+The actual identity $f_2+h_3=\allowbreak 2m\one+B^2u$ gives
+$F\le\allowbreak  q(m+B^2u/2)^2$.
+The first row has $R=\allowbreak -kxu$, $\delta\le\allowbreak 39d/164<\allowbreak d/4$ and $D=\allowbreak d/4$.
+Set $D_i=\allowbreak \E B^iR$, $\gamma_j=\allowbreak \beta_j-D_{j-2}$.
+The exact initial values are $D_1=\allowbreak k\delta_2,\allowbreak D_2=\allowbreak 0,\allowbreak D_3=\allowbreak -k\delta_3,\allowbreak D_4=\allowbreak 0$;
+later positive values are at most $k\delta_4<\allowbreak d/12$.
+Thus every $j\ge\allowbreak 3$ has $\gamma_j\ge\allowbreak  h:=\allowbreak 49d/96$:
+$\gamma_3=\allowbreak d-k\delta_2\ge\allowbreak 41d/80>\allowbreak 49d/96$, $\gamma_4=\allowbreak d$, and the others
+have $\gamma_j\ge\allowbreak \kappa d-d/12=\allowbreak 49d/96$.
+These are the same finite square coefficients as C102, rather than an
+application of its ordinary eighth conclusion.
+Retain the actual last four losses $\bar f_0,\allowbreak \bar f_1,\allowbreak \bar f_2,\allowbreak \bar f_3$
+and use $D\bar f_{L-1}\le\allowbreak  DS'_{L-1}$.
+The finite positive upper is
+\fitdisplay{
+\begin{aligned}
+Y_L&=\bar f_{L+1}+B^LR+D\bar f_{L-1}
++\sum_{i=1}^{L-1}D_i\bar f_{L-1-i}\\
+&=S'_{L+1}+B^LR+D\bar f_{L-1}
+-\sum_{j=3}^{L+1}\gamma_j\bar f_{L+1-j}
+\ge T^LF/m^2>0.
+\end{aligned}
+}{}
+Since $S'_n=\allowbreak \one+G_n(B)u$ and
+$\bar f_0+\bar f_1+\bar f_2+\bar f_3=\allowbreak (4-d)\one+3u+2Bu+B^2u$,
+\fitdisplay{
+\begin{gathered}
+0<T^LF\le W=m^2Z,\qquad
+Z=Cq+BP_L(B)u-h(1-d)\one,\\
+C=1+D-3h=1-41d/32,\quad
+P_L=G_L-kxz^{L-1}+DG_{L-2}-h(2+z).
+\end{gathered}
+}{}
+Here $x=\allowbreak -B^2$ is finite-symbol notation, with frequency $z=\allowbreak i\sqrt x$;
+it is not an identification of a frequency with $d$.
+Equivalently $Z=\allowbreak s\one+Q_L(B)u$, where
+\fitdisplay{
+s=1+D-4h+hd,\qquad
+Q_L=G_{L+1}-kxz^L+DG_{L-1}-h(3+2z+z^2).
+}{}
+The uppers come from positivity of the original $T$, so $Z>\allowbreak 0$ before
+raising it to the fourth power.
+
+\paragraph{Q176.7 A finite three-term shift bound}\label{part:Q176.7}
+For $0\le\allowbreak \sigma\le\allowbreak 49/288$, every $n\ge\allowbreak 4$, and $0\le\allowbreak  x\le\allowbreak \theta$,
+$z=\allowbreak i\sqrt x$, one has
+\fitdisplay{
+|G_n(z)-\sigma(3+2z+z^2)|\le1-3\sigma.
+\label{eq:Q176:T182.1}
+}{Q176.T182.1}
+Put $A=\allowbreak 1-3\sigma$. At $n=\allowbreak 4$ the squared difference from $A^2$,
+divided by $x$, is
+\fitdisplay{
+-1+4\sigma-2\sigma^2+(-1+2\sigma+\sigma^2)x+x^2.
+}{}
+The constant is at most $-3/8$, the linear coefficient negative,
+and $x^2\le\allowbreak \theta^2<\allowbreak 1/6$, so it is negative.
+At $n=\allowbreak 5$ the quotient is
+\fitdisplay{
+\begin{aligned}
+&-1+4\sigma-2\sigma^2+(1-4\sigma+\sigma^2)x
++(-1+2\sigma)x^2+x^3\\
+&\qquad\le-3/8+x-(95/144)x^2+x^3.
+\end{aligned}
+}{}
+The final polynomial increases, since its derivative is at least
+$1-(95/72)\theta>\allowbreak 0$; its value at $\theta$ is $-3121/294912<\allowbreak 0$.
+Here $1-4\sigma+2\sigma^2\ge\allowbreak 15649/41472>\allowbreak 3/8$.
+For $n\ge\allowbreak 6$, multiplication by $1-z$ gives numerator $M-z^n$, with
+$M=\allowbreak A+\sigma z+\sigma z^2+\sigma z^3$ and
+\fitdisplay{
+A^2(1+x)-|M|^2
+=x[1-4\sigma+2\sigma^2+\sigma^2x-\sigma^2x^2]\ge(3/8)x.
+}{}
+Since $|z+z^2+z^3|^2=\allowbreak x-x^2+x^3\le\allowbreak  x\le\allowbreak 1$,
+$|M|\le\allowbreak  A+\sigma\le\allowbreak 1$.
+The finite tail increment divided by $x$ is at most
+$2\theta^2+\theta^5<\allowbreak 169/512+1/80=\allowbreak 877/2560<\allowbreak 3/8$.
+The case $x=\allowbreak 0$ is direct, completing all finite integers.
+Since $0\le\allowbreak  kx\le\allowbreak 39/80$,
+$G_n-kxz^{n-1}=\allowbreak (1-kx)G_n+kxG_{n-1}$.
+For $Q_L$, $n=\allowbreak L+1\ge\allowbreak 6$; \eqref{eq:Q176:T182.1} and
+$\|G_{L-1}\|\le\allowbreak 1$ give
+\fitdisplay{
+|Q_L|\le1-3h+D=C,\qquad\|Q_L(B)u\|_2^2\le C^2d.
+\label{eq:Q176:T182.2}
+}{Q176.T182.2}
+Apply the proved two-term shift \eqref{eq:Q102:5.6}, valid for
+$n\ge\allowbreak 3,\allowbreak \sigma\le\allowbreak 3/16$, to the same convex combination:
+\fitdisplay{
+|P_L|\le1-2h+D=1-37d/48=:A_0.
+\label{eq:Q176:T182.3}
+}{Q176.T182.3}
+At $L=\allowbreak 5$ the $G_{L-2}=\allowbreak G_3$ and convex combination $G_5,\allowbreak G_4$ all
+lie in the actual domain.
+
+\paragraph{Q176.8 Long-connector means, covariance and variance}\label{part:Q176.8}
+Let $\alpha=\allowbreak -\E[Q_L(B)u]$. The exact finite mean loss is
+\fitdisplay{
+\alpha=\gamma_{L+2}+D\beta_L-2hd\ge h+D\tau-2hd>0.
+}{}
+Therefore
+\fitdisplay{
+\mu_Z=\E Z\le1-(221/96)d+(177/128)d^2
+\le1-(707/384)d.
+\label{eq:Q176:T182.4}
+}{Q176.T182.4}
+The exact variance $\|Q_L(B)u\|_2^2-\alpha^2$ is at most $C^2d$;
+the negative squared mean is displayed before being discarded.
+The required finite symbol fact is
+$\operatorname{Re}(G_aG_n)\ge\allowbreak 0$ for $a\ge\allowbreak 3,\allowbreak n\ge\allowbreak 4$.
+If either index is even, the lower bound follows from $(1-x)(1-2x)>\allowbreak 0$.
+If both are odd, $n\ge\allowbreak 5$ has imaginary coordinate at most $1-x+x^2$;
+using the receiving imaginary coordinate at most one gives
+\fitdisplay{
+1-3x+3x^2-3x^3+x^4\ge1-3x+2x^2-x^3\ge1451/32768>0.
+}{}
+The finite coordinate relations are even $E=\allowbreak D$, odd $E=\allowbreak 1-xD$.
+Thus both $G$ convex-combination terms and $DG_{L-1}$ in $Q_L$ give
+nonnegative receiving real parts.
+Since $\operatorname{Re}[G_a(3+2z+z^2)]\le\allowbreak (3-x)E_a\le\allowbreak 3$,
+\fitdisplay{
+\operatorname{Cov}(C_a,Z)
+=-\int\operatorname{Re}(G_aQ_L)\,d\nu-\beta_{a+1}\alpha
+\le3hd=(49/32)d^2.
+\label{eq:Q176:T182.5}
+}{Q176.T182.5}
+The actual constant and mean terms are retained.
+
+\paragraph{Q176.9 Every pointwise condition for coefficient nine}\label{part:Q176.9}
+The coefficient-nine lemma proved in part Q117.4 of
+Section~\ref{proof:Q5-C117} requires nonnegative $C_a,\allowbreak W$ with
+\fitdisplay{
+C_a\le p+(6/5)\sqrt d,\quad
+W\le(1-5d/8)q-d/2+(13/12)\sqrt d,\quad
+\E W\le1-3d/2.
+}{}
+It gives $C_a[(W+\E W)^2+2(\E W)^2]\le\allowbreak 9$ at the same original point.
+From \eqref{eq:Q176:T182.3},
+$Z\le\allowbreak  Cq+A_0\sqrt d-h(1-d)$.
+The $q$ coefficient satisfies $m^2C\le\allowbreak 1-5d/8$, and
+$\E W\le\allowbreak \mu_Z\le\allowbreak 1-3d/2$.
+With $t=\allowbreak \sqrt d$, the remaining pointwise difference is exactly
+\fitdisplay{
+\begin{aligned}
+&(13/12)t-m^2A_0t+m^2h(1-d)-d/2\\
+&=t/12+t^2/96+(85/48)t^3-(49/48)t^4-(49/48)t^5\\
+&\quad+(245/384)t^6+(37/192)t^7-(49/384)t^8\ge0.
+\end{aligned}
+}{}
+Indeed $t\le\allowbreak 3/5,\allowbreak t^2\le\allowbreak 1/3$ give
+$85-49t-49t^2\ge\allowbreak 589/15>\allowbreak 0$ and $245-49t^2>\allowbreak 0$; all remaining terms
+are positive. All the coefficient-nine conditions are now supplied.
+
+\paragraph{Q176.10 The full continuous long-connector payment}\label{part:Q176.10}
+The exact fourth identity and the same-kernel data give
+\fitdisplay{
+\begin{aligned}
+\E[f_a(T^LF)^4]&\le\E[C_aW^4]\\
+&\le(\E C_a)(\E W)^4+4(\E W)^3\operatorname{Cov}(C_a,W)
++9\operatorname{Var}W\\
+&\le e^{-1205d/96}+9de^{-73d/16}+(49/8)d^2e^{-1219d/128}.
+\end{aligned}
+}{}
+Here $\operatorname{Var}W=\allowbreak m^4\operatorname{Var}Z$, and the covariance
+term has scale $m^8\mu_Z^3\operatorname{Cov}(C_a,\allowbreak Z)$.
+Using $e>\allowbreak 8/3$ and $te^{-ct}\le\allowbreak 1/(ce)$, the covariance coefficient
+relative to $de^{-73d/16}$ is at most $294/635<\allowbreak 1/2$. Therefore
+\fitdisplay{
+\E[f_a(T^LF)^4]\le e^{-25d/2}+(19/2)de^{-9d/2}.
+\label{eq:Q176:T182.6}
+}{Q176.T182.6}
+For $0<\allowbreak d\le\allowbreak 1/4$, keep the positive cubic and negative quartic Taylor bounds:
+\fitdisplay{
+\begin{aligned}
+\frac{e^{9d/2}-e^{-8d}}d
+&\ge25/2-(175/8)d+(4825/48)d^2-(512/3)d^3\\
+&\ge25/2-22d+57d^2\ge1183/114>39/4.
+\end{aligned}
+}{}
+Thus the moment is at most $1-(d/4)e^{-9d/2}\le\allowbreak 1-d/16$,
+using $e^{9/8}<\allowbreak 4$, which follows from $e<\allowbreak 3,\allowbreak e^{1/8}\le\allowbreak 8/7$.
+On $[1/4,\allowbreak 1/3]$ both terms in \eqref{eq:Q176:T182.6} decrease;
+at $1/4$ they sum to less than $1/16+19/24=\allowbreak 41/48<\allowbreak 1-d/16$.
+The lower bounds $e^{25/8}>\allowbreak 16$ and $e^{9/8}>\allowbreak 3$ follow from positive
+Taylor sums through degree four. Hence
+\fitdisplay{
+\E[f_a\{T^L(qf_2h_3)\}^4]\le1-d/16\qquad(a\ge3,L\ge5).
+\label{eq:Q176:T182.7}
+}{Q176.T182.7}
+Together with the separate $L=\allowbreak 2,\allowbreak 3,\allowbreak 4$ payments this proves
+\eqref{eq:Q176:T182.A}.
+
+\paragraph{Q176.11 Genuine decorations, original counts and full reversal}\label{part:Q176.11}
+Every original equal-pair message lies in $[0,\allowbreak 1]$, so positivity of the
+same $T$ gives $0<\allowbreak T^L(E_tF)\le\allowbreak  T^LF$; at the receiver, $E_o\le\allowbreak 1$.
+This restores all actual multiplicities, equal lengths and subdivisions.
+If the terminal and receiving pair half-length sums are $S_t,\allowbreak S_o$,
+one original component has $a+L+6+2S_t+2S_o$ edges.
+The reference-fourth test tree shares only the receiver and its single
+$a$-arm, with
+\fitdisplay{
+e_{\rm verification}=a+4(L+6)+8S_t+2S_o,
+\qquad |V|=e_{\rm verification}+1.
+\label{eq:Q176:T182.8}
+}{Q176.T182.8}
+The analytic copies describe the verification integral, rather than extra
+edges in the original application. Distinct four-branch messages may be
+combined under the same $f_a$ through H\"older, with each actual message paid.
+Complete reversal replaces $K$ by $-K$, $f_a$ by $\bar f_a$,
+$T$ by $A$, and $qf_2h_3$ by $p\bar f_2W_3$.
+The unit row $qf_2\bar f_3$ becomes $p\bar f_2f_3$.
+Connectors, terminal arms and decorations reverse together, with $d$
+unchanged; the reference weight is never reversed alone.

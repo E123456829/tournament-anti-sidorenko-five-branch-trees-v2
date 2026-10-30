@@ -1,0 +1,278 @@
+\subsection{The odd terminal packets with a unit arm}
+\label{sec:odd-complete:q-terminals}
+
+Let $F$ have the literal directions in
+Table~\ref{tab:odd186:directions}. The two root classes considered here
+are $pW_a\bar f_b$, $3\le a<b$, and $f_a h_bf_c$,
+$3\le a<b<c$. Their terminal messages and their inner connector $L$
+are the same. We prove the respective global fourth losses
+$705/128$ and $11/2$ by comparing their complete certificates with
+the auxiliary root $pP_0$ of
+Lemma~\ref{lem:odd-complete:certificate}.
+
+\paragraph{The propagated packet.}
+Every terminal in this section has an actual first-row upper
+\begin{equation}\label{eq:odd-q:row}
+ TF\le e^\alpha(\bar f_2+BR+D),\qquad
+ R=r(B)u,\quad D\ge0.
+\end{equation}
+For a retained square $\alpha=2\log m$; for an exponential
+terminal $\alpha=-\Gamma$. Put $D_i=\E B^iR$ and
+$\gamma_j=\beta_j-D_{j-2}$. The finite identity
+\eqref{eq:odd-common:q-finite}, applied before discarding any term,
+gives the parameters of \eqref{eq:odd-complete:input}:
+\begin{equation}\label{eq:odd-q:parameters}
+\begin{array}{c|c|c|c|c}
+ L&C&c&Q&\E BQ(B)u\\\hline
+ 1&1&D&1+r&-d+D_1\\
+ L\ge2&1&2D-\gamma_{L+1}&G_L+z^{L-1}r&-\gamma_{L+2}.
+\end{array}
+\end{equation}
+The long row uses the proved nonnegative losses
+$\gamma_3,\ldots,\gamma_{L+1}$, and its mean uses the additional
+actual index $L+2$. Its auxiliary-root exponent is exactly
+\begin{equation}\label{eq:odd-q:baseline}
+ J_0=4(\alpha+c+\E BQu-d)
+               +(17/4)\|(Q-B)u\|^2.
+\end{equation}
+In particular the constant split is $\gamma=C-1=0$ throughout.
+
+If $r=-t+zs$ and $0\le t,s\le1$, both coordinates of every finite
+$Q_L$ lie in $[0,1]$. Indeed
+$Q_L=G_{L-1}+(1-t)z^{L-1}+sz^L$: each parity coordinate is an
+alternating finite partial sum with its final coefficient between
+zero and one. Convexity in $t,s$ reduces to the four adjacent
+partial sums. This includes $Q_1=(1-t)+zs$ and
+$Q_2=(1-xs)+z(1-t)$.
+
+\paragraph{Canonical triples $(1,2,w)$.}
+Use the actual square $F=qf_2h_w$. Its three retained packets are
+\[
+\begin{array}{c|c|c|c|c}
+ w&d_{\max}&m&r&D\\\hline
+ 3&1/3&1-d/2&-kx&d/4\\
+ 4&1/4&1-d&-k(d+x)+zkx&5d/12\\
+ w\ge5&1/5&1-9d/8&-ka+zkb&2d/5.
+\end{array}
+\qquad k=m^{-1}.
+\]
+The first two rows are the actual sums and signed moments in
+Section~\ref{proof:Q5-C169}. The last is
+Lemma~\ref{lem:reference-retained-packet} with $\sigma=9/4$;
+its actual $a,b,U$ and all four residue classes of $D_i$ are
+retained. In all three rows $0\le t,s\le1$, and
+\eqref{eq:odd-q:baseline} has respective uniform losses
+$2817/512$, $705/128$ and $6$. These are complete $v=3$
+certificates: the auxiliary pair is $P_0$ in either original
+direction, and its $\beta_2$ curvature coefficient is zero.
+
+At a minimum-one root use
+$\Phi(1,0,1/3)=-11255/36864<0$ and
+$\Psi(1,6/5)=-8899/3840<0$.
+Thus every low-domain row has loss greater than $705/128$.
+On the complementary domain, the same extra arm satisfies
+$h_4\le1$ for $d\ge1/4$, and $h_w\le1$ for $w\ge5$, $d\ge1/5$.
+The complete message is then bounded by its actual $qf_2$
+terminal. Proposition~\ref{prop:root-post:square-moments}, applied
+to the one pair $(a,b)$ and terminal parameter two, supplies $705/128$.
+
+For a positive root the $w\ge5$ low domain must extend to $1/4$.
+Use instead the $\sigma=2$ row of
+Lemma~\ref{lem:reference-retained-packet}: $m=1-d$,
+$R=(-ka+zkb)u$, $D=d/2$, $a<7/10$, $b<3/5$.
+Its own signed moments give
+$\gamma_3\ge0$, $\gamma_4\ge2d/3$,
+$\gamma_j\ge41d/96$ for $j\ge5$, including the mean index.
+The actual short-window values of \eqref{eq:odd-q:baseline}
+have losses at least $8,6,187/24,47/6$ for $L=1,2,3,4$.
+For $L\ge5$ its base has modulus at most $23/16$ and its
+perturbation at most $(6/5)x^2$. The latter adds less than
+$2091d/800$ to the complete norm payment; the adjacent actual
+losses satisfy $\gamma_{L+1}+\gamma_{L+2}\ge41d/48$.
+Consequently $J_0$ has loss at least $43/6-2091/800$.
+The positive-root comparison of
+Lemma~\ref{lem:odd-complete:positive} saves at least $d$ on
+every one of these rectangles. The weakest resulting loss is
+\begin{equation}\label{eq:odd-q:retained-margin}
+ 49/6-2091/800=13327/2400=11/2+127/2400.
+\end{equation}
+For $w=3,4$ the same comparison gives $3329/512$ and $833/128$.
+
+For the positive-root high domain use the actual reference
+estimate of Proposition~\ref{prop:retained-reference-family},
+$\E[f_a X^4]\le1$ for $X=T^L(qf_2h_w)$, $a\ge3$, $w\ge4$.
+The remaining factor is $f_a^3(h_bf_c)^4$.
+For $(a,b)=(3,4)$ the actual pair loss $69d/20$ and precursor
+norm $3\sqrt d/8$ give $(h_bf_c)^4\le e^{-54d/5}$ on
+$d\ge1/4$. For $b\ge5$ use $16d/5$ and $\sqrt d/4$, with
+the same result. If $a=3$, then $f_3\le3/2$ and
+$3\log(3/2)<5/4\le5d$; if $a\ge4$, $f_a\le1$.
+The complete high-domain loss is therefore at least $29/5$.
+This argument also applies to the canonical $qf_A$ reference
+estimate \eqref{eq:q117-unified:shortone} for $A\ge3$ in the
+following triple rows.
+
+\paragraph{The other single triples.}
+For $F=qf_Ah_C$, the actual exponential first row is
+\eqref{eq:odd-q:row} with $\alpha=-\Gamma$ and $d\le1/4$.
+For $A=3$,
+\[
+ r=-\beta_{C-1}+x^2V+zxU,
+ \qquad 0\le U,V\le1,\quad |r|<3/5,\quad D=7d/20,
+\]
+with the true $G_1=(1,0)$ retained at $C=4$.
+For $A\ge4$ use the actual four-beta packet
+\[
+ r=-c+(-1)^A z^A G_{C-A}(-z),\qquad
+ c=\beta_{C-1}-\beta_{A-1}.
+\]
+Its $(\Gamma/d,D/d,\rho)$ are
+$(51/16,1,3/10)$ at $A=4$,
+$(89/32,2/3,1/4)$ at $A=5$ and
+$(19/8,7/20,1/8)$ at $A\ge6$.
+These are the same actual packets and all signed moment indices
+proved in Sections~\ref{proof:Q5-C172} and~\ref{proof:Q5-C173}.
+Substitution in \eqref{eq:odd-q:baseline}, with zero auxiliary
+curvature, gives the following losses and positive-root increments.
+An increment already includes the saved root loss.
+\[
+\begin{array}{c|ccc|ccc}
+ &\multicolumn{3}{c|}{\text{auxiliary loss}}
+ &\multicolumn{3}{c}{\text{positive-root increment upper}}\\
+ A&L=1&L=2&L\ge3&L=1&L=2&L\ge3\\\hline
+ 3&157/20&159/20&129/20&2/3&0&0\\
+ 4&29/4&173/20&133/20&7/4&121/100&61/160\\
+ 5&57/8&1183/120&959/120&1&121/100&61/160\\
+ A\ge6&41/5&231/20&191/20&5/12&121/100&61/160.
+\end{array}
+\]
+The $A=4,L=1$ increment is strict. Here are the signed
+coordinate charges that prove this table directly.
+At $A=3$, $Q_1$ has real overshoot at most $x^2$;
+its fee is below $119d/72$, before the saved $d$.
+At $L=2$ only the imaginary coordinate may exceed one, by $x^2$;
+its fee is $(17/2)(\theta^4+\theta^5)d<d$.
+Lengths three and four are in the rectangle. Every later tail is
+at most $x^2(1/4+x)$, below the finite partial-sum margins since
+$x(5/4+x)<1$ on $[0,\theta]$.
+At $A=4,L=1$, the real and negative imaginary overshoots are
+at most $\delta_2+x^2$ and $x^2$, respectively. Keeping the
+stronger $-11d/10$ gives the strict increment
+\[
+ -11/10+1547/576+17/168=34009/20160<7/4.
+\]
+At $A=5$ the real overshoot is only $\delta_2$, giving an
+increment below $d$. At $A\ge6$ use the integral norm version
+with $\rho=1/8$, giving $5d/12$.
+At $L=2$ and $L\ge3$ the largest respective perturbations
+$39/200$ and $39/320$ give $121d/100$ and $61d/160$.
+
+For a minimum-one root the $A=3$ polynomials have
+real coordinate nonnegative, imaginary coordinate at most $5/4$
+and norm at most $3\sqrt d/2$. Their $\Phi$ cost is below $3d/5$
+and their $\Psi$ cost is negative. For $A\ge4$ use instead
+$\bar D=4/3$, $R=3/2$ and
+$\Phi(4/3,0,1/4)=3063/4096<3/4$;
+$\Psi(4/3,3/2)<0$. The low-domain losses exceed $705/128$.
+In the high domain $h_C\le1$ in the unchanged direction.
+At a minimum-one root apply
+Proposition~\ref{prop:root-post:square-moments} with terminal
+parameter $A$. At a positive root use
+\eqref{eq:q117-unified:shortone} and the preceding remaining-factor
+payment. The respective losses are $705/128$ and $29/5$.
+
+\paragraph{Every odd multipair terminal of minimum one.}
+Write the ordered residual list as
+$(1,A_1,C_1,\ldots,A_j,C_j)$, $j\ge2$.
+The canonical direction is $qf_{A_1}h_{C_1}\prod_{i\ge2}h_{A_i}f_{C_i}$.
+When $(A_1,C_1,A_2)=(2,3,4)$ use the fixed cross
+$qf_2h_{C_2}h_3f_4\prod_{i\ge3}h_{A_i}f_{C_i}$.
+The single finite mask and its actual first-row moments are those
+of Section~\ref{proof:Q5-C177}. The five records below give
+$d_*$, $\Gamma/d$, $D/d$, a modulus bound $\rho$ for $r$,
+and the complete auxiliary losses at $L=1,2,\ge3$.
+\[
+\begin{array}{c|c|c|c|c|ccc}
+ &d_*&\Gamma/d&D/d&\rho&1&2&\ge3\\\hline
+ \mathrm I:A_1\ge3&1/64&431/80&5/3&1/2&1333/160&659/96&3799/480\\
+ \mathrm {II}:A_1=2,C_1\ge4&1/64&351/80&11/10&2/3&6287/480&1027/96&715/96\\
+ \mathrm {III}:A_1=2,C_1=3,A_2\ge5&1/8&21/5&11/10&3/5&719/60&115/12&47/6\\
+ \mathrm {IV}:\text{cross},j=2&1/8&21/4&11/10&1/2&971/60&827/60&757/60\\
+ \mathrm V:\text{cross},j\ge3&1/8&169/20&7/4&3/5&953/60&983/60&589/30.
+\end{array}
+\]
+The table conservatively keeps the original uniform root-curvature
+fees $5d/96$ or $5d/12$; their actual auxiliary values are zero.
+The same four residue classes prove all finite $\gamma$ signs.
+
+For the minimum-one transfer every $Q_L$ has nonnegative real
+coordinate, imaginary coordinate at most $3/2$ and norm at most
+$8\sqrt d/5$. Indeed the actual $r=A_r+zD_r$ satisfy
+$-2/3\le A_r\le1/2$, $|D_r|\le2/3$.
+For $L=1,2$ use the explicit rows $(1+A_r,D_r)$ and
+$(1-xD_r,1+A_r)$; for $L\ge3$ use
+$1-x-\rho x>0$, $1+\rho\sqrt x<3/2$ and
+$|Q_L|\le1+\rho x<8/5$. Thus $\Phi$ costs less than
+$11d/10$ in I--II and $6d/5$ in III--V, and $\Psi$ costs
+less than $7d/10$ throughout. Every residual loss exceeds
+$705/128$, for example $659/96-11/10=2767/480$.
+
+The positive-root increments are controlled by the same signed
+overshoot functional, as follows:
+\[
+\begin{array}{c|ccc}
+ &L=1&L=2&L\ge3\\\hline
+ \mathrm I&1547/600+17/112-1&4/5&125/96\\
+ \mathrm {II}&-1&-1&-1\\
+ \mathrm {III}&0&0&141/80\\
+ \mathrm {IV}&0&0&125/96\\
+ \mathrm V&29/5&171/50&141/80.
+\end{array}
+\]
+For I, $A_r\le13/50$ and $D_r\in[-1/4,2/3]$.
+At $L=1$ these give the two fees $1547d/600$ and $17d/112$;
+at $L=2$ the real and imaginary overshoots are at most $x/4$
+and $13/50$, giving a fee below $9d/5$ before saving $d$.
+For II, $r=-t+zs$ lies in $[0,2/3]^2$ in its signed coordinates,
+so every finite row is in the rectangle.
+For III, $0\le t\le2/3$, $|s|\le1/5$; the first two fees
+are $17d/140$ and $119d/144$, both below the saved $d$.
+For IV, $0\le t\le19/40$, $-x^2\le s\le19/128$;
+the corresponding fees are $17d/168$ and $17d/24$.
+For longer rows of I, III and IV use the integral norm estimate
+with $\rho x$. For V use that estimate at every length with
+$\rho=3/5$, $\sqrt\theta<13/20$ and $\theta=13/32$.
+Each entry subtracted from its auxiliary loss leaves more than six.
+
+For $d\ge1/64$ every later actual pair with minimum at least
+four is at most $e^{-88d/125}\le1$. Hence I--II compare with
+their first triple. On $d\ge1/8$, III can be written as the
+same product
+\[
+ F=(qf_2h_{A_2})(h_3f_{C_2})\prod_{i\ge3}h_{A_i}f_{C_i};
+\]
+IV--V already have the analogous factors $qf_2h_{C_2}$ and
+$h_3f_4$. The actual centered-row proof gives, on this domain,
+\begin{equation}\label{eq:odd-q:high-three-pair}
+ h_3f_t\le e^{-d},\qquad f_3h_t\le e^{-d},\qquad t\ge4.
+\end{equation}
+For $t\ge5$ its centered fluctuation has absolute value at most
+$\sqrt{a_0^2+\operatorname{Var}U}\le a_0+d$;
+here $U=\sum_{r=3}^{t-1}K^r\one$ and
+$a_0=\beta_{t-1}-\E U=\Gamma_t-2d\ge0$, with
+$\Gamma_t=d+\beta_t+\beta_{t-1}$.
+The centered original row gives this bound for
+$a_0g-K(U-\E U)$, $g=-u$, since its two row coordinates satisfy
+$g^2+pq=1$. The finite $t=5$ row uses
+$8\theta^2(1+\theta)<35/16$, and the $t\ge6$ tail uses
+$\operatorname{Var}U\le\theta^2d\le11d^2/8$.
+At four use $\sqrt{d^2+\delta_3}\le2d$ in the exact arm sum.
+The two literal sums have opposite signs of this same centered
+fluctuation, so its absolute-value bound proves both inequalities.
+The resulting actual comparison is with the canonical triple
+already proved, in the same arm directions. This gives the
+claimed global losses in both root classes.
+
+All parameter intervals include their nonzero endpoints.
+At $d=0$, every vector here vanishes and leaf integration gives
+the value one.

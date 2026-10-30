@@ -1,0 +1,101 @@
+\subsection[The residual pair (2,5)]{The residual pair $(2,5)$}\label{loc:S4}
+Put $P=h_2f_5$, $r=Kg$, $s=K^2g$, $t=K^3g$, $u=K^4g$, and
+\[
+ m=1-(3d-\delta_{2})/2,\qquad R=s+t+u-2dg-dr.
+\]
+The path expansion gives $h_2+f_5=2m+R$ and hence
+$0\le P\le(m+R/2)^2$. Its exact moment data are
+\begin{align*}
+ \E[pR]&=\delta_{3}-d^2,\\
+ M_0^2&=\delta_{2}-\delta_{3}+\delta_{4}+8d^2-2d\delta_{2}+d^3,\\
+ V=\E R^2&=\delta_{3}-\delta_{4}+\delta_{5}+4d\delta_{2}-2d\delta_{3}+4d^3+d^2\delta_{2}.
+\end{align*}
+Here $\|R\|_\infty^2\le M_0^2$ follows by applying the row bound to
+$K[(K+K^2+K^3)g-2d\one-dg]$; the three cross terms are
+$\|(K+K^2+K^3)g\|^2=\delta_{2}-\delta_{3}+\delta_{4}$,
+$\E[(K+K^2+K^3)g]=-d+\delta_{2}$ and
+$\langle g,(K+K^2+K^3)g\rangle=-\delta_{2}$.
+The spectral polynomials
+$x-x^2+x^3-2dx$ and
+$x^2-x^3+x^4-2dx^2+(4d+d^2)x$ increase on $[0,\theta]$:
+their derivatives are $3(x-1/3)^2+2/3-2d$ and
+$x(2-3x+4x^2)+4d(1-x)+d^2$. Consequently
+\[
+ \begin{gathered}
+ M_0^2\le U(d)=\frac{10101}{32768}d+\frac{115}{16}d^2+d^3,\\
+ V/d\le W(d)=\frac{131313}{1048576}+\frac{663}{512}d+
+                  \frac{141}{32}d^2,\qquad
+ V_p\le V+M_0\sqrt{dV}.
+ \end{gathered}
+\]
+Set $a=83/64$, $\tau=169/1024$, $\bar m=1-ad$,
+$\bar L=\tau d-d^2$ and $\delta_{*}=24/83$.
+Then $m\le\bar m$ and $\E[pR]\le\bar L$.
+For $d\le \delta_{*}$ and $k=1,3,6$, the expression
+$m^{2k}+k\bar Lm^{2k-1}$ increases on the permitted range of $m$:
+when $\bar L<0$, its derivative has sign determined by
+$2m+(2k-1)\bar L\ge2-3d-11d^2>0$.
+Thus the three base functions in the first-, third- and sixth-moment
+estimates are
+\[
+ G=\bar m^2+\bar m\bar L,\qquad
+ F=\bar m^5[1-(821/1024)d-3d^2],\qquad
+ H=\bar m^{11}[1-(157/512)d-6d^2].
+\]
+All are convex on $[0,\delta_{*}]$. For $b=157/512$ and $c=821/1024$,
+\begin{align*}
+ H''&=\bar m^9[(110a^2+22ab-12)+(288a-132a^2b)d-936a^2d^2],\\
+ F''&=\bar m^3[(20a^2+10ac-6)+(72a-30a^2c)d-126a^2d^2].
+\end{align*}
+The brackets are positive: use $ab<1$, $ac<4/3$, $a>5/4$ and
+$d^2\le1/9$ to bound them below by $6a^2+22ab-12$ and
+$6a^2+10ac-6$, respectively. Also
+$G=1-(2a-\tau)d+(30661/65536)d^2+ad^3$.
+
+For $d\le1/16$, the exponential criterion uses
+$\Delta=3d-\delta_{2}$ and $D=\Delta-\E[pR]=3d-\delta_{2}-\delta_{3}+d^2$.
+Writing $\rho=\delta_{2}/d$, the bounds $\delta_{3}\ge \delta_{2}^2/d$, $\delta_{4}\le\theta \delta_{3}$
+give
+\[
+ \begin{aligned}
+ (D-3M_0^2)/d&\ge
+ 3-(4-6d)\rho+(2-3\theta)\rho^2-23d-3d^2\\
+ &\ge49281/32768-(329/16)d-3d^2\ge6785/32768.
+ \end{aligned}
+\]
+The intermediate polynomial decreases in $0\le\rho\le\theta$.
+
+For larger $d$, the following rational data, together with the common
+binomial bounds and convexity, suffice. The column $B$ refers to $B_{12}$
+in the first two rows and $B_6$ in the third; in each row use
+$\bar m\le1-a\inf I$. The first-moment rows use $G+V_p/4$ directly.
+\begin{center}
+\begin{tabular}{@{}cccccc@{}}
+\toprule
+$I$ & moment & $M$ & $V_p/d$ & $B$ & endpoint bounds\\\midrule
+$[1/16,3/32]$ & $6$ & $5/16$ & $1/2$ & $14$ & $15/16,\ 95/96$\\
+$[3/32,1/8]$ & $6$ & $2/5$ & $3/5$ & $11$ & $1/3+99/160,\ 1$\\
+$[1/8,3/16]$ & $3$ & $4/7$ & $19/20$ & $3$ & $117/160,\ 235/320$\\
+$[3/16,7/32]$ & $1$ & $13/20$ & $229/200$ & --- & $5/8,\ 5/8$\\
+$[7/32,1/4]$ & $1$ & $3/4$ & $11/8$ & --- & $5/8,\ 5/8$\\
+\bottomrule
+\end{tabular}
+\end{center}
+All upper endpoint bounds in this table are strict. On $[1/4,\delta_{*}]$,
+$M<6/7$, $W<7/8$ and $\sqrt W<15/16$ give
+$V_p<(47/28)d\le282/581<1/2$. Since $\bar L\le0$,
+\[
+ \E[pP]\le\bar m^2+V_p/4<121/256+1/8=153/256<5/8.
+\]
+The pointwise bound used to pass from lower moments
+to the sixth is $P<(22/21)^2$. If $d\ge \delta_{*}$ then
+$P\le4\mu_4\le4[1-(3-\theta)d]\le1$.
+For $d\le \delta_{*}$, put $B(d)=1-ad+\sqrt{U(d)}/2$.
+The polynomial $(U')^2-16a^2U$ has positive coefficients, since
+$115/16-4a^2=471/1024>0$; hence $B$ increases.
+At $\delta_{*}$, $1-a\delta_{*}=5/8$ and
+$U(\delta_{*})<2042113/2858935<(71/84)^2$, giving $B(\delta_{*})<22/21$.
+The preceding third-moment bound is $<3/4$, while the first-moment
+bounds are $<5/8$. Finally use
+$(22/21)^6<4/3$ and $(22/21)^{10}<8/5$, as in the $(2,4)$ case.
+This covers every $d$ and proves $\E[p(h_2f_5)^6]\le1$.

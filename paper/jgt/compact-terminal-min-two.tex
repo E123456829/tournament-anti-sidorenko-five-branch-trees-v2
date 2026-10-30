@@ -1,0 +1,177 @@
+\subsection{Even terminals of minimum two with multiple pairs}\label{loc:S33}
+Let $F=\prod_{i} h_{a_i}f_{b_i}$ with
+$2=a_1<b_1<a_2<\cdots<a_t<b_t$, $t\ge2$.
+We prove $\E[p(T^LF)^4]\le1$ for all $L\ge1$.
+The pair-count reduction of Section~\ref{loc:S29} applies with
+$\kappa_0=\beta_{b_1}$ and $R=K^2Q(K)g$, $Q$ a finite $0/1$ mask
+with constant term one. Here $R^2\le1313d/1600$.
+Thus, writing $m_4=1-d/2-\beta_{b_1}/4$, two positive envelopes of
+the same actual message are
+\[
+ F\le F_0=m_0^2(1+kR/2)^2,\quad m_0=1-d,\quad1\le k=m_4/m_0\le6/5,
+\]
+and, for the one-step comparison,
+\[
+ F\le F_1=m_1^2(1+kR/2)^2,\quad m_1=1-6d/5+d^2/3,
+ \quad1\le k=m_4/m_1\le5/4.
+\]
+Indeed $m_4^2+1313d/25600\le1-82061d/76800\le m_0$,
+and more sharply it is at most $1-31d/25+7d^2/16\le m_1$.
+The upper $k$ bound follows from
+$(5/4)m_1-(1-83d/128)\ge43/3456$.
+
+\proofpart{Signed mask and propagation coefficients}
+At $i\sqrt x$ write $Q=u+i\sqrt xv$.
+Then $a=439/855\le u\le B=1024/855$,
+$-Bx\le v\le B$, $|Q|^2\le101/50$.
+If its linear coefficient is one, both $u,v$ are at least
+$1-x/(1-x^2)$; if it is zero, $v\le Bx^2$.
+For $V=\E R^2$ and $D_j=\E[K'^jR]$, the exact formulas are
+\begin{gather*}
+ V=\int x^2(u^2+xv^2)\le17069d/51200,\\
+ D_{4j}=\int x^{2j+1}v,\quad D_{4j+1}=-\int x^{2j+1}u,\quad
+ D_{4j+2}=-\int x^{2j+2}v,\quad D_{4j+3}=\int x^{2j+2}u,\\
+ \E[pR]=\int x(v-u),\qquad\E[f_2R]=\int x[(1-x)v-u].
+\end{gather*}
+For $k\le6/5$ put $V_n=S'_n+kK'^nR=1+P_n(K')g'$,
+$P_n=G_n-kz^{n+2}Q(-z)$.
+The norms are $\|P_1\|\le13/10$, $\|P_2\|^2\le3/2$,
+$\|P_3\|\le11/10$, $\|P_n\|\le1$ for $n\ge4$.
+For the first two square directly:
+$|P_1|^2=1+2kx^2v+k^2x^3|Q|^2<169/100$ and
+$|P_2|^2=1+x-2kx^2(u-xv)+k^2x^4|Q|^2<3/2$,
+using $u-xv\ge0$. For $n=3$ use
+$1-x/2+8x^2/5\le679/640<11/10$.
+For $n\ge4$ the long-polynomial proof of Section~\ref{loc:S29}
+applies with the smaller perturbation budget
+$U=k\theta\sqrt{101/50}<7/10$.
+
+Set $\sigma=kD_0+k^2V/2$,
+$\delta=k(D_0)_++k^2V/2$, $\omega=-kD_1$, $\varepsilon=\delta-\omega$.
+The prefix distinction gives
+\[
+ 0\le\delta\le33d/40,\quad0\le\omega\le117d/200,
+ \quad\varepsilon\le23d/40,\quad|\varepsilon|\le117d/200.
+\]
+For the linear coefficient one use $D_0+D_1\le \delta_{3}/(1-\theta)$;
+for coefficient zero use $v<u$, retaining the sign of $D_0$.
+Duhamel gives, for $L\ge3$,
+\[
+ T^LF_0/m_0^2\le V_L^*-\sum_{j=3}^Lc_j\bar f_{L-j},\quad
+ V_n^*=S'_n+\delta S'_{n-1}-\omega S'_{n-2}+kK'^nR,
+\]
+where $c_j=\beta_j+\delta\beta_{j-1}-\omega\beta_{j-2}-kD_{j-1}$.
+The coefficient bounds are
+$c_3\ge9d/10$, $c_4\ge3d/4$, $3d/10\le c_j\le7d/5$.
+For $j\ge5$ the lower ratio is at least
+$19/32-39/200-2197/22800=3/10+109/45600$.
+Put $\nu=1+\varepsilon$; then $V_n^*=\nu+N_n(K')g'$.
+The mean losses of $V_n^*$ are
+$\alpha_n=\nu-\E V_n^*=c_{n+1}$ and
+$\eta_n=\E[g'V_n^*]=c_{n+2}$.
+Its centered polynomial is
+$N_n=P_n+\varepsilon G_{n-2}+\delta z^{n-2}$ and satisfies
+\[
+ \|N_2\|\le31/20,\quad\|N_3\|\le11/10+9d/8,
+ \quad\|N_n\|\le1+21d/20\quad(n\ge4).
+\]
+The exceptional $G_2$ at $n=4$ is retained: its correction ratio is
+$(117/200)(6/5)+(33/40)\theta=33189/32000<21/20$.
+For $n\ge5$ the correction is smaller.
+
+\proofpart{All lengths at least two}
+For $L\ge4$ retain $Z=V_L^*-c_L-c_{L-1}q$.
+It has mean at most $1-13d/40$, covariance at least $-d/6$, variance
+at most $(1+21d/20)^2d$, and
+$Z+\E Z\le q+1+3\sqrt d/2$.
+For $L=3$ use $Z=V_3^*-c_3$; its corresponding bounds are
+$1-d$, $3d/10$, $(11/10+9d/8)^2d$, and
+$q+1+31\sqrt d/20$ for the last sum.
+For $L=2$ retain the actual signed quantity
+$Z=V_2+\sigma q-\omega$, rather than replacing $\sigma$ by $\delta$.
+Since $\E[f_2R]\le B\delta_{4}$, its mean is at most $1-13d/20$,
+covariance at least $d/2$, and variance at most
+$3d/2+33d^2/20+1089d^3/1600$.
+For its fourth coefficient, keeping
+$C_y=(33y-59)/40$, $y=q+1$, gives
+\[
+ M\le32/5+117\sqrt d/20+20d/11+26d^{3/2}/33+13d^2/5
+ \le32/5+117\sqrt d/20+16d/5.
+\]
+Here $pC_y\le10/33$, $pC_y^2\le169/200$;
+this retains the dependence on $y$ before bounding.
+For the other lengths the fourth coefficient for a row sum
+$y+\lambda\sqrt d$ is $32/5+(9\lambda/2)\sqrt d+2\lambda^2d$.
+Expanding the original centered fourth identity yields:
+\[
+\begin{array}{c|rrrrrrr}
+ L&[d]&[d^{3/2}]&[d^2]&[d^{5/2}]&[d^3]&[d^{7/2}]&[d^4]\\\hline
+\ge4&173/30&27/4&19&29/2&17&15/2&5\\
+3&11/4&17/2&31&35/2&20&9&25/4\\
+2&5&351/40&22&10&10&4&11/5
+\end{array}
+\]
+Each row bounds the coefficients of $\E[pZ^4]-1$ from above.
+The favorable covariance is retained at $L=3,2$ via $d/4,d/2$;
+the corresponding upper mean endpoints remain positive.
+Compare with the positive Taylor polynomial of $(1-d)^{-8}$ through
+degree four. With $x=\sqrt d\le7/12$, the difference divided by $d$
+is at least, for $L\ge4$, $67/30-27x/4+8x^2\ge6217/7680$;
+for $L=2$, $3-9x+8x^2\ge15/32$.
+For $L=3$ it is at least
+$21/4-17x/2+5x^2-35x^3/2+100x^4-9x^5+1295x^6/4$.
+The first two terms are at least $7/24$; after absorbing $-9x^5$
+the remaining $x^2(5-35x/2+90x^2)$ is positive by its discriminant.
+
+\proofpart{One step: a joint spectral budget}
+Use the stronger envelope $F_1$, $k\le5/4$ and
+$Y=TF_1/m_1^2=q+kD_0-kKR+e$, $e=(k^2/4)(V-K(R^2))$.
+Put
+\[
+ \varepsilon_0=k(D_0+D_1)+k^2V/2,\quad
+ h_{\mathrm{lin}}=d-kD_2,\quad
+ V_{\mathrm{lin}}=d+2k\int x^2v+k^2\int x^3(u^2+xv^2).
+\]
+The essential joint bound is
+\[
+ 4\varepsilon_0-4h_{\mathrm{lin}}+(32/5)V_{\mathrm{lin}}\le143d/20.
+\]
+Its excess over $12d/5$ is the integral of
+\[
+ \Phi=4kx(v-u)+(44/5)kx^2v
+                 +k^2(2x^2+32x^3/5)(u^2+xv^2).
+\]
+This is separately convex on $1/2\le u\le6/5$,
+$-1/2\le v\le6/5$.
+At $v=-1/2$ discard the two negative linear terms and obtain
+$\Phi\le(19/16)(36/25+13/128)<19/4$.
+At $v=6/5$ increase $x,k$ to $\theta,5/4$; the two $u$ endpoints
+give $14723/3200$ and $2939/640$, both below $19/4$.
+This is a full continuous-domain certificate.
+
+The remaining original-row budgets are
+\[
+ V_{\mathrm{lin}}\le171d/100,\quad k^2V/4\le131d/1000,\quad
+ k\sqrt V\le73\sqrt d/100,\quad \sigma\le87d/100.
+\]
+Centering the actual remainder and retaining the mean square yields
+\[
+ \E(Y-1)^2\le V_{\mathrm{lin}}+7d^{3/2}/20+3d^2/2,
+ \quad\E[p(Y-1)]\le\varepsilon_0-h_{\mathrm{lin}}+131d^{3/2}/1000.
+\]
+For the exact expansion around the fixed reference one,
+$\E[pY^4]=1+4\E[p(Y-1)]+
+\E[p(Y-1)^2((Y+1)^2+2)]$, its coefficient is at most
+$32/5+33\sqrt d/10+5d+13d^{3/2}/5+8d^2/5$.
+Use the joint bound only for its constant term; multiplication gives
+\[
+ \E[pY^4]\le1+143d/20+17d^{3/2}/2+39d^2/2
+                  +23d^{5/2}/2+23d^3/2+9d^{7/2}/2+12d^4/5.
+\]
+Positive Taylor terms give
+$m_1^{-8}\ge1+48d/5+40d^2+150d^3+330d^4$,
+using $6d/5-d^2/3\ge49d/45$.
+After absorbing higher odd powers with $x\le7/12$, the difference
+divided by $d$ is at least
+$49/20-17x/2+13x^2\ge1103/1040$.
+This completes the one-step case and hence all lengths.

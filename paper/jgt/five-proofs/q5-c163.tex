@@ -1,0 +1,373 @@
+\subsection{The actual unit-arm curvature for the short-two connector}\label{proof:Q5-C163}
+\paragraph{Q163.0 Original goal, exact new scope, and fixed directions}
+
+The surrounding original Q5 problem is the following. For every nonempty finite
+original tree U having at most five vertices of original degree at least three,
+choose all original edge directions solely from U, before the host, such that
+for every original finite probability measure mu and every real skew kernel K
+with pointwise \(|K|\le 1,\allowbreak \)
+\fitdisplay{
+Z_D=\mathbb E_{\mu^{V(U)}}\prod_{i\to j}(1+K(x_i,x_j))\le1.
+}{}
+Original arm lengths, equal multiplicities, all subdivision vertices, all four
+independent positive core lengths, the original edge count, arbitrary original
+joint-label laws in entropy applications, and noninjective maps are retained.
+We prove the half-tree interface below.
+
+% Replace a pure model-definition block only; keep local root/terminal data.
+Use the original finite-space model and arm messages of
+Section~\ref{sec:odd-common-calculus}.
+When the original \(K\)-notation is used, \(K=-B\) and
+\(g=K\one=-u\); in either notation
+\(\delta_j=\|B^j\one\|_2^2=\|K^j\one\|_2^2\).
+All means, norms, adjoints and spectral integrals use the same
+original probability measure.
+All expectations, adjoints, norms, and finite spectral integrals use the same
+original mu. Until the separate $d=0$ case in \mbox{\hyperref[part:Q163.7]{part Q163.7}}, the proof assumes \(d>0.\)
+
+The original half-tree has root residual arms (1, 2, v), \(v\ge 4,\allowbreak \) and terminal
+residual arms (2, b), \(b\ge 5.\) Its inner connector has exactly two original edges.
+Use the actual, structure-fixed messages
+\fitdisplay{
+F=\bar f_2W_b,\qquad P=h_2f_v,\qquad H=pP\,T^2F.
+}{Q163.0.1}
+The root unit arm is outward, giving \(p=f_1.\) The root length-two arm has its
+first edge toward the root and its other edge away, giving \(h_2\); its length-v
+arm is all outward, giving \(f_v.\) The terminal length-two arm is all inward,
+giving \(\bar f_2\); its length-b arm has its first edge outward and remaining edges
+toward the terminal, giving \(W_b.\) The inner connector is directed from the
+terminal toward the root, giving \(T^2.\) The independent outer connector is
+directed from this root toward its receiving center, giving \(T^M\) for every
+original integer \(M\ge 1.\)
+
+Author theorem T171.1. For every original \(b\ge 5,\allowbreak  v\ge 4,\allowbreak \) and \(M\ge 1,\allowbreak \) the single
+direction (Q163.0.1), including every genuine equal-pair decoration at the two
+original vertices, satisfies
+\fitdisplay{
+\boxed{EH^4\le e^{-25d/4},\qquad
+ I_q(T^M H)^3\le e^{-3d/2},\qquad
+ I_q(Y)=E[q^{-1/3}|Y|^{8/3}].}
+}{Q163.0.2}
+The proof actually gives \(EH^4\le \exp(-6929d/1080).\) In particular it pays the
+previously requested ordinary-fourth loss 45d/8 and outer loss d/4.
+
+\paragraph{Q163.1 Precisely used inputs and finite notation}
+
+Use the finite-space bounds \eqref{eq:odd-common:inputs}, the spectral
+identities \eqref{eq:odd-common:coordinates}, and the finite convolution
+\eqref{eq:Q188:conv}. The fourth signed-mean bound is
+\eqref{eq:oc:signed-moments}, proved in Section~\ref{part:Q81.2};
+it applies to every original real vector, with its signed mean.
+Section~\ref{proof:Q5-C084} gives the ordinary, unanchored outlet
+\fitdisplay{
+ I_q(T^M H)^3\le e^{11d}(\E|H|^4)^2\qquad(M\ge1).
+}{Q163.1.2}
+
+For \(G_n=E_n+zD_n\), the finite coordinate ranges and
+\(|G_n|\le1\) at \(n\ge3\) are
+Lemma~\ref{lem:odd-common:spectral}. Here the root index is at least
+two and the terminal index at least three, so \(G_1\) does not occur.
+The genuine \(G_2\) square remains \(1+x\).
+The following proof uses its own Taylor coefficient and its own
+\(\epsilon,\delta\) and joint-norm estimates.
+
+\paragraph{Q163.2 The same actual terminal and a sharper whole-domain Taylor coefficient}\label{part:Q163.2}
+
+Let \(k=b-2\ge 3\) and write
+\fitdisplay{
+G_k=A+zC,\quad \gamma=\beta_{b-1}=\int C,\quad
+ \Gamma=\beta_b+\gamma=\int(A+C).
+}{}
+Thus A, C are in [1-x, 1], gamma lies in [kappa d, d], and
+\(\Gamma\ge2\kappa d\).
+
+To verify the actual envelope, apply A to the \(\bar f_{b-1}\) convolution while
+retaining its original \(\beta_{b-1} \bar f_0\) term. Since \(A1=p\) and
+\(E(1+G_{b-1}(B)u)=1-\beta_b\),
+\fitdisplay{
+W_b\le1-\beta_b-u-BG_{b-1}(B)u-\gamma p.
+}{}
+As \(\bar f_2=1+u+Bu\) and \(G_{b-1}=1+zG_k\), their sum satisfies
+\fitdisplay{
+\bar f_2+W_b\le2-\Gamma+R,\qquad
+ R=\gamma u-B^2G_k(B)u=(\gamma+xA+zxC)u.
+}{}
+The two messages are genuine and nonnegative. AM-GM and \(1+t\le e^t\) therefore
+give
+\fitdisplay{
+\boxed{F=\bar f_2W_b\le e^{R-\Gamma}.}
+}{Q163.2.1}
+
+The improvement specific to \(b\ge 5\) is the actual finite contraction
+\(|G_k|\le1\). The original row bound yields
+\fitdisplay{
+|R|\le d+\|BG_k(B)u\|\le d+\sqrt{\delta_2}
+ \le1/3+\sqrt{13/96}<1/3+3/8=17/24<3/4.
+}{Q163.2.2}
+The strict square comparison is \(13/96<9/64.\)
+
+For \(0\le t\le 3/4,\allowbreak \) the positive Taylor series gives
+\fitdisplay{
+{e^t-1-t\over t^2}
+ \le {1\over2}+{t\over6}+{t^2\over24(1-t/5)}
+ \le {1\over2}+{1\over8}+{15\over544}
+ ={355\over544}<{2\over3}.
+}{Q163.2.3}
+Here the \(n\ge 4\) remainder is bounded using its successive ratio at most t/5.
+The last rational comparison is \(1065<1088.\) At \(t=0\) use continuity.
+For \(t\le 0,\allowbreak \) the integral Taylor remainder is at most \(t^2/2.\) Hence the same
+actual R, everywhere on every original host, obeys
+\fitdisplay{
+e^R\le1+R+(2/3)R^2.
+}{Q163.2.4}
+This is \(\eta=4/3,\allowbreak \) not C160's \(\eta=3/2.\) Only an analysis bound changes;
+the original terminal F and all its edge directions remain the same.
+
+\paragraph{Q163.3 Actual moments, epsilon loss, and the real constant}
+
+For this same R define
+\fitdisplay{
+\sigma=ER^2,\quad D_j=EB^jR,\quad
+ \delta=D_0+(4/3)\sigma,\quad\epsilon=\delta+D_1.
+}{}
+The exact finite identities are
+\fitdisplay{
+\begin{aligned}
+ \sigma&=\gamma^2d+2\gamma\int xA
+                  +\int x^2(A^2+xC^2),\\
+ D_0&=-\int xC,\qquad
+ D_1=-\gamma d-\int xA,\qquad
+ D_2=\int x^2C.
+ \end{aligned}
+}{Q163.3.1}
+Since \(|G_k|^2=A^2+xC^2\le1\),
+\fitdisplay{
+\sigma\le\gamma^2d+2\gamma\int xA+\delta_3.
+}{Q163.3.2}
+No gamma, delta, or sigma is being substituted from a different vector.
+
+\paragraph{Q163.3.1 A uniform negative epsilon}
+
+Let \(X_A= \int xA\), \(X_C= \int xC\).
+Using (Q163.3.1)--(Q163.3.2),
+\fitdisplay{
+\epsilon\le d[-\gamma+(4/3)\gamma^2]
+       +[(8/3)\gamma-1]X_A-X_C+(4/3)\delta_3.
+}{}
+The first term is nonpositive. Since \(\gamma\le 1/3,\allowbreak \) the coefficient of \(X_A\)
+is at most -\(1/9.\) Also \(X_A,\allowbreak  X_C\ge \kappa \delta_2\) and \(\delta_3\le \theta \delta_2.\) Therefore
+\fitdisplay{
+\boxed{\epsilon\le
+  -\left({10\kappa\over9}-{4\theta\over3}\right)\delta_2
+  =-{17\over144}\delta_2\le0.}
+}{Q163.3.3}
+This is valid on the entire host domain, without a split at \(d=1/8.\)
+
+\paragraph{Q163.3.2 A sufficient delta bound with a short continuous proof}
+
+The lower bound is immediate: \(\delta\ge -X_C\ge -\delta_2.\) For the upper bound,
+\fitdisplay{
+\delta\le {4\over3}d^3+
+       \left({8\over3}d-\kappa+{4\theta\over3}\right)\delta_2.
+}{}
+The parenthesized coefficient is first bounded from above by the positive
+constant \(241/288\); only then is \(\delta_2\le \theta\) d used.  Since \(d^2\le 1/9,\allowbreak \)
+\fitdisplay{
+{\delta\over d}\le {4\over27}+{241\theta\over288}
+ ={4\over27}+{3133\over9216}<{3\over20}+{7\over20}={1\over2}.
+}{Q163.3.4}
+The two last comparisons are \(80<81\) and \(62660<64512.\)
+Consequently
+\fitdisplay{
+\boxed{-\delta_2\le\delta<d/2.}
+}{Q163.3.5}
+
+\paragraph{Q163.4 Exact two-edge propagation and the entire original root pair}
+
+The positive T kernel is at most two, so \(T(R^2)\le2\sigma\).
+Applying T to (Q163.2.1) and then using (Q163.2.4),
+\fitdisplay{
+TF\le e^{-\Gamma}(q+\delta+BR).
+}{}
+A second actual application of T gives
+\fitdisplay{
+T^2F\le e^{-\Gamma}Y,\qquad
+ Y=1+u+\epsilon+B V_2,\qquad V_2=\delta\one+u+BR.
+}{Q163.4.1}
+Indeed \(T\bar f_{1}=\bar f_2=1+u+Bu\) and \(TBR=D_1+B^2R\).
+The right side is strictly positive on every positive-mass atom because
+it dominates the actual positive message \(T^2F.\) In particular log Y is legal.
+
+Let \(m=v-2\ge 2,\allowbreak  G_m=E+zD\), and
+\fitdisplay{
+\beta=\beta_{v-1}=\int D,\qquad \beta_v=\int E.
+}{}
+For the root, retain the actual \(\beta_v f_0\) and \(\beta_{v-1} f_1\) terms in
+the positive convolution for \(f_v.\) Since \(h_2=1+u-Bu\) and
+\(G_v(-B)=1-B+B^2G_m(-B)\), one obtains
+\fitdisplay{
+h_2+f_v\le2-\beta_v-\beta
+             -B^2G_m(-B)u+\beta u.
+}{}
+Thus the entire actual root pair obeys
+\fitdisplay{
+\boxed{P=h_2f_v\le
+  \exp\{-\beta_v-\beta+B V_{\rm root}\},\quad
+  V_{\rm root}=-BG_m(-B)u+\beta\one.}
+}{Q163.4.2}
+The actual root unit p remains separate.
+
+Its true scalar-plus-mean loss is
+\fitdisplay{
+\ell_{\rm root}=\beta_v+\beta-\int xD.
+}{}
+If m is even then \(E=D,\allowbreak \) so
+\fitdisplay{
+\ell_{\rm root}=\int(2-x)D
+   \ge(2-\theta)(1-\theta)d={969\over1024}d.
+}{}
+If m is odd then \(E=1-xD,\allowbreak \) so
+\fitdisplay{
+\ell_{\rm root}=d+\int(1-2x)D
+   \ge[1+(1-2\theta)(1-\theta)]d
+   ={569\over512}d>{969\over1024}d.
+}{}
+Therefore, for every actual finite \(v\ge 4,\allowbreak \)
+\fitdisplay{
+\boxed{\ell_{\rm root}\ge(969/1024)d.}
+}{Q163.4.3}
+The even minimum \(m=2,\allowbreak \) namely \(v=4,\allowbreak \) is included literally.
+
+Combining the vectors in (Q163.4.1)--(Q163.4.2), define the genuine joint polynomial
+vector Q and real scalar c by
+\fitdisplay{
+Q=[1-xD-x^2C+z(\gamma+xA-E)]u,\qquad
+ c=\delta+\beta,\qquad V_2+V_{\rm root}=Q+c1.
+}{Q163.4.4}
+From (Q163.3.5), \(\beta\ge \kappa\) d, \(\beta\le d,\allowbreak \) and \(\delta_2\le \theta\) d,
+\fitdisplay{
+\boxed{(3/16)d\le c<(3/2)d\quad(d>0).}
+}{Q163.4.5}
+In particular c is not zero, and no orthogonality between the constant
+vector and Q may be assumed.
+
+The two means are
+\fitdisplay{
+EQ=\int E-\gamma d-\int xA,\qquad
+ E(BQ)=-d+\int xD+\int x^2C.
+}{Q163.4.6}
+Since \(Eu=0,\allowbreak  E[B(Q+c1)]=E(BQ)\), even though \(EQ\) need not vanish.
+The full squared norm remains exactly
+\fitdisplay{
+\|Q+c1\|^2=\|Q\|^2+c^2+2c\,EQ.
+}{Q163.4.7}
+The next section pays the pointwise contribution c B1 in full before
+applying the exponential lemma.
+
+\paragraph{Q163.5 The original unit arm pays the constant contribution}
+
+Apply \eqref{eq:oc:unit-log} to the actual \(p\).
+Using \(\log Y\le Y-1\) in (Q163.4.1)--(Q163.4.2) and the exact
+vector (Q163.4.4), set \(a=-\Gamma+\epsilon-\beta_v-\beta\). Then
+\fitdisplay{
+ \log H\le a+BQ+cu-(3/10)u^2.
+}{Q163.5.3}
+Lemma~\ref{lem:odd-common:fourth}, with its real coefficient \(c\), gives
+\fitdisplay{
+ \boxed{\log\E H^4\le4S+(17/4)\|Q\|^2+(10/3)c^2,}
+ \qquad S=a+\E(BQ).
+}{Q163.5.5}
+The pointwise square \eqref{eq:oc:unit-square} pays the entire
+\(cu\) term before the exponential estimate is applied to \(Q\).
+This keeps the signed mean from (Q163.4.6),
+\[
+ S=-\Gamma+\epsilon-d+D_2-\ell_{\rm root}.
+\]
+Thus (Q163.3.3), \(D_2\le\delta_3\le\theta^2d\),
+(Q163.4.3), and \(\Gamma\ge2\kappa d\) give
+\fitdisplay{
+ \boxed{S\le-{95\over32}d-{17\over144}\delta_2.}
+}{Q163.5.6}
+Here \(2\kappa+1-\theta^2+969/1024=95/32\).
+
+\paragraph{Q163.6 A strengthened joint norm, on the full continuous frequency interval}
+
+Write the two coordinates of Q as
+\fitdisplay{
+R_0=1-xD-x^2C,\qquad I_0=\gamma+xA-E.
+}{}
+The actual finite-coordinate ranges imply
+\fitdisplay{
+0<1-x-x^2\le R_0\le1-x+x^3.
+}{}
+Also \(I_0\ge x(1-x)-1=-(1-x+x^2)\). On the other side,
+\(I_0\le1/3+2x-1\le7/48\), whereas \(1-x+x^2\ge3/4\).
+Consequently
+\fitdisplay{
+|I_0|\le1-x+x^2.
+}{}
+These inequalities use \(\gamma\le 1/3\) and are valid on the entire original
+domain, not just on \(d\le 1/8.\) Thus
+\fitdisplay{
+\|Q\|^2\le\int
+   [1-x-x^2+5x^3-4x^4+x^5+x^6].
+}{Q163.6.1}
+
+The following single continuous polynomial estimate pays a useful loss:
+\fitdisplay{
+1-x-x^2+5x^3-4x^4+x^5+x^6\le1-(4/5)x
+ \quad(0\le x\le13/32).
+}{Q163.6.2}
+After subtracting the right side and dividing by \(x>0,\allowbreak \) it is enough to
+check
+\fitdisplay{
+h(x)=-1/5-x+5x^2-4x^3+x^4+x^5\le0.
+}{}
+Now
+\fitdisplay{
+h''(x)=10-24x+12x^2+20x^3\ge10-24\theta=1/4>0.
+}{}
+A convex function is bounded above by its endpoint chord. The two actual
+endpoint values are
+\fitdisplay{
+h(0)=-1/5,\qquad h(13/32)
+       =-{1835407\over167772160}<0.
+}{}
+This proves (Q163.6.2) throughout the interval; \(x=0\) follows directly.
+Therefore
+\fitdisplay{
+\boxed{\|Q\|^2\le d-(4/5)\delta_2.}
+}{Q163.6.3}
+The vector Q contains the root and terminal polynomials together.
+
+\paragraph{Q163.7 Complete scalar payment and all outer lengths}\label{part:Q163.7}
+
+Insert (Q163.4.5), (Q163.5.6), and (Q163.6.3) into (Q163.5.5):
+\fitdisplay{
+\begin{aligned}
+ \log EH^4
+ &\le-{95\over8}d-{17\over36}\delta_2
+      +{17\over4}d-{17\over5}\delta_2+{15\over2}d^2\\
+ &=-{61\over8}d-{697\over180}\delta_2+{15\over2}d^2\\
+ &\le-{61\over8}d+{653\over180}d^2\\
+ &\le-{6929\over1080}d
+ <-{25\over4}d\quad(d>0).
+ \end{aligned}
+}{Q163.7.1}
+The last two steps use only the original moment inequality \(\delta_2\ge d^2\)
+and the original \(d\le 1/3.\) The exact final excess over \(25/4\) is
+\(179/1080>0.\) Hence the ordinary-fourth claim in (Q163.0.2) is proved.
+
+By the exact C084 interface (Q163.1.2), for every independent original
+outer length \(M\ge 1,\allowbreak \)
+\fitdisplay{
+I_q(T^M H)^3
+ \le e^{11d}(EH^4)^2
+ \le e^{(11-25/2)d}=e^{-3d/2}.
+}{Q163.7.2}
+This is the ordinary-fourth-to-Iq outlet.
+
+At \(d=0,\allowbreak  u=B\one=0\) on every positive-mass atom. Original leaf integration
+makes all actual tree messages equal to one, even when B is not zero.
+Thus \(H=1,\allowbreak  q=1\) and both (Q163.0.2) inequalities hold with equality.
+No part of the direction changes at that boundary.

@@ -1,0 +1,1005 @@
+{
+  "scope": "Current manuscript navigation only",
+  "results": [
+    {
+      "kind": "theorem",
+      "number": "1.1",
+      "label": "thm:main",
+      "complete_page": 9,
+      "file": "sec-introduction-five.tex",
+      "start_line": 23,
+      "end_line": 27,
+      "source_lf_sha256": "68085f7acf49cf918119fe4885d89a3e378226a84a2fb735b78bd6808a82a09a"
+    },
+    {
+      "kind": "theorem",
+      "number": "1.2",
+      "label": "thm:kernel",
+      "complete_page": 9,
+      "file": "sec-introduction-five.tex",
+      "start_line": 38,
+      "end_line": 46,
+      "source_lf_sha256": "68085f7acf49cf918119fe4885d89a3e378226a84a2fb735b78bd6808a82a09a"
+    },
+    {
+      "kind": "theorem",
+      "number": "3.1",
+      "label": "thm:four",
+      "complete_page": 12,
+      "file": "sec-four-foundation.tex",
+      "start_line": 4,
+      "end_line": 8,
+      "source_lf_sha256": "5eb5d1259219ab7bcc2592b993f95e83167408bdab22f56cf872b2a5333b99ca"
+    },
+    {
+      "kind": "lemma",
+      "number": "2.1",
+      "label": "lem:weighted-interface",
+      "complete_page": 11,
+      "file": "sec-preliminaries.tex",
+      "start_line": 48,
+      "end_line": 54,
+      "source_lf_sha256": "6d3bb33179b174176efe15b64343d22cbbe907f3ee1512b96363320346cf7caa"
+    },
+    {
+      "kind": "lemma",
+      "number": "2.2",
+      "label": "lem:spidersecond",
+      "complete_page": 11,
+      "file": "sec-preliminaries.tex",
+      "start_line": 63,
+      "end_line": 65,
+      "source_lf_sha256": "6d3bb33179b174176efe15b64343d22cbbe907f3ee1512b96363320346cf7caa"
+    },
+    {
+      "kind": "theorem",
+      "number": "3.2",
+      "label": "thm:four-kernel",
+      "complete_page": 12,
+      "file": "sec-four-foundation.tex",
+      "start_line": 9,
+      "end_line": 13,
+      "source_lf_sha256": "5eb5d1259219ab7bcc2592b993f95e83167408bdab22f56cf872b2a5333b99ca"
+    },
+    {
+      "kind": "lemma",
+      "number": "4.1",
+      "label": "lem:reduction",
+      "complete_page": 13,
+      "file": "sec-geometry.tex",
+      "start_line": 15,
+      "end_line": 17,
+      "source_lf_sha256": "b657f8a88510d71c0b2fc7314d25e8260bb27cd1d15a8bbc57ead70f6354d8ec"
+    },
+    {
+      "kind": "theorem",
+      "number": "5.1",
+      "label": "thm:terminal",
+      "complete_page": 13,
+      "file": "sec-terminal-catalogue.tex",
+      "start_line": 4,
+      "end_line": 14,
+      "source_lf_sha256": "dbd53c79b54185443de2f94992b42fb5dcf285db52345ddf8baaca4677008407"
+    },
+    {
+      "kind": "lemma",
+      "number": "6.1",
+      "label": "lem:halftree",
+      "complete_page": 15,
+      "file": "sec-four-chain.tex",
+      "start_line": 6,
+      "end_line": 14,
+      "source_lf_sha256": "4d6567634c3b58afe0467a172675506b3c31c2ca26df9a26cfc01adc64e6a76a"
+    },
+    {
+      "kind": "lemma",
+      "number": "8.1",
+      "label": "lem:five-reduction",
+      "complete_page": 20,
+      "file": "sec-five-geometry.tex",
+      "start_line": 14,
+      "end_line": 17,
+      "source_lf_sha256": "93264e0058034d8765d020f84c4e57335ccb184815da53d8ee5fbd75af81be16"
+    },
+    {
+      "kind": "proposition",
+      "number": "9.1",
+      "label": "prop:five-reference",
+      "complete_page": 21,
+      "file": "sec-five-inputs.tex",
+      "start_line": 14,
+      "end_line": 24,
+      "source_lf_sha256": "46b53b84ba744e36c35f344ac9cc3a3cc2e9a9e923d485610dcc0da6f2aed8ac"
+    },
+    {
+      "kind": "proposition",
+      "number": "9.2",
+      "label": "prop:five-ordinary",
+      "complete_page": 21,
+      "file": "sec-five-inputs.tex",
+      "start_line": 39,
+      "end_line": 49,
+      "source_lf_sha256": "46b53b84ba744e36c35f344ac9cc3a3cc2e9a9e923d485610dcc0da6f2aed8ac"
+    },
+    {
+      "kind": "proposition",
+      "number": "9.3",
+      "label": "prop:five-compound",
+      "complete_page": 21,
+      "file": "sec-five-inputs.tex",
+      "start_line": 74,
+      "end_line": 77,
+      "source_lf_sha256": "46b53b84ba744e36c35f344ac9cc3a3cc2e9a9e923d485610dcc0da6f2aed8ac"
+    },
+    {
+      "kind": "proposition",
+      "number": "9.4",
+      "label": "prop:five-outlet",
+      "complete_page": 22,
+      "file": "sec-five-inputs.tex",
+      "start_line": 121,
+      "end_line": 128,
+      "source_lf_sha256": "46b53b84ba744e36c35f344ac9cc3a3cc2e9a9e923d485610dcc0da6f2aed8ac"
+    },
+    {
+      "kind": "corollary",
+      "number": "12.1",
+      "label": "cor:entropy",
+      "complete_page": 29,
+      "file": "sec-five-completion.tex",
+      "start_line": 38,
+      "end_line": 46,
+      "source_lf_sha256": "bd17eea9cc9491c6dd3e9a9d41981598e65656d2d7cd9ff08138343c33111b2d"
+    },
+    {
+      "kind": "lemma",
+      "number": "A.2",
+      "label": "lem:reference-coefficient-nine",
+      "complete_page": 39,
+      "file": "app-local-calculus.tex",
+      "start_line": 218,
+      "end_line": 241,
+      "source_lf_sha256": "2523f0dac22ffe243135731ccf88b413f66e6e829d79a719ea2b1cdf007c1d13"
+    },
+    {
+      "kind": "lemma",
+      "number": "A.1",
+      "label": "lem:bernstein-certificate",
+      "complete_page": 39,
+      "file": "polynomial-certificates.tex",
+      "start_line": 8,
+      "end_line": 30,
+      "source_lf_sha256": "af7482b6a24f48ad88a058927a697ff346391a8c44b2d42a63aff231dfa76f38"
+    },
+    {
+      "kind": "theorem",
+      "number": "C.1",
+      "label": "q3:thm:main",
+      "complete_page": 42,
+      "file": "sec-three-branches.tex",
+      "start_line": 4,
+      "end_line": 6,
+      "source_lf_sha256": "89827e29554b7ce2633cb2d7fdd5f9eb8f255759f1fa6b52c2e7f7beadea1968"
+    },
+    {
+      "kind": "theorem",
+      "number": "C.2",
+      "label": "q3:thm:kernel",
+      "complete_page": 42,
+      "file": "sec-three-branches.tex",
+      "start_line": 7,
+      "end_line": 9,
+      "source_lf_sha256": "89827e29554b7ce2633cb2d7fdd5f9eb8f255759f1fa6b52c2e7f7beadea1968"
+    },
+    {
+      "kind": "proposition",
+      "number": "C.3",
+      "label": "q3:prop:canonical",
+      "complete_page": 42,
+      "file": "sec-three-branches.tex",
+      "start_line": 11,
+      "end_line": 21,
+      "source_lf_sha256": "89827e29554b7ce2633cb2d7fdd5f9eb8f255759f1fa6b52c2e7f7beadea1968"
+    },
+    {
+      "kind": "proposition",
+      "number": "C.4",
+      "label": "q3:prop:operators",
+      "complete_page": 42,
+      "file": "sec-three-branches.tex",
+      "start_line": 24,
+      "end_line": 32,
+      "source_lf_sha256": "89827e29554b7ce2633cb2d7fdd5f9eb8f255759f1fa6b52c2e7f7beadea1968"
+    },
+    {
+      "kind": "lemma",
+      "number": "C.5",
+      "label": "q3:lem:momentpack",
+      "complete_page": 43,
+      "file": "sec-three-branches.tex",
+      "start_line": 35,
+      "end_line": 40,
+      "source_lf_sha256": "89827e29554b7ce2633cb2d7fdd5f9eb8f255759f1fa6b52c2e7f7beadea1968"
+    },
+    {
+      "kind": "theorem",
+      "number": "C.6",
+      "label": "q3:thm:endpoints",
+      "complete_page": 43,
+      "file": "sec-three-branches.tex",
+      "start_line": 58,
+      "end_line": 64,
+      "source_lf_sha256": "89827e29554b7ce2633cb2d7fdd5f9eb8f255759f1fa6b52c2e7f7beadea1968"
+    },
+    {
+      "kind": "lemma",
+      "number": "D.1",
+      "label": "q3:lem:spectral",
+      "complete_page": 45,
+      "file": "app-three-foundations.tex",
+      "start_line": 5,
+      "end_line": 17,
+      "source_lf_sha256": "e9423ea76caab983d1fd26bd86e8fc2c467c81eeae0843c5db141e1e99121692"
+    },
+    {
+      "kind": "lemma",
+      "number": "D.2",
+      "label": "q3:lem:weightedpathcube",
+      "complete_page": 47,
+      "file": "app-three-foundations.tex",
+      "start_line": 66,
+      "end_line": 71,
+      "source_lf_sha256": "e9423ea76caab983d1fd26bd86e8fc2c467c81eeae0843c5db141e1e99121692"
+    },
+    {
+      "kind": "lemma",
+      "number": "D.3",
+      "label": "q3:lem:pairmoments",
+      "complete_page": 48,
+      "file": "app-three-foundations.tex",
+      "start_line": 146,
+      "end_line": 148,
+      "source_lf_sha256": "e9423ea76caab983d1fd26bd86e8fc2c467c81eeae0843c5db141e1e99121692"
+    },
+    {
+      "kind": "lemma",
+      "number": "D.4",
+      "label": "q3:lem:shortpaircubes",
+      "complete_page": 49,
+      "file": "app-three-foundations.tex",
+      "start_line": 165,
+      "end_line": 175,
+      "source_lf_sha256": "e9423ea76caab983d1fd26bd86e8fc2c467c81eeae0843c5db141e1e99121692"
+    },
+    {
+      "kind": "lemma",
+      "number": "F.1",
+      "label": "q3:lem:tiltedcubic",
+      "complete_page": 61,
+      "file": "app-three-odd-roots.tex",
+      "start_line": 40,
+      "end_line": 46,
+      "source_lf_sha256": "fd9dc9b42e47985897eae7fa7687892678660e56cd559cca197847108be4ecf0"
+    },
+    {
+      "kind": "lemma",
+      "number": "M.1",
+      "label": "lem:odd-common:spectral",
+      "complete_page": 168,
+      "file": "five-common/odd-common-calculus.tex",
+      "start_line": 37,
+      "end_line": 66,
+      "source_lf_sha256": "d4e17e5011d240aad51c32aa1564d7c5bd3494727ed4cb8be91449779547e864"
+    },
+    {
+      "kind": "lemma",
+      "number": "M.2",
+      "label": "lem:odd-common:mask",
+      "complete_page": 168,
+      "file": "five-common/odd-common-calculus.tex",
+      "start_line": 90,
+      "end_line": 100,
+      "source_lf_sha256": "d4e17e5011d240aad51c32aa1564d7c5bd3494727ed4cb8be91449779547e864"
+    },
+    {
+      "kind": "lemma",
+      "number": "M.3",
+      "label": "lem:odd-common:joint-paths",
+      "complete_page": 168,
+      "file": "five-common/odd-common-calculus.tex",
+      "start_line": 111,
+      "end_line": 117,
+      "source_lf_sha256": "d4e17e5011d240aad51c32aa1564d7c5bd3494727ed4cb8be91449779547e864"
+    },
+    {
+      "kind": "lemma",
+      "number": "M.4",
+      "label": "lem:short-one:packet",
+      "complete_page": 169,
+      "file": "five-common/short-one-packet.tex",
+      "start_line": 9,
+      "end_line": 100,
+      "source_lf_sha256": "5affcda856c677dcf57ecdafc0e66c4c998a0874608835b6b4b8834df25e57de"
+    },
+    {
+      "kind": "lemma",
+      "number": "M.5",
+      "label": "lem:short-one:exponential",
+      "complete_page": 172,
+      "file": "five-common/short-one-packet.tex",
+      "start_line": 259,
+      "end_line": 288,
+      "source_lf_sha256": "5affcda856c677dcf57ecdafc0e66c4c998a0874608835b6b4b8834df25e57de"
+    },
+    {
+      "kind": "lemma",
+      "number": "M.6",
+      "label": "lem:reference-common:receiving",
+      "complete_page": 173,
+      "file": "five-common/reference-receiving-calculus.tex",
+      "start_line": 38,
+      "end_line": 61,
+      "source_lf_sha256": "755ddc070187f812faa19ee848499066f1be3dd4edbe36d037fab40266557149"
+    },
+    {
+      "kind": "lemma",
+      "number": "M.7",
+      "label": "lem:reference-common:fourth",
+      "complete_page": 174,
+      "file": "five-common/reference-receiving-calculus.tex",
+      "start_line": 88,
+      "end_line": 112,
+      "source_lf_sha256": "755ddc070187f812faa19ee848499066f1be3dd4edbe36d037fab40266557149"
+    },
+    {
+      "kind": "lemma",
+      "number": "M.8",
+      "label": "lem:reference-common:mass-transfer",
+      "complete_page": 174,
+      "file": "five-common/reference-receiving-calculus.tex",
+      "start_line": 135,
+      "end_line": 143,
+      "source_lf_sha256": "755ddc070187f812faa19ee848499066f1be3dd4edbe36d037fab40266557149"
+    },
+    {
+      "kind": "lemma",
+      "number": "M.9",
+      "label": "lem:unit-retained-pair",
+      "complete_page": 175,
+      "file": "five-common/retained-reference-packets.tex",
+      "start_line": 8,
+      "end_line": 49,
+      "source_lf_sha256": "82281b085dd997a747fd4be8b9e16b4270e63aa90f746b41f06e9ebccd1e8f70"
+    },
+    {
+      "kind": "lemma",
+      "number": "M.10",
+      "label": "lem:reference-retained-packet",
+      "complete_page": 176,
+      "file": "five-common/retained-reference-packets.tex",
+      "start_line": 82,
+      "end_line": 120,
+      "source_lf_sha256": "82281b085dd997a747fd4be8b9e16b4270e63aa90f746b41f06e9ebccd1e8f70"
+    },
+    {
+      "kind": "lemma",
+      "number": "M.11",
+      "label": "lem:reference-retained:continuation",
+      "complete_page": 177,
+      "file": "five-common/retained-reference-packets.tex",
+      "start_line": 230,
+      "end_line": 244,
+      "source_lf_sha256": "82281b085dd997a747fd4be8b9e16b4270e63aa90f746b41f06e9ebccd1e8f70"
+    },
+    {
+      "kind": "lemma",
+      "number": "M.12",
+      "label": "lem:reference-retained:strong-norm",
+      "complete_page": 178,
+      "file": "five-common/retained-reference-packets.tex",
+      "start_line": 253,
+      "end_line": 262,
+      "source_lf_sha256": "82281b085dd997a747fd4be8b9e16b4270e63aa90f746b41f06e9ebccd1e8f70"
+    },
+    {
+      "kind": "lemma",
+      "number": "M.13",
+      "label": "lem:reference-retained:short-norms",
+      "complete_page": 178,
+      "file": "five-common/retained-reference-packets.tex",
+      "start_line": 304,
+      "end_line": 318,
+      "source_lf_sha256": "82281b085dd997a747fd4be8b9e16b4270e63aa90f746b41f06e9ebccd1e8f70"
+    },
+    {
+      "kind": "lemma",
+      "number": "M.14",
+      "label": "lem:retained-reference-payments",
+      "complete_page": 179,
+      "file": "five-common/retained-reference-payments.tex",
+      "start_line": 3,
+      "end_line": 35,
+      "source_lf_sha256": "7b55f32fa8d3c6fd0988a341b8fec71c06e7dcd4a04292048a37315adb4f59e9"
+    },
+    {
+      "kind": "lemma",
+      "number": "M.15",
+      "label": "lem:oc:finite-continuation",
+      "complete_page": 180,
+      "file": "five-common/unit-two-step-transport.tex",
+      "start_line": 23,
+      "end_line": 28,
+      "source_lf_sha256": "079e6165b78f2ecdd7e811d0d8f679383e78339036148bada57f797d93101495"
+    },
+    {
+      "kind": "lemma",
+      "number": "M.16",
+      "label": "lem:unit-two-step:exponential-envelope",
+      "complete_page": 180,
+      "file": "five-common/unit-two-step-transport.tex",
+      "start_line": 35,
+      "end_line": 39,
+      "source_lf_sha256": "079e6165b78f2ecdd7e811d0d8f679383e78339036148bada57f797d93101495"
+    },
+    {
+      "kind": "lemma",
+      "number": "M.17",
+      "label": "lem:unit-two-step:unit-log",
+      "complete_page": 181,
+      "file": "five-common/unit-two-step-transport.tex",
+      "start_line": 46,
+      "end_line": 51,
+      "source_lf_sha256": "079e6165b78f2ecdd7e811d0d8f679383e78339036148bada57f797d93101495"
+    },
+    {
+      "kind": "theorem",
+      "number": "M.18",
+      "label": "thm:unit-two-step-transport",
+      "complete_page": 181,
+      "file": "five-common/unit-two-step-transport.tex",
+      "start_line": 59,
+      "end_line": 138,
+      "source_lf_sha256": "079e6165b78f2ecdd7e811d0d8f679383e78339036148bada57f797d93101495"
+    },
+    {
+      "kind": "corollary",
+      "number": "M.19",
+      "label": "cor:unit-two-step:output",
+      "complete_page": 182,
+      "file": "five-common/unit-two-step-transport.tex",
+      "start_line": 200,
+      "end_line": 208,
+      "source_lf_sha256": "079e6165b78f2ecdd7e811d0d8f679383e78339036148bada57f797d93101495"
+    },
+    {
+      "kind": "corollary",
+      "number": "M.20",
+      "label": "cor:unit-two-step:first-square",
+      "complete_page": 183,
+      "file": "five-common/unit-two-step-transport.tex",
+      "start_line": 217,
+      "end_line": 238,
+      "source_lf_sha256": "079e6165b78f2ecdd7e811d0d8f679383e78339036148bada57f797d93101495"
+    },
+    {
+      "kind": "corollary",
+      "number": "M.21",
+      "label": "cor:unit-two-step:bare-paths",
+      "complete_page": 183,
+      "file": "five-common/unit-two-step-transport.tex",
+      "start_line": 256,
+      "end_line": 263,
+      "source_lf_sha256": "079e6165b78f2ecdd7e811d0d8f679383e78339036148bada57f797d93101495"
+    },
+    {
+      "kind": "lemma",
+      "number": "M.22",
+      "label": "lem:oc:fourth",
+      "complete_page": 184,
+      "file": "five-common/ordinary-propagation.tex",
+      "start_line": 21,
+      "end_line": 53,
+      "source_lf_sha256": "22e08a82fb685e5a3fb4c2d4bdf70da18b78c4ea2560c9b19bcb177ce3d6ba65"
+    },
+    {
+      "kind": "lemma",
+      "number": "M.24",
+      "label": "lem:oc:hermite",
+      "complete_page": 185,
+      "file": "five-common/ordinary-comparison.tex",
+      "start_line": 7,
+      "end_line": 45,
+      "source_lf_sha256": "6d98bbd8b9f2e246aa4b7502c1b5bf3df5e5eae065276e89e35e97281bcac4bf"
+    },
+    {
+      "kind": "lemma",
+      "number": "M.23",
+      "label": "lem:oc:anchored-eighth",
+      "complete_page": 185,
+      "file": "five-common/ordinary-propagation.tex",
+      "start_line": 95,
+      "end_line": 134,
+      "source_lf_sha256": "22e08a82fb685e5a3fb4c2d4bdf70da18b78c4ea2560c9b19bcb177ce3d6ba65"
+    },
+    {
+      "kind": "lemma",
+      "number": "M.26",
+      "label": "lem:odd-common:root-three",
+      "complete_page": 186,
+      "file": "five-common/odd-root-three-template.tex",
+      "start_line": 6,
+      "end_line": 37,
+      "source_lf_sha256": "afa850386720bf28056aeebc145b66e919d2e38789491517731bd94b9cd3eb8b"
+    },
+    {
+      "kind": "lemma",
+      "number": "M.25",
+      "label": "lem:oc:ordinary-comparison",
+      "complete_page": 186,
+      "file": "five-common/ordinary-comparison.tex",
+      "start_line": 71,
+      "end_line": 89,
+      "source_lf_sha256": "6d98bbd8b9f2e246aa4b7502c1b5bf3df5e5eae065276e89e35e97281bcac4bf"
+    },
+    {
+      "kind": "lemma",
+      "number": "M.27",
+      "label": "lem:odd-common:fourth",
+      "complete_page": 187,
+      "file": "five-common/odd-fourth-moment-template.tex",
+      "start_line": 18,
+      "end_line": 31,
+      "source_lf_sha256": "3e730f84cf97e96665e5610776e15ff58b498ab72d21052879c664c87d2cdc13"
+    },
+    {
+      "kind": "lemma",
+      "number": "M.28",
+      "label": "lem:odd-common:root-pairs",
+      "complete_page": 188,
+      "file": "five-common/odd-fourth-moment-template.tex",
+      "start_line": 60,
+      "end_line": 93,
+      "source_lf_sha256": "3e730f84cf97e96665e5610776e15ff58b498ab72d21052879c664c87d2cdc13"
+    },
+    {
+      "kind": "lemma",
+      "number": "M.29",
+      "label": "lem:odd-common:root-interface",
+      "complete_page": 188,
+      "file": "five-common/odd-fourth-moment-template.tex",
+      "start_line": 126,
+      "end_line": 142,
+      "source_lf_sha256": "3e730f84cf97e96665e5610776e15ff58b498ab72d21052879c664c87d2cdc13"
+    },
+    {
+      "kind": "lemma",
+      "number": "M.30",
+      "label": "lem:odd-common:replacement",
+      "complete_page": 189,
+      "file": "five-common/odd-fourth-moment-template.tex",
+      "start_line": 152,
+      "end_line": 186,
+      "source_lf_sha256": "3e730f84cf97e96665e5610776e15ff58b498ab72d21052879c664c87d2cdc13"
+    },
+    {
+      "kind": "lemma",
+      "number": "M.31",
+      "label": "lem:odd-common:extra-pairs",
+      "complete_page": 189,
+      "file": "five-common/odd-fourth-moment-template.tex",
+      "start_line": 211,
+      "end_line": 229,
+      "source_lf_sha256": "3e730f84cf97e96665e5610776e15ff58b498ab72d21052879c664c87d2cdc13"
+    },
+    {
+      "kind": "lemma",
+      "number": "M.32",
+      "label": "lem:odd-common:q-packet",
+      "complete_page": 190,
+      "file": "five-common/odd-q-packet-template.tex",
+      "start_line": 6,
+      "end_line": 59,
+      "source_lf_sha256": "8c86ad38b563b6df10cc7e737087f5681953ea0c5069463427d2c8906e3e170e"
+    },
+    {
+      "kind": "lemma",
+      "number": "M.33",
+      "label": "lem:odd-common:anchored-continuation",
+      "complete_page": 191,
+      "file": "five-common/odd-w2-propagation-template.tex",
+      "start_line": 5,
+      "end_line": 16,
+      "source_lf_sha256": "8c1c404385e6544ec3e95558e50a1ca7e993e9c65ce53b50fc78499ab33f18aa"
+    },
+    {
+      "kind": "lemma",
+      "number": "M.34",
+      "label": "lem:odd-common:w2",
+      "complete_page": 191,
+      "file": "five-common/odd-w2-propagation-template.tex",
+      "start_line": 33,
+      "end_line": 68,
+      "source_lf_sha256": "8c1c404385e6544ec3e95558e50a1ca7e993e9c65ce53b50fc78499ab33f18aa"
+    },
+    {
+      "kind": "lemma",
+      "number": "M.35",
+      "label": "lem:odd-two:constant",
+      "complete_page": 192,
+      "file": "five-common/odd-two-arm-root-transfer.tex",
+      "start_line": 9,
+      "end_line": 26,
+      "source_lf_sha256": "a34d542788110999fb42bb987461400bd2ef0be7e810672aebe1f87ab19e1c11"
+    },
+    {
+      "kind": "lemma",
+      "number": "M.36",
+      "label": "lem:odd-two:packet",
+      "complete_page": 192,
+      "file": "five-common/odd-two-arm-root-transfer.tex",
+      "start_line": 42,
+      "end_line": 70,
+      "source_lf_sha256": "a34d542788110999fb42bb987461400bd2ef0be7e810672aebe1f87ab19e1c11"
+    },
+    {
+      "kind": "theorem",
+      "number": "M.37",
+      "label": "thm:odd-two:roots",
+      "complete_page": 194,
+      "file": "five-common/odd-two-arm-root-transfer.tex",
+      "start_line": 195,
+      "end_line": 227,
+      "source_lf_sha256": "a34d542788110999fb42bb987461400bd2ef0be7e810672aebe1f87ab19e1c11"
+    },
+    {
+      "kind": "lemma",
+      "number": "M.38",
+      "label": "lem:ordinary-unit-inner-terminal",
+      "complete_page": 227,
+      "file": "five-proofs/q5-c079.tex",
+      "start_line": 273,
+      "end_line": 299,
+      "source_lf_sha256": "0e5319d4ac795c61a3cb2a64aecb23cffa7fdd578510a5579bfb26f190cf385e"
+    },
+    {
+      "kind": "proposition",
+      "number": "M.39",
+      "label": "prop:ordinary-unit-inner",
+      "complete_page": 227,
+      "file": "five-proofs/q5-c079.tex",
+      "start_line": 331,
+      "end_line": 350,
+      "source_lf_sha256": "0e5319d4ac795c61a3cb2a64aecb23cffa7fdd578510a5579bfb26f190cf385e"
+    },
+    {
+      "kind": "proposition",
+      "number": "N.1",
+      "label": "prop:q117-unified:families",
+      "complete_page": 283,
+      "file": "five-proofs/q5-c117.tex",
+      "start_line": 14,
+      "end_line": 28,
+      "source_lf_sha256": "e9cd2d2a2c175d7e83eb8eb9d0ad0f3170ef54d9ef4e27d8f2c081030b5361fb"
+    },
+    {
+      "kind": "lemma",
+      "number": "N.2",
+      "label": "lem:q117-unified:shortone-symbol",
+      "complete_page": 283,
+      "file": "five-proofs/q5-c117.tex",
+      "start_line": 68,
+      "end_line": 79,
+      "source_lf_sha256": "e9cd2d2a2c175d7e83eb8eb9d0ad0f3170ef54d9ef4e27d8f2c081030b5361fb"
+    },
+    {
+      "kind": "proposition",
+      "number": "N.3",
+      "label": "prop:retained-reference-family",
+      "complete_page": 371,
+      "file": "five-proofs/q5-c184.tex",
+      "start_line": 3,
+      "end_line": 19,
+      "source_lf_sha256": "4032b23e7568d8315a156c0de536d08bd75f18d3233017290b50ef83b8572529"
+    },
+    {
+      "kind": "lemma",
+      "number": "N.4",
+      "label": "lem:R25:even-mask",
+      "complete_page": 438,
+      "file": "five-proofs/r2-c025.tex",
+      "start_line": 25,
+      "end_line": 38,
+      "source_lf_sha256": "cc268b015d900ddc5134b5e3c71e693541436dffb1556ffcfac8199198706beb"
+    },
+    {
+      "kind": "lemma",
+      "number": "N.5",
+      "label": "lem:R28:global-mask",
+      "complete_page": 464,
+      "file": "five-proofs/r2-c028.tex",
+      "start_line": 712,
+      "end_line": 727,
+      "source_lf_sha256": "6ee5777d0fc5024214b6d6364d85ddfc3cc8d9317a24087cb3467285aaa8de90"
+    },
+    {
+      "kind": "lemma",
+      "number": "N.6",
+      "label": "lem:R34:nonunit-odd",
+      "complete_page": 494,
+      "file": "five-proofs/r2-c034.tex",
+      "start_line": 949,
+      "end_line": 964,
+      "source_lf_sha256": "71ed876a9e4969081f247708fab0ebe85b0249e6221fb97a9cfd72550e8a4f6c"
+    },
+    {
+      "kind": "lemma",
+      "number": "N.7",
+      "label": "lem:R34:unit-multipair",
+      "complete_page": 497,
+      "file": "five-proofs/r2-c034.tex",
+      "start_line": 1203,
+      "end_line": 1219,
+      "source_lf_sha256": "71ed876a9e4969081f247708fab0ebe85b0249e6221fb97a9cfd72550e8a4f6c"
+    },
+    {
+      "kind": "proposition",
+      "number": "O.1",
+      "label": "prop:root-post:square-moments",
+      "complete_page": 516,
+      "file": "five-proofs/q5-c078.tex",
+      "start_line": 86,
+      "end_line": 108,
+      "source_lf_sha256": "1af9c8e37eff60c0a709334fc17f2eff6d56d8d0c3ff13aa880327f8fe4ff90b"
+    },
+    {
+      "kind": "theorem",
+      "number": "O.2",
+      "label": "thm:unit-p:catalogue",
+      "complete_page": 651,
+      "file": "five-common/unit-p-root-packets.tex",
+      "start_line": 19,
+      "end_line": 33,
+      "source_lf_sha256": "67ba4a4601f64869af954f44847a98e1904bc9d6ab339ff96dd2e2b18d484268"
+    },
+    {
+      "kind": "lemma",
+      "number": "O.3",
+      "label": "lem:unit-p:short-ledger",
+      "complete_page": 653,
+      "file": "five-common/unit-p-root-packets.tex",
+      "start_line": 142,
+      "end_line": 166,
+      "source_lf_sha256": "67ba4a4601f64869af954f44847a98e1904bc9d6ab339ff96dd2e2b18d484268"
+    },
+    {
+      "kind": "lemma",
+      "number": "O.4",
+      "label": "lem:unit-p:inward-path",
+      "complete_page": 654,
+      "file": "five-common/unit-p-root-packets.tex",
+      "start_line": 182,
+      "end_line": 197,
+      "source_lf_sha256": "67ba4a4601f64869af954f44847a98e1904bc9d6ab339ff96dd2e2b18d484268"
+    },
+    {
+      "kind": "lemma",
+      "number": "O.5",
+      "label": "lem:unit-p:minimum-four",
+      "complete_page": 654,
+      "file": "five-common/unit-p-root-packets.tex",
+      "start_line": 217,
+      "end_line": 242,
+      "source_lf_sha256": "67ba4a4601f64869af954f44847a98e1904bc9d6ab339ff96dd2e2b18d484268"
+    },
+    {
+      "kind": "lemma",
+      "number": "O.6",
+      "label": "lem:unit-p:three-centered",
+      "complete_page": 656,
+      "file": "five-common/unit-p-root-packets.tex",
+      "start_line": 337,
+      "end_line": 347,
+      "source_lf_sha256": "67ba4a4601f64869af954f44847a98e1904bc9d6ab339ff96dd2e2b18d484268"
+    },
+    {
+      "kind": "lemma",
+      "number": "O.7",
+      "label": "lem:unit-p:geometric",
+      "complete_page": 664,
+      "file": "five-common/unit-p-root-packets.tex",
+      "start_line": 1027,
+      "end_line": 1037,
+      "source_lf_sha256": "67ba4a4601f64869af954f44847a98e1904bc9d6ab339ff96dd2e2b18d484268"
+    },
+    {
+      "kind": "corollary",
+      "number": "O.8",
+      "label": "cor:unit-p:shortest-two-fourth",
+      "complete_page": 668,
+      "file": "five-common/unit-p-root-packets.tex",
+      "start_line": 1359,
+      "end_line": 1372,
+      "source_lf_sha256": "67ba4a4601f64869af954f44847a98e1904bc9d6ab339ff96dd2e2b18d484268"
+    },
+    {
+      "kind": "proposition",
+      "number": "O.9",
+      "label": "prop:Q102:ordinary-eighth",
+      "complete_page": 672,
+      "file": "five-proofs/q5-c102.tex",
+      "start_line": 27,
+      "end_line": 36,
+      "source_lf_sha256": "62e9fec1d6e426a34243de67a04753e14ac1fe7e8a55b65a29f0da952e7a6d83"
+    },
+    {
+      "kind": "proposition",
+      "number": "O.10",
+      "label": "prop:r40:ordinary-catalogue",
+      "complete_page": 715,
+      "file": "five-proofs/r2-c040.tex",
+      "start_line": 52,
+      "end_line": 88,
+      "source_lf_sha256": "bed0c22cadead5c0db46955bd21c3ba7b30b9ee43c4eff3f488d95bd8ee01dd6"
+    },
+    {
+      "kind": "lemma",
+      "number": "O.11",
+      "label": "lem:r40:remaining-finite-tail",
+      "complete_page": 718,
+      "file": "five-proofs/r2-c040.tex",
+      "start_line": 290,
+      "end_line": 310,
+      "source_lf_sha256": "bed0c22cadead5c0db46955bd21c3ba7b30b9ee43c4eff3f488d95bd8ee01dd6"
+    },
+    {
+      "kind": "lemma",
+      "number": "O.12",
+      "label": "lem:outer-unit:fractional-tail",
+      "complete_page": 720,
+      "file": "five-proofs/r2-c040.tex",
+      "start_line": 500,
+      "end_line": 507,
+      "source_lf_sha256": "bed0c22cadead5c0db46955bd21c3ba7b30b9ee43c4eff3f488d95bd8ee01dd6"
+    },
+    {
+      "kind": "proposition",
+      "number": "O.13",
+      "label": "prop:R43:catalogue",
+      "complete_page": 739,
+      "file": "five-proofs/r2-c043.tex",
+      "start_line": 46,
+      "end_line": 69,
+      "source_lf_sha256": "5b531b10fdff08e5ba7d81c7ac465484395edccabbc0662ed82595a63d34e52a"
+    },
+    {
+      "kind": "lemma",
+      "number": "P.1",
+      "label": "lem:unit-square-hermite",
+      "complete_page": 749,
+      "file": "five-common/unit-square-moment-payments.tex",
+      "start_line": 4,
+      "end_line": 27,
+      "source_lf_sha256": "32a8a2da2af1c8c913d220bab6c85f0642ec1743fba9fd9319ab42e3436c6ef7"
+    },
+    {
+      "kind": "corollary",
+      "number": "P.2",
+      "label": "cor:unit-square:two-step-path",
+      "complete_page": 750,
+      "file": "five-common/unit-square-moment-payments.tex",
+      "start_line": 42,
+      "end_line": 53,
+      "source_lf_sha256": "32a8a2da2af1c8c913d220bab6c85f0642ec1743fba9fd9319ab42e3436c6ef7"
+    },
+    {
+      "kind": "lemma",
+      "number": "P.3",
+      "label": "lem:unit-retained:whole-data",
+      "complete_page": 751,
+      "file": "five-common/unit-retained-square.tex",
+      "start_line": 3,
+      "end_line": 21,
+      "source_lf_sha256": "8c56b2076c01960efb4e92da3b34920d33982ecc5081f9f68e2f2c972c73e382"
+    },
+    {
+      "kind": "proposition",
+      "number": "P.4",
+      "label": "prop:unit-retained:whole-L1",
+      "complete_page": 751,
+      "file": "five-common/unit-retained-square.tex",
+      "start_line": 81,
+      "end_line": 89,
+      "source_lf_sha256": "8c56b2076c01960efb4e92da3b34920d33982ecc5081f9f68e2f2c972c73e382"
+    },
+    {
+      "kind": "lemma",
+      "number": "Q.1",
+      "label": "lem:odd-complete:certificate",
+      "complete_page": 913,
+      "file": "five-common/odd-root-complete-comparison.tex",
+      "start_line": 46,
+      "end_line": 74,
+      "source_lf_sha256": "8fbb7f02b3e80975df3087a1a5092f3a77d5a54e7bf165542c85d2cb751bd06d"
+    },
+    {
+      "kind": "lemma",
+      "number": "Q.2",
+      "label": "lem:odd-complete:minimum-one",
+      "complete_page": 914,
+      "file": "five-common/odd-root-complete-comparison.tex",
+      "start_line": 83,
+      "end_line": 115,
+      "source_lf_sha256": "8fbb7f02b3e80975df3087a1a5092f3a77d5a54e7bf165542c85d2cb751bd06d"
+    },
+    {
+      "kind": "lemma",
+      "number": "Q.3",
+      "label": "lem:odd-complete:positive",
+      "complete_page": 915,
+      "file": "five-common/odd-root-complete-comparison.tex",
+      "start_line": 170,
+      "end_line": 197,
+      "source_lf_sha256": "8fbb7f02b3e80975df3087a1a5092f3a77d5a54e7bf165542c85d2cb751bd06d"
+    },
+    {
+      "kind": "corollary",
+      "number": "Q.4",
+      "label": "cor:odd-complete:bare",
+      "complete_page": 915,
+      "file": "five-common/odd-root-complete-comparison.tex",
+      "start_line": 240,
+      "end_line": 250,
+      "source_lf_sha256": "8fbb7f02b3e80975df3087a1a5092f3a77d5a54e7bf165542c85d2cb751bd06d"
+    },
+    {
+      "kind": "theorem",
+      "number": "Q.5",
+      "label": "thm:odd-three:roots",
+      "complete_page": 917,
+      "file": "five-common/odd-three-terminal-roots.tex",
+      "start_line": 4,
+      "end_line": 29,
+      "source_lf_sha256": "89add6db3f8cdc028b6dd00bd066ee2eabb9008a9f9108952ea8573939f254e7"
+    },
+    {
+      "kind": "proposition",
+      "number": "Q.6",
+      "label": "prop:odd-even:roots",
+      "complete_page": 923,
+      "file": "five-common/odd-even-terminal-roots.tex",
+      "start_line": 9,
+      "end_line": 17,
+      "source_lf_sha256": "fcde57e9493d17737a689d964b1d0e280fc80e42eac042ae9db15e4bad982bca"
+    },
+    {
+      "kind": "lemma",
+      "number": "Q.7",
+      "label": "lem:odd-complete:vector-cap",
+      "complete_page": 930,
+      "file": "five-common/odd-complete-root-assembly.tex",
+      "start_line": 29,
+      "end_line": 40,
+      "source_lf_sha256": "8f8c7006cc1d16578522b048e6a0bcb29bd3d4320e95ce5974ccbb7789946d16"
+    },
+    {
+      "kind": "proposition",
+      "number": "Q.8",
+      "label": "prop:odd-complete:minimum-one-root",
+      "complete_page": 931,
+      "file": "five-proofs/q5-c186.tex",
+      "start_line": 21,
+      "end_line": 42,
+      "source_lf_sha256": "9767c46a44632c3a1634591ee4810dac1fc6e1c85c274a549647b10d18f2da74"
+    },
+    {
+      "kind": "proposition",
+      "number": "Q.9",
+      "label": "prop:odd-complete:positive-root",
+      "complete_page": 944,
+      "file": "five-proofs/q5-c189.tex",
+      "start_line": 20,
+      "end_line": 29,
+      "source_lf_sha256": "10ee4311e3a486d41cc0ebe8838c379f6f881584145d59e1ddc3eed473305b5e"
+    }
+  ]
+}

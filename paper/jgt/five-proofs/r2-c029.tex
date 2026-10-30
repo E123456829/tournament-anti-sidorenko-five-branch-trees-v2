@@ -1,0 +1,1046 @@
+\subsection{All even terminal lists with at least two unequal pairs at a unit root}\label{proof:R2-C029}
+Let $a_1<b_1<\cdots<a_j<b_j$ with $j\ge2$. Put $F=\prod_i h_{a_i}f_{b_i}$ and $H=pT^LF$, where $L\ge1$. Then
+\[
+\E H^4\le\exp[-(15/4+64(j-2)/5)d],\quad
+I_q(T^2H)^3\le\exp[-(1223/3420+128(j-2)/5)d-5d^2].
+\]
+The same statements hold with genuine equal-pair factors at the terminal and unit internal root. The following common calculus, including the ordinary fourth-moment transfer, is also used in Section~\ref{proof:R2-C031}.
+
+\paragraph{R29.2 Actual messages and finite calculus}
+
+All operators, inner products, adjoints and expectations use one unchanged
+original finite probability measure. Write
+
+\[
+Jv=(Ev)\mathbf1,\quad A=J+K,\quad T=J-K=A^*,\quad
+B=-K,\quad u=B\mathbf1=-g,
+\]
+\[
+\begin{gathered}
+p=1-u,\quad q=1+u,\quad f_n=A^n\mathbf1,\quad\\
+\bar f_n=T^n\mathbf1,\quad h_n=Tf_{n-1},\quad W_n=A\bar f_{n-1}.
+\end{gathered}
+\]
+
+An f arm points entirely outward. An h arm has its first edge toward
+the terminal and its remaining edges outward. The actual root unit arm
+points outward and supplies p. Every inner edge points from terminal to
+root and supplies \(T^L.\) The two outer edges point from root to receiver
+and supply \(T^2.\) Thus the bare actual messages are
+
+\[
+F=\prod_i h_{a_i}f_{b_i},\qquad H=pT^LF,\qquad U=T^2H.
+\tag{R29.2.1}
+\]
+
+For R2-C031 the product has exactly one factor, with its stated restrictions.
+The root unit arm supplies the factor $p$. Additional root-arm factors are treated in Section~\ref{proof:Q5-C182}.
+
+Put
+
+\[
+\begin{gathered}
+\delta_i=\|B^i\mathbf1\|_2^2,\quad d=\delta_1,\quad\\
+\theta=\frac{13}{32},\quad \kappa=\frac{19}{32},\quad \tau=d-\delta_2.
+\end{gathered}
+\]
+
+The finite calculus gives
+
+\[
+\begin{gathered}
+0\le d\le\frac13,\quad d^2\le \delta_2\le\theta d,\quad\\
+\|B\|^2\le\theta,\quad \delta_{i+1}\le\theta \delta_i,\quad\\
+|Bv(x)|\le\|v\|_2.
+\end{gathered}\tag{R29.2.2}
+\]
+
+The lower bound \(\delta_2\ge d^2\) also follows from \(EB^2 1=-d\) and Cauchy.
+The spectral measure of -\(B^2\) at 1 is a probability measure, so
+\(\delta_3\ge d^3.\) 
+
+After zero-mass atoms are removed, antisymmetry gives K(x, \(x)=0,\allowbreak \) whence
+p(x), \(q(x)\ge \mu(x)>0.\) Every actual rooted tree message is positive:
+assigning all integrated vertices the root's label produces a positive
+term with every diagonal factor equal to one. The finite path calculus
+also gives \(0<f_n,\allowbreak  \bar f_n,\allowbreak  h_n\le 2\) and \(Ef_n=E\bar f_n\le 1.\)
+
+The spectral measure nu of -\(B^2\) at u has mass d and
+\(\int x^r\,\allowbreak \allowbreak  d\nu=\delta_{r+1}\), supported on [0, theta]. At \(z=i\) sqrt(x),
+if a real polynomial Q has coordinates \(Q(z)=E(x)+zD(x),\allowbreak \) then
+
+\[
+\begin{gathered}
+E[Q(B)u]=-\int D(x)\,d\nu(x),\qquad\\
+\|Q(B)u\|^2=\int(E(x)^2+xD(x)^2)\,d\nu(x).
+\end{gathered}\tag{R29.2.3}
+\]
+
+
+\paragraph{R29.3 All finite path and unequal-pair estimates}
+
+\paragraph{R29.3.1 Finite convolution and a uniform mean loss}\label{part:R29.3.1}
+
+Define \(\beta_1=\beta_2=0\) and
+
+\[
+\beta_n=\sum_{r=1}^{\lfloor(n-1)/2\rfloor}(-1)^{r-1}\delta_r
+\quad(n\ge3).
+\]
+
+The exact finite convolution is
+
+\[
+\begin{gathered}
+S_n=\sum_{r=0}^nK^r1\\
+=f_n+\sum_{r=3}^n\beta_r f_{n-r},\qquad\\
+\tau\le\beta_r\le d.
+\end{gathered}\tag{R29.3.1}
+\]
+
+The same identity holds after full reversal for \(\bar f_n\) and B. The beta coefficients are nonnegative by decreasing alternating moments.
+
+Writing \(\mu_n=Ef_n,\allowbreak \) the exact initial means are
+
+\[
+\begin{aligned}
+\mu_2&=1-d,&\mu_3&=1-2d,\\
+\mu_4&=1-3d+\delta_2,&
+\mu_5&=1-4d+2\delta_2+d^2,\\
+\mu_6&=1-5d+3\delta_2+3d^2-\delta_3,&
+\mu_7&=1-6d+4\delta_2+6d^2-2\delta_3-2d\delta_2.
+\end{aligned}
+\]
+
+Their losses divided by d, for \(n=4,\allowbreak \) 5, 6, 7, are at least respectively
+\(83/32,\allowbreak  137/48,\allowbreak  89/32,\allowbreak  127/48.\) For \(n=7,\allowbreak \) for example, discard the
+positive \(2\delta_3\) and use
+
+\[
+6d-(4-2d)\delta_2-6d^2
+\ge[6-4\theta-(6-2\theta)d]d
+\ge\frac{127}{48}d.
+\]
+
+For every \(n\ge 8,\allowbreak \) retain the six actual terms corresponding to
+\(\mu_0,\allowbreak ...,\allowbreak  \mu_5\) in (R29.3.1). The three coefficients \(\beta_{n+1},\allowbreak  \beta_n,\allowbreak  \beta_{n-1}\) are at least tau+kappa \(\delta_3.\) Consequently
+
+\[
+\begin{aligned}
+1-\mu_n
+&\ge\tau(7-10d+3\delta_2+d^2)+3\kappa \delta_3\\
+&\ge\kappa d(7-10d+7d^2)
+\ge\frac{95}{36}d>\frac{83}{32}d.
+\end{aligned}
+\tag{R29.3.2}
+\]
+
+This proves \(\mu_n\le 1-83d/32\) for every \(n\ge 4.\)
+
+\paragraph{R29.3.2 The difference formula and every unequal pair}
+
+For \(a<b\) let \(R_{ab}=\sum_{r=a+1}^bK^r1\). Subtracting two finite
+convolutions gives exactly
+
+\[
+\begin{gathered}
+f_b-f_a=R_{ab}\\
++\sum_{i=0}^{a-3}(\beta_{a-i}-\beta_{b-i})f_i\\
+-\sum_{i=\max(0,a-2)}^{b-3}\beta_{b-i}f_i.
+\end{gathered}\tag{R29.3.3}
+\]
+
+Empty sums are zero. At $a=1$ the identity reads
+
+\[
+f_b-f_1=R_{1b}-\sum_{i=0}^{b-3}\beta_{b-i}f_i.
+\tag{R29.3.3a}
+\]
+
+Since \(h_1+f_1=2,\allowbreak \) retaining the genuine \(f_0=1\) term gives
+\(h_1+f_b\le 2+R_{1b}-\beta_b\) for \(b\ge 3.\) For \(b=2\) the sum is empty
+and \(\beta_2=0,\allowbreak \) yielding exactly the same bound. AM--GM and
+log \(t\le t-1\) then give \(h_1f_b\le \exp(R_{1b}-\beta_b).\)
+This proves the $a=1$ row.
+
+
+In the first sum of (R29.3.3) a positive
+coefficient requires an odd starting alternating-moment index; its first
+omitted even-index moment is \(\delta_{2r}.\) Each such first moment occurs at
+most twice, and \(f_i\le 2.\) Therefore the positive part of that entire sum
+is at most \(4\delta_2/(1-\theta^2)\). For \(a\ge 5,\allowbreak \) (R29.3.2) and
+\(f_a+h_a=2\mu_{a-1}\) yield
+
+\[
+h_a+f_b\le2+R_{ab}
+-\left(\frac{83}{16}-\frac{1664}{855}\right)d,
+\]
+\[
+\frac{83}{16}-\frac{1664}{855}
+=\frac{16}{5}+\frac{113}{2736}.
+\tag{R29.3.4}
+\]
+
+For \(a=4\) retain the actual negative term -tau \(f_2\) in (R29.3.3):
+
+\[
+f_b-f_4\le R_{4b}+\delta_2(1+p)-\tau f_2.
+\]
+
+The original row identity
+
+\[
+2Kg(x)=E_{y,z}[(K(x,y)-K(x,z))K(y,z)]
+\]
+
+and |\(a-b|\le 1-ab\) for a, b in [-1, 1] give |\(Kg|\le pq/2.\)
+Hence \(f_2=p+Kg\ge p^2/2,\allowbreak \) and completing this real quadratic gives
+
+\[
+\begin{gathered}
+\delta_2(1+p)-\tau f_2\\
+\le \delta_2+\frac{\delta_2^2}{2\tau}\\
+\le\frac{663}{1216}d<\frac34d.
+\end{gathered}\tag{R29.3.5}
+\]
+
+The \(a=4\) pair sum therefore loses at least 13d/4.
+For any positive pair X, Y, \(XY\le((X+Y)/2)^2\) and
+\(\log t\le t-1\) give \(\log(XY)\le X+Y-2\).
+Equations (R29.3.4)-(R29.3.5) establish the common strong pair bound
+
+\[
+h_af_b\le\exp\left(R_{ab}-\frac{16}{5}d\right)
+\qquad(4\le a<b).
+\tag{R29.3.6}
+\]
+
+The short finite differences give, with no additional arm,
+
+\[
+\begin{gathered}
+h_1f_b\le e^{R_{1b}-\beta_b},\quad\\
+h_2f_b\le e^{R_{2b}-\beta_b},\quad\\
+h_3f_b\le e^{R_{3b}-(2d-\delta_2)}.
+\end{gathered}\tag{R29.3.7}
+\]
+
+For \(a=3,\allowbreak  b\ge 4,\allowbreak \) retain -\(\beta_{b-1}f_1\le -\tau\) p:
+
+\[
+h_3f_b\le
+\exp\{R_{3b}+\tau u-(3d-2\delta_2)\}.
+\tag{R29.3.8}
+\]
+
+For the exact pair (2, 3),
+
+\[
+h_2+f_3=2-d+K^31,\qquad h_2f_3\le e^{-d+K^31}.
+\tag{R29.3.9}
+\]
+
+The retained tau u in (R29.3.8) is the scalar correction for the same kernel.
+
+\paragraph{R29.4 The signed-mean exponential certificate}\label{calc:five-signed-exp}
+The full signed-mean lemma of Section~\ref{proof:Q5-C081},
+paragraph~\ref{part:Q81.2}, gives
+\begin{equation}\tag{R29.4.1}\label{eq:oc:r29-signed}
+ \E e^{4BV}\le e^{4\E BV+(17/4)\|V\|^2}.
+\end{equation}
+Its scalar statement is
+\begin{equation}\tag{R29.4.2}\label{eq:oc:r29-scalar-signed}
+ \E e^{sW}\le e^{s\E W+(17/64)s^2U^2}
+ \quad(|W|\le U,\ \E W^2\le\theta U^2,\ s\ge0).
+\end{equation}
+These are the signed-mean inequalities proved in
+paragraph~\ref{part:Q81.2}. The complete-vector payment is
+\eqref{eq:unit-two-step:moment-payment}.
+
+Use Lemmas~\ref{lem:oc:finite-continuation} and~\ref{lem:oc:fourth}.
+
+\paragraph{R29.6 R2-C029: exhaustive finite masks and all later pairs}\label{part:R29.6}
+
+\paragraph{R29.6.1 One mask for every finite number of pairs}
+
+Put
+
+\[
+C_\beta=\frac1{1-\theta^2}=\frac{1024}{855},\qquad
+C_*=\frac{32768}{16245}.
+\]
+
+For every finite polynomial P with coefficients in \{0, 1\}, separate
+the positive and negative terms of each real/imaginary coordinate at
+i sqrt(x). Each coordinate's absolute value is bounded by the larger
+one-sided geometric tail, not the sum of both tails. This gives
+
+\[
+\begin{gathered}
+|P(i\sqrt x)|^2\le\frac{1+x}{(1-x^2)^2}\\
+\le C_*<\frac{101}{50}<\frac{100}{49}.
+\end{gathered}\tag{R29.6.1}
+\]
+
+The exponent intervals [\(a_i+1,\allowbreak  b_i\)] are disjoint because the actual
+arm lengths are strictly ordered. Their union therefore makes one
+finite 0-1 mask, regardless of j or any gap. The geometric tails bound these finite sums with a norm bound independent
+of j.
+
+Useful exact constants are
+
+\[
+\begin{gathered}
+C_\beta\theta=\frac{416}{855}<\frac12,\quad\\
+C_\beta\theta^2=\frac{169}{855}<\frac15,\quad\\
+C_\beta\theta^3=\frac{2197}{27360}<\frac1{12},\quad\\
+C_\beta\theta^4=\frac{28561}{875520}<\frac1{30}.
+\end{gathered}\tag{R29.6.2}
+\]
+
+Also \(\theta^2<1/6,\allowbreak  \theta^3<1/14,\allowbreak \) and \(\theta^{3/2}<4/15.\)
+Let \(\Delta=(16/5)(j-2)d\). The following five cases are a
+structural partition of every \(j\ge 2\) table:
+
+\begin{table}[htbp]
+\centering\small
+\setlength{\tabcolsep}{5pt}
+\caption{The five finite even-terminal packets, with $R_0=\sum_iR_{a_i b_i}$ and $\Delta=(16/5)(j-2)d$.}\label{tab:oc:r29-structure}
+\begin{tabular}{clcc}
+\toprule
+Packet & Arm condition & $R$ & Lower $\Gamma$\\
+\midrule
+E2 & $a_1=2$ & $R_0$ & $(607/160)d+\Delta$\\
+E3 & $a_1\ge3$ & $R_0$ & $(767/160)d+\Delta$\\
+I & $a_1=1,\ b_1\ge3$ & $R_0$ & $(607/160)d+\Delta$\\
+II & $a_1=1,\ b_1=2,\ a_2\ge4$ & $R_0$ & $(16/5)d+\Delta$\\
+III & $a_1=1,\ b_1=2,\ a_2=3$ & $R_0+\tau u$ & $3d-2\delta_2+\Delta$\\
+\bottomrule
+\end{tabular}
+\end{table}
+
+For E2 and I the first pair loses at least kappa d and the next at
+least 16d/5. For E3 the first loses at least \(2d-\delta_2\) and the next at
+least 16d/5; \(a_1\ge 4\) only improves that. Case II discards the
+nonnegative first-pair loss and keeps the next strong pair. Case III
+uses (R29.3.8) on its actual \(a_2=3\) pair. Every pair after the second has
+shorter length at least four and supplies exactly the extra Delta
+loss used here. This justifies the linear increment in j without
+discarding any later arm.
+
+\paragraph{R29.6.2 Complete scalar packets}
+
+The following table records proved bounds, with entries normalized by d.
+The row \(D_2\) for III retains its actual sharper value \(\delta_2.\)
+
+\begin{table}[htbp]
+\centering\small
+\setlength{\tabcolsep}{5pt}
+\caption{Scalar packet bounds for Lemma~\ref{lem:oc:fourth}. Interval rows contain $\delta/d$ and $\epsilon/d$; other rows are upper bounds. The $D_2$ entry in III retains $\delta_2$, a moment of the same host.}\label{tab:oc:r29-packets}
+\begin{tabular}{lccccc}
+\toprule
+Quantity & E2 & E3 & I & II & III\\
+\midrule
+$c$ & $5/4$ & $6/5$ & $3/2$ & $3/2$ & $4/3$\\
+$\sigma/d$ & $1/3$ & $9/64$ & $325/392$ & $325/512$ & $1277/2592$\\
+$\delta/d$ & $[-1/5,91/100]$ & $[-1/5,2/3]$ & $[-6/5,3/4]$ & $[-6/5,1/25]$ & $[-1,3/20]$\\
+$\epsilon/d$ & $[-7/10,7/10]$ & $[-7/8,7/8]$ & $[-17/10,3/4]$ & $[-13/10,6/25]$ & $[-4/3,7/20]$\\
+$D_1/d$ & $0$ & $1/5$ & $0$ & $1/5$ & $1/5$\\
+$D_2$ & $d/12$ & $d/12$ & $d/2$ & $d/2$ & $\delta_2$\\
+$D_3/d$ & $1/5$ & $1/30$ & $1/5$ & $1/5$ & $1/8$\\
+$D_k/d,\ k\ge4$ & $1/12$ & $1/12$ & $1/5$ & $1/5$ & $1/12$\\
+$h$ & $1/2$ & $1/2$ & $3/8$ & $3/8$ & $1/2$\\
+\bottomrule
+\end{tabular}
+\end{table}
+
+Here is a reconstruction of each packet, including the infinite index
+quantifier on \(D_k.\)
+
+E2. Write \(R=-B^2\) P(-B)u, where \(P_0=1,\allowbreak \) and
+\(P(-z)=U-zV.\) The coordinates of R are xU,-xV.
+One-sided alternating tails give
+
+\[
+\frac12<U<\frac65,\qquad -C_\beta x\le V\le C_\beta.
+\]
+
+Therefore
+
+\[
+D_0=\int xV\in[-d/5,d/2],\qquad
+D_1=-\int xU\in[-d/2,0].
+\]
+
+The row predecessor and the spectral norm give
+
+\[
+\begin{gathered}
+|R|^2\le C_*\theta d<\frac9{25},\qquad\\
+\sigma\le C_*\theta^2d=\frac{5408}{16245}d<\frac d3.
+\end{gathered}
+\]
+
+Thus \(c=5/4\) is valid. The positive delta bound is
+
+\[
+\begin{gathered}
+\delta\le\\
+\left(\frac{416}{855}+\frac54\frac{5408}{16245}\right)d\\
+=\frac{4888}{5415}d<\frac{91}{100}d.
+\end{gathered}
+\]
+
+The useful epsilon bound keeps \(D_0+D_1\) together. Since
+\(V-U\le x/(1-x),\allowbreak \) one has
+
+\[
+\begin{gathered}
+D_0+D_1\le\frac{13}{19}\delta_2,\\
+\qquad \epsilon\le\frac{13}{19}\delta_2+\frac54\sigma<\frac7{10}d.
+\end{gathered}
+\]
+
+The negative bound is \(D_0+D_1\ge -7d/10.\) Multiplying the two
+coordinates successively by z shows the positive part of \(D_2\) begins
+at \(\delta_4,\allowbreak \) that of \(D_3\) at \(\delta_3,\allowbreak \) and those of every \(k\ge 4\) no earlier than
+\(\delta_4.\) Within each of the four power classes, subsequent positive
+even-moment indices increase by two, so (R29.6.2) bounds the entire finite
+tail. In particular \(\gamma_3\ge 11d/12,\allowbreak  \gamma_4\ge 4d/5,\allowbreak \) and every
+\(\gamma_k\) for \(k\ge 5\) is at least (\(\kappa-1/12)d=49d/96.\) Hence \(h=1/2.\)
+
+E3. Write \(R=B^3P(-B)u,\allowbreak \) allowing \(P_0=0.\) The general coordinates
+U, V lie between -\(C_\beta\) x and \(C_\beta\); those of R are
+-\(x^2V,\allowbreak -xU.\) Consequently
+
+\[
+\begin{gathered}
+\sigma\le C_*\theta^3d=\frac{2197}{16245}d<\frac9{64}d,\\
+\quad |R|^2\le C_*\theta^2d<\frac13d\le\frac19.
+\end{gathered}
+\]
+
+Use \(c=6/5.\) The signed means are
+
+\[
+ D_0\in[-C_\beta \delta_3,C_\beta \delta_2],\qquad
+ D_1\in[-C_\beta \delta_4,C_\beta \delta_3].
+\]
+
+Thus \(\delta\ge -d/5\) and
+\(\delta\le 52702d/81225<2d/3.\) Epsilon lies between -17d/60 and
+13d/15, which is inside the stated [-\(7/8,\allowbreak  7/8\)] interval.
+The positive \(D_2\) tail begins at \(\delta_4,\allowbreak  D_3\) at \(\delta_5,\allowbreak \) and every later
+positive tail no earlier than \(\delta_4.\) Four-power continuation and (R29.6.2)
+give the table. In particular \(\gamma_3\ge 11d/12,\allowbreak  \gamma_4\ge 29d/30,\allowbreak \) and the remaining \(\gamma_k\ge 49d/96\); \(h=1/2.\)
+
+I. Here \(R=BP(-B)u\) and \(P_0=P_1=1.\) Its coordinates are xV, U,
+where
+
+\[
+1-C_\beta x\le U,V\le C_\beta,\qquad \frac12<U,V<\frac65.
+\]
+
+The row bound gives |\(R|<1\); (R29.6.1) gives
+\(\sigma\le (325/392)d.\) Use \(c=3/2.\) The actual first two moments are
+
+\[
+D_0=-\int U\in[-6d/5,-439d/855],\qquad
+D_1=-\int xV\in[-d/2,0].
+\]
+
+Hence \(\delta\le (-439/855+(3/2)(325/392))d<3d/4,\allowbreak \)
+and the other delta/epsilon bounds follow without replacing signs.
+\(D_2\le C_\beta \delta_2<d/2,\allowbreak  D_3\le C_\beta \delta_3<d/5,\allowbreak \) and each \(k\ge 4\)
+has positive part bounded by d/5 through the same four-power
+continuation. Thus \(\gamma_3\ge d/2,\allowbreak  \gamma_4\ge 4d/5,\allowbreak \) and all later
+\(\gamma_k\ge (\kappa-1/5)d=63d/160>3d/8.\)
+
+II. The actual missing exponents impose \(P_0=1,\allowbreak  P_1=P_2=0.\)
+Consequently
+
+\[
+\begin{gathered}
+1-C_\beta x^3\le U\le C_\beta,\qquad\\
+-C_\beta x\le V\le C_\beta x^2,\\
+\quad U\ge\frac{11}{12}.
+\end{gathered}
+\]
+
+The sharper mask bound is
+
+\[
+\begin{gathered}
+|P|^2\le\frac{1+x^3}{(1-x^2)^2}\\
+\le\frac{24864}{16245}<\frac{54}{35}<\frac{25}{16}.
+\end{gathered}
+\]
+
+This yields \(\sigma\le (325/512)d\) and |\(R|<1\); take \(c=3/2. D_0\) is in [-6d/5,-11d/12] and
+\(D_1\) is in [-d/12, d/5]. Therefore
+
+\[
+\delta\le-\frac{11}{12}d+\frac{975}{1024}d
+=\frac{109}{3072}d<\frac1{25}d.
+\]
+
+The lower epsilon bound is -13d/10 and its upper bound is 6d/25.
+Also \(D_2\le \delta_2+C_\beta \delta_4<d/2.\) The remaining means have
+the same sufficient upper bounds as I. The full gamma tail has
+the same \(h=3/8.\) Missing original powers are used only as mask
+information; no shorter path replaces the finite original path.
+
+III. Now \(P_0=P_2=1\) and \(P_1=0.\) Its finite coordinates satisfy
+
+\[
+\begin{gathered}
+1-C_\beta x\le U\le1-\frac x3\le1,\quad\\
+-C_\beta x\le V\le C_\beta x^2,\quad |V|\le\frac43x.
+\end{gathered}
+\]
+
+Indeed \(U\le 1-x+C_\beta x^2\le 1-x/3\) on the full range. Therefore
+
+\[
+\begin{gathered}
+|P|^2\le(1-x/3)^2+\frac{16}{9}x^3\le1-\frac x6\le1\\
+\quad(0\le x\le1/2).
+\end{gathered}\tag{R29.6.3}
+\]
+
+Here \(R=R_0+\tau\) u. The complete row predecessor is P(-B)u+tau 1.
+Its constant-vector cross term is retained:
+
+\[
+\begin{gathered}
+|R|^2\le d+\tau^2+2\tau E[P(-B)u]\\
+\le d+\tau^2+\frac{2\tau}{5}d\\
+\le\frac{22}{45}<\frac9{16}.
+\end{gathered}\tag{R29.6.4}
+\]
+
+The bound on the cross mean follows from
+E[P(-B)u]=int \(V\le C_\beta \delta_3<d/5.\) Thus the globally valid
+Taylor choice is \(c=4/3.\) In the squared norm of R itself,
+\(E(uR_0)=int xV\le C_\beta \delta_4<d/12,\allowbreak \) so
+
+\[
+\begin{gathered}
+\sigma\le \delta_2+\frac{\tau}{6}d+\tau^2d\\
+\le\left(\frac{13}{32}+\frac1{27}+\frac4{81}\right)d\\
+=\frac{1277}{2592}d.
+\end{gathered}\tag{R29.6.5}
+\]
+
+Since \(D_0=-int\) U lies in [-d,-439d/855],
+
+\[
+-d\le\delta\le
+\left(-\frac{439}{855}+\frac{1277}{1944}\right)d
+<\frac3{20}d.
+\]
+
+\(D_1=-E(uR_0)-\tau\) d lies above -d/12-tau d and below d/5.
+The resulting epsilon lower bound is -\(47d/36>-4d/3\) and
+the upper bound is 7d/20. The retained finite moments give
+
+\[
+\begin{gathered}
+D_2\le \delta_2-\delta_3+C_\beta \delta_4\le \delta_2,\quad\\
+D_3\le C_\beta \delta_5+\tau \delta_2\\
+<\left(\frac1{30}+\frac{13}{144}\right)d\\
+=\frac{89}{720}d<\frac18d.
+\end{gathered}
+\]
+
+The all-k tail is essential. For every even \(k\ge 4,\allowbreak \) tau u has zero
+mean after \(B^k\) and the positive \(R_0\) tail starts at \(\delta_4.\) For \(k=5\) mod 4,
+the tau term is nonpositive and the positive \(R_0\) tail starts at \(\delta_5.\)
+For \(k=7\) mod 4, the first possible positive contributions are
+\(C_\beta \delta_7\) and tau \(\delta_4\); together they are less than
+(\(1/12+2/9)\delta_4<11d/504<d/30.\) Moving four powers onward shifts
+these even-moment indices by two and only reduces the tail bound.
+Thus \(D_k\le d/12\) for every \(k\ge 4.\) Accordingly
+\(\gamma_3\ge \kappa\) d, \(\gamma_4\ge 7d/8\) and all later \(\gamma_k\ge 49d/96\);
+\(h=1/2\) is valid for every integer index.
+
+This establishes the complete packet table. In particular, the dangerous
+III row retains both its actual constant-vector cross and its stronger
+long-tail gamma value.
+
+\paragraph{R29.7 R2-C029: all four inner-length ranges}
+
+In this section every displayed lower loss coefficient omits the
+additional 4Delta, which is restored at the end.
+
+\paragraph{R29.7.1 \(L=1\)}
+
+Substitute the packets into (R29.5.6). Five valid loss coefficients are
+
+\begin{table}[htbp]
+\centering\small
+\setlength{\tabcolsep}{5pt}
+\caption{Lower loss coefficients for $L=1$.}\label{tab:oc:r29-L1}
+\begin{tabular}{cl}
+\toprule
+Packet & Lower $-\log\E H^4/d$\\
+\midrule
+E2 & $607/40-14/5-17/12$\\
+E3 & $767/40-7/2-153/256$\\
+I & $607/40-3-119/32$\\
+II & $64/5-24/25-17/6$\\
+III & $35/4-7/5-17/8=209/40$\\
+\bottomrule
+\end{tabular}
+\end{table}
+
+Each exceeds \(15/4.\) The weaker sigma bounds 7d/8, 2d/3, d/2
+used in the last three rows follow from the already proved packets.
+All signed epsilon terms have their proper upper bounds.
+
+\paragraph{R29.7.2 \(L=2\)}
+
+Let \(V_2=u+BR.\) For E2,
+\(\lVert BR\rVert ^2\le 2197d/16245<(37/100)^2d,\allowbreak \) so
+\(\lVert V_2\rVert \le 11\sqrt{d}/8.\) For E3, \(\lVert BR\rVert \le \sqrt{d}/4,\allowbreak \)
+so \(\lVert V_2\rVert \le 5\sqrt{d}/4.\)
+
+For I and II its coordinates are 1-xU, xV. Since \(U>1/2\) and
+|\(P|^2<100/49,\allowbreak \)
+
+\[
+|1-xP(-z)|^2\le1-x+\frac{100}{49}x^2\le1
+\quad(0\le x\le\theta).
+\]
+
+For III its coordinates are 1-xU, tau+xV. The first lies between
+zero and 1-x/2; the absolute value of the second is below \(1/3,\allowbreak \)
+using \(\tau\le 2/9,\allowbreak \) -\(C_\beta x^2\le xV\le C_\beta x^3.\)
+Hence its squared modulus is at most
+(\(1-x/2)^2+x/9\le 1.\) These estimates keep tau as its actual scalar.
+
+Apply (R29.5.7), using respectively |\(\delta|\le d,\allowbreak \) 2d/3, 6d/5, 6d/5, d:
+
+\begin{table}[htbp]
+\centering\small
+\setlength{\tabcolsep}{5pt}
+\caption{Lower loss coefficients for $L=2$.}\label{tab:oc:r29-L2}
+\begin{tabular}{cl}
+\toprule
+Packet & Lower $-\log\E H^4/d$\\
+\midrule
+E2 & $607/40-14/5+4-1/3-2057/256-10/9$\\
+E3 & $767/40-7/2+4-1/3-425/64-40/81$\\
+I & $607/40-3+4-2-17/4-8/5$\\
+II & $64/5-24/25+4-2-17/4-8/5$\\
+III & $35/4-7/5+4-13/8-17/4-10/9=1571/360$\\
+\bottomrule
+\end{tabular}
+\end{table}
+
+All exceed \(15/4\); III alone has the explicit margin \(221/360.\)
+The -4d mean and \(D_2\) terms in (R29.5.7) are retained in every row.
+
+\paragraph{R29.7.3 \(L=3,\allowbreak \) including the continuous III comparison}
+
+Write \(V_3=(1+B)u+\delta u+B^2R.\) The mean part
+\(4\epsilon+4D_2+4D_3-4\delta\) d has the following upper coefficients,
+and the curvature term (\(10/3)\epsilon^2\) has the listed upper
+coefficients after using \(d^2\le d/3:\)
+
+\begin{table}[htbp]
+\centering\small
+\setlength{\tabcolsep}{5pt}
+\caption{Upper signed-mean and curvature costs at $L=3$.}\label{tab:oc:r29-L3-costs}
+\begin{tabular}{ccc}
+\toprule
+Packet & Mean cost divided by $d$ & Curvature cost divided by $d$\\
+\midrule
+E2 & $21/5$ & $49/90$\\
+E3 & $127/30$ & $245/288$\\
+I & $37/5$ & $289/90$\\
+II & $134/25$ & $169/90$\\
+III & $583/120$ & $160/81$\\
+\bottomrule
+\end{tabular}
+\end{table}
+
+The negative lower bounds on delta are needed for the term -4delta d.
+They have not been dropped.
+
+For E2, triangle bounds give
+
+\[
+\frac{\|V_3\|}{\sqrt d}
+<\frac{19}{16}+\frac{91}{300}+\frac14<\frac74.
+\]
+
+For E3 the corresponding sum is
+\(19/16+2/9+1/6<8/5.\) The exceptional \(G_2\) norm is explicitly
+\(\sqrt{1+\theta}<19/16\); it is not bounded by one.
+
+For I and II the coordinates are
+
+\[
+A_3=1+\delta-x^2V,\qquad C_3=1-xU.
+\]
+
+In I, both are positive, \(A_3\le 5/4\) and \(C_3\le 1,\allowbreak \) so
+\(\lVert V_3\rVert ^2\le (63/32)d.\) In II,
+\(0<A_3\le 329/300\) and \(0<C_3\le 1-x/2.\) Since
+\(x(1-x/2)^2\le 9/32\) on [0, \(1/2\)],
+
+\[
+\|V_3\|^2\le[(329/300)^2+9/32]d<\frac32d.
+\]
+
+For III the exact coordinates are
+
+\[
+A_3=1+\delta-\tau x-x^2V,\qquad C_3=1-xU.
+\tag{R29.7.1}
+\]
+
+The lower bounds give \(A_3>1/2\) and \(C_3\ge \kappa.\) Their upper bounds,
+with the same original delta and tau, are
+
+\[
+A_3\le1+d(3/20-\kappa x)+x^2/2,\qquad C_3\le1-x/2.
+\tag{R29.7.2}
+\]
+
+For \(0\le x\le 1/4,\allowbreak \) (R29.7.2) gives
+
+\[
+A_3^2+xC_3^2
+\le(173/160)^2+\frac14
+=\frac{36329}{25600}<\frac{23}{16},
+\]
+
+with difference \(471/25600.\) For \(1/4\le x\le \theta,\allowbreak  3/20-\kappa x\le 1/640,\allowbreak \) so set \(\epsilon_0=1/1920\) and obtain
+
+\[
+A_3^2+xC_3^2
+\le1+x+x^3/4+x^4/4+
+2\epsilon_0+\epsilon_0x^2+\epsilon_0^2.
+\]
+
+The last three terms are less than \(1/800.\) Thus the entire expression
+is less than
+\(1+13/32+1/56+1/128+1/800,\allowbreak \) which is below \(23/16\) by \(97/22400.\)
+This is a proof on the entire continuous spectral interval, not
+checking selected frequencies or assuming \(x\ge d.\) It gives
+\(\lVert V_3\rVert ^2\le (23/16)d.\)
+
+Substitution into (R29.5.8) gives
+
+\begin{table}[htbp]
+\centering\small
+\setlength{\tabcolsep}{5pt}
+\caption{Lower loss coefficients for $L=3$.}\label{tab:oc:r29-L3}
+\begin{tabular}{cl}
+\toprule
+Packet & Lower $-\log\E H^4/d$\\
+\midrule
+E2 & $607/40+8-21/5-49/90-833/64>5$\\
+E3 & $767/40+8-127/30-245/288-272/25>11$\\
+I & $607/40+8-37/5-289/90-1071/128=24173/5760$\\
+II & $64/5+8-134/25-169/90-51/8>7$\\
+III & $35/4+8-583/120-160/81-391/64=98677/25920$\\
+\bottomrule
+\end{tabular}
+\end{table}
+
+The I margin over \(15/4\) is \(2573/5760\); the III margin is
+\(1477/25920.\) These are positive exact rational margins.
+
+\paragraph{R29.7.4 Every finite \(L\ge 4\)}
+
+For every finite \(m\ge 3,\allowbreak \) \(\lVert G_m(B)\rVert \le 1.\) To see the complete length
+scope, at \(z=i\) sqrt(x), an odd m gives
+|\(G_m|^2=(1+x^m)/(1+x)\le 1.\) For m divisible by four the numerator is
+(\(1-x^{m/2})^2.\) For \(m=2\) mod 4 and \(m\ge 6\) it is at most
+(\(1+x^3)^2\le 1+x\) for \(x\le 1/2.\) The omitted \(m=2\) is the genuine
+exception already used correctly in \(L=3.\)
+
+Every packet has \(\sigma\le 7d/8.\) Hence
+
+\[
+\begin{gathered}
+\|B^{L-1}R\|^2\le\theta^3\sigma<d/16,\qquad\\
+\|V_L\|\le\frac54\sqrt d.
+\end{gathered}\tag{R29.7.3}
+\]
+
+The gamma hypotheses were proved for every index in \mbox{\hyperref[part:R29.6]{part R29.6}},
+not merely for \(k\le L.\) Equation (R29.5.10) now has norm cost 425d/64
+and curvature cost at most \(10h^2d/9.\) Its five lower loss coefficients
+are
+
+\begin{table}[htbp]
+\centering\small
+\setlength{\tabcolsep}{5pt}
+\caption{Lower loss coefficients for every $L\ge4$.}\label{tab:oc:r29-long}
+\begin{tabular}{cl}
+\toprule
+Packet & Lower $-\log\E H^4/d$\\
+\midrule
+E2 & $607/40+6-182/25-425/64-5/18$\\
+E3 & $767/40+6-16/3-8/5-425/64-5/18$\\
+I & $607/40+9/2-6-425/64-5/32$\\
+II & $64/5+9/2-8/25-8/5-425/64-5/32$\\
+III & $35/4+6-6/5-8/5-425/64-5/18$\\
+\bottomrule
+\end{tabular}
+\end{table}
+
+Each is greater than 5, and therefore greater than \(15/4.\) These
+are one finite-polynomial proof for all \(L\ge 4,\allowbreak \) with no cutoff or
+unproved limiting passage.
+
+Restoring the omitted 4Delta in all four length ranges proves
+
+\[
+\begin{gathered}
+E[(pT^LF)^4]\le\\
+\exp\left[-\left(\frac{15}{4}+\frac{64}{5}(j-2)\right)d\right].
+\end{gathered}\tag{R29.7.4}
+\]
+
+This completes R2-C029's ordinary-fourth claim for all five structural
+classes, every \(j\ge 2\) and every original \(L\ge 1.\)
+
+
+\paragraph{R29.11 The exact C094 ordinary-fourth bridge}\label{part:R29.11}
+
+The input to the Q5-C094 Theorem A, Sections 2.1--2.2, transfer is every original real $Y$ with its ordinary fourth moment $E|Y|^4$. Its same-kernel row and norm argument is reproduced here.
+
+\paragraph{R29.11.1 Same-kernel inverse fourth of the genuine \(\bar f_2\)}
+
+For this subsection use the original \(g=K1\) and \(r=Kg=K^2\) 1.
+Then \(\bar f_2=q+r,\allowbreak  Er=-d,\allowbreak  Egr=0,\allowbreak  Er^2=\delta_2.\) The original centered-row
+Cauchy inequality, valid for every mean-zero v, is
+
+\[
+|Kv(x)|^2\le p(x)q(x)E[v^2].
+\tag{R29.11.1}
+\]
+
+Indeed subtract g(x) from the row and use
+E[(K(x, \(y)-g(x))^2\)]\ensuremath{\le}\(1-g(x)^2.\) Applying this to \(v=g\) gives
+\(r^2\le pqd.\) This controls the actual small-q denominator:
+
+\[
+E[r^4/q]\le dE[pr^2]\le2d\delta_2.
+\tag{R29.11.2}
+\]
+
+Let \(W=2r-g=K(2g-1)\) and \(t_0=1+2d.\) The original row bound gives
+|\(W|\le \sqrt{1+4d}\le t_0,\allowbreak  EW=-2d\) and \(EW^2=d+4\delta_2.\) The pointwise
+polynomial (\(W+2d)^2(W-t_0)\le 0\) implies
+
+\[
+EW^3\le(t_0-4d)(d+4\delta_2)-4t_0d^2+8d^3.
+\]
+
+The exact cubic combination in \(\bar f_2^4/q\) is
+
+\[
+\mathcal C=-Eg^3+4E(g^2r)-6E(gr^2)+4Er^3
+=\frac{EW^3+E(g^2W)}2.
+\]
+
+Using \(E(g^2W)\le t_0d\) gives
+
+\[
+\mathcal C\le d-2d^2+2(1-2d)\delta_2.
+\]
+
+The full expansion, with \(Egr=0\) and the same \(\delta_2\) retained, is
+
+\[
+E[\bar f_2^4/q]
+=1-d+6\delta_2+\mathcal C+E[r^4/q]
+\le1-2d^2+(8-2d)\delta_2.
+\tag{R29.11.3}\label{eq:unit-output:inverse-row}
+\]
+
+There is no independent choice of moment extrema in this expansion
+and no host-independent lower bound on q.
+
+\paragraph{R29.11.2 Exact transfer exponents and the original norm}
+
+For any positive original kernel operator \(\mathcal B\), let
+\(h= \mathcal B1\). Original-row Cauchy and then Hölder with
+exponents 3 and \(3/2\) give
+
+\[
+|\mathcal BY|^2\le h\mathcal B(|Y|^2),
+\]
+\[
+\begin{aligned}
+I_q(\mathcal BY)
+&\le E[(h^4/q)^{1/3}
+       (\mathcal B(|Y|^2)^2)^{2/3}]\\
+&\le E[h^4/q]^{1/3}
+       E[\mathcal B(|Y|^2)^2]^{2/3}.
+\end{aligned}
+\]
+
+Hence, in the unchanged ordinary L2(mu) space,
+
+\[
+I_q(\mathcal BY)^3
+\le E[h^4/q]\|\mathcal B\|^4(E|Y|^4)^2.
+\tag{R29.11.4}\label{eq:unit-output:ordinary-transfer}
+\]
+
+For \(\mathcal B=T^2\), the actual h is \(\bar f_2,\allowbreak \) not q.
+The exact norm input recorded in C094 is
+\(\|T^2\|\le(1+(1024/855)\delta_2)^2\).
+This is an accepted original ordinary norm bound; neither its
+adjoint nor its input is changed by a q-tilt. Together with (R29.11.3),
+
+\[
+I_q(T^2Y)^3\le B_2(d,\delta_2)(E|Y|^4)^2,
+\]
+\[
+B_2=\{1-2d^2+(8-2d)\delta_2\}
+\left(1+\frac{1024}{855}\delta_2\right)^8.
+\tag{R29.11.5}
+\]
+
+This transfer uses the stated original norm estimate for $T^2$.
+
+The negative curvature is also retained. Since
+\(8-2d>0,\allowbreak \) the first factor is at most
+
+\[
+R=1+\frac{13}{4}d-\frac{45}{16}d^2.
+\]
+
+If \(v=R-1,\allowbreak \) then \(0\le v\le 37/48\) and \(v\ge 37d/16.\) Integrating
+1/(1+t), or differentiating the difference, gives
+\(\log(1+v)\le v-v^2/\)[2(1+v)]. It follows that
+
+\[
+\log R\le\frac{13}{4}d-\frac{11757}{2720}d^2.
+\]
+
+Let \(\lambda_0=(1024/855)\theta=416/855,\allowbreak \) with
+\(12/25<\lambda_0<1/2.\) Applying the same logarithm inequality,
+
+\[
+\begin{gathered}
+8\log(1+\lambda_0d)\\
+\le8\lambda_0d-\frac{4\lambda_0^2}{1+\lambda_0/3}d^2\\
+\le8\lambda_0d-\frac34d^2.
+\end{gathered}
+\]
+
+Here (\(24/7)(12/25)^2=3456/4375>3/4,\allowbreak \) while
+\(11757/2720+3/4=13797/2720>5.\) Therefore
+
+\[
+B_2(d,\delta_2)\le
+\exp\left(\frac{24427}{3420}d-5d^2\right).
+\tag{R29.11.6}\label{eq:unit-output:curvature}
+\]
+
+For R2-C029 use (R29.7.4); for R2-C031 use the ordinary fourth bound in Section~\ref{proof:R2-C031}. Since
+\(15/2-24427/3420=1223/3420,\allowbreak \) they give respectively
+
+\[
+I_q(T^2H)^3\le
+\exp\left[-\left(\frac{1223}{3420}+
+\frac{128}{5}(j-2)\right)d-5d^2\right],\tag{R29.11.7}
+\]
+\[
+I_q(T^2H)^3\le
+\exp\left[-\frac{1223}{3420}d-5d^2\right].
+\tag{R29.11.8}
+\]
+
+The transfer uses the ordinary fourth moment of $H$ in the original $L^2(\mu)$ space.
+
+\paragraph{R29.12 Genuine decorations, full reversal, and boundary cases}
+
+\paragraph{R29.12.1 Every original equal pair remains}
+
+At each original terminal or internal root, pair equal-length arms
+as far as possible. Each pair has its two actual directions \(f_l,\allowbreak  h_l,\allowbreak \)
+and
+
+\[
+0<f_lh_l\le(Ef_{l-1})^2\le1.
+\]
+
+Let \(E_t\) and \(E_r\) be the actual products of all these pairs at their
+own vertices. The decorated component is exactly
+
+\[
+H_D=E_r pT^L(E_tF),\qquad U_D=T^2H_D.
+\tag{R29.12.1}
+\]
+
+Positivity proves \(H_D\le pT^LF\) and \(U_D\le T^2(pT^LF),\allowbreak \) so both
+ordinary-fourth and Iq estimates persist. The terminal pairs remain
+inside \(T^L,\allowbreak \) the root pairs remain outside it at the actual root,
+and every pair's edges remain in the tree. 
+
+\paragraph{R29.12.2 Complete reversal}
+
+Replacing K by -K reverses every actual edge simultaneously. It
+interchanges $A,T$; $p,q$; $f,\bar f$; and $h,W$. Thus the fully reversed
+component is
+
+\[
+A^2\left[E_r^-qA^L\left(E_t^-\prod_iW_{a_i}\bar f_{b_i}\right)\right],
+\tag{R29.12.2}
+\]
+
+with a single pair in R2-C031, and the corresponding budget is \(I_p.\)
+The decorations \(E_t^-,\allowbreak  E_r^-\) are the actual \(\bar f_lW_l\) products.
+The norm moments \(\delta_i\) remain the same under reversal.
+This second direction is fixed by the structure before observing K. Reversing only the inner component
+would not justify keeping the same Iq claim. Both outer edges in
+(R29.12.2) are reversed as well.
+
+\paragraph{R29.12.3 Small masses, extreme kernels and \(d=0\)}
+
+All estimates allow arbitrary finite positive atom masses, including
+arbitrarily small ones, and pointwise K values at either endpoint
+of [-1, 1]. The positive diagonal contribution guarantees that the
+actual messages and p, q are positive on the retained support.
+No estimate requires a mass lower bound uniform over hosts.
+The only inverse q expression used for the output bridge is paid
+by the actual centered-row inequality (R29.11.1)-(R29.11.2).
+
+When \(d=0,\allowbreak \) only \(K1=0\) follows. Then \(p=q=1\) and all actual directed
+tree messages equal one by recursively integrating their leaves.
+This works for a nonzero skew K with \(K1=0.\) All displayed actual
+moment and Iq estimates are equalities at \(d=0.\) The preceding
+divisions by d or tau were used only when \(d>0,\allowbreak \) where
+\(\tau\ge \kappa d>0.\) 
+
+\paragraph{R29.12.4 Original edge and vertex counts}
+
+Let \(S_pair\) be the sum of one arm length from each genuine equal pair
+at the two vertices. Include the receiver c in the component. Then
+
+\[
+e_B=L+3+\sum_{i=1}^j(a_i+b_i)+2S_{\rm pair}
+\quad\text{for R2-C029},
+\tag{R29.12.3}
+\]
+\[
+e_B=L+3+a+b+2S_{\rm pair}
+\quad\text{for R2-C031}.
+\tag{R29.12.4}
+\]
+
+The three extra edges are the original root unit arm and the two
+outer edges. Since this is the original tree component,
+|\(V_B|=e_B+1\) and it has \(e_B\) nonreceiver vertices.
+All path subdivision vertices are counted, as are all paired-arm
+vertices. No skeleton edge count replaces \(e_B\) or the final e(U).

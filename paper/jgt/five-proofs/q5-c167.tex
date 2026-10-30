@@ -1,0 +1,294 @@
+\subsection{The reference terminal $(1,\allowbreak 2,\allowbreak 4)$ at two connector edges}\label{proof:Q5-C167}
+% Source Q5-C167: lines 20--26 and 59--366; section9 onward is excluded.
+\paragraph{Q167.0 The fixed local interface}\label{part:Q167.0}
+For terminal residual $(1,\allowbreak 2,\allowbreak 4)$, the fixed canonical direction
+$F=\allowbreak qf_2h_4$ and original connector length $L=\allowbreak 2$ satisfy, for every
+outward receiving arm $f_a$, $a\ge\allowbreak 3$, and every original legal finite kernel,
+\fitdisplay{
+\E[E_of_a\{T^2(E_tqf_2h_4)\}^4]\le1-d/16.
+\label{eq:Q167:T175.0}
+}{Q167.T175.0}
+The same direction is used on both low and high domains.
+
+\paragraph{Q167.1 Original objects and the receiving envelope}\label{part:Q167.1}
+Work at the original finite probability measure. Let $K^*=\allowbreak -K$ and
+$|K(x,\allowbreak y)|\le\allowbreak 1$, and put
+\fitdisplay{
+A=J+K,\quad T=J-K=A^*,\quad g=K\one,\quad
+p=1+g,\quad q=1-g,\quad d=\|g\|_2^2,
+\quad\delta_j=\|K^j\one\|_2^2,\quad\theta=13/32,\quad\kappa=19/32.
+}{}
+Every mean, adjoint and spectral measure is original.
+The actual arm messages are $f_n=\allowbreak A^n\one$, $\bar f_n=\allowbreak T^n\one$,
+$h_n=\allowbreak Tf_{n-1}$. The Q3-C014 finite framework gives $d\le\allowbreak 1/3$,
+$\|K\|^2\le\allowbreak \theta$, $|Kv(x)|\le\allowbreak \|v\|_2$,
+$d^2\le\allowbreak \delta_2\le\allowbreak \theta d$ and $\delta_{j+1}\le\allowbreak \theta\delta_j$.
+Original path means are at most one, and for $n\ge\allowbreak 3$ at most $1-2d$;
+actual messages are nonnegative and $f_\ell h_\ell\le\allowbreak 1$.
+Let $G_n(z)=\allowbreak \sum_{j=\allowbreak 0}^{n-1}z^j$, $S_n=\allowbreak \one+G_n(K)g$.
+Finite convolution gives $f_a\le\allowbreak  C_a=\allowbreak S_a-\beta_a\one$, with
+$\beta_n$ the finite decreasing alternating moment sum beginning at $d$,
+and $d-\delta_2\le\allowbreak \beta_n\le\allowbreak  d$ for $n\ge\allowbreak 3$.
+Thus
+\fitdisplay{
+\E C_a=1-\beta_a-\beta_{a+1}
+\le1-2d+2\delta_2\le1-(19/16)d.
+\label{eq:Q167:T175.1}
+}{Q167.T175.1}
+For $a\ge\allowbreak 3$, the finite norm $\|G_a\|\le\allowbreak 1$ from
+part~\ref{part:Q165.2} gives
+$|S_a-1|=\allowbreak |KG_a(K)\one|\le\allowbreak 1$, so $0\le\allowbreak  C_a\le\allowbreak  S_a\le\allowbreak 2$.
+The actual $a=\allowbreak 3$ predecessor cost is retained:
+\fitdisplay{
+C_a=p+KG_{a-1}(K)g-\beta_a\one\le p+(6/5)\sqrt d\,\one,
+\label{eq:Q167:T175.2}
+}{Q167.T175.2}
+since $\|G_2\|\le\allowbreak \sqrt{1+\theta}<\allowbreak 6/5$, while $a\ge\allowbreak 4$ has predecessor
+norm at most one.
+The terminal unit arm points inward, its two-edge arm outward, and its
+four-edge arm has first edge inward and the remaining three outward.
+Both connector edges point terminal-to-receiver; the receiving arm is outward.
+
+\paragraph{Q167.2 The actual square and a positive two-step upper}\label{part:Q167.2}
+Let $0<\allowbreak d\le\allowbreak 1/4$ and put $R=\allowbreak Kg$, $S=\allowbreak K^2g$, $W=\allowbreak K^3g$,
+$m=\allowbreak 1-d$ and $k=\allowbreak 1/m\in[1,\allowbreak 4/3]$.
+The actual identity $h_4=\allowbreak q-2d\one-R-S-W+dg$ gives
+$f_2+h_4=\allowbreak 2m\one-U$, where $U=\allowbreak S+W-dg$; hence
+$F=\allowbreak qf_2h_4\le\allowbreak  q(m-U/2)^2$.
+One has $\E U^2=\allowbreak V=\allowbreak d^3+2d\delta_2+\delta_3+\delta_4$ and
+$\E U-\E(gU)=\allowbreak d^2+2\delta_2$.
+Expand $T(qU)$ and use $|K(gU)|\le\allowbreak \sqrt{dV}$,
+$T(qU^2)\le\allowbreak 4V$ to obtain
+\fitdisplay{
+TF/m^2\le\bar f_2+K'R_0+\delta\one,
+\quad K'=-K,\quad g'=-g,\quad R_0=-kU,
+\quad\delta=-k(d^2+2\delta_2)+k\sqrt{dV}+k^2V.
+}{}
+Put $v=\allowbreak \delta_2/d$ and
+$J_0=\allowbreak V/d\le\allowbreak  d^2+[2d+\theta(1+\theta)]v$.
+With $\sqrt{J_0}\le\allowbreak 3/8+(2/3)J_0$ and $k\le\allowbreak 4/3$,
+\fitdisplay{
+\delta/(kd)\le3/8-d+2d^2
++v[-2+4d+2\theta(1+\theta)]\le3/8.
+}{}
+If the $v$ coefficient is nonpositive, discard it; otherwise use
+$v\le\allowbreak \theta$. The resulting quadratic increases in $d$, with
+endpoint value $-1099/16384<\allowbreak 0$ at $1/4$ for the part after $3/8$.
+Thus $D=\allowbreak d/2\ge\allowbreak \delta$ and $D\ge\allowbreak 0$.
+Apply the original positive operator once more. Its exact
+$D_1=\allowbreak \E(K'R_0)=\allowbreak k(d^2+\delta_2)$ and $\bar f_3=\allowbreak S'_3-d\one$ give
+\fitdisplay{
+0\le X:=T^2F\le\mathcal W:=m^2Y,
+\quad Y=Cq+K'Q(K')g'+c\one.
+\label{eq:Q167:T175.3}
+}{Q167.T175.3}
+Here
+\fitdisplay{
+C=1+d/2,\quad c=k(d^2+\delta_2)-d,
+\quad Q(z)=(1-kx^2)+[1-k(d+x)]z,\quad z=i\sqrt x.
+}{}
+The upper $Y$ is nonnegative by actual positive propagation.
+Both real coefficients are nonnegative, since
+$k(d+x)\le\allowbreak 7/8$ and $kx^2\le\allowbreak 169/768$. Therefore
+\fitdisplay{
+|Q|^2\le(1-x^2)^2+x(1-x)^2\le1+x-3x^2\le13/12.
+\label{eq:Q167:T175.4}
+}{Q167.T175.4}
+All comparisons are on $[0,\allowbreak \theta]$, without a lower condition $x\ge\allowbreak  d$.
+
+\paragraph{Q167.3 Every condition for coefficient nine}\label{part:Q167.3}
+The coefficient-nine lemma in part Q117.4 of
+Section~\ref{proof:Q5-C117} states that nonnegative $C_0,\allowbreak Z$ with
+\fitdisplay{
+C_0\le p+(6/5)\sqrt d,\quad
+Z\le(1-5d/8)q-d/2+(13/12)\sqrt d,\quad
+0\le\E Z\le1-3d/2
+}{}
+satisfy $C_0\{(Z+\E Z)^2+2(\E Z)^2\}\le\allowbreak 9$.
+Use the receiving row \eqref{eq:Q167:T175.2}.
+Since $c\le\allowbreak -kd(\kappa-2d)$, \eqref{eq:Q167:T175.4} yields
+\fitdisplay{
+\mathcal W\le m^2Cq-dm(\kappa-2d)\one
++m^2\sqrt{13/12}\sqrt d\,\one.
+}{}
+The coefficient $m^2C=\allowbreak 1-3d/2+d^3/2\le\allowbreak 1-5d/8$.
+For $t=\allowbreak \sqrt d\le\allowbreak 1/2$, use $\sqrt{13/12}<\allowbreak 25/24$.
+The remaining difference from the lemma's upper is at least
+\fitdisplay{
+t/24+(3/32)t^2+(25/12)t^3-(83/32)t^4-(25/24)t^5+2t^6>0.
+}{}
+Combine the two negative higher terms with the positive cubic using
+$t\le\allowbreak 1/2$; its remaining cubic coefficient is $101/192>\allowbreak 0$.
+Let $\mu=\allowbreak \E\mathcal W$, distinguished from the measure and score.
+The exact mean $\E(K'Q(K')g')=\allowbreak -d+k\delta_3$ gives
+\fitdisplay{
+\mu=m^2[1-3d/2+k(d^2+\delta_2+\delta_3)].
+\label{eq:Q167:T175.5}
+}{Q167.T175.5}
+For the lemma's weak condition,
+$c+\E(K'Q(K')g')=-2d+k(d^2+\delta_2+\delta_3)
+\le-695d/768<-7d/8$.
+Thus $\mu\le\allowbreak  m^2(1-3d/8)\le\allowbreak 1-3d/2$, and
+\fitdisplay{
+C_a\{(\mathcal W+\mu)^2+2\mu^2\}\le9.
+\label{eq:Q167:T175.6}
+}{Q167.T175.6}
+
+\paragraph{Q167.4 A stronger bound on the actual mean}\label{part:Q167.4}
+Using $\delta_2+\delta_3\le\allowbreak \theta(1+\theta)d=\allowbreak (585/1024)d$ in
+\eqref{eq:Q167:T175.5} gives
+$\mu\le\allowbreak  m[1-(1975/1024)d+(5/2)d^2]$.
+The upper equals $1-dL(d)$ with
+$L(d)=\allowbreak 2999/1024-(4535/1024)d+(5/2)d^2$.
+On $[0,\allowbreak 1/4]$, $L'<\allowbreak 0$, so $L(d)\ge\allowbreak  L(1/4)=\allowbreak 8101/4096>\allowbreak 63/32$.
+Hence
+\fitdisplay{
+0\le\mu\le1-(8101/4096)d\le1-(63/32)d.
+\label{eq:Q167:T175.7}
+}{Q167.T175.7}
+This improves the mean estimate for the same positive upper and direction.
+
+\paragraph{Q167.5 Nonpositive covariance at the original kernel}\label{part:Q167.5}
+The spectral measure $\nu$ at $g$ has support $[0,\allowbreak \theta]$, mass $d$,
+and $\int x^j\,\allowbreak d\nu=\allowbreak \delta_{j+1}$.
+Write $G_a=\allowbreak A_0+zB_0$ with $1-x\le\allowbreak  A_0,\allowbreak B_0\le\allowbreak 1$.
+The coordinates of $C+zQ$ are
+$P_0=\allowbreak C-x+kdx+kx^2>\allowbreak 0$ and $P_1=\allowbreak 1-kx^2\ge\allowbreak 0$.
+Then
+\fitdisplay{
+\operatorname{Re}\{G_a(z)(C+zQ(z))\}
+\ge(1-x)P_0-xP_1\ge1-3x+2x^2\ge57/512.
+}{}
+Retaining the original mean correction,
+\fitdisplay{
+\operatorname{Cov}(C_a,\mathcal W)
+\le-m^2[(57/512)d+\beta_{a+1}(d-k\delta_3)]\le0.
+\label{eq:Q167:T175.8}
+}{Q167.T175.8}
+Here $d-k\delta_3>\allowbreak 0$ since $k\le\allowbreak 4/3$, $\delta_3\le\allowbreak \theta^2d$.
+The payment discards this proved nonpositive covariance while retaining
+the negative square in the variance.
+
+\paragraph{Q167.6 The full variance after clearing a denominator}\label{part:Q167.6}
+Set $j=\allowbreak mC=\allowbreak 1-d/2-d^2/2$ and $a_0=\allowbreak 2d-1$.
+For $\rho=\allowbreak P_0^2+xP_1^2$, the exact polynomial is
+\fitdisplay{
+\begin{aligned}
+m^2\rho(x)=v(x)&=(j+a_0x+x^2)^2+x(m-x^2)^2\\
+&=j^2+(-1+3d-2d^3)x+(3-5d+3d^2)x^2\\
+&\quad+(6d-4)x^3+x^4+x^5.
+\end{aligned}\label{eq:Q167:T175.9}
+}{Q167.T175.9}
+The actual mean gives
+\fitdisplay{
+\operatorname{Var}(\mathcal W)
+=m^2\left\{\int v(x)\,d\nu-(md-\delta_3)^2\right\}.
+\label{eq:Q167:T175.10}
+}{Q167.T175.10}
+Let $F_0(x)=\allowbreak (v(x)-j^2)/x$, extended polynomially at zero.
+Its second derivative $2(6d-4)+6x+12x^2$ has maximum
+$-149/256<\allowbreak 0$ on $d\le\allowbreak 1/4,\allowbreak x\le\allowbreak \theta$.
+Its first derivative at $\theta$ is $4205/8192-d/8+3d^2>\allowbreak 0$,
+so $F_0$ increases throughout the interval.
+Thus $v(x)\le\allowbreak  j^2+\mathcal B(d)x$, where
+\fitdisplay{
+\mathcal B(d)=-363983/1048576+(1003/512)d+(39/32)d^2-2d^3.
+\label{eq:Q167:T175.11}
+}{Q167.T175.11}
+The derivative of $\mathcal B(d)-(49/16)d^2$ is
+$1003/512-(59/16)d-6d^2\ge\allowbreak 339/512>\allowbreak 0$ on $[0,\allowbreak 1/4]$;
+its right endpoint is $-4047/1048576<\allowbreak 0$.
+Hence $\mathcal B(d)\le\allowbreak (49/16)d^2$.
+Even though $\mathcal B$ can change sign, first multiply this inequality
+by $\delta_2\ge\allowbreak 0$, then use the nonnegative upper coefficient:
+$\mathcal B(d)\delta_2\le\allowbreak (49/16)d^2\delta_2\le\allowbreak (637/512)d^3$.
+Also $md-\delta_3\ge\allowbreak (m-\theta^2)d>\allowbreak 0$.
+With $e_0=\allowbreak 1-\theta^2=\allowbreak 855/1024$, retain the variance square:
+\fitdisplay{
+\begin{aligned}
+\operatorname{Var}(\mathcal W)
+&\le m^2\{j^2d+(637/512)d^3-(e_0-d)^2d^2\}\\
+&=m^2\{d-(1+e_0^2)d^2+(277/128)d^3-d^4/2+d^5/4\}.
+\end{aligned}\label{eq:Q167:T175.12}
+}{Q167.T175.12}
+The negative square is part of the bound used in the following payment.
+
+\paragraph{Q167.7 The complete low-domain fourth payment}\label{part:Q167.7}
+The original comparisons $X\le\allowbreak \mathcal W$ and $f_a\le\allowbreak  C_a$ are
+nonnegative. The exact fourth identity gives
+\fitdisplay{
+\begin{aligned}
+\E[f_aX^4]\le{}&(\E C_a)\mu^4+4\mu^3\operatorname{Cov}(C_a,\mathcal W)\\
+&+\E[C_a(\mathcal W-\mu)^2\{(\mathcal W+\mu)^2+2\mu^2\}].
+\end{aligned}
+}{}
+The established mean, coefficient, covariance and variance bounds give
+\fitdisplay{
+Q(d)=(1-19d/16)(1-63d/32)^4
++9(1-d)^2\{d-(1+e_0^2)d^2+(277/128)d^3-d^4/2+d^5/4\}.
+}{}
+The exact finite expansion is
+\fitdisplay{
+Q(d)=1-d/16+q_2d^2+q_3d^3+q_4d^4+q_5d^5-9d^6+(9/4)d^7,
+}{}
+\fitdisplay{
+\begin{gathered}
+q_2=-699417/1048576<-2/3,\quad q_3=928818/1048576<9/10,\\
+q_4=-7820208/1048576<-7,\quad q_5=216199917/16777216<13.
+\end{gathered}\label{eq:Q167:T175.13}
+}{Q167.T175.13}
+The comparisons have positive denominators; for example
+$3\cdot699417-2\cdot1048576=\allowbreak 1099>\allowbreak 0$,
+$7820208>\allowbreak 7\cdot1048576$, and $216199917<\allowbreak 13\cdot16777216$.
+Group the coefficients by even degrees:
+\fitdisplay{
+Q(d)\le1-d/16+d^2[-2/3+(9/10)d]
++d^4[-7+13d]+d^6[-9+(9/4)d].
+}{}
+For $d\le\allowbreak 1/4$, the three brackets are at most
+$-53/120,\allowbreak -15/4,\allowbreak -135/16$, all nonpositive. Hence
+\fitdisplay{
+\E[f_a\{T^2(qf_2h_4)\}^4]\le1-d/16
+\qquad(a\ge3,0\le d\le1/4).
+\label{eq:Q167:T175.14}
+}{Q167.T175.14}
+At $d=\allowbreak 0$ original leaf integration gives equality, without requiring $K=\allowbreak 0$.
+
+\paragraph{Q167.8 A high-domain mean proof, decorations and reversal}\label{part:Q167.8}
+For $d\ge\allowbreak 1/4$ retain $F=\allowbreak qf_2h_4$, and let $Y=\allowbreak TF$, $X=\allowbreak TY$.
+The original adjoint, $pq\le\allowbreak 1$, and nonnegativity give
+\fitdisplay{
+\E Y=\E[pF]=\E[pqf_2h_4]\le\E[f_2h_4]
+=\langle f_2,Tf_3\rangle=\langle Af_2,f_3\rangle=\E f_3^2.
+\label{eq:Q167:T175.15}
+}{Q167.T175.15}
+This computes the true one-step mean.
+The original kernel $1-K\in[0,\allowbreak 2]$ gives $X\le\allowbreak 2\E Y$.
+Use $f_3=\allowbreak 1-d+g+R+S$, $\E R=\allowbreak -d$,
+$\E(gR)=\allowbreak \E(RS)=\allowbreak 0$ and $\E(gS)=\allowbreak -\delta_2$ to expand
+$\E f_3^2=\allowbreak 1-3d+3d^2-\delta_2+\delta_3\le\allowbreak 1-3d+(77/32)d^2$.
+This last quadratic decreases on $[1/4,\allowbreak 1/3]$, with derivative at most
+$-67/48$ and left endpoint $205/512$. Therefore
+\fitdisplay{
+0\le X\le205/256<7/8,\quad
+\E[f_aX^4]\le(205/256)^4<(7/8)^4=2401/4096<3/4<1-d/16.
+\label{eq:Q167:T175.15a}
+}{Q167.T175.15a}
+Only $\E f_a\le\allowbreak 1$ is used here, simultaneously for all $a\ge\allowbreak 3$.
+Together with the low-domain result and the $d=\allowbreak 0$ boundary, this proves
+\eqref{eq:Q167:T175.0} at every original finite kernel, without an
+ordinary-moment or general change-of-weight input.
+For every proved $d$, $E_t,\allowbreak E_o\in[0,\allowbreak 1]$ are actual equal-pair products;
+positivity of $T$ gives the decorated result in place.
+All multiplicities and subdivisions remain as original directed edges.
+For equal-pair half-length sums $S_t,\allowbreak S_o$, an original component has
+$a+9+2S_t+2S_o$ edges and $a+10+2S_t+2S_o$ vertices;
+its fourth-moment test tree has $a+36+8S_t+2S_o$ edges and
+$a+37+8S_t+2S_o$ vertices.
+Complete reversal replaces $K$ by $-K$, the terminal by
+$p\bar f_2W_4$ with $W_4=\allowbreak A\bar f_3$, propagation $T^2$ by $A^2$,
+and receiving $f_a$ by $\bar f_a$, with all decorations reversed together.
+Every calculation stays at the same original $\mu$; original joint-label
+laws, edge counts, vertices and noninjective maps retain their meanings.
+This reference fourth interface does not itself assign arbitrary compound
+half-tree or internal-root moments.

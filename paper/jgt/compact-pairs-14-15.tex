@@ -1,0 +1,104 @@
+\subsection[The residual pairs (1,4) and (1,5)]{The residual pairs $(1,4)$ and $(1,5)$}\label{loc:S8}
+Put $P_j=qf_j$, $r=Kg$, $s=K^2g$, $t=K^3g$, $u=K^4g$.
+The actual path expansions give
+\begin{align*}
+ R_4&=r+s+t-dg,&m_4&=1-d,&\E[pR_4]&=-d-d^2,\\
+ R_5&=r+s+t+u-d(2g+r),&m_5^0&=1-(3d-\delta_{2})/2,&\E[pR_5]&=-d+\delta_{3}-d^2,
+\end{align*}
+and $q+f_j=2m_j+R_j$, with $m_5=m_5^0$ in this identity.
+Thus $P_j\le(m_j+R_j/2)^2$.
+The unweighted budgets, also used in Section~\ref{loc:S19}, are
+\begin{gather*}
+ \|R_4\|_\infty^2\le U_4=d+77d^2/32,\qquad
+ \E R_4^2\le dW_4,\quad W_4=10101/32768+13d/16+d^2,\\
+ \|R_5\|_\infty^2\le U_5=d+5d^2,\qquad
+ \E R_5^2\le dW_5,\quad W_5=1/4+d/2+9d^2/2.
+\end{gather*}
+For the first row use
+$\|g+r+s\|^2=d-\delta_{2}+\delta_{3}$ and
+$\E R_4^2=\delta_{2}-\delta_{3}+\delta_{4}+2d\delta_{2}+d^3$;
+the increasing spectral polynomial is $x-x^2+x^3$.
+For the second, write $R_5=K[U_0-dW_0]$,
+$U_0=g+r+s+t$, $W_0=2\one+g$. Then
+\begin{gather*}
+ \|U_0\|^2=d-\delta_{2}-\delta_{3}+\delta_{4},\quad
+ \langle U_0,W_0\rangle=-d+\delta_{2},\quad\|W_0\|^2=4+d,\\
+ \E R_5^2=\delta_{2}-\delta_{3}-\delta_{4}+\delta_{5}+2d(\delta_{2}-\delta_{3})+d^2(4d+\delta_{2}).
+\end{gather*}
+Discard $-\delta_{4}+\delta_{5}\le0$ and use the increasing $x-x^2$ on
+$[0,\theta]$ to obtain the stated $W_5$.
+All $U_j,W_j$ increase; use $V_{p,j}/d\le W_j+\sqrt{U_jW_j}$.
+
+\proofpart{Pointwise caps and the outer intervals}
+Comparing squares gives
+\begin{align*}
+ (1/6+2d)^2-U_4&=1/36-d/3+51d^2/32>0,\\
+ (2/15+83d/32)^2-U_5&=4/225-37d/120+1769d^2/1024>0.
+\end{align*}
+Their discriminants are $-19/288$ and $-1/36$, respectively.
+Hence $P_4\le(13/12)^2$, $P_5\le(16/15)^2$.
+The powers used below are
+$(13/12)^6<5/3$, $(13/12)^{10}<9/4$,
+$(16/15)^6<3/2$, $(16/15)^{10}<2$.
+Since $\E[pP_j]\le\mu_j$,
+the large ranges $d\ge7/32$ for $j=4$ and $d\ge3/16$ for $j=5$
+give sixth moments less than $3987/4096$ and $119/128$, respectively,
+using $\mu_4\le1-83d/32$ and $\mu_5\le1-137d/48$.
+
+\proofpart{Convex main terms}
+The sixth and cubic main terms are
+\begin{align*}
+ H_4&=(1-d)^{11}(1-7d-6d^2),&F_4&=(1-d)^5(1-4d-3d^2),\\
+ H_5&=(1-5d/4)^{11}(1-121d/20),&F_5&=(1-5d/4)^5(1-73d/20).
+\end{align*}
+The center for length four is exact. For length five use
+$m_5^0\le1-5d/4$ and $\E[pR_5]\le-4d/5$.
+The negative mean substitution is valid since its derivative factors are
+$2m_5^0-11(4/5)d\ge2-59d/5>0$ on $d\le1/16$ and
+$2m_5^0-5(4/5)d\ge2-7d>0$ on $d\le3/16$.
+For length four the second-derivative brackets are
+$252-636d-936d^2>0$ on $d\le3/32$ and
+$54-48d-126d^2>0$ on $d\le1/3$.
+For length five use the derivative formula from Section~\ref{loc:S7}
+with $cd\le1/8$ or $1/4$. Thus all main functions are convex on their
+table domains.
+
+\proofpart{Complete sixth-moment certificates}
+Use $H_j+dB_{12}(V_{p,j}/d)$, with the following exact finite-sum bounds.
+\begin{center}\small
+\begin{tabular}{@{}cccccc@{}}\toprule
+$j;I$&$\bar m$&$M$&$V_{p,j}/d$&$B_{12}$&endpoint bounds\\\midrule
+$4;[0,1/32]$&$1$&$3/16$&$9/20$&$23$&$1,567/640$\\
+$4;[1/32,1/16]$&$31/32$&$9/32$&$17/32$&$21$&$933/1024,501/512$\\
+$4;[1/16,5/64]$&$15/16$&$5/16$&$29/50$&$16$&$689/800,73/80$\\
+$4;[5/64,3/32]$&$12/13$&$11/32$&$5/8$&$15$&$471/512,1253/1280$\\
+$5;[0,1/32]$&$1$&$1/5$&$19/50$&$47/2$&$1,2813/3200$\\
+$5;[1/32,1/16]$&$25/26$&$7/24$&$15/32$&$20$&$1143/1280,111/128$\\\bottomrule
+\end{tabular}
+\end{center}
+In the second length-four row the actual $M=27/100$ may be enlarged to
+$9/32$ for $B_{12}$, while its recorded variance bound is unchanged.
+Convexity gives the complete sixth ranges including zero.
+
+\proofpart{Complete cubic certificates}
+Here $k$ is a rounded upper bound for $B_6(V_{p,j}/d)$, and the endpoint
+columns bound $F_j+kd$.
+\begin{center}\small
+\begin{tabular}{@{}cccccc@{}}\toprule
+$j;I$&$\bar m$&$M$&$V_{p,j}/d$&$k$&endpoint bounds\\\midrule
+$4;[3/32,1/8]$&$29/32$&$13/32$&$7/10$&$49/20$&$191/320,173/320$\\
+$4;[1/8,5/32]$&$7/8$&$15/32$&$39/50$&$5/2$&$35/64,35/64$\\
+$4;[5/32,3/16]$&$27/32$&$21/40$&$7/8$&$21/8$&$145/256,71/128$\\
+$4;[3/16,7/32]$&$13/16$&$7/12$&$1$&$27/10$&$91/160,189/320$\\
+$5;[1/16,3/32]$&$12/13$&$3/8$&$4/7$&$72/35$&$139/210,159/280$\\
+$5;[3/32,1/8]$&$8/9$&$11/24$&$27/40$&$9/4$&$75/128,17/32$\\
+$5;[1/8,5/32]$&$17/20$&$8/15$&$4/5$&$5/2$&$9/16,107/192$\\
+$5;[5/32,3/16]$&$13/16$&$5/8$&$24/25$&$11/4$&$229/384,39/64$\\\bottomrule
+\end{tabular}
+\end{center}
+The complete $B_6$ upper bounds in row order are
+$7/2,16/5,3,27/10,18/5,10/3,25/8,14/5$.
+The length-four endpoints are less than $3/5$ and the length-five endpoints
+less than $2/3$. Their respective pointwise caps convert each cubic
+estimate into the sixth moment. Together with the outer ranges these
+prove $\E[p(qf_4)^6],\E[p(qf_5)^6]\le1$ on all $d\in[0,1/3]$.

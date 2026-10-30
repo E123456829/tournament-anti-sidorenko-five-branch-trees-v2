@@ -1,0 +1,487 @@
+\subsection{Unanchored propagation and negative odd-root unit bridges}\label{proof:Q5-C079}
+\paragraph{Q79.1 Original finite identities, directions, and inputs}
+
+Delete zero-mass atoms. Since K(x, \(x)=0,\allowbreak \) on each retained atom
+p(x), \(q(x)\ge \mu(x)>0.\) Every actual finite rooted-tree message is
+positive, because the all-equal labeling at the root has positive
+mass and all diagonal edge factors are one. Write
+
+\fitdisplay{
+r=Kg,\quad s=Kr,\quad t=Ks,\quad
+ \theta=13/32,\quad\kappa=19/32,\quad\tau=d-\delta_2.
+}{}
+
+The original finite skew calculus gives
+
+\fitdisplay{
+0\le d\le1/3,\quad \|K\|^2\le\theta,\quad
+ d^2\le \delta_2\le\theta d,\quad \delta_{m+1}\le\theta \delta_m,
+}{}
+\fitdisplay{
+Er=-d,\quad Eg=Es=0,\quad E(gr)=E(rs)=0,
+ \quad E(gs)=-\delta_2.
+}{Q79.1.1}
+
+Original row centering gives \(r^2\le pqd.\) The stronger pointwise
+\(|r|\le pq/2\) also follows directly by antisymmetrizing its two inner
+labels:
+
+\fitdisplay{
+r(x)=\tfrac12 E_{y,z}
+ [(K(x,y)-K(x,z))K(y,z)],
+}{}
+
+using \(|u-v|\le 1-uv\) for u, v in [-1, 1]. Consequently
+
+\fitdisplay{
+|r|\le pq/2\le1/2.
+}{Q79.1.2}
+
+The exact C064 ordinary norm inputs are
+
+\fitdisplay{
+\|T\|^2\le(1+32d/19)^2,\qquad
+ \|T^2\|^2\le(1+d/2)^4,
+}{}
+\fitdisplay{
+\|T^M\|\le(1-d/8)^{\lfloor M/3\rfloor}\le1
+ \quad(M\ge3).
+}{Q79.1.3}
+
+Their order is the ordinary original L2(mu) order. In particular the
+last line is an integer-power theorem, not a claim that \(\lVert T\rVert \le 1.\)
+The exact C064 path fourth and C056 inverse fourth inputs are
+
+\fitdisplay{
+E\bar f_4^4\le1-d-4d^2,\qquad E\bar f_5^4\le1-13d/12,
+ \qquad E\bar f_n^4\le1-47d/360\quad(n\ge6),
+}{Q79.1.4}
+\fitdisplay{
+E[\bar f_3^4/q]\le1-23d/36.
+}{Q79.1.5}
+
+Only these ranges are used. The convenient weaker common bound $1-47d/360$ also holds for all $n\ge4$. 
+
+The unit-connector directions in Proposition~\ref{prop:ordinary-unit-inner} are as follows:
+
+\begin{description}[style=nextline,leftmargin=1.6em]
+\item[{Terminal unit arm}] Away from the terminal, with factor \(p\).
+\item[{Terminal \(b\)-arm}] Entirely toward the terminal, with factor \(\bar f_b\).
+\item[{Unit inner connector}] From the terminal toward the root, with operator \(T\).
+\item[{Root shortest arm \(a\)}] Entirely away from the root, with factor \(f_a\).
+\item[{Root arm \(u_i\)}] The first edge points away from the root and the remaining edges toward its first neighbor, with factor \(W_{u_i}\).
+\item[{Root arm \(v_i\)}] Entirely toward the root, with factor \(\bar f_{v_i}\).
+\item[{Outer path of length \(M\)}] Every edge points from the root toward the receiving root, with operator \(T^M\).
+\end{description}
+
+Thus the root has exactly $2k+1$ residual arms, and \eqref{eq:ordinary-unit-inner:unanchored-output} lists them all.
+The directions depend solely on the original ordered lengths. The
+same directions are used in every continuous parameter interval.
+
+If \(d=0\) then \(g=0,\allowbreak \) but K need not vanish. \(A\one=T\one=\one,\allowbreak \) so leaf integration
+gives value one for every actual component. For the all-real theorem,
+(Q79.1.3) and row mass one give the asserted estimates directly as shown
+in \mbox{\hyperref[part:Q79.2]{part Q79.2}}. Divisions by d below are confined to \(d>0.\)
+
+\paragraph{Q79.2 A positive-kernel transfer on the fixed measure}\label{part:Q79.2}
+
+For any positive operator B with row mass \(h=B\one>0,\allowbreak \) original row Jensen
+gives \(|BY|^4\le h^3 B(|Y|^4).\) Raising to power \(2/3,\allowbreak \) multiplying by
+\(q^{-1/3},\allowbreak \) and applying Holder with exponents 3 and \(3/2\) gives
+
+\fitdisplay{
+I_q(BY)\le
+ \{E[B(|Y|^4)^2]\}^{1/3}
+ \{E[h^3/\sqrt q]\}^{2/3}.
+}{}
+
+Here \(B(|Y|^4)^2\) means the square of \(B(|Y|^4).\) Its L2 norm is
+bounded by ||B|| times the L2 norm of \(|Y|^4.\) Thus
+
+\fitdisplay{
+I_q(BY)^3\le\|B\|^2 E|Y|^8 R(h)^2,
+ \qquad R(h)=E[h^3/\sqrt q].
+}{Q79.2.1}
+
+The C064 transfer has the displayed weight, operator order and
+input exponent. It applies to every real Y.
+
+Taking \(B=T^M,\allowbreak \) its actual row is \(\bar f_{M}.\) For \(d=0,\allowbreak  q=\bar f_{M}=1\) and
+the norm in (Q79.1.3) is at most one, so (Q79.2.1) proves (0.1) for all-real
+Y also in that boundary case. We now pay the row for every M.
+
+\paragraph{Q79.3 The two shortest rows, with complete scalar certificates}
+
+\paragraph{Q79.3.1 A uniform original q fifth-half moment}
+
+For \(0\le q\le 2\) put \(z=\sqrt{q}.\) The exact identity is
+
+\fitdisplay{
+q^{5/2}-1-\tfrac52(q-1)
+ =(z-1)^2(z^3+2z^2+3z+3/2).
+}{}
+
+The difference between (\(9/4)(z+1)^2\) and its last factor is
+
+\fitdisplay{
+-z^3+\tfrac14z^2+\tfrac32z+\tfrac34
+ \ge\tfrac14z^2-\tfrac12z+\tfrac34
+ =\tfrac14(z-1)^2+\tfrac12>0,
+}{Q79.3.1}
+
+because \(z^3\le 2z.\) Multiplying by (\(z-1)^2\) gives the full-interval
+pointwise inequality
+
+\fitdisplay{
+q^{5/2}\le1+\tfrac52(q-1)+\tfrac94(q-1)^2.
+}{}
+
+Since \(Eq=1\) and \(E(q-1)^2=d,\allowbreak \)
+
+\fitdisplay{
+R(\bar f_{1})=E q^{5/2}\le1+9d/4.
+}{Q79.3.2}
+
+Together with (Q79.1.3) and \(\log(1+x)\le x,\allowbreak \) this gives
+
+\fitdisplay{
+\|T\|^2 R(\bar f_{1})^2
+ \le(1+32d/19)^2(1+9d/4)^2
+ \le e^{(64/19+9/2)d}=e^{(299/38)d}.
+}{Q79.3.3}
+
+This proves the \(M=1\) line without asserting that it is a contraction.
+Indeed for \(Y=1\) and a nonconstant q, \(I_q(T1)=E q^{7/3}>1,\allowbreak \) so a
+universal cost-free unit map would be false.
+
+\paragraph{Q79.3.2 The actual b2 weighted row}
+
+The exact path is \(\bar f_2=q+r.\) First note that, again with \(z=\sqrt{q},\allowbreak \)
+
+\fitdisplay{
+q^{3/2}-1-\tfrac32(q-1)=(z-1)^2(z+1/2),
+}{}
+
+and \(0\le z+1/2\le (z+1)^2/2.\) The nonnegative remainder H(q) therefore
+satisfies \(0\le H(q)\le g^2/2.\) Using \(Egr=0\) and (Q79.1.2),
+
+\fitdisplay{
+E[q^{3/2}r]=-d+E[H(q)r]
+ \le-d+\tfrac12EH(q)\le-3d/4.
+}{Q79.3.4}
+
+The two remaining terms in the cubic expansion have the bounds
+
+\fitdisplay{
+E[\sqrt q\,r^2]\le\tfrac{10}{7}\delta_2,
+ \qquad E[r^3/\sqrt q]\le\tfrac47\delta_2.
+}{Q79.3.5}
+
+For the first use \(\sqrt{2}<10/7.\) For the second, (Q79.1.2) gives
+\(r^3/\sqrt{q}\le r^2\) p \(\sqrt{q}\)/2. The square of the last coefficient
+is (\(2-q)^2q/4.\) Its derivative has sign (2-q)(2-3q), so its maximum
+on [0, 2] is \(8/27\) at \(q=2/3.\) The comparison \(8/27<16/49\) proves
+p \(\sqrt{q}/2<4/7.\) This argument needs no host-independent positive lower bound on q.
+
+Expand the same actual cubic row and combine (Q79.3.2), (Q79.3.4), (Q79.3.5):
+
+\fitdisplay{
+\begin{aligned}
+ R(\bar f_2)
+ &=E q^{5/2}+3E[q^{3/2}r]+3E[\sqrt q\,r^2]+E[r^3/\sqrt q]\\
+ &\le1+(9/4-9/4)d+(34/7)\delta_2\\
+ &\le1+(221/112)d\le1+2d.
+ \end{aligned}
+}{Q79.3.6}
+
+The cancellation of the first-order q cost comes from the actual
+negative mean of r with the same q. The terms were not replaced by
+independent extremal function budgets. Equation (Q79.1.3) now gives
+
+\fitdisplay{
+\|T^2\|^2R(\bar f_2)^2
+ \le(1+d/2)^4(1+2d)^2\le e^{6d}.
+}{Q79.3.7}
+
+This pays every kernel and the entire continuous domain for \(M=2.\)
+
+\paragraph{Q79.4 Every outer length at least three}
+
+Let \(\beta(U)=E\)[\(U^2/q\)]. Row Cauchy for the original positive T gives
+
+\fitdisplay{
+(TU)^2\le qT(U^2),\qquad
+ \beta(TU)\le E[pU^2]\le\beta(U),
+}{Q79.4.1}
+
+where the last inequality uses \(pq\le 1.\) Since \(r^2\le pqd,\allowbreak \)
+
+\fitdisplay{
+\beta(\bar f_2)=1-2d+E[r^2/q]\le1-d,
+ \quad\beta(\bar f_{M})\le1-d\quad(M\ge2).
+}{Q79.4.2}
+
+For \(M\ge 4,\allowbreak \) ordinary Cauchy and the exact (Q79.1.4) give
+
+\fitdisplay{
+R(\bar f_{M})^2\le\beta(\bar f_{M})E\bar f_{M}^4\le1-d.
+}{Q79.4.3}
+
+All integer lengths are included: \(M=4,\allowbreak \) 5 use their own fourths and \(M\ge 6\) uses the complete finite tail.
+
+The boundary \(M=3\) uses its actual inverse fourth, not an assumed
+ordinary fourth. The exact path \(\bar f_3=1-d-g+r-s\) has mean 1-2d,
+and the odd/even skew orthogonality in (Q79.1.1) gives
+
+\fitdisplay{
+\operatorname{\operatorname{Var}}(\bar f_3)=d-\delta_2+\delta_3-d^2,
+ \qquad E\bar f_3^2=1-3d+3d^2-\delta_2+\delta_3\le1-2d.
+}{Q79.4.4}
+
+Thus (Q79.1.5) and Cauchy give
+
+\fitdisplay{
+R(\bar f_3)^2\le E[\bar f_3^4/q]E\bar f_3^2
+ \le(1-23d/36)(1-2d)\le1-d.
+}{Q79.4.5}
+
+The final factors are nonnegative on \(0\le d\le 1/3.\) Use the true
+ordinary-power contraction (Q79.1.3) in (Q79.2.1) to conclude
+
+\fitdisplay{
+I_q(T^M Y)^3\le(1-d)E|Y|^8\quad(M\ge3).
+}{Q79.4.6}
+
+The cases \(M=1\), \(M=2\), and \(M\ge3\) prove, for every real
+input \(Y\), the uniform bound
+\begin{equation}\label{eq:ordinary-unanchored:uniform}
+ I_q(T^MY)^3\le e^{(299/38)d}\E|Y|^8\qquad(M\ge1).
+\end{equation}
+Here \(299/38>6\); the sharper contraction for \(M\ge3\) remains
+(Q79.4.6).
+
+\subsubsection{A unit connector at a nonunit receiving arm}
+\label{proof:Q5-C074}\label{sec:ordinary-unit-inner}
+
+All lengths below are positive integers, and the operators use the
+same original finite probability measure. Put
+\(\theta=13/32\), \(\tau=d-\delta_2\), and use the finite
+\(G_n\) and \(\beta_n\) of \eqref{eq:Q188:conv}, with \(K=-B\).
+The actual terminal is \(p\bar f_b\); its connector is one edge
+with operator \(T\). The receiving arm points outward.
+
+\begin{lemma}[The reversed unit terminal]
+\label{lem:ordinary-unit-inner-terminal}
+For every \(b\ge2\), the following positive comparisons hold.
+At \(b=2\),
+\begin{equation}\label{eq:ordinary-unit-inner:terminal2}
+ T(p\bar f_2),\ T(qf_2)\le q-\gamma-K^2g,\qquad
+ \gamma=d-\delta_2/2.
+\end{equation}
+For \(b\ge3\), write
+\begin{equation}\label{eq:ordinary-unit-inner:terminal-data}
+\begin{gathered}
+ \bar R=KG_{b-1}(-K)g,\quad m_b=1-\beta_b/2,\quad k_b=1/m_b,\\
+ t_0=\beta_{b+1},\quad e=d-\beta_{b+2},\quad
+ V_b=\E\bar R^2,\quad \gamma=k_bt_0-k_b^2V_b/2.
+\end{gathered}
+\end{equation}
+Then
+\begin{equation}\label{eq:ordinary-unit-inner:terminal-long}
+\begin{gathered}
+ T(p\bar f_b)\le m_b^2(q-\gamma-k_bK\bar R),\\
+ 5/6\le m_b\le1,\quad1\le k_b\le6/5,\quad
+ 0\le e\le\delta_2,\quad0\le\gamma\le k_bd,\\
+ \gamma-k_be\ge d-68\delta_2/25.
+\end{gathered}
+\end{equation}
+This lemma is independent of the length of the receiving arm.
+\end{lemma}
+\begin{proof}
+The finite positive convolution gives
+\(p+\bar f_b\le2m_b+\bar R\). The right side is positive, so
+AM--GM and positivity of \(T\) give
+\[
+ p\bar f_b\le(m_b+\bar R/2)^2,\qquad
+ T\bar R=-t_0-K\bar R,\qquad T(\bar R^2)\le2V_b.
+\]
+These prove the first line of \eqref{eq:ordinary-unit-inner:terminal-long}.
+Finite skew identities give \(\E\bar R=-t_0\),
+\(\E[g\bar R]=e\), \(V_3=\delta_2+\delta_3\), and
+\(V_b\le\delta_2\) for \(b\ge4\), using
+\(\|G_{b-1}\|\le1\) in the latter range.
+For \(b\ge4\),
+\(t_0-e\ge d-2\delta_2\ge0\), hence
+\[
+ \gamma-k_be=k_b(t_0-e)-k_b^2V_b/2
+       \ge d-2\delta_2-18\delta_2/25.
+\]
+For \(b=3\), \(t_0=d\), \(e=\delta_2\) give the stronger
+\(\gamma-k_be\ge d-(161/80)\delta_2\).
+Also \(\gamma\ge0\): for \(b\ge4\), use
+\(k_b\tau-k_b^2\delta_2/2\ge(25/64)d\);
+for \(b=3\), use \(d-(18/25)(\delta_2+\delta_3)\ge0\),
+strictly when \(d>0\).
+The upper bound \(\gamma\le k_bd\) is immediate.
+At \(b=2\), both \(p+\bar f_2\) and \(q+f_2\) equal \(2+Kg\),
+and the same calculation uses
+\(T(Kg)=-d-K^2g\) and \(T((Kg)^2)\le2\delta_2\).
+\end{proof}
+
+\begin{proposition}[One receiving arm, with all later negative pairs]
+\label{prop:ordinary-unit-inner}
+Let \(a\ge3\), \(b\ge2\), \(k\ge0\), and put
+\[
+ J_{a,b}=f_aT(p\bar f_b),\qquad
+ P=\prod_{i=1}^kW_{u_i}\bar f_{v_i},\qquad
+ a<u_1<v_1<\cdots<u_k<v_k.
+\]
+For \(k=0\), take \(P=1\). The directions are fixed by these integer lengths alone. Then
+\begin{equation}\label{eq:ordinary-unit-inner:rates}
+ \E(PJ_{a,b})^8\le e^{-\Lambda_kd},\qquad
+ \Lambda_0=\frac94,\qquad
+ \Lambda_k=\frac{2005}{192}+24(k-1)\quad(k\ge1).
+\end{equation}
+Genuine equal pairs may be retained at either vertex.
+The terminal length has no ordering restriction relative to the
+receiving arm or the post lengths.
+When \(b=2\), the same bounds also hold with the distinct actual
+terminal \(qf_2\) in place of \(p\bar f_2\).
+\end{proposition}
+\begin{proof}
+First suppose \(d>0\). We keep the complete positive comparison for the bare input.
+For \(b\ge3\), the root envelope
+\(f_a\le p+KG_{a-1}(K)g-\beta_a\), together with
+Lemma~\ref{lem:ordinary-unit-inner-terminal}, gives
+\begin{equation}\label{eq:ordinary-unit-inner:square}
+\begin{gathered}
+ J_{a,b}\le m_b^2[1-(\beta_a+\gamma)/2+Z/2]^2,\\
+ Z=KV_0,\qquad
+ V_0=[G_{a-1}(K)-k_bKG_{b-1}(-K)]g,\\
+ \E Z=-\beta_{a+1}+k_be\le-17d/160.
+\end{gathered}
+\end{equation}
+The square base is half the sum of the same two nonnegative upper
+factors. For \(b=2\), the formula holds with
+\(m_b=k_b=1\), \(\gamma=d-\delta_2/2\), and
+\(V_0=[G_{a-1}(K)-K]g\), \(\E Z=-\beta_{a+1}\).
+
+For every finite \(r,s\ge2\), \(1\le k\le6/5\),
+and \(z=i\sqrt x\), \(0\le x\le\theta\),
+\begin{equation}\label{eq:ordinary-unit-inner:correlated-frequency}
+ |G_r(z)-kzG_s(-z)|^2\le1-17x/20.
+\end{equation}
+Indeed, the real and normalized imaginary coordinates of each
+\(G_n\), \(n\ge2\), lie in \([1-x,1]\).
+The real part of the difference is positive, at least \(17/160\),
+and at most \(1-kx(1-x)\); its imaginary coordinate has absolute
+value at most \(k-1+x\). The squared bound is \(1+xP(k,x)\), where
+\[
+ P=k^2-4k+1+(k^2+4k-2)x+(1-2k^2)x^2+k^2x^3.
+\]
+Here \(P_x\ge589/400>0\) and
+\(P_{kk}=2(1+x-2x^2+x^3)>0\). Its maximum is therefore at
+\(x=\theta\) and \(k=1\) or \(6/5\), where its values are
+\(-28811/32768\) and \(-174331/204800\), both below \(-17/20\).
+This proves the frequency bound for all finite indices, including
+zero frequency. Integration gives
+\(\|V_0\|^2\le d-17\delta_2/20\) when \(b\ge3\).
+
+At \(b=2\), the squared primitive bounds are
+\(d\) for \(a=3\) and \(d-51\delta_2/32\) for \(a=4\).
+For every \(a\ge5\), the finite identity
+\[
+ G_{a-1}(z)-z=\frac{1-z+z^2-z^{a-1}}{1-z}
+\]
+gives
+\begin{equation}\label{eq:ordinary-unit-inner:tail-frequency}
+ |G_{a-1}(z)-z|^2
+ \le\frac{1-x+3x^2+x^4}{1+x}\le1-65x/128.
+\end{equation}
+The first bound uses \(|1-z+z^2|\le1\) and \(|z^{a-1}|\le x^2\).
+For the second, the decreasing polynomial
+\(191/128-(449/128)x-x^3\) has value \(3/32768>0\) at \(\theta\).
+In every case \(\|V_0\|^2\le d\).
+
+Apply \eqref{eq:oc:signed-moments} to \(-V_0\), since \(B=-K\).
+The actual signed mean in \eqref{eq:ordinary-unit-inner:square}
+is retained, and
+\begin{equation}\label{eq:ordinary-unit-inner:bare-certificate}
+ \log\E J_{a,b}^8\le16\log m_b-8(\beta_a+\gamma)
+                         +8\E Z+17\|V_0\|^2.
+\end{equation}
+For \(b\ge3\), \(16\log m_b\le-8\beta_b\), and
+\[
+ \beta_a+\beta_{a+1}+\beta_b+\gamma-k_be
+       \ge4d-143\delta_2/25.
+\]
+Thus the complete exponent is at most
+\(-15d+(3131/100)\delta_2\le-(7297/3200)d<-9d/4\).
+At \(a=3\), retaining \(\beta_3+\beta_4=2d\) improves this
+by \(16\delta_2\). The other short cases give the following
+complete lower bounds for the bare rate:
+\begin{equation}\label{eq:ordinary-unit-inner:bare-rates}
+\begin{array}{c|c}
+ (a,b)&\text{rate}\\
+ \hline
+ (3,2)&43/8\\
+ (4,2)&7\\
+ (a\ge5,2)&9757/4096\\
+ (3,b\ge3)&28097/3200\\
+ (a\ge4,b\ge3)&7297/3200
+\end{array}
+\end{equation}
+For the first three rows the respective full exponents are
+\(-7d+4\delta_2\), \(-7d-483\delta_2/32\), and
+\(-7d+1455\delta_2/128\). Every listed rate exceeds \(9/4\).
+
+Now take \(k\ge1\). Complete reversal of \eqref{eq:L90:pair},
+with the weaker loss \(3d\) per pair, gives
+\begin{equation}\label{eq:ordinary-unit-inner:post-mask}
+ P\le e^{S-3kd},\quad S=KV_S,\quad
+ V_S=\sum_{i=1}^k\sum_{j=u_i}^{v_i-1}(-K)^{j-1}g.
+\end{equation}
+The intervals are disjoint and start in degree at least
+\(u_1-1\ge a\). The finite-mask bound \eqref{eq:L90:mask} gives
+\[
+ \|V_S\|^2\le(100/49)\theta^a d,\qquad
+ \|V_S\|\le\varepsilon_a\sqrt d,\qquad
+ \varepsilon_a=\begin{cases}3/8,&a=3,\\1/4,&a\ge4.\end{cases}
+\]
+The first possible positive mean in the tail is \(\delta_4\), so
+\[
+ \E S\le\frac{\delta_4}{1-\theta^2}
+       \le\frac{2197}{27360}d<d/12,
+ \qquad \E(Z+S)\le-11d/480.
+\]
+Keep the original scalar in \eqref{eq:ordinary-unit-inner:bare-certificate}
+and apply the same signed estimate once to the full primitive
+\(V_0+V_S\). Its squared norm increases by at most
+\((2\varepsilon_a+\varepsilon_a^2)d\le57d/64\).
+The additional complete exponent is therefore at most
+\[
+ [17(57/64)+2/3-24k]d
+       =-[1573/192+24(k-1)]d.
+\]
+Together with the bare rate \(9/4\), this proves
+\eqref{eq:ordinary-unit-inner:rates}. Equal pairs decrease the
+same positive input. At \(d=0\), original leaf integration
+gives every actual message value one, even if \(K\ne0\).
+\end{proof}
+
+When another genuine inward arm \(\bar f_s\), \(s\ge2\), is
+available, Section~\ref{proof:Q5-C066} gives, for every independent
+\(M\ge1\),
+\begin{equation}\label{eq:ordinary-unit-inner:multiplier-output}
+ I_q\bigl(T^M[\bar f_sPJ_{a,b}]\bigr)^3
+       \le(1-d/72)e^{-\Lambda_kd}.
+\end{equation}
+Its multiplication by the actual inward arm precedes \(T^M\).
+For an unanchored output and \(k\ge1\), the independently proved
+all-real bound \eqref{eq:ordinary-unanchored:uniform} instead gives
+\begin{equation}\tag{Q79.6.8}\label{eq:ordinary-unit-inner:unanchored-output}
+ I_q(T^M[PJ_{a,b}])^3
+ \le e^{-[9391/3648+24(k-1)]d}\le e^{-25d/912}
+ \qquad(M\ge1).
+\end{equation}
+The unanchored conclusion here uses a nonempty post block.

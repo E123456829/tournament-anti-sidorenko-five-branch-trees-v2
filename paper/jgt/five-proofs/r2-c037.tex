@@ -1,0 +1,71 @@
+\subsection{Odd terminal lists at a unit root with a two-edge outlet}
+\label{proof:R2-C037}
+Let the original distinct residual lengths be
+\[
+ (a,b_1,c_1,\ldots,b_k,c_k),\qquad
+ 1\le a<b_1<c_1<\cdots<b_k<c_k,\quad k\ge1,
+\]
+excluding the exact list \((1,2,c)\). The receiving root has one
+outward unit arm, the inner connector has any positive integer
+length \(L\), and the outer connector consists of two original
+edges. Genuine equal-pair products at the receiving root and
+terminal are denoted by \(E_r,E_t\). The actual messages are
+\[
+ H_D=E_rpT^L(E_tF),\qquad U_D=T^2H_D .
+\]
+
+The directions and their stronger ordinary-fourth rates are
+listed below. Each direction is chosen from the original lengths,
+before the host kernel is given.
+\begin{table}[htbp]\centering\small
+\caption{Unit-root directions and fourth rates:
+ \(\E H_D^4\le e^{-\rho d}\).}
+\label{tab:unit-p:outlet-directions}
+\begin{tabular}{@{}p{.39\linewidth}p{.46\linewidth}r@{}}
+\toprule
+Residual range & Actual \(F\) & \(\rho\)\\\midrule
+\(b_1\ge4\), all \(a<b_1,\ k\ge1\)
+ & \(\bar f_a\prod_i h_{b_i}f_{c_i}\)&\(5\)\\
+\(b_1=3,\ a=1,2,\ k\ge2\)
+ & \(\bar f_af_3h_{c_1}\prod_{i\ge2}h_{b_i}f_{c_i}\)&\(4\)\\
+\((1,3,c),\ c\ge4\)&\(qf_3h_c\)&\(15/4\)\\
+\((2,3,c),\ c\ge4\)&\(\bar f_2f_3h_c\)&\(4\)\\
+\(b_1=2,\ k\ge3\)
+ & \(qf_2h_{c_1}\prod_{i\ge2}h_{b_i}f_{c_i}\)&\(77/20\)\\
+\((1,2,c,b,e),\ 4\le c<b<e\)&\(qf_2h_ch_bf_e\)&\(477/125\)\\
+\((1,2,3,b,e),\ 5\le b<e\)&\(qf_2h_3h_bf_e\)&\(4\)\\
+\((1,2,3,4,e),\ e\ge5\)&\(qf_2h_eh_3f_4\)&\(4\)\\
+\bottomrule
+\end{tabular}
+\end{table}
+In particular, with the original reference factor \(q\),
+\[
+ \E H_D^4\le e^{-15d/4},\qquad
+ I_q(U_D)^3\le e^{-1223d/3420-5d^2}\le1 .
+\]
+
+\begin{proof}
+The finite-message construction and all its moment payments are
+Theorem~\ref{thm:unit-p:catalogue}. Its minimum-four packet is
+Lemma~\ref{lem:unit-p:minimum-four}; the next two families are
+Sections~\ref{part:unit-p:three-later}
+and~\ref{part:unit-p:three-single}. The first-pair-two multipair
+family and the three five-arm directions are proved in
+Sections~\ref{part:unit-p:two-many}
+and~\ref{part:unit-p:five-arms}, respectively.
+These ranges partition every displayed increasing odd list.
+
+Restore the genuine products by positivity as in
+Section~\ref{part:unit-p:decorations}. Corollary
+\ref{cor:unit-two-step:output} then applies to the actual
+\(T^2H_D\):
+\[
+ I_q(U_D)^3\le
+ e^{(24427/3420)d-5d^2}(\E H_D^4)^2
+ \le e^{-1223d/3420-5d^2}.
+\]
+This uses the ordinary fourth resource, the two original outer
+edges and the unchanged reference factor \(q\). Equal lengths,
+complete reversal and \(d=0\) are included by the same positive
+comparison and original leaf integration.
+\end{proof}

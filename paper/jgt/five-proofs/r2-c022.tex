@@ -1,0 +1,310 @@
+\subsection{Even terminals whose shortest residual arm is at least four}\label{proof:R2-C022}
+Let $4\le s_1<t_1<\cdots<s_j<t_j$ be any finite even residual list,
+$j\ge1$. Fix $F=\prod_{i=1}^jh_{s_i}f_{t_i}$, all $L\ge1$
+connector edges toward the receiving root, and its arm $a\ge3$
+outward. For every independent choice of these integers,
+\begin{equation}\tag{R22.1.1}\label{eq:R22:claim}
+\E[f_a(T^LF)^4]\le1-d/100,
+\qquad \E[E_of_a\{T^L(E_tF)\}^4]\le1-d/100.
+\end{equation}
+Use the finite receiving bounds of R2-C007,
+the covariance and Taylor identities
+\eqref{eq:R17:covariance}--\eqref{eq:R17:taylor}, and
+$\kappa=19/32$. The favorable full-domain bounds are
+\[
+\operatorname{Cov}(C_a,q)\le-\kappa d+d^2<0,\quad
+\operatorname{Cov}(C_a,\bar f_2)\le-3d/16+\theta d^2\le-5d/96.
+\]
+For the second, $\operatorname{Re}(G_aG_2)\ge1-2x\ge3/16$ and
+the actual scalar correction is at most $d\delta_2$.
+The true $G_2$ norm is $\sqrt{1+x}$, rather than one.
+For $C_a+Y+m\le18/5$, the continuous cubic inequality
+\eqref{eq:R12:cubic} gives curvature $2453/250<10$ if $m\le1$,
+and $162189/16000<41/4$ if $m\le21/20$.
+The low-range exponential payments use
+\eqref{eq:R14:exponential}; all have $d\le1/16$ and $Ad/2<1$,
+so the deficit exceeds $(A-B)d/3$.
+
+\eqref{eq:L96:four}, in the actual stated direction, gives
+\[
+\begin{gathered}
+h_4f_t\le e^{R_{4,t}-69d/20},\quad h_sf_t\le e^{R_{s,t}-16d/5}\ (s\ge5),\\
+R_{s,t}=\sum_{r=s+1}^tK^r\one.
+\end{gathered}
+\]
+Thus $F\le e^{R-\Gamma}$ for one complete finite disjoint-interval
+mask $R$, $\Gamma\ge16jd/5$; retain $\Gamma\ge69d/20$ for
+$j=1,s_1=4$.
+For a finite zero--one polynomial, separating the positive and negative
+subsum in each real and imaginary coordinate and taking the larger
+absolute value gives
+\[
+|Q(i\sqrt x)|^2\le\frac{1+x}{(1-x^2)^2}
+\le32768/16245<101/50.
+\]
+The infinite geometric sum only bounds the actual finite mask.
+Writing $R=BV_0$, its smallest original power is five, so
+\begin{equation}\tag{R22.3.3}\label{eq:R22:masknorms}
+\begin{gathered}
+\|V_0\|_2^2\le(101/50)\theta^3d<d/7,\quad \sigma:=\E R^2\le(101/50)\theta^4d<d/18,\\
+|R|^2<d/7\le1/21<1/16.
+\end{gathered}
+\end{equation}
+Hence $|R|<1/4$. The positive Taylor-tail ratio is at most $1/12$,
+and the integral remainder treats negative $R$, giving
+$e^R\le1+R+(5/8)R^2$.
+The original signed moments $D_i=\E B^iR$ obey
+\begin{equation}\tag{R22.3.4}\label{eq:R22:signed}
+D_0\in[-d/5,d/12],\quad D_1\in[-d/12,d/5],\quad
+D_i\le d/12\ (i\ge2).
+\end{equation}
+Indeed $\E K^{2r}\one=(-1)^r\delta_r$ and odd moments vanish.
+Same-sign moment indices are spaced by two, giving the sharper bounds
+$D_0\in[-C_\beta\delta_3,C_\beta\delta_4]$,
+$D_1\in[-C_\beta\delta_4,C_\beta\delta_3]$,
+$D_i\le C_\beta\delta_4$ for $i\ge2$, where $C_\beta=1024/855$.
+Here $C_\beta\theta^2=169/855<1/5$ and
+$C_\beta\theta^3=2197/27360<1/12$.
+The actual first row and propagation are
+\begin{equation}\tag{R22.3.6}\label{eq:R22:propagation}
+\begin{gathered}
+T(e^R)\le q+BR+D_0+(5/4)\sigma\le q+BR+D,
+\quad D=11d/72,\\
+e^\Gamma T^LF\le Y_L=\bar f_L+B^LR+D\bar f_{L-1}
++\sum_{i=1}^{L-1}D_i\bar f_{L-1-i}\ge0.
+\end{gathered}
+\end{equation}
+Individual signed summands need not be nonnegative.
+The finite convolution coefficients satisfy
+$\gamma_r=\beta_r-D_{r-1}\ge d/2$ for $r\ge3$ because
+$\kappa-1/12=49/96>1/2$; indices one and two will be paid separately.
+From \eqref{eq:R22:masknorms} and $\|B\|^2\le\theta$,
+\begin{equation}\tag{R22.3.8}\label{eq:R22:tails}
+\begin{array}{c|rrrrrr}
+i&1&2&3&4&5&6\\\hline
+\|B^iR\|_2/\sqrt d\text{ upper bound}
+&5/32&1/10&1/16&1/25&1/40&1/60.
+\end{array}
+\end{equation}
+These are rational-square comparisons with $\theta^i/18$; all later
+finite powers only reduce the bound.
+
+On $0<d\le1/16$, first let $L=1$ and $Y=q+BR+D$.
+Its actual mean satisfies
+$1+5d/72\le m\le1+127d/360\le21/20$,
+and $\operatorname{Var}Y\le(1369/1024)d$.
+The covariance is at most
+$-15d/32+(9/8)(5/32)d=-75d/256$.
+Since $m\ge1$, the negative Taylor term is at most $-75d/64$.
+The row bound $Y\le q+(6/25)\sqrt d+D$ gives
+$C_a+Y+m\le3+(36/25)\sqrt d+(91/180)d\le18/5$;
+the increment is at most $9/25+91/2880<3/5$.
+Using curvature $41/4$, the exponential constants are
+\[
+\begin{gathered}
+A=18965/1440=64/5+57/32-4(127/360),\\
+B=51329/4096=(41/4)(1369/1024)-75/64,\quad C=64/5.
+\end{gathered}
+\]
+$C\ge A/2$, $A-B=117715/184320>3/5$, and $Ad/2<1$,
+so the deficit exceeds $d/5$.
+
+For $L=2$, use the actual
+$Y=\bar f_2+B^2R+Dq+D_1$.
+Its mean satisfies $m\le1-203d/360$.
+Since $|D_2|=|\langle B^2\one,R\rangle|\le(5/32)d$ and
+$D_1\ge-d/12$, it also satisfies
+$m\ge1-(313/288)d\ge9/10$.
+The actual random vector is $(G_2+D)(B)u+B^2R$;
+$\|G_2\|\le\sqrt{45/32}<19/16$, $D\le11/1152<1/100$ and
+\eqref{eq:R22:tails} give $\operatorname{Var}Y\le(169/100)d$.
+The $Dq$ covariance is nonpositive, and
+\[
+\begin{gathered}
+\operatorname{Cov}(C_a,\bar f_2)\le-(83/512)d,\quad |\operatorname{Cov}(C_a,B^2R)|\le(17/16)(1/10)d,\\
+\operatorname{Cov}(C_a,Y)\le-(143/2560)d.
+\end{gathered}
+\]
+Therefore $4m^3\operatorname{Cov}(C_a,Y)\le-3d/20$, since
+$4(9/10)^3(143/2560)=416988/2560000>3/20$.
+The row bound $Y\le(1+D)q+(37/32)\sqrt d+d/5$ gives
+$C_a+Y+m\le3-(7/120)d+(377/160)\sqrt d
+\le3+377/640<18/5$.
+With curvature ten, the payment constants are
+\[
+A=4849/288=64/5+57/32+4(203/360),\quad
+B=67/4=10(169/100)-3/20,\quad C=64/5.
+\]
+$A-B=25/288$, $C\ge A/2$, $Ad/2<1$, giving deficit
+$>25d/864>d/100$.
+
+For $L=3,4,5$ replace signed coefficients only before nonnegative
+actual path factors, obtaining the nonnegative upper bounds
+\begin{equation}\tag{R22.6.1}\label{eq:R22:short}
+\begin{aligned}
+\overline Y_3&=\bar f_3+B^3R+D\bar f_2+(d/5)q+d/12,\\
+\overline Y_4&=\bar f_4+B^4R+D\bar f_3+(d/5)\bar f_2+(d/12)q+d/12,\\
+\overline Y_5&=\bar f_5+B^5R+D\bar f_4+(d/5)\bar f_3
++(d/12)\bar f_2+(d/12)q+d/12.
+\end{aligned}
+\end{equation}
+Their means are the actual means after these replacements.
+Use the correct short expansions already displayed in Module R2-C021;
+in this range $\E\bar f_4\le1-83d/32$,
+$\|G_4-d\|\le1$ and $\|P_5\|\le1-2d$, where
+$P_5=G_5-d(2+z)$ and
+$|P_5|^2-(1-2d)^2=x[-1+2d+d^2+(1-2d)x-x^2+x^3]\le0$.
+The signed mean bounds and whole-vector norm bounds give
+\[
+\begin{array}{c|c|c}
+L&\E\overline Y_L\text{ upper bound}
+&\text{random-vector norm}/\sqrt d\text{ upper bound}\\\hline
+3&1-533d/360&1+(23/60)d+1/16<11/10\\
+4&1-19d/10&1+(857/1800)d+1/25<11/10\\
+5&1-2d&1+(193/360)d+1/40<11/10.
+\end{array}
+\]
+The mean losses are respectively
+$2-11/72-1/5-1/6=533/360$,
+$83/32-11/72-1/5-1/4=2867/1440>19/10$, and
+$11/4-11/72-1/5-1/3=743/360>2$.
+The vector estimates retain the true $G_2$ norm bound $6/5$.
+Their actual pointwise bounds are
+\[
+\begin{aligned}
+\overline Y_3&\le(1+127d/360)q+(21/16)\sqrt d-11d/12,\\
+\overline Y_4&\le(1-203d/360)q+(11/10)\sqrt d-11d/12,\\
+\overline Y_5&\le(1-533d/360)q+(11/10)\sqrt d-\tau+d/12.
+\end{aligned}
+\]
+For the last two square-root coefficients use
+$17/16+(23/60)d<11/10$ and
+$1+1/25+(857/1800)d<11/10$.
+For $L=3$, $C_a+\overline Y_3+m
+\le3-(203/120)d+(201/80)\sqrt d<18/5$:
+the increment increases for $t=\sqrt d\le1/4$ and has endpoint
+$1003/1920<3/5$. For $L=4,5$ discard favorable negative terms to
+obtain $3+(23/10)\sqrt d\le3+23/40<18/5$.
+All three rows therefore have curvature ten and the common bounds
+\[
+\begin{gathered}
+m\le1-7d/5,\quad \operatorname{Var}\overline Y_L\le121d/100,\\
+\operatorname{Cov}(C_a,\overline Y_L)\le(6/5)d.
+\end{gathered}
+\]
+The covariance upper bound is nonnegative, so $m^3\le1$ is legal.
+Payment uses $A=20$, $B=169/10=10(121/100)+24/5$, $C=64/5$;
+the actual mean exponent $64/5+57/32+28/5$ exceeds twenty.
+$A-B=31/10$, $C\ge A/2$, $Ad/2<1$, so the deficit exceeds $31d/30$.
+
+For every finite $L\ge6$, indices one and two in
+\eqref{eq:R22:propagation} cannot be absorbed into $\gamma_r$.
+Pay their actual positive cost explicitly:
+\[
+D\bar f_{L-1}+D_1\bar f_{L-2}\le E_0=(127/180)d,
+\]
+using $\bar f_n\le2$. All remaining $\gamma_r\ge h=d/2$.
+Retain the four last actual paths, whose earliest original index is
+$L-3\ge3$:
+\begin{equation}\tag{R22.7.2}\label{eq:R22:long}
+\widehat Y=1-h(4-d)+[G_L-h(3+2z+z^2)](B)u+B^LR+E_0.
+\end{equation}
+The actual mean coefficient $\gamma_{L+1}\ge h$ is also retained, so
+$m\le1-5h+3hd+E_0\le1-8d/5$; its linear loss is at least
+$323/180-3/32=2449/1440>8/5$.
+The full finite polynomial certificates
+\eqref{eq:R18:shiftfour}--\eqref{eq:R18:shifttwo} give random-vector
+norm at most $(1-3h+1/60)\sqrt d<(11/10)\sqrt d$.
+The pointwise form is
+\[
+\begin{gathered}
+\widehat Y=(1-3h)q+BV-h(1-d)+E_0,\\
+V=[G_{L-1}-h(2+z)](B)u+B^{L-1}R,\quad
+\|V\|_2\le(1-2h+1/40)\sqrt d.
+\end{gathered}
+\]
+Since $dp+3hq\ge2d$ and $-2d-h(1-d)+E_0\le0$,
+$C_a+\widehat Y+m\le3+(89/40)\sqrt d\le3+89/160<18/5$.
+Thus the preceding common variance, covariance and payment bounds
+also handle every finite $L\ge6$.
+
+It remains to treat $d\ge1/16$ without changing $F$.
+For a single pair with $s_1=4$, its original interval and
+$\|G_m\|\le6/5$ give
+$|R|\le(6/5)\theta^{3/2}\sqrt d<(8/25)\sqrt d\le32d/25$,
+so $\Gamma-|R|>2d$ using $\Gamma\ge69d/20$.
+For $s_1\ge5$, $|R|\le(6/5)\theta^2\sqrt d<\sqrt d/5\le4d/5$
+gives the same conclusion. For $j\ge2$,
+$|R|<\sqrt{d/7}\le4d/\sqrt7<8d/5$ and $\Gamma\ge32d/5$.
+Consequently the same actual directions satisfy
+\begin{equation}\tag{R22.8.1}\label{eq:R22:high}
+0\le F\le e^{-2d},\qquad T^LF\le e^{-2d}\bar f_L.
+\end{equation}
+For $L\ge3$, the precise bare union of Modules R2-C012, R2-C014
+and R2-C017 gives $\E[f_a\bar f_L^4]\le1-3d/40$.
+The target is at most $e^{-8d}\le1-8d/(1+8d)
+\le1-24d/11<1-d/100$.
+
+For $L=1$, on the full $1/16\le d\le1/3$, use
+$C_a\le p+3/4$, $q+1=3-p$.
+The cubic inequality with $D=15/4,m=1$ gives curvature
+$173/16<11$. Since covariance with $q$ is nonpositive,
+$\E[f_aq^4]\le1-57d/32+11d=1+295d/32$.
+But $e^{8d}\ge1+8d+32d^2$, whose difference from this bound is
+at least $d(32d-39/32)\ge25d/32$.
+After multiplying by $e^{-8d}$ the deficit is greater than
+$25d/864>d/100$, because $8d\le8/3<3$ and $e^3<27$.
+
+For $L=2$, first take $1/16\le d\le1/8$.
+The actual mean and variance are $m_2=1-d$,
+$\operatorname{Var}\bar f_2=d+\delta_2-d^2\le d(45/32-d)$,
+and covariance with $C_a$ is nonpositive.
+Since $\bar f_2=q+Bu$ and $\sqrt d-d\le1/4$,
+$\bar f_2+m_2\le13/4-p$, $C_a\le p+9/20$, $m_2\le15/16$.
+The full pointwise coefficient is at most
+\[
+\Phi(p)=(p+9/20)[(13/4-p)^2+225/128]\le10.
+\]
+Indeed $\Phi''=6p-121/10\le-3$ on $[0,3/2]$,
+$\Phi(1)=25317/2560<99/10$, $|\Phi'(1)|=189/640<3/10$,
+so the tangent increment is below $3/200$.
+After $3/2$, $\Phi'(3/2)=-1283/640<0$ and
+$\Phi''\le-1/10$, so the remainder decreases.
+Taylor expansion gives
+\begin{align*}
+\E[f_a\bar f_2^4]&\le P(d):=(1-57d/32)(1-d)^4+10d(45/32-d)\\
+&=1+(265/32)d+(25/8)d^2-(235/16)d^3
++(65/8)d^4-(57/32)d^5\\
+&\le1+(265/32)d+(25/8)d^2.
+\end{align*}
+The omitted tail is nonpositive for $d\le1/8$.
+Thus $e^{8d}-P(d)\ge d[(231/8)d-9/32]\ge195d/128$;
+the resulting deficit exceeds $(65/128)d>d/100$ since $e^{-8d}>1/3$.
+
+Finally take $L=2$, $1/8\le d\le1/3$.
+Now $C_a\le p+3/4$, $m_2\le7/8$ and the coefficient is bounded by
+\[
+\Psi(p)=(p+3/4)[(13/4-p)^2+49/32]\le12.
+\]
+On $[0,1]$, $\Psi''\le-5$,
+$\Psi(3/4)=747/64$, $\Psi'(3/4)=9/32$, so the tangent increment
+is at most $81/10240$ and the value below twelve.
+On $[1,2]$, the convex quadratic derivative has negative endpoint
+values $-41/32,-121/32$, so $\Psi$ decreases.
+The target is bounded by
+\[
+e^{-8d}[(1-57d/32)(1-d)^4+12d(45/32-d)].
+\]
+The first term is at most $(3/8)(4/5)(7/8)^4=7203/40960$,
+using $e\ge8/3$. The function
+$h(d)=d(45/32-d)e^{-8d}$ decreases here: after removal of the
+positive exponential its derivative is
+$45/32-2d-(45/4)d+8d^2$, whose derivative is at most $-95/12$
+and whose value at $1/8$ is $-1/8$.
+Thus $h(d)\le41/(256e)\le123/2048<1/16$.
+The total is at most $7203/40960+3/4=37923/40960<14/15\le1-d/5$.
+All high rows join the low range at $d=1/16$.
+At $d=0$, original leaf integration gives equality, without requiring
+$K=0$. Positivity restores all original equal pairs and subdivision
+vertices. Full reversal reverses receiving arm, terminal arms,
+connectors, and decorations together.

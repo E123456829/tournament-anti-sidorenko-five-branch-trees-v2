@@ -1,0 +1,138 @@
+\subsection{Whole-domain retained square moments}
+\label{sec:unit-retained-whole-moments}
+\begin{lemma}[Whole-domain data for $\sigma=2$]
+\label{lem:unit-retained:whole-data}
+Take the actual $U$ of Lemma~\ref{lem:unit-retained-pair} with
+$\sigma=2$, and put $Z=KU$. The following data hold for the
+complete interval $0\le d\le1/3$:
+\[
+ \|U\|^2\le d\,v_n(d)^2,\quad
+ \E U\le d\,z_n(d),\quad \E Z\ge\alpha_n(d),\quad
+ |Z|\le v_n\sqrt d,\quad \E Z^2\le\theta d\,v_n^2,
+\]
+where
+\[
+ \begin{array}{c|ccc}
+ n&v_n&z_n&\alpha_n\\ \hline
+ 5&3/8+23d/16&\theta(1+d)&(51/32+d)d^2\\
+ \ge6&3/8+3d/2&79/256+13d/16+d^2&(51+19d)d^2/32.
+ \end{array}
+\]
+\end{lemma}
+\begin{proof}
+The original spectral measure at $u$ has mass $d$ and
+$\int x=\delta_2$. Skew adjunction gives
+$\|U\|^2=\int(a^2+xb^2)$, $\E U=\int b$,
+and $\E KU=\int a$.
+For $n=5$, $a'=1-2x>0$ and $b'=1$. First maximize the coordinates in $x$ and
+then use $\delta_2\le\theta d$. The constant-vector squared norm
+is $131313/1048576<9/64$ and the linear-vector squared norm is
+$66997/32768<(23/16)^2$; the latter margin is $715/32768$.
+Also $b\le\theta(1+d)$ and
+\[
+ \E Z=d^2+(1+d)\delta_2-\delta_3
+       \ge(51/32+d)d^2.
+\]
+
+For $n\ge6$ put $u_\theta=10101/32768$.
+The exact coordinates are bounded above by
+\[
+ x-x^2+x^3+d+\delta_2+E_0(d-x),\qquad
+ x-x^2+x^3+2\delta_2+dE_0.
+\]
+They increase in $x$, with derivatives at least $1/3$ and $2/3$.
+At $x=\theta$, then $\delta_2\le\theta d$, the bounding vector is
+\[
+ (u_\theta+(1+\theta)d+E_0(d-\theta),
+   \sqrt\theta[u_\theta+2\theta d+dE_0]).
+\]
+Its squared norm is convex in $E_0\in[0,d]$.
+At $E_0=0$, the constant norm is below $3/8$ and the linear
+squared norm is $18397/8192<9/4$. At $E_0=d$, increase
+$u_\theta$ to $u_*=79/256$.
+The difference
+\[
+ (3/8+3d/2)^2-(u_*+d+d^2)^2
+                  -\theta(u_*+2\theta d+d^2)^2
+\]
+has degree four and Bernstein coefficients on $[0,1/3]$
+\[
+ \frac{14067}{2097152},\quad\frac{67211}{2097152},\quad
+ \frac{1123003}{18874368},\quad\frac{1216019}{18874368},\quad
+ \frac{30457}{6291456}.
+\]
+All are positive. This proves the norm bound at both $E_0$
+endpoints and hence for the complete interval.
+Further $b\le u_\theta+2\theta d+d^2<z_n$.
+Using $\beta_n\le d-\kappa\delta_2$, $a_N\ge1-x$,
+$E_0\le d$, and $\delta_3\le\theta\delta_2$ gives
+\[
+ \begin{split}
+ \int a&\ge d^2+\kappa(1+d)\delta_2-E_0(\delta_2-d^2)\\
+        &\ge d^2+(\kappa-\theta d)\delta_2+d^3
+         \ge(1+\kappa+\kappa d)d^2.
+ \end{split}
+\]
+The last coefficient is positive throughout the full domain.
+Finally apply the original row and spectral bounds to $KU$.
+At $d=0$ every vector appearing here vanishes.
+\end{proof}
+
+\begin{proposition}[One host-domain payment for every $(2,n)$, $n\ge5$]
+\label{prop:unit-retained:whole-L1}
+On $0\le d\le1/3$, in the same canonical direction,
+\[
+ H=pT(h_2f_n),\quad U_{\rm out}=T^2H
+ \qquad\Longrightarrow\qquad
+ I_q(U_{\rm out})^3\le e^{-d/500}.
+\]
+\end{proposition}
+\begin{proof}
+Put $m=1-d$, $v=v_n$, $z=z_n$, $\alpha=\alpha_n$.
+The actual square in \eqref{eq:unit-retained:dual-sums} gives
+\[
+ T(h_2f_n)\le m^2q+m(\E U-KU)+\|U\|^2/2.
+\]
+AM--GM between the two nonnegative original factors gives
+\[
+ 0\le H\le(c-Z/2)^2,\qquad
+ c=1-d+dz/2+dv^2/[4(1-d)].
+\]
+Here $c\ge2/3>7/16\ge v\sqrt d/2$.
+Lemma~\ref{lem:unit-square-hermite}
+therefore applies to the actual $X=-Z$, with cap $v\sqrt d$,
+mean upper bound $-\alpha$, and raw second bound
+$\theta d v^2$. Its moment compatibility follows from these same
+actual moments.
+
+Let $d=t^2$, $a=\alpha/d$, $u=v$, and use the polynomial
+definitions $P,Q,L,B,N,\mathcal D$ in
+Section~\ref{sec:unit-square-payments}. Take
+\[
+ \xi=\tfrac12(24427/3420+1/500)d-\tfrac52d^2,
+ \qquad\mathcal T=\sum_{j=0}^7(-\xi)^j/j!.
+\]
+The exact factor in both rows is $t^2$:
+$\mathcal G=(\mathcal T\mathcal D-N)/t^2$.
+For $n=5$ take
+\[
+ C=1024-1804d+1300d^2+321d^3,\qquad D=1024(1-d);
+\]
+for $n\ge6$ take
+\[
+ C=512-927d+785d^2+336d^3-256d^4,\qquad D=512(1-d).
+\]
+These are the actual $c=C/D$ above. On the single interval
+$0\le t\le577351/10^6$, the two polynomials have degrees
+$85,99$, respectively. Their left values exceed $1/2$;
+after division by their left values, every one of their
+$86+100=186$ Bernstein coefficients is at least $9/10$.
+
+Lemma~\ref{lem:bernstein-certificate} proves
+$0\le\E H^4\le\mathcal T\le e^{-\xi}$; the last inequality is
+the odd Taylor lower bound, since $\xi\ge0$.
+With the ordinary-fourth output factor of paragraph~\ref{part:R29.11},
+$B_2\le e^{(24427/3420)d-5d^2}$, this gives
+$I_q(U_{\rm out})^3\le B_2(\E H^4)^2\le e^{-d/500}$.
+At $d=0$ equality is evaluated directly.
+\end{proof}

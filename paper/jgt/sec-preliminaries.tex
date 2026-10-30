@@ -1,0 +1,80 @@
+\section{Kernel preliminaries and rooted messages}\label{sec:prelim}\label{q3:sec:method}
+Delete zero-mass atoms and use the real inner product $\ip{u}{v}=\E(uv)$ on $L^2(\mu)$. Define
+\begin{equation}\label{q3:eq:notation}
+ Ju=(\E u)\one,\quad A=J+K,\quad A^*=J-K,\quad
+ g=K\one,\quad d=\E g^2,\quad p=1+g,\quad q=1-g.
+\end{equation}
+All operators and adjoints are taken with respect to this measure. We also write $r=Kg$. Write $T=A^*$. Both $A$ and $T$ have nonnegative kernels. Since $K(x,x)=0$ and $\mu(x)>0$, we have $p(x),q(x)\ge\mu(x)>0$.
+
+The row constraint is
+\begin{equation}\label{q3:eq:cyclepoint}
+ |r(x)|\le[1-g(x)^2]/2=p(x)q(x)/2.
+\end{equation}
+For $a_y=K(x,y)$, antisymmetrization gives
+$r(x)=\frac12\E_{y,z}[(a_y-a_z)K(y,z)]$.
+The scalar inequality $|u-v|\le1-uv$ on $[-1,1]^2$ follows by squaring,
+since the difference is $(1-u^2)(1-v^2)\ge0$.
+Taking expectations proves \eqref{q3:eq:cyclepoint}.
+
+For an orientation $D$ of a rooted tree, its message is the conditional integral of the product in~\eqref{eq:density}, with the root label fixed and all other labels integrated independently.
+
+For $n\ge0$ put $f_n=A^n\one$, $\bar f_n=(A^*)^n\one$, $\mu_n=\E f_n$ and, for $n\ge1$, $h_n=A^*f_{n-1}$. At a rooted arm of length $n$, these are the actual messages of, respectively, all edges pointing away from the root, all edges pointing toward the root, and the first edge pointing toward the root with every remaining edge pointing away along the arm. In particular, $f_1=p$ and $h_1=q$.
+
+We use the constants and moments
+\begin{equation}\label{q3:eq:constants}
+ \theta=\frac{13}{32},\qquad C_*=\frac{101}{50},\qquad
+ \delta_j=\norm{K^j\one}_2^2,\qquad S_n=\sum_{j=0}^nK^j\one.
+\end{equation}
+Appendix~\ref{q3:app:foundations} proves $\norm K_{\op}\le2/\pi$, $d\le1/3$, $\delta_{j+1}\le\theta \delta_{j}$, $\mu_n\le1$, and the positive convolution identity
+\begin{equation}\label{q3:eq:convolution}
+ S_n=f_n+\sum_{j=3}^n\beta_jf_{n-j},\qquad
+ d-\delta_{2}\le\beta_j\le d\quad(j\ge3).
+\end{equation}
+The elementary identity $A+A^*=2J$ gives
+\begin{equation}\label{q3:eq:equalpair}
+ f_n+h_n=2\mu_{n-1},\qquad 0<f_nh_n\le\mu_{n-1}^2\le1.
+\end{equation}
+
+At a root, pair equal arm lengths maximally and use $f_n,h_n$ on each pair; let $E_0$ be the actual product of the pair messages, so $0<E_0\le1$. The remaining lengths are distinct and are exactly those of odd multiplicity. Since $E_0\le1$, an upper bound may drop $E_0$.
+
+For an even arm list, its \emph{positive canonical orientation} pairs the remaining distinct lengths adjacently, assigning $h_af_b$ to a pair $a<b$. For an odd list, retain the shortest residual arm as an outward anchor $f_a$ and pair the rest in this way. Write the odd message as $f_aR$, where $R$ includes all equal and distinct pairs. The \emph{negative canonical orientation} reverses all the corresponding edges. A universal assertion at $-K$ proves the reversed one.
+
+
+For later use set
+\[
+ N_+(H)=\E[pH^2],\qquad N_-(H)=\E[qH^2].
+\]
+
+\begin{lemma}[Weighted path interface]\label{lem:weighted-interface}\label{lem:connector}
+For every integer $L\ge1$ and all real $H,G$,
+\[
+ |\ip H{A^LG}|\le\sqrt{N_+(H)N_-(G)},\qquad N_-(AG)\le N_-(G).
+\]
+The reversed statements hold after interchanging $A,T$ and $p,q$.
+\end{lemma}
+\begin{proof}
+The nonnegative edge measure $(1+K(x,y))\,d\mu(x)d\mu(y)$ has marginals $p\mu,q\mu$. Cauchy--Schwarz on this measure proves the first inequality for $L=1$. Row Cauchy--Schwarz gives $(AG)^2\le pA(G^2)$, and hence
+\[
+ N_-(AG)\le\E[pqA(G^2)]=\E[T(pq)G^2]\le\E[qG^2],
+\]
+because $pq=1-g^2\le1$ and $T$ preserves order. Iterate $L-1$ times and apply the one-edge inequality.
+\end{proof}
+
+\begin{lemma}[Rooted spider boundary]\label{lem:spidersecond}
+Every finite arm multiset admits an orientation, fixed independently of the kernel and measure, with actual message $F$ satisfying $N_-(F)\le1$.
+\end{lemma}
+The direction for each residual arm list, and the proof, are given in Appendix~\ref{q3:app:spiderboundary}. Reversal gives the corresponding $N_+$ statement.
+
+\begin{table}[htbp]\centering\small
+\caption{Notation used in the moment calculations.}\label{tab:notation}
+\begin{tabular}{@{}p{29mm}p{117mm}@{}}\toprule
+Symbol & Meaning\\\midrule
+$g,r$ & $K\one$ and $Kg$, both with the original measure.\\
+$r_0$ & The centered function $QKg=Kg+d\one$, used only in Appendix~\ref{q3:app:operators}.\\
+$d,\delta_j$ & $d=\E g^2=\delta_1$ and $\delta_j=\|K^j\one\|_2^2$. Ordinary powers such as $d^2$ remain powers of $d$.\\
+$f_n,\bar f_n,h_n$ & Outward, inward, and first-edge-inward arm messages, respectively.\\
+$\beta_j,\omega_j$ & Positive convolution coefficients, and local envelope or propagation losses; neither is a path function.\\
+$\xi$ & A scalar score coordinate in a polynomial comparison: $p(x)=\xi$, $q(x)=2-\xi$.\\
+$n_T$ & Number of vertices of the host tournament.\\\bottomrule
+\end{tabular}
+\end{table}

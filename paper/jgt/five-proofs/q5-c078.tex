@@ -1,0 +1,607 @@
+\subsection{Unit receivers with negative root pairs}\label{proof:Q5-C078}
+
+Let \(K\) be a real skew kernel with \(|K|\le1\) on the given finite
+probability space, after removal of zero-mass atoms, and put
+\(Jv=(\E v)1\). We use \(A=J+K\), \(T=J-K\), \(g=K1\), \(p=1+g\), \(q=1-g\),
+\(f_n=A^n1\), \(\bar f_n=T^n1\), \(h_n=Tf_{n-1}\), and
+\(W_n=A\bar f_{n-1}\). The spectral notation is
+\[
+ d=\|g\|^2,\qquad \delta_j=\|K^j1\|^2,\qquad
+ \theta=13/32,\quad\kappa=19/32,\quad\tau=d-\delta_2.
+\]
+All expectations and norms use the given finite probability space.
+The finite spectral calculus gives
+\[
+ 0\le d\le1/3,\quad \|K\|^2\le\theta,\quad
+ d^2\le\delta_2\le\theta d,\quad
+ \delta_{j+1}\le\theta\delta_j,\quad |KV(x)|\le\|V\|.
+\]
+Thus a spectral bound for a polynomial at \(z=i\sqrt x\),
+\(0\le x\le\theta\), integrates against the spectral measure of \(g\),
+of mass \(d\) and moments \(\int x^j\,d\nu=\delta_{j+1}\).
+
+\paragraph{The two directed interfaces.}
+Family A has residual order
+\[
+ 2\le s<a<u_1<v_1<\cdots<u_r<v_r,\qquad r\ge1.
+ \tag{Q78.0.1}
+\]
+Its \(s\)-arm is inward, its \(a\)-arm outward, and each later pair
+has message \(W_{u_i}\bar f_{v_i}\). Its terminal is \(p\bar f_b\),
+with a unit inner edge from the terminal to the root. Thus
+\[
+ P^-=\prod_{i=1}^rW_{u_i}\bar f_{v_i}.
+ \tag{Q78.0.2}
+\]
+\[
+ J_A=f_aP^-T(p\bar f_b).
+ \tag{Q78.0.3}
+\]
+Proposition~\ref{prop:ordinary-unit-inner} gives
+\[
+ \E J_A^8\le e^{-5d}.
+ \tag{Q78.0.4}
+\]
+\[
+ I_q(T^M[\bar f_sJ_A])^3\le(1-d/72)e^{-5d}
+ \quad(M\ge1).
+ \tag{Q78.0.5}
+\]
+Indeed its post parameter is \(r\), its ordering requires \(a<u_1\),
+and its exponent is at least \(2005/192>5\).
+
+Family B instead has
+\[
+ 1<t<u_1<v_1<\cdots<u_r<v_r,\qquad r\ge1.
+ \tag{Q78.0.6}
+\]
+The root unit arm is outward, the reserved \(t\)-arm inward, and the
+terminal has its unit arm inward and its \(b\)-arm outward. Every
+inner edge points from the terminal to the root. Its ordinary input
+and outer output are
+\[
+ J_B=pP^-T^L(qf_b),\qquad
+ I_q(T^M[\bar f_tJ_B])^3
+ \le(1-d/72)\E J_B^8,\quad b\ge2,\quad L,M\ge1.
+ \tag{Q78.0.7}
+\]
+The last inequality is the all-real multiplier bound of
+Section~\ref{proof:Q5-C066}; the reserved arm is multiplied before
+the outer propagation. The proposition below proves
+\[
+ \E J_B^8\le e^{-25d/24-24(r-1)d}\le1-d/12000.
+ \tag{Q78.0.8}
+\]
+Consequently the former outer deficit is preserved:
+\[
+ I_q(T^M[\bar f_tJ_B])^3
+ \le(1-d/72)(1-d/12000).
+ \tag{Q78.0.9}
+\]
+For the center-reference application in Section~\ref{proof:Q5-C113},
+the excluded \(t\)-arm is attached outward as \(f_t\). The ordinary
+input \(J_B\) is unchanged. If \(u_1=3\), the displayed order forces
+\(t=2\).
+
+\begin{proposition}[Negative root pairs at a unit receiver]
+\label{prop:root-post:square-moments}
+Let \(r\ge1\), \(3\le u_1<v_1<\cdots<u_r<v_r\), \(b\ge2\), and
+\(L\ge1\) be integers. For the fixed directed message
+\begin{equation}\label{eq:root-post:scope}
+ Y=p\left(\prod_{i=1}^rW_{u_i}\bar f_{v_i}\right)T^L(qf_b)
+\end{equation}
+one has, on the entire host domain \(0\le d\le1/3\),
+\begin{equation}\label{eq:root-post:moments}
+ \E Y^8\le e^{-25d/24-24(r-1)d},
+ \qquad
+ \E Y^4\le e^{-705d/128}.
+\end{equation}
+In addition, the proof supplies a pointwise certificate
+\begin{equation}\label{eq:root-post:canonical-certificate}
+ 0\le Y\le e^{a+KZ},\qquad
+ \|Z\|^2\le9d/4,\qquad
+ 4a+4\E(KZ)+(17/4)\|Z\|^2\le-705d/128.
+\end{equation}
+The vector \(Z\) here is the full, uncentered vector specified below.
+The length $b$ and the root arm lengths may be interleaved.
+Equal-arm factors can be restored by positivity.
+\end{proposition}
+
+\begin{proof}
+At \(d=0\), successive leaf integration gives every tree message the
+value one. Hence suppose \(d>0\), and put \(\zeta=\delta_2/d\le\theta\).
+
+\paragraph{A square and its signed mean.}
+For any real vector \(V\), the two signed estimates
+\eqref{eq:oc:signed-moments}, applied to \(-V\) since their operator is
+\(-K\), state that
+\begin{equation}\label{eq:ordinary-root-post:signed}
+ \E e^{\nu KV}\le
+ \exp\{\nu\E(KV)+(17/64)\nu^2\|V\|^2\},\qquad \nu\in\{4,8\}.
+\end{equation}
+If \(0\le H\le C(c+N/2)^2\), \(N=KV\), the square base is
+nonnegative, and \(P^-\le e^{S-\Gamma}\), \(S=KU\), then
+\begin{equation}\label{eq:root-post:pointwise}
+ P^-H\le
+ C\exp\{2(c-1)-\Gamma+K(V+U)\}.
+\end{equation}
+This follows from \(x^2\le e^{2(x-1)}\) for \(x\ge0\).
+In particular, for \(\nu=4\) and \(\nu=8\),
+\begin{equation}\label{eq:root-post:signed-payment}
+ \log\E(P^-H)^\nu
+ \le \nu\log C+2\nu(c-1)-\nu\Gamma
+       +\nu\E(N+S)+\frac{17\nu^2}{64}\|V+U\|^2 .
+\end{equation}
+The same vector \(V+U\) occurs in both moments and in the pointwise
+certificate.
+
+\paragraph{The finite root-post mask.}\label{part:root-post:mask-proof}
+The pair bound from Section~\ref{proof:Q5-C067}, including \(u=4\), is
+\[
+ h_uf_v\le
+ \exp\left\{\sum_{j=u}^{v-1}K^jg-3d\right\}
+ \quad(4\le u<v).
+ \tag{Q78.1.6}
+\]
+For \(u=3\), finite positive convolution gives
+\(f_v-f_3\le\sum_{j=3}^{v-1}K^jg+\delta_2\).
+Together with \(h_3+f_3=2-2d\), AM--GM therefore gives
+\[
+ h_3f_v\le
+ \exp\left\{\sum_{j=3}^{v-1}K^jg-(2d-\delta_2)\right\}.
+ \tag{Q78.1.7}
+\]
+After full reversal these inequalities give
+\begin{equation}\label{eq:root-post:mask}
+ \begin{gathered}
+ P^-\le e^{S-\Gamma},\qquad S=K\mathcal U(-K)g,\qquad
+ \mathcal U(z)=\sum_{i=1}^r\sum_{j=u_i}^{v_i-1}z^{j-1},\\
+ \Gamma=
+ \begin{cases}
+ 3rd,&u_1\ge4,\\
+ 2d-\delta_2+3(r-1)d,&u_1=3.
+ \end{cases}
+ \end{gathered}
+\end{equation}
+The intervals are disjoint, so \(\mathcal U\) is a finite zero-one
+mask. For any such mask \(Q\),
+\[
+ |Q(i\sqrt x)|^2\le\frac{1+x}{(1-x^2)^2}
+ \le\frac{32768}{16245}<\frac{100}{49}
+ \qquad(0\le x\le\theta).
+\]
+It follows that
+\begin{equation}\label{eq:root-post:late-mask}
+ \|\mathcal U(-K)g\|\le(3/8)\sqrt d,\qquad
+ \E S\le d/12\quad(u_1\ge4).
+\end{equation}
+For the norm, factor out \(z^3\) and use
+\((10/7)\theta^{3/2}<585/1568<3/8\).
+Only the mean powers \(j=3,7,11,\ldots\) are positive.
+If \(u_1\ge4\), their total is at most
+\(\delta_4/(1-\theta^2)\le2197d/27360<d/12\).
+If \(u_1=3\), retain the compulsory \(z^2\) and write
+\(\mathcal U(z)=u-zv\), \(z=i\sqrt x\). The four residue classes give
+\begin{equation}\label{eq:root-post:mask-coordinates}
+ -\frac65x\le u\le-\frac12x,\qquad
+ -\frac12x\le v\le\frac65x,\qquad
+ \E S\le\delta_2+d/12 .
+\end{equation}
+For example
+\(-x/(1-x^2)\le u\le-x+x^2/(1-x^2)\); the other two bounds follow
+from the odd classes, using \(1/(1-\theta^2)<6/5\) and
+\(\theta/(1-\theta^2)<1/2\).
+For a single pair starting at three the finite alternating sums give
+\begin{equation}\label{eq:root-post:single-mask}
+ \mathcal U=z^2G_{v_1-3}(z),\qquad
+ -x\le u\le-x(1-x),\quad 0\le v\le x,\quad
+ \E S\le\delta_2 .
+\end{equation}
+
+\paragraph{Nine actual square envelopes.}\label{part:root-post:base-squares}
+Put \(H=pT^L(qf_b)\) and \(z=-K\) in vector polynomials.
+For \(b\ge3\), use the finite short-one packet
+\eqref{eq:short-one:data}--\eqref{eq:short-one:means}:
+\[
+ \begin{gathered}
+ R=\sum_{j=2}^bK^j1,\quad m=1-\beta_b/2,\quad k=1/m,\quad
+ t_0=\beta_{b+1},\quad e=d-\beta_{b+2},\\
+ V_R=\E R^2,\quad\rho=\E[(K^21)R],\quad
+ \gamma=kt_0-k^2V_R/2,\quad a_1=ke,\quad B_*= \gamma+a_1,\\
+ P_n(z)=G_n(z)+kz^{n+1}G_{b-1}(-z),\qquad B=1-\gamma.
+ \end{gathered}
+\]
+In particular
+\[
+ \begin{gathered}
+ 3d/10\le\gamma\le6d/5,\quad B\ge17/25,\\
+ B_*\ge5d/8,\quad B_*\ge d-29\delta_2/32,\\
+ m\ge1-d/2,\quad1\le k\le6/5,\quad 0\le\rho\le\delta_2,\\
+ \varepsilon_3=d-k\rho,\quad\varepsilon_j\ge\tau\ (j\ge4),\\
+ \|P_n(-K)g\|^2\le d\ (n\ge3),\qquad
+ \|P_2(-K)g\|^2\le(71/63)d .
+ \end{gathered}
+\]
+For \(b=2\), set
+\[
+ m=k=1,\quad R=K^21,\quad
+ \gamma=d-\delta_2/2,\quad B=1-\gamma,\quad
+ \mathcal P_n(z)=G_n(z)+z^{n+1}.
+\]
+The short-one packet treats this case separately: its \(P_2\) bound
+is \(31/27\), not \(71/63\). Below \(\mathcal P_2\) is used only
+through its explicit coordinates.
+
+In Table~\ref{tab:root-post:squares}, each row means the actual
+nonnegative envelope \(H\le C(c+N/2)^2\), with \(N=KV\).
+An upper value for \(c\) enlarges the same nonnegative square base.
+Set \(\delta=\kappa d\) and \(B_0=1-2\delta\) in its last two rows.
+
+\begingroup\small
+\setlength{\tabcolsep}{3pt}
+\begin{longtable}{@{}p{.12\linewidth}p{.055\linewidth}p{.305\linewidth}p{.42\linewidth}@{}}
+\caption{Actual positive squares at the unit receiver.}
+\label{tab:root-post:squares}\\
+\toprule
+\((b,L)\)&\(C\)&\(c\), or an upper bound&Full vector \(V\); actual mean \(\E N\)\\
+\midrule\endfirsthead
+\toprule
+\((b,L)\)&\(C\)&\(c\), or an upper bound&Full vector \(V\); actual mean \(\E N\)\\
+\midrule\endhead
+\bottomrule\endfoot
+\(b\ge3,1\)&\(m^2\)&\(1-\gamma/2\)&
+\(P_0g\), \(P_0=kzG_{b-1}(-z)\); \(-ke\).\\
+\(b\ge3,2\)&\(1\)&
+\(\begin{gathered}m\sqrt B-ma_1/(2\sqrt B)\\ \le1-37d/64\end{gathered}\)&
+\((m/\sqrt B)P_1g\); \(-(md-\rho)/\sqrt B\).\\
+\(b\ge3,3\)&\(1\)&\(1-4d/5\)&
+\((P_2-\gamma)g\); \(\le-(4/5-6d/5)d\).\\
+\(b\ge3,L\ge4\)&\(1\)&\(1-3d/4\)&
+\(P_{L-1}g\); \(\le-\tau\).\\
+\(2,1\)&\(1\)&\(1-\gamma/2\)&\(zg\); \(0\).\\
+\(2,2\)&\(1\)&\(\sqrt B\)&
+\((1+z^2)g/\sqrt B\); \(-\tau/\sqrt B\).\\
+\(2,3\)&\(1\)&
+\(\begin{gathered}\sqrt B-\tau/(2\sqrt B)\\ \le1-d+3\delta_2/4\end{gathered}\)&
+\((B+z+z^3)g/\sqrt B\); \(-\sqrt B\,d\).\\
+\(2,4\)&\(1\)&
+\(\begin{gathered}\sqrt {B_0}-\delta(1-d)/(2\sqrt {B_0})\\
+ \le1-\delta(3-d)/2\end{gathered}\)&
+\([\mathcal P_3-\tau(1+z)]g/\sqrt {B_0}\);
+\(\le-\tau(1-d)/\sqrt {B_0}\).\\
+\(2,L\ge5\)&\(1\)&
+\(\begin{gathered}\sqrt {B_0}-\delta/(2\sqrt {B_0})\\ \le1-3\delta/2\end{gathered}\)&
+\((\mathcal P_{L-1}-\tau)g/\sqrt {B_0}\);
+\(\le-\tau(1-d)/\sqrt {B_0}\).\\
+\end{longtable}
+\endgroup
+
+The finite derivation of the short exceptions is as follows.
+The propagation \eqref{eq:short-one:propagation} gives the first
+four rows by retaining, respectively, \(\gamma\), then \(\gamma,a_1\),
+then expanding \(\bar f_2=q+K^21\), and finally retaining the last
+two losses. The exact \(L=2\) scale and mean are proved in
+\eqref{eq:Q58O:6.1}--\eqref{eq:Q58O:6.4}; in particular
+\[
+ \|(m/\sqrt B)P_1g\|^2\le d,\qquad
+ m^2/B\le9/8,\qquad m^2B=m^2-mt_0+V_R/2 .
+\]
+This identity keeps the common arm remainder in both factors.
+For \(L=3\), \(\Re P_2\ge1-(6/5)\theta^2>4/5\) and
+\(\gamma\le2/5\), so subtracting \(\gamma\) reduces its modulus.
+The actual center and mean then follow from
+\eqref{eq:Q58O:5.1}--\eqref{eq:Q58O:5.2}.
+For \(L\ge4\), \eqref{eq:Q58O:4.1} gives the stated square.
+
+For \(b=2\), the common finite propagation, beginning with
+\(qf_2\le(1+K^21/2)^2\), is
+\[
+ T^L(qf_2)\le
+ \sum_{j=0}^L(-K)^j1+(-K)^{L+2}1
+ -\gamma\bar f_{L-1}-\sum_{j=3}^L\eta_j\bar f_{L-j},
+ \quad
+ \eta_j=\begin{cases}\beta_j,&2\mid j,\\\beta_{j+2},&2\nmid j.\end{cases}
+\]
+Only nonnegative indices occur. All \(\eta_j\ge\tau\).
+Expanding the first three lengths gives the three short rows.
+For \(L=4\), retain the \(\tau\) multiples of
+\(\bar f_0,\bar f_1,\bar f_3\); for \(L\ge5\), retain
+\(\bar f_0,\bar f_1,\bar f_2\). This gives
+\begin{equation}\label{eq:root-post:b2-tail}
+ \begin{aligned}
+ T^4(qf_2)&\le(1-2\tau)q+
+ K[\mathcal P_3-\tau(1+z)]g-\tau(1-d),\\
+ T^L(qf_2)&\le(1-2\tau)q+
+ K[\mathcal P_{L-1}-\tau]g-\tau\qquad(L\ge5).
+ \end{aligned}
+\end{equation}
+The remainder means are at most \(-\tau(1-d)\). Enlarge only the
+nonnegative \(q\) coefficient and the scalar loss by replacing
+\(\tau\) there by \(\delta\le\tau\), leaving the remainders unchanged.
+AM--GM with \(B_0q\) and \(p\) proves the last two rows.
+
+
+\paragraph{Full-domain base and joint norms.}\label{part:root-post:joint-norms}
+For each row of Table~\ref{tab:root-post:budgets}, let
+\(\lambda\sqrt d\) bound \(\|V\|\), and let \(Jd\) bound
+\(\|V+\mathcal U(-K)g\|^2\) when \(u_1=3\).
+We first prove these bounds over the full domain.
+
+For \(b\ge3,L=1\),
+\(\|P_0g\|^2/d\le(6/5)^2\theta(1+\theta)<(11/12)^2\).
+At \(L=2\), put \(c_0=m/\sqrt B\).
+The actual scale satisfies
+\[
+ c_0^2\ge\frac{(1-d/2)^2}{1-3d/10}
+ \ge\frac{125}{162}>\frac{49}{64},\qquad
+ c_0^2\le9/8,\qquad c_0k=1/\sqrt B\le5/\sqrt {17}<5/4.
+\]
+For \(b=2,L=2\), the exact norm is
+\[
+ \|(1+z^2)g/\sqrt B\|^2
+ =\frac{d-2\delta_2+\delta_3}{B}\le d.
+\]
+The difference after multiplication by \(B\) is
+\(-d^2+(2+d/2)\delta_2-\delta_3\ge0\).
+For \(b=2,L=3\),
+\[
+ |(B+z+z^3)/\sqrt B|^2
+ =B+x(1-x)^2/B\le1+4/(27B)\le47/39<(10/9)^2,
+\]
+where \(B\ge13/18\).
+
+For \(b=2,L=4\), direct expansion yields
+\[
+ |\mathcal P_3-\tau(1+z)|^2
+ =(1-\tau)^2-xH(x,\tau),\quad
+ H=1-3x+2x^2-x^3+2\tau x-\tau^2.
+\]
+The function \(H\) is concave in \(\tau\in[0,2/9]\).
+At both endpoints it is decreasing in \(x\), with positive value at
+\(\theta\), respectively \(1451/32768\) and \(465691/2654208\).
+Hence it is nonnegative on the whole rectangle.
+For \(b=2,L\ge5\), the finite packet gives
+\(|\mathcal P_n|^2\le1-7x/15\) and \(\Re\mathcal P_n\ge1-x\),
+where \(n=L-1\ge4\). Therefore
+\[
+ |\mathcal P_n-\tau|^2
+ \le(1-\tau)^2+x(2\tau-7/15)\le(1-\tau)^2.
+\]
+Both long base norms are at most
+\[
+ \frac{1-\tau}{\sqrt {B_0}}
+ \le\frac{1-\delta}{\sqrt{1-2\delta}}
+ \le\sqrt{\frac{5929}{5568}}<\frac{17}{16}.
+\]
+All remaining base norms follow from the finite \(P_n\) bounds above.
+
+For the joint norms assume \(u_1=3\) and use
+\eqref{eq:root-post:mask-coordinates}.
+If \(Q=A+zC\), \(0\le A,C\le1\), then
+\[
+ |Q+\mathcal U|^2\le
+ (1-x/2)^2+x(1+x/2)^2
+ =1+5x^2/4+x^3/4<5/4.
+\]
+The negative real magnitude is at most \(6x/5\le1-x/2\).
+The finite packet puts \(P_n\), \(n\ge3\), and \(P_2-\gamma\) in
+this coordinate square. This proves the \(b\ge3,L\ge3\) entries.
+For \(P_0=kxb+zka\), \(1-x\le a,b\le1\), the real magnitude of
+\(P_0+\mathcal U\) is at most \(7x/10\), and its imaginary
+coordinate lies between zero and \(6/5+x/2\). Hence
+\[
+ |P_0+\mathcal U|^2
+ \le36x/25+169x^2/100+x^3/4<9/10.
+\]
+For \(c_0P_1\), the real magnitude after addition is at most \(c_0-x\):
+the upper side uses \(c_0\kappa+1/2\ge1\), and the lower side uses
+\((c_0k+11/5)x\le2c_0\).
+Its imaginary magnitude is at most \(7x^{3/2}/4\). Thus
+\[
+ |c_0P_1+\mathcal U|^2
+ \le(c_0-x)^2+49x^3/16\le c_0^2\le9/8,
+\]
+because \(-2c_0+x+49x^2/16<0\) for \(c_0\ge7/8\).
+
+For \(b=2,L=1\), direct coordinates give
+\[
+ |z+\mathcal U|^2\le x+61x^2/25+x^3/4<5/6.
+\]
+For a single pair, \eqref{eq:root-post:single-mask} improves this to
+\begin{equation}\label{eq:root-post:tight-short-joint}
+ |z+\mathcal U|^2\le x+x^2,\qquad
+ \|(z+\mathcal U)g\|^2\le\delta_2+\delta_3 .
+\end{equation}
+Indeed \(G_h=a+zc\) has \(0\le a,c\le1\), also for \(h=1\);
+the squared modulus is \(x^2a^2+x(1-xc)^2\le x^2+x\).
+At \(L=2\), put \(D=(1-x)/\sqrt B\ge1-x\). The real magnitude is
+at most \(D-x/2\), and the imaginary magnitude at most
+\(6x^{3/2}/5\). Consequently
+\[
+ |D+\mathcal U|^2\le(D-x/2)^2+36x^3/25\le D^2;
+\]
+the lower real side uses \(2D\ge17x/10\). Integrating the base norm
+proves \(J=1\).
+At \(L=3\), \(\sqrt B\ge5/6\), \(1/\sqrt B\le6/5\).
+The real magnitude is at most \(1-x/2\); the imaginary coordinate
+is positive and at most \(6/5-7x/10\). Thus
+\[
+\begin{aligned}
+ |(B+z+z^3)/\sqrt B+\mathcal U|^2
+ &\le1+11x/25-143x^2/100+49x^3/100\\
+ &\le1+11x/25-6x^2/5
+ \le1+121/3000<9/8 .
+\end{aligned}
+\]
+
+Finally let \(A_0=17/16\) and \(C_0=35/32=\kappa+1/2\).
+For \(L=4\), the unscaled coordinates are
+\(1-\tau-x+x^2,1-\tau\).
+For \(L\ge5\), both coordinates of \(\mathcal P_{L-1}\) lie in
+\([1-x,1-x+x^2]\); only the real coordinate loses \(\tau\).
+After division by \(\sqrt {B_0}\) and addition of \(\mathcal U\),
+the real magnitude in both cases is at most \(A_0-C_0x\).
+Indeed its upper side uses \(x(1-x)/\sqrt {B_0}\ge\kappa x\);
+its negative side is at most \(6x/5\le A_0-C_0x\).
+The imaginary coordinate remains positive. For \(L=4\) it is at
+most \(A_0+x/2\); for \(L\ge5\) it is at most
+\((4/3)(1-x+x^2)+x/2\le4/3\).
+These yield
+\[
+ \begin{aligned}
+ |Q_4+\mathcal U|^2
+ &\le(A_0-C_0x)^2+x(A_0+x/2)^2\le A_0^2,\\
+ |Q_L+\mathcal U|^2
+ &\le(A_0-C_0x)^2+(16/9)x\le A_0^2
+ \quad(L\ge5).
+ \end{aligned}
+\]
+For the two final inequalities, subtract from \(A_0^2\) and divide
+by \(x\); the resulting decreasing polynomials have positive value
+at \(\theta\), respectively \(7747/32768\) and \(17827/294912\).
+All lower-coordinate checks use
+\((C_0+6/5)\theta<A_0\),
+\(1-11\theta/5>0\), and \(7/9-6\theta/5>0\).
+In particular the joint bound \(289/256<5/4\) holds for every \(d\).
+
+\paragraph{One fourth/eighth payment table.}\label{part:root-post:payments}
+Define the normalized base cost
+\[
+ D=\frac{8\log C+16(c-1)+8\E N}{d}.
+\]
+Table~\ref{tab:root-post:budgets} lists an upper bound \(D_i(\zeta)\),
+the base norm \(\lambda_i\), and the proved joint bound \(J_i\).
+Every coefficient multiplying \(\zeta\) is nonnegative.
+
+\begingroup\small
+\setlength{\tabcolsep}{4pt}
+\begin{longtable}{@{}llll@{}}
+\caption{Full-domain base costs and the same-vector norm bounds.}
+\label{tab:root-post:budgets}\\
+\toprule
+\((b,L)\)&\(D_i(\zeta)\)&\(\lambda_i\)&\(J_i\), when \(u_1=3\)\\
+\midrule\endfirsthead
+\toprule
+\((b,L)\)&\(D_i(\zeta)\)&\(\lambda_i\)&\(J_i\), when \(u_1=3\)\\
+\midrule\endhead
+\bottomrule\endfoot
+\(b\ge3,1\)&\(-16+61\zeta/4\)&\(11/12\)&\(9/10\)\\
+\(b\ge3,2\)&\(-191/12+8\zeta\)&\(1\)&\(9/8\)\\
+\(b\ge3,3\)&\(-16\)&\(13/12\)&\(5/4\)\\
+\(b\ge3,L\ge4\)&\(-20+8\zeta\)&\(1\)&\(5/4\)\\
+\(2,1\)&\(-8+4\zeta\)&\(2/3\)&\(5/6\)\\
+\(2,2\)&\(-16+12\zeta\)&\(1\)&\(1\)\\
+\(2,3\)&\(-68/3+12\zeta\)&\(10/9\)&\(9/8\)\\
+\(2,4\)&\(-95/6\)&\(17/16\)&\(5/4\)\\
+\(2,L\ge5\)&\(-209/12\)&\(17/16\)&\(5/4\)\\
+\end{longtable}
+\endgroup
+
+For the first row, \(8\log m^2-8B_*
+\le-8(\beta_b+B_*)\le-16d+61\delta_2/4\).
+For the second use \(m\ge5/6\), \(\rho\le\delta_2\), \(B\le1\),
+and \(md-\rho>0\), giving \(\E N\le-(5/6-\zeta)d\).
+At the third row its mean is at most \(-2d/5\).
+The long \(b\ge3\) row uses \(\E N\le-\tau\).
+For \(b=2,L=2\), the actual \(C=1,c=\sqrt B\) gives
+\(16(c-1)=16(\sqrt{1-\gamma}-1)\le-8\gamma\) by concavity,
+and \(\E N=-\tau/\sqrt B\le-\tau\).
+For \(L=3\), use \(\sqrt B\ge5/6\).
+The last two rows follow from
+\[
+ \begin{aligned}
+16(c-1)+8\E N
+ &\le-8\delta(3-d)-8\delta(1-d)
+ \le-95d/6 &&(L=4),\\
+16(c-1)+8\E N
+ &\le-24\delta-8\delta(1-d)
+ \le-209d/12 &&(L\ge5).
+ \end{aligned}
+\]
+Thus each row includes the actual scale and the actual signed mean.
+
+When \(u_1\ge4\), \eqref{eq:root-post:signed-payment} at \(\nu=8\)
+has normalized cost, after the extra \(-24(r-1)\),
+\[
+ B_i=D_i(\theta)-24+2/3+17(\lambda_i+3/8)^2\le-2.
+\]
+When \(u_1=3\), the corresponding costs are
+\[
+ A_i=D_i(\theta)-16+16\theta+2/3+17J_i
+ \le-25/24.
+\]
+For clarity, their exact values in table order are
+\[
+ \begin{array}{c|rr}
+ i&B_i&A_i\\ \hline
+ 1&-5501/1152&-6409/1920\\
+ 2&-247/64&-19/8\\
+ 3&-1831/576&-43/12\\
+ 4&-1525/192&-13/3\\
+ 5&-6487/576&-25/24\\
+ 6&-445/192&-71/24\\
+ 7&-18559/5184&-15/2\\
+ 8&-3101/768&-41/12\\
+ 9&-1439/256&-5
+ \end{array}
+\]
+This proves the eighth moment, with the stated extra loss for every
+additional pair. The finite mask bounds are independent of its degree.
+
+For the fourth moment, apply the \(\nu=4\) instance of the same
+formula. If \(u_1\ge4\), its cost is
+\[
+ \frac12B_i-\frac{17}{4}(\lambda_i+3/8)^2
+ \le-1-\frac{17}{4}(25/24)^2<-705/128.
+\]
+The nine direct expressions before this last relaxation have maximum
+\(-7061/768<-7\), so the stronger \(u_1=4\) fourth rate
+\(e^{-7d}\) also follows from the same table.
+If \(u_1=3\) and \(r\ge2\), its cost is at most
+\[
+ \frac12A_i-\frac{17}{4}J_i-12(r-1)
+ \le-\frac{65}{16}-12(r-1)<-705/128.
+\]
+For \(u_1=3,r=1\), use the sharper mean in
+\eqref{eq:root-post:single-mask}. Except for rows \(1,5\), one has
+\(A_i\le-19/8\) and \(J_i\ge1\), so the fourth cost is at most
+\(-19/16-17/4-1/3=-277/48<-705/128\).
+Row \(1\) gives the direct fourth cost
+\[
+ -487/40+(125/8)\zeta\le-7459/1280<-705/128.
+\]
+For row \(5\), use \eqref{eq:root-post:tight-short-joint} before
+integrating. Its full fourth cost is
+\[
+ -12d+\frac{57}{4}\delta_2+\frac{17}{4}\delta_3
+ \le-\frac{22567}{4096}d<-\frac{705}{128}d .
+\]
+These are direct fourth payments, not interpolation from the eighth
+moment.
+
+In \eqref{eq:root-post:pointwise} take
+\[
+ a=\log C+2(c-1)-\Gamma,\qquad
+ Z=V+\mathcal U(-K)g .
+\]
+If \(u_1=3\), the joint bounds give \(\|Z\|^2\le(5/4)d\);
+if \(u_1\ge4\), they give
+\(\|Z\|^2\le(10/9+3/8)^2d=(11449/5184)d<9d/4\).
+The preceding direct fourth calculation proves
+\eqref{eq:root-post:canonical-certificate}.
+\end{proof}
+
+\paragraph{Bare inputs and decorations.}\label{part:root-post:bare}
+For later comparisons we retain the two distinct bare statements
+\[
+ \E[pT^L(qf_b)]^8\le1-d/12000,\qquad
+ \E[f_2\{T^L(qf_b)\}^4]\le1
+ \quad(b\ge2,L\ge1).
+ \tag{Q78.1.5}
+\]
+Their respective proofs are \eqref{eq:Q58O:0.2} and \eqref{eq:L58:claim}.
+All directions in the proposition depend only on the arm lengths.
+The positive operators \(A,T\) restore every equal-arm factor
+\(f_\ell h_\ell\le1\) or its full reversal without altering a
+remaining edge. Finally \(e^{-25d/24}\le1-d/12000\) on
+\([0,1/3]\), for instance by \(e^{-d}\le1-d+d^2/2\).

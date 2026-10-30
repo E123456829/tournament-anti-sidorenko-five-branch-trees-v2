@@ -1,0 +1,640 @@
+\subsection{Unit ordinary eighth moments for terminals $(1,\allowbreak 2,\allowbreak c)$}\label{proof:Q5-C063}
+\paragraph{Q63.1 Statement and directions}
+
+Let $(X,\allowbreak  \mu)$ be a nonempty finite probability space and let $K$ be real, skew, and bounded by one in absolute value.
+All expectations, adjoints, inner products and spectral measures use $\mu$. Write
+
+\[
+Jv=(Ev)1,\quad A=J+K,\quad T=J-K=A^*,\quad g=K1,
+\quad p=1+g,\ q=1-g,\ d=Eg^2,
+\]
+\[
+\begin{gathered}
+f_n=A^n1,\quad \bar f_n=T^n1,\quad h_n=T f_{n-1},\\
+\quad \delta_j=\|K^j1\|_2^2,\quad\theta=13/32,\quad\kappa=19/32.
+\end{gathered}
+\]
+
+The calculus of Section \ref{q3:app:foundations} gives $d\le\allowbreak 1/3$, $\|K\|^2\le\allowbreak \theta$, $d^2\le\allowbreak  \delta_2\le\allowbreak \theta d$,
+$\delta_{j+1}\le\allowbreak \theta \delta_j$, $|Kv(x)|\le\allowbreak \|v\|_2$, path positivity, finite positive convolution and the equal-arm bound.
+The spectral support is $[0,\allowbreak  \theta]$.
+
+The three distinct residual arm lengths are $(1,\allowbreak  2,\allowbreak  c)$ with integer $c\ge\allowbreak 4$. Their messages are
+$q,\allowbreak  f_2,\allowbreak  h_c$: the unit arm points inward, the two-edge arm outward, and only the first edge of the $c$-edge arm points inward.
+The unit connector points toward the receiving root, whose unit arm points outward. For any equal-arm decorations put
+
+\[
+\begin{gathered}
+E_0=\prod_j f_{\ell_j}h_{\ell_j},\qquad\\
+F_c=E_0qf_2h_c,\quad X_c=TF_c,\quad H_c=pX_c.
+\end{gathered}\tag{Q63.1.1}\label{eq:Q63:Q63:1:1}
+\]
+
+For every integer $c\ge\allowbreak 4$, the same direction satisfies
+
+\[
+\boxed{EH_c^8\le1-d/500.}
+\tag{Q63.1.2}\label{eq:Q63:Q63:1:2}
+\]
+
+More precisely, the undecorated message satisfies the following low-range bounds:
+
+\[
+EH_c^8\le
+\begin{cases}
+e^{-5d/63},&c=4,\ 0\le d\le1/4,\\
+e^{-d/4},&c\ge5,\ 0\le d\le1/5.
+\end{cases}
+\tag{Q63.1.3}\label{eq:Q63:Q63:1:3}
+\]
+
+Equal-arm decorations at either root and full reversal are permitted.
+The parameter intervals below use the single stated direction.
+The connector length in this result is one.
+
+\paragraph{Q63.2 Finite path bounds and the high range}
+
+Put $r=\allowbreak Kg$, $s=\allowbreak K^2g$, and define the finite alternating sum
+
+\[
+\begin{gathered}
+\beta_1=\beta_2=0,\qquad\\
+\beta_n=\sum_{j=1}^{\lfloor(n-1)/2\rfloor}(-1)^{j-1}\delta_j\quad(n\ge3).
+\end{gathered}
+\]
+
+Let $\tau=\allowbreak d-\delta_2$. Finite positive convolution gives
+
+\[
+\begin{gathered}
+S_n:=\sum_{j=0}^nK^j1=f_n+\sum_{j=3}^n\beta_j f_{n-j},\\
+\quad \tau\le\beta_j\le d\quad(j\ge3).
+\end{gathered}\tag{Q63.2.1}\label{eq:Q63:Q63:2:1}
+\]
+
+It also gives $0\le\allowbreak  f_n,\allowbreak  \bar f_n,\allowbreak  h_n\le\allowbreak 2$, $\mu_n=\allowbreak Ef_n=\allowbreak E\bar f_n\le\allowbreak 1$,
+\(f_n+h_n=\allowbreak 2\mu_{n-1},\allowbreak \) \(0\le\allowbreak  f_nh_n\le\allowbreak  1.\)
+
+The alternating sum further yields $\beta_j\ge\allowbreak \tau+\kappa \delta_3$ for $j\ge\allowbreak 7$.
+
+We need the following path-mean bound for all $n\ge\allowbreak 4$:
+
+\[
+\mu_n\le1-83d/32\qquad(n\ge4).
+\tag{Q63.2.2}\label{eq:Q63:Q63:2:2}
+\]
+
+Here is its finite proof. Positive convolution gives
+
+\[
+\begin{aligned}
+\mu_2&=1-d,&\mu_3&=1-2d,\\
+\mu_4&=1-3d+\delta_2,&\mu_5&=1-4d+2\delta_2+d^2,\\
+\mu_6&=1-5d+3\delta_2+3d^2-\delta_3,\\
+\mu_7&=1-6d+4\delta_2+6d^2-2\delta_3-2d\delta_2.
+\end{aligned}
+\]
+
+For $n=\allowbreak 4,\allowbreak  5,\allowbreak  6,\allowbreak  7$, the respective lower bounds on $(1-\mu_n)/d$ are
+$83/32$, $137/48$, $89/32$, and $127/48$, each at least $83/32$.
+For $n\ge\allowbreak 8$, retain the terms $f_0,\allowbreak  \ldots,\allowbreak  f_5$ in (Q63.2.1) and lower their coefficients to $\tau$.
+The leading $\beta_{n+1}$ and the coefficients of $f_0,\allowbreak  f_1$ each retain an additional $\kappa \delta_3$. Thus
+
+\[
+\begin{gathered}
+1-\mu_n\ge\tau(7-10d+3\delta_2+d^2)+3\kappa \delta_3\\
+\ge\kappa d(7-10d+7d^2)\ge95d/36>83d/32.
+\end{gathered}
+\]
+
+Use $\delta_2\ge\allowbreak  d^2$ and $\delta_3\ge\allowbreak  d^3$. The final bracket is decreasing and positive on $[0,\allowbreak  1/3]$.
+
+If $c=\allowbreak 4$ and $d\ge\allowbreak 1/4$, then $h_4\le\allowbreak 2\mu_3=\allowbreak 2(1-2d)\le\allowbreak 1$.
+If $c\ge\allowbreak 5$ and $d\ge\allowbreak 1/5$, then $h_c\le\allowbreak 2\mu_{c-1}\le\allowbreak 77/80<\allowbreak 1$.
+Positivity therefore gives, in these ranges,
+
+\[
+0\le pT(qf_2h_c)\le pT(qf_2).
+\tag{Q63.2.3}\label{eq:Q63:Q63:2:3}
+\]
+
+The unit ordinary-eighth bound for $qf_2$ from Q5-C051 bounds the eighth moment on the right by $1-d/500$.
+It remains to prove the two low-range bounds in (Q63.1.3).
+
+\paragraph{Q63.3 Positive input, error and coupled parameters}
+
+First omit $E_0$ by positivity. Set
+
+\[
+\begin{gathered}
+\alpha=\beta_c,\quad B=\beta_{c-1},\quad m=1-(\alpha+B)/2,\\
+\quad k=m^{-1},\quad W=\sum_{j=3}^cK^j1=K^2G_{c-2}(K)g,
+\end{gathered}
+\]
+\[
+\begin{gathered}
+U_0=Bg-W,\quad H_0=q+kU_0,\quad\\
+D_1=d-\beta_{c+1},\quad D_2=d-\beta_{c+2},\\
+\quad G_n(z)=\sum_{j=0}^{n-1}z^j.
+\end{gathered}
+\]
+
+Retain the $Bq$ term in the positive convolution for $h_c$ to obtain
+
+\[
+\begin{gathered}
+h_c\le(1-B)q-r-W-\alpha,\quad\\
+f_2+h_c\le2m+U_0,\\
+\quad 0\le qf_2h_c\le q(m+U_0/2)^2.
+\end{gathered}\tag{Q63.3.1}\label{eq:Q63:Q63:3:1}
+\]
+
+To prove $H_0\ge\allowbreak 0$, put $V=\allowbreak S_{c-3}\ge\allowbreak 0$ and $a_0=\allowbreak \beta_{c-2}$.
+Then $EV=\allowbreak 1-a_0$, $E(gV)=\allowbreak B$, and $E(rV)=\allowbreak -\alpha$, so
+
+\[
+T^3V=(1-a_0+B)q+(1-a_0)r-\alpha-W\ge0.
+\]
+
+Another nonnegative upper bound is $Z=\allowbreak (1-B)q-r-\alpha-W\ge\allowbreak  h_c\ge\allowbreak 0$.
+Add $(1-a_0)Z$ to $T^3V$ and divide by $2-a_0$:
+
+\[
+q-W\ge\alpha+\frac{a_0(1-B)}{2-a_0}q\ge\alpha.
+\tag{Q63.3.2}\label{eq:Q63:Q63:3:2}
+\]
+
+Since $\alpha,\allowbreak  B\in[\tau,\allowbreak  d]$, we have $kB\le\allowbreak 1/2$. If $g\ge\allowbreak 1/4$, (Q63.3.2) gives
+
+\[
+H_0\ge\frac{k}{2}\{\alpha-B+(\alpha+3B)g\}
+\ge\frac{k}{2}(d-2\delta_2)\ge0.
+\]
+
+Here $\alpha-B\ge\allowbreak -\delta_2$ and $\alpha+3B\ge\allowbreak 4\tau$. If $g\le\allowbreak 1/4$, then $q+kBg\ge\allowbreak 3/4$.
+Also $|W|^2\le\allowbreak \theta(1+\theta)d\le\allowbreak 195/1024<\allowbreak 1/4$ and $k\le\allowbreak 3/2$, whence $k|W|<\allowbreak 3/4$.
+Thus $H_0\ge\allowbreak 0$ in this case as well. Finally, $EH_0=\allowbreak 1-kD_1\le\allowbreak 1$, and hence $0\le\allowbreak  TH_0\le\allowbreak 2$.
+
+
+Applying $T$ to (Q63.3.1) gives
+
+\[
+T(qf_2h_c)\le m^2TH_0-mE(gU_0)+mK(gU_0)+\tfrac14T(qU_0^2).
+\tag{Q63.3.3}\label{eq:Q63:Q63:3:3}
+\]
+
+If $J=\allowbreak EU_0^2$ and $v_0=\allowbreak E(gU_0)$, the final three terms are at most $m(\sqrt{dJ}-v_0)+J$.
+Put $t=\allowbreak m-B$ and $N=\allowbreak K(tg+W)$. Then
+
+\[
+TH_0=q-kD_1+kN,\qquad EN=-td+D_2.
+\tag{Q63.3.4}\label{eq:Q63:Q63:3:4}
+\]
+
+Bound the final three terms of (Q63.3.3) by a nonnegative $\delta d$. Arithmetic--geometric mean for the nonnegative quantities $mp$ and
+$mq+N-D_1+\delta d/m$ gives
+
+\[
+pT(qf_2h_c)\le(c_*+N/2)^2,
+\qquad c_*=m-D_1/2+\delta d/(2m).
+\tag{Q63.3.5}\label{eq:Q63:Q63:3:5}
+\]
+
+The second quantity dominates a nonnegative message by (Q63.3.3). Thus the base of the square is nonnegative.
+
+
+\paragraph{Q63.4 A scalar remainder bound on $U\le\allowbreak 7/25$}
+
+Define $C(U)=\allowbreak (e^{8U}-1-8U)/U^2$, with its continuous value $C(0)=\allowbreak 32$.
+The integral form of the Taylor remainder,
+\(C(U)=\allowbreak 64\int_0^1(1-z)e^{8zU}\,\allowbreak  dz\)
+gives, for every real $n\le\allowbreak  U$,
+
+\[
+e^{8n}\le1+8n+C(U)n^2.
+\tag{Q63.4.1}\label{eq:Q63:Q63:4:1}
+\]
+
+For $0\le\allowbreak  U\le\allowbreak 7/25$,
+
+\[
+\boxed{C(U)\le42+483U^2.}
+\tag{Q63.4.2}\label{eq:Q63:Q63:4:2}
+\]
+
+To check the constants, put $x=\allowbreak 28/25$. Its Taylor terms of orders two through five are less than
+$63/100$, $47/200$, $33/500$, and $3/200$, respectively; every subsequent ratio is at most $14/75$.
+Consequently,
+
+\[
+\begin{gathered}
+e^{28/25}<1+\frac{28}{25}+\frac{63}{100}+\frac{47}{200}\\
++\frac{33}{500}+\frac3{200}\frac54\\
+=\frac{12279}{4000}<\frac{123}{40}.
+\end{gathered}
+\]
+
+using $75/61<\allowbreak 5/4$. Hence $e^{56/25}<\allowbreak 15129/1600$.
+At $U_0=\allowbreak 7/25$ this gives $C(U_0)<\allowbreak 248625/3136$.
+After separating $32+(256/3)U$, the remaining coefficients of $C(U)$ are nonnegative and have degree at least two.
+Throughout $[0,\allowbreak  U_0]$ they are bounded by a quadratic coefficient 300, since
+
+\[
+\frac{248625/3136-4192/75}{49/625}<300,
+\]
+
+the cross products are $3437976875<\allowbreak 3457440000$. Moreover,
+\(C(U)\le\allowbreak 32+(256/3)U+300U^2\).
+Young's inequality gives
+
+\[
+\frac{256}{3}U\le10+\frac{8192}{45}U^2,
+\]
+
+Thus $C(U)\le\allowbreak 42+(21692/45)U^2\le\allowbreak 42+483U^2$ throughout the stated interval.
+
+\paragraph{Q63.5 Finite-tail bounds for $c\ge\allowbreak 5$}
+
+Fix $0<\allowbreak d\le\allowbreak 1/5$ and $c\ge\allowbreak 5$. Put $v=\allowbreak \delta_2/d\in[d,\allowbreak  \theta]$ and $y=\allowbreak \sqrt{\theta v}$.
+Since $\alpha,\allowbreak  B\in[\tau,\allowbreak  d]$, we have $m\ge\allowbreak 4/5$ and $t=\allowbreak m-B\ge\allowbreak 3/5$.
+
+\paragraph{Q63.5.1 A common spectral deficit for every $G_n$, $n\ge\allowbreak 3$}
+
+For $z=\allowbreak i\sqrt{x}$ and $0\le\allowbreak  x\le\allowbreak \theta$, the finite geometric identity gives
+
+\[
+\begin{gathered}
+|G_n(z)|^2\le\frac{(1+x^3)^2}{1+x}\le1-\eta x,\\
+\qquad\eta=7/16,\quad n\ge3.
+\end{gathered}\tag{Q63.5.1}\label{eq:Q63:Q63:5:1}
+\]
+
+For odd $n\ge\allowbreak 3$, its numerator is $1+x^n\le\allowbreak 1+x^3$. If $n\equiv0\pmod4$, the numerator is $(1-x^{n/2})^2\le\allowbreak 1$.
+If $n\equiv2\pmod4$ and $n\ge\allowbreak 6$, it is $(1+x^{n/2})^2\le\allowbreak (1+x^3)^2$. These cases prove the first comparison.
+The second comparison reduces to $9-7x-32x^2-16x^5\ge\allowbreak 0$. This polynomial decreases on $[0,\allowbreak  \theta]$,
+and $9-7\theta-32\theta^2=\allowbreak 7/8$ whereas $16\theta^5<\allowbreak 1/2$.
+The real coordinate of the same $G_n$ also belongs to $[1-x,\allowbreak  1]$.
+
+By (Q63.5.1), the same $N=\allowbreak K(tg+W)$ satisfies
+
+\[
+|N|^2\le d A(t,v),\qquad EN^2\le d\,v A(t,v),
+\]
+\[
+A(t,v)=t^2-(2\kappa t-\theta)v-\eta v^3.
+\tag{Q63.5.2}\label{eq:Q63:Q63:5:2}
+\]
+
+Both bounds come from the spectral expression
+\(|t-xG|^2\le\allowbreak  t^2-2tx+(2t+1)x^2-\eta x^3\).
+Integration gives $t^2d-2t\delta_2+(2t+1)\delta_3-\eta \delta_4$. Use $\delta_3\le\allowbreak \theta \delta_2$ and $\delta_4\ge\allowbreak  v^3d$.
+After multiplication by one spectral factor $x$, integration gives $t^2\delta_2-2t\delta_3+(2t+1)\delta_4-\eta \delta_5$. Use $\delta_4\le\allowbreak \theta \delta_3$,
+$\delta_3\ge\allowbreak  v^2d$, and $\delta_5\ge\allowbreak  v^4d$. The coefficient $2\kappa t-\theta\ge\allowbreak 49/160>\allowbreak 0$ fixes the direction of the comparison.
+
+On the subsequent parameter rectangle, $A>\allowbreak 1/5$: it increases with $t$ and decreases with $v$, so take $t=\allowbreak 3/5$, $v=\allowbreak \theta$.
+Then $(2\kappa t-\theta)\theta=\allowbreak 637/5120<\allowbreak 1/8$ and $\eta\theta^3<\allowbreak 3/100$,
+giving $A>\allowbreak 9/25-1/8-3/100=\allowbreak 41/200>\allowbreak 1/5$.
+
+\paragraph{Q63.5.2 Coupled error and alternating-tail deficit}
+
+As $\|G_{c-2}\|\le\allowbreak 1$, we have $\sqrt J\le\allowbreak \sqrt d(B+y)$, while
+$v_0=\allowbreak Bd+D_2\ge\allowbreak (B+\kappa v)d$. Thus in (Q63.3.3) one can take
+
+\[
+\delta=m(y-\kappa v)+(B+y)^2\ge0.
+\tag{Q63.5.3}\label{eq:Q63:Q63:5:3}
+\]
+
+Keep the dependence between $D_2-D_1$ and $\alpha$. For $c=\allowbreak 5,\allowbreak  6$, $\alpha=\allowbreak \tau$ and $D_2-D_1\le\allowbreak 0$.
+For $c\ge\allowbreak 7$, the alternating tail gives $D_2-D_1\le\allowbreak  \delta_4$, while $\alpha-\tau\ge\allowbreak \kappa \delta_3$ and $\delta_4\le\allowbreak \theta \delta_3$.
+Consequently, uniformly for $c\ge\allowbreak 5$,
+
+\[
+D_2-D_1\le h(\alpha-\tau),\qquad h=\theta/\kappa=13/19.
+\tag{Q63.5.4}\label{eq:Q63:Q63:5:4}
+\]
+
+
+
+\paragraph{Q63.6 The row bounds and parameter relaxation for $c\ge\allowbreak 5$}
+
+\paragraph{Q63.6.1 The bound $U\le\allowbreak 7/25$}
+
+The function $A(t,\allowbreak  v)$ increases with $t$. As $\alpha,\allowbreak  B\ge\allowbreak \tau$,
+$t\le\allowbreak \bar t=\allowbreak 1-2(1-v)d$. Put $a=\allowbreak 1-v$ and define
+
+\[
+\begin{gathered}
+\mathcal A(d,v)=A(\bar t,v)\\
+=1-\frac{25}{32}v-\eta v^3-4a(1-\kappa v)d+4a^2d^2.
+\end{gathered}\tag{Q63.6.1}\label{eq:Q63:Q63:6:1}
+\]
+
+Its second derivative in $v$ is $-6\eta v-8\kappa d+8d^2<\allowbreak 0$. For $v\ge\allowbreak  d$, its first derivative is at most
+
+\[
+Q(d)=-25/32+(51/8)d-(225/16)d^2+8d^3<0.
+\]
+
+Indeed $Q^{\prime\prime}=\allowbreak -225/8+48d<\allowbreak 0$ and $Q^\prime(1/5)=\allowbreak 171/100>\allowbreak 0$.
+Thus $Q$ increases on $[0,\allowbreak  1/5]$ and has maximum $Q(1/5)=\allowbreak -19/4000<\allowbreak 0$.
+It follows that $\mathcal A$ decreases for $v\ge\allowbreak  d$. Therefore $U^2=\allowbreak dA(t,\allowbreak  v)$ is at most
+
+\[
+\begin{gathered}
+f(d):=d\mathcal A(d,d)\\
+=d-\frac{153}{32}d^2+\frac{83}{8}d^3-\frac{173}{16}d^4+4d^5.
+\end{gathered}
+\]
+
+$f'''(d)\ge\allowbreak 207/20>\allowbreak 0$, $f''(1/5)=\allowbreak -133/80<\allowbreak 0$, and $f'(1/5)=\allowbreak 37/2000>\allowbreak 0$.
+Hence $f$ increases on $[0,\allowbreak  1/5]$, with maximum
+
+\[
+f(1/5)=7573/100000<49/625<1/12.
+\tag{Q63.6.2}\label{eq:Q63:Q63:6:2}
+\]
+
+The two strict comparisons are $7573<\allowbreak 7840$ and $588<\allowbreak 625$.
+Thus $U\le\allowbreak 7/25$, so (Q63.4.2) applies. We also have $d\mathcal A<\allowbreak 1/12$.
+
+\paragraph{Q63.6.2 Joint monotonicity in $\alpha$ and $B$}
+
+By (Q63.3.5), (Q63.4.1), (Q63.5.2)--(Q63.5.4), and $1+x\le\allowbreak  e^x$,
+
+\[
+E\{[pT(qf_2h_c)]^8\}\le e^{d\Phi(\alpha,B;d,v)},
+\]
+
+where
+
+\[
+\begin{aligned}
+\Phi={}&-\frac8d\{(1-h)\alpha+B+h\tau\}-8t
++8(y-\kappa v)+8(B+y)^2/m\\
+&+v A(t,v)\{42+483dA(t,v)\}.
+\end{aligned}
+\tag{Q63.6.3}\label{eq:Q63:Q63:6:3}
+\]
+
+This expression comes directly from $16(c^*-1)+8EN$, retaining both $-D_1$ and $D_2$.
+The integrated polynomial bound dominates $Ee^{8N}>\allowbreak 0$, so a further use of $1+x\le\allowbreak  e^x$ is legitimate.
+
+Fix $d,\allowbreak  v$ and allow $\alpha,\allowbreak  B$ to range independently in $[\tau,\allowbreak  d]$. On this rectangle $A>\allowbreak 1/5$ and $A_t>\allowbreak 0$.
+The last term increases with $t$, whose derivatives in $\alpha,\allowbreak  B$ are $-1/2,\allowbreak -3/2$.
+Also $(B+y)/m\le\allowbreak 97/128<\allowbreak 1$. Discarding the nonpositive derivatives of the last term gives
+
+\[
+\partial_\alpha\Phi\le-\frac{48}{19d}+4+4(B+y)^2/m^2
+<-240/19+8<0,
+\]
+\[
+\partial_B\Phi\le-8/d+12+8\{2(B+y)/m+(B+y)^2/(2m^2)\}
+<-40+12+20<0.
+\]
+
+Thus the upper bound is maximized at $\alpha=\allowbreak B=\allowbreak \tau$.
+Then $m=\allowbreak 1-ad$, $t=\allowbreak 1-2ad$, and the upper bound in (Q63.5.4) is zero. It remains to bound
+
+\[
+\begin{gathered}
+\Psi(d,v)=-16a-8t+8(y-\kappa v)+8(ad+y)^2/m\\
++v\mathcal A(d,v)\{42+483d\mathcal A(d,v)\}.
+\end{gathered}\tag{Q63.6.4}\label{eq:Q63:Q63:6:4}
+\]
+
+\paragraph{Q63.7 Monotonicity throughout the $v$ interval}
+
+Put $\mathcal B=\allowbreak \mathcal A+v\mathcal A_v$ and $\mathcal D=\allowbreak \mathcal A+2v\mathcal A_v$.
+For fixed $d$, both functions are concave in $v$: their second derivatives are
+$-24\eta v-24d(\kappa-d)$ and $-42\eta v-40d(\kappa-d)$, respectively, and are nonpositive.
+Their minima on $[0,\allowbreak  \theta]$ occur at the endpoints.
+At $v=\allowbreak 0$, both equal $(1-2d)^2\ge\allowbreak 9/25$.
+
+At $v=\allowbreak \theta$, expansion gives
+
+\[
+\begin{gathered}
+\mathcal B=\frac{32493}{131072}+\frac{31}{8192}d-\frac{133}{256}d^2\\
+>\frac{15}{64}-\frac3{128}>\frac15,
+\end{gathered}
+\]
+
+Here $133/6400<\allowbreak 3/128$. Also,
+
+\[
+\begin{gathered}
+\mathcal D=-\frac{82565}{524288}+\frac{14825}{8192}d-\frac{627}{256}d^2\\
+>-\frac16.
+\end{gathered}
+\]
+
+Since $14825/8192>\allowbreak 1$ and $(627/256)d\le\allowbreak 627/1280<\allowbreak 1$, the combined $d$ terms are nonnegative;
+also $6\cdot82565<\allowbreak 524288$. Hence $\mathcal B\ge\allowbreak 1/5$ and $\mathcal D\ge\allowbreak -1/6$ on the full rectangle.
+
+Let $G=\allowbreak v\mathcal A(42+483d\mathcal A)$. For $v\ge\allowbreak  d$, (Q63.6.2) gives
+
+\[
+\begin{gathered}
+G_v=42\mathcal B+483d\mathcal A\mathcal D\\
+\ge42/5-483/72=203/120>0.
+\end{gathered}\tag{Q63.7.1}\label{eq:Q63:Q63:7:1}
+\]
+
+The other part of (Q63.6.4) also increases strictly. Specifically, $y^\prime\ge\allowbreak 1/2$ and $z=\allowbreak ad+y$ give $z^\prime=\allowbreak y^\prime-d$,
+$m^\prime=\allowbreak d$, and $z/m<\allowbreak 1$. Thus
+
+\[
+(z^2/m)'=(z/m)\{2y'-2d-dz/m\}>0.
+\]
+
+The other explicit derivatives total at least $16-16d-8\kappa\ge\allowbreak 161/20>\allowbreak 0$.
+Therefore $\Psi$ increases on $d\le\allowbreak  v\le\allowbreak \theta$, and it suffices to take $v=\allowbreak \theta$.
+
+\paragraph{Q63.8 The final one-variable estimate for $c\ge\allowbreak 5$}
+
+At $v=\allowbreak \theta$, put $a=\allowbreak \kappa$ and $y=\allowbreak \theta$. Write
+
+\[
+\begin{gathered}
+M(d)=1-\kappa d,\quad T_0(d)=1-2\kappa d,\\
+\quad P(d)=\frac{342509}{524288}-\frac{14763}{8192}d+\frac{361}{256}d^2.
+\end{gathered}
+\]
+
+The one-variable function to be bounded is
+
+\[
+\begin{gathered}
+F(d)=-16\kappa-8T_0(d)+8\theta^2\\
++\frac{8(\kappa d+\theta)^2}{M(d)}\\
++\theta\{42P(d)+483dP(d)^2\}.
+\end{gathered}\tag{Q63.8.1}\label{eq:Q63:Q63:8:1}
+\]
+
+It equals $\Psi(d,\allowbreak  \theta)$; the alternating-tail term has already been accounted for in (Q63.5.4).
+We show $F\le\allowbreak -1/4$ throughout $[0,\allowbreak  1/5]$.
+
+\paragraph{Q63.8.1 Curvature on the full interval}
+
+Write $P=\allowbreak a_0-b_0d+c_0d^2$, so $P^\prime<\allowbreak 0$. The function
+$P+dP^\prime=\allowbreak a_0-2b_0d+3c_0d^2$ decreases and is positive on $[0,\allowbreak  1/5]$:
+$a_0>\allowbreak 13/20$, $b_0<\allowbreak 181/100$, and $c_0>\allowbreak 7/5$ give a right-endpoint value greater than $47/500>\allowbreak 0$;
+$b_0>\allowbreak 9/5$ and $c_0<\allowbreak 3/2$ make its derivative negative.
+
+Put $S=\allowbreak 4PP^\prime+2d((P^\prime)^2+PP^{\prime\prime})$. Then
+
+\[
+S'=6\{P'^2+P''(P+dP')\}>0.
+\]
+
+whereas
+
+\[
+F''=\theta\{42P''+483S\}
++\frac{16\kappa^2(1+\theta)^2}{M^3}.
+\tag{Q63.8.2}\label{eq:Q63:Q63:8:2}
+\]
+
+The second term increases with $d$, so $F^{\prime\prime}$ also increases and is maximized at $d=\allowbreak 1/5$.
+The exact endpoint values are
+
+\[
+\begin{gathered}
+P=4577893/13107200\in(349/1000,7/20),\qquad\\
+-P'=50711/40960\in(619/500,5/4),\quad P''=361/128<113/40.
+\end{gathered}
+\]
+
+Put $h=\allowbreak -P^\prime$, so $S=\allowbreak -4Ph+(2/5)(h^2+PP^{\prime\prime})$. This upper bound decreases with both $P,\allowbreak  h$ on their stated rectangle.
+Consequently,
+
+\[
+\begin{gathered}
+S(1/5)\le-4\frac{349}{1000}\frac{619}{500}\\
++\frac25\left\{\left(\frac{619}{500}\right)^2+\frac{349}{1000}\frac{113}{40}\right\}\\
+=-\frac{1802051}{2500000}<-18/25.
+\end{gathered}
+\]
+
+The second term in (Q63.8.2) has endpoint value $91378125/5606442<\allowbreak 17$.
+Therefore
+
+\[
+F''\le\frac{13}{32}\left(\frac{7581}{64}-\frac{8694}{25}\right)+17<-75.\tag{Q63.8.3}\label{eq:Q63:Q63:8:3}
+\]
+
+The final comparison has positive slack $59183/51200$.
+
+\paragraph{Q63.8.2 A rational value and slope bound}
+
+At $d_0=\allowbreak 1/8$ the exact values are
+
+\[
+\begin{gathered}
+P(d_0)=235957/524288,\quad P'(d_0)=-11875/8192,\\
+\quad P(d_0)+P'(d_0)/4=45957/524288.
+\end{gathered}
+\]
+
+Put $G(d)=\allowbreak \theta(42P+483dP^2)$. Its central value is
+
+\[
+G(d_0)=\frac{889950519380559}{70368744177664}<253/20.
+\]
+
+The cross-product difference in the last comparison is $4281889337812>\allowbreak 0$.
+The other terms of (Q63.8.1) total $-261/16+169/128+5043/2528$ at $d_0$, and $5043/2528<\allowbreak 399/200$.
+Thus
+
+\[
+F(d_0)<253/20-261/16+169/128+399/200
+=-1111/3200<-1/3.
+\tag{Q63.8.4}\label{eq:Q63:Q63:8:4}
+\]
+
+The derivative of those other terms at $d_0$ is $392179/24964\in(15,\allowbreak  16)$.
+$G'(d_0)=\allowbreak \theta[42P'+483P(P+P'/4)]$.
+Here $-29/20<\allowbreak P^\prime<\allowbreak -7/5$ and $39/1000<\allowbreak P(P+P^\prime/4)<\allowbreak 1/25$. The latter follows from
+$9/20<\allowbreak P<\allowbreak 451/1000$ and $87/1000<\allowbreak P+P^\prime/4<\allowbreak 88/1000$.
+Hence $-18<\allowbreak G^\prime(d_0)<\allowbreak -15$, giving $|F^\prime(d_0)|<\allowbreak 3$.
+
+Apply the full-interval quadratic upper bound from (Q63.8.3) and complete the square:
+
+\[
+\begin{gathered}
+F(d)\le F(d_0)+F'(d_0)(d-d_0)-\frac{75}{2}(d-d_0)^2\\
+<-\frac13+\frac9{150}=-\frac{41}{150}<-\frac14.
+\end{gathered}\tag{Q63.8.5}\label{eq:Q63:Q63:8:5}
+\]
+
+
+Thus (Q63.6.3)--(Q63.8.5) prove the second row of (Q63.1.3) for every $c\ge\allowbreak 5$ and $0<\allowbreak d\le\allowbreak 1/5$.
+
+\paragraph{Q63.9 The short case $c=\allowbreak 4$}
+
+Let $0<\allowbreak d\le\allowbreak 1/4$. The finite coefficients are $\alpha=\allowbreak B=\allowbreak d$, $m=\allowbreak 1-d$, $t=\allowbreak 1-2d$,
+$D_1=\allowbreak D_2=\allowbreak \delta_2$, and $W=\allowbreak s+K^3g=\allowbreak K^2(1+K)g$. Put
+
+\[
+D=\theta(1+\theta)=585/1024<3/5,\quad v=\delta_2/d,
+\quad y=\sqrt{Dv}<1/2.
+\]
+
+Here $D\theta=\allowbreak 7605/32768<\allowbreak 1/4$. As in (Q63.5.3), the exact error can be bounded by
+$\delta=\allowbreak m(y-v)+(d+y)^2\ge\allowbreak 0$, since $y\ge\allowbreak  v$.
+The spectral identity $|t-x(1+i\sqrt x)|^2=\allowbreak t^2-2tx+x^2+x^3$ yields
+
+\[
+|N|^2\le d A,\quad EN^2\le d v A,
+\quad A=t^2-(2t-D)v>0.
+\tag{Q63.9.1}\label{eq:Q63:Q63:9:1}
+\]
+
+Here $2t-D\ge\allowbreak 1-D>\allowbreak 0$; for the variance use $\delta_3\ge\allowbreak  v^2d$. Also $A>\allowbreak 0$ since $t\ge\allowbreak 1/2$ and $v\le\allowbreak \theta$:
+its minimum is at least $(1/2-\theta)^2+\theta^3>\allowbreak 0$.
+The terms $D_1=\allowbreak D_2$ cancel exactly. Exponentiating (Q63.3.5) gives
+
+\[
+\begin{gathered}
+E\{[pT(qf_2h_4)]^8\}\le\\
+\exp\{d[-16-8t+8(y-v)+8(d+y)^2/m+C(U)vA]\},\\
+\quad U^2=dA.
+\end{gathered}\tag{Q63.9.2}\label{eq:Q63:Q63:9:2}
+\]
+
+The function $d(1-2d)^2$ is maximized at $d=\allowbreak 1/6$, so $U^2\le\allowbreak  dt^2\le\allowbreak 2/27<\allowbreak 49/625$.
+By (Q63.4.2), $C(U)\le\allowbreak 42+483(2/27)=\allowbreak 700/9$.
+
+Furthermore $m\ge\allowbreak 3/4$, $y<\allowbreak 1/2$, and $d+y\le\allowbreak 3/4$, so the first three scalar terms of (Q63.9.2) total at most
+$-6-8t$. Complete the square in $v$ to get
+
+\[
+vA\le\frac{t^4}{4(2t-D)}\le\frac{t^4}{4(2t-3/5)}.
+\]
+
+The function $t^4/[(2t-3/5)(6+8t)]$ increases on $[1/2,\allowbreak  1]$: the numerator controlling its logarithmic derivative is
+$32t^2+(108/5)t-72/5$, which is already $22/5>\allowbreak 0$ at the left endpoint.
+Therefore
+
+\[
+\frac{700}{9}\frac{t^4}{4(2t-3/5)}
+\le\frac{875}{882}(6+8t).
+\]
+
+The exponent coefficient in (Q63.9.2) is at most $-(6+8t)/126\le\allowbreak -5/63$, proving the first row of (Q63.1.3).
+
+\paragraph{Q63.10 Boundaries, decorations and the same-direction fourth moment}
+
+Using $e^{-xd}\le\allowbreak 1/(1+xd)$, the two low-range bounds in (Q63.1.3) imply $1-d/13$ and $1-d/5$, respectively,
+and hence $1-d/500$. In the high ranges, (Q63.2.3) and Q5-C051 give the same bound.
+This proves (Q63.1.2) for every $c\ge\allowbreak 4$ and $0\le\allowbreak  d\le\allowbreak 1/3$.
+
+At $d=\allowbreak 0$, we have $g=\allowbreak 0$ and leaf integration gives every message equal to one.
+The differentiations involving division by $d$ or $v$ use $d>\allowbreak 0$ and extend continuously to zero. On positive-mass atoms $p,\allowbreak  q\ge\allowbreak \mu(x)>\allowbreak 0$;
+zero-mass atoms can be omitted.
+Positivity restores equal-arm factors at both roots. Replacing $K$ by $-K$ reverses every edge
+and gives the corresponding bound for $qAF^-$.
+
+This is also the direction $qf_2h_c$ of the four-branch terminal catalogue.
+Its same-direction fourth-moment bound $E[p(T^LF_c)^4]\le\allowbreak 1$, for all positive $L$, is supplied by Theorem \ref{thm:terminal}.

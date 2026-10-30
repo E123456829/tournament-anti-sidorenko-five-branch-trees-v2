@@ -1,0 +1,280 @@
+\subsection{Single terminal pairs with minimum at least two}
+\label{proof:R2-C031}
+For \((a,b)=(2,3)\) or \(3\le a<b\), put
+\(F=h_af_b\) and \(H=pT^LF\), \(L\ge1\). The inner connector points
+from terminal to root, the root unit arm points outward, and the two
+outer edges point from root to receiver. We prove
+\[
+ \E H^4\le e^{-15d/4},\qquad
+ I_q(T^2H)^3\le e^{-1223d/3420-5d^2}.
+\]
+Use the finite calculus of Section~\ref{proof:R2-C029} and
+Lemma~\ref{lem:oc:fourth}. The transfer is
+(R29.11.5)--\allowbreak(R29.11.6).
+The separate case \(a=2,b\ge4\) is Section~\ref{proof:R2-C035}.
+
+\paragraph{A first arm of length three.}
+Let \(a=3\), \(n=b-3\ge1\), and set
+\begin{equation}\tag{R31.8.1}\label{eq:oc:R31:8.1}
+ R_0=B^3G_n(-B)u,\quad R=R_0+\tau u,\quad
+ \Gamma=3d-2\delta_2\ge\tfrac{35}{16}d.
+\end{equation}
+This is the actual envelope (R29.3.8). At \(z=i\sqrt x\), write
+\(G_n(-z)=U-zV\). Finite alternating sums give
+\begin{equation}\tag{R31.8.2}\label{eq:oc:R31:8.2}
+ 1-x\le U\le1,\quad0\le V\le1,\quad V-U\le x,\quad
+ |G_n(-z)|^2\le1+\theta.
+\end{equation}
+For \(n=1\) the coordinates are \((1,0)\); for even \(n\) they
+agree; for odd \(n\ge3\) they differ by one alternating terminal
+power. The sole exception to the unit norm bound is \(n=2\), whose
+squared norm is \(1+x\).
+
+The coordinates of \(R_0\) are \((-x^2V,-xU)\), giving
+\(\E(uR_0)=-\int x^2V\le0\). The row predecessor is
+\(B^2G_n(-B)u+\tau\one\), whose cross mean is
+\(-\int xV\le0\). Consequently
+\[
+ |R|^2\le(1+\theta)\delta_3+\tau^2
+ <\tfrac1{12}+\tfrac1{18}<\tfrac14,
+\]
+\begin{equation}\tag{R31.8.3}\label{eq:oc:R31:8.3}
+ \sigma\le(1+\theta)\delta_4+\tau^2d
+ \le\left(\tfrac{45}{448}+\tfrac4{81}\right)d
+ =\tfrac{5437}{36288}d<\tfrac3{20}d.
+\end{equation}
+Here \(\tau\le2/9\), so the remainder constant is \(c=6/5\).
+The spectral rule (R29.2.3) gives
+\begin{equation}\tag{R31.8.4}\label{eq:oc:R31:8.4}
+ \begin{array}{ll}
+ D_0=\int xU,&D_1=\int x^2V-\tau d,\\
+ D_2=-\int x^2U,&D_3=-\int x^3V+\tau\delta_2,\\
+ D_4=\int x^3U,&D_5=\int x^4V-\tau\delta_3,\\
+ D_6=-\int x^4U,&D_7=-\int x^5V+\tau\delta_4.
+ \end{array}
+\end{equation}
+Increasing an index by four raises each moment index by two. Thus
+\begin{equation}\tag{R31.8.5}\label{eq:oc:R31:8.5}
+ D_2\le0,\quad D_3\le\tau\delta_2\le\tfrac{13}{144}d<\tfrac d{10},
+ \qquad D_k\le\tfrac d{14}\quad(k\ge4).
+\end{equation}
+For the last bound, the first positive terms in residue classes
+\(k=0,1,3\pmod4\), \(k\ge4\), are respectively
+\(\delta_4,\delta_5,\tau\delta_4\); class \(2\) is nonpositive.
+Hence \(\gamma_3\ge d\), \(\gamma_4>9d/10\), and
+\(\gamma_k\ge(\kappa-1/14)d=117d/224>d/2\) thereafter.
+The long formula uses \(h=1/2\).
+
+The short scalar bounds are
+\begin{equation}\tag{R31.8.6}\label{eq:oc:R31:8.6}
+ 0\le\delta\le\left(\tfrac{13}{32}+\tfrac9{50}\right)d
+ =\tfrac{469}{800}d<\tfrac{47}{80}d,\qquad
+ -\tfrac29d\le\epsilon\le\tfrac{181}{240}d.
+\end{equation}
+Combining terms before estimating, \(V-U\le x\) gives
+\begin{equation}\tag{R31.8.7}\label{eq:oc:R31:8.7}
+ \begin{aligned}
+ \epsilon+D_2&\le\delta+\delta_4-\tau d,\\
+ \epsilon+D_2+D_3-\delta d
+ &\le\delta+\delta_4-\tau^2-\delta d\le\delta+\delta_4.
+ \end{aligned}
+\end{equation}
+For long connectors, retain the negative cross term in
+\(\sigma=\|R_0\|^2-2\tau\int x^2V+\tau^2d\). It gives
+\[
+ \epsilon=D_0+(1-12\tau/5)\int x^2V
+              +\tfrac65\|R_0\|^2+(-\tau+6\tau^2/5)d.
+\]
+Since \(0\le1-12\tau/5\le1\) and the final term is nonpositive,
+\begin{equation}\tag{R31.8.8}\label{eq:oc:R31:8.8}
+ \epsilon\le\delta_2+\delta_3+\tfrac65(1+\theta)\delta_4
+ \le\tfrac{358839}{524288}d<\tfrac{11}{16}d.
+\end{equation}
+The last margin is \(1609/524288\). Together with \(\delta\ge0\),
+\begin{equation}\tag{R31.8.9}\label{eq:oc:R31:8.9}
+ \delta+(D_1)_+=\max(\delta,\epsilon)\le\tfrac{11}{16}d.
+\end{equation}
+
+For \(L=2\), the coordinates of \(u+BR\) are
+\((1+x^2U,\tau-x^2V)\), bounded in absolute value by \(7/6,2/9\).
+Thus
+\begin{equation}\tag{R31.8.11}\label{eq:oc:R31:8.11}
+ \|u+BR\|^2\le\left(\tfrac{49}{36}+\tfrac{13}{648}\right)d
+ =\tfrac{895}{648}d<\tfrac75d.
+\end{equation}
+For \(L=3\), the coordinates of the vector in
+\eqref{eq:oc:fourth-L3} are
+\begin{equation}\tag{R31.8.13}\label{eq:oc:R31:8.13}
+ (1+\delta-\tau x+x^3V,\ 1+x^2U).
+\end{equation}
+The first is positive and at most \(51/40\), since
+\(1+47/240+1/14<51/40\); the second is at most \(7/6\). Hence
+\[
+ \|V_3\|^2<\left(\tfrac{2601}{1600}+\tfrac{637}{1152}\right)d
+ <\tfrac94d,\qquad
+ \tfrac{10}{3}\epsilon^2\le\tfrac{32761}{51840}d.
+\]
+For \(L\ge4\), the finite \(G_{L-1}\) contraction gives
+\[
+ \|B^{L-1}R\|^2\le\theta^3\sigma<\tfrac3{280}d
+ <(21/200)^2d,\qquad \|V_L\|<\tfrac{221}{200}\sqrt d.
+\]
+Substitution in Lemma~\ref{lem:oc:fourth}, using
+\eqref{eq:oc:R31:8.7} at \(L=2,3\) and
+\eqref{eq:oc:R31:8.9} for \(L\ge4\), yields the following
+lower bounds for \(-\log\E H^4/d\):
+\begin{align}
+ L=1:\quad&\tfrac{35}{4}-\tfrac{181}{60}-\tfrac{51}{80}
+       =\tfrac{1223}{240}>\tfrac{15}{4},
+       \tag{R31.8.10}\label{eq:oc:R31:8.10}\\
+ L=2:\quad&\tfrac{35}{4}+4-4(\tfrac{47}{80}+\tfrac1{14})
+       -\tfrac{119}{20}-\tfrac{10}{9}(\tfrac{47}{80})^2
+       =\tfrac{15}{4}+\tfrac{1241}{40320},
+       \tag{R31.8.12}\label{eq:oc:R31:8.12}\\
+ L=3:\quad&\tfrac{35}{4}+8-4(\tfrac{47}{80}+\tfrac1{14})
+       -\tfrac{153}{16}-\tfrac{32761}{51840}
+       =\tfrac{15}{4}+\tfrac{12325}{72576},
+       \tag{R31.8.14}\label{eq:oc:R31:8.14}\\
+ L\ge4:\quad&\tfrac{35}{4}+6-\tfrac{11}{2}
+       -\tfrac{830297}{160000}-\tfrac5{18}
+       =\tfrac{15}{4}+\tfrac{47327}{1440000}.
+       \tag{R31.8.15}\label{eq:oc:R31:8.15}
+\end{align}
+
+\paragraph{A first arm of length at least four.}
+For \(4\le a<b\), use (R29.3.6) with
+\(\Gamma=16d/5\) and \(R=R_{ab}=B^3P(-B)u\). The finite
+zero-one mask may have \(P_0=0\). Writing
+\(P(-z)=U-zV\), its coordinates satisfy
+\(U,V\in[-C_\beta x,C_\beta]\); the coordinates of \(R\) are
+\((-x^2V,-xU)\). The mask bound (R29.6.1) gives
+\[
+ \sigma\le\tfrac{2197}{16245}d<\tfrac9{64}d,\quad
+ |R|<\tfrac13,\quad c=\tfrac65,
+\]
+and \(D_0\in[-C_\beta\delta_3,C_\beta\delta_2]\),
+\(D_1\in[-C_\beta\delta_4,C_\beta\delta_3]\). Consequently
+\begin{equation}\tag{R31.9.1}\label{eq:oc:R31:9.1}
+ -\tfrac15d\le\delta\le\tfrac23d,\qquad
+ -\tfrac{17}{60}d\le\epsilon\le\tfrac{13}{15}d,\qquad D_1\le\tfrac15d.
+\end{equation}
+The positive tails of \(D_2,D_3,D_k\) (\(k\ge4\)) start at
+\(\delta_4,\delta_5,\delta_4\), respectively, and four-step
+continuation decreases each by \(\theta^2\). Thus
+\begin{equation}\tag{R31.9.2}\label{eq:oc:R31:9.2}
+ D_2\le\tfrac d{12},\quad D_3\le\tfrac d{30},\quad
+ D_k\le\tfrac d{12}\ (k\ge4),\quad\gamma_k\ge\tfrac d2\ (k\ge3).
+\end{equation}
+The vectors in Lemma~\ref{lem:oc:fourth} satisfy
+\[
+ \|u+BR\|\le\tfrac54\sqrt d,\qquad
+ \|V_3\|<(\tfrac{19}{16}+\tfrac29+\tfrac16)\sqrt d
+ <\tfrac85\sqrt d,\qquad
+ \|V_L\|\le\tfrac54\sqrt d\quad(L\ge4).
+\]
+The \(L=3\) mean and curvature costs are at most
+\(127d/30\) and \(245d/288\). The lower loss coefficients are
+\begin{equation}\tag{R31.9.3}\label{eq:oc:R31:9.3}
+ \begin{array}{c|l}
+ L&-\log\E H^4/d\ \text{is at least}\\\hline
+ 1&64/5-7/2-153/256\\
+ 2&64/5-7/2+4-1/3-425/64-40/81\\
+ 3&64/5+8-127/30-245/288-272/25\\
+ \ge4&64/5+6-16/3-8/5-425/64-5/18
+ \end{array}
+\end{equation}
+All exceed \(15/4\); the last two exceed \(24/5\) and \(49/10\).
+
+\paragraph{The pair \((2,3)\).}
+The exact envelope (R29.3.9) is
+\begin{equation}\tag{R31.10.1}\label{eq:oc:R31:10.1}
+ R=K^3\one=-B^2u,\qquad\Gamma=d.
+\end{equation}
+Its row predecessor has squared norm
+\(\delta_2\le\theta/3<9/25\), so \(c=5/4\). Its moments are
+\begin{equation}\tag{R31.10.2}\label{eq:oc:R31:10.2}
+ \begin{gathered}
+ \sigma=\delta_3,\quad D_0=D_2=D_4=D_6=0,\\
+ D_1=-\delta_2,\quad D_3=\delta_3,\quad
+ D_5=-\delta_4,\quad D_7=\delta_5.
+ \end{gathered}
+\end{equation}
+Even moments vanish; odd signs alternate, with moment index rising
+by two under four-step continuation. Therefore
+\begin{equation}\tag{R31.10.3}\label{eq:oc:R31:10.3}
+ \delta=\tfrac54\delta_3,\qquad
+ \epsilon=\tfrac54\delta_3-\delta_2\le0.
+\end{equation}
+Here \(5\theta/4<1\). Also
+\(\gamma_3=d\), \(\gamma_4=d-\delta_3\), and for \(k\ge5\)
+the first positive \(D_{k-1}\) is \(\delta_5\). Since
+\(\kappa-\theta^4>1/2\), all \(\gamma_k\ge d/2\).
+
+At \(L=1\), formula~\eqref{eq:oc:fourth-L1} gives
+\begin{equation}\tag{R31.10.4}\label{eq:oc:R31:10.4}
+ \log\E H^4\le-4d-4\delta_2+\tfrac{37}{4}\delta_3
+ \le-4d-\tfrac{31}{128}\delta_2\le-\tfrac{15}{4}d.
+\end{equation}
+At \(L=2\), \(V_2=u-B^3u\) has squared norm \(d+\delta_4\)
+by skewness. Keep the quadratic fee to obtain
+\begin{equation}\tag{R31.10.5}\label{eq:oc:R31:10.5}
+ \log\E H^4\le-\tfrac{15}{4}d-4\delta_2+5\delta_3
+            +\tfrac{17}{4}\delta_4+\tfrac{125}{24}\delta_3^2.
+\end{equation}
+Since \(\delta_3^2\le\theta^3d\delta_2\le\theta^3\delta_2/3\),
+\begin{equation}\tag{R31.10.6}\label{eq:oc:R31:10.6}
+ 5\theta+\tfrac{17}{4}\theta^2+\tfrac{125}{72}\theta^3
+ <\tfrac{366625}{124416}<3.
+\end{equation}
+The first comparison uses \(\theta<5/12\); the required loss has
+an additional \(\delta_2\) to spare.
+
+At \(L=3\), the coordinates of \(V_3\) are
+\((1+\delta-x^2,1)\). Since \(\delta\le5d/24\le5/72\),
+the first coordinate is positive and
+\begin{equation}\tag{R31.10.7}\label{eq:oc:R31:10.7}
+ \|V_3\|^2\le[(77/72)^2+\theta]d
+ =\tfrac{8035}{5184}d<\tfrac{25}{16}d.
+\end{equation}
+Discard \(4\epsilon\le0\) and \(-4\delta d\le0\), and use
+\(4D_3<2d/3\), \(\epsilon^2\le\delta_2^2\le d/18\).
+The loss is at least
+\begin{equation}\tag{R31.10.8}\label{eq:oc:R31:10.8}
+ 12-\tfrac23-\tfrac{425}{64}-\tfrac5{27}>\tfrac{15}{4}.
+\end{equation}
+
+For \(L\ge4\), set \(m=L-1\ge3\). The exact vector is
+\begin{equation}\tag{R31.10.9}\label{eq:oc:R31:10.9}
+ V_L=[G_m(B)-B^{m+2}]u.
+\end{equation}
+It satisfies \(\|V_L\|^2\le d\). At \(m=3\), its squared multiplier is
+\[
+ (1-x)^2+x(1-x^2)^2=1-x+x^2-2x^3+x^5\le1.
+\]
+At \(m=4\), the nonnegative coordinates \((1-x+x^3,1-x)\)
+are bounded by those of \(G_5\), namely \((1-x+x^2,1-x)\).
+For every \(m\ge5\),
+\[
+ (1-z)(G_m(z)-z^{m+2})=1-z^m(1+z^2-z^3),\qquad
+ |1+z^2-z^3|^2=(1-x)^2+x^3\le1.
+\]
+Thus the squared numerator is at most \(1+2x^{m/2}+x^m\).
+For \(x>0\),
+\[
+ 2x^{m/2-1}+x^{m-1}\le2\theta^{3/2}+\theta^4
+ <\tfrac8{15}+\tfrac1{30}<1;
+\]
+the numerator is at most \(1+x=|1-z|^2\). At \(x=0\) the
+multiplier is one. This proves the norm bound for every finite \(m\).
+Now \(\delta\le5d/24\), \(D_1\le0\), and \(h=1/2\) give
+\begin{equation}\tag{R31.10.10}\label{eq:oc:R31:10.10}
+ 4+6-\tfrac53-\tfrac{17}{4}-\tfrac5{18}
+ =\tfrac{137}{36}=\tfrac{15}{4}+\tfrac1{18}.
+\end{equation}
+
+This proves the ordinary fourth bound in all stated cases. The
+transfer (R29.11.5)--(R29.11.6) gives the asserted \(I_q\) bound.
+Genuine equal pairs, full reversal, arbitrary positive atom masses,
+the case \(d=0\), and the original edge count are handled exactly
+as in R29.12: specifically, \(H_D=E_rpT^L(E_tF)\),
+\(0<E_t,E_r\le1\), and \(e_B=L+3+a+b+2S_{\rm pair}\).

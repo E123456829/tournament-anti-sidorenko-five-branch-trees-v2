@@ -1,0 +1,8 @@
+\begin{tikzpicture}[>=Stealth,every node/.style={font=\small},box/.style={draw,rounded corners,align=center,minimum height=14mm}]
+\node[box] (l) at (0,0) {$U_-$\\$I_q(U_-)^3\le e^{-\eta_-d}$};
+\node[box] (c) at (5,0) {$C_c$\\$\E[qC_c^4]\le1$};
+\node[box] (r) at (10,0) {$U_+$\\$I_q(U_+)^3\le e^{-\eta_+d}$};
+\draw[->] (l)--(c);\draw[->] (r)--(c);
+\node at (5,-1.3) {$Z_D=\E[C_cU_-U_+]\le e^{-(\eta_-+\eta_+)d/8}$};
+\node at (5,.95) {One central label and one common weight $q$};
+\end{tikzpicture}

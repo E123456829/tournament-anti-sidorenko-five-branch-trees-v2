@@ -1,0 +1,45 @@
+\paragraph{Common scalar calculations.}
+For a nonnegative weight $w$ with $\E w=1$, write
+$\E_w H=\E[wH]$; the measure and the adjoint of $K$ are unchanged.
+Each application specifies its weight and message.
+
+If $|R|\le M$, then, for $j\ge2$,
+$|\E_w R^j|\le M^{j-2}\E_wR^2$. In particular, set
+\begin{equation}\label{eq:compact-binomial}
+ B_r(m,M)=\sum_{j=2}^{r}\binom rj
+                 m^{r-j}M^{j-2}2^{-j}\qquad(r=6,8,12).
+\end{equation}
+For $m\ge0$ and $0\le P\le(m+R/2)^2$, binomial expansion gives
+\begin{equation}\label{eq:compact-power-bound}
+ \E_w P^{r/2}\le m^r+\frac r2m^{r-1}\E_wR
+                  +B_r(m,M)\E_wR^2 .
+\end{equation}
+Every coefficient of $B_r$ is nonnegative. Thus upper bounds for $m,M$
+can be substituted term by term, retaining the signed linear mean separately.
+The fourth-power expansions below specify their center and weight.
+
+If instead $P\le\exp(R-\Delta)$, let
+$\Lambda(t)=\log\E_w e^{tR}$. Its second derivative is the variance of
+$R$ under the tilted probability measure, and is at most $M^2$. Hence
+\begin{equation}\label{eq:compact-exponential}
+ \E_w P^s\le
+ \exp\{s(\E_wR-\Delta)+s^2M^2/2\}\qquad(s\ge0).
+\end{equation}
+In particular $\Delta-\E_wR\ge3M^2$ suffices for the sixth moment.
+For the centered square envelopes, Cauchy--Schwarz also gives
+\begin{equation}\label{eq:compact-weighted-variance}
+ V=\E R^2,\quad \|R\|_\infty\le M
+ \quad\Longrightarrow\quad
+ \E[pR^2],\ \E[qR^2]\le V+M\sqrt{dV}.
+\end{equation}
+
+\paragraph{Reading the interval tables.}
+The tables below specify upper bounds on closed intervals. When an upper
+bound has the form $H(d)+ad$ and $H''\ge0$, the two listed endpoint bounds
+prove the assertion throughout that interval. A decreasing bound needs only
+the left endpoint. Entries are rational bounds from the displayed finite
+polynomials or their geometric tails; intermediate integer cross-products
+are suppressed.
+The case $d=0$ is settled by leaf integration: every actual rooted message
+equals one, so divisions by $d$ below are confined to $d>0$. Equal-pair
+restoration and complete reversal follow Section~\ref{sec:prelim}.

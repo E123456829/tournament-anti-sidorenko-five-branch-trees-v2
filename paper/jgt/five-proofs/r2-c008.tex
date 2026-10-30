@@ -1,0 +1,351 @@
+\subsection{The remaining unit connectors with a terminal arm of length two}\label{proof:R2-C008}
+Use the coordinates and receiving bounds of R2-C007. The
+receiving arm has message $f_a$, $a\ge3$. The terminal residual lengths
+are $(2,b)$, $b\ge4$, with actual message $F=h_2f_b$, and the unit
+connector has message $X=TF$. We prove
+\begin{equation}\tag{R08.0.1}\label{eq:R08:claims}
+ \E[f_aX^4]\le
+ \begin{cases}1-d/200,&b=4,\\1-d/20,&b=5,\\1-d/10,&b\ge6.
+ \end{cases}
+\end{equation}
+Equal-arm decorations may be restored inside $T$ and beside $f_a$.
+
+In addition to \eqref{eq:R07:receiving}, the receiving bounds satisfy
+$\E C_a\le1-57d/32$: for $a=3$ use $1-2d$, and for $a\ge4$ use
+$1-3\tau$, where $3\tau\ge57d/32$.
+For each terminal use the actual square bound $F\le(m+R/2)^2$,
+$m>0$, described below. On the original spectral measure write
+$R=(A_0-zB_0)(B)u$, $z=i\sqrt x$, with $A_0,B_0\ge0$; these are
+finite scalar spectral coordinates. Put
+\[
+\begin{gathered}
+ V=\E R^2,\quad D_0=\E R=\int B_0\,d\nu,\quad
+ a_1=\E(KR)=\int A_0\,d\nu,\\
+ \rho_0=\int xB_0\,d\nu,\quad
+ I=\int(1-x)(B_0-A_0)\,d\nu.
+\end{gathered}
+\]
+Positivity and $T(R^2)\le2V$ give
+\begin{equation}\tag{R08.1.2}\label{eq:R08:Y}
+\begin{gathered}
+0\le X\le Y:=m^2q+mBR+mD_0+V/2,\\
+w_0=m^2u+mBR+mD_0,\quad w=Y-m^2=w_0+V/2,\\
+\E w_0=m(D_0-a_1),\qquad
+\E w^2=\E w_0^2+mV(D_0-a_1)+V^2/4.
+\end{gathered}
+\end{equation}
+The identity \eqref{eq:R07:fourth} and the pointwise bound proved below yield
+\begin{equation}\tag{R08.1.4}\label{eq:R08:payment}
+ \E[f_aX^4]\le m^8\E C_a+4m^6\E[C_aw]+8m^2\E w^2.
+\end{equation}
+For $G_a=E_a+zD_a$, $\beta=\beta_{a-1}$, $e_a=\int E_a\,d\nu$,
+let
+$I_a=D_0-a_1+\int x(D_aA_0-E_aB_0)\,d\nu$.
+Since $1-x\le E_a,D_a\le1$,
+\begin{equation}\tag{R08.1.5}\label{eq:R08:mixing}
+\begin{aligned}
+ I_a&\le I+\int x^2B_0\,d\nu,\\
+ \E[C_aw_0]&=-m^2e_a+mI_a-m(\beta_a+\beta)(D_0-a_1)
+ -mD_0\beta_{a+1}+\beta(m^2d+m\rho_0)\quad(a\ge4),\\
+ \E[C_3w_0]&=-m^2\tau+mI_3-md(2D_0-a_1),\qquad
+ I_3=I+\int x^2B_0\,d\nu.
+\end{aligned}
+\end{equation}
+Indeed $C_a=(1-\beta_a-\beta)+(-E_a+zD_a)u+\beta u$ and
+$m^2u+mBR$ has coordinates $m^2+mxB_0+zmA_0$.
+For $a=3$ the constant is $1-d$ and the coordinates are $-1+x+z$.
+In particular, the term $-mD_0\beta_{a+1}$ is part of the actual covariance.
+
+We give the common continuous certificate. Set $t=\sqrt d\in[0,1/2]$,
+$\alpha=1-t^2$, $c=6t/5$, and $C_0=3t/8+109t^2/64$. Then
+\begin{equation}\tag{R08.2.1}\label{eq:R08:pointwise}
+ Q(q,t):=[\alpha(2-q)+c]\{[\alpha(q+1)+C_0]^2+2\alpha^2\}
+ \le39/5\quad(0\le q\le2).
+\end{equation}
+For $h=C_0/\alpha\le157t/96<1$, $h^2<3t^2$, the derivatives at
+$q=0,1/2$, divided by $\alpha^2$, are respectively
+$\alpha(1+2h-h^2)+2c(1+h)$ and
+$\alpha(1/4-h^2)+2c(3/2+h)$. Both are positive, the latter being at
+least $\alpha/4-3t^2+18t/5>0$. Since $Q_q$ is a concave quadratic,
+$Q$ increases on $[0,1/2]$. For $q\ge1/2$,
+\[
+ Q_{qq}=2\alpha^2[c-3\alpha q-2C_0]
+ \le2\alpha^2[-3/2+(9/20)t-(61/32)t^2]
+ \le-(47/16)\alpha^2;
+\]
+the last comparison completes the square, using $81/3050<1/32$.
+The exact tangent polynomials are
+\begin{align*}
+ P(t):=Q(1,t)&=6+\tfrac{87}{10}t-\tfrac{2959}{320}t^2
+ -\tfrac{9957}{1280}t^3+\tfrac{140653}{20480}t^4
+ +\tfrac{27939}{10240}t^5-\tfrac{8553}{4096}t^6,\\
+ D(t):=Q_q(1,t)&=-2+\tfrac{81}{20}t+\tfrac{1073}{320}t^2
+ -\tfrac{6771}{1280}t^3-\tfrac{58317}{20480}t^4
+ +\tfrac{1587}{1280}t^5+\tfrac{6121}{4096}t^6.
+\end{align*}
+Using $t^2\le t/2$, $t^3\le t/4$ to absorb the two positive terms in
+$P''$, and dropping its negative quartic, gives
+$P''\le-147517/10240<-14$. Also $P'(1/3)>0$,
+$P(3/8)<771/100$, and $0<P'(3/8)<1/8$; hence
+$P\le771/100+1/1792<7711/1000$.
+For $D'$, retaining the positive linear term and using the same
+absorptions for its negative quadratic and cubic gives $D'>2$.
+Exact substitution gives
+\[
+\begin{gathered}
+D(1/8)>-3/2,\quad D(1/5)>-10/9,\quad D(1/4)>-9/10,\\
+D(3/10)>-2/3,\quad D(1/3)>-51/100,\quad
+D(2/5)>-1/4,\quad D(1/2)<1/10.
+\end{gathered}
+\]
+The bound $Q\le P+D^2/(2\lambda)$ has the following complete
+interval certificates; all entries in the last column are below $39/5$:
+\[
+\begin{array}{c|c|c|l}
+t&|D|&\lambda&\text{upper bound}\\\hline
+{}[0,1/8]&2&11/4&7+8/11\\
+{}[1/8,1/5]&3/2&8/3&147/20+27/64\\
+{}[1/5,1/4]&10/9&5/2&151/20+20/81\\
+{}[1/4,3/10]&9/10&12/5&763/100+27/160\\
+{}[3/10,1/3]&2/3&9/4&77/10+8/81\\
+{}[1/3,2/5]&51/100&2&7711/1000+2601/40000\\
+{}[2/5,1/2]&1/4&3/2&7711/1000+1/48
+\end{array}
+\]
+The first five rows use the corresponding rational endpoint bounds
+$P(1/8)<7$, $P(1/5)<147/20$, $P(1/4)<151/20$,
+$P(3/10)<763/100$, and $P(1/3)<77/10$.
+
+For $b=5$, equations \eqref{eq:L69:fivefirst}--\eqref{eq:L69:fivevariance}, and for $b\ge6$, equations \eqref{eq:L73:low}--\eqref{eq:L73:mean}, give, for the same finite $R$,
+$ (Y+m^2)/m\le\alpha(q+1)+C_0$ and $m\le\alpha$.
+In the latter case $m=1-9d/8$; the original row bound contributes
+$3t/8+69d/40$, and $69/40-109/64=7/320<1/8$.
+These bounds use only $V,D_0$ and $e\le V/2$, and therefore apply to
+the constant upper bound $Y$ in \eqref{eq:R08:Y}.
+For $b=4$ the bound is $ (Y+m^2)/m\le\alpha(q+1)+C_4$,
+$C_4=t/2+21t^2/16$, $m=\alpha$. The positive part of
+$C_4-C_0=t/8-25t^2/64$ is at most $1/100$ and occurs only for
+$t<8/25$. There, for $y=\alpha(q+1)+C_0$,
+$C_{\rm rec}=\alpha(2-q)+6t/5$,
+\[
+\begin{gathered}
+C_{\rm rec}+y=3+\tfrac{63}{40}t-\tfrac{83}{64}t^2\le27/8,\quad C_{\rm rec}y\le729/256,\\
+C_{\rm rec}\le109/50.
+\end{gathered}
+\]
+The increase in the coefficient is at most
+$(1/50)(729/256)+(1/10000)(109/50)<1/10$.
+Thus in every case
+$C_a(Y^2+2m^2Y+3m^4)\le8m^2$, as required in
+\eqref{eq:R08:payment}.
+
+For $b=4$ use Q5-C069, Section 10: $m=1-d$ and
+$R=(d+x-xz)(B)u$, so $A_0=d+x$, $B_0=x$. The exact input is
+\[
+\begin{gathered}
+D_0=\delta_2,\quad a_1=d^2+\delta_2,\quad\rho_0=\delta_3,
+\quad I=-d\tau,\\
+V\le dv,\quad v=15/64+13d/16+d^2,\qquad
+\E w_0^2\le m^2dH,\quad H=57/40-54d/25+3d^2/5.
+\end{gathered}
+\]
+Since $\E w_0=-md^2\le0$, $\E w^2\le m^2dH+d^2v^2/4$.
+Retaining $-mD_0\beta_{a+1}$ in \eqref{eq:R08:mixing}, using
+$\beta_j\le d$, $\beta_{a+1}\ge\tau$, and
+$I_a\le-d\tau+\delta_4$, gives
+\[
+\E[C_aw_0]\le-m^2\tau+m\delta_4+md\delta_3+md^3+m\delta_2^2.
+\]
+For $a=3$ the stronger expression is
+$-m^2\tau+m\delta_4-m^2d^2$. Thus for every $a\ge3$,
+\[
+ \E[C_aw_0]/d\le-(19/32)m^2+m\theta^3+2m\theta^2d+md^2.
+\]
+Let $A_*=133/32$ and
+$B_*(d)=[m^{-4}-m^4(1-A_*d)]/d$.
+On $d\le1/5$, \eqref{eq:R08:payment}, including
+$\E[C_aw]\le\E[C_aw_0]+V/2$, gives the normalized deficit
+\[
+D_4\ge B_*-4m^3\theta^3-8m^3\theta^2d-4m^3d^2
+-2m^2v-8H-2dv^2/m^2.
+\]
+The positive Taylor expansion gives
+$B_*\ge389/32-101d/8+783d^2/16$, hence
+$B_*-8H\ge121/160+931d/200+3531d^2/80$.
+Use
+\[
+\begin{gathered}
+-4m^3\theta^3\ge-4\theta^3+12\theta^3d-12\theta^3d^2,\quad
+-8m^3\theta^2d\ge-8\theta^2d,\quad-4m^3d^2\ge-4d^2,\\
+-2m^2v\ge-15/32-11d/16,\qquad2v^2/m^2\le1225/2048<3/5.
+\end{gathered}
+\]
+The penultimate bound discards the nonnegative remainder
+$(25/32)d^2+(19/8)d^3-2d^4$; the last uses $v\le7/16$, $m\ge4/5$.
+It follows that $D_4\ge1/64+(5/2)d+39d^2\ge1/64$;
+the actual constant is $791/40960>1/64$, and the next two coefficients
+are greater than $5/2$ and $39$. Since $m^4\ge256/625$, the actual
+deficit is at least $4d/625>d/200$.
+For $d\ge1/5$, the actual mean is
+$\E F=1-3d+\delta_2-d^2+\delta_3
+\le1-(3-\theta-\theta^2)d-d^2$.
+This decreases and is below $1/2$ at $d=1/5$, so $TF\le1$ and
+$\E[f_aX^4]\le\E f_a\le1-2d$.
+
+For $b=5$, Q5-C069, Section 11, gives $m=1-d$ and
+\[
+ R=\sum_{j=3}^5K^j\one-(d+\delta_2)g-\delta_2Kg,
+ \quad A_0=d+\delta_2+x-x^2,\quad B_0=\delta_2+x.
+\]
+Its exact data are
+\[
+\begin{gathered}
+D_0=(1+d)\delta_2,\quad a_1=D_0+d^2-\delta_3,\quad
+\rho_0=\delta_2^2+\delta_3,\quad I=-d\tau+\delta_3-\delta_4,\\
+V\le dv,\quad v=101/800+13d/16+33d^2/16,\\
+\E w_0^2\le m^2dH,\quad H=177/128-17d/10+d^2/2-19d^3/20.
+\end{gathered}
+\]
+Thus $\E w^2\le m^2dH+m\theta^2d^2v+d^2v^2/4$.
+In \eqref{eq:R08:mixing}, $I_a\le-d\tau+(1+\delta_2)\delta_3$.
+Retain $-mD_0\beta_{a+1}$ and bound the positive part of
+$-m(\beta_a+\beta)(D_0-a_1)$ by $2md^3$. This gives
+\[
+\E[C_aw_0]\le-m^2\tau+m(1+d+\delta_2)\delta_3+md^3
+-md^2\delta_2+m(1+2d)\delta_2^2.
+\]
+For $a=3$ the exact expression
+$-m^2\tau+m(1-d+\delta_2)\delta_3-m^2d^2-md^2\delta_2$
+is no greater. Dropping $-md^2\delta_2$ gives
+\[
+ \E[C_aw_0]/d\le-(19/32)m^2+m\theta^2
+ +m\theta^2(2+\theta)d+m(1+2\theta^2)d^2.
+\]
+For $d\le1/6$ the full normalized deficit is at least
+\[
+D_5\ge B_*-4m^3\theta^2-4m^3\theta^2(2+\theta)d
+-4m^3(1+2\theta^2)d^2-2m^2v-8H
+-8\theta^2vd/m-2v^2d/m^2.
+\]
+Here $B_*-8H\ge35/32+39d/40+719d^2/16$.
+Since $v<1/3$, $m\ge5/6$, the last two costs are at most
+$(16/5)\theta^2d$ and $8d/25$. Also
+\[
+-4m^3\theta^2\ge-4\theta^2+12\theta^2d-12\theta^2d^2,
+\quad-2m^2v\ge-101/400-28d/25-451d^2/400.
+\]
+The latter discards $(53/8)d^3-(33/8)d^4\ge0$.
+In the remaining negative terms replace $m^3$ by $1$. Then
+\[
+D_5\ge9/50-(5/8)d+36d^2\ge9/50-25/9216>1/6.
+\]
+The actual constant is $1159/6400$, the linear coefficient is
+$-93/200-(33/40)\theta^2>-5/8$, and the quadratic coefficient exceeds
+$36$. Since $m^4\ge(5/6)^4$, the deficit exceeds $d/20$.
+For $d\ge1/6$, the exact mean
+$\E F=1-4d+2(1+d)\delta_2$ and \eqref{eq:L69:mean} give
+$TF\le283/288<1$, proving the high-range claim with the same direction.
+
+For every finite $b\ge6$, use the finite positive convolution in
+\eqref{eq:L73:retained}. On $0<d\le1/5$ put $m=1-9d/8$, $N=b-2\ge4$,
+\[
+\begin{gathered}
+\ell=\frac{9d/4-\beta_b-\beta_{b-1}}
+ {\beta_{b-2}+(1-d)\beta_{b-3}},\quad
+C_1=\beta_{b-1},\ C_2=\ell\beta_{b-2},\ C_3=\ell\beta_{b-3},\\
+C=C_1+C_2+C_3,\quad D=C_2+C_3,\quad E=C_3,\\
+R=\sum_{j=3}^bK^j\one-Cg-DKg-EK^2g.
+\end{gathered}
+\]
+The actual finite convolution gives $0\le\ell\le1$ and
+$h_2+f_b\le2m+R$; no actual orientation depends on $\ell$.
+For $G_N(i\sqrt x)=a(x)+i\sqrt x\,b_0(x)$,
+$A_0=C+x(a-E)$, $B_0=D+xb_0$ are nonnegative.
+The input, valid for every finite $N$ and both parities, is
+\[
+\begin{gathered}
+\rho=3/8+9d/5,\quad v=\rho^2,\quad z_0=5/16+17d/16+d^2,
+\quad\kappa=19/32,\\
+V\le dv,\quad D_0\le dz_0,\quad\rho_0\le\theta dz_0,
+\quad a_1\le\rho d,\quad a_1\ge\kappa D_0+\tau d,\\
+I\le d/60-57d^2/512,\quad\E w_0^2\le m^2dH,\\
+H=2685/2048-11509d/10240+124067d^2/51200-117d^3/128.
+\end{gathered}
+\]
+From \eqref{eq:R08:mixing},
+$I_a\le d/60-57d^2/512+\theta^2dz_0$.
+Drop $-mD_0\beta_{a+1}$, bound other betas by $d$, and use
+$(a_1-D_0)_+\le\rho d$. For every $a\ge4$ this gives
+\[
+\E[C_aw_0]/d\le-\kappa m^2+m(1/60+\theta^2z_0)
++d[m^2+2m\rho+m\theta z_0-57m/512].
+\]
+For $a=3$ the extra cost from its exact expression is at most
+$m\rho d^2$, so the same bound applies. Moreover
+$\E w_0\le m\theta D_0$, and
+$\E w^2\le m^2dH+m\theta z_0vd^2+d^2v^2/4$.
+For $d\le9/50$, discarding the favorable $57m^3d/128$ in the
+normalized deficit gives
+\begin{align*}
+D_6\ge{}&B_*-(1/15)m^3-4\theta^2m^3z_0-4m^4d
+-8m^3\rho d-4\theta m^3z_0d\\
+&-2m^2v-8H-8\theta z_0vd/m-2v^2d/m^2.
+\end{align*}
+Here the positive Taylor expansion, with the present $m$, gives
+\[
+\begin{gathered}
+B_*\ge421/32-873d/64+67311d^2/1024,\\
+B_*-8H\ge683/256-5951d/1280+\;1186507d^2/25600.
+\end{gathered}
+\]
+Throughout $[0,9/50]$,
+\[
+\begin{gathered}
+m^3z_0\le5/16+d/128,\quad m^3\rho\le3/8+171d/320,\\
+-2m^2v\ge-9/32-(21/10)d-(11/10)d^2,\quad
+-4m^4d\ge-4d+(25/2)d^2,\\
+8\theta z_0v/m<6/5,\qquad2v^2/m^2<5/6.
+\end{gathered}
+\]
+For the first two inequalities, the negative quadratic terms in the
+expansions dominate the positive higher terms. For the third square
+$m\rho=3/8+441d/320-81d^2/40$; its exact negative terms after
+multiplication by $-2$ are
+$-9/32-1323d/640-38961d^2/51200-6561d^4/800$.
+Drop the positive cubic and use $d^4\le81d^2/2500$.
+For the fourth use $m^4\le1-(9/2)d+(38/5)d^2$.
+For the last two use $z_0<27/50$, $v<49/100$,
+$m^{-1}<13/10$, and $m^{-2}<17/10$.
+The resulting constant exceeds $2$, the linear cost is below $17$,
+and the quadratic remainder exceeds $53$, explicitly
+\[
+\begin{gathered}
+683/256-1/15-(5/4)\theta^2-9/32>2,\\
+5951/1280+\theta^2/32+4+3+(5/4)\theta+21/10+6/5+5/6<17,\\
+1186507/25600+25/2-171/40-\theta/32-11/10>53.
+\end{gathered}
+\]
+Thus $D_6\ge2-17d+53d^2\ge135/212>3/5$.
+Since $m\ge31/40$ gives $m^4>1/3$, the low-range actual deficit
+exceeds $d/5$.
+For $d\ge9/50$, \hyperref[proof:Q5-C073-connectors]{M.20}, using the Q4-C128 finite path,
+gives for all $b\ge6$
+\[
+\E F\le1-L(d),\qquad L(d)=d(2871-1463d-608d^2)/1024.
+\]
+$L$ increases on $[0,1/3]$ and
+$L(9/50)=58229118/128000000>9/20$.
+Hence $TF\le11/10$ and $\E f_a\le16/25$, so
+\[
+\E[f_aX^4]\le(16/25)(11/10)^4=14641/15625<19/20\le1-d/10.
+\]
+This proves all of \eqref{eq:R08:claims}.
+Decorations and $d=0$ follow exactly as in Module R2-C007. Full reversal changes
+all original edges together. Combining R2-C007 with this module gives
+the unit row for every $b\ge3$ with deficit at least $d/200$.
+Together with \eqref{eq:q117-unified:shorttwo} for $L\ge2$,
+this yields, independently for
+every $a,b\ge3$ and $L\ge1$,
+\begin{equation}\tag{R08.6.1}\label{eq:R08:union}
+\E[E_of_a\{T^L(E_th_2f_b)\}^4]\le1-d/400.
+\end{equation}

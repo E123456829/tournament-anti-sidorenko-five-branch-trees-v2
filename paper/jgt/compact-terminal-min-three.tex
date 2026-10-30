@@ -1,0 +1,115 @@
+\subsection[The propagated pair (3,b)]{The propagated pair $(3,b)$}\label{loc:S28}
+The actual message here is $P=f_3h_b$, $b\ge4$.
+We prove $\E[p(T^LP)^4]\le e^{-d/1000}$ for every $L\ge1$.
+The length-three arm is outward; the first edge of the longer arm is
+inward. These directions are kept in the multiple-pair argument below.
+
+\proofpart{The actual retained envelope}
+Use the coefficients $C_1,C_2,C_3$ from Section~\ref{loc:S25};
+their construction and $0\le\lambda\le1$ remain valid up to $d=1/3$.
+Write $C=C_1+C_2+C_3$, $D=C_2+C_3$, $E=C_3$ and
+\[
+ R=-\sum_{j=4}^bK^j\one+Cg+Dr+Es.
+\]
+The positive convolution identity
+$h_b=2-\beta_b-S_b-\sum_{j=3}^{b-1}\beta_jh_{b-j}$ gives
+$0\le f_3+h_b\le2-3d+R$. Hence
+\begin{equation}\label{eq:compact-min3-envelope}
+ P\le(1-3d/2+R/2)^2\le e^{R-3d}.
+\end{equation}
+At frequency $i\sqrt x$, write $G_{b-2}=a+i\sqrt x\,b_x$ and put
+\[
+ H=1-a+E,\quad B=D+xb_x,\quad
+ Q=C-xH+i\sqrt x B,\quad R=Q(K)g=KV.
+\]
+Since $1-x\le a,b_x\le1$, we have
+$\E R=-\int B\,d\nu_g\le-(1-\theta)\delta_{2}$.
+For $b\ge6$, $x-x^2+E\le H\le x+E$ and
+$B\le D+x-x^2+x^3$. The expression
+$|Q|^2=C^2+x[-2CH+xH^2+B^2]$ is convex in $H$;
+at either endpoint the bracket is at most $x^2(1+x)+D^2$.
+For the upper endpoint expand it as
+$x^2(1+x)+2x(xE-C_1)+(D-E)^2-(1-x)E^2-2C_1E$.
+For the lower endpoint use $xE\le C_1$, $xE\le2C$ and
+$2D\le4/3<2-x+x^2-x^3$.
+Integrating against the spectral measure at $\one$ gives
+\begin{equation}\label{eq:compact-min3-row}
+ \|V\|^2\le C^2+(1+\theta)\delta_{3}+D^2d\qquad(b\ge6).
+\end{equation}
+Only the original row bound is then used for $|R|\le\|V\|$.
+For $b=4$, $R=dg-K^3g$ and
+$\|R\|^2=d^3+\delta_{4}$, $\|V\|^2=d^2+\delta_{3}$.
+For $b=5$,
+\[
+ \|V\|^2=d^2+(1+d)\delta_{2}^2+\delta_{3}+\delta_{4},
+ \quad |Q|^2=(d+\delta_{2})^2+\delta_{2}^2x-2dx^2+x^3+x^4.
+\]
+
+\proofpart{Uniform small and large parameter bounds}
+For $d\le1/9$ the preceding formulas imply
+\begin{equation}\label{eq:compact-min3-small}
+ \|R\|\le31\sqrt d/100,\qquad |R|\le1/4.
+\end{equation}
+Here are the finite certificates covering all $b$.
+For $b=4$, the normalized squared norm is below $1/12$, and
+$\|V\|^2\le5/162<1/16$.
+For $b=5$, convexity in $d\in[0,1/9]$ reduces its frequency square to
+$d=0,1/9$; at $d=1/9$ split at $x=1/4$.
+The two bounds are $109/2304$ and $157/1800$, both below $19/200$;
+also $\|V\|^2\le32/2187+1/36<1/16$.
+For $b\ge6$ use $C<7/40$, $D<103/1000$ and $D<1/9$.
+When $x\le d$, $|Q|^2\le49/1600+4/729<1/16$.
+When $x\ge d$, $|C-xH|\le\theta^2$ and $B<823/2000$, so
+$|Q|^2<12293277/128000000<961/10000$.
+The row-factor bound \eqref{eq:compact-min3-row} is
+$49/1600+1/729+1/36<1/16$.
+These two frequency intervals impose no spectral lower cutoff.
+
+For $1/9\le d\le1/3$,
+\begin{equation}\label{eq:compact-min3-large}
+ |R|\le(69/32-1/4000)d.
+\end{equation}
+For $b=4,5$ the squared row-factor ratios are below $5/2,9/2$.
+For $b\ge6$, \eqref{eq:compact-min3-row} gives the convex function
+\[
+ \|V\|^2/d^2\le(1+\theta+d)^2+d(2\theta+d)^2
+                         +(1+\theta)\theta^2/d.
+\]
+Its endpoint bounds, relaxing $\theta<5/12$, are $216799/46656$ and
+$7351/1728$. The larger is below $(69/32)^2-1/500$, which is below
+$(69/32-1/4000)^2$. This proves the full large interval.
+
+\proofpart{Propagation along the connector}
+Use $W_L$ from \eqref{eq:compact-reference-weight}.
+For $d\le1/9$ its centered constants improve to
+\begin{equation}\label{eq:compact-min3-weights}
+ \frac{\|W_L-\E W_L\|}{\sqrt d}\le
+ 23/10\ (L=1),\quad10/3\ (L=2),\quad5\ (L\ge3).
+\end{equation}
+For $L=2$ the difference-of-cubes bracket is at most $43/9$,
+giving $\|U_2-1\|\le919\sqrt d/180$; the exact centered $A^2$
+formula yields $18859\sqrt d/5760<10\sqrt d/3$.
+For longer paths write $\bar f_{L}=mq+u$, $m=\E \bar f_{L-1}$,
+$u=-K(\bar f_{L-1}-m)$. The centered original row bound gives
+$|u|^2\le(9/4)pqd$, and $\|u\|\le39\sqrt d/40$.
+Thus
+$\|U_L-m^3\|\le[2+(39/40)(289/54)]\sqrt d<29\sqrt d/4$.
+The centered recursion from Section~\ref{loc:S27} now gives
+$[3+(29/4)\theta^{L/2}]\sqrt d\le12581\sqrt d/2560<5\sqrt d$.
+
+For $|u|\le1$, the series proof of \eqref{eq:compact-small-exp}
+also gives $e^u\le1+u+13u^2/18$.
+Since $\E R\le0$, \eqref{eq:compact-min3-small} yields
+\[
+ \E[W_Le^{4R}]\le\E W_L+4\|W_L-\E W_L\|\|R\|
+                                +(104/9)\|W_L\|_\infty\|R\|^2.
+\]
+The exponent costs are below $9d$, $537763d/45000$, and $11d$ for
+$L=1,2,\ge3$. The second consists of
+$27/8+62/15+24986/5625$; the last linear cost is $59861/5625$.
+Combining with \eqref{eq:compact-min3-envelope} gives losses
+$3d$, $2237d/45000$, and $d$.
+On the large interval, \eqref{eq:compact-min3-large} and
+$\E W_L\le e^{27d/8}$ leave
+$[-12+4(69/32-1/4000)+27/8]d=-d/1000$.
+

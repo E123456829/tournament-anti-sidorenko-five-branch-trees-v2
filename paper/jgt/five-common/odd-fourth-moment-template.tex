@@ -1,0 +1,269 @@
+% Insert after odd-common-calculus.tex and ordinary-propagation.tex.
+% Keep the stable curvature label here
+% when q5-c168.tex is replaced by q5-c168-compressed.tex.
+\subsection{Fourth-moment certificates and root replacement}
+\label{sec:odd-common:fourth}
+
+Use the signed-mean estimate \eqref{eq:oc:signed-moments}, whose full
+proof is in Section~\ref{part:Q81.2}. It applies to vectors with
+nonzero means and constant components.
+For a terminal envelope \(F\le e^{R-\Gamma}\), write
+\(\sigma,D_j,\delta,\epsilon\) as in \eqref{eq:oc:fourth-data},
+using the row's pointwise Taylor coefficient \(c=\eta\).
+The finite positive majorant is \eqref{eq:oc:fourth-duhamel}.
+Once that majorant is known, an additional root pair is handled by
+combining its envelope with this same majorant and recomputing the
+complete vector and signed mean.
+
+\begin{lemma}[Two fourth-moment conventions]
+\label{lem:odd-common:fourth}\label{calc:five-root-curvature}
+If \(\log H\le a+BQ\), then
+\(\log\E H^4\le4(a+\E BQ)+(17/4)\|Q\|_2^2\).
+If an actual unit arm supplies \(p\) and the combined bound is
+\(\log H\le a+BQ+cu-3u^2/10\), then
+\begin{equation}\label{eq:odd-common:curvature}
+ \log\E H^4\le4(a+\E BQ)+\tfrac{17}{4}\|Q\|_2^2
+                                  +\tfrac{10}{3}c^2,
+ \qquad c\in\mathbb R.
+\end{equation}
+The first convention includes every constant in \(Q\); the second
+uses the displayed unit-arm curvature to pay \(cu\).
+\end{lemma}
+\begin{proof}
+The first bound is \eqref{eq:oc:signed-moments}. The second combines
+that bound with \eqref{eq:oc:unit-log} and
+\eqref{eq:oc:unit-square}, taking \(a_0=c\).
+This permits negative \(c\) and makes no orthogonality assumption
+about the remaining vector.
+\end{proof}
+
+For a long connector, the positive-majorant step in the proof of
+Lemma~\ref{lem:oc:fourth} also gives the following useful form before
+any root-pair envelope is added. If
+\(h\ge0\) and \(\gamma_j=\beta_j-D_{j-1}\ge hd\) for all \(j\ge3\), then for
+\(L\ge4\), \(n=L-1\),
+\begin{equation}\label{eq:odd-common:long-parameters}
+\begin{gathered}
+ Y_L\le1+u+2\delta_++2(D_1)_+-2hd
+       +B\{G_n(B)u+B^nR-hd\one\},\\
+ \E B\{G_n(B)u+B^nR-hd\one\}
+       =-\gamma_{L+1}\le-hd.
+\end{gathered}
+\end{equation}
+Its terminal scalar plus mean is at most
+\(-\Gamma+2\delta_++2(D_1)_+-3hd\).
+The two retained terms are \(\gamma_L\bar f_0\) and
+\(\gamma_{L-1}\bar f_1\), already present at \(L=4\).
+The ordinary propagation proof is shared; the root pair and its
+constant are added using Lemma~\ref{lem:odd-common:fourth}.
+
+\begin{lemma}[The two complete root pairs]
+\label{lem:odd-common:root-pairs}
+Let \(v\ge3\), \(m=v-2\), \(G_m=E+zC\),
+\(\beta=\beta_{v-1}=\int C\,d\nu\) and
+\(\Gamma_v=\beta_v+\beta=\int(E+C)\,d\nu\).
+The two specified arm directions have envelopes
+\begin{equation}\label{eq:odd-common:root-standard}
+ \bar f_2W_v\le
+ \exp\{-\Gamma_v+B[-BG_m(B)u+\beta\one]\},
+\end{equation}
+\begin{equation}\label{eq:odd-common:root-alternative}
+ h_2f_v\le
+ \exp\{-\Gamma_v+B[-BG_m(-B)u+\beta\one]\}.
+\end{equation}
+Their scalar-plus-mean losses are
+\begin{equation}\label{eq:odd-common:root-losses}
+\begin{aligned}
+ \ell_s&=\Gamma_v+\int xC\,d\nu,&
+ \ell_a&=\Gamma_v-\int xC\,d\nu,\\
+ \ell_s=\ell_a&=d\quad(v=3),&
+ \ell_s&\ge\tfrac{1463}{1024}d,\quad
+ \ell_a\ge\tfrac{969}{1024}d\quad(v\ge4).
+\end{aligned}
+\end{equation}
+Dropping the nonpositive \(\beta(u-1)\) instead gives the weaker
+envelopes
+\begin{equation}\label{eq:odd-common:root-weak}
+ \bar f_2W_v\le e^{-\beta_v-B^2G_m(B)u},\qquad
+ h_2f_v\le e^{-\beta_v-B^2G_m(-B)u}.
+\end{equation}
+Their scalar-plus-mean losses are at least \(5d/6\) and \(3d/16\),
+respectively. These versions keep the same arm directions and omit
+the constant only by the displayed pointwise comparison.
+\end{lemma}
+\begin{proof}
+Retain \(\beta_{v-1}\bar f_0\) in the positive convolution for
+\(\bar f_{v-1}\), then apply \(A\). This gives
+\[
+ W_v\le1-\beta_v-u-BG_{v-1}(B)u-\beta p.
+\]
+Adding \(\bar f_2=1+u+Bu\), using
+\(G_{v-1}=1+BG_m\), and applying \(xy\le e^{x+y-2}\)
+proves \eqref{eq:odd-common:root-standard}.
+For \eqref{eq:odd-common:root-alternative}, retain both
+\(\beta_vf_0\) and \(\beta_{v-1}f_1\) in the reversed convolution
+for \(f_v\), and add \(h_2\).
+The means follow from \eqref{eq:odd-common:coordinates}.
+At \(m=1\), \(C=\beta=0\). For even \(m\ge2\),
+\[
+ \ell_s=\int(2+x)C\ge(2-\theta-\theta^2)d,
+ \qquad
+ \ell_a=\int(2-x)C\ge(2-3\theta+\theta^2)d.
+\]
+For odd \(m\ge3\), the corresponding bounds are
+\(\ell_s\ge(2-\theta)d\) and
+\(\ell_a\ge(2-3\theta+2\theta^2)d\).
+These prove the stated constants while retaining the full
+\(\beta\one\) component in both root envelopes.
+For the weak standard envelope, the two parities give
+\(\int(1+x)C\ge(1-\theta^2)d>5d/6\) and \(d\).
+For the weak alternative, they give
+\(\int(1-x)C\ge\kappa^2d\) and
+\(d-2\int xC\ge(1-2\theta)d=3d/16\).
+The \(v=3\) endpoint has loss \(d\) in both cases.
+\end{proof}
+
+\begin{lemma}[A root pair and a positive comparison]
+\label{lem:odd-common:root-interface}
+Suppose \(0\le X\le e^\alpha[C_0q+c_0+BV]\), with the bracket positive,
+and take either root pair of Lemma~\ref{lem:odd-common:root-pairs}.
+Write \(\varepsilon=1\), \(\ell=\ell_s\) for \(\bar f_2W_v\),
+and \(\varepsilon=-1\), \(\ell=\ell_a\) for \(h_2f_v\).
+For the full actual message \(H=pPX\),
+\begin{equation}\label{eq:odd-common:root-interface}
+\begin{aligned}
+ \log\E H^4\le{}&4[\alpha+C_0+c_0-1+\E BV-\ell]\\
+ &+\tfrac{17}{4}\|V-BG_m(\varepsilon B)u\|^2
+       +\tfrac{10}{3}(\beta+C_0-1)^2.
+\end{aligned}
+\end{equation}
+The vector \(V\) retains any already displayed constant components.
+At a zero of the message, interpret \(\log0=-\infty\).
+\end{lemma}
+\begin{proof}
+Use \(\log Y\le Y-1\) on the same positive bracket, add the full
+root envelope and \(\log p\le-u-3u^2/10\).
+The residual coefficient of \(u\) is \(\beta+C_0-1\), while its
+remaining vector is \(V-BG_m(\varepsilon B)u\).
+Apply \eqref{eq:odd-common:curvature}; the root's signed mean is
+already included in \(\ell\).
+\end{proof}
+
+\begin{lemma}[Constant terms in a root replacement]
+\label{lem:odd-common:replacement}
+Suppose the same propagated input has a positive upper bound
+\(X\le e^\alpha[C_0q+c_0+BQ(B)u]\).
+Put \(\gamma=C_0-1\), \(k_0=C_0+c_0-1\), and write
+\(Q=U+zV\). Take a new root \(f_a h_bf_c\), \(3\le a<b<c\),
+with the actual pair envelope
+\(h_bf_c\le e^{BV_{bc}-16d/5}\).
+Write \(G_{a-1}(-z)=E_a-zD_a\) and
+\(V_{bc}=(r+zs)u\). Let
+\[
+ V_0=(Q-B)u,\qquad V_*=(Q+G_{a-1}(-B))u+V_{bc},
+ \qquad\phi=1-D_a+s.
+\]
+Relative to the old root \(pP_0\),
+\(P_0\le e^{-d-B^2u}\), the complete fourth exponents satisfy
+\begin{equation}\label{eq:odd-common:replacement-density}
+\begin{aligned}
+ j_Q={}&-\tfrac{44}{5}-4(E_a+D_a+r)\\
+ &+\tfrac{17}{4}\{(U+E_a+r)^2-U^2
+            +x[(V-D_a+s)^2-(V-1)^2]\}.
+\end{aligned}
+\end{equation}
+If the old certificate retained \(\gamma\one\) in its full vector,
+\begin{equation}\label{eq:odd-common:replacement-full}
+ J_{\rm new}-J_{\rm old,full}
+   =\int j_Q\,d\nu-\tfrac{17}{2}\gamma\int\phi\,d\nu.
+\end{equation}
+If the old certificate paid \(\gamma u\) using its actual \(p\),
+\begin{equation}\label{eq:odd-common:replacement-curved}
+ J_{\rm new}-J_{\rm old,curv}
+   =\int j_Q\,d\nu+\tfrac{17}{2}\gamma\E V_*
+                                    +\tfrac{11}{12}\gamma^2.
+\end{equation}
+\end{lemma}
+\begin{proof}
+Logarithms of the positive majorant give
+\(\log X\le\alpha+k_0+u+B(Qu+\gamma\one)\).
+The finite convolution also gives
+\(f_a\le1-u+BG_{a-1}(-B)u-\beta_a\),
+where \(\beta_a=\int D_a\,d\nu\).
+The new complete vector is \(V_*+\gamma\one\), with scalar
+\(\alpha+k_0-\beta_a-16d/5\).
+The old scalar is \(\alpha+k_0-d\): its full-vector convention uses
+\(V_0+\gamma\one\), while its curved convention uses \(V_0\)
+and pays \(\gamma u\) with the actual \(p\).
+Subtract these complete exponents using
+\eqref{eq:odd-common:coordinates}; this gives
+\eqref{eq:odd-common:replacement-density}.
+In the first convention the constant squares cancel and
+\(\E(V_*-V_0)=-\int\phi\,d\nu\).
+In the second the new root must retain \(\gamma\one\), while the
+old root paid \(10\gamma^2/3\); thus
+\(17/4-10/3=11/12\), giving the second identity.
+These are exponent comparisons for the same input, not divisions
+by an old root moment. Root-specific coordinate rectangles and
+their signed overshoot charges are still required.
+\end{proof}
+
+\begin{lemma}[Adding all later root pairs at once]
+\label{lem:odd-common:extra-pairs}
+Suppose a complete fourth certificate has rate \(\lambda\), with
+its full real vector bounded by \((7/2)\sqrt d\) on
+\(0<d\le1/64\). Suppose \(k\ge1\) later unequal pairs, in their
+specified common direction, have disjoint exponent intervals and
+give the actual bound
+\[
+ E_k\le\exp\{BV_k-(16k/5)d\},\qquad
+ \|V_k\|\le\tfrac38\sqrt d,\qquad \E BV_k\le d/12.
+\]
+Keep any already used unit-arm curvature payment separate.
+Then the augmented certificate has rate at least
+\begin{equation}\label{eq:odd-common:extra-pair-rate}
+ \lambda+\tfrac{2737}{3840}+\tfrac{64}{5}(k-1).
+\end{equation}
+On \(d\ge1/64\), the same direction instead gives the stronger
+pointwise fourth gain \(4/5+64(k-1)/5\).
+\end{lemma}
+\begin{proof}
+The low-domain scalar gain is \(64kd/5\); its mean and square
+costs total at most
+\[
+ \tfrac d3+\tfrac{17}{4}
+       [2(\tfrac72)(\tfrac38)+\tfrac9{64}]d
+   =\tfrac{9283}{768}d.
+\]
+Subtracting gives \eqref{eq:odd-common:extra-pair-rate}.
+For the high domain the row bound gives
+\(BV_k\le\|V_k\|\le3d\), so the pointwise fourth gain is
+\(64k/5-12\).
+The required mask estimates, when the original powers start at five,
+follow from Lemma~\ref{lem:odd-common:mask} and the actual signed
+even-moment tail:
+\[
+ |P(i\sqrt x)|^2\le\frac{1+x}{(1-x^2)^2}\le\tfrac{101}{50},
+ \quad\|V_k\|^2\le\tfrac{101}{50}\theta^3d<\tfrac9{64}d,
+ \quad\E BV_k\le\frac{\delta_4}{1-\theta^2}<\tfrac d{12}.
+\]
+Here \(P\) is one finite zero-one mask. Disjoint intervals make
+the bound independent of \(k\). Reversal preserves the same even
+moment mean bound. Each pair must retain its true \(16d/5\)
+scalar loss from the pair estimate; the lemma does not make
+arbitrary unequal pairs free.
+\end{proof}
+
+Finally the ordinary, unanchored fourth outlet of
+Sections~\ref{proof:Q5-C084} and~\ref{proof:Q5-C164} gives, for every
+real \(Y\) and independent \(M\ge1\),
+\begin{equation}\label{eq:odd-common:outlet}
+\begin{gathered}
+ I_q(T^MY)^3\le e^{c(M)d}(\E|Y|^4)^2,
+ \qquad I_q(X)=\E[q^{-1/3}|X|^{8/3}],\\
+ c(1)=\tfrac{204}{19},\quad c(2)=10,\quad c(3)=0,
+ \quad c(4)=7,\quad c(M)=6\ (M\ge5).
+\end{gathered}
+\end{equation}
+In particular one may use the weaker uniform cost \(11\).
+This outlet uses one arm factor and an unweighted input estimate.

@@ -1,0 +1,152 @@
+\subsection{Weighted transfer for a nonunit singleton}\label{proof:Q5-E008-singleton}
+\paragraph{The square-root multiplier.}
+Write
+\[
+A=J+K,\qquad T=A^*=J-K,\qquad g=K\one,
+\qquad p=1+g,\quad q=1-g,
+\]
+\[
+f_n=A^n\one,\qquad\bar f_n=T^n\one,
+\qquad\delta_j=\lVert K^j\one\rVert_2^2,\quad d=\delta_1.
+\]
+Let \(M_v\) denote multiplication by \(v\), and set
+\(I_q(Y)=\E[q^{-1/3}|Y|^{8/3}]\). The square-root estimate
+\eqref{q3:eq:half}, including every \(a\ge2\), is
+\[
+\lVert M_{\sqrt{f_a}}T\rVert_{2\to2}\le1.
+\]
+Replace \(K\) by \(-K\) in the entire construction to obtain
+\(\lVert M_{\sqrt{\bar f_a}}A\rVert_{2\to2}\le1\).
+Taking the ordinary adjoint on the original measure gives
+\[
+\boxed{\lVert T M_{\sqrt{\bar f_a}}\rVert_{2\to2}\le1,
+\qquad a\ge2.}
+\tag{E8.10.1}
+\]
+The displayed multiplier is a square root.
+
+\paragraph{Full reversal of the actual reference input.}
+Use the complete outward-\(f_a\) reference directions in
+Sections~\ref{proof:R2-C032} and \ref{proof:R2-C034}. They give the
+reference fourth moment for every nonreducible terminal and every
+original inner length \(L\ge1\), with bound \(1-d/3000\) for \(a\ge3\)
+and bound one for \(a=2\). Their actual direction tables are used with
+all their exceptions. In particular, the unit-\((1,\allowbreak 2,\allowbreak 3)\) reference
+exception is at \(L=1\); the ordinary unit-anchor eighth-moment exception at \(L=2\)
+has a different role.
+
+Let \(F_{\rm ref}\) denote the actual terminal selected by those
+reference directions. Reverse the entire reference construction:
+the actual reference arm, terminal arms, all \(L\) connector edges and
+both decoration products. A superscript minus denotes this complete
+reversal. Put
+\[
+\begin{gathered}
+X_0=A^L(E_t^-F_{\rm ref}^-),\qquad X=E_r^-X_0,\\
+Q_a(d)=
+\begin{cases}
+1,&a=2,\\
+1-d/3000,&a\ge3.
+\end{cases}
+\end{gathered}
+\]
+Since \(0<E_r^-\le1\), the fully reversed reference bound gives
+\[
+\E[\bar f_aX^4]
+\le\E[E_r^-\bar f_aX_0^4]\le Q_a(d).
+\tag{E8.10.2}
+\]
+Here each root equal pair occurs once, and every terminal pair remains
+inside its actual \(A^L\) connector. The sole nonunit residual root arm
+points inward and gives \(\bar f_a\). The actual final component is
+\[
+U=T^M(\bar f_aX).
+\tag{E8.10.3}
+\]
+Thus the inner connector points from the root toward its terminal, the
+root arm toward the root, and the outer connector from the root toward
+the center. These directions are fixed by the original structure.
+Every arm in \(F_{\rm ref}^-\) is reversed together with the reference
+and connector: for example, \(qf_b\) becomes \(p\bar f_b\), and
+\(f_3\bar f_b\) becomes \(\bar f_3f_b\). The output weight \(q\)
+belongs to the actual outer \(T\)-path.
+
+\paragraph{The weighted fourth-moment bridge.}
+For any real \(X\), \(a\ge2\) and \(M\ge1\), consider the positive
+operator \(P_0=T^MM_{\bar f_a}\). Its row is
+\(P_0\one=\bar f_{M+a}\). Row Cauchy--Schwarz gives
+\[
+|P_0X|^2\le\bar f_{M+a}\,T^M(\bar f_a|X|^2).
+\]
+Apply H\"older with exponents \(3\) and \(3/2\), then cube, to obtain
+\[
+I_q(P_0X)^3
+\le\E[\bar f_{M+a}^4/q]
+ \left\{\E\left[(T^M(\bar f_a|X|^2))^2\right]\right\}^2.
+\]
+In \(L^2\), factor the vector as
+\[
+T^M(\bar f_a|X|^2)
+=[T^MM_{\sqrt{\bar f_a}}]\,[\sqrt{\bar f_a}|X|^2].
+\]
+Consequently the exact weighted bridge is
+\[
+\boxed{
+\begin{aligned}
+I_q(T^M(\bar f_aX))^3
+\le{}&\E[\bar f_{M+a}^4/q]\,
+ \lVert T^MM_{\sqrt{\bar f_a}}\rVert_{2\to2}^4\\
+&\hspace{2em}\cdot(\E[\bar f_a|X|^4])^2.
+\end{aligned}}
+\tag{E8.10.4}
+\]
+Both the norm and input weight follow from this factorization. The
+factorization uses the one \(\bar f_a\) arm as two square-root multipliers.
+
+To keep every operator coefficient explicit, write
+\[
+\begin{gathered}
+N_0=1,\qquad N_1=1+(32/19)d,\qquad
+N_2=(1+(1024/855)\delta_2)^2,\\
+N_n=(1-d/8)^{\lfloor n/3\rfloor}\qquad(n\ge3).
+\end{gathered}
+\]
+Section~\ref{proof:Q5-C064} proves \(\lVert T^n\rVert\le N_n\).
+These \(N_n\) bound the norm itself. The bases are the separate estimates
+for powers three, four and five; writing lengths as \(3m,\allowbreak 3m+1,\allowbreak 3m+2\)
+uses respectively \(m\) cubes, one fourth power with \(m-1\) cubes, or
+one fifth power with \(m-1\) cubes.  Use (E8.10.1) in the actual order
+\[
+T^MM_{\sqrt{\bar f_a}}
+=T^{M-1}(TM_{\sqrt{\bar f_a}}),\qquad
+\lVert T^MM_{\sqrt{\bar f_a}}\rVert\le N_{M-1}.
+\]
+The bare inverse-row estimates in Sections~\ref{proof:Q5-C064}
+and \ref{proof:Q5-C100} give
+\(\E[\bar f_n^4/q]\le1-d/2\) for every \(n\ge3\).
+Their \(n=3\) bound is the separate \(1-23d/36\) estimate; the
+\(n\ge4\) row uses the complete longer-path proof. Combining these
+with (E8.10.1), (E8.10.2) and (E8.10.4) yields
+\[
+\boxed{I_q(U)^3\le(1-d/2)N_{M-1}^4Q_a(d)^2.}
+\tag{E8.10.5}
+\]
+For \(M=1\), the multiplier norm is at most one. For \(M\ge4\), the
+remaining exponent \(M-1\ge3\) is covered by the separate power bases.
+Thus
+\[
+I_q(U)^3\le1-d/2\le e^{-d/2}\qquad(M=1),
+\tag{E8.10.6}
+\]
+\[
+I_q(U)^3\le
+e^{-[1/2+\lfloor(M-1)/3\rfloor/2]d}\qquad(M\ge4).
+\tag{E8.10.7}
+\]
+For \(a\ge3\), the additional factor \(Q_a(d)^2\) may be retained.
+The displayed common coefficients cover every nonunit singleton,
+nonreducible terminal and inner length \(L\) in these two outer ranges.
+At \(a=2,\allowbreak M=1\), the actual row is \(\bar f_3\) and uses its separate
+bound; every other relevant row has length at least four.
+At \(d=0\), the operator proof still applies, and actual leaf integration
+gives equality.

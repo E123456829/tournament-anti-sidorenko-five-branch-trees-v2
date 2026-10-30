@@ -1,0 +1,191 @@
+\subsection{The unit eighth moment for terminal pairs $(2,\allowbreak b)$ on the low domain}\label{proof:Q5-C055}
+Let $A=\allowbreak J+K$, $T=\allowbreak J-K=\allowbreak A^*$, $g=\allowbreak K\one$, $p=\allowbreak 1+g$, $q=\allowbreak 1-g$,
+$r=\allowbreak Kg$, $s=\allowbreak Kr$, $t=\allowbreak Ks$, $d=\allowbreak \E g^2$, $\delta_j=\allowbreak \|K^j\one\|_2^2$
+and $\theta=\allowbreak 13/32$. The finite calculus gives $0\le\allowbreak  d\le\allowbreak 1/3$,
+$d^2\le\allowbreak \delta_2\le\allowbreak \theta d$, $\delta_{j+1}\le\allowbreak \theta\delta_j$ and
+$|Kv(x)|\le\allowbreak \|v\|_2$. For
+\[
+ F_b=h_2f_b,\qquad H_b=pTF_b,\qquad b\ge4,
+\]
+we prove
+\begin{equation}\tag{Q55.0.1}\label{eq:Q55:scope}
+ \E H_b^8\le1-d/500
+ \quad\begin{cases}b\ge4,&0\le d\le1/4,\\b=4,&0\le d\le1/3.\end{cases}
+\end{equation}
+The two-edge arm has message $h_2=\allowbreak q-r$, the $b$-arm points outward,
+the unit connector points from the terminal to the receiving root, and
+the receiving unit arm points outward. Thus this direction uses $b+4$ edges.
+All expectations and operators use the given finite measure. Zero-mass atoms
+may be deleted; on the remaining atoms $p,\allowbreak q>\allowbreak 0$. At $d=\allowbreak 0$, leaf integration
+gives every tree message equal to one.
+
+\paragraph{Q55.2 Two scalar estimates}\label{part:Q55.2}
+For $|z|\le\allowbreak 1/7$,
+\begin{equation}\tag{Q55.2.1}\label{eq:Q55:power}
+ (1+z)^{16}\le1+16z+256z^2.
+\end{equation}
+This is \eqref{eq:Q50:2.1}.
+
+Suppose $C,\allowbreak U>\allowbreak 0$, $C>\allowbreak U/2$, and a real function $W$ satisfies
+$|W|\le\allowbreak  U$, $\E W\le\allowbreak 0$ and $\E W^2\le\allowbreak \theta U^2$. Then
+\begin{equation}\tag{Q55.2.2}\label{eq:Q55:hermite}
+ \E(C+W/2)^{16}
+ \le\frac{32}{45}(C-\theta U/2)^{16}
+       +\frac{13}{45}(C+U/2)^{16}.
+\end{equation}
+Apply \eqref{eq:oc:fixed-contact} with \(h=\theta=13/32\) and
+\(f(z)=(C+z/2)^{16}\). The hypothesis \(C>U/2\) gives
+\(f',f'',f'''\ge0\) on the full interval, and the probabilities are
+\(1/(1+\theta)=32/45\), \(\theta/(1+\theta)=13/45\).
+
+\paragraph{Q55.3 The propagated square}\label{part:Q55.3}
+The retained envelope in Section~\ref{proof:Q4-C128} is
+$0\le\allowbreak  F_b\le\allowbreak (m+R/2)^2$, where $m=\allowbreak 1-d>\allowbreak 0$. Write
+$D_0=\allowbreak \E R$, $V=\allowbreak \E R^2$, $Z=\allowbreak KR$. Expansion gives
+\[
+ T(m+R/2)^2=m^2q+m(D_0-Z)+\tfrac14(V-KR^2).
+\]
+Using $|K(R^2)|\le\allowbreak  V$, positivity and arithmetic--geometric mean yields
+\begin{equation}\tag{Q55.3.1}\label{eq:Q55:square}
+ 0\le H_b\le p\{m^2q+m(D_0-Z)+V/2\}
+ \le\{m+D_0/2-Z/2+V/(4m)\}^2.
+\end{equation}
+The second factor in braces before the last comparison bounds a positive
+operator output. After division by $m^2$, its sum with $p$ is
+$2+D_0/m-Z/m+V/(2m^2)\ge\allowbreak 0$, which also establishes the sign of the
+square base.
+
+\paragraph{Q55.4 Every $b\ge\allowbreak 4$ on $0<\allowbreak d\le\allowbreak 1/4$}\label{part:Q55.4}
+The same retained envelope satisfies
+\begin{equation}\tag{Q55.4.1}\label{eq:Q55:data}
+ D_0\ge0,\quad \E Z\ge0,\quad
+ V\le d(1/2+d)^2,\quad D_0\le d(\theta+11d/16).
+\end{equation}
+Hence, with $U=\allowbreak (1/2+d)\sqrt d$,
+\begin{equation}\tag{Q55.4.2}\label{eq:Q55:row}
+ |Z|\le U,\qquad \E Z^2\le\theta U^2.
+\end{equation}
+Put $C=\allowbreak 1-(47/64)d+(27/32)d^2$. For $0\le\allowbreak  d\le\allowbreak 1/4$,
+\begin{equation}\tag{Q55.4.4}\label{eq:Q55:chord}
+ \frac{(1/2+d)^2}{4(1-d)}\le\frac1{16}+\frac d2,
+\end{equation}
+because multiplication by $16(1-d)$ leaves the difference $3d(1-4d)$.
+It follows that $m+D_0/2+V/(4m)\le\allowbreak  C$.
+The function $C$ decreases, $C\ge\allowbreak 445/512$, and $U\le\allowbreak 3/8$; thus $C>\allowbreak U/2$ and
+\begin{equation}\tag{Q55.4.5}\label{eq:Q55:majorant}
+ 0\le H_b\le(C-Z/2)^2.
+\end{equation}
+
+If $0<\allowbreak d\le\allowbreak 1/16$, then $C\ge\allowbreak 15/16$, $U\le\allowbreak 9/64$, and
+$|Z|/(2C)\le\allowbreak 3/40<\allowbreak 1/7$. Also,
+\[
+ C\le1-ad,\quad a=349/512,\qquad
+ \E Z^2\le(1053/8192)d.
+\]
+Applying \eqref{eq:Q55:power} to $-Z/(2C)$ and using $\E Z\ge\allowbreak 0$ gives
+\[
+ \E H_b^8\le C^{16}+64C^{14}\E Z^2
+ \le C^{14}(1+1053d/128).
+\]
+Since $C^{-14}\ge\allowbreak (1-ad)^{-14}\ge\allowbreak 1+14ad$,
+\[
+ \E H_b^8\le1-(14a-1053/128)C^{14}d
+ =1-(337/256)C^{14}d.
+\]
+Bernoulli's inequality gives $C^{14}\ge\allowbreak (15/16)^{14}\ge\allowbreak 1/8$, so
+\begin{equation}\tag{Q55.4.6}\label{eq:Q55:small}
+ \E H_b^8\le1-337d/2048\le1-d/500.
+\end{equation}
+
+For $1/16\le\allowbreak  d\le\allowbreak 1/4$, put $x=\allowbreak \sqrt d\in[1/4,\allowbreak 1/2]$. The positive node is
+\[
+ G(x)=C+U/2=1+x/4-47x^2/64+x^3/2+27x^4/32.
+\]
+Its derivative is $1/4-47x/32+3x^2/2+27x^3/8>\allowbreak 0$.
+For $x\le\allowbreak 1/5$, deletion of the cubic term leaves a decreasing quadratic
+whose value at $1/5$ is $13/800$. For $x\ge\allowbreak 1/5$, the cubic term is at
+least $27x^2/40$, and the resulting quadratic has minimum $91/44544$.
+Thus
+\begin{equation}\tag{Q55.4.7}\label{eq:Q55:positive-node}
+ C+U/2\le541/512<37/35,\qquad(C+U/2)^{16}<625/256.
+\end{equation}
+Here $(37/35)^4<\allowbreak 5/4$ follows from
+$4(37^4-35^4)=\allowbreak 1494144<\allowbreak 1500625=\allowbreak 35^4$.
+The negative node $C-\theta U/2$ decreases; at $d=\allowbreak 1/16$ it is
+$7609/8192<\allowbreak 15/16$. Since $(15/16)^4<\allowbreak 7/9$ and $(7/9)^4<\allowbreak 3/8$,
+using $455625<\allowbreak 458752$ and $19208<\allowbreak 19683$, we obtain
+\begin{equation}\tag{Q55.4.8}\label{eq:Q55:negative-node}
+ (C-\theta U/2)^{16}<3/8.
+\end{equation}
+Equations~\eqref{eq:Q55:hermite}, \eqref{eq:Q55:positive-node} and
+\eqref{eq:Q55:negative-node} imply
+\begin{equation}\tag{Q55.4.9}\label{eq:Q55:middle}
+ \E H_b^8<\frac{32}{45}\frac38+\frac{13}{45}\frac{625}{256}
+ =\frac{11197}{11520}=1-\frac{323}{11520}\le1-d/500,
+\end{equation}
+where $d\le\allowbreak 1/4$ and $323/11520>\allowbreak 1/2000$.
+
+\paragraph{Q55.5 The pair $(2,\allowbreak 4)$ on the full domain}\label{part:Q55.5}
+The exact identities $f_4=\allowbreak 1+g+r+s+t-d-dp$ and $h_2=\allowbreak q-r$ give
+\[
+ h_2+f_4=2(1-d)+R,\qquad R=s+t-dg.
+\]
+The two factors are nonnegative, so $F_4\le\allowbreak (m+R/2)^2$ throughout the domain.
+In this case,
+\begin{equation}\tag{Q55.5.1}\label{eq:Q55:four-data}
+ \begin{gathered}
+ D_0=\delta_2,\qquad \E(KR)=\delta_2+d^2\ge0,\\
+ V=\delta_3+\delta_4+2d\delta_2+d^3
+ \le d\{(d+\theta)^2+\theta^3\}\le d(1/2+d)^2.
+ \end{gathered}
+\end{equation}
+The last step uses $\theta\le\allowbreak 1/2$ and
+$\theta^2(1+\theta)=\allowbreak 7605/32768<\allowbreak 1/4$.
+Thus \eqref{eq:Q55:row} still holds and $D_0\le\allowbreak \theta d$.
+Put $C_4=\allowbreak 1-(47/64)d+(19/32)d^2$. The full-domain chord bound is
+\begin{equation}\tag{Q55.5.3}\label{eq:Q55:four-chord}
+ \frac{(1/2+d)^2}{4(1-d)}\le\frac1{16}+\frac{19}{32}d;
+\end{equation}
+after multiplication by $16(1-d)$ the difference is $(9/2)d(1-3d)$.
+Consequently $m+D_0/2+V/(4m)\le\allowbreak  C_4$ and
+\begin{equation}\tag{Q55.5.4}\label{eq:Q55:four-majorant}
+ H_4\le(C_4-Z/2)^2.
+\end{equation}
+The function $C_4$ decreases, $C_4\ge\allowbreak 473/576$, and
+$U\le\allowbreak 5/(6\sqrt3)<\allowbreak 1/2$, so the base is positive.
+The range $d\le\allowbreak 1/16$ is covered above.
+
+For $x=\allowbreak \sqrt d\in[1/4,\allowbreak 1/\sqrt3]$, write
+\[
+ G_4(x)=C_4+U/2=1+x/4-47x^2/64+x^3/2+19x^4/32.
+\]
+Let $h=\allowbreak G_4'$. Then $h''=\allowbreak 3+57x/4\ge\allowbreak 3$, while
+$h(1/4)=\allowbreak 7/512$ and $h'(1/4)=\allowbreak -35/128$. Hence
+\[
+ h(x)\ge7/512-(35/128)(x-1/4)+(3/2)(x-1/4)^2
+ \ge119/98304>0.
+\]
+It follows that
+\begin{equation}\tag{Q55.5.5}\label{eq:Q55:four-positive-node}
+ G_4(1/\sqrt3)=1-103/576+5/(12\sqrt3)\le17/16.
+\end{equation}
+The endpoint comparison is $80\sqrt3\le\allowbreak 139$, which follows from
+$19200<\allowbreak 19321$. Moreover $(17/16)^4<\allowbreak 51/40$ and $(51/40)^4<\allowbreak 8/3$,
+using $3340840<\allowbreak 3342336$ and $20295603<\allowbreak 20480000$. Thus
+\begin{equation}\tag{Q55.5.6}\label{eq:Q55:four-positive-power}
+ (C_4+U/2)^{16}<8/3.
+\end{equation}
+For $d\ge\allowbreak 1/16$, the negative node is at most $7601/8192<\allowbreak 13/14$,
+using $106414<\allowbreak 106496$. Since $(13/14)^4<\allowbreak 3/4$ by
+$114244<\allowbreak 115248$,
+\begin{equation}\tag{Q55.5.7}\label{eq:Q55:four-negative-power}
+ (C_4-\theta U/2)^{16}<81/256.
+\end{equation}
+The Hermite bound now gives
+\begin{equation}\tag{Q55.5.8}\label{eq:Q55:four-result}
+ \E H_4^8<\frac{32}{45}\frac{81}{256}+\frac{13}{45}\frac83
+ =\frac9{40}+\frac{104}{135}=\frac{215}{216}\le1-d/500,
+\end{equation}
+because $d\le\allowbreak 1/3$ and $1/216>\allowbreak 1/1500$.
+This proves \eqref{eq:Q55:scope}. Positivity permits equal-arm factors at
+both roots, and replacing $K$ by $-K$ gives the fully reversed statement.

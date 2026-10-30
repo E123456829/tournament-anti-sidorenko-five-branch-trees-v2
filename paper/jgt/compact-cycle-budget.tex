@@ -1,0 +1,32 @@
+\subsection{A positive cycle form}\label{loc:S6}
+Let $r=Kg$, $m_j=\E g^j$ and
+$C(x,y,z)=(1+K(x,y))(1+K(y,z))(1+K(z,x))\ge0$.
+For every real $f$ the following exact form is nonnegative:
+\begin{equation}\label{eq:compact-cycle-form}
+ \E[(1+2r)f^2]+(\E f)^2-\|Kf+gf\|_2^2
+ =\tfrac12\E[C(x,y,z)(f(x)+f(y))^2]\ge0.
+\end{equation}
+To verify it, integrate $C$ first in one or two coordinates:
+\begin{align*}
+ \E_{y,z}C(x,y,z)&=1-g(x)^2+2r(x),\\
+ \E_zC(x,y,z)&=(1+K(x,y))[1+g(y)-g(x)+K^2(x,y)].
+\end{align*}
+The symmetric part of the second kernel is
+$1+K^2(x,y)+K(x,y)(g(y)-g(x))$. Thus
+\[
+ \E[Cf(x)f(y)]=(\E f)^2-\|Kf\|_2^2-2\E[gfKf].
+\]
+Combining this with the first marginal proves
+\eqref{eq:compact-cycle-form}; in particular $\E C=1-3d$.
+Taking $f=g+t$ gives, with $\Delta=d-\delta_{2}-m_4$,
+\[
+ \Delta-4tm_3+2(1-3d)t^2\ge0\quad(t\in\mathbb R),
+ \qquad \Delta\ge0,\qquad 2m_3^2\le(1-3d)\Delta.
+\]
+The last inequality also follows without division by Cauchy--Schwarz on
+the nonnegative measure $C\,d\mu^3$: its quadratic form has values
+$Q(g)=\Delta$, $Q(1)=2(1-3d)$, and $Q(g,1)=-2m_3$.
+Repeated atoms are retained. Their diagonal contribution gives
+$1-3d\ge\sum_x\mu(x)^3>0$ and
+$\Delta\ge2\sum_x\mu(x)^3g(x)^2$, so $\Delta>0$ when $d>0$.
+The quantities $\delta_{2},m_3,m_4$ satisfy the joint budgets above.

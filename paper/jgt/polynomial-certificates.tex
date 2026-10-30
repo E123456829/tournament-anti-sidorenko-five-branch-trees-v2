@@ -1,0 +1,46 @@
+\subsection{Polynomial coefficient certificates}
+\label{sec:bernstein-certificates}
+
+The polynomial comparisons below use rational coefficients on closed
+intervals or rectangles. The following elementary criterion makes
+their finite coefficient tables sufficient for the whole domain.
+
+\begin{lemma}[Bernstein coefficient bounds]\label{lem:bernstein-certificate}
+Let \(P\) be a polynomial on
+\([a,b]\times[c,d]\), and write
+\[
+ Q(s,t)=P(a+(b-a)s,c+(d-c)t)
+       =\sum_{p=0}^{n}\sum_{q=0}^{m}A_{pq}s^pt^q.
+\]
+Define
+\begin{equation}\label{eq:bernstein-coefficients}
+ B_{ij}=\sum_{p=0}^{i}\sum_{q=0}^{j}
+ A_{pq}\frac{\binom{i}{p}}{\binom{n}{p}}
+        \frac{\binom{j}{q}}{\binom{m}{q}},
+ \qquad 0\le i\le n,\quad0\le j\le m.
+\end{equation}
+Then
+\begin{equation}\label{eq:bernstein-convex-bound}
+ \min_{i,j} B_{ij}\ \le P(x,y)\le\ \max_{i,j}B_{ij}
+ \qquad ((x,y)\in[a,b]\times[c,d]).
+\end{equation}
+For a polynomial on one interval, take \(m=0\) and omit the
+second variable. Degrees \(n,m\) may exceed the actual degrees.
+The coefficients and both bounds are rational when the data are rational.
+\end{lemma}
+\begin{proof}
+The binomial theorem gives
+\[
+ s^p=\sum_{i=p}^{n}
+       \frac{\binom{i}{p}}{\binom{n}{p}}
+       \binom{n}{i}s^i(1-s)^{n-i}.
+\]
+Apply this identity to both variables. It yields
+\[
+ Q(s,t)=\sum_{i=0}^{n}\sum_{j=0}^{m}B_{ij}
+ \binom{n}{i}s^i(1-s)^{n-i}
+ \binom{m}{j}t^j(1-t)^{m-j}.
+\]
+For \(s,t\in[0,1]\), the weights are nonnegative and sum to one.
+This proves \eqref{eq:bernstein-convex-bound}, including the boundary.
+\end{proof}

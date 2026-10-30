@@ -1,0 +1,96 @@
+\subsection[The residual pairs (1,b), b >= 6]{The residual pairs $(1,b)$, $b\ge6$}\label{loc:S7}
+Put $P=qf_b$, $U_0=G_{b-1}(K)g$, $T_0=KU_0=S_b-S_1$,
+$a=19/32$, $\epsilon=ad$, $\tau=\theta^4$ and
+\[
+ m_0=1-2ad+ad^2/2,\qquad R=T_0-\epsilon(3g+2r+s).
+\]
+The finite-$G$ comparison in Section~\ref{loc:S5} gives
+$\|U_0\|^2\le d-2\delta_{2}/5$, $\|T_0\|^2\le \delta_{2}-2\delta_{3}/5$.
+Every finite alternating truncation also satisfies
+\begin{gather*}
+ \E U_0\ge-d+\delta_{2}-\delta_{3},\quad
+ \langle g,U_0\rangle\ge d-\delta_{2},\quad
+ \langle r,U_0\rangle\ge \delta_{2}-\delta_{3},\\
+ \langle g,T_0\rangle\ge-\delta_{2}+\delta_{3}-\delta_{4},\quad
+ \langle r,T_0\rangle\ge \delta_{2}-\delta_{3},\quad
+ \langle s,T_0\rangle\ge \delta_{3}-\delta_{4}.
+\end{gather*}
+These retain one negative tail term and bound the remaining decreasing
+alternating sum by zero. Telescoping gives
+$\E[pT_0]=-d-u_{b+1}\le-(1-\tau)d$, where $u_j=\E K^j\one$.
+Retain $f_0,f_1,f_2,f_3$ in convolution, whose sum is
+$4-d+3g+2r+s$. The actual envelope and mean are
+\[
+ q+f_b\le2m_0+R,\quad P\le(m_0+R/2)^2,\quad
+ \E[pR]\le-(1-\tau)d-a^2d^2\le-31d/32.
+\]
+Using $R=K[U_0-\epsilon(3\one+2g+r)]$ gives
+\begin{align*}
+ \|R\|_\infty^2&\le d-2\delta_{2}/5+\epsilon^2(9-2d+\delta_{2})
+                              +2\epsilon(d-2\delta_{2}+4\delta_{3})\le U=d+4d^2,\\
+ \E R^2&\le \delta_{2}-2\delta_{3}/5+\epsilon^2(9d-2\delta_{2}+\delta_{3})
+                              +2\epsilon(\delta_{2}-2\delta_{3}+4\delta_{4})\le dW,\\
+ W&=11/32+33d/80+3d^2.
+\end{align*}
+For the first reduction the spectral part is bounded by $-2\delta_{2}/5$,
+since $4-8\theta=3/4>\epsilon$; then use $\delta_{2}\ge d^2$.
+For the second, the derivative of
+$x-2x^2/5+\epsilon^2(9-2x+x^2)+2\epsilon(x-2x^2+4x^3)$
+is positive on $[0,\theta]$; its first two parts exceed $119/200$.
+Substitution at $\theta$ gives coefficients
+$871/2560,53599/131072,3087633/1048576$, bounded by those in $W$.
+As usual $V_p/d\le W+\sqrt{UW}$.
+
+For $d\ge4/19$, positivity gives $f_b\le2\mu_{b-2}p$, so
+$P\le2\mu_{b-2}$.
+Use the path mean $\mu_n\le1-19d/8$ for $b\ge7$.
+For $b=6$, the exact $\mu_4\le1-83d/32$ gives the threshold
+$16/83<4/19$. Thus $P\le1$ in the entire large range.
+On $d\le4/19$, comparison of $U$ with
+$(1/6+4ad-ad^2)^2$ leaves at least
+$1/36-5d/24+5d^2/6>0$, whose discriminant is $-85/1728$.
+Therefore the global cap is $P\le(13/12)^2$, and $(13/12)^6<5/3$.
+
+Put $m=1-9d/8$. The sixth- and third-moment main terms are
+\[
+ H=m^{11}(1-111d/16),\qquad F=m^5(1-129d/32).
+\]
+The negative mean substitution is valid: for the sixth bound on
+$d\le3/32$, $2m_0-11(31/32)d\ge2-417d/32>0$;
+for the cubic on $d\le4/19$, use $2-231d/32>0$.
+Convexity follows from
+\[
+ [(1-cd)^n(1-bd)]''=nc(1-cd)^{n-2}[(n-1)c+2b-(n+1)bcd],
+\]
+with $(n,b)=(11,111/16)$ or $(5,129/32)$, $c=9/8$.
+For $d\le1/36$ the exponential criterion applies with
+$D\ge(4a+1-\tau)d+(a^2-a)d^2$:
+$D-3U>d[11/32-49d/4]\ge d/288$.
+
+The remaining sixth-moment data are
+\begin{center}\small
+\begin{tabular}{@{}cccccc@{}}\toprule
+$I$&$\bar m$&$M$&$V_p/d$&$B_{12}$&endpoints\\\midrule
+$[1/36,1/16]$&$31/32$&$9/32$&$9/16$&$21$&$191/192,255/256$\\
+$[1/16,5/64]$&$119/128$&$13/36$&$3/5$&$17$&$573/640,319/320$\\
+$[5/64,3/32]$&$11/12$&$13/36$&$13/20$&$29/2$&$2397/2560,1271/1280$\\\bottomrule
+\end{tabular}
+\end{center}
+Here the second row may enlarge its row-norm bound $13/40$ to $13/36$
+for the remainder. The displayed endpoints bound $H+dB_{12}(V_p/d)$.
+For the cubic ranges the table gives a rounded coefficient $k$ with
+$B_6(V_p/d)\le k$; the final columns bound $F+kd$.
+\begin{center}\small
+\begin{tabular}{@{}cccccc@{}}\toprule
+$I$&$\bar m$&$M$&$V_p/d$&$k$&endpoints\\\midrule
+$[3/32,1/8]$&$17/19$&$7/16$&$59/80$&$5/2$&$19/32,9/16$\\
+$[1/8,5/32]$&$13/15$&$51/100$&$17/20$&$11/4$&$19/32,371/640$\\
+$[5/32,3/16]$&$33/40$&$23/40$&$19/20$&$8/3$&$17/30,7/12$\\
+$[3/16,4/19]$&$15/19$&$5/8$&$25/24$&$125/48$&$439/768,269/456$\\\bottomrule
+\end{tabular}
+\end{center}
+The complete finite $B_6$ bounds used here are $27/8,16/5,14/5,5/2$.
+All cubic endpoints are less than $3/5$, so the cap converts them to the
+sixth moment. The finite sums $B_r$, increasing $U,W$, and convexity
+certify all closed intervals. Together with the two outer ranges this
+proves $\E[p(qf_b)^6]\le1$ for every $b\ge6$.

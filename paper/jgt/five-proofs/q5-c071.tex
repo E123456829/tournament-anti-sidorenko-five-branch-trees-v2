@@ -1,0 +1,371 @@
+\subsection{The shortest-two root: one finite packet and nine payments}
+\label{proof:Q5-C071}
+Let \(W_2=Aq=p-r\), \(r=K^2\one\), \(s=K^3\one\), and
+\(t=K^4\one\). With the notation and actual finite packet of
+Lemma~\ref{lem:short-one:packet}, we prove
+\begin{equation}\tag{Q71.0.2}\label{eq:short2:claim}
+ \E[W_2T^L(qf_b)]^8\le e^{-d/10}\le1-d/12\le1-d/256
+ \qquad(b\ge2,\ L\ge2).
+\end{equation}
+The terminal unit arm points inward, its \(b\)-arm outward, and the
+whole connector points from the terminal to the root. The first edge
+of \(W_2\) points outward and its second inward.
+These directions are fixed before choosing the host.
+Actual equal-pair decorations \(E_t,E_r\in[0,1]\) give
+\[
+ 0\le E_rW_2T^L(E_tqf_b)\le W_2T^L(qf_b),
+\]
+so the same bounds hold with such decorations. At \(d=0\), every
+actual tree message is one by leaf integration; below \(d>0\).
+
+\paragraph{The common square and its complete exponent.}\label{part:Q71.2}
+Write \(X=T^L(qf_b)\), \(Y=W_2X\), and use the \(m,k,R,\gamma,a_1,B_*\)
+of \eqref{eq:short-one:data}. For \(b=2\) set
+\[
+ \gamma=d-\delta_2/2,\quad B_2=1-\gamma,\qquad
+ D_4=B_2^2d+\delta_2-2\delta_3+\delta_4-\tau^2.
+\]
+All nine rows below have an actual positive upper bound
+\begin{equation}\label{eq:short2:common-square}
+ 0<X\le C[Bq+Br+Z-a],\qquad
+ 0\le Y\le CB[1+(Z-a)/(2B)]^2,\qquad Z=K^jH.
+\end{equation}
+The square base is half the sum of \(W_2\) and the positive terminal
+upper divided by \(CB\).
+Put \(c_*=(1+\theta)^2=2025/1024\).
+Lemma~\ref{lem:short-one:exponential} gives
+\begin{equation}\label{eq:short2:complete-exponent}
+ \log\E Y^8\le\mathcal E_{b,L}:=
+ 8\log C+8\log B-\frac{8a}{B}+\frac{8M}{B}
+ +\begin{cases}6D/B^2,&j=2,\\8c_*D/B^2,&j=1,\end{cases}
+\end{equation}
+where \(\|H\|_2^2\le D\) and \(M\ge\max(\E Z,0)\).
+In the tables \(z=-K\), \(P_n\) is the actual polynomial with the
+same \(b,k\), and
+\[
+ A_5(\tau)=\theta-2\theta\tau+\tau^2,\qquad
+ A_6(\tau)=\theta-\tfrac7{15}\theta^2-2\theta\kappa\tau+\tau^2.
+\]
+
+\begingroup\small
+\setlength{\tabcolsep}{3pt}
+\setlength{\LTleft}{0pt}\setlength{\LTright}{\fill}
+\begin{longtable}{@{}p{0.13\linewidth}p{0.27\linewidth}p{0.51\linewidth}@{}}
+\caption{Actual short-one terminal masks for the shortest-two root.}
+\label{tab:short2:actual-masks}\\
+\toprule Row&\((C,B,a)\)&\((j,H)\)\\\midrule\endfirsthead
+\toprule Row&\((C,B,a)\)&\((j,H)\)\\\midrule\endhead
+\bottomrule\endfoot
+\(b=2,L=2\)&\(1,B_2,0\)&\(2,\ \gamma\one+r\)\\
+\(b=2,L=3\)&\(1,B_2,\tau\)&\(2,\ -(g+s)\)\\
+\(b=2,L=4\)&\(1,1-\gamma-\tau,d(1-\gamma)\)&
+ \(2,\ \tau\one-B_2g+r+t\)\\
+\(b=2,L=5\)&\(1,1-2\tau,\tau\)&\(1,\ [\tau+zP_3(z)]g\)\\
+\(b=2,L\ge6\)&\(1,1-2\tau,\tau\)&\(1,\ [\tau+zP_{L-2}(z)]g\)\\
+\(b\ge3,L=2\)&\(m^2,1-\gamma,a_1\)&\(2,\ \gamma\one+kR\)\\
+\(b\ge3,L=3\)&\(m^2,1-B_*,d-k\rho\)&
+ \(1,\ [a_1+zP_1(z)]g\)\\
+\(b\ge3,L=4\)&\(m^2,1-41d/80,\kappa d\)&
+ \(1,\ [41d/80+zP_2(z)]g\)\\
+\(b\ge3,L\ge5\)&\(1-d/2,1-d/2,d/2\)&
+ \(1,\ [d/2+zP_{L-2}(z)]g\)\\
+\end{longtable}
+\endgroup
+
+\begingroup\small
+\setlength{\tabcolsep}{3pt}
+\setlength{\LTleft}{0pt}\setlength{\LTright}{\fill}
+\begin{longtable}{@{}p{0.13\linewidth}p{0.35\linewidth}p{0.29\linewidth}r@{}}
+\caption{Moments of the same fluctuations and their paid exponents:
+\(\mathcal E_{b,L}\le-r_{b,L}d\).}
+\label{tab:short2:payments}\\
+\toprule Row&\(D\)&\(M\)&\(r_{b,L}\)\\\midrule\endfirsthead
+\toprule Row&\(D\)&\(M\)&\(r_{b,L}\)\\\midrule\endhead
+\bottomrule\endfoot
+\(2,2\)&\(\delta_2\)&\(\delta_2-\gamma d\)&\(1/8\)\\
+\(2,3\)&\(d-2\delta_2+\delta_3\)&\(0\)&\(3/4\)\\
+\(2,4\)&\(D_4\)&\((\theta\kappa-\tau)d\)&\(1\)\\
+\(2,5\)&\(A_5(\tau)d\)&\((\theta-\tau)d\)&\(2/3\)\\
+\(2,\ge6\)&\(A_6(\tau)d\)&\((\theta-\tau)d\)&\(4/5\)\\
+\(\ge3,2\)&\(k^2V\)&\(\max(k\rho-\gamma d,0)\)&\(1/8\)\\
+\(\ge3,3\)&\([351/1280+a_1^2]d\)&\((\theta-a_1)d\)&\(1/10\)\\
+\(\ge3,4\)&\([\theta(71/63)+(41d/80)^2]d\)&
+ \((\theta-41d/80)d\)&\(8/25\)\\
+\(\ge3,\ge5\)&\((\theta+d^2/4)d\)&\((\theta-d/2)d\)&\(2/5\)\\
+\end{longtable}
+\endgroup
+
+\paragraph{Derivation of all masks and moment data.}
+For every \(b\), the first two propagated masks are
+\[
+ m^{-2}X_{b,1}\le q+kB_0R-\gamma,\qquad
+ m^{-2}X_{b,2}\le(1-\gamma)q+r+kK^2R-a_1 .
+\]
+Thus the \(L=2\) rows follow by AM--GM. Their full vector includes
+its constant term: with \(v_0=kt_0,\ v_2=k^2V\),
+\begin{equation}\tag{Q71.8.2}\label{eq:Q71:8.2}
+ \|\gamma\one+kR\|_2^2=v_2-v_0^2+v_2^2/4\le k^2V .
+\end{equation}
+Indeed \(\gamma=v_0-v_2/2\ge0\). Its actual \(K^2\)-mean is
+\(k\rho-\gamma d\). At \(b=2\) this is nonnegative because
+\(\delta_2\ge d^2\); its exact vector norm is
+\(\delta_2-d^2+\delta_2^2/4\).
+
+At \(b=2\), \(\varepsilon_3=\tau,\varepsilon_4=d\). Keeping
+these terms in \eqref{eq:short-one:propagation} gives
+\[
+ X_{2,3}\le B_2(q+r)-s-K^5\one-\tau,
+\]
+and
+\[
+ X_{2,4}\le(1-\gamma-\tau)(q+r)
+       +\tau r-B_2s+t+K^6\one-dB_2 .
+\]
+These are the displayed \(L=3,4\) masks. Their two-row vector norms
+are \(d-2\delta_2+\delta_3\) and \(D_4\).
+The latter obeys \(D_4\le[B_2^2+4/27]d\), since
+\(x(1-x)^2\le4/27\).
+Its mean is \(\delta_2-\delta_3-\tau d
+\le(\theta\kappa-\tau)d\), using \(x(1-x)\le\theta\kappa\).
+For \(L\ge5\), keep the last three losses, all at least \(\tau\):
+\[
+ X_{2,L}\le(1-2\tau)q+R_L-\tau r-\tau .
+\]
+Consequently \(Z=K[\tau+zP_{L-2}]g\).
+At \(L=5\), \(\Re(zP_3)=-x\) and \(|P_3|\le1\), giving \(D=A_5d\).
+At \(L\ge6\), \eqref{eq:short-one:norms} and
+\eqref{eq:short-one:terminal-two-profile} give
+\[
+ |\tau+zP_{L-2}|^2
+ \le\tau^2+(1-2\tau)x+(2\tau-7/15)x^2
+ \le A_6(\tau).
+\]
+This polynomial increases on \(0\le x\le\theta\):
+its derivative is at least \(127/720>0\).
+
+For \(b\ge3,L=3\), keep the three actual losses:
+\[
+ X_{b,3}\le m^2[V_3-\gamma r-(d-k\rho)-B_*q] .
+\]
+This gives the listed \(Z=R_3-r+a_1r\).
+For \(L=4\), retain only \(\varepsilon_4\ge\kappa d\) and
+\(\varepsilon_3\ge41d/80\). For \(L\ge5\), retain the last two
+losses, each at least \(d/2\), then enlarge \(m^2\) to \(1-d/2\)
+after the remaining bracket is positive.
+These operations give exactly the last three mask rows.
+In every one-row case \(Z=K[\delta+zP_n]g\),
+\[
+ \Re(zP_n)\le0,\qquad
+ \E Z=-\alpha_L+(1-\delta)d\le(\theta-\delta)d .
+\]
+Use \(|P_1|^2\le1-4x/5\), \(|P_2|^2\le71/63\), or
+\(|P_n|^2\le1\) as appropriate to obtain the three displayed \(D\)'s.
+The endpoint \(x-4x^2/5\) is \(351/1280\).
+All \(M\)'s are nonnegative because
+\(\tau\le2/9<\theta\kappa\), \(a_1\le39d/80\le13/80\),
+and \(d/2<\theta\).
+All \(B\)'s are positive: \(B_2\ge13/18\),
+\(1-\gamma-\tau\ge1/2\), \(1-2\tau\ge5/9\),
+\(1-\gamma\ge17/25\), and \(1-B_*\ge1/2\).
+
+\paragraph{The two shortest terminal-two connectors.}
+At \(b=2,L=2\), let \(v=\delta_2/d\le\theta\), \(B=B_2\).
+The complete exponent in \eqref{eq:short2:complete-exponent},
+using \(D=\delta_2\) and \(\log B\le-\gamma\), is at most
+\(8dF/B^2\), where
+\[
+ F=\tfrac v2 B^2-(1-v)B+\tfrac34v .
+\]
+It increases in \(v\) and decreases in \(B\), since
+\(vB-(1-v)\le\theta-\kappa<0\). Hence
+\begin{equation}\label{eq:short2:L2-paid}
+ \mathcal E_{2,2}\le\frac{8dF}{B_2^2},\qquad
+ F\le\tfrac{13}{64}(\tfrac{13}{18})^2
+       -\tfrac{19}{32}\tfrac{13}{18}+\tfrac{39}{128}
+   =-\tfrac{377}{20736}<-\tfrac1{64}.
+\end{equation}
+In particular \(\mathcal E_{2,2}\le-d/8\).
+For \(L=3\), use \(D\le d\), \(\gamma\ge(51/64)d\),
+\(\tau\ge\kappa d\), and \(B_2\ge13/18\):
+\begin{equation}\tag{Q71.5.2}\label{eq:ordinary-short2-L3-paid}
+ \mathcal E_{2,3}\le
+ \frac{8d}{B_2^2}\left[-\frac{51}{64}B_2^2-\kappa B_2+\frac34\right]
+ \le-\frac{653}{864}d\le-\frac34d .
+\end{equation}
+The bracket decreases in \(B_2\), and its value at \(13/18\)
+is \(-653/6912\).
+
+\paragraph{Terminal two at length four.}
+Put \(B=1-\gamma-\tau\), \(v=(\gamma+\tau)/d\).
+Using the vector and mean bounds already proved, the exponent
+is at most \(8dF/B^2\), where
+\[
+ F=-(v+1/4)B^2+(\theta\kappa-\tau/2)B+3\tau^2/4+1/9 .
+\]
+Here \(v\ge89/64\), \(B\ge1/2\), \(\tau\le2/9\), so
+\[
+ F\le-\tfrac{105}{64}B^2+\tfrac{247}{1024}B+\tfrac4{27}
+ \le-\tfrac{7819}{55296}<-\tfrac18 .
+\]
+The quadratic decreases on \(B\ge1/2\). Thus
+\begin{equation}\label{eq:ordinary-short2-L4-paid}
+ \mathcal E_{2,4}\le\frac{8dF}{B^2}\le-\frac d{B^2}\le-d .
+\end{equation}
+
+\paragraph{The entire terminal-two tail.}
+For \(j=5,6\), set
+\((A_0,\sigma)=(\theta,1)\) or
+\((\theta-7\theta^2/15,\kappa)\), respectively, and \(B=1-2\tau\).
+The complete exponent is at most \(8dF_j(d,\tau)/B^2\), where
+\begin{equation}\label{eq:short2:tail-scalar}
+ F_j=-\frac{2\tau}{d}(1-2\tau)^2
+ +(1-2\tau)(\theta-\tau-\tau/d)
+ +c_*[A_0-2\theta\sigma\tau+\tau^2].
+\end{equation}
+Its second \(\tau\)-derivative is
+\((20-48\tau)/d+4+2c_*>0\). It therefore suffices to check
+\(\tau=\kappa d\) and \(\tau=d-d^2\), throughout \(0<d\le1/3\).
+With \(a_5=1/12,a_6=1/10\), the four polynomials are
+\begin{equation}\label{eq:ordinary-short2-endpoint-polynomials}
+ P_{j,\ell}(x)=-F_j(x/3,\kappa x/3)-a_j,\qquad
+ P_{j,u}(x)=-F_j(x/3,x/3-x^2/9)-a_j .
+\end{equation}
+Their complete Bernstein coefficients on \([0,1]\) are listed below;
+the entries are the integer vector divided by \(D\).
+Lemma~\ref{lem:bernstein-certificate} gives \(F_5<-1/12,F_6<-1/10\).
+\begin{table}[htbp]\centering\small\setlength{\tabcolsep}{4pt}
+\caption{All coefficients for the two terminal-two tail payments.}
+\label{tab:ordinary-short2-bernstein}
+\begin{tabular}{@{}crl@{}}\toprule
+\((j,e)\)&\(D\)&\(D(b_0,\ldots,b_n)\)\\\midrule
+\((5,\ell)\)&\(9437184\)&\((4608096,2256333,190121)\)\\
+\((5,u)\)&\(39813120\)&\(\begin{gathered}
+ (67962645,42533343,26218242,\\15176862,7537011,2084065)
+ \end{gathered}\)\\
+\((6,\ell)\)&\(1509949440\)&\((942104736,468288531,40160486)\)\\
+\((6,u)\)&\(1274019840\)&\(\begin{gathered}
+ (2347612551,1478434437,910150830,\\519866370,247670913,54696491)
+ \end{gathered}\)\\\bottomrule
+\end{tabular}
+\end{table}
+Consequently the actual complete exponents satisfy
+\begin{equation}\label{eq:ordinary-short2-L5-paid}
+ \mathcal E_{2,5}\le\frac{8dF_5}{B^2}
+ \le-\frac{2d}{3B^2}\le-\frac{2d}{3},
+\end{equation}
+\begin{equation}\label{eq:ordinary-short2-Lge6-paid}
+ \mathcal E_{2,L}\le\frac{8dF_6}{B^2}
+ \le-\frac{4d}{5B^2}\le-\frac{4d}{5}\qquad(L\ge6).
+\end{equation}
+
+\paragraph{Every longer terminal at connector length two.}
+The same complete exponent, including its nonzero constant vector,
+is
+\[
+ \mathcal E_{b,2}=16\log m+8\log B
+ +\frac8B[\max(k\rho-\gamma d,0)-ke]+\frac{6k^2V}{B^2},
+ \qquad B=1-\gamma\ge17/25.
+\]
+If \(\rho\le e\), the bracket is nonpositive; otherwise it is at most
+\(k(\rho-e)\). At \(b=3\), \(\beta_b=d\),
+\(V\le(585/1024)d<(3/5)d\), and \(\gamma\ge7d/10\).
+Using \(16\log m\le-8d\) and \(\log B\le-\gamma\), the exponent
+after division by \(8d/B^2\) is at most
+\[
+ -\tfrac{17}{10}B^2+\tfrac34k^2(585/1024)
+ \le-\tfrac{34}{45}+\tfrac{81}{125}
+ =-\tfrac{121}{1125}<-\tfrac1{10}.
+\]
+Thus \(\mathcal E_{3,2}\le-4d/5\), and
+\(\E Y_{3,2}^8\le1-d/2\).
+For \(b\ge4\), \(V\le\delta_2\), \(\beta_b\ge\kappa d\), and
+\(\gamma\ge(k\kappa-k^2\theta/2)d\ge25d/64\).
+At nonpositive end sign this gives
+\[
+ \frac{B^2}{8d}\mathcal E_{b,2}
+ \le-\tfrac{63}{64}B^2+\tfrac34k^2\theta
+ \le-\tfrac{657}{40000}<-\tfrac1{64}.
+\]
+At positive end sign, necessarily \(b\equiv2\pmod4,\ b\ge6\).
+The exact \(\Delta=\rho-e=\delta_{b/2+1}\) satisfies
+\(\Delta\le\theta\delta_3\). The same finite sums and the
+\(G_{b-1}\) loss in the proof of Lemma~\ref{lem:short-one:packet}
+give
+\[
+ t_0\ge\tau+\kappa\delta_3,\quad
+ V\le\delta_2-\tfrac7{15}\delta_3,\quad
+ \gamma\ge\tfrac{25}{64}d+(k\kappa+7k^2/30)\delta_3 .
+\]
+This improvement pays the positive sign before any independent
+relaxation of moments, because
+\[
+ -B^2(k\kappa+7k^2/30)\delta_3+Bk\Delta\le0,\qquad
+ B(\kappa+7k/30)\ge6749/12000>\theta .
+\]
+We have therefore proved the complete scalar bound
+\begin{equation}\label{eq:short2:longer-L2-paid}
+ \mathcal E_{b,2}\le-d/8\qquad(b\ge3).
+\end{equation}
+
+\paragraph{All remaining longer-terminal rows.}
+Set \(h_0=209/384\).
+For \(L=3\), let \(v=B_*/d\in[5/8,3/2]\),
+\(B=1-vd\), and \(\delta=a_1\le13/80\).
+The exponent is at most \(8dF/B^2\), where
+\[
+ F\le-(h_0+v)B^2+B(-17/160-\delta)
+           +c_*(351/1280+\delta^2).
+\]
+As \(c_*\delta<B\), the two \(\delta\)-terms are nonpositive.
+The function \((13/24+v)(1-v/3)^2\) has at most one interior
+maximum and endpoint values \(2527/3456,49/96\). Hence
+\[
+\begin{gathered}
+ (h_0+v)B^2\ge49/96,\qquad c_*351/1280<11/20,\\
+ F\le-49/96-17/320+11/20=-13/960<-1/80.
+\end{gathered}
+\]
+Thus
+\begin{equation}\label{eq:short2:longer-L3-paid}
+ \mathcal E_{b,3}\le-d/10\qquad(b\ge3).
+\end{equation}
+
+For \(L=4\), \(u=41/80\), \(B=1-ud\), and
+\[
+ F=-(h_0+u)B^2+B(\theta-\kappa-ud)
+                 +c_*[\theta(71/63)+u^2d^2].
+\]
+Since \(h_0+u\ge25/24,\ u\ge1/2,\ 71/63\le181/160\), put
+\(B'=1-33d/64\le B\) to obtain
+\[
+ F\le-\tfrac{25}{24}(B')^2+B'(-3/16-d/2)
+          +c_*[\theta(181/160)+(33d/64)^2]=Q(d).
+\]
+Both its linear coefficient \(2061/3072\) and its quadratic
+coefficient \((33/64)/2+(33/64)^2(c_*-25/24)\) are positive.
+Thus \(Q(d)\le Q(1/3)=-2543205/62914560<-1/25\), proving
+\begin{equation}\label{eq:short2:longer-L4-paid}
+ \mathcal E_{b,4}\le-8d/25\qquad(b\ge3).
+\end{equation}
+
+For \(L\ge5\), \(B=1-d/2\), and the scalar after division by
+\(8d/B^2\) is at most
+\[
+ F=-B^2+B(\theta-1/2-d/2)+c_*(\theta+d^2/4)
+ =\theta-\tfrac32+c_*\theta+
+   (\tfrac34-\tfrac\theta2)d+\tfrac{c_*}{4}d^2 .
+\]
+It increases to \(F(1/3)=-5225/98304<-1/20\), so
+\begin{equation}\label{eq:short2:longer-tail-paid}
+ \mathcal E_{b,L}\le-2d/5\qquad(b\ge3,\ L\ge5).
+\end{equation}
+These are all rows in Table~\ref{tab:short2:payments}, proving
+\eqref{eq:short2:claim}. The corresponding linear bounds are
+\[
+\begin{array}{c|ccccc}
+\text{row}&b=2,L\ge3&b\ge3,L=2&b\ge3,L=3&b\ge3,L=4&b\ge3,L\ge5\\
+\E Y^8\le&1-d/2&1-d/10&1-d/12&1-d/4&1-d/3 .
+\end{array}
+\]
+They follow from \(e^{-x}\le(1+x)^{-1}\) and \(d\le1/3\).
+For \(b=2,L=4\), the same argument gives the stronger \(1-3d/4\).

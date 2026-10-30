@@ -1,0 +1,82 @@
+\subsection{Odd centers with the cubed boundary weight}\label{loc:S18}
+For $C=E_0f_aP$, $2\le a<b_1<c_1<\cdots<b_t<c_t$, $t\ge1$,
+we prove $\E[q^3C^4]\le e^{-4d}$.
+Use the shared packet and anchor data from Sections~\ref{loc:S15}--\ref{loc:S16};
+for $a=2$ set all anchor data $A_a,z_a,T_a,e_a,I_a,J_a,L_a,W_a,C_a,D_a$
+equal to zero. The packet deficit is
+$\Delta=\omega_{b_1}+2(t-1)d$, using the base pair deficits.
+
+\proofpart{Cubed-weight master}
+The actual anchor envelope is $\widehat f_a=1+g+r+T_a-A_a\in(0,2]$.
+With $u=\widehat f_a-1$, the logarithmic inequalities give
+\[
+ q^3\widehat f_a^4\le
+ e^{g+4r+4T_a-4A_a-9g^2/10-6u^2/5}.
+\]
+Put $Y_0=g+4r+4R$, $X=Y_0+4T_a-2A_a$, $Z=2(g+z_a)+4v$.
+Then $X=-g+2u+KZ$ and the reciprocal-weight sum is
+$10/9+10/3+23/9=7$. Thus
+$X^2/7\le9g^2/10+6u^2/5+(9/23)\|Z\|^2$.
+The global scalar bound proves
+\[
+ \E[q^3\widehat f_a^4P^4]\le e^\Xi,\quad
+ \Xi=-4\Delta-2A_a+(9/23)\|Z\|^2+\E X+3\E X^2/8.
+\]
+The base and the complete anchor increment are
+\begin{align*}
+ \Xi_0={}&-4\Delta-379d/184+6\delta_{2}+144I/23+6J_1-3L-12W+52t_0/23,\\
+ \Xi-\Xi_0={}&-4A_a+(20/23-6A_a)e_a+36I_a/23+6J_a-3L_a-12W_a\\
+ &+144C_a/23+12D_a+6A_ad+6A_at_0+3A_a^2/2.
+\end{align*}
+These follow from $\E Y_0=-4d-4t_0$,
+$\E Y_0^2=d+16\delta_{2}+16J_1-8L-32W$ and the exact anchor identities.
+In particular the positive term $20e_a/23$ is retained.
+The expansion integrates against $\mu$, with $q^3\mu$ kept as a weighted measure.
+
+\proofpart{Complete budget certificate}
+The packet norm bounds and signed-moment lists are those proved in
+Section~\ref{loc:S16}. One extra short-prefix bound is needed: for a
+single pair starting at three,
+$t_0\le-\delta_{2}+\delta_{3}$, $L\ge-\delta_{3}$, $W\ge \delta_{3}-\delta_{4}$.
+For masks starting at least at three use
+$t_0\le D_3$, $L\ge-D_3$, $W\ge-D_4$.
+With the exact anchor-three/four data already displayed there, the master
+has the following upper polynomials. Put $\mathcal D(c_1,\ldots,c_m)=\sum_{j=1}^m c_j\delta_{j}$.
+For example, $\mathcal D(0,1,-1)=\delta_{2}-\delta_{3}$; powers such as $d^2$
+are written separately. The seven upper bounds for $\Xi$ are:
+\begin{align*}
+ a=2,b=3,t=1:\quad&\mathcal D(-1851/184,178/23,61/23,21),\\
+ a=2,b\ge4,t=1:\quad&\mathcal D(-1851/184,6,121/23,492/23,9),\\
+ a=2,t\ge2:\quad&\mathcal D(-3323/184,10,576/23,24)+121D_3/23+12D_4,\\
+ a=3,t=1:\quad&\mathcal D(-2587/184,105/23,311/23,492/23,21)+15d^2/2,\\
+ a=4,t=1:\quad&\mathcal D(-2587/184,125/23,98/23,627/23,636/23,21)+15d^2/2,\\
+ a\ge5,t=1:\quad&\mathcal D(-1851/184,125/23,9,864/115,2261/115,492/23,9),\\
+ a\ge3,t\ge2:\quad&\mathcal D(-3323/184,143/23,3108/115,6192/115,24)
+                         +121D_3/23+12D_4.
+\end{align*}
+For the first three rows use the packet bounds directly.
+For $a=3,t=1$ use $C_a=L$, $D_a\le \delta_{5}$.
+For $a=4,t=1$ use $C_a\le \delta_{4}+\delta_{5}$, $D_a\le \delta_{5}+\delta_{6}$,
+as obtained by the two contiguous alternating cross lists.
+For $a\ge5,t=1$ use
+$|C_a|\le6\delta_{4}/5$, $|D_a|\le6\delta_{5}/5$;
+the remaining anchor term is
+$-A_a[4-6d-3A_a/2-6t_0]$, whose bracket is at least $36/25$.
+For $a\ge3,t\ge2$ use $I_a\le3\delta_{2}/2$, $J_a\le3\delta_{3}/2$,
+$|C_a|\le12\delta_{3}/5$, $|D_a|\le12\delta_{4}/5$.
+Here the same bracket is at least $11/10$.
+These cross bounds use respectively the finite geometric and signed-mask
+spectral products, with minimum exponent six or four as appropriate.
+The spectral products retain the joint dependence of the pair messages.
+
+Using $d^2\le d/3$ and the rational bounds in
+Section~\ref{loc:S16}, the seven rows give respectively
+\[
+ \Xi/d\le-29/6,\ -14/3,\ -347/60,\ -5,\ -21/4,\ -541/120,\ -21/5.
+\]
+Each is at most $-4$, completing the estimate for every $a\ge2,t\ge1$.
+All additional pairs supply unused nonnegative deficit.
+
+\proofpart{A genuine unit anchor}
+The actual unit-arm reduction is \eqref{eq:unitcenter}; it uses the
+canonical even fourth moment and includes a singleton unit center.

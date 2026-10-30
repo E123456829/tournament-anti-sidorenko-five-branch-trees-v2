@@ -1,0 +1,106 @@
+\subsection{One reference arm at a nonempty even center}\label{proof:Q5-C113}
+Let the distinct residual arm lengths at the center be
+$a_1<\allowbreak \cdots<\allowbreak a_{2j}$, $j\ge\allowbreak 1$. Select the reference length by
+\begin{equation}\tag{Q113.1.2}\label{eq:Q113:reference-selection}
+ a_*=
+ \begin{cases}a_2,&a_1=1,\\a_1,&a_1\ge2,\end{cases}
+ \qquad a_*\ge2.
+\end{equation}
+Orient this arm outward, with message $f_{a_*}$.
+Fix a simple terminal with residual $(1,\allowbreak b)$, $b\ge\allowbreak 2$, and connector
+length $L\ge\allowbreak 1$. There is a direction on the other center arms, this
+terminal and its connector such that their message $H$ at the center
+satisfies
+\begin{equation}\tag{Q113.1.3}\label{eq:Q113:ordinary}
+ \E H^8\le e^{-d/12000}.
+\end{equation}
+The factor $H$ contains all equal-arm decorations at the center and
+terminal, and excludes the selected reference arm.
+
+Use $A=\allowbreak J+K$, $T=\allowbreak J-K$, $g=\allowbreak K\one$, $p=\allowbreak 1+g$, $q=\allowbreak 1-g$,
+$f_n=\allowbreak A^n\one$, $\bar f_n=\allowbreak T^n\one$, $h_n=\allowbreak Tf_{n-1}$ and
+$W_n=\allowbreak A\bar f_{n-1}$ on the same finite probability space.
+An $h_n$ arm has its first edge toward the root and the rest toward
+the leaf; a $W_n$ arm has its first edge away from the root and the
+rest toward the first interior vertex. Each $T^L$ connector points
+from terminal to center. Equal-arm products $E_c,\allowbreak E_e\le\allowbreak 1$ stay at
+their respective vertices.
+
+\paragraph{Q113.2 The second moment of the reference}\label{part:Q113.2}
+The path-power estimate of Section~\ref{proof:Q5-C064} gives
+\[
+ \|A^n\|\le(1-d/8)^{\lfloor n/3\rfloor}\le1\qquad(n\ge3).
+\]
+For $n=\allowbreak 2$, use
+\[
+ f_2=1+g+Kg,\qquad \E[g(Kg)]=0,\quad \E(Kg)=-d,
+ \qquad \E f_2^2=1-d+\delta_2\le1,
+\]
+where $\delta_2\le\allowbreak (13/32)d$. Applying the path-power estimate to
+$\one$ for $n\ge\allowbreak 3$ therefore proves
+\begin{equation}\tag{Q113.2.3}\label{eq:Q113:reference-second}
+ \E f_a^2\le1\qquad(a\ge2).
+\end{equation}
+
+\paragraph{Q113.3 Directions at every even center}\label{part:Q113.3}
+If $a_1=\allowbreak 1$, write the center list as
+\[
+ (1,a_*,u_1,v_1,\ldots,u_k,v_k),\qquad
+ 1<a_*<u_1<v_1<\cdots<u_k<v_k,\quad k=j-1\ge0.
+\]
+Put $P=\allowbreak \prod_{i=\allowbreak 1}^kW_{u_i}\bar f_{v_i}$.
+The center unit arm points outward; the other center arms use $P$.
+At the terminal, the unit arm points inward and its $b$-edge arm
+outward. Thus
+\begin{equation}\tag{Q113.3.1}\label{eq:Q113:minimum-one}
+ H=E_cpP\,T^L(E_eqf_b).
+\end{equation}
+For $k=\allowbreak 0$, the ordinary-eighth estimate is the full
+$qf_b$ directory in Section~\ref{proof:Q5-C058-ordinary}.
+For \(k\ge1\), Proposition~\ref{prop:root-post:square-moments} applies to the ordinary input excluding the reference arm. Its first root pair starts above the retained length \(t=a_*\), so the Family B order of Section~\ref{proof:Q5-C078} holds.
+In particular $u_1=\allowbreak 3$ forces $a_*=\allowbreak 2$, which is included in that
+family. Positivity restores $E_c,\allowbreak E_e$, giving
+\[
+ \E H^8\le1-d/12000\le e^{-d/12000}.
+\]
+
+If $a_1\ge\allowbreak 2$, write the list as
+\[
+ (a_*,a,u_1,v_1,\ldots,u_k,v_k),\qquad
+ 2\le a_*<a<u_1<v_1<\cdots<u_k<v_k,\quad k=j-1\ge0.
+\]
+In particular $a\ge\allowbreak 3$. Keep the reference arm outward and again
+put $P=\allowbreak \prod_iW_{u_i}\bar f_{v_i}$. Use the following two directions,
+chosen by the integer $L$:
+\begin{equation}\tag{Q113.dir}\label{eq:Q113:minimum-two}
+ H=
+ \begin{cases}
+ E_cf_aP\,T(E_ep\bar f_b),&L=1,\\
+ E_cW_aP\,T^L(E_eqf_b),&L\ge2.
+ \end{cases}
+\end{equation}
+For $L=\allowbreak 1$, the center $a$-arm and terminal unit arm point outward,
+and the terminal $b$-arm points inward. For $L\ge\allowbreak 2$, the center
+$a$-arm has message $W_a$, and the terminal uses $qf_b$.
+All connector edges point toward the center in both cases.
+
+For \(k=0\), Proposition~\ref{prop:ordinary-unit-inner} and Section~\ref{proof:Q5-C075}
+give, respectively,
+\[
+ \E H^8\le e^{-9d/4}\quad(L=1),\qquad
+ \E H^8\le e^{-3d/20}\quad(L\ge2).
+\]
+For $k\ge\allowbreak 1$, the residual list outside the reference arm is
+$(a,\allowbreak u_1,\allowbreak v_1,\allowbreak \ldots,\allowbreak u_k,\allowbreak v_k)$ with minimum $a\ge\allowbreak 3$.
+Proposition~\ref{prop:ordinary-unit-inner} and
+Section~\ref{proof:Q5-C080} give
+\[
+ \E H^8\le e^{-(2005/192)d}\quad(L=1),\qquad
+ \E H^8\le e^{-97d/12}\quad(L\ge2).
+\]
+These inputs exclude the reference arm $a_*$.
+All four coefficients are at least $1/12000$, proving
+\eqref{eq:Q113:ordinary} in every case.
+
+The message \(H\) and its selected reference \(f_{a_*}\) enter
+the central allocations of Table~\ref{tab:five-center}.

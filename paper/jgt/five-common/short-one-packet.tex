@@ -1,0 +1,330 @@
+\subsection{One finite packet for short-one terminals}
+\label{sec:short-one-packet}
+Use the original finite-space conventions of
+Lemma~\ref{lem:odd-common:spectral}, with \(B_0=-K\), \(u=-g\),
+\(g=K\one\), \(r=K^2\one\), \(\theta=13/32\), \(\kappa=19/32\),
+and \(\tau=d-\delta_2\).
+All statements at \(d=0\) follow by leaf integration.
+
+\begin{lemma}[Finite short-one packet]\label{lem:short-one:packet}
+For an integer \(b\ge2\), put
+\begin{equation}\label{eq:short-one:data}
+\begin{gathered}
+ F_b=qf_b,\quad R=\sum_{j=2}^bK^j\one=B_0G_{b-1}(-B_0)u,\quad
+ m=1-\beta_b/2,\quad k=m^{-1},\\
+ t_0=\beta_{b+1},\quad e=d-\beta_{b+2},\quad
+ V=\E R^2,\quad \rho=\E(rR),\quad D_j=\E B_0^jR,\\
+ \gamma=kt_0-k^2V/2,\quad a_1=ke,\quad B_*=\gamma+a_1,\quad
+ \varepsilon_j=\beta_j-kD_{j-1}.
+\end{gathered}
+\end{equation}
+Then \(F_b\le F_0:=(m+R/2)^2\), \(5/6\le m\le1\), \(1\le k\le6/5\),
+and \(D_0=-t_0,D_1=-e,D_2=\rho,0\le D_3\le\delta_3\).
+For \(L\ge1\), set
+\[
+ V_L=\sum_{j=0}^LB_0^j\one+kB_0^LR,\qquad
+ P_n(z)=G_n(z)+kz^{n+1}G_{b-1}(-z).
+\]
+The positive finite upper bound is
+\begin{equation}\label{eq:short-one:propagation}
+ 0<X_{b,L}:=T^LF_b\le T^LF_0\le m^2\left[
+ V_L-\gamma\bar f_{L-1}-a_1\bar f_{L-2}
+       -\sum_{j=3}^L\varepsilon_j\bar f_{L-j}\right].
+\end{equation}
+Terms with negative path index are absent. The parameters satisfy
+\begin{equation}\label{eq:short-one:losses}
+\begin{gathered}
+ \tfrac3{10}d\le\gamma\le\tfrac65d,\quad
+ \tfrac58d\le B_*\le\tfrac32d,\quad
+ B_*\ge d-\tfrac{29}{32}\delta_2,\quad
+ 1-\gamma\ge\tfrac{17}{25},\\
+ \varepsilon_3=d-k\rho\ge\tfrac{41}{80}d,\qquad
+ \tau\le\varepsilon_j\le d\quad(j\ge4),\\
+ \kappa\delta_2\le\rho\le\delta_2,\qquad
+ 0\le a_1\le\tfrac{39}{80}d,\qquad
+ \E(KR)^2\le\theta V.
+\end{gathered}
+\end{equation}
+For \(b=2\), \(m=k=1,R=r,e=0,V=\rho=\delta_2\),
+\(\gamma=d-\delta_2/2\), and \(\varepsilon_j\ge\tau\) also at \(j=3\).
+For \(b=3\), \(V=\delta_2+\delta_3,\rho=e=\delta_2\).
+For \(b\ge4\), \(V\le\delta_2\).
+For \(b\ge3\), \(\kappa\delta_2\le e\le\delta_2\) and
+\begin{equation}\label{eq:short-one:scale}
+ m^2\le1-\tfrac{209}{384}d.
+\end{equation}
+The full finite spectral catalogue is
+\begin{equation}\label{eq:short-one:norms}
+\begin{gathered}
+ |P_1(i\sqrt x)|^2\le1-\tfrac45x,\quad
+ |P_2(i\sqrt x)|^2\le1+x-\tfrac{63}{32}x^2\le\tfrac{71}{63}
+ \quad(b\ge3),\\
+ |P_3(i\sqrt x)|^2\le1-\tfrac18x\quad(b\ge3),\\
+ |P_n(i\sqrt x)|\le1\quad(n\ge3),\qquad
+ |P_4(i\sqrt x)|^2\le1-\tfrac7{10}x,\\
+ |P_n(i\sqrt x)|^2\le1-\tfrac7{15}x
+ \quad(n\ge6,\ \text{or }b=2,\ n\ge4).
+\end{gathered}
+\end{equation}
+Writing \(P_n=A_n+zC_n\), \(z=i\sqrt x\), its coordinates obey
+\begin{equation}\label{eq:short-one:coordinates}
+\begin{array}{c|cc}
+ n&A_n&C_n\\ \hline
+ 1&[1-6x/5,1]&[0,6x/5]\\
+ 2&[1-x,1]&[1-6x/5,1]\\
+ n\ge3&[1-x,1]&[1-x,1].
+\end{array}
+\end{equation}
+For \(b=2,n\ge3\), the real-coordinate interval improves to
+\begin{equation}\label{eq:short-one:terminal-two-profile}
+ 1-x\le\Re P_n(i\sqrt x)\le1-x+x^2,\qquad \Re P_4=1-x .
+\end{equation}
+For \(L\ge3\) the exact mean identities are
+\begin{equation}\label{eq:short-one:means}
+\begin{gathered}
+ \alpha_L:=1-\E V_L=\varepsilon_{L+1}\in[\tau,d],\qquad
+ \E(uV_L)=\alpha_{L+1},\\
+ R_L:=V_L-q=B_0P_{L-1}(B_0)u,\qquad
+ \E[r(V_L-1)]=d-\alpha_{L+2}.
+\end{gathered}
+\end{equation}
+Finally the finite terminal end sign is
+\begin{equation}\label{eq:short-one:end-sign}
+ \rho-e=
+ \begin{cases}
+ 0,&b\text{ odd},\\
+ -\delta_{b/2+1},&b\equiv0\pmod4,\\
+ +\delta_{b/2+1},&b\equiv2\pmod4.
+ \end{cases}
+\end{equation}
+\end{lemma}
+\begin{proof}
+The outward version of \eqref{eq:Q188:conv}, retaining its constant
+loss \(\beta_b\), gives \(q+f_b\le2m+R\). Both sides are positive;
+AM--GM proves the square bound. Write \(h=b-1\) and
+\(G_h(-z)=a-zc\). At \(h=1\), \((a,c)=(1,0)\); at \(h\ge2\),
+\(1-x\le a,c\le1\). In the spectral measure \(\nu\) of \(u\),
+\[
+ t_0=\int a\,d\nu,\quad e=\int xc\,d\nu,\quad
+ \rho=\int xa\,d\nu,\quad V=\int x(a^2+xc^2)\,d\nu .
+\]
+More generally,
+\[
+\begin{aligned}
+ D_{4j}&=-\int x^{2j}a\,d\nu,&
+ D_{4j+1}&=-\int x^{2j+1}c\,d\nu,\\
+ D_{4j+2}&=\int x^{2j+1}a\,d\nu,&
+ D_{4j+3}&=\int x^{2j+2}c\,d\nu .
+\end{aligned}
+\]
+These formulas give the signed means, \(\rho\)'s bounds, the exceptional
+\(b=3\) values and \(V\le\delta_2\) for \(b\ge4\).
+The two alternating sums for \(\rho,e\) differ only in their last
+term, proving \eqref{eq:short-one:end-sign}.
+
+As \(T(R^2)\le2V\), positivity gives
+\(m^{-2}TF_0\le q+kB_0R-\gamma\).
+Apply finite Duhamel and \eqref{eq:Q188:conv} to obtain
+\eqref{eq:short-one:propagation}. Also \(V_L-1=P_L(B_0)u\).
+Skew adjunction gives
+\(\alpha_L=\beta_{L+1}-kD_L=\varepsilon_{L+1}\);
+one and two further adjunctions give the other identities in
+\eqref{eq:short-one:means}.
+
+Here are the coefficient bounds at every finite index.
+At \(j=3\), \(\varepsilon_3=d-k\rho\ge(1-6\theta/5)d\).
+At \(j=4\), \(D_3\le\delta_3\) and \(k\theta<1\) give
+\(\tau\le\varepsilon_4\le d\).
+For \(j\ge5\), \(\beta_j\le d-\kappa\delta_2\);
+for \(j\ge7\), \(\beta_j\ge\tau+\kappa\delta_3\).
+If \(D_{j-1}\le0\), its magnitude is at most \(\delta_3\);
+if \(D_{j-1}>0\) and \(j\ge7\), it is at most
+\(\delta_4\le\theta\delta_3\). Since \(k\theta<\kappa\),
+these prove all \(\varepsilon_j\) bounds. The \(b=2\) value
+\(\varepsilon_3=\tau\) follows directly.
+
+For \(\gamma\)'s lower bound use
+\(V\le\theta(1+\theta)d\) and \(t_0\ge\kappa d\).
+The concave quadratic \(k\kappa-k^2\theta(1+\theta)/2\) has endpoint
+values \(631/2048,771/2560\), both above \(3/10\).
+For \(b=3\), \(B_*\ge kd\), \(B_*\le449d/320\).
+For \(b\ge4\), \(t_0+e\in[d-\delta_3,d+\delta_4]\), so
+\[
+ B_*/d\ge k(1-\theta^2)-k^2\theta/2\ge647/1024>5/8,\qquad
+ B_*/d\le k(1+\theta^3)<3/2 .
+\]
+Moreover
+\[
+ B_*\ge k(d-\theta\delta_2)-k^2\delta_2/2
+ \ge d-(\theta+1/2)\delta_2,
+\]
+because \((\theta+11/10)\theta<1\).
+At \(b=2\), the same stated bounds follow from
+\(\gamma=d-\delta_2/2\), \(a_1=0\).
+Set \(v_0=kt_0\). Since \(V\ge t_0^2\),
+\(\gamma\le v_0-v_0^2/2\), where
+\(v_0\le d/(1-d/2)\le2/5\); hence \(1-\gamma\ge17/25\).
+Finally \(m^2\le1-11\beta_b/12\) gives
+\eqref{eq:short-one:scale} when \(b\ge3\).
+
+The norm bounds reduce to a few scalar inequalities.
+All coordinate upper bounds used below are nonnegative.
+For \(b\ge3\), the loss of \(|P_1|^2\) is at least
+\[
+ kx\{2(1-x)-kx[(1-x)^2+x]\}.
+\]
+After division by \(x\), this is concave in \(k\). Its endpoint
+values decrease in \(x\); at \(x=\theta\) they are
+\(28811/32768,200931/204800\), both above \(4/5\).
+For \(b\ge3\), the two coordinates of \(P_2\) are \(1-kx^2c,1-kxa\).
+They decrease in \(k\), giving
+\[
+ |P_2|^2\le(1-x^2+x^3)^2+x(1-x+x^2)^2
+ \le1+x-\tfrac{63}{32}x^2.
+\]
+The second difference divided by \(x^2\) is
+\(65/32-5x+x^2+x^3-x^4\ge0\).
+For \(P_3\), bound its coordinates by
+\(1-x+kx^2,1-kx^2(1-x)\). Their squared sum is convex in \(k\).
+At \(k=1,6/5\), its loss divided by \(x\) is
+\[
+ Q_k=1-(1+2k)x+4kx^2-(2k+k^2)x^3-k^2x^4+2k^2x^5-k^2x^6 .
+\]
+Put \(C_k=3(2k+k^2)-10k^2\theta^2\).
+Then \(Q_k'\le-(1+2k)+8kx-C_kx^2<0\), since
+\(4(1+2k)C_k>64k^2\) at both endpoints.
+Their values at \(x=\theta\) are
+\(247671943/1073741824\) and \(937169087/6710886400\), both above \(1/8\).
+Convexity in \(k\) proves the claimed uniform \(P_3\) loss.
+The case \(b=2,n=3\) is
+\(|P_3|^2=1-x+3x^2-2x^3+x^4\le1\);
+the loss divided by \(x\) decreases to \(1451/32768>0\).
+For \(P_4\),
+\[
+ |P_4|^2\le(1-x+6x^3/5)^2+x(1-x+6x^2/5)^2
+ \le1-\tfrac7{10}x .
+\]
+Indeed its loss divided by \(x\) is at least
+\(1+x[\kappa-(24/5)\theta\kappa-(36/25)\theta^3(1+\theta)]\);
+the smaller endpoint value exceeds \(7/10\).
+
+For all remaining lengths use the exact finite identity
+\[
+ P_n=\frac{1+z^nS}{1-z},\qquad
+ S=-1+kz(1-z)G_h(-z).
+\]
+For \(h\ge2\), \(|S|\le1\) follows from
+\[
+ k(1+x)(a^2+xc^2)\le\tfrac65(1+\theta)^2
+   =1215/512<1216/512=4\kappa\le2(a+c).
+\]
+At \(h=1\), it follows from \(1-x+x^2\le1\).
+Thus \(n=5\) is contractive because
+\(2x^{3/2}+x^4\le4\theta/3+\theta^4<1\);
+for \(n\ge6\),
+\[
+ |P_n|^2\le\frac{(1+x^3)^2}{1+x}\le1-\tfrac7{15}x .
+\]
+The last difference, after multiplication by \(15(1+x)/x\),
+is \(8-7x-30x^2-15x^5\), which decreases to
+\(1311885/33554432>0\).
+The same bound holds for \(G_n\), \(n\ge5\), by its finite
+geometric formula. At \(b=2,n=5\), \(P_5\) is obtained from
+\(G_5\) by reducing its positive real coordinate, so the stronger
+bound also holds there.
+
+For the coordinate bounds at \(n=3,4,5\), the exact pairs are
+\[
+\begin{array}{c|cc}
+3&1-x+kx^2a&1-kx^2c\\
+4&1-x+kx^3c&1-x+kx^2a\\
+5&1-x+x^2-kx^3a&1-x+kx^3c .
+\end{array}
+\]
+They lie in \([1-x,1]^2\), using \(kx<1\); this also holds at
+\((a,c)=(1,0)\). The rows \(n=1,2\) follow from their explicit
+coordinates above.
+For \(n\ge6\), the geometric identity places \(P_n\) within distance
+\(x^{n/2}/\sqrt{1+x}\) of \((1+z)/(1+x)\).
+The error in either real coefficient is at most
+\(x^{(n-1)/2}/\sqrt{1+x}\le x^2/(1+x)\), since
+\(\theta(1+\theta)<1\). This proves
+\eqref{eq:short-one:coordinates}, including \(x=0\) by continuity.
+At \(b=2\), separate the finite even powers of \(G_n+z^{n+1}\).
+Their real part is always a truncation of \(1-x+x^2-\cdots\)
+ending at or after the \(x\)-term, proving
+\eqref{eq:short-one:terminal-two-profile}.
+\end{proof}
+
+\begin{lemma}[A two-row bound and an exponential comparison]
+\label{lem:short-one:exponential}
+For every real vector \(H\),
+\begin{equation}\label{eq:short-one:two-row}
+ |K^2H(x)|^2\le\|H\|_2^2/3.
+\end{equation}
+If a finite real variable \(Z\) satisfies
+\(|Z|\le U,\ \E Z^2\le hU^2,\ 0\le h<1\), then
+\begin{equation}\label{eq:short-one:positive-mgf}
+ \E e^{sZ}\le
+ \exp\{s\max(\E Z,0)+s^2(1+h)^2U^2/8\}\qquad(s\ge0).
+\end{equation}
+Consequently, if \(C,B>0\), \(M\ge\max(\E Z,0)\), and the actual
+nonnegative message has an upper bound
+\begin{equation}\label{eq:short-one:actual-square}
+ 0\le Y\le CB[1+(Z-a)/(2B)]^2
+\end{equation}
+whose square base is nonnegative, then
+\begin{equation}\label{eq:short-one:paid-exponent}
+\begin{aligned}
+ \log\E Y^8\le\mathcal E:={}&
+ 8\log C+8\log B-\frac{8a}{B}+\frac{8M}{B}\\
+ &+\begin{cases}
+       6D/B^2,&Z=K^2H,\ \|H\|_2^2\le D,\\
+       8c_*D/B^2,&Z=KH,\ \|H\|_2^2\le D,
+   \end{cases}
+ \qquad c_*=(1+\theta)^2 .
+\end{aligned}
+\end{equation}
+\end{lemma}
+\begin{proof}
+For any legal skew kernel \(L\), integrating
+\[
+ 1+ab+bc+ca
+ =\{(1+a)(1+b)(1+c)+(1-a)(1-b)(1-c)\}/2\ge0
+\]
+at \(a=L(x,y),b=L(y,z),c=L(z,x)\) gives
+\(\|L\one\|_2^2\le1/3\).
+Conjugating \(K\) by any coordinate sign vector, then taking convex
+combinations, gives \(\|Kv\|_2^2\le1/3\) for \(|v|\le1\).
+Apply this to \(v(y)=K(x,y)\) and use skew adjunction and
+Cauchy--Schwarz to prove \eqref{eq:short-one:two-row}.
+
+For the exponential inequality let \(\mu=\E Z\ge0\), \(v=\operatorname{Var}Z\).
+Unless \(U=0\), \(U-\mu>0\). The quadratic tangent to \(e^{sz}\)
+at \(\mu-v/(U-\mu)\) and passing through \(U\) majorizes it on
+\([-U,U]\): its Hermite remainder has sign
+\((z-\mu+v/(U-\mu))^2(z-U)\).
+The lower contact lies in \([-U,U]\) because \(v\le U^2-\mu^2\).
+The two-point law with these contacts and the same first two moments
+has range
+\[
+ U-\mu+\frac{v}{U-\mu}
+ \le U\left(2-\frac{1-h}{1-\mu/U}\right)\le(1+h)U .
+\]
+The tilted log-moment has second derivative at most one quarter
+of the squared range. Integrating twice proves the claim.
+If \(\E Z<0\), take instead the contacts \(-hU,U\).
+The interpolating quadratic has nonnegative quadratic coefficient
+\(C_2\) and linear coefficient \(se^{-shU}+2hUC_2\ge0\), hence
+permits replacing the mean by zero and the
+raw second moment by \(hU^2\). The resulting mean-zero law has
+range \((1+h)U\). Degenerate cases follow by continuity.
+
+For \(Z=KH\) take \(U^2=D,h=\theta\); for \(Z=K^2H\) take
+\(U^2=D/3,h=1/2\), using \(\theta^2<1/6\).
+Apply \eqref{eq:short-one:positive-mgf} at \(s=8/B\).
+Since the base in \eqref{eq:short-one:actual-square} is nonnegative,
+its sixteenth power is at most \(e^{8(Z-a)/B}\), including at a
+zero base. This proves the complete expression
+\eqref{eq:short-one:paid-exponent}.
+\end{proof}

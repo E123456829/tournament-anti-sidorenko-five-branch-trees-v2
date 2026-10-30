@@ -1,0 +1,231 @@
+\section{Path and ordered-pair estimates}\label{q3:app:foundations}
+This appendix proves the preliminary estimates used throughout. All functions and operators are on the space in Section~\ref{q3:sec:method}. Put $u_j=\E K^j\one$ and $G_t(z)=\sum_{j=0}^{t-1}z^j$, with $G_0=0$.
+
+\subsection{Spectral bound and positive convolution}
+\begin{lemma}\label{q3:lem:spectral}
+We have
+\[
+ \norm K_{\op}\le\frac2\pi,\quad \norm K_{\op}^2\le\theta,\quad
+ \norm{Kv}_\infty\le\norm v_2,\quad
+ u_{2j}=(-1)^j\delta_{j},\quad u_{2j+1}=0,\quad \delta_{j+1}\le\theta \delta_{j}.
+\]
+Moreover $0\le d\le1/3$ and
+\[
+ \norm{G_t(K)}\le1\quad(t=0,1\text{ or }t\ge3),\qquad
+ \norm{G_2(K)}^2\le1+\theta.
+\]
+\end{lemma}
+\begin{proof}
+For a real unit vector $v$ with $Kv\ne0$, set $w=Kv/\norm{Kv}_2$. Then $v,w$ are orthogonal unit vectors and $|\ip v{Kw}|=\norm{Kv}_2$. Write $v(x)+iw(x)=r(x)e^{i\varphi(x)}$, so $\E r^2=2$. Antisymmetrization gives
+\[
+ |\ip v{Kw}|\le\frac12\E_{x,y}r(x)r(y)|\sin(\varphi(y)-\varphi(x))|.
+\]
+Use the absolutely convergent Fourier series
+\[
+ |\sin t|=\frac2\pi-\frac4\pi\sum_{n\ge1}\frac{\cos(2nt)}{4n^2-1}.
+\]
+Each nonconstant average is the nonnegative square $|\E r e^{2in\varphi}|^2$ and has a negative coefficient. Hence the last upper bound is at most $(\E r)^2/\pi\le2/\pi$. The case $Kv=0$ is immediate. Also $4/\pi^2<13/32$; for instance Machin's identity and alternating arctangent truncation give $\pi>157/50$, and $320000<13\cdot24649$.
+
+The row bound follows from Cauchy--Schwarz, and the moment identities from skew-adjointness. Expanding the nonnegative cyclic product on three independent points yields
+\[
+ 0\le\E_{x,y,z}(1+K(x,y))(1+K(y,z))(1+K(z,x))=1-3d.
+\]
+The cubic expectation vanishes by a transposition. Thus $d\le1/3$.
+
+For a rotation frequency $i\lambda$ put $x=\lambda^2\le\theta<1/2$. If $t$ is odd, $|G_t(i\lambda)|^2=(1+x^t)/(1+x)\le1$. If $4\mid t$, the numerator is $(1-x^{t/2})^2\le1$. If $t\equiv2\pmod4$ and $t\ge6$, use $2x^2+x^5\le17/32<1$ to obtain $(1+x^{t/2})^2\le1+x$. For $t=2$ the squared modulus is $1+x$. Orthogonal rotation blocks prove the assertions.
+\end{proof}
+
+Define $\beta_1=\beta_2=0$ and
+\[
+ \beta_n=\sum_{j=1}^{\lfloor(n-1)/2\rfloor}(-1)^{j-1}\delta_{j}\quad(n\ge3).
+\]
+The identity $S_n=AS_{n-1}+\beta_n\one$ proves \eqref{q3:eq:convolution} by iteration. Alternating sums give $d-\delta_{2}\le\beta_n\le d$, while $\E S_n=1-\beta_{n+1}$ for $n\ge1$. Consequently $0<f_n\le S_n$, $\mu_n\le1$, and $f_n,h_n\le2$. Also $\norm{S_n}_2\le1$ for $n\ge2$ by the geometric-sum bound, so $\E f_n^2\le1$ for $n\ge2$.
+
+The initial means are
+\[
+ \mu_0=\mu_1=1,\quad \mu_2=1-d,\quad\mu_3=1-2d,\quad
+ \mu_4=1-3d+\delta_{2},\quad\mu_5=1-4d+2\delta_{2}+d^2.
+\]
+They imply $\mu_n\le1-2d$ for $n=3,4,5$. For $n\ge6$, retain the four convolution terms with $f_0,f_1,f_2,f_3$ and use $\beta_j\ge d/2$. Then
+\[
+ \mu_n\le1-\frac d2-\frac d2(4-3d)\le1-2d.
+\]
+If $d=0$, $K\one=0$ and every rooted tree message equals one by leaf integration. Subsequent divisions by $d$ are therefore confined to $d>0$.
+
+\subsection{Weighted propagation and a weighted path cube}
+Put $N_\pm(F)=\E[(1\pm g)F^2]$. Row Cauchy--Schwarz gives $(AF)^2\le pA(F^2)$ and hence
+\begin{equation}\label{q3:eq:energy}
+ N_-(AF)\le\E[A^*(pq)F^2]\le N_-(F).
+\end{equation}
+Reversal gives $N_+(A^*F)\le N_+(F)$. The edge measure with density $1+K(x,y)$ has total mass one and marginals $p,q$. Cauchy--Schwarz and \eqref{q3:eq:energy} thus imply
+\begin{equation}\label{q3:eq:bilinear}
+ |\ip F{A^LG}|\le\sqrt{N_+(F)N_-(G)}\qquad(L\ge1).
+\end{equation}
+In particular $N_-(f_n)\le1$ and $\E(f_n^2/p)\le1$: the latter follows by dividing the row square inequality for $Af_{n-1}$ by $p$ and integrating.
+
+\begin{lemma}\label{q3:lem:weightedpathcube}
+For every $n\ge2$,
+\[
+ \E[qf_n^3]\le\E[qS_n^3]\le1-d/8.
+\]
+\end{lemma}
+\begin{proof}
+Write $x=g$, $y=S_n-1-g$. Skewness gives $\E y+\E(gy)=-d-u_{n+1}$ and
+\begin{equation}\label{q3:eq:yvariance}
+ \norm y_2^2-u_{n+1}\le \delta_{2}.
+\end{equation}
+For even $n$, this follows from the geometric-sum bound. For $n=2h+1$, integrate against the spectral measure of $g$. The integrand of the left side of \eqref{q3:eq:yvariance} minus the right side is
+\[
+ \frac{-t^2+(-1)^ht^h(1-t)+t^{2h+1}}{1+t}\le0.
+\]
+For odd $h$ the middle term is nonpositive and $t^{2h+1}\le t^2$. For even $h\ge2$, division by $t^2$ bounds the numerator by $-1+(1-t)+t=0$.
+
+The pointwise identity
+\[
+ -2x^3-x^4-3x^2(1+x)y-3x^2y^2
+ =x^2\left[1-\frac{(1+x)^2}{4}-3\left(y+\frac{1+x}{2}\right)^2\right]\le x^2
+\]
+then gives
+\[
+ \E[qS_n^3]\le1-2d+3(\norm y_2^2-u_{n+1})+\E[qy^3].
+\]
+For $n=2$ or $n\ge4$, $\norm y_\infty\le\sqrt d$ and $\norm y_2^2\le \delta_{2}$, so $\E[qy^3]\le(6/5)\delta_{2}$. The resulting bound is $1-(47/160)d\le1-d/8$. For $n=3$, $\norm y_2^2=\delta_{2}+\delta_{3}$, $u_4=\delta_{2}$, $\norm y_\infty^2\le3d/2$, and $\E[qy^3]\le9d/8$. Using $\delta_{3}\le d/4$ proves the remaining case.
+\end{proof}
+
+\subsection{Ordered pairs and exponential moments}
+For $1\le a<b$, set $P_{ab}=h_af_b$, $R_{ab}=S_b-S_a$. Then
+\begin{equation}\label{q3:eq:pairenvelope}
+ P_{ab}\le e^{R_{ab}-\omega_{ab}},\qquad
+ \omega_{ab}=
+ \begin{cases}
+ \beta_b,&a=1,2,\\
+ 2d-\delta_{2},&a=3,\\
+ 2d,&a\ge4.
+ \end{cases}
+\end{equation}
+For $a=1,2$, use $f_a=S_a$, $h_a=2-S_a$ and $f_b\le S_b-\beta_b$. For $b>a\ge3$, subtraction of the positive convolutions gives
+\[
+ f_b-f_a=R_{ab}+\sum_{i=0}^{a-3}(\beta_{a-i}-\beta_{b-i})f_i
+                 -\sum_{i=a-2}^{b-3}\beta_{b-i}f_i.
+\]
+The positive contribution in the middle sum is at most
+$4\sum_{j\ge1}\delta_{2j}\le4\delta_{2}/(1-\theta^2)\le2d$; for $a=3$ it is at most $\delta_{2}$. Combine this with $h_a+f_b=2\mu_{a-1}+f_b-f_a$. Finally, for nonnegative $h,f$ with $h+f\le2+C$, AM--GM gives $hf\le(1+C/2)^2\le e^C$. This proves \eqref{q3:eq:pairenvelope}.
+
+If a finite polynomial $Q$ has coefficients zero or one, grouping powers modulo four gives
+\[
+ |Q(i\lambda)|^2\le\frac{1+\lambda^2}{(1-\lambda^4)^2}
+ \le\frac{32768}{16245}<C_*.
+\]
+For ordered disjoint pairs $a_1<b_1<\cdots<a_t<b_t$, put
+\[
+ P=\prod_{i}P_{a_ib_i},\quad R=\sum_iR_{a_ib_i},\quad
+ \Delta=\sum_i\omega_{a_ib_i},\quad a=a_1.
+\]
+Then $R=K^aQ(K)g$ for a zero-one polynomial and
+\begin{equation}\label{q3:eq:mask}
+ P\le e^{R-\Delta},\qquad
+ \norm R_\infty^2\le C_*\theta^{a-1}d,\qquad
+ \norm R_2^2\le C_*\theta^ad.
+\end{equation}
+The same estimates are uniform in the number and size of the pairs. Also
+\begin{equation}\label{q3:eq:weightedboundary}
+ \E[pR_{ab}]=u_{a+1}-u_{b+1}.
+\end{equation}
+For disjoint pairs this implies $\E[pR]\le0$ if $a=1$, and $\E[pR]\le d$ if $a\ge2$. Indeed all boundary indices are distinct and $\sum_{j\ge2}\delta_{j}\le13d/19$. Under the original measure, $\E R\le d/2$ for $a\ge2$, and $\E R\le-d/2$ for $a=1$, because $\sum_{j\ge1}\delta_{2j}\le(416/855)d<d/2$.
+
+For any probability measure and $|R|\le M$,
+\begin{equation}\label{q3:eq:hoeffding}
+ \E e^{sR}\le\exp\{s\E R+s^2M^2/2\}\quad(s\ge0).
+\end{equation}
+To see this, the second derivative of $\log\E e^{sR}$ is the tilted variance, at most $M^2$; integrate twice. Thus
+\begin{equation}\label{q3:eq:criterion}
+ \Delta-\E R\ge(s/2)M^2\quad\Longrightarrow\quad \E P^s\le1.
+\end{equation}
+One may use a scalar weighted probability measure in this criterion without changing any underlying operator or adjoint.
+
+\begin{lemma}\label{q3:lem:pairmoments}
+For every disjoint ordered pair list, $\E[pP^2]\le1$. If $a_1\ge3$, also $\E[pP^6]\le1$ and $\E P^6\le1$.
+\end{lemma}
+\begin{proof}
+For one pair with $a\ge3$, \eqref{q3:eq:weightedboundary} gives $\E[pR_{ab}]\le \delta_{2}+\delta_{3}$. Thus $\Delta-\E[pR]\ge(1047/1024)d$, while $M^2\le(1+\theta)\theta^2d=(7605/32768)d$ and $3M^2\le(1047/1024)d$. For two or more pairs with $a_1\ge3$, $\Delta\ge(4-\theta)d$, $\E[pR]\le d$, and $M^2\le C_*\theta^2d$; these again satisfy \eqref{q3:eq:criterion} for $s=6$. The ordinary sixth moment follows by the same argument: for one pair $\E R\le \delta_{2}$ and for several pairs $\E R\le d/2$, which give stronger deficit bounds. H\"older gives the corresponding second moments.
+
+For the weighted second moment with shortest length two and one pair, the following upper and lower bounds are valid, respectively:
+\[
+ \begin{array}{c|c|c}
+ b&M^2\text{ upper bound}&\Delta-\E[pR]\text{ lower bound}\\\hline
+ 3&\delta_{2}&d+\delta_{2}\\4&\delta_{2}+\delta_{3}&d\\b\ge5&\delta_{2}&d-\delta_{2}-\delta_{3} .
+ \end{array}
+\]
+The last comparison uses $1-2\theta-\theta^2=23/1024>0$. With at least two pairs, the deficit is at least $(2-\theta)d$ and $M^2\le C_*\theta d$.
+
+For shortest length one and one pair, $b=2,3,b\ge4$ give $(M^2,\Delta-\E[pR])$ bounded by $(d,d)$, $(d+\delta_{2},2d+\delta_{2})$ and $(d,2d-\delta_{2}-\delta_{3})$. If there are exactly two pairs and the first is $(1,2)$, the deficit is at least $(2071/1024)d>C_*d\ge M^2$. For at least three pairs beginning with $(1,2)$ it is at least $(4-\theta)d$. For at least two pairs with first long arm at least three it is at least $(3-\theta)d$. These exhaust the cases and satisfy \eqref{q3:eq:criterion} with $s=2$ under $p\mu$.
+\end{proof}
+
+\subsection{Short-pair cubic estimates}\label{q3:sec:shortpaircubes}
+\begin{lemma}\label{q3:lem:shortpaircubes}
+For $n\ge2$ and $m\ge3$,
+\[
+ \E(qf_n)^3\le1-d/6,\qquad \E(h_2f_m)^3\le1-d/10.
+\]
+In particular,
+\begin{equation}\label{q3:eq:quantshort}
+ \E(qf_2)^3\le1-\alpha_*d,\qquad
+ \alpha_*=\frac{66751}{92160}>\frac{18}{25}.
+\end{equation}
+\end{lemma}
+\begin{proof}
+If nonnegative $u,v$ satisfy $u+v\le2m+R$, then $(uv)^3\le(m+R/2)^6$. For $m\ge0$, $|R|\le M$, expansion gives
+\[
+ \E(m+R/2)^6\le m^6+3m^5\E R+\mathcal C(m,M)\E R^2,
+\]
+\[
+ \mathcal C(m,M)=\frac{15}4m^4+\frac52m^3M+
+ \frac{15}{16}m^2M^2+\frac3{16}mM^3+\frac1{64}M^4.
+\]
+We will use $\mathcal C\le16133/2880$ for $m\le1,M\le3/5,M^2\le1/3$; $\mathcal C\le1579/256$ for $m\le1,M\le3/4,M^2\le1/2$; and $\mathcal C<197/40$ for $m\le15/16$ under the latter two bounds on $M$. These follow term by term from the displayed polynomial.
+
+For $qf_2$, use $q+f_2=2+Kg$, $\E Kg=-d$, $\E(Kg)^2=\delta_{2}$, $M\le\sqrt d$. The bound is
+$1-3d+(16133/2880)\delta_{2}\le1-\alpha_*d$.
+For $qf_3$, take $m=1-d/2$, $R=Kg+K^2g$, so $\E R=-d$, $\E R^2=\delta_{2}+\delta_{3}\le3d/5$, $M\le3/4$. The identity
+\[
+ (1-t/2)^6-3t(1-t/2)^5
+ =1-6t+\frac{45}4t^2-10t^3+\frac{75}{16}t^4-\frac98t^5+\frac7{64}t^6
+\]
+is at most $1-6t+45t^2/4-9t^3$ on $[0,1/5]$ and at most the analogous expression with $-8t^3$ on $[0,1/3]$. Splitting at $d=1/6$ gives deficits $3d/8$ and $331d/1800$, both at least $d/6$.
+For $n\ge4$, set $\tau=(19/32)d$, $m=1-\tau/2$ and $R=S_n-1-g$. Positive convolution gives $q+f_n\le2m+R$, while $\E R\le-\tau$, $\E R^2\le \delta_{2}$, $M\le\sqrt d$. The preceding polynomial bounds yield a deficit coefficient at least
+\[
+ \frac{80275}{32768}-\frac{209729}{92160}
+ =\frac{256711}{1474560}>\frac16.
+\]
+
+For $h_2f_3$, use $h_2+f_3=2-d+K^2g$, $M\le3/8$, $\E R=0$, $\E R^2=\delta_{3}$. Since $\mathcal C\le5$ and $(1-d/2)^6\le1-7d/4$, the deficit is $(947/1024)d$.
+For $h_2f_4$, use
+\[
+ m=1-d,\quad R=K^2g+K^3g-dg,\quad
+ \E R=\delta_{2},\quad \E R^2=\delta_{3}+\delta_{4}+2d\delta_{2}+d^3.
+\]
+When $d\le1/6$, $M\le1/2$, $\E R^2<2d/5$, $\mathcal C<16/3$, and the constant and mean terms are at most $1-73d/32$. The deficit is at least $71d/480$. When $d\ge1/6$, $M<4/5$, $\mathcal C<7/2$, $\E R^2<5d/8$. The constant and mean terms are bounded by $(1-d)^5(1+7d/32)\le1-5d/2$: this function is convex and its value at $1/3$ is $103/729<1/6$. The deficit is then at least $5d/16$.
+
+For $h_2f_n$, $n\ge5$, positive convolution gives $h_2+f_n\le2-2\tau+R$ with
+\[
+ R=S_n-S_2-\tau g,\quad
+ \E R\le \delta_{2},\quad \E R^2\le(\theta+(19/32)d)^2d,\quad
+ M\le23/40,\quad M^2<1/3.
+\]
+For $d\le2/19$, the constant and mean terms are at most $1-915d/512$, and the variance term at most $80665d/65536$; their difference is $36455d/65536$. For $d\ge2/19$, $m=1-\tau\le15/16$, $\mathcal C<9/2$, and the variance term is at most $841d/512$. Convexity of
+$W(d)=(1-(19/32)d)^5(1+5d/8)$ and $W(1/3)<5/12$ give $W(d)\le1-7d/4$. The remaining deficit is $55d/512>d/10$. All interval endpoints are included, and $d=0$ gives equality.
+\end{proof}
+
+\subsection{Every tree with at most two branch vertices}\label{q3:app:spiderboundary}
+Every rooted spider has an orientation with $N_-(F)\le1$. To prove this, first restore equal pairs only after estimating the residual distinct list $\ell_1<\cdots<\ell_t$. For $t=0$ or $1$, use $F=1$ or $f_{\ell_1}$ and \eqref{q3:eq:energy}. For positive even $t$, use the reversal of the canonical pair product and Lemma~\ref{q3:lem:pairmoments}. For odd $t\ge3$ with $\ell_1=1$, put $F=pP$, with the remaining pairs positive canonical. Then
+\[
+ N_-(F)=\E[p(1-g^2)P^2]\le\E[pP^2]\le1.
+\]
+For odd $t\ge3$ with $\ell_1\ge2$, put $F=f_{\ell_1}P(-K)$, where $P$ pairs the remaining arms. Their shortest length is at least three, so
+\[
+ N_-(F)\le(\E[qf_{\ell_1}^3])^{2/3}
+          (\E[qP(-K)^6])^{1/3}\le1.
+\]
+Use Lemmas~\ref{q3:lem:weightedpathcube} and \ref{q3:lem:pairmoments}. Complete reversal gives an $N_+$ certificate.
+
+For two branch vertices choose the left endpoint with $N_+(F)\le1$, the right with $N_-(G)\le1$, and direct the entire connector left to right. Exact integration and \eqref{q3:eq:bilinear} give $Z_D=\ip F{A^LG}\le1$. For one branch vertex, designate one actual arm as an inward path and use the remaining root certificate in the same inequality. A path uses $\mu_n\le1$ and a single vertex has density one. This proves the lower-branch cases used in Section~\ref{q3:sec:assembly}.

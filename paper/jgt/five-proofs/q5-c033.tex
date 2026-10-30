@@ -1,0 +1,299 @@
+\subsection{The genuine length-two reference after every connector of length at least six}\label{proof:Q5-C033}
+Keep $F=qf_2$, $f_2=p+r$, and $X_n=T^nF$, with every connector
+edge directed from the terminal toward the receiving root. For every
+finite integer $n\ge6$,
+\begin{equation}\tag{L33.A}\label{eq:L33:claim}
+\E[f_2X_n^4]\le1.
+\end{equation}
+More precisely the upper bounds are $1-483d/400$ for
+$0<d\le1/10$, and $1-853/124416$ strictly for
+$1/10\le d\le1/3$. Actual equal-arm pairs and full reversal are
+included by positivity, reversing all original edges and weights together.
+
+
+Write $B=-K$, $u=B\one=-g$, $c=19/32$, $\tau=d-\delta_2$,
+$\theta=13/32$, and $s=K^2g$. We use the original spectral and row bounds
+$\|K\|^2\le\theta$, $d^2\le\delta_2\le\theta d$,
+$\delta_{j+1}\le\theta\delta_j$, $0\le d\le1/3$, and
+$|Kz|\le\|z\|_2$. The scalar coefficient proved in
+Section~\ref{calc:fourthcomparison} says that
+\begin{equation}\tag{L33.1.2}\label{eq:L33:pcoefficient}
+\begin{gathered}
+0\le Z\le(1-cd)q-cd+\sqrt d,\qquad
+0\le\mu\le1-3cd\\
+\Longrightarrow\quad p(Z^2+2\mu Z+3\mu^2)\le7-10d
+\quad(0\le d\le1/3).
+\end{gathered}
+\end{equation}
+This is only a scalar input; the additional $r$ weight is retained below.
+
+\proofpart{Four actual positive-convolution losses}
+Define
+\[
+\begin{gathered}
+S_j=\sum_{i=0}^jB^i\one,\quad \beta_1=\beta_2=0,\\
+\beta_j=\sum_{i=1}^{\lfloor(j-1)/2\rfloor}(-1)^{i-1}\delta_i\quad (j\ge3).
+\end{gathered}
+\]
+Skew-adjointness and decreasing alternating sums give
+\begin{equation}\tag{L33.2.1}\label{eq:L33:convolution}
+\begin{gathered}
+\E S_j=1-\beta_{j+1},\quad \E[uS_j]=\beta_{j+2},\quad \tau\le\beta_j\le d\ (j\ge3),\\
+S_j=\bar f_j+\sum_{i=3}^j\beta_i\bar f_{j-i}.
+\end{gathered}
+\end{equation}
+The last identity follows recursively from $TS_{j-1}=S_j-\beta_j\one$;
+every $\bar f_j=T^j\one$ is nonnegative. The same actual input satisfies
+\[
+F=(1+r/2)^2-(g+r/2)^2\le F_0:=(1+r/2)^2.
+\]
+For $Y_n=T^nF_0$, the inequality $T(r^2)\le2\delta_2$ and finite
+Duhamel expansion yield
+\begin{equation}\tag{L33.2.2}\label{eq:L33:retention}
+Y_n\le\widehat S_n-\gamma\bar f_{n-1}
+-\sum_{j=3}^n\omega_j\bar f_{n-j},\quad
+\widehat S_n=S_n+B^{n+2}\one,\quad\gamma=d-\delta_2/2,
+\quad
+\omega_j=\begin{cases}\beta_j,&j\text{ even},\\
+\beta_{j+2},&j\text{ odd}.\end{cases}
+\end{equation}
+Indeed, the signed $r$ contribution is exactly
+\[
+T^nr=B^{n+2}\one-d\bar f_{n-1}+\delta_2\bar f_{n-3}
+-\delta_3\bar f_{n-5}+\cdots,
+\]
+retaining only nonnegative indices; combine this with
+\eqref{eq:L33:convolution}. For each $n\ge6$ retain the last four terms:
+\begin{equation}\tag{L33.2.3}\label{eq:L33:Z}
+Z=\widehat S_n-\sum_{i=0}^3a_i\bar f_i,\qquad
+a_i=\omega_{n-i}\in[\tau,d],\qquad0\le X_n\le Y_n\le Z.
+\end{equation}
+Every discarded term is a nonnegative subtraction. If
+$\E\widehat S_n=1-\alpha$ and $\E[u\widehat S_n]=\eta$, then
+\[
+\alpha=\begin{cases}\beta_{n+3},&n\text{ even},\\\beta_{n+1},&n\text{ odd},\end{cases}
+\qquad
+\eta=\begin{cases}\beta_{n+2},&n\text{ even},\\\beta_{n+4},&n\text{ odd}.\end{cases}
+\]
+Thus $\alpha,\allowbreak \eta,\allowbreak a_0,\allowbreak \ldots,\allowbreak a_3\in[\tau,\allowbreak d]$. The actual short paths are
+\[
+\bar f_0=1,\quad\bar f_1=q,\quad\bar f_2=q+r,\quad
+\bar f_3=q+r-s-d,
+\]
+with means $1,1,1-d,1-2d$. Consequently, for $\mu=\E Z$ and $w=Z-\mu$,
+\begin{equation}\tag{L33.2.5}\label{eq:L33:mean}
+0\le\mu\le1-\tau(5-3d)\le M(d):=1-5cd+3cd^2.
+\end{equation}
+
+\proofpart{The common finite spectral polynomial}
+Put $P_n(z)=\sum_{j=0}^{n-1}z^j+z^{n+1}$. Exactly,
+\[
+\widehat S_n-1=P_n(B)u,\qquad
+\widehat S_n-1-u=BP_{n-1}(B)u.
+\]
+For $0\le x\le\theta$,
+\begin{equation}\tag{L33.3.1}\label{eq:L33:finiteP}
+|P_n(i\sqrt x)|^2=
+\frac{1+x^n(1-x+x^2)-2\Re\{(i\sqrt x)^n(1-x-i\sqrt x)\}}{1+x}.
+\end{equation}
+For all $n\ge4$ this is at most $1-7x/15$. If $n\equiv0,1\pmod4$,
+the numerator is at most one, and the loss divided by $x$ is at least
+$1/(1+x)\ge32/45$. For $n\equiv2\pmod4$ with $n\ge6$ and
+$n\equiv3\pmod4$ with $n\ge7$, the loss divided by $x$ is at least
+$(1-2x^2-x^5)/(1+x)\ge7/15$: its numerator is positive and decreasing,
+its denominator increasing, and
+\[
+15(1-2\theta^2-\theta^5)-7(1+\theta)=1311885/33554432>0.
+\]
+At $x=0$ equality is direct. In particular $\|P_j(B)\|\le1$ for
+$j\ge4$, so $|\widehat S_n-1-u|\le\sqrt d$ for $n\ge6$.
+Keeping $a_0,a_1$ in \eqref{eq:L33:Z} gives
+\begin{equation}\tag{L33.3.3}\label{eq:L33:row}
+0\le Z\le(1-cd)q-cd+\sqrt d.
+\end{equation}
+
+Write $P_n(i\sqrt x)=R_n(x)+i\sqrt x I_n(x)$. For $n\ge6$ both
+finite alternating sums satisfy
+\begin{equation}\tag{L33.3.4}\label{eq:L33:RI}
+\rho(x):=1-x+x^2-x^3\le R_n(x),I_n(x)\le1.
+\end{equation}
+For $n=4k,4k+1,4k+2,4k+3$, the respective last exponents in
+$(R_n,I_n)$ are $(2k-1,\allowbreak 2k),\allowbreak (2k+1,\allowbreak 2k-1),\allowbreak (2k,\allowbreak 2k+1),\allowbreak (2k+2,\allowbreak 2k)$.
+All needed exponents are at least two; the exponent-two sum also exceeds
+$\rho$, and all remaining cases follow from decreasing alternating sums.
+Let $\Pi z=z-\E z$ and
+$A_0=a_1+a_2+a_3$, $B_0=a_2+a_3$, $C_0=a_3$. These scalars are
+distinct from the operators $A,B$. The actual short paths give
+\[
+w=\Pi\{[P_n(B)-A_0-B_0B-C_0B^2]u\}.
+\]
+At $i\sqrt x$ the subtracted real and normalized imaginary parts obey
+$\tau(3-x)\le A_0-C_0x\le3d$ and $2\tau\le B_0\le2d$.
+Since $2\rho(x)\ge2\rho(\theta)>1$ and $3d\le1$, each subtraction is
+at most twice its original component. The componentwise square difference is
+\[
+|P_n-A_0-B_0z-C_0z^2|^2\le|P_n|^2
+-\tau\{(3-x)[2\rho(x)-3d]+2x[2\rho(x)-2d]\}.
+\]
+All bracketed factors are nonnegative. Moreover
+$(6+2x)\rho(x)=6-4x+4x^2-4x^3-2x^4\ge6-4x+2x^2$,
+because $4-4\theta-2\theta^2>2$. Thus
+\[
+|P_n-A_0-B_0z-C_0z^2|^2\le
+1-7x/15-\tau[6-9d-(4+d)x+2x^2].
+\]
+Integrate against the spectral measure of $u$ for $-B^2$, whose mass,
+first moment and second moment are $d,\delta_2,\delta_3$; use
+$\delta_3\ge\delta_2^2/d$ and contraction of $\Pi$. For $d>0$,
+\begin{equation}\tag{L33.3.7}\label{eq:L33:variance}
+\frac{\E w^2}{d}\le\mathcal V(d,v):=
+1-\frac7{15}v-d(1-v)[6-9d-(4+d)v+2v^2],\qquad
+v=\delta_2/d\in[d,\theta].
+\end{equation}
+The subtracted bracket is nonnegative, since even its crude lower bound
+$6-3-(13/3)\theta$ is positive; hence also $\E w^2\le d$.
+
+The additional reference weight has an actual signed correlation.
+By \eqref{eq:L33:RI},
+$\rho_r:=\E[r(\widehat S_n-1)]=\int xI_n(x)\,d\sigma_u(x)\le\delta_2$.
+The exact paths and $\E r=-d$, $\E[ru]=\E[rs]=0$ give
+\[
+\begin{aligned}
+\E[uw]&=\eta-a_1d-a_2d-a_3\tau\ge\tau-2d^2-d\tau,\\
+\E[rw]&=\rho_r-\alpha d-(a_2+a_3)(\delta_2-d^2)\\
+&\le\delta_2-\tau d-2\tau(\delta_2-d^2).
+\end{aligned}
+\]
+Consequently
+\begin{equation}\tag{L33.3.9}\label{eq:L33:covariance}
+\E[f_2w]=-\E[uw]+\E[rw]
+\le d[-1+2v+2d-2\tau(v-d)]\le dH(d),\quad H(d)=-3/16+2d.
+\end{equation}
+
+\proofpart{The full length-two fourth coefficient}
+Put $R_4(Z,\mu)=Z^2+2\mu Z+3\mu^2$. Equations
+\eqref{eq:L33:mean} and \eqref{eq:L33:row} allow
+\eqref{eq:L33:pcoefficient}. We now retain the extra $r$ term and prove
+\begin{equation}\tag{L33.4.1}\label{eq:L33:f2coefficient}
+rR_4(Z,\mu)\le9/4,\qquad
+f_2R_4(Z,\mu)\le C(d):=37/4-10d.
+\end{equation}
+For an original row $k(y)=K(x,y)$, the equality $\E g=0$ gives
+$|r(x)|=|\E[(k-g(x))g]|\le\sqrt{p(x)q(x)d}$.
+Set $x=\sqrt d$, $b=1-cx^2$, $e=x-cx^2$,
+$M=1-5cx^2+3cx^4$. Then $0\le Z\le bq+e$, $0\le\mu\le M$.
+Direct maximization for $0\le q\le2$, $p=2-q$ yields
+\[
+\sqrt{pq}\le1,\quad \sqrt{pq}\,q\le3\sqrt3/4<21/16,
+\quad\sqrt{pq}\,q^2\le25\sqrt5/27<25/12.
+\]
+The additional term is therefore at most
+\begin{align*}
+\mathcal E(x)&=x\{(25/12)b^2+(21/8)b(e+M)+(e+M)^2+2M^2\}\\
+&=\frac{185}{24}x+\frac{37}{8}x^2-\frac{24103}{768}x^3
+-\frac{2223}{256}x^4+\frac{319295}{6144}x^5
++\frac{57}{16}x^6-\frac{299991}{8192}x^7+\frac{9747}{1024}x^9.
+\end{align*}
+The first row of Table~\ref{tab:reference-synthesis:long-scalars} proves
+\(9/4-\mathcal E(3y/5)\ge1/40\) for \(0\le y\le1\).
+Since \(x=\sqrt d\le1/\sqrt3<3/5\), this gives
+\(rR_4(Z,\mu)<9/4\) on the entire actual domain.
+Together with \eqref{eq:L33:pcoefficient}, it proves
+\eqref{eq:L33:f2coefficient}.
+
+\proofpart{The entire small-score interval}
+The exact fourth expansion is
+\begin{equation}\tag{L33.5.1}\label{eq:L33:fourthexpansion}
+\E[f_2Z^4]=(1-d)\mu^4+4\mu^3\E[f_2w]
++\E[f_2w^2R_4(Z,\mu)].
+\end{equation}
+For $0<d\le1/10$, the bracket in \eqref{eq:L33:variance} is at least
+$51/10-(41/10)\theta=1099/320>17/5$.
+Using $\tau\ge cd$ and $v\ge d$ therefore gives
+\[
+\begin{gathered}
+\E w^2\le d(1-\mathcal B d),\quad \mathcal B=1193/480,\quad \mu\le N=1-\mathcal A d,\\
+\mathcal A=893/320,
+\end{gathered}
+\]
+the latter because $5-3d\ge47/10$. The maximum of
+$\phi(t)=(1-d)t^4+4dH(d)t^3$ on $[0,N]$ is at an endpoint:
+for $H\ge0$ it increases; for $H<0$ its derivative has one positive
+root, changing from negative to positive. Furthermore
+$(1-d)N+4dH\ge(9/10)(7/10)-3/40>0$, so $N$ is the maximizing
+endpoint. Equations \eqref{eq:L33:covariance}--\eqref{eq:L33:fourthexpansion} give
+\[
+\E[f_2Z^4]\le
+N^3[1-(\mathcal A+7/4)d+(\mathcal A+8)d^2]
++(37/4-10d)d(1-\mathcal B d).
+\]
+For \(\lambda\in\{1193/480,2\}\), let
+\[
+\begin{gathered}
+ \mathcal S_\lambda(d)=\frac{1-\ell_\lambda d-
+ [(1-d)N^4+4dH(d)N^3+C(d)d(1-\lambda d)]}{d},\\
+ \ell_{1193/480}=483/400,\quad \ell_2=303/400.
+\end{gathered}
+\]
+The numerator vanishes at zero, so each quotient is a polynomial,
+including at that endpoint. The two low-score rows of
+Table~\ref{tab:reference-synthesis:long-scalars} prove
+\(\mathcal S_{1193/480}>0\) and \(\mathcal S_2>0\)
+on \([0,1/10]\). The first yields
+\begin{equation}\tag{L33.5.3}\label{eq:L33:small}
+\E[f_2X_n^4]\le\E[f_2Z^4]\le1-483d/400.
+\end{equation}
+
+\proofpart{The entire remaining score interval}
+Let $1/10\le d\le1/3$. Differentiating \eqref{eq:L33:variance} gives
+\[
+\partial_v\mathcal V=-7/15+d[10-8d-(12+2d)v+6v^2],
+\]
+which decreases in $v$. At $v=\theta$ it is
+$-7/15+(3131/512)d-(141/16)d^2$, a concave quadratic with positive
+endpoint values $4357/76800$ and $4551/7680$.
+Hence the maximum variance factor is
+\[
+V_\theta(d)=389/480-(45771/16384)d+(5719/1024)d^2.
+\]
+Since $H(d)>0$, the mean part of \eqref{eq:L33:fourthexpansion}
+increases in $\mu$. With $M=1-95d/32+57d^2/32$, set
+\begin{equation}\tag{L33.6.2}\label{eq:L33:P}
+\begin{gathered}
+\E[f_2Z^4]\le P(d):=M^3B_1+F(d),\\
+B_1=1-(151/32)d+(51/4)d^2-(57/32)d^3,\quad
+F=d(37/4-10d)V_\theta.
+\end{gathered}
+\end{equation}
+Put \(P_0(d)=M(d)^3B_1(d)\). The two remaining rows of
+Table~\ref{tab:reference-synthesis:long-scalars} prove directly that
+\begin{equation}\label{eq:reference-synthesis:long-high-payment}
+ P(d)<1-853/124416\qquad(1/10\le d\le1/3),
+\end{equation}
+and also the shared monotonicity statement
+\begin{equation}\label{eq:reference-synthesis:P0-decreasing}
+ P_0'(d)<0\qquad(1/10\le d\le1/3).
+\end{equation}
+The latter is the mean-part estimate used for connector four.
+
+For the table, apply \eqref{eq:bernstein-coefficients} to each displayed
+polynomial in \(y\). All coefficients are at least its listed positive
+bound. Every clearing denominator is a
+positive constant integer. Lemma~\ref{lem:bernstein-certificate} therefore
+proves the assertions throughout the stated closed intervals.
+\begin{table}[htbp]\centering\small
+\caption{Complete-interval scalar payments for the genuine length-two reference.}
+\label{tab:reference-synthesis:long-scalars}
+\begin{tabular}{@{}lcc@{}}
+\toprule
+Polynomial in \(0\le y\le1\)&degree&coefficient lower bound\\
+\midrule
+\(9/4-\mathcal E(3y/5)\)&9&\(1/40\)\\
+\(\mathcal S_{1193/480}(y/10)\)&4&\(1/8\)\\
+\(\mathcal S_2(y/10)\)&4&\(3/16\)\\
+\(1-853/124416-P(1/10+7y/30)\)&9&\(1/2500\)\\
+\(-P_0'(1/10+7y/30)\)&8&\(3/20\)\\
+\bottomrule
+\end{tabular}
+\end{table} At $d=0$, $g=0$ and all the actual
+messages are one, so equality is direct; the kernel need not vanish.

@@ -1,0 +1,215 @@
+\subsection{Even terminals of minimum one with multiple pairs}\label{loc:S29}
+Let $F=\prod_{i=1}^th_{a_i}f_{b_i}$, where
+$1=a_1<b_1<a_2<\cdots<a_t<b_t$, $t\ge2$.
+We prove $\E[p(T^LF)^4]\le1$ for every $L\ge1$.
+
+\proofpart{Reduction of the pair count}
+Put $R_i=\sum_{j=a_i+1}^{b_i}K^j\one$ and $R=\sum_iR_i=KQ(K)g$;
+$Q$ is a finite $0/1$ mask. Positive convolution gives
+$h_{a_i}+f_{b_i}\le2-\omega_i+R_i$, with
+\[
+ \omega_i=\beta_{b_i}\ (a_i=1,2),\quad
+ \omega_i=2d-\delta_{2}\ (a_i=3),\quad\omega_i=2d\ (a_i\ge4).
+\]
+If $\sum\omega_i\ge2(t-1)d+\kappa_0$, $-\delta_{2}\le\kappa_0\le d$,
+AM--GM on actual positive roots gives
+$\sqrt F\le[m+C/t]^t$, $m=1-d$, $C=R/2+d-\kappa_0/2$.
+This decreases for real $t\ge2$.
+Indeed its logarithmic derivative is $\log m+h(y)$,
+$h(y)=\log(1+y)-y/(1+y)$, $y=C/(tm)$.
+The mask norm gives $|R|\le10\sqrt d/7$.
+For $C\ge0$, $h(y)\le y^2/2\le225d/392<d$;
+for $C<0$, $tm+C\ge13/12$ and
+$h(y)\le y^2/[2(1+y)^2]\le1800d/8281<d$.
+Thus with $m_4=1-d/2-\kappa_0/4$,
+\[
+ F\le(m_4+R/4)^4
+ \le[m_4^2+M^2d/16+m_4R/2]^2
+ \quad\text{if }R^2\le M^2d.
+\]
+All quantities squared are nonnegative upper bounds of actual roots.
+The three types give $F\le F_0=m_0^2(1+kR/2)^2$:
+\begin{center}
+\begin{tabular}{@{}ccccc@{}}
+\toprule
+type & first pairs & $\kappa_0$ & $(M^2,m_0)$ & upper $k=m_4/m_0$\\\midrule
+I & $(1,2),(3,b_2)$ & $-\delta_{2}$ & $(1,1-13d/20)$ & $9/8$\\
+II & $(1,2),\ a_2\ge4$ & $0$ & $(259/160,1-13d/16)$ & $8/7$\\
+III & $(1,b_1),\ b_1\ge3$ & $\beta_{b_1}$ & $(101/50,1-31d/32)$ & $6/5$\\\bottomrule
+\end{tabular}
+\end{center}
+For I the prefix of $Q$ is $(1,0,1)$ and the squared-norm denominator
+margin is $x[2-3x-3x^2+3x^3-x^5]\ge2501x/16807$.
+For II the prefix is $(1,0,0)$ and
+$|Q|^2\le(1+x^3)/(1-x^2)^2\le259/160$.
+For III use the general mask bound $101/50$.
+The upper bounds on $m_4^2+M^2d/16$ before relaxing to $m_0$ are
+$1-33495d/49152$, $1-6263d/7680$, and $1-4769d/4800$.
+
+\proofpart{One signed spectral calculation for all types}
+Write $Q(i\sqrt x)=u+i\sqrt x v$ and integrate against $\nu_g$.
+Let $a=439/855$, $B=1024/855$, $a_{\mathrm{II}}=25163/27360$.
+The complete prefix bounds are
+\[
+ \begin{array}{c|cc}
+ &u&v\\\hline
+ I&a\le u\le1&-Bx\le v\le Bx^2\\
+ II&a_{\mathrm{II}}\le u\le B&-Bx\le v\le Bx^2\\
+ III&a\le u\le B&a\le v\le B.
+ \end{array}
+\]
+For III the sharper lower function for both is
+$(1-x-x^2)/(1-x^2)$; for II it is $1-x^3/(1-x^2)$ for $u$.
+Set $V=\E R^2$, $D_j=\E[K'^jR]$.
+All signs and means are fixed by
+\begin{gather*}
+ V=\int x(u^2+xv^2),\quad
+ D_{4j}=-\int x^{2j}u,\quad D_{4j+1}=-\int x^{2j+1}v,\\
+ D_{4j+2}=\int x^{2j+1}u,\quad D_{4j+3}=\int x^{2j+2}v,\\
+ \E[pR]=-\int(u+xv),\quad\E[f_2R]=-\int[(1-x)u+xv].
+\end{gather*}
+Define $\gamma=-kD_0-k^2V/2\ge0$,
+$\varepsilon_j=\beta_j-kD_{j-1}$ and $\delta=k(D_1)_+$.
+For III retain instead $\omega=-kD_1\ge0$.
+The following bounds follow from the displayed integrals and
+$\delta_{j+1}\le\theta \delta_{j}$:
+\begin{center}\small
+\begin{tabular}{@{}ccccc@{}}
+\toprule
+ & $\gamma/d$ & $\delta/d$ & $\varepsilon_3/d$ & $\varepsilon_j/d$, $j\ge4$\\\midrule
+I & $[9/32,9/8]$ & $\le9/40$ & $[1/2,6/5]$ & $[1/2,6/5]$\\
+II & $[27/50,7/5]$ & $\le23/100$ & $[2/5,5/4]$ & $[1/2,5/4]$\\
+III & $[0,29/20]$ & $0$ & $[1/3,5/4]$ & $[1/3,5/4]$\\\bottomrule
+\end{tabular}
+\end{center}
+For III $\gamma\ge0$ uses $a-3939/8000>0$;
+for I and II the lower constants use $a-117/512>9/32$ and
+$a_{\mathrm{II}}-3367/8960>27/50$.
+Let $V_n=S'_n+kK'^nR=1+P_n(K')g'$, with
+$P_n=G_n+kz^{n+1}Q(-z)$.
+The norm bounds $(\|P_1\|,\|P_2\|^2,\|P_3\|)$ are
+$(1,3/2,11/10)$, $(1,45/32,9/8)$ and $(1,45/32,6/5)$
+for I, II and III. For all types $\|P_n\|\le1$ when $n\ge4$.
+For the short indices expand the real and imaginary parts using the
+prefix table. For III the $n=3$ square is bounded by
+$1-x+17x^2/4\le5305/4096<36/25$;
+for I and II the triangle bounds are
+$1-x/2+13x^2/8<11/10$ and $1-x/2+79x^2/40<9/8$.
+For the long indices put $U=k\sqrt\theta\|Q\|\le11/10$.
+At $n=4,5$ the bounds are $1-x/2+3x^2/5$ and
+$1-x/2+243x^2/200$.
+For $n\ge6$, $(1+x^3)/\sqrt{1+x}+Ux^3\le1$, since
+$x^2(1+U\sqrt{1+x})(1+\sqrt{1+x})\le107822/128000<1$.
+
+Duhamel gives the same comparison at every $L\ge2$:
+\[
+ T^LF_0/m_0^2\le V_L-\gamma \bar f_{L-1}+kD_1\bar f_{L-2}
+                         -\sum_{j=3}^L\varepsilon_j\bar f_{L-j}.
+\]
+Write $\alpha_n=1-\E V_n$, $\eta_n=\E[g'V_n]$.
+For $n\ge4$ both have the same interval bounds as
+$\varepsilon_j$ in the table. The short bounds needed are
+$\alpha_3=\eta_2\ge19d/20$ and $\eta_3\ge\tau$ in I,II;
+in III they are $\alpha_3=\eta_2\ge3d/4$ and $\eta_3\ge\tau$.
+These are the same finite means $\beta_{n+1}-kD_n$,
+$\beta_{n+2}-kD_{n+1}$ for the specified direction.
+
+\proofpart{All $L\ge2$: finite coefficient certificates}
+For $L\ge4$ retain the last two $\varepsilon$ terms and add
+$2\delta$ for I,II. For $L=3$ retain $\varepsilon_3$ and add
+$2\delta$; for $L=2$ keep exactly $V_2-\gamma q+kD_1$.
+These give positive upper envelopes $Z$.
+For $y=q+1$, $A_y=y^2+2$, the elementary scalar bounds are
+$pA_y\le32/5$, $py^2\le4A_y/5$.
+Each coefficient certificate below is obtained by expanding
+$(Z+\mu)^2+2\mu^2$, bounding it by
+$A_y+\ell yx-D_yx^2$, $x=\sqrt d$, and using $D_y\ge cA_y$.
+Its maximum is at most $32/5+\ell^2/(5c)$ by completing the square.
+\begin{center}\small
+\begin{tabular}{@{}ccccc@{}}
+\toprule
+type & $L$ & $\ell$ & $D_y$ & coefficient bound\\\midrule
+I & $\ge4$ & $9/4$ & $1067/1600+11y/10+y^2$ & $8$\\
+I & $3$ & $5/2$ & $421/300+21y/10$ & $331/40$\\
+I & $2$ & $2$ & $8589/6400+47y/80+9y^2/16$ & $38/5$\\
+II & $\ge4$ & $9/4$ & $31407/40000+27y/25+4y^2/5$ & $8$\\
+II & $3$ & $12/5$ & $53127/40000+163y/100$ & $9$\\
+II & $2$ & $2$ & $671/600+9y/25+27y^2/25$ & $37/5$\\
+III & $\ge4$ & $12/5$ & $14/25+2y+2y^2/3$ & $8$\\
+III & $3$ & $12/5$ & $878/675+8y/3$ & $8$\\
+III & $2$ & $2$ & $2+2y$ & $15/2$\\\bottomrule
+\end{tabular}
+\end{center}
+The corresponding lower factors $c$ are
+$7/8,2/3,2/3;\ 4/5,1/2,4/5;\ 1,4/5,8/11$.
+They follow by checking endpoints of a linear or concave quadratic on
+$1\le y\le3$. Cubic terms of the expansion are nonpositive;
+quartic terms are absorbed using $x^2\le1/3$.
+
+The original centered fourth expansion now gives the following complete
+upper polynomials; negative higher terms have only been discarded:
+\[
+\begin{array}{c|ccc}
+ & L\ge4&L=3&L=2\\\hline
+I&1+4d+6d^2&1+20051d/4000+9d^2&1+23d/5+849d^2/50\\
+II&1+22d/5+243d^2/50&1+377d/64+315d^2/32&1+801d/160+399d^2/40\\
+III&1+19d/3&(1-d)^4+288d/25&(1-d)^4+675d/64.
+\end{array}
+\]
+For I,II the respective mean bounds at these lengths are
+$(1-d,1-d,1-4d/5)$ and $(1-9d/10,1-7d/8,1-19d/20)$.
+Their positive covariance bounds are respectively
+$(d/10,d/4,9d/10-9d^2/8)$ and $(d/12,d/2,2d/5)$.
+For III the first covariance can be $-d/12$, contributing at most $d/3$;
+the others are positive. Variances are respectively
+$(d,121d/100,3d/2)$, $(d,81d/64,45d/32)$ and
+$(d,36d/25,45d/32)$.
+The joint mean endpoint in \eqref{eq:compact-fourth-endpoints} is positive
+whenever used; for example I at $L=2$ has
+$1-22d/5+9d^2/2\ge1/30$.
+Compare with the positive Taylor polynomials of $m_0^{-8}$.
+Only the I two-step comparison has a negative quadratic difference;
+its difference is $3d/5-177d^2/100\ge d/100$.
+All other displayed comparisons have positive linear and quadratic
+margins (and the remaining $(1-d)^4$ terms are nonpositive after degree two).
+
+\proofpart{One step}
+The actual quadratic remainder must be retained:
+\[
+ Y=TF_0/m_0^2=q+kD_0-kKR+e,\qquad
+ e=(k^2/4)(V-K(R^2)).
+\]
+For the three types the mean, covariance, variance and row budgets are
+\[
+\begin{array}{c|cccc}
+ &\E Y&h\text{ lower bound}&\operatorname{Var}Y\text{ upper bound}&Y\text{ upper bound}\\\hline
+I&1-d/12&27d/50-13d^{3/2}/100&d+13d^{3/2}/50+17d^2/1000&q+3\sqrt d/4\\
+II&1-d/3&2d/5-11d^{3/2}/50&d+11d^{3/2}/25+d^2/20&q+19\sqrt d/20\\
+III&1-d/5&2d/5-3d^{3/2}/10&d+3d^{3/2}/5+9d^2/100&q+11\sqrt d/10.
+\end{array}
+\]
+The mean uses $\E[pR]\le-6d/19,-439d/608,-439d/608$,
+respectively. The centered linear square is at most $d$, because
+$2\inf u\ge k\theta\|Q\|^2$; the centered remainder norm is at most
+$k^2V/4$. The row bounds follow from $\gamma\ge0$ and $k\sqrt V$.
+For $Y\le q+\lambda\sqrt d$, $\mu\le1$, its fourth coefficient is
+at most $32/5+(9\lambda/2)\sqrt d+2\lambda^2d$.
+Multiplying the table entries in the centered expansion gives, respectively,
+\begin{align*}
+\E[pY^4]&\le1+4d+6d^{3/2}+3d^2+2d^{5/2}/5+d^3/50,\quad(I),\\
+&\le1+7d/2+8d^{3/2}+13d^2/2+21d^{5/2}/20+d^3/10,\quad(II),\\
+&\le1+4d+999d^{3/2}/100+3583d^2/500
+                          +759d^{5/2}/400+1089d^3/5000,\quad(III).
+\end{align*}
+The upper mean endpoint is positive after subtracting four times its
+covariance lower bound, so both possible mean endpoints are paid.
+With $x=\sqrt d\le7/12$, comparison with $m_0^{-8}$, retaining its
+cubic Taylor term, gives lower differences divided by $d$:
+\[
+ 6/5-6x+11x^2\ge21/55,\qquad
+ 3-8x+16x^2\ge2,\qquad
+ 15/4-999x/100+25x^2>0.
+\]
+These cover I,II,III in order. Every positive $L$ and every min-one
+multiple-pair table is therefore covered. The common decoration,
+zero-parameter and full-reversal rules complete the result.

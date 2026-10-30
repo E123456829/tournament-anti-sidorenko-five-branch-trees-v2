@@ -1,0 +1,212 @@
+\subsection{The full pointwise coefficient for the one-connector genuine reference}\label{proof:Q5-C029}
+Use the original finite model. Fix the
+actual terminal $F=qf_2$, $X=TF$, $f_2=p+r$, with the unit arm inward,
+the two-edge arm outward, and the connector toward the reference root.
+For $0<d\le1/5$, put $m=1-2d$, $v=\delta_2/d\in[d,\theta]$.
+The full coefficient bound is
+\begin{equation}\tag{L29.T}\label{eq:L29:claim}
+f_2(X^2+2mX+3m^2)\le C(d,v):=255/32-13d+2(v-3/10)_+.
+\end{equation}
+This statement concerns the pointwise coefficient; the covariance payment is treated separately. At $d=0$ the actual
+messages are one and the coefficient is six, without defining $v$.
+
+The actual identity with $u=g(g+r)$ is
+$F=1+r-u$, $\E F=m$, $X=q-2d-s+Ku$, where $s=Kr$.
+The original row and Cauchy bounds give
+\[
+\begin{gathered}
+\E|u|\le d\sqrt{1+v},\quad |s|\le\sqrt{dv},\quad 0\le X\le q+\alpha,\\
+\alpha=-2d+\sqrt{dv}+d\sqrt{1+v}\ge0,\quad X\le2m.
+\end{gathered}
+\]
+Centering an original row gives $r(x)=\E[(K(x,\cdot)-g(x))g]$ and
+$r(x)^2\le p(x)q(x)d$, so $f_2\le p+\sqrt{pqd}\le p+\sqrt d$.
+The common error bound is
+\begin{equation}\tag{L29.e}\label{eq:L29:error}
+\alpha\le e(v):=\min\{1/8,((1+d)v-d)/2\}.
+\end{equation}
+The second branch follows from $\sqrt{dv}\le(d+v)/2$ and
+$\sqrt{1+v}\le1+v/2$. For the first, use
+$\sqrt{1+v}\le\sqrt{45/32}<19/16$ and complete the square in
+$\alpha\le\sqrt{\theta d}-13d/16\le1/8$.
+
+\proofpart{The whole low interval $0<d\le1/9$}
+Let $x=\sqrt d\le1/3$. The actual coefficient is at most the maximum on
+$0\le q\le2$ of
+\[
+F(q)=(2+x-q)\{(q+1/8)^2+2m(q+1/8)+3m^2\}.
+\]
+We prove the stronger bound $\max F\le255/32-13d$.
+Put $a=9/8-2x^2$, $b=a^2+2m^2$, $B_1=1+2a+b$.
+One has $F'(0)>0$ and
+\[
+F'(1/2)=1/4+3x+8x^2-4x^3-12x^4+(1/4)(x+2x^2)-1/64>0.
+\]
+For example $8x^2-4x^3-12x^4\ge3x^2$ for $x\le1/2$.
+Since $F'$ is a concave quadratic, a maximum lies in $[1/2,2]$.
+There $F''(q)\le-L$, with $L=7/2-2x-8x^2\ge35/18$.
+The quadratic tangent at one therefore gives
+\[
+\begin{gathered}
+\max F\le F_1+z^2/(2L),\\
+F_1=(1+x)(417/64-(33/2)x^2+12x^4),\\
+z=-145/64+(17/4)x+(25/2)x^2-4x^3-12x^4.
+\end{gathered}
+\]
+ Let $D=255/32-13x^2-F_1$. The complete remainder is
+\[
+\begin{aligned}
+R(x):=4096(2LD-z^2)={}&20639-131744x+269888x^2+333312x^3\\
+&-1567232x^4-401408x^5+\;2146304x^6
++393216x^7-589824x^8.
+\end{aligned}
+\]
+Its derivative is
+\[
+\begin{aligned}
+R'={}&-131744+539776x+999936x^2-6268928x^3\\
+&-2007040x^4+\;12877824x^5+\;2752512x^6-4718592x^7.
+\end{aligned}
+\]
+Absorb the positive fifth and sixth terms into the cubic, using
+$-6268928+\;12877824/9+\;2752512/27=-127875072/27<-4700000$.
+Dropping the other nonpositive terms gives
+$R'\le h=-131744+539776x+999936x^2-4700000x^3$.
+On $[0,1/5]$, $h'$ is concave and positive at both endpoints, so
+$h\le h(1/5)=-534784/25<0$.
+On $[1/5,1/3]$, $h''\le-3640128<-3000000$.
+At $2/7$, $h=-1891936/343<-5000$ and
+$h'=-1952768/49$, $|h'|<40000$.
+Strong concavity gives
+$h<-5000+800/3<-4700<0$ on this entire interval.
+Thus $R$ decreases and $R(1/3)=264973/243>0$.
+Since $L>0$, this proves the stronger low-interval coefficient.
+
+\proofpart{The entire middle interval $1/10\le d\le3/16$}
+Now keep the sharper actual row bound. The coefficient is at most
+\[
+\Phi(e):=\max_{0\le q\le2}
+\{2-q+x\sqrt{q(2-q)}\}\{(q+e)^2+2m(q+e)+3m^2\},
+\qquad x=\sqrt d,
+\]
+at $e=e(v)$. As a maximum of increasing convex quadratics with
+nonnegative coefficients, $\Phi$ increases and is convex for $e\ge0$.
+Set $e_0=3/20-7d/20$, $v_1=(d+1/4)/(1+d)$.
+Here $0<e_0<1/8$ and $3/10<v_1\le7/19<\theta$.
+For $v\le3/10$, $e(v)\le e_0$; on $[3/10,v_1]$ it is affine;
+after $v_1$ it equals $1/8$. Thus it suffices to prove
+\[
+\Phi(e_0)\le255/32-13d,\qquad
+\Phi(1/8)\le255/32-13d+2(v_1-3/10).
+\]
+The intermediate segment follows from the convex chord bound and the
+outer segments from monotonicity and the nonnegative target slope.
+
+For either endpoint, and every $e\in[e_0,1/8]$, put
+$a=m+e$, $b=a^2+2m^2$, $B_1=1+2a+b$,
+$z=2(1+x)(1+a)-B_1$. One has $5/16<x<7/16$,
+$m\ge5/8$, $a\ge227/320>7/10$, and $0<z\le5/4$.
+Indeed $z_e=2x-2a<0$; at $e=1/8$ the same polynomial $z$ as above
+increases on $[5/16,7/16]$, since
+$17/4-12x^2+x(25-48x^2)>0$, and its left value is $765/16384>0$.
+For the upper bound discard $e$ and use the function
+$1+2x(1+m)-3m^2$, increasing in $x$ and decreasing in $m$;
+its endpoint bound is $5/4$.
+For $t=2+x$, the cubic $F(q)=(t-q)(q^2+2aq+b)$ has
+$F'(0)>0$, $F'(1)=z>0$, so it increases on $[0,1]$.
+For $q=1+w\ge1$, the original row improvement
+$\sqrt{q(2-q)}=\sqrt{1-w^2}\le1-w^2/2$ bounds the coefficient by
+\[
+(1+x)B_1+zw-A'w^2-w^3,
+\qquad A'=1-x+2a+xB_1/2\ge101/40>5/2.
+\]
+Only additional nonpositive cubic and quartic terms were discarded.
+The lower bound uses $B_1\ge18/5$ and $5/16\le x\le7/16$.
+Since $z\le A'/2$, completing the square gives, also for $q\le1$,
+\begin{equation}\tag{L29.II.4}\label{eq:L29:He}
+\Phi(e)\le(1+x)B_1+z^2/(4A')\le(1+x)B_1+z/8
+=H_e:=(7/8+x)B_1+(1+x)(1+a)/4.
+\end{equation}
+
+At $e=e_0$, $a=(23-47x^2)/20$,
+$B_1=(2649-7242x^2+5409x^4)/400$.
+For $D_0=255/32-13x^2-H_{e_0}$, the exact polynomial is
+\[
+3200D_0=5237-22912x+10974x^2+59816x^3-37863x^4-43272x^5.
+\]
+On the wider interval $I=[5/16,7/16]$,
+$D_0''=5487/800+(22431/200)x-(113589/800)x^2-(5409/20)x^3$
+is concave, since its second derivative is
+$-113589/400-(16227/10)x<0$.
+Its endpoint values $8105109/409600$, $2499363/409600$ exceed six.
+Also $D_0(7/16)=31687275/419430400>3/40$ and
+$D_0'(7/16)=3509875/26214400\in(0,1/4)$.
+Strong convexity gives $D_0>3/40-1/192=67/960>0$ on $I$.
+
+At $e=1/8$,
+$H_{1/8}=3191/512+(451/64)x-(239/16)x^2-17x^3+(21/2)x^4+12x^5$.
+Multiply the second endpoint's desired excess by $1+x^2$ and set
+\[
+P=(1+x^2)\left[255/32-13x^2
++2\left(\frac{x^2+1/4}{1+x^2}-3/10\right)-H_{1/8}\right].
+\]
+Its complete polynomial and second derivative are
+\[
+2560P=4189-18040x+12989x^2+25480x^3-21920x^4
++12800x^5-26880x^6-30720x^7,
+\]
+\[
+P''=12989/1280+(1911/32)x-(411/4)x^2+100x^3-315x^4-504x^5.
+\]
+Since $411/4+315(7/16)^2+504(7/16)^3<206$ and
+$100x^3\ge(125/4)x^2$,
+$P''\ge12989/1280+(1911/32)x-(699/4)x^2$.
+The latter concave quadratic has positive endpoint values
+$60131/5120$, $14471/5120$, so $P''>0$.
+Finally $P'(7/16)=-9291053/(8192\cdot2560)<0$ and
+$P(7/16)=4683285/(131072\cdot2560)>0$.
+Thus $P$ decreases to a positive endpoint on $I$, proving the second
+endpoint certificate and the entire middle interval.
+
+\proofpart{The actual truncation for $3/16\le d\le1/5$}
+Here retain the additional actual bound $X\le2m$.
+Let $s_0=\sqrt d$, $t=2+s_0$, $e=e(v)$ and
+$q_0=2m-e\in(0,2)$. The coefficient is at most
+\[
+\max_{0\le q\le2}(t-q)\{y^2+2my+3m^2\},\qquad y=\min(q+e,2m).
+\]
+Before truncation the derivative of
+$F(q)=(t-q)\{(q+e)^2+2m(q+e)+3m^2\}$ satisfies
+$F'(q_0)=m[6(2+s_0)+6e-23m]\ge0$,
+since $46d+6s_0\ge11$ ($s_0\ge43/100$).
+Also $F'(0)>0$: $m\ge3/5$, $m+e\le3/4$ give
+$2t(m+e)\ge12/5$ whereas $(m+e)^2+2m^2\le43/32$.
+Its concave quadratic derivative is nonnegative on $[0,q_0]$;
+after truncation the expression is $11m^2(t-q)$ and decreases.
+Consequently $C_{\rm actual}\le11m^2(4d+e+s_0)$.
+
+Write $C_*=8-13d+2(v-3/10)_+$.
+For $v\le3/10$, $e\le e_0=3/20-7d/20$ and set
+$B=3/20+73d/20+s_0$, $G=11m^2B$.
+On the entire interval,
+$B\ge2023/1600$, $B'\le73/20+50/43$, $3/5\le m\le5/8$.
+The bracket is negative, so
+\[
+G'=11m(-4B+mB')
+\le(33/5)[-2023/400+(5/8)(73/20+50/43)]<-13.
+\]
+At $d=3/16$, $s_0=\sqrt3/4<7/16$ gives
+$B\le407/320$, $G\le111925/20480$, whereas
+$8-13d=113920/20480$. Hence $G\le8-13d-1995/20480$ everywhere.
+For $v\ge3/10$,
+$e\le e_0+(1+d)(v-3/10)/2$.
+The additional slope $11m^2(1+d)/2$ decreases in $d$ and is at most
+$5225/2048$. Compared with the slope two of $C_*$, its maximum loss is
+$(5225/2048-2)(17/160)=19193/327680$.
+The original margin is $1995/20480=31920/327680$, so
+\begin{equation}\tag{L29.III}\label{eq:L29:truncated}
+C_{\rm actual}\le C_*-12727/327680<C_*-1/32=C(d,v).
+\end{equation}
+The three closed score intervals overlap and cover $0<d\le1/5$.
+Their actual terminal, receiving weight and original directions are the
+same, proving \eqref{eq:L29:claim} with every local variable defined.

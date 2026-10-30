@@ -1,0 +1,529 @@
+\subsection{Short-first-pair ordinary eighth moments for odd terminals of minimum two}\label{proof:Q5-C095}
+
+\paragraph{Q95.0 Structures and bounds.}
+The receiving root has an outward unit arm, all connector edges point
+from the terminal to this root, and \(L\ge\allowbreak 1\). For genuine equal-pair
+products \(E_t,\allowbreak E_r\), put \(H=\allowbreak E_rpT^L(E_tF)\). We prove the following
+three rows, for every finite arm list and every positive connector length:
+\fitdisplay{
+\begin{array}{c|c|c}
+\text{distinct residual arms}&F&\text{upper bound for }\E H^8\\\hline
+(a,4,c),\ a=2,3,\ c\ge5&\bar f_ah_4f_c&e^{-d}\\
+(2,3,4)&\bar f_2f_3h_4&e^{-3d/32}\\
+2<3<c_1<b_2<c_2<\cdots<b_k<c_k,\ k\ge2
+&\bar f_2f_3h_{c_1}\prod_{i=2}^kh_{b_i}f_{c_i}
+&e^{-[1+(128/5)(k-2)]d}
+\end{array}
+}{}
+The last row with \(c_1=\allowbreak 4\) has the stronger bound
+\(e^{-[5+(128/5)(k-2)]d}\).
+The \(\bar f_a\)-arm is fully inward, each \(f_n\)-arm fully outward,
+and each \(h_n\)-arm has its first edge inward and all later edges
+outward. In the last two rows the first pair is \(f_3h_{c_1}\).
+Directions are fixed by the integer arm list and are the same in
+the low and high parameter domains.
+
+\paragraph{Q95.1 The finite inputs.}
+Use \(A=\allowbreak J+K\), \(T=\allowbreak J-K=\allowbreak A^*\), \(g=\allowbreak K\one\), \(p=\allowbreak 1+g\), \(q=\allowbreak 1-g\),
+\(f_n=\allowbreak A^n\one\), \(\bar f_n=\allowbreak T^n\one\), \(h_n=\allowbreak Tf_{n-1}\), and
+\(\delta_i=\allowbreak \|K^i\one\|^2\), \(d=\allowbreak \delta_1\), as in
+Appendix~\ref{proof:Q5-C064}. In the fixed measure,
+\begin{equation}\tag{Q95.1.1}\label{eq:Q95:1.1}
+\begin{gathered}
+0\le d\le1/3,\quad d^2\le\delta_2\le\theta d,\quad
+\delta_{i+1}\le\theta\delta_i,\quad\|K\|^2\le\theta,\\
+|Kv(x)|\le\|v\|_2,\quad\theta=13/32,\quad\kappa=19/32,\\
+0\le f_n,\bar f_n,h_n\le2,\quad\mu_n=\E f_n=\E\bar f_n\in[0,1],\\
+\quad\E K^{2j}\one=(-1)^j\delta_j,\quad\E K^{2j+1}\one=0.
+\end{gathered}
+\end{equation}
+Each genuine pair satisfies \(f_\ell+h_\ell=\allowbreak 2\mu_{\ell-1}\) and
+\(0\le\allowbreak  f_\ell h_\ell\le\allowbreak 1\), and can be restored by positivity.
+After removal of zero-mass atoms, \(p(x),\allowbreak q(x)\ge\allowbreak \mu(x)>\allowbreak 0\).
+The all-equal labelling makes every tree message positive.
+For \(d=\allowbreak 0\), \(g=\allowbreak 0\) and leaf integration gives one, including when
+\(K\ne0\); divisions below are restricted to \(d>\allowbreak 0\).
+Set \(\tau=\allowbreak d-\delta_2\), \(\beta_1=\allowbreak \beta_2=\allowbreak 0\), and
+\begin{equation}\tag{Q95.1.2}\label{eq:Q95:1.2}
+\begin{gathered}
+\beta_n=\sum_{j=1}^{\lfloor(n-1)/2\rfloor}(-1)^{j-1}\delta_j
+\quad(n\ge3),\quad\tau\le\beta_n\le d,\quad\tau\ge\kappa d,
+\quad\beta_3=\beta_4=d,\\
+S_n=\sum_{j=0}^nK^j\one=f_n+\sum_{i=3}^n\beta_i f_{n-i}.
+\end{gathered}
+\end{equation}
+Under \(K'=\allowbreak -K\), \(g'=\allowbreak -g\), the convolution for \(S'_n\) uses
+\(\bar f_n\). With \(G_m(z)=\allowbreak \sum_{j=\allowbreak 0}^{m-1}z^j\),
+\(\|G_m(K)\|\le\allowbreak 1\) for \(m=\allowbreak 0,\allowbreak 1\) or \(m\ge\allowbreak 3\), whereas
+\(\|G_2\|\le\allowbreak \sqrt{1+\theta}<\allowbreak 6/5\).
+The full-mean exponential inequality of Appendix~\ref{proof:Q5-C081} is
+\begin{equation}\tag{Q95.1.3}\label{eq:Q95:1.3}
+\E e^{8K'V}\le e^{8\E(K'V)+17\|V\|_2^2}
+\end{equation}
+for each real \(V\).
+For a fixed row, write \(k(y)=\allowbreak K(x,\allowbreak y)\). Skewness gives
+\fitdisplay{
+r(x)=Kg(x)=\frac12\E_{y,z}[(k(y)-k(z))K(y,z)].
+}{}
+Since \(|u-v|\le\allowbreak 1-uv\) for \(u,\allowbreak v\in[-1,\allowbreak 1]\),
+\(|r(x)|\le\allowbreak (1-g(x)^2)/2=\allowbreak pq/2\); hence \(f_2=\allowbreak p+r\ge\allowbreak  p^2/2\).
+For every \(5\le\allowbreak  s<\allowbreak t\), the all-index path mean
+\(\mu_n\le\allowbreak 1-83d/32\) for \(n\ge\allowbreak 4\) and the positive finite-difference
+bound \(4\delta_2/(1-\theta^2)\le\allowbreak 1664d/855\) give pair-sum loss
+\([83/16-1664/855]d=\allowbreak [16/5+113/2736]d\).
+AM--GM therefore gives \(h_sf_t\le\allowbreak  e^{R_{st}-16d/5}\), where
+\(R_{st}=\allowbreak \sum_{r=\allowbreak s+1}^tK^r\one\); see Appendix~\ref{proof:Q5-C090}.
+
+\paragraph{Q95.2 Finite propagation retaining the inward arm.}
+Here \(a=\allowbreak 2\) or \(3\). Direct expansion gives
+\(\bar f_2=\allowbreak q+Kg\), \(\E\bar f_2=\allowbreak 1-d\), and
+\(\sigma(\bar f_2)^2=\allowbreak d+\delta_2-d^2\le\allowbreak 36d/25\).
+The orthogonal odd/even decomposition
+\(\bar f_3-\E\bar f_3=\allowbreak -(g+K^3\one)+(Kg+d)\) gives
+\(\sigma(\bar f_3)^2=\allowbreak d-\delta_2+\delta_3-d^2\le\allowbreak  d\).
+Thus \(\sigma(\bar f_a)\le\allowbreak 6\sqrt d/5\).
+Suppose $0\le F\le\bar f_a e^{R-\Gamma}$ and $|R|\le1/2$.
+Set $\mu=\E\bar f_a$ and $D_i=\E B^iR$, with $B=K'=-K$ and $u=B\one=g'$.
+Apply Lemma~\ref{lem:oc:anchored-eighth} with
+$s=\sigma(\bar f_a)/\sqrt d$ and $\varrho=\|R\|/\sqrt d$.
+The first step and its finite continuation are
+\begin{equation}\tag{Q95.2.1}\label{eq:Q95:2.1}
+ T(\bar f_ae^R)\le\bar f_{a+1}+\mu BR+\delta,\qquad
+ \delta=\mu D_0+2\sigma(\bar f_a)\|R\|+\tfrac{12}{5}\|R\|^2,
+\end{equation}
+\begin{equation}\tag{Q95.2.2}\label{eq:Q95:2.2}
+ 0<e^\Gamma T^LF\le Y_L=\bar f_{a+L}+\mu B^LR
+ +\delta\bar f_{L-1}+\mu\sum_{i=1}^{L-1}D_i\bar f_{L-1-i}.
+\end{equation}
+For an identically zero input replace the initial strict inequality by
+a weak one. The moment bound follows by continuity. Use the common
+parameters, here written explicitly with $n=a+L$:
+\[
+\begin{gathered}
+ V=G_{n-1}(B)u+\mu B^{L-1}R,\quad N=BV,\quad
+ \E N=-\beta_{n+1}+\mu D_L,\\
+ c_1=\delta-\beta_n,\qquad
+ c_L=2\delta_++2\mu\sum_{i=1}^{L-1}(D_i)_+-\beta_n\quad(L\ge2).
+\end{gathered}
+\]
+Thus
+\begin{equation}\tag{Q95.2.3}\label{eq:Q95:2.3}
+ \log\E[(pT^LF)^8]\le-8\Gamma+8c_L+8\E N+17\|V\|^2.
+\end{equation}
+The actual messages are positive. At $d=0$ use leaf integration rather
+than the displayed ratios; for a zero input the logarithm is $-\infty$.
+
+\paragraph{Q95.3 Triples \((a,\allowbreak 4,\allowbreak c)\), \(a=\allowbreak 2,\allowbreak 3\), \(c\ge\allowbreak 5\).}
+Take \(F=\allowbreak \bar f_ah_4f_c\). Retaining the negative \(f_2\) term gives
+\fitdisplay{
+h_4+f_c\le2+R-4d+\delta_2(1+p)-\tau f_2,\qquad
+R=\sum_{r=5}^cK^r\one,\quad f_2\ge p^2/2.
+}{}
+Completing the square bounds the excess by
+\(\delta_2+\delta_2^2/(2\tau)\).
+For \(t=\allowbreak \delta_2/d\le\allowbreak \theta\), the function
+\(t+t^2/[2(1-t)]\) increases on \([0,\allowbreak \theta]\), so this is at most
+\(663d/1216\). The pair loss is at least
+\(4201d/1216>\allowbreak 69d/20\), with difference \(29d/6080\). Hence
+\(F\le\allowbreak \bar f_ae^{R-\Gamma}\), \(\Gamma=\allowbreak 69d/20\).
+The interval is consecutive:
+\(R=\allowbreak K^4G_{c-4}(K)g\). Therefore
+\fitdisplay{
+\|R\|\le(6/5)\theta^2\sqrt d=507\sqrt d/2560<\sqrt d/5,
+\qquad |R|<\sqrt d/3\le1/3.
+}{}
+The Taylor bound holds on the whole domain. Alternating interval
+moments give \(D_0\le\allowbreak 0\), \(D_1\le\allowbreak \delta_3<\allowbreak d/6\), and
+\(D_i\le\allowbreak \delta_4<\allowbreak 7d/100\) for each \(i\ge\allowbreak 2\).
+Positive classes are \(i\equiv1,\allowbreak 2\pmod4\), and
+\fitdisplay{
+\sum_{i\ge1}(D_i)_+\le\frac{\delta_3+\delta_4}{1-\theta^2}
+\le\frac{\theta^2}{1-\theta}d=169d/608<7d/25.
+}{}
+These bound the finite Duhamel sums. With
+\(\sigma(\bar f_a)\le\allowbreak 6\sqrt d/5\) and \(\|R\|\le\allowbreak \sqrt d/5\),
+\eqref{eq:Q95:2.1} gives \(\delta_+\le\allowbreak 72d/125\).
+Use \eqref{eq:Q95:2.2} with \(n=\allowbreak a+L\) and the same \(V,\allowbreak N,\allowbreak c_L\)
+to apply \eqref{eq:Q95:2.3}.
+For \(L\ge\allowbreak 2\), \(\|V\|\le\allowbreak (113/100)\sqrt d\), and
+\fitdisplay{
+c_L+\E N\le(144/125+14/25+7/100-19/16)d=1189d/2000.
+}{}
+The total cost is \(264633d/10000\), whereas
+\(8\Gamma=\allowbreak 276000d/10000\), leaving loss \(11367d/10000>\allowbreak d\).
+For \(L=\allowbreak 1\), \(\beta_{a+1}+\beta_{a+2}\ge\allowbreak 51d/32\),
+\(\|V\|\le\allowbreak (7/5)\sqrt d\), and
+\(c_1+\E N\le\allowbreak (72/125+1/6-51/32)d\).
+The cost is \(39767d/1500\), while \(8\Gamma=\allowbreak 41400d/1500\), leaving
+\(1633d/1500>\allowbreak d\). Thus \(\E H^8\le\allowbreak  e^{-d}\) for all these triples.
+
+\paragraph{Q95.4 The triple \((2,\allowbreak 3,\allowbreak 4)\).}
+Use \(F=\allowbreak \bar f_2f_3h_4\). Its finite expansion is
+\fitdisplay{
+f_3+h_4=2-3d+dg-K^4\one,\qquad
+R=dg-K^4\one,\qquad F\le\bar f_2e^{R-3d}.
+}{}
+
+\paragraph{Q95.4.1 The domain \(1/6\le\allowbreak  d\le\allowbreak 1/3\).}
+The row and spectral bounds give \(|K^4\one|\le\allowbreak \theta\sqrt d\le\allowbreak  d\)
+because \(\theta^2<\allowbreak 1/6\). Thus \(R\le\allowbreak 2d\), \(f_3h_4\le\allowbreak  e^{-d}\),
+and \(H\le\allowbreak  e^{-d}p\bar f_{L+2}\).
+Finite convolution and \eqref{eq:Q95:1.3} give
+\(\E[(p\bar f_n)^8]\le\allowbreak  e^{253d/32}\) for \(n\ge\allowbreak 3\):
+at \(n=\allowbreak 3\), the exponent is at most
+\(-16d+17(d+\delta_2)\le\allowbreak 253d/32\), and at \(n\ge\allowbreak 4\), it is at most
+\(-16\kappa d+17d=\allowbreak 15d/2\le\allowbreak 253d/32\).
+Consequently \(\E H^8\le\allowbreak  e^{-3d/32}\) throughout this high domain.
+
+\paragraph{Q95.4.2 The first step for \(0<\allowbreak d\le\allowbreak 1/6\).}
+Put \(\mu=\allowbreak \E\bar f_2=\allowbreak 1-d\). Parity gives
+\(\E R=\allowbreak -\delta_2\) and \(\E R^2=\allowbreak \delta_4+d^3\).
+The pointwise range \(|R|\le\allowbreak  d+\theta\sqrt d<\allowbreak 1/3\) permits the same
+Taylor estimate. For \(t=\allowbreak \delta_2/d\in[d,\allowbreak \theta]\),
+\(\sigma(\bar f_2)^2=\allowbreak (1+t-d)d\) and
+\(\E R^2\le\allowbreak (\theta^2t+d^2)d\), so
+\fitdisplay{
+\delta/d\le-(1-d)t+2\sqrt{1+t-d}\sqrt{\theta^2t+d^2}
++(12/5)(\theta^2t+d^2).
+}{}
+Apply \(2uv\le\allowbreak  u^2/3+3v^2\). The resulting bound is
+\fitdisplay{
+1/3-d/3+(27/5)d^2+t[-2/3+d+(27/5)\theta^2].
+}{}
+The coefficient of \(t\) is positive, its value at \(d=\allowbreak 0\) being
+\(3449/15360\). At \(t=\allowbreak \theta\), the expression increases in \(d\)
+because \(\theta-1/3=\allowbreak 7/96>\allowbreak 0\). At \(d=\allowbreak 1/6\), it is
+\(1/16+59319/163840+7/576+3/20<\allowbreak 3/5\), with positive margin
+\(19601/1474560\). Hence \(\delta_+\le\allowbreak 3d/5\).
+
+\paragraph{Q95.4.3 The signed propagation means.}
+For \(D_i=\allowbreak \E K'^iR\), the first values are
+\fitdisplay{
+\begin{gathered}
+D_0=-\delta_2,\quad D_1=d^2,\quad D_2=\delta_3,\quad
+D_3=-d\delta_2,\quad D_4=-\delta_4,\\
+D_5=d\delta_3,\qquad D_6=\delta_5.
+\end{gathered}
+}{}
+Positive contributions continue in precisely two classes:
+\(i=\allowbreak 1+4j\) contributes \(d\delta_{1+2j}\), and \(i=\allowbreak 2+4j\) contributes
+\(\delta_{3+2j}\). Therefore
+\fitdisplay{
+\sum_{i\ge1}(D_i)_+\le\frac{d^2+\delta_3}{1-\theta^2}
+\le1019d/2565<2d/5.
+}{}
+For \(i\ge\allowbreak 5\), positive terms are at most
+\(\max(d\delta_3,\allowbreak \delta_5)<\allowbreak d/36\), since \(d\le\allowbreak 1/6\) and
+\(\theta^2<\allowbreak 1/6\). Also \(D_2<\allowbreak d/6\), while \(D_3,\allowbreak D_4\le\allowbreak 0\).
+The positive partial sum used for \(L=\allowbreak 2\) is \(d^2\le\allowbreak  d/6\), and
+for \(L=\allowbreak 3,\allowbreak 4\) it is \(d^2+\delta_3\le\allowbreak  d/3\).
+
+\paragraph{Q95.4.4 Finite predecessors for every \(L\ge\allowbreak 2\).}
+Here \(n=\allowbreak L+2\), and
+\fitdisplay{
+V=Q_L(K')g',\qquad Q_L(z)=G_{L+1}(z)-\mu d z^{L-1}-\mu z^{L+2}.
+}{}
+Write \(x=\allowbreak -z^2\in[0,\allowbreak \theta]\), \(\gamma=\allowbreak \mu d\in[0,\allowbreak 5/36]\),
+and \(\mu\in[5/6,\allowbreak 1]\). The real coordinates below are nonnegative.
+For \(L=\allowbreak 2\),
+\(\Re Q=\allowbreak 1-x-\mu x^2\in[0,\allowbreak 1-x]\) and
+\(\Im Q=\allowbreak (1-\gamma)\sqrt x\); hence
+\(|Q|^2\le\allowbreak (1-x)^2+x\le\allowbreak 1\).
+For \(L=\allowbreak 3\),
+\fitdisplay{
+\begin{gathered}
+\Re Q=1-(1-\gamma)x\le1-31x/36,\\
+\Im Q=\sqrt x(1-x-\mu x^2)\in[0,\sqrt x(1-x)],\\
+|Q|^2-1\le-13x/18-1631x^2/1296+x^3\le0\quad(x\le1/2).
+\end{gathered}
+}{}
+For \(L=\allowbreak 4\), put \(R_*=\allowbreak 1-x+x^2+x^3\). Then
+\(\Re Q=\allowbreak 1-x+x^2+\mu x^3\le\allowbreak  R_*\) and
+\(\Im Q\le\allowbreak \sqrt x(1-31x/36)\).
+Since \(R_*^2=\allowbreak 1-2x+3x^2-x^4+2x^5+x^6\),
+\fitdisplay{
+|Q|^2-1\le-x+(23/18)x^2+(961/1296)x^3-x^4+2x^5+x^6.
+}{}
+Drop \(-x^4\) and divide by \(x\). On \(x\le\allowbreak 1/2\), the positive
+terms sum to at most \(23/36+961/5184+1/8+1/32=\allowbreak 5083/5184<\allowbreak 1\).
+For \(L=\allowbreak 5\),
+\fitdisplay{
+\begin{gathered}
+\Re Q=1-x+(1-\gamma)x^2\le1-x+x^2,\\
+\Im Q=\sqrt x(1-x+x^2+\mu x^3)\le\sqrt xR_*,\\
+|Q|^2-1\le-x+x^2+x^3+x^4-x^5+2x^6+x^7.
+\end{gathered}
+}{}
+After \(-x^5\) is dropped and division by \(x\), the positive terms
+are at most \(1/2+1/4+1/8+1/16+1/64=\allowbreak 61/64<\allowbreak 1\).
+For every \(L\ge\allowbreak 6\), finite geometric summation and
+\((1+x)^{-1/2}\le\allowbreak 1-x/2+3x^2/8\) give
+\fitdisplay{
+|Q_L|\le1-x/2+3x^2/8+x^{7/2}+(5/36)x^{5/2}+x^4.
+}{}
+Divide the positive error by \(x\) and use \(x\le\allowbreak 5/12\),
+\(\sqrt x\le\allowbreak 2/3\). Its four terms are at most
+\(5/32+25/216+25/648+125/1728=\allowbreak 1985/5184<\allowbreak 2/5\).
+Thus \(|Q_L|\le\allowbreak 1-x/10\le\allowbreak 1\). At \(x=\allowbreak 0\), equality holds.
+For \(L=\allowbreak 1\), separately, \(Q_1=\allowbreak 1-\gamma+z-\mu z^3\), and
+\(|Q_1|^2\le\allowbreak 1+x(1+x)^2\le\allowbreak 1+26325/32768<\allowbreak 29/16\).
+
+\paragraph{Q95.4.5 The low-domain moment bounds.}
+Use \(\Gamma=\allowbreak 3d\), the constants in Q95.2 and \(\|V\|^2\le\allowbreak  d\)
+for \(L\ge\allowbreak 2\). For \(L=\allowbreak 2\),
+\(c_L+\E N\le\allowbreak (6/5+1/3+1/6-19/16)d=\allowbreak 41d/80\), giving exponent
+at most \(-29d/10\). For \(L=\allowbreak 3,\allowbreak 4\), the positive partial sum is
+at most \(d/3\) and \(D_L\le\allowbreak 0\), so
+\(c_L+\E N\le\allowbreak (6/5+2/3-19/16)d=\allowbreak 163d/240\), giving \(-47d/30\).
+For every \(L\ge\allowbreak 5\),
+\(c_L+\E N\le\allowbreak (6/5+4/5+1/36-19/16)d=\allowbreak 121d/144\), giving \(-5d/18\).
+For \(L=\allowbreak 1\), \(\beta_3+\beta_4=\allowbreak 2d\), \(D_1=\allowbreak d^2\),
+\(c_1+\E N\le\allowbreak -37d/30\), and the variance cost is at most \(493d/16\).
+The resulting exponent is at most \(-733d/240\).
+The low domain therefore gives \(\E H^8\le\allowbreak  e^{-5d/18}\).
+It meets the high domain at \(d=\allowbreak 1/6\) with the same
+\(F=\allowbreak \bar f_2f_3h_4\). The zero boundary and positive restoration
+of decorations give \(\E H^8\le\allowbreak  e^{-3d/32}\) for every \(L\ge\allowbreak 1\).
+
+\paragraph{Q95.5.1 Finite tails for the first short pair three.}
+Let \(2<\allowbreak 3<\allowbreak c_1<\allowbreak b_2<\allowbreak c_2<\allowbreak \cdots<\allowbreak b_k<\allowbreak c_k\), \(k\ge\allowbreak 2\), and
+\fitdisplay{
+F=\bar f_2f_3h_{c_1}\prod_{i=2}^kh_{b_i}f_{c_i},\qquad
+S=\sum_{i=2}^k\sum_{r=b_i+1}^{c_i}K^r\one.
+}{}
+Every later \(b_i\ge\allowbreak 5\), so its pair has loss \(16d/5\).
+The finite zero-one mask \(S\) has first possible exponent \(c_1+2\),
+and \(\|S\|^2\le\allowbreak \theta^{b_2}C_*d\),
+\(|S|^2\le\allowbreak \theta^{b_2-1}C_*d\), where
+\(C_*=\allowbreak 32768/16245<\allowbreak 100/49\) is \eqref{eq:L90:masknorm}.
+Since \(\theta^3<\allowbreak 7/100\), \(\sqrt\theta<\allowbreak 13/20\), and
+\(\theta^5C_*<\allowbreak 9/400\), we have
+\fitdisplay{
+\begin{array}{c|c|c|c}
+c_1&b_2\text{ lower}&\|S\|/\sqrt d\text{ upper}&|S|/\sqrt d\text{ upper}\\\hline
+4&5&3/20&1/4\\
+5&6&1/10&3/20\\
+\ge6&\ge7&7/100&1/10
+\end{array}
+}{}
+For instance \(\theta^6C_*<\allowbreak (7/100)^2(100/49)=\allowbreak 1/100\), and the next
+norm is below \(13/200<\allowbreak 7/100\); pointwise bounds shift the power by one.
+In all cases \(\E S\le\allowbreak \delta_4/(1-\theta^2)<\allowbreak d/12\) and
+\(D_1(S)<\allowbreak d/30\). The complete positive \(D_i(S)\) tails are bounded
+respectively by \(d/5,\allowbreak d/8,\allowbreak d/12\). For exponents \(r\ge\allowbreak 6\), the first
+four positive moment indices are \(\delta_5,\allowbreak \delta_4,\allowbreak \delta_5,\allowbreak \delta_6\),
+giving \(\theta^3d/(1-\theta)^2=\allowbreak 2197d/11552<\allowbreak d/5\).
+For \(r\ge\allowbreak 7\), they are \(\delta_5,\allowbreak \delta_6,\allowbreak \delta_5,\allowbreak \delta_6\),
+giving \(2\theta^4C_*d<\allowbreak (1/18)(100/49)d=\allowbreak 50d/441<\allowbreak d/8\).
+For \(r\ge\allowbreak 8\), they are \(\delta_5,\allowbreak \delta_6,\allowbreak \delta_7,\allowbreak \delta_6\),
+giving \(\theta^4d/(1-\theta)^2=\allowbreak 28561d/369664<\allowbreak d/12\).
+For each \(i\ge\allowbreak 2\), the individual bounds are \(d/12,\allowbreak d/30,\allowbreak d/72\),
+respectively. The middle bound follows from
+\(\delta_5/(1-\theta^2)<\allowbreak (1/36)/(5/6)d=\allowbreak d/30\);
+the last from \(\delta_6/(1-\theta^2)<\allowbreak (1/90)/(5/6)d=\allowbreak d/75<\allowbreak d/72\).
+
+\paragraph{Q95.5.2 The first long arm \(c_1=\allowbreak 4\).}
+Take \(R_0=\allowbreak dg-K^4\one\), \(R=\allowbreak R_0+S\), and
+\(\Gamma=\allowbreak [3+(16/5)(k-1)]d\). First let \(d\le\allowbreak 1/6\).
+The pointwise range is less than
+\(1/3+(1/4)\sqrt{1/6}<\allowbreak 1/2\), so the same Taylor bound applies.
+Adding \(S\) increases the first-step constant by at most
+\fitdisplay{
+(\E S)_++2\sigma(\bar f_2)\|S\|
++(12/5)(2\|R_0\|\|S\|+\|S\|^2).
+}{}
+Since \(\|R_0\|^2<\allowbreak d/10<\allowbreak d/9\) and
+\(\sigma(\bar f_2)\le\allowbreak 6\sqrt d/5\),
+\fitdisplay{
+\delta_+/d\le3/5+1/12+9/25+(12/5)(1/10+9/400)
+=1003/750<27/20.
+}{}
+The positive \(D_i\) tail is at most \(3d/5\), and each
+\(D_L\le\allowbreak  d/4\) for \(L\ge\allowbreak 2\).
+The base \(Q_L\) of Q95.4.4 is a contraction for \(L\ge\allowbreak 2\); adding
+the propagated \(S\) gives \(\|V\|\le\allowbreak (11/10)\sqrt d\).
+For \(k=\allowbreak 2,\allowbreak L\ge\allowbreak 2\),
+\(c_L+\E N\le\allowbreak (27/10+6/5-19/16+1/4)d=\allowbreak 237d/80\).
+The cost apart from \(-8\Gamma\) is \(4427d/100\), whereas
+\(8\Gamma=\allowbreak 4960d/100\); the net loss is \(533d/100>\allowbreak 5d\).
+For \(L=\allowbreak 1\), \(\|Q_1g'\|\le\allowbreak (27/20)\sqrt d\); adding \(S\) gives
+\(\|V\|\le\allowbreak 3\sqrt d/2\). Also
+\(D_1\le\allowbreak  d^2+d/30\le\allowbreak  d/5\), \(\beta_3+\beta_4=\allowbreak 2d\), and
+\(c_1+\E N\le\allowbreak (27/20+1/5-2)d=\allowbreak -9d/20\).
+The net loss for \(k=\allowbreak 2\) is \(299d/20>\allowbreak 5d\).
+For \(d\ge\allowbreak 1/6\), the first pair is at most \(e^{-d}\), while
+\(|S|\le\allowbreak (1/4)\sqrt d\le\allowbreak 5d/8\). The pair product is at most
+\(e^{-[3/8+(16/5)(k-1)]d}\).
+The bare-path cost \(253d/32\) leaves loss \(3311d/160>\allowbreak 5d\) at \(k=\allowbreak 2\).
+In all cases an additional pair changes only \(\Gamma\). Therefore
+\fitdisplay{
+\E H^8\le e^{-[5+(128/5)(k-2)]d}\qquad(c_1=4,\ k\ge2,\ L\ge1).
+}{}
+
+\paragraph{Q95.5.3 The exact base for \(c=\allowbreak c_1\ge\allowbreak 5\) and \(d\le\allowbreak 1/32\).}
+Set \(m=\allowbreak c-3\ge\allowbreak 2\), \(B=\allowbreak \beta_{c-1}\), \(\mu=\allowbreak 1-d\), and
+\fitdisplay{
+W=\sum_{r=4}^cK^r\one=K^3G_m(K)g,\qquad
+R_0=Bg-W,\qquad\Gamma_0=d+\beta_c+B.
+}{}
+The finite difference gives \(f_3+h_c\le\allowbreak 2-\Gamma_0+R_0\), so
+\(F\le\allowbreak \bar f_2e^{R_0+S-\Gamma_0-(16/5)(k-1)d}\).
+For \(c=\allowbreak 5\), \(B=\allowbreak d\) and \(\Gamma_0=\allowbreak 3d-\delta_2\ge\allowbreak 83d/32\).
+For \(c\ge\allowbreak 6\), \(\Gamma_0\ge\allowbreak  d+2\tau\ge\allowbreak 35d/16\).
+Consecutive alternating moments give \(\E W\ge\allowbreak 0\) and \(\E(gW)\ge\allowbreak 0\).
+More precisely \(\E W=\allowbreak \delta_2\) for \(c=\allowbreak 5\), while
+\(\E W\ge\allowbreak \delta_2-\delta_3\ge\allowbreak \kappa\delta_2\) for \(c\ge\allowbreak 6\).
+Thus \(\E R_0=\allowbreak -\delta_2\) or at most \(-\kappa\delta_2\), respectively,
+and \(\E R_0^2\le\allowbreak  B^2d+\E W^2\). For \(t=\allowbreak \delta_2/d\),
+\fitdisplay{
+\E R_0^2/d\le
+\begin{cases}\theta^2(1+\theta)t+d^2,&c=5,\\
+\theta^2t+d^2,&c\ge6.
+\end{cases}
+}{}
+For \(c=\allowbreak 5\), \(\E R_0^2<\allowbreak d/10\), since
+\(\theta^3(1+\theta)+1/1024=\allowbreak 99889/1048576<\allowbreak 1/10\).
+Also \(\|W\|^2=\allowbreak \delta_4+\delta_5\le\allowbreak 98865d/1048576<\allowbreak 25d/256\),
+so \(\|W\|<\allowbreak 5\sqrt d/16\).
+For \(c\ge\allowbreak 6\), the variance is below \(9d/100\), using
+\(\theta^3<\allowbreak 7/100\) and \(1/1024<\allowbreak 1/100\).
+Including \(S\), the pointwise range is at most
+\(d+(51/80)\sqrt d<\allowbreak 1/32+51/400=\allowbreak 127/800<\allowbreak 1/3\).
+
+Both base first-step constants have \((\delta_0)_+\le\allowbreak 3d/5\).
+For \(c\ge\allowbreak 6\), apply \(2uv\le\allowbreak  u^2/3+3v^2\). The bound divided by
+\(d\) is
+\fitdisplay{
+1/3-d/3+(27/5)d^2+t[1/3-(1-d)\kappa+(27/5)\theta^2].
+}{}
+Its \(t\)-coefficient is positive. At \(t=\allowbreak \theta\), the linear
+\(d\)-coefficient \(\kappa\theta-1/3\) is negative; dropping it and
+using \(d^2\le\allowbreak 1/1024\) yields \(292389/491520<\allowbreak 3/5\), with margin
+\(2523/491520\).
+For \(c=\allowbreak 5\), the corresponding expression is
+\fitdisplay{
+1/3-d/3+(27/5)d^2+t[-2/3+d+(27/5)\theta^2(1+\theta)].
+}{}
+It increases in \(t\). At \(t=\allowbreak \theta\), the linear coefficient is
+\(7/96>\allowbreak 0\); at \(d=\allowbreak 1/32\), the bound is
+\(9109889/15728640<\allowbreak 3/5\), with margin \(327295/15728640\).
+For the base signed means, \(-W\) contributes positive classes
+\(i\equiv2,\allowbreak 3\pmod4\), totaling at most
+\((\delta_3+\delta_4)/(1-\theta^2)\).
+The \(Bg\) term contributes class \(i\equiv1\pmod4\), at most
+\(Bd/(1-\theta^2)\). Hence
+\fitdisplay{
+\sum_{i\ge1}(D_i(R_0))_+\le169d/608+32d/855<d/3.
+}{}
+Also \(D_1(R_0)\le\allowbreak  Bd\le\allowbreak  d^2\), and every
+\(D_i(R_0)\le\allowbreak \delta_3<\allowbreak d/6\) for \(i\ge\allowbreak 2\).
+At \(i=\allowbreak 3\), the \(Bg\) term is negative; at \(i=\allowbreak 5\), dropping the
+negative \(W\) term leaves \(B\delta_3\le\allowbreak \delta_3\).
+
+\paragraph{Q95.5.4 A finite predecessor for all \(c\ge\allowbreak 5,\allowbreak L\ge\allowbreak 2\) on the small domain.}
+Put \(z=\allowbreak K'\) and \(\gamma=\allowbreak \mu B\le\allowbreak 1/32\). The base predecessor is
+\fitdisplay{
+Q_{L,c}(z)=G_{L+1}(z)-\gamma z^{L-1}-\mu z^{L+2}G_m(-z).
+}{}
+Write \(G_m(-z)=\allowbreak U-zV\). For \(m\ge\allowbreak 2\), both \(U,\allowbreak V\) are finite
+alternating sums in \([1-x,\allowbreak 1]\); also \(x\le\allowbreak \theta<\allowbreak 1/2\) and
+\(\mu\ge\allowbreak 31/32\).
+For \(L=\allowbreak 2\), the real coordinate is positive and
+\(1-x-\mu x^2U\le\allowbreak 1-x-(31/64)x^2\).
+The imaginary coordinate \(\sqrt x[1-\gamma+\mu x^2V]\) is positive
+and at most \(\sqrt x(1+x^2)\). Thus
+\fitdisplay{
+|Q|^2-1\le-x+(1/32)x^2+(95/32)x^3+(1/4)x^4+x^5.
+}{}
+After division by \(x\), the positive terms sum to at most
+\(109/128<\allowbreak 1\) on \(x\le\allowbreak 1/2\).
+For \(L=\allowbreak 3\), \(|G_4|\le\allowbreak (1-x)(1+x/2)=\allowbreak 1-x/2-x^2/2\).
+Adding \(\gamma x\) and \((6/5)x^{5/2}\) gives
+\(|Q|\le\allowbreak 1-15x/32+3x^2/10\le\allowbreak 1-51x/160\le\allowbreak 1\).
+For \(L=\allowbreak 4\), \(|G_5|\le\allowbreak 1-x/2+x^2/2\), since the squared
+difference is \(x^2(1+2x-3x^2)/4\ge\allowbreak 0\). Adding
+\(\gamma x^{3/2}\) and \((6/5)x^3\) gives
+\(|Q|\le\allowbreak 1-23x/48+x^2/2+(6/5)x^3\le\allowbreak 1-x/16\), using
+\(x/2+(6/5)x^2\le\allowbreak 5/12\) for \(x\le\allowbreak 5/12\).
+For every \(L\ge\allowbreak 5\), finite geometric summation and the negative
+third derivative of \((1+x)^{-1/2}\) give
+\fitdisplay{
+|G_{L+1}|\le\frac{1+x^3}{\sqrt{1+x}}\le1-x/2+3x^2/8+x^3.
+}{}
+The extra terms are at most \(x^2/32+(6/5)x^{7/2}\).
+After division by \(x\), use \(x\le\allowbreak 5/12\), \(\sqrt x\le\allowbreak 2/3\) to bound
+\((13/32)x+x^2+(6/5)x^{5/2}\le\allowbreak 185/384<\allowbreak 1/2\).
+Therefore \(|Q|\le\allowbreak 1-7x/384\le\allowbreak 1\); equality at \(x=\allowbreak 0\) is direct.
+For \(L=\allowbreak 1\), the safe norm bounds are \(31/20\) for \(c=\allowbreak 5\) and
+\(3/2\) for \(c\ge\allowbreak 6\). These use \(\|G_2\|\le\allowbreak 6/5\),
+\(\gamma\le\allowbreak 1/32\), and \(\|W\|/\sqrt d<\allowbreak 5/16\) or
+\(\theta^{3/2}<\allowbreak (13/32)(13/20)\), respectively.
+
+\paragraph{Q95.5.5 Small-domain moment bounds.}
+For \(c=\allowbreak 5\), \(\|R_0\|<\allowbreak \sqrt d/3\), \(\|S\|\le\allowbreak \sqrt d/10\).
+The increase of \(\delta/d\) is at most
+\(1/12+6/25+(12/5)(1/15+1/100)=\allowbreak 761/1500\), giving
+\(\delta_+\le\allowbreak 9d/8\).
+The positive \(D_i\) tail is at most \(d/3+d/8=\allowbreak 11d/24\), and
+\(D_L\le\allowbreak  d/6+d/30=\allowbreak d/5\) for \(L\ge\allowbreak 2\).
+The predecessor bound is \(\|V\|\le\allowbreak (16/15)\sqrt d\), so
+\(c_L+\E N\le\allowbreak 523d/240\).
+The cost is \(523d/30+4352d/225\); for \(k=\allowbreak 2\),
+\(8\Gamma\ge\allowbreak 927d/20\), leaving \(17234d/1800>\allowbreak 9d\).
+At \(L=\allowbreak 1\), \(\|V\|\le\allowbreak 33\sqrt d/20\) and
+\(c_1+\E N\le\allowbreak (9/8+1/32+1/30-2)d=\allowbreak -389d/480\);
+the net loss is \(7861d/1200>\allowbreak 6d\).
+
+For \(c\ge\allowbreak 6\), \(\|R_0\|<\allowbreak 3\sqrt d/10\), \(\|S\|\le\allowbreak 7\sqrt d/100\),
+and
+\fitdisplay{
+\delta\le[3/5+1/12+21/125+(12/5)(21/500+49/10000)]d<d.
+}{}
+The positive tail is at most \(d/3+d/12=\allowbreak 5d/12\), while
+\(D_L\le\allowbreak  d/6+d/72<\allowbreak d/5\) for \(L\ge\allowbreak 2\).
+Now \(\|V\|\le\allowbreak 21\sqrt d/20\) and \(c_L+\E N\le\allowbreak 443d/240\), with
+total cost \(443d/30+7497d/400\). Since \(8\Gamma\ge\allowbreak 431d/10\),
+the net loss is \(11509d/1200>\allowbreak 9d\).
+At \(L=\allowbreak 1\), \(\|V\|\le\allowbreak 8\sqrt d/5\) and
+\(c_1+\E N\le\allowbreak (1+1/32+1/30-2)d=\allowbreak -449d/480\), leaving
+\(2119d/300>\allowbreak 7d\). Additional pairs increase only \(8\Gamma\), by
+\(128d/5\) for each pair.
+
+\paragraph{Q95.5.6 The domain \(d\ge\allowbreak 1/32\).}
+Here \(\sqrt d\le\allowbreak \sqrt{32}\,\allowbreak d<\allowbreak (23/4)d\).
+For \(c=\allowbreak 5\),
+\fitdisplay{
+|R_0+S|\le d+[(6/5)\theta+3/20]\sqrt d
+\le d+(51/80)(23/4)d=1493d/320.
+}{}
+At \(k=\allowbreak 2\), \(\Gamma\ge\allowbreak 927d/160\), so the pair product is at most
+\(e^{-361d/320}\). Multiplying the bare path \(p\bar f_{L+2}\) and
+using its \(253d/32\) cost leaves \(179d/160>\allowbreak d\), for all \(L\ge\allowbreak 1\).
+For \(c\ge\allowbreak 6\), use \(\|G_m\|\le\allowbreak 1\), obtaining
+\(|R_0+S|\le\allowbreak  d+(\theta+1/10)\sqrt d\).
+Even \(\sqrt d<\allowbreak 6d\) gives \(|R_0+S|\le\allowbreak 323d/80\).
+At \(k=\allowbreak 2\), \(\Gamma\ge\allowbreak 431d/80\), so the pair product is at most
+\(e^{-27d/20}\); the bare-path cost leaves \(463d/160>\allowbreak 2d\).
+Both domains include \(d=\allowbreak 1/32\) and keep the same direction. Thus
+\fitdisplay{
+\boxed{\E H^8\le e^{-[1+(128/5)(k-2)]d}
+\qquad(c_1\ge5,\ k\ge2,\ L\ge1).}
+}{}
+Together with Q95.5.2, the weaker bound holds for every \(c_1\ge\allowbreak 4\).
+
+\paragraph{Q95.6 Relation to the ordinary rows.}
+Appendix~\ref{proof:Q5-C093} proves the direction
+\(\bar f_a\prod_i h_{b_i}f_{c_i}\), with bounds
+\(e^{-[10+(128/5)(k-3)]d}\) for \(a=\allowbreak 2,\allowbreak b_1=\allowbreak 3,\allowbreak k\ge\allowbreak 3\),
+\(e^{-[17+(128/5)(k-2)]d}\) for \(a=\allowbreak 2,\allowbreak 3,\allowbreak b_1=\allowbreak 4,\allowbreak k\ge\allowbreak 2\), and
+\(e^{-[1+(128/5)(k-1)]d}\) for \(a\ge\allowbreak 2,\allowbreak b_1\ge\allowbreak 5,\allowbreak k\ge\allowbreak 1\).
+Q95.3 supplies \(b_1=\allowbreak 4,\allowbreak k=\allowbreak 1\), Q95.4 supplies \((2,\allowbreak 3,\allowbreak 4)\), and
+Q95.5 supplies \(b_1=\allowbreak 3,\allowbreak k\ge\allowbreak 2\) with first pair \(f_3h_{c_1}\).
+These integer ranges leave only the triple \((2,\allowbreak 3,\allowbreak c)\), \(c\ge\allowbreak 5\),
+for the calculation of Q5-C097.
+For a list belonging to more than one row, choose one row from its
+integer structure and retain that row's full direction and moment bound.
+Positive comparison restores every genuine equal pair at its vertex.
+Replacing \(K\) by \(-K\) reverses all arms, connector, receiving
+unit arm and decorations together, with the fixed measure and
+all \(\delta_i\) preserved.

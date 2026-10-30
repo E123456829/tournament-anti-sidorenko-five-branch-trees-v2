@@ -1,0 +1,466 @@
+\subsection{The genuine $f_2$ reference for terminal $(1,\allowbreak 2,\allowbreak 3)$, $L\ge\allowbreak 2$}\label{proof:Q5-C104}
+% Source Q5-C104: lines 22--635.
+\paragraph{Q104.1 Statement and original directions}\label{part:Q104.1}
+On a nonempty finite probability space $(X,\allowbreak \mu)$ let $K$ be real skew
+with $|K(x,\allowbreak y)|\le\allowbreak 1$. Every operator, norm, expectation, adjoint and
+spectral decomposition uses the same original $\mu$. Put
+\fitdisplay{
+Jv=(\E v)\one,\quad A=J+K,\quad T=J-K=A^*,\quad
+ g=K\one,\quad p=1+g,\quad q=1-g,\quad d=\E g^2,
+}{}
+\fitdisplay{
+f_n=A^n\one,\quad\bar f_n=T^n\one,\quad h_n=Tf_{n-1},
+\quad\delta_j=\|K^j\one\|_2^2,\quad\theta=13/32,\quad\kappa=19/32.
+}{}
+For the terminal residual $(1,\allowbreak 2,\allowbreak 3)$, fix at every $L\ge\allowbreak 2$ the same actual
+message $F=\allowbreak qf_2h_3$, and put $X_L=\allowbreak T^L(E_tF)$.
+The unit terminal arm points inward, the two-edge arm outward, and the
+three-edge arm has first edge inward and the other two outward.
+Every original connector edge points terminal-to-receiver.
+The receiver has its actual outward two-edge arm, producing the genuine
+reference $f_2$. Arbitrary original equal pairs at the terminal and
+receiver have products $E_t,\allowbreak E_o$, each pair using $f_\ell h_\ell\le\allowbreak 1$.
+For this predetermined direction,
+\fitdisplay{
+\E[E_of_2X_L^4]\le1-d/500\le1\qquad(L\ge2).
+\label{eq:Q104:1.1}
+}{Q104.1.1}
+The fourth power copies only the terminal branch in the analytic moment;
+the receiving arm occurs once. The statement excludes $L=\allowbreak 1$, other odd
+terminal tables and a generic real-input reference-fourth map.
+Global reversal gives the $\bar f_2/A$ version with every edge reversed.
+The original finite framework gives
+\fitdisplay{
+0\le d\le1/3,\quad\|K\|^2\le\theta,\quad|Kv(x)|\le\|v\|_2,
+\quad d^2\le\delta_2\le\theta d,\quad\delta_{j+1}\le\theta\delta_j,
+\quad\delta_3\ge\delta_2^2/d\quad(d>0).
+\label{eq:Q104:1.2}
+}{Q104.1.2}
+It also supplies path positivity, means at most one and the equal-pair
+comparison. The necessary square identities are rederived below.
+Delete zero-mass atoms. Then $p,\allowbreak q\ge\allowbreak \mu(x)>\allowbreak 0$, and the all-equal
+labeling makes each actual finite-tree message strictly positive.
+At $d=\allowbreak 0$, $g=\allowbreak 0$ though $K$ may be nonzero; leaf integration gives
+all actual messages one. Henceforth take $d>\allowbreak 0$.
+
+\paragraph{Q104.2 A genuine-reference coefficient and exact moment identity}\label{part:Q104.2}
+The original row identity
+$2Kg(x)=\allowbreak \E_{y,\allowbreak z}[(K(x,\allowbreak y)-K(x,\allowbreak z))K(y,\allowbreak z)]$ and
+$|a-b|\le\allowbreak 1-ab$ for $a,\allowbreak b\in[-1,\allowbreak 1]$ give $|Kg|\le\allowbreak  pq/2$.
+Consequently
+\fitdisplay{
+0\le f_2=p+Kg\le w(q):=2-q^2/2,\qquad\E f_2=1-d.
+\label{eq:Q104:2.1}
+}{Q104.2.1}
+Suppose $Y\ge\allowbreak 0$, $u=\allowbreak \E Y$, and
+\fitdisplay{
+0\le u\le1-d,\quad
+Y+u\le q+1+\eta\sqrt d-(3/2-q/4)d,\quad\eta^2\le4/3.
+\label{eq:Q104:2.2}
+}{Q104.2.2}
+Then the pointwise coefficient obeys
+\fitdisplay{
+f_2[(Y+u)^2+2u^2]\le21/2.
+\label{eq:Q104:2.3}
+}{Q104.2.3}
+Replacing a negative $\eta$ by its absolute value enlarges the upper,
+so take $\eta\ge\allowbreak 0$. Set $t=\allowbreak \sqrt d$, $y=\allowbreak q+1$ and $B=\allowbreak 3/2-q/4>\allowbreak 0$.
+The upper for $Y+u$ is nonnegative. Square it, discard the negative
+cubic and use $t^4\le\allowbreak  t^2/3$ to get
+\fitdisplay{
+(Y+u)^2+2u^2\le y^2+2+2\eta yt-\mathcal A(q)t^2,
+}{}
+\fitdisplay{
+\mathcal A(q)=2yB+10/3-\eta^2-B^2/3
+\ge-25q^2/48+11q/4+17/4=: \mathcal A_0(q)>0.
+}{}
+The identity $9-w(q)(y^2+2)=\allowbreak (q-1)^2(q^2+4q+6)/2\ge\allowbreak 0$ and
+completion of the $t$ square reduce the claim to
+$3\mathcal A_0\ge\allowbreak (8/3)wy^2$. Multiplying by $48$ gives
+\fitdisplay{
+P(q)=64q^4+128q^3-267q^2-116q+356\ge0\quad(0\le q\le2).
+}{}
+For $q\le\allowbreak 3/4$, $P\ge\allowbreak 356-267(9/16)-87>\allowbreak 0$.
+For $3/4\le\allowbreak  q\le\allowbreak 1$, $64q^4+128q^3\ge\allowbreak 132q^2$, so
+$P\ge\allowbreak 356-135-116=\allowbreak 105$.
+For $q\ge\allowbreak 1$, write $v=\allowbreak q-1\ge\allowbreak 0$:
+$P=\allowbreak 165-10v+501v^2+384v^3+64v^4>\allowbreak 0$, since
+$165-10v+501v^2\ge\allowbreak 165-100/2004>\allowbreak 0$.
+The exact fourth identity is
+\fitdisplay{
+\E[f_2Y^4]=(1-d)u^4+4u^3\operatorname{Cov}(f_2,Y)
++\E[f_2(Y-u)^2((Y+u)^2+2u^2)].
+\label{eq:Q104:2.4}
+}{Q104.2.4}
+Therefore \eqref{eq:Q104:2.2} implies
+\fitdisplay{
+\E[f_2Y^4]\le(1-d)u^4+4u^3\operatorname{Cov}(f_2,Y)
++(21/2)\operatorname{Var}Y.
+\label{eq:Q104:2.5}
+}{Q104.2.5}
+The kernel and adjoint remain at the original measure.
+
+\paragraph{Q104.3 Finite convolution and positive square propagation}\label{part:Q104.3}
+Put $z=\allowbreak -K$, $g'=\allowbreak -g=\allowbreak z\one$ and $\mathsf X=\allowbreak -z^2$.
+At a rotation frequency $z=\allowbreak i\sqrt x$, $x\in[0,\allowbreak \theta]$.
+The spectral measure at $g'$ has mass $d$ and moments $\delta_{j+1}$.
+Write $r=\allowbreak Kg$, $s=\allowbreak K^2g=\allowbreak \mathsf Xg'$, so
+$\E r=\allowbreak -d$, $\E s=\allowbreak 0$, $\E(gs)=\allowbreak -\delta_2$.
+Let $G_n(z)=\allowbreak \sum_{j=\allowbreak 0}^{n-1}z^j$, $G_0=\allowbreak 0$, $\beta_1=\allowbreak \beta_2=\allowbreak 0$, and
+$\beta_n=\allowbreak \sum_{j=\allowbreak 1}^{\lfloor(n-1)/2\rfloor}(-1)^{j-1}\delta_j$ for $n\ge\allowbreak 3$.
+Finite induction using $T=\allowbreak J+z$ gives
+\fitdisplay{
+S'_n=\sum_{j=0}^nz^j\one=\bar f_n+\sum_{j=3}^n\beta_j\bar f_{n-j},
+\quad\kappa d\le d-\delta_2\le\beta_j\le d\quad(j\ge3).
+\label{eq:Q104:3.1}
+}{Q104.3.1}
+Also $S'_n=\allowbreak \one+G_ng'=\allowbreak q+zG_{n-1}g'$ and
+$\E zG_ng'=\allowbreak -\beta_{n+2}$.
+Finite geometric sums have norm at most one for $n=\allowbreak 0,\allowbreak 1$ or $n\ge\allowbreak 3$,
+while $\|G_2\|^2\le\allowbreak 1+\theta$.
+For $n\ge\allowbreak 4$, both real coordinates of $G_n=\allowbreak a+zb$ lie in
+$[1-x,\allowbreak 1-x+x^2]$; use finite alternating sums and
+$(1-z)G_n=\allowbreak 1-z^n$, with the positive-ending even case $n\ge\allowbreak 6$
+using $2x^2+x^5\le\allowbreak 1$.
+Since $f_2+h_3=\allowbreak 2-d-s$, let
+$m=\allowbreak 1-d/2$, $k=\allowbreak 1/m\in[1,\allowbreak 6/5]$ and $R=\allowbreak -ks$.
+AM--GM for the actual arms gives $F\le\allowbreak  q(m-s/2)^2$.
+Expand $T(qs)$ and use $|K(gs)|\le\allowbreak \sqrt{d\delta_3}$,
+$T(qs^2)\le\allowbreak 4\delta_3$:
+\fitdisplay{
+TF/m^2\le\bar f_2+zR+\delta\one,
+\quad\delta=-k\delta_2+k\sqrt{d\delta_3}+k^2\delta_3.
+}{}
+For $t=\allowbreak \delta_2/d$, $\delta_3\le\allowbreak \theta\delta_2$ and completion of a square give
+\fitdisplay{
+\delta/d\le k\{\sqrt{\theta t}-(1-k\theta)t\}
+\le\frac{k\theta}{4(1-k\theta)}\le39/164<1/4.
+\label{eq:Q104:3.2}
+}{Q104.3.2}
+Choose $D\ge\allowbreak \delta$, $D\ge\allowbreak 0$. The upper $\bar f_2+zR+D\one$ is
+nonnegative. Apply $T^{L-1}$ to obtain
+\fitdisplay{
+0<T^LF/m^2\le Y_L=\bar f_{L+1}+z^LR+D\bar f_{L-1}
++\sum_{i=1}^{L-1}D_i\bar f_{L-1-i},\quad D_i=\E z^iR.
+\label{eq:Q104:3.3}
+}{Q104.3.3}
+Here $D_1=\allowbreak k\delta_2,\allowbreak D_2=\allowbreak 0,\allowbreak D_3=\allowbreak -k\delta_3,\allowbreak D_4=\allowbreak 0$.
+Every positive $D_i$ for $i\ge\allowbreak 3$ is at most
+$k\delta_4\le\allowbreak  k\theta^3d<\allowbreak d/12$.
+For $\sigma=\allowbreak 49d/96$,
+\fitdisplay{
+\gamma_j:=\beta_j-D_{j-2}\ge\sigma\quad(j\ge3).
+\label{eq:Q104:3.4}
+}{Q104.3.4}
+Indeed $\gamma_3\ge\allowbreak 41d/80>\allowbreak \sigma$, $\gamma_4=\allowbreak d$, and later cases
+use $\kappa d-d/12$. All discarded losses below are nonnegative.
+If $Y=\allowbreak (C+c)\one+Q(z)g'=\allowbreak Cq+zP(z)g'+c\one$, then $Q=\allowbreak C+zP$ and
+\fitdisplay{
+\operatorname{Cov}(f_2,Y)
+=\int[-\operatorname{Re}Q+x\operatorname{Im}_zQ]\,d\nu
++d\E[Q(z)g'].
+\label{eq:Q104:3.5}
+}{Q104.3.5}
+Here $\operatorname{Im}_z$ is the real coefficient of $z$ in $Q=\allowbreak a+zb$.
+Also $\operatorname{Var}Y=\allowbreak \|Q(z)g'\|_2^2-(\E Q(z)g')^2$.
+
+\paragraph{Q104.4 The complete $L=\allowbreak 2$ proof}\label{part:Q104.4}
+Choose $D=\allowbreak d/4$. The actual positive comparison is
+\fitdisplay{
+Y=Cq+zPg'+c\one,\quad C=1+d/4,\quad
+P=1+z+kz^3,\quad c=k\delta_2-d,\quad T^2F\le m^2Y.
+\label{eq:Q104:4.1}
+}{Q104.4.1}
+The terminal remains $qf_2h_3$. At a frequency,
+\fitdisplay{
+|P|^2=1+x(1-kx)^2\le31/27<4/3.
+\label{eq:Q104:4.2}
+}{Q104.4.2}
+Differentiate the cubic on $0\le\allowbreak  kx\le\allowbreak 39/80<\allowbreak 1$ to get
+$x(1-kx)^2\le\allowbreak 4/(27k)$; hence $|zPg'|\le\allowbreak \sqrt{31d/27}$.
+Since $g'=\allowbreak z\one$ and $Q=\allowbreak C+z+z^2+kz^4$, skewness gives
+$\E[Q(z)g']=\allowbreak \E(Cz\one+z^2\one+z^3\one+kz^5\one)=\allowbreak -d$.
+Thus $u=\allowbreak \E Y=\allowbreak 1-7d/4+k\delta_2$, and
+\fitdisplay{
+u\le1-(101/80)d\le1-(21/20)d.
+\label{eq:Q104:4.3}
+}{Q104.4.3}
+Moreover $c\le\allowbreak -(41/80)d\le\allowbreak -d/2$.
+Therefore $u\le\allowbreak 1-d$ and
+$Y+u\le\allowbreak  q+1+\sqrt{31d/27}-(3/2-q/4)d$, verifying the coefficient conditions.
+The coordinates of $Q$ are $C-x+kx^2$ and one. The identity
+\fitdisplay{
+|Q|^2-C^2=x[-2+1/k+3kx-2kx^2+k^2x^3]
+\label{eq:Q104:4.4}
+}{Q104.4.4}
+uses $d=\allowbreak 2(1-1/k)$. The bracket is convex in $k$ and increasing in $x$.
+At $x=\allowbreak \theta$, its values at $k=\allowbreak 1,\allowbreak 6/5$ are
+$-1451/32768$ and $-2281/614400$, so it is negative throughout.
+Hence $\|Qg'\|_2^2\le\allowbreak  C^2d$; retain $\E Qg'=\allowbreak -d$ to get
+\fitdisplay{
+\operatorname{Var}Y\le C^2d-d^2=d-d^2/2+d^3/16\le d.
+\label{eq:Q104:4.5}
+}{Q104.4.5}
+The exact covariance is
+\fitdisplay{
+\operatorname{Cov}(f_2,Y)=-d-5d^2/4+2\delta_2-k\delta_3
+\le-\kappa^2d-5d^2/4\le-(7/20)d-d^2.
+\label{eq:Q104:4.6}
+}{Q104.4.6}
+For the first comparison put $t=\allowbreak \delta_2/d$, use $\delta_3\ge\allowbreak  t^2d$
+and $k\ge\allowbreak 1$, and maximize $2t-t^2$ on $[0,\allowbreak \theta]$.
+For the second use $\kappa^2=\allowbreak 361/1024>\allowbreak 7/20$, $5/4\ge\allowbreak 1$.
+Let $a=\allowbreak 21/20$, $v=\allowbreak 1-ad$, $c_0=\allowbreak 7/20$.
+The mean-covariance polynomial is
+$F_0(u)=\allowbreak (1-d)u^4-4(c_0d+d^2)u^3$.
+On $[0,\allowbreak v]$ its maximum is zero or $F_0(v)$: the only possible positive
+critical point is a minimum.
+If $F_0(v)\ge\allowbreak 0$, then \eqref{eq:Q104:2.5} gives
+$\E[f_2Y^4]\le\allowbreak  B_2(d):=\allowbreak (1-d)v^4-4(c_0d+d^2)v^3+(21/2)d$,
+whose exact expansion is
+\fitdisplay{
+B_2=1+(39/10)d+(449/40)d^2-(819/250)d^3
+-(922131/160000)d^4+(546399/160000)d^5.
+\label{eq:Q104:4.7}
+}{Q104.4.7}
+For $0\le\allowbreak  d\le\allowbreak 1/3$ the positive binomial series gives
+\fitdisplay{
+m^{-8}\ge1+4d+9d^2+15d^3+(165/8)d^4+(99/4)d^5.
+\label{eq:Q104:4.8}
+}{Q104.4.8}
+Subtracting \eqref{eq:Q104:4.7}, the degree-four and degree-five
+coefficients are positive, while the first three terms satisfy
+\fitdisplay{
+d[1/10-(89/40)d+(4569/250)d^2]\ge d/50.
+\label{eq:Q104:4.9}
+}{Q104.4.9}
+Indeed $2/25-(89/40)d+(4569/250)d^2>\allowbreak 0$ by
+$(89/40)^2<\allowbreak 4(2/25)(4569/250)$.
+Since $m^8>\allowbreak 1/5$, this proves
+$\E[f_2(T^2F)^4]\le\allowbreak 1-d/250$.
+If $F_0(v)<\allowbreak 0$, the alternative upper is $(21/2)dm^8$.
+The maximum of $d(1-d/2)^8$ on $[0,\allowbreak 1/3]$ is at $2/9$.
+As $(8/9)^4<\allowbreak 5/8$, this is less than
+$(7/3)(25/64)=\allowbreak 175/192<\allowbreak 1-d/250$.
+
+\paragraph{Q104.5 The complete $L=\allowbreak 3$ proof}\label{part:Q104.5}
+For the remaining lengths take $D=\allowbreak 3d/8$.
+The exact positive upper is
+\fitdisplay{
+Y_3=Cq+zPg'-d\one,\quad C=1-5d/8+k\delta_2,
+\quad P=1+D+z+(I-k\mathsf X)z^2.
+\label{eq:Q104:5.1}
+}{Q104.5.1}
+One has $231/256\le\allowbreak  C\le\allowbreak 1-d/8$; the lower bound follows by minimizing
+$1-5d/8+d^2$.
+The coordinates of $Q=\allowbreak C+zP$ are $C-x$ and $1+D-x+kx^2$, both nonnegative.
+Their squared difference is
+\fitdisplay{
+|Q|^2-C^2=x[-2C+x+(1+D-x+kx^2)^2].
+\label{eq:Q104:5.2}
+}{Q104.5.2}
+The bracket is convex in $x$, with second derivative
+$2(-1+2kx)^2+4k(1+D-x+kx^2)\ge\allowbreak 0$.
+At zero it is at most $-138/256$; at $\theta$, use
+$1+D-\theta+k\theta^2\le\allowbreak 2347/2560<\allowbreak 15/16$ to get $-133/256$.
+Thus $\|Q\|\le\allowbreak  C$ and $\operatorname{Var}Y_3\le\allowbreak  d$.
+Furthermore
+\fitdisplay{
+\E Qg'=-(1+D)d+\delta_2-k\delta_3\le-(3/4+D)d,
+\quad\E Y_3\le1-15d/8\le1-7d/4.
+\label{eq:Q104:5.3}
+}{Q104.5.3}
+The covariance integrand in \eqref{eq:Q104:3.5} is
+$-C+(2+D)x-x^2+kx^3$, increasing in $x$.
+With $C\ge\allowbreak 1-5d/8$, $D\le\allowbreak 1/8$, $k\le\allowbreak 6/5$, its upper is
+$-19/24+(17/8)\theta-\theta^2+(6/5)\theta^3=\allowbreak -3187/245760<\allowbreak 0$.
+The $d\E Qg'$ term is also nonpositive.
+For the row norm, the quotient of $|P|^2-(1+D)^2$ by $x$ is
+\fitdisplay{
+-5/2+3/(2k)+(7k/2-1/2)x-2kx^2+k^2x^3.
+}{}
+It is convex in $k$, and increasing in $x$ at $k=\allowbreak 1,\allowbreak 6/5$, with endpoint
+values $-1451/32768,\allowbreak -9507/204800$.
+Hence $|zPg'|\le\allowbreak (1+D)\sqrt d$ and $(1+D)^2\le\allowbreak 81/64<\allowbreak 4/3$.
+The pointwise and mean rows verify \eqref{eq:Q104:2.2}.
+Put $v=\allowbreak 1-7d/4$. The moment is at most $(1-d)v^4+(21/2)d$.
+Subtracting it from \eqref{eq:Q104:4.8} gives
+\fitdisplay{
+(3/2)d-(131/8)d^2+(877/16)d^3-(2609/256)d^4+(8737/256)d^5.
+}{}
+Since $(2609/256)d^4\le\allowbreak (7/2)d^3$, this is at least
+$d[3/2-(131/8)d+(821/16)d^2]\ge\allowbreak  d/10$.
+After subtracting $1/10$ the quadratic has negative discriminant.
+Multiplying by $m^8>\allowbreak 1/5$ proves deficit at least $d/50$.
+
+\paragraph{Q104.6 The complete $L=\allowbreak 4$ proof}\label{part:Q104.6}
+The exact positive upper is
+\fitdisplay{
+\begin{gathered}
+Y_4=Cq+zPg'+c\one,\quad C=1-13d/8+k\delta_2,
+\quad A_0=C+d,\\
+P=A_0+(1+D)z+z^2+(I-k\mathsf X)z^3,
+\quad c=-(d-\delta_2)-Dd-k\delta_3.
+\end{gathered}\label{eq:Q104:6.1}
+}{Q104.6.1}
+Here $1/2<\allowbreak 41/72\le\allowbreak  C\le\allowbreak 1-9d/8$ and $231/256\le\allowbreak  A_0\le\allowbreak 1-d/8$.
+The positive coordinates of $Q=\allowbreak C+zP$ are
+$Q_R=\allowbreak C-(1+D)x+(1-kx)x^2$ and $Q_I=\allowbreak C+d-x$.
+Since $Q_R\le\allowbreak  C-x+x^2$,
+\fitdisplay{
+|Q|^2-C^2\le x[(C+d)^2-2C+(1-2d)x-x^2+x^3].
+\label{eq:Q104:6.2}
+}{Q104.6.2}
+The bracket increases in $d$ for $C\in[1/2,\allowbreak 1]$.
+At $d=\allowbreak 1/3$, convexity in $C$ places its maximum at $C=\allowbreak 1$, with
+constant $-2/9$; the remaining $(1/3)x-x^2+x^3$ increases and reaches
+$3679/98304<\allowbreak 1/8$ at $\theta$.
+Thus $\operatorname{Var}Y_4\le\allowbreak  C^2d$.
+One has $\E Qg'=\allowbreak -A_0d+\delta_2<\allowbreak 0$.
+The covariance integrand
+$-C+(1+C+D+d)x-2x^2+kx^3$ increases in $x$ and is at most
+$-1/2+(47/24)\theta-2\theta^2+(6/5)\theta^3
+=11293/245760<1/16$.
+Hence $\operatorname{Cov}(f_2,\allowbreak Y_4)\le\allowbreak  d/16\le\allowbreak  d/4$.
+The exact mean correction is
+$c+\E Qg'=-2d+2\delta_2+d^2/4-kd\delta_2-k\delta_3
+\le(-2+2\theta+1/12)d=-53d/48$,
+which with $C\le\allowbreak 1-9d/8$ gives $u=\allowbreak \E Y_4\le\allowbreak 1-2d$.
+The direct identity
+$|P|^2=\allowbreak A_0^2+x[(1+D-x+kx^2)^2+x-2A_0]$
+has convex bracket, negative at both endpoints: at zero it is at most
+$-1+2d+D^2<\allowbreak -1/4$, and at $\theta$ at most $-229/768$.
+Thus $\|P\|\le\allowbreak  A_0\le\allowbreak 1$; together with $c\le\allowbreak -\kappa d$, this verifies
+\eqref{eq:Q104:2.2}.
+For $v=\allowbreak 1-2d$,
+\fitdisplay{
+\begin{aligned}
+\E[f_2Y_4^4]&\le(1-d)v^4+dv^3+(21/2)(1-9d/8)^2d\\
+&=1+(5/2)d+(19/8)d^2-(3931/128)d^3+40d^4-16d^5.
+\end{aligned}
+}{}
+The last three terms are nonpositive, since
+$40d^4\le\allowbreak (40/3)d^3<\allowbreak (3931/128)d^3$.
+Compare with $m^{-8}\ge\allowbreak 1+4d+9d^2$ to leave at least $(3/2)d$,
+giving reference deficit at least $3d/10$.
+
+\paragraph{Q104.7 Every finite $L\ge\allowbreak 5$}\label{part:Q104.7}
+For $n\ge\allowbreak 5$, $0\le\allowbreak \sigma\le\allowbreak 49/288$, $0\le\allowbreak  x\le\allowbreak \theta$, one has
+\fitdisplay{
+|G_n(z)-\sigma(3+2z+z^2)|\le1-3\sigma,
+\qquad z=i\sqrt x.
+\label{eq:Q104:7.1}
+}{Q104.7.1}
+For $n=\allowbreak 5$ the squared difference from $(1-3\sigma)^2$, divided by $x$, is
+$-1+4\sigma-2\sigma^2+(1-4\sigma+\sigma^2)x+(-1+2\sigma)x^2+x^3$.
+It increases in $\sigma$ up to $3/16$.
+At $3/16$ discard the negative quadratic term and put $x=\allowbreak \theta$ to
+obtain $-4503/32768<\allowbreak 0$.
+For $n\ge\allowbreak 6$, multiplication by $1-z$ gives $M-z^n$, where
+$M=\allowbreak (1-3\sigma)+\sigma z+\sigma z^2+\sigma z^3$.
+Writing $a=\allowbreak 1-3\sigma$, $|M|\le\allowbreak 1$ and
+\fitdisplay{
+a^2(1+x)-|M|^2=x[a^2+2a\sigma-\sigma^2(1-x+x^2)]
+\ge x(1-4\sigma+2\sigma^2)>3x/8.
+}{}
+The minimum is $15649/41472>\allowbreak 3/8$.
+The finite tail contributes at most $2x^{n/2}+x^n$;
+after division by $x$, this is at most
+$2\theta^2+\theta^5<\allowbreak 1/3+1/64<\allowbreak 7/20<\allowbreak 3/8$.
+The zero frequency is direct.
+The estimate $|M|\le\allowbreak 1$ follows from
+$|M|^2\le\allowbreak  a^2+\sigma^2x\le\allowbreak 1-6\sigma+(9+\theta)\sigma^2\le\allowbreak 1$.
+Set $\sigma=\allowbreak 49d/96$ and retain the last four nonnegative losses in
+\eqref{eq:Q104:3.3} using \eqref{eq:Q104:3.4}.
+As $\bar f_0+\bar f_1+\bar f_2+\bar f_3
+=\one+3q+z(2+z)g'-d\one$ and $\bar f_{L-1}\le S'_{L-1}$,
+the actual nonnegative upper is
+\fitdisplay{
+Y=Cq+zPg'+c\one,\quad C=1-37d/32>0,\quad c=-\sigma(1-d),
+\quad P=G_L-k\mathsf Xz^{L-1}+DG_{L-2}-\sigma(2+z),
+\quad T^LF\le m^2Y.
+\label{eq:Q104:7.2}
+}{Q104.7.2}
+For $Q=\allowbreak C+zP$,
+\fitdisplay{
+Q=(1-kx)[G_{L+1}-\sigma S]+kx[G_L-\sigma S]+DG_{L-1},
+\qquad S=3+2z+z^2.
+}{}
+The convex-combination coefficients are nonnegative and $kx\le\allowbreak 39/80$.
+By \eqref{eq:Q104:7.1} and $\|G_{L-1}\|\le\allowbreak 1$,
+$\|Q\|\le\allowbreak 1-3\sigma+D=\allowbreak C$ and $\operatorname{Var}Y\le\allowbreak  C^2d$.
+The shorter shift is
+\fitdisplay{
+|G_n-\sigma(2+z)|\le1-2\sigma\quad(n\ge3,\sigma\le3/16).
+\label{eq:Q104:7.3}
+}{Q104.7.3}
+$n=\allowbreak 3,\allowbreak 4$ have squared gaps
+$x[-1+2\sigma+\sigma^2+x]$ and
+$x[-1+2\sigma+\sigma^2+(-1+2\sigma)x+x^2]$.
+For $n\ge\allowbreak 5$ the numerator is
+$1-2\sigma+\sigma z+\sigma z^2-z^n$.
+Its rational-part squared gap is
+$x[1-2\sigma-\sigma^2(1+x)]\ge\allowbreak 4715x/8192$,
+while the finite tail divided by $x$ is at most
+$2\theta^{3/2}+\theta^4<\allowbreak 9/16$.
+This proves \eqref{eq:Q104:7.3} and gives
+$\|P\|\le\allowbreak 1+D-2\sigma=\allowbreak 1-31d/48\le\allowbreak 1$.
+The actual mean term is
+\fitdisplay{
+\E Qg'=-\beta_{L+2}+D_L-D\beta_L+2\sigma d
+\le-\sigma-D\kappa d+2\sigma d\le0.
+}{}
+Consequently
+\fitdisplay{
+u=\E Y\le1-(209/96)d+(335/256)d^2\le1-(17/10)d.
+\label{eq:Q104:7.4}
+}{Q104.7.4}
+Every $G$ polynomial in $Q$ has index at least four.
+Its finite coordinate bounds give
+$-\operatorname{Re}G+x\operatorname{Im}_zG\le\allowbreak -9/32$,
+with endpoint margin $1-2\theta+\theta^2-\theta^3=\allowbreak 9355/32768>\allowbreak 9/32$.
+The $-\sigma S$ term costs at most $3\sigma$.
+Using $\E Qg'\le\allowbreak 0$ in \eqref{eq:Q104:3.5} gives
+\fitdisplay{
+\operatorname{Cov}(f_2,Y)
+\le[-9(1+D)/32+3\sigma]d\le(11/48)d<d/4.
+\label{eq:Q104:7.5}
+}{Q104.7.5}
+The row $\|P\|\le\allowbreak 1$, $c\le\allowbreak -d/3$, the mean bound
+\eqref{eq:Q104:7.4}, and $C=\allowbreak 1-37d/32$ verify
+\eqref{eq:Q104:2.2}, since $37q/32+61/30\ge\allowbreak 3/2-q/4$.
+Set $a=\allowbreak 17/10$, $v=\allowbreak 1-ad$. The moment bound is
+\fitdisplay{
+\E[f_2Y^4]\le(1-d)v^4+dv^3+(21/2)(1-37d/32)^2d.
+\label{eq:Q104:7.6}
+}{Q104.7.6}
+Its linear coefficient is $37/10$; its quadratic is
+$476/25-777/32=\allowbreak -4193/800<\allowbreak -5$; its cubic is
+$-14161/500+28749/2048<\allowbreak -14$; its quartic is
+$230911/10000<\allowbreak 24$; its quintic is $-83521/10000<\allowbreak 0$.
+Since $d^4\le\allowbreak  d^2/9$, all terms of degree at least two sum to at most
+$(-5+24/9)d^2-14d^3<\allowbreak 0$. Hence
+\fitdisplay{
+\E[f_2(T^LF)^4]\le m^8(1+37d/10)
+\le e^{-3d/10}\le1-3d/11\le1-d/500.
+\label{eq:Q104:7.7}
+}{Q104.7.7}
+The penultimate step uses $e^t\ge\allowbreak 1+t$ for $t=\allowbreak 3d/10\le\allowbreak 1/10$.
+The same direction covers every $L\ge\allowbreak 5$, completing all $L\ge\allowbreak 2$.
+
+\paragraph{Q104.8 Original decorations, reversal and edge counts}\label{part:Q104.8}
+Original pair products satisfy $0<\allowbreak E_t,\allowbreak E_o\le\allowbreak 1$.
+Positivity of $T$ gives
+$\E[E_of_2\{T^L(E_tF)\}^4]\le\allowbreak \E[f_2(T^LF)^4]$.
+All equal-pair arms remain in the original oriented object.
+If their half-lengths sum to $S$, an original reference component has
+$L+6+2+2S=\allowbreak L+8+2S$ edges and $L+9+2S$ vertices, counting the
+receiving two-edge arm, the terminal arms, connector subdivisions and
+pair decorations once. Only in the fourth-moment comparison is the
+terminal branch copied four times while the reference arm stays single.
+All directions precede $\mu,\allowbreak K$; indeed the same canonical terminal works
+for all $L\ge\allowbreak 2$.
+Replacing the whole kernel by $-K$ reverses the reference, propagation,
+terminal and all other actual edges together.
+The ordinary $qf_2\bar f_3$ message at two edges is not substituted
+for the canonical reference message $qf_2h_3$.

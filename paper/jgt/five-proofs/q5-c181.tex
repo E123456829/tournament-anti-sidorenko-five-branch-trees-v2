@@ -1,0 +1,478 @@
+\subsection{All nonunit-minimum odd terminals with their actual inward anchors}\label{proof:Q5-C181}
+% Common local aliases for the former repeated C168.1--C168.3 prefaces.
+Use the original-measure calculus of
+Section~\ref{sec:odd-common-calculus} and the complete root-pair
+certificates of Section~\ref{sec:odd-common:fourth}.
+For a root \((1,2,v)\), write \(m=v-2\), \(G_m=E+zD\),
+\(\beta=\beta_{v-1}=\int D\,d\nu\),
+\(\beta_v=\int E\,d\nu\),
+\(P_+=h_2f_v\), \(P_-=\bar f_2W_v\),
+\(\ell_+=\ell_a\), and \(\ell_-=\ell_s\).
+The two vectors, their signed means and full constants are
+\eqref{eq:odd-common:root-standard}--\eqref{eq:odd-common:root-losses}.
+At \(v=3\), \((E,D)=(1,0)\) and \(\beta=0\).
+All subsequent direction choices and packet estimates retain their
+stated integer and parameter ranges.
+Also $\ell=\ell_-$, with $\ell\ge d$. The complete finite joint-base proofs, including the shortest $G_2$, are C180.3.1--C180.3.3 of Section~\ref{proof:Q5-C180}. Lemma~\ref{lem:unit-p:inward-path} proves the centered inward-path variance and the full first-anchor comparison. Lemma~\ref{lem:unit-p:minimum-four} proves every minimum-four finite packet used here, with its actual inward anchor.
+\paragraph{C181.0 Parameters and fixed directions}
+
+% Replace a pure model-definition block only; keep local root/terminal data.
+Use the original finite-space model and arm messages of
+Section~\ref{sec:odd-common-calculus}.
+When the original \(K\)-notation is used, \(K=-B\) and
+\(g=K\one=-u\); in either notation
+\(\delta_j=\|B^j\one\|_2^2=\|K^j\one\|_2^2\).
+All means, norms, adjoints and spectral integrals use the same
+original probability measure.
+The internal root residual is (1, 2, v), v at least three, and the terminal residual is
+
+\[
+\begin{gathered}
+(a,b_1,c_1,\ldots,b_j,c_j),\qquad\\
+2\le a<b_1<c_1<\cdots<b_j<c_j,\quad j\ge1.
+\end{gathered}\tag{C181.T190.1}
+\]
+
+The finite pair count and all original arm lengths are unbounded. The inner and outer positive lengths \(L,\allowbreak \allowbreak  M\) are independent. The root unit arm points outward, its two-edge arm entirely inward, and its \(v\)-arm first outward then inward, giving
+
+\[
+P=\bar f_2W_v.
+\]
+
+The actual terminal direction is fixed by the original integers:
+
+
+\begingroup\small
+\setlength{\tabcolsep}{3pt}
+\setlength{\LTleft}{0pt}\setlength{\LTright}{\fill}
+\begin{longtable}{@{}p{0.2200\linewidth}p{0.7000\linewidth}@{}}
+\caption{All nonunit-minimum odd terminals with their actual inward anchors: parameter values.}\label{tab:parameters:q5-c181:1}\\
+\toprule
+Entry & Actual F \\
+\midrule\endfirsthead
+\toprule
+Entry & Actual F \\
+\midrule\endhead
+\bottomrule\endfoot
+\(b_1=3,\allowbreak \) necessarily \(a=2\) & \(\bar f_2 f_3 h_{c_1} \prod_{i\ge 2}h_{b_i}f_{c_i}\). \\
+\addlinespace[2pt]
+\(b_1\ge 4\) & \(\bar f_a \prod_{i=1}^{j}h_{b_i}f_{c_i}\). \\
+\end{longtable}
+\endgroup
+
+
+All inner edges point terminal to root, all outer edges root to receiver. These fixed choices retain every genuine equal-pair decoration \(E_t,\allowbreak \allowbreak  E_r\). The actual complete message and output are
+
+\[
+H=E_rpP\,T^L(E_tF),\qquad X=T^MH.
+\tag{C181.T190.2}
+\]
+
+For every listed original parameter and legal kernel,
+
+\[
+\boxed{EH^4\le e^{-\lambda d},\qquad \lambda=705/128,}
+\tag{C181.T190.A}
+\]
+\[
+\boxed{\begin{gathered}
+I_q(X)^3\le e^{-[2\lambda-c(M)]d}\le e^{-339d/1216},\\
+\quad I_q(X)=E[q^{-1/3}|X|^{8/3}],
+\end{gathered}}\tag{C181.T190.B}
+\]
+
+The Q5-C164 costs are \(c(1)=204/19,\allowbreak \allowbreak  c(2)=10,\allowbreak \allowbreak  c(3)=0,\allowbreak \allowbreak  c(4)=7,\allowbreak \allowbreak  c(M)=6\) for \(M\ge5\). Here \(\lambda>102/19\), and \(2\lambda-204/19=339/1216>0\). For two such sides with the compatible negative zero-step center and four independent original core lengths,
+
+\[
+Z_D\le e^{-339d/4864}.
+\tag{C181.T190.C}
+\]
+
+The fourth moment includes the actual p and complete original root pair.
+
+
+For an actual positive comparison
+\(T^LF\le e^{-\Gamma}[Cq+BV+c]\), apply
+\eqref{eq:odd-common:root-interface} with
+\(\alpha=-\Gamma\), \(C_0=C\), \(c_0=c\),
+\(m=v-2\), and the standard root \(P=\bar f_2W_v\).
+Its loss is \(\ell_s=\int[E+(1+x)D]\ge d\);
+the entire vector \(V\) and the residual coefficient \(\beta+C-1\)
+are kept in that certificate.
+
+\paragraph{C181.2.4 The full bare-root fourth bound}
+
+For every original \(n\ge3\), retain \(\beta_n\bar f_0\) in the positive convolution: \(\bar f_n\le q+BG_{n-1}u-\beta_n\). In the complete root formula take \(\Gamma=0,\allowbreak \allowbreak  C=1,\allowbreak \allowbreak  c=-\beta_n\). For \(n\ge4\), the full finite base bound \(6/5\) proved in C180.3.3 and \(\beta_n+\beta_{n+1}\ge2\kappa d\) give
+
+\[
+\log E[(pP \bar f_n)^4]\le-[35/4-153/25-10/9]d
+=-(1367/900)d.
+\tag{C181.T190.14}
+\]
+
+The curvature cost is at most \(10d^2/3\le10d/9\) on the full domain. At \(n=3\), the two beta terms equal \(2d\), and the joint variance cost is below \(9d\), so the loss is at least \(12-9-10/9=17/9>1367/900\). Thus the bound holds for every \(n\ge3\).
+
+\paragraph{C181.3 First pair minimum at least four: the actual inward anchor}
+
+\paragraph{C181.3.1 One finite mask, the real anchor and its first row}
+
+Take \(F=\bar f_a\prod h_{b_i}f_{c_i}\), \(R=\sum_iR_{b_ic_i}\), and the sum \(\Gamma\) of actual pair losses. Their disjoint exponent intervals form one finite zero-one mask:
+
+\[
+|Q(i\sqrt x)|^2\le\frac{1+x}{(1-x^2)^2}
+\le32768/16245<100/49.
+\tag{C181.T190.15}
+\]
+
+The full finite coordinate and signed-tail proofs are Lemma~\ref{lem:unit-p:minimum-four}, using the same original mask and anchor. Their data on \(0<d\le1/3\) are
+
+
+\begingroup\small
+\setlength{\tabcolsep}{3pt}
+\setlength{\LTleft}{0pt}\setlength{\LTright}{\fill}
+\begin{longtable}{@{}p{0.2200\linewidth}p{0.7000\linewidth}@{}}
+\caption{All nonunit-minimum odd terminals with their actual inward anchors: parameter values.}\label{tab:parameters:q5-c181:2}\\
+\toprule
+Entry & Gamma/d \\
+\midrule\endfirsthead
+\toprule
+Entry & Gamma/d \\
+\midrule\endhead
+\bottomrule\endfoot
+\(j=1,\allowbreak b_1=4\) & \(69/20\); \(\lVert R\rVert /\sqrt{d}\): \(<1/5\); \(\delta_+/d\): \(72/125\); Sum positive \(D_i/d,\allowbreak  i\ge 1\): \(<7/25\); \(D_1/d\): \(<1/6\); \(D_i/d,\allowbreak  i\ge 2\): \(<7/100\). \\
+\addlinespace[2pt]
+\(j=1,\allowbreak b_1\ge 5\) & \(16/5\); \(\lVert R\rVert /\sqrt{d}\): \(<3/20\); \(\delta_+/d\): \(3/5\); Sum positive \(D_i/d,\allowbreak  i\ge 1\): \(<1/5\); \(D_1/d\): \(<1/30\); \(D_i/d,\allowbreak  i\ge 2\): \(<1/12\). \\
+\addlinespace[2pt]
+\(j\ge 2,\allowbreak b_1\ge 4\) & \(\ge 16j/5\); \(\lVert R\rVert /\sqrt{d}\): \(<1/4\); \(\delta_+/d\): \(5/6\); Sum positive \(D_i/d,\allowbreak  i\ge 1\): \(<2/5\); \(D_1/d\): \(<1/5\); \(D_i/d,\allowbreak  i\ge 2\): \(<1/12\). \\
+\end{longtable}
+\endgroup
+
+
+The scalar delta is the actual first-row bound below. Let \(\mu_a=E\bar f_a\), \(\sigma_a^2=\operatorname{\operatorname{Var}}\bar f_a\). The full centered finite-path proof in Lemma~\ref{lem:unit-p:inward-path} gives \(\sigma_a<3\sqrt d/2\); for \(a=2,\allowbreak \allowbreak  3\), use \(6\sqrt d/5\). A single pair starting at four has \(a=2,\allowbreak \allowbreak  3\), a continuous interval mask with \(\|R\|<\sqrt d/5,\allowbreak \allowbreak  D_0\le0\), and positive moments in two residue classes with total at most \((\delta_3+\delta_4)/(1-\theta^2)<7d/25\). At minimum at least five, the mask norm is below \(3\sqrt d/20\), \(D_0\le d/12\), positive tail below \(d/5\). Several pairs starting at four use \(\sqrt d/4,\allowbreak \allowbreak  d/12,\allowbreak \allowbreak  2d/5\). Every individual positive-moment bound comes from its actual four residue classes.
+
+All these masks have \(|R|^2<d/3\le1/9\), permitting \(e^R\le1+R+3R^2/5\). Retaining the complete actual \(\bar f_a\) in the first positive row gives
+
+\[
+\begin{gathered}
+T(\bar f_ae^R)\le \bar f_{a+1}+\mu_a BR+\delta,\\
+\quad\delta=\mu_a D_0+2\sigma_a\|R\|+(12/5)\|R\|^2.
+\end{gathered}\tag{C181.T190.16}
+\]
+
+Indeed \(T((\bar f_a-\mu_a)R)\le2E| (\bar f_a-\mu_a)R|\), and the second-order term is at most \(12ER^2/5\). The three delta coefficients are \(2(6/5)(1/5)+(12/5)(1/25)=72/125\); \(1/12+2(3/2)(3/20)+(12/5)(9/400)<3/5\); and \(1/12+2(6/5)(1/4)+(12/5)(1/16)=5/6\). For multipair minima at least five use their stronger mask bound with its matching anchor variance.
+
+Finite Duhamel propagation, with \(n=a+L,\allowbreak \) gives the same actual upper bound
+
+\[
+\begin{gathered}
+e^\Gamma T^LF\le Y_L=\bar f_n+\mu_aB^LR+\delta \bar f_{L-1}\\
++\mu_a\sum_{i=1}^{L-1}D_i \bar f_{L-1-i}.
+\end{gathered}\tag{C181.T190.17}
+\]
+
+The genuine anchor remains \(\bar f_{a+L}\). Retain its actual beta term and put
+
+\[
+V=G_{n-1}(B)u+\mu_aB^{L-1}R,\qquad EBV=-\beta_{n+1}+\mu_aD_L.
+\]
+
+At \(L=1\), take \(C=1,\allowbreak \allowbreak  c=\delta-\beta_n\). At \(L\ge2\), take \(C=1,\allowbreak \allowbreak  c=2\delta_++2\mu_a\sum_{i=1}^{L-1}(D_i)_+-\beta_n\). Every index is original and nonnegative, and the resulting upper bound remains positive.
+
+\paragraph{C181.3.2 Every length, anchor and pair count}
+
+Use the complete-root formula. With \(C=1\), curvature costs at most \(10d/9\). For \(L\ge2\), the joint norm coefficient is at most \(6/5+\sqrt\theta\rho\); at \(L=1\), at most \(23/16+\rho\), retaining the actual \(G_2\).
+
+For a single pair starting at four and L at least two, full scalar per d is at most
+
+\[
+-69/20+144/125+14/25-19/16+7/100-1=-7711/2000.
+\]
+
+The joint coefficient is at most \(133/100\), giving loss \(7711/500-(17/4)(133/100)^2-10/9>13/2\). At \(L=1\), the beta sum for \(a=2,\allowbreak \allowbreak  3\) is at least \(51d/32\), and the joint coefficient at most \(131/80\), giving loss \(4(69/20+51/32+1-72/125-1/6)-(17/4)(131/80)^2-10/9>13/2\).
+
+For a single pair with minimum at least five and \(L\ge2\), scalar is at most \(-889d/240\), with norm coefficient below \(13/10\), so the loss is
+
+\[
+889/60-2873/400-10/9=23483/3600>13/2.
+\]
+
+At \(L=1\), scalar is at most \(-[16/5+19/16+1-3/5-1/30]d\), and norm coefficient at most \(127/80\), again giving loss greater than \(13/2\).
+
+For \(j\ge2,\allowbreak \allowbreak  L\ge2\), scalar is at most \(-\Gamma+29d/80\), norm coefficient below \(11/8\), giving
+
+\[
+\lambda_{j,L\ge2}\ge64j/5-29/20-2057/256-10/9
+>15+64(j-2)/5.
+\]
+
+At \(L=1\), scalar is at most \(-\Gamma-277d/240\), norm coefficient at most \(27/16\), giving
+
+\[
+\lambda_{j,L1}\ge64j/5+277/60-12393/1024-10/9
+>15+64(j-2)/5.
+\]
+
+Thus the entire first-pair-minimum-at-least-four family has the stronger full-domain rate \(13/2\), for all original \(a,\allowbreak \allowbreak  j,\allowbreak \allowbreak  L\).
+
+\paragraph{C181.4 First pair minimum three: the genuine canonical first row}
+
+The strict order forces \(a=2\). Put \(c=c_1\ge4,\allowbreak \allowbreak  m_c=c-3\ge1,\allowbreak \allowbreak  B_0=\beta_{c-1}\),
+
+\[
+R_0=B_0g-\sum_{r=4}^cK^r1=r_0(B)u,
+\quad r_0(z)=-B_0-z^3G_{m_c}(-z),
+\]
+\[
+\begin{gathered}
+\Gamma_0=d+\beta_c+B_0\ge35d/16,\\
+\quad f_3+h_c\le2-\Gamma_0+R_0,\\
+\quad \bar f_2f_3h_c\le \bar f_2e^{R_0-\Gamma_0}.
+\end{gathered}\tag{C181.T190.18}
+\]
+
+At \(c=4\), \(\Gamma_0=3d\); at five, \(3d-\delta_2\ge83d/32\); later use \(d+2\tau\ge35d/16\). Retain both \(G_1,\allowbreak \allowbreak  G_2\).
+
+First take \(0<d\le1/8\). The row bound gives \(|R_0|\le d+(6/5)\theta\sqrt d<1/3\). Write \(G_{m_c}(-z)=U-zV\); at one its coordinates are \((1,\allowbreak \allowbreak  0)\), and otherwise lie in \([1-x,\allowbreak \allowbreak  1]\). Its exact frequency polynomial is
+
+\[
+r_0=-B_0+x^2V+zxU.
+\tag{C181.T190.19}
+\]
+
+Retain the actual \(\bar f_2=1+u+Bu\):
+
+\[
+\begin{gathered}
+T(\bar f_2e^R)\le \bar f_3+BR+\delta,\\
+\quad\delta=ER+E(uR)+E((Bu)R)\\
++\sqrt{(d+\delta_2)ER^2}+(12/5)ER^2.
+\end{gathered}\tag{C181.T190.20}
+\]
+
+Apply the original row bound to \(B((u+Bu)R)\), using \(E(u+Bu)^2=d+\delta_2\). All three mixed means belong to this same \(R\).
+
+\paragraph{C181.4.1 Every c: the genuine BR first row and all signed moments}
+
+At \(c=4\), recompute the actual first row. Here \(R_0=dg-K^4\one\), \(ER_0=-\delta_2\), \(ER_0^2=\delta_4+d^3\), and the mixed-mean sum is \(-\delta_2-d^2+\delta_3\). Put \(t=\delta_2/d\), \(J=d^2+\theta^2t\). Young gives \(\sqrt{(1+t)J}\le(1+t)/6+3J/2\), hence
+
+\[
+\begin{gathered}
+\delta_0/d\le1/6-d+(39/10)d^2\\
++t[1/6-\kappa+(39/10)\theta^2]\\
+<1/6+(5/12)(49/60)=73/144<3/5.
+\end{gathered}
+\]
+
+Drop only \(-d+39d^2/10\le0\); use \(t\le\theta<5/12,\allowbreak \allowbreak  \theta^2<1/6\), and the negative \(-\kappa t\). This is the genuine \(BR\) first row throughout \(d\le1/8\). At \(c=5\), the mixed mean is \(-\delta_2-d^2+2\delta_3\), and variance \(d^3+\delta_4+\delta_5-2d\delta_3\). The same Young bound gives
+
+\[
+ \delta_0/d\le1/6-d+(39/10)d^2
++t[-1/48+(39/10)\theta^2(1+\theta)-(39/5)\theta d].
+\]
+
+The \(t\) coefficient is positive; taking \(t=\theta\) leaves a decreasing function of \(d\), whose value at zero is \(5514615/10485760<17/32\). For \(c\ge6\), finite alternating intervals give mixed mean at most \(-\kappa \delta_2+(1+\kappa)\delta_3-B_0d\), and variance at most \(d^3+(\theta-2\kappa^2d)\delta_3\). Young gives
+
+\[
+\begin{gathered}
+\delta_0/d\le1/8-\kappa d+(22/5)d^2\\
++t[1/8+55/1024+(22/5)\theta^2-(44/5)\kappa^2\theta d].
+\end{gathered}
+\]
+
+The \(t\) coefficient is positive; taking \(\theta\) gives a decreasing function of \(d\), with zero endpoint \(80709/163840<1/2\). Thus uniformly for all \(c\ge4\),
+
+\[
+D=3d/5\ge\max( \delta_0,0).
+\tag{C181.T190.21}
+\]
+
+The finite spectral means directly give
+
+\[
+\begin{gathered}
+-\delta_3\le D_1\le d^2,\quad0\le D_2\le \delta_3,\quad D_3\le \delta_4,\\
+\quad D_i\le d/36\ (i\ge4),\qquad D_i=EB^iR_0.
+\end{gathered}\tag{C181.T190.22}
+\]
+
+The four residue classes are explicit: the negative interval has positive terms only for indices congruent to two and three, starting at \(\delta_3,\allowbreak \allowbreak  \delta_4\); the \(B_0g\) term is positive in class one, starting at \(B_0d\). For every \(i\ge4\), the positive part is at most \(\max(\delta_5,\allowbreak \allowbreak  B_0\delta_3)\le\theta^4d<d/36\), using \(d\le1/8<\theta^2\). At four, the exact initial terms are \(D_0=-\delta_2,\allowbreak \allowbreak  D_1=d^2,\allowbreak \allowbreak  D_2=\delta_3,\allowbreak \allowbreak  D_3=-d\delta_2,\allowbreak \allowbreak  D_4=-\delta_4\).
+
+Actual finite positive propagation yields
+
+\[
+\begin{gathered}
+e^{\Gamma_0}T^L(\bar f_2f_3h_c)\le\\
+Y_L=\bar f_{L+2}+B^LR_0+D\bar f_{L-1}\\
++\sum_{i=1}^{L-1}D_i \bar f_{L-1-i}\ge0.
+\end{gathered}\tag{C181.T190.23}
+\]
+
+\paragraph{C181.4.2 The unit connector with its full joint spectrum}
+
+Here \(Y_1=q+B(G_2+r_0)u+D-d\). In the full root formula, take \(C=1,\allowbreak \allowbreak  c=D-d,\allowbreak \allowbreak  V=(G_2+r_0)u\). The scalar is at most
+
+\[
+-\Gamma_0+D+D_1-3d\le-(35/16+91/40)d.
+\]
+
+The real coordinate of \(G_2+r_0-zG_m\) is positive and at most \(1+x+x^2\); its imaginary coefficient lies in \([0,\allowbreak \allowbreak  2x]\). Hence
+
+\[
+|G_2+r_0-zG_m|^2\le(1+x+x^2)^2+4x^3
+\le2870097/1048576<25/9.
+\]
+
+Curvature costs at most \(5d/12\); the fourth loss is at least
+
+\[
+35/4+91/10-425/36-5/12=1013/180>705/128.
+\tag{C181.T190.24}
+\]
+
+\paragraph{C181.4.3 The second connector and the exact fourth path}
+
+The exact \(\bar f_4=(1-d)q+BG_3u-d\) gives
+
+\[
+Y_2=(1-d+D)q+B[G_3+zr_0]u+D_1-d.
+\]
+
+The actual mean is \(EBV=-\tau+D_2\), and full scalar at most \(-\Gamma_0+D+D_1+D_2-2d-\tau\le-1867d/480\). The real joint coordinate lies in \((0,\allowbreak \allowbreak  1]\), imaginary coefficient in \([-B_0,\allowbreak \allowbreak  x+x^2]\); its square is at most \(1+\theta/64+\theta^3(1+\theta)^2<36/25\). The actual curvature coefficient \(\alpha=\beta+D-d\) has absolute value at most \(3d/5\), costing \(3d/20\). The loss is at least
+
+\[
+1867/120-153/25-3/20=5573/600>705/128.
+\tag{C181.T190.25}
+\]
+
+\paragraph{C181.4.4 The third connector and the exact fifth path}
+
+The identity \(\bar f_5=(1-2d)q+B(G_4-d)u-\tau\) gives
+
+\[
+Y_3=(1-2d+D+D_1)q+B[G_4-d+z^2r_0+D]u-\tau+D_2.
+\]
+
+The exact mean is \(-\tau+d^2+D_3-Dd\), and the full scalar is at most
+
+\[
+-\Gamma_0-3d-2\tau+D+D_1+D_2+D_3+d^2-Dd\le-211d/40.
+\]
+
+Put \(Q_3=G_4+z^2r_0\). Its joint real coordinate lies in \([1-x-x^3,\allowbreak \allowbreak  1+B_0x]\), and imaginary coefficient in \([-x-x^2,\allowbreak \allowbreak  0]\). Subtracting \(d-D=2d/5\) leaves the real coordinate positive, so the joint square is at most \((1+\theta/8)^2+\theta^3(1+\theta)^2<25/16\). The actual \(\alpha=\beta-7d/5+D_1\) is nonpositive with absolute value at most \(47d/30\), costing less than \(21d/20\). The loss is at least \(211/10-425/64-21/20=4291/320>13\).
+
+\paragraph{C181.4.5 Every finite longer length with the actual D retained}
+
+In the same positive convolution define
+
+\[
+\gamma_3=d-D=2d/5,\qquad
+\gamma_j=\beta_j-D_{j-3}\quad(j\ge4).
+\]
+
+The signed moments give \(\gamma_4\ge7d/8\), \(\gamma_5\ge\tau-\delta_3>2d/5\), \(\gamma_6\ge\tau-\delta_4>2d/5\), and later \(\gamma_j\ge\tau-d/36>2d/5\). Thus all \(j\ge3\), including \(L+3\), satisfy \(\gamma_j\ge h=2d/5\). Retain the final four original messages \(\bar f_0,\allowbreak \allowbreak  \bar f_1,\allowbreak \allowbreak  \bar f_2,\allowbreak \allowbreak  \bar f_3\):
+
+\[
+Y_L\le Cq+BV-h(1-d),\quad C=1-3h,
+\]
+\[
+V=[G_{L+1}+z^{L-1}r_0-h(2+z)](B)u,
+\quad EBV=-\gamma_{L+3}+2hd\le-h+2hd.
+\]
+
+The complete scalar is at most \(-\Gamma_0-5h+3hd-\ell\le-403d/80\). Since \(|r_0|<9/20\), the joint norm coefficient is less than \(6/5+(9/20)\theta^{3/2}+h\sqrt{4+\theta}<3/2\), using \(\theta^{3/2}<4/15,\allowbreak \allowbreak  h\le1/20,\allowbreak \allowbreak  \sqrt{4+\theta}<21/10\). The actual \(|\alpha|=|\beta-3h|\le6d/5\) costs \(3d/5\). The loss is at least
+
+\[
+403/20-153/16-3/5=799/80>705/128.
+\tag{C181.T190.26}
+\]
+
+\paragraph{C181.5 First pair minimum three with every later-pair count}
+
+Still take \(d\le1/8\). Let \(S=\sum_{i\ge2}R_{b_ic_i}\), whose first shorter length is at least \(c_1+1\ge5\). The actual terminal obeys \(F\le\bar f_2e^{R-\Gamma}\), where
+
+\[
+\begin{gathered}
+R=R_0+S,\quad \Gamma=\Gamma_0+(16/5)(j-1)d\\
+\ge[431/80+(16/5)(j-2)]d.
+\end{gathered}\tag{C181.T190.27}
+\]
+
+One finite mask covers all later intervals, independently of pair count. The row and four-residue-class bounds give
+
+\[
+\|S\|<(3/20)\sqrt d,\quad |S|<(1/4)\sqrt d,
+\quad ES+E(uS)\le d/6,
+\]
+\[
+D_1(S)<d/30,\quad D_i(S)<d/12\quad(i\ge2).
+\tag{C181.T190.28}
+\]
+
+The positive mixed-mean contributions start at original powers \(K^7,\allowbreak \allowbreak  K^8\), then \(K^{11},\allowbreak \allowbreak  K^{12}\); each contributes at most \(\delta_4\), so \(ES+E(uS)\le2\delta_4/(1-\theta^2)<d/6\). Also \(|D_1(S)|\le\sqrt d\|S\|<3d/20\).
+
+We have \(\|R_0\|<9\sqrt d/20\), \(\|R\|<3\sqrt d/5\), and \(|R|\le d+[(6/5)\theta+1/4]\sqrt d<1/2\). Adding \(S\) to the genuine first row costs, per unit \(d\), at most
+
+\[
+1/6+39/400+9/50+189/500<9/10.
+\]
+
+These four terms pay the mixed mean, \(E(BuS)\), square-root increment, and quadratic variance increment. The total is below \(9/10\), so take \(D=3d/2\). Every \(D_i\) now belongs to the same new \(R\); its actual bounds are
+
+\[
+\begin{gathered}
+D_1\le19d/120,\quad D_2\le d/4,\quad D_3\le d/6,\\
+\quad D_i\le d/9\ (i\ge4),\quad D_1\ge-19d/60.
+\end{gathered}\tag{C181.T190.29}
+\]
+
+The finite propagation remains the displayed actual first-row propagation with these new R, Gamma, D.
+
+At \(L=1\), joint norm coefficient is below \(5/3+3/20<11/6\), curvature cost at most \(5d/12\), scalar at most \(-\Gamma-161d/120\). At the weakest pair count \(j=2\), loss is at least
+
+\[
+431/20+161/30-2057/144-5/12=1759/144>12.
+\]
+
+At \(L=2\), joint coefficient is below \(6/5+(3/20)\sqrt\theta<13/10\), curvature cost at most \(15d/16\), and scalar at most \(-\Gamma-329d/480\), giving loss \(9703/600>16\).
+
+At \(L=3\), add \((D-d)u=(d/2)u\) and \(B^2S\). The joint norm coefficient is below \(5/4+1/16+1/16<3/2\). The actual \(\alpha=\beta-d/2+D_1\) has absolute value at most \(5d/6\), costing below \(d/3\). Scalar is at most \(-\Gamma-159d/80\), giving loss \(941/48>19\).
+
+For \(L\ge4\), retain the negative \(\gamma_3=d-D=-d/2\). All later \(\gamma_j=\beta_j-D_{j-3}\) are at least \(h=d/3\). Pay the actual positive remainder \((D-d)\bar f_{L-1}\le d\), then retain only the final original \(\bar f_0,\allowbreak \allowbreak  \bar f_1,\allowbreak \allowbreak  \bar f_2\):
+
+\[
+Y_L\le Cq+BV+d-h,\quad C=1-2h,
+\quad V=[G_{L+1}+z^{L-1}r-h](B)u.
+\]
+
+The actual mean is \(EBV=-\gamma_{L+3}+hd\le-h+hd\), and complete scalar at most \(-\Gamma-31d/24\). Joint norm coefficient is below \(6/5+(3/5)\theta^{3/2}+h<3/2\). The actual \(|\alpha|=|\beta-2h|\le2d/3\) costs at most \(5d/27\). At \(j=2\), the loss is \(431/20+31/6-153/16-5/27=36653/2160>16\). Each additional pair increases \(\Gamma\), so the whole low-domain family has loss at least \(12+64(j-2)/5\).
+
+\paragraph{C181.6 The same direction on the full high domain}
+
+For \(1/8\le d\le1/3\), keep the original direction. Put \(U=\sum_{r=3}^{c-1}K^r\one\), so \(R_0=B_0g-KU\), \(EU=d-\beta_c\). Let \(t_0=B_0-EU=\Gamma_0-2d\ge0\). Centered-row Cauchy gives
+
+\[
+R_0=t_0g-K(U-EU),\qquad |R_0|^2\le t_0^2+\operatorname{\operatorname{Var}}U.
+\tag{C181.T190.30}
+\]
+
+This combines the two same-point coordinates \(g,\allowbreak \allowbreak  \sqrt{1-g^2}\). For \(c\ge6\), \(\|U\|^2\le \delta_3\le\theta^2d\le8\theta^2d^2<11d^2/8\), while \(t_0\ge3d/16\), so \(\operatorname{\operatorname{Var}}U\le d^2+2t_0d\). At \(c=5\), retain \(\theta^2(1+\theta)d\) and \(8\theta^2(1+\theta)=7605/4096<35/16\le1+2t_0/d\). At four, \(t_0=d,\allowbreak \allowbreak  U=K^3\one\), with variance \(\delta_3\le\theta^2d<3d^2\). Thus every \(c\ge4\) has \(|R_0|\le t_0+d=\Gamma_0-d\), and the actual two arms give
+
+\[
+f_3h_c\le e^{-d}.\label{eq:C181:d}
+\tag{C181.T190.31}
+\]
+
+Every later shorter length is at least five. Its original row remainder is less than \(\sqrt d/5<3d/5\), so the pair envelope gives \(h_sf_t\le e^{-2d}\). The same actual message therefore satisfies
+
+\[
+H\le e^{-[1+2(j-1)]d}pP \bar f_{L+2}.
+\]
+
+The full bare-root bound then gives the high-domain rate
+
+\[
+4+1367/900+8(j-1)=4967/900+8(j-1)>705/128.
+\tag{C181.T190.32}
+\]
+
+At the weakest \(j=1\), the margin above \(705/128\) is \(319/28800>0\). The low and high domains share \(d=1/8\), with the same direction. Together with the full-domain anchor family this proves the claimed rows.

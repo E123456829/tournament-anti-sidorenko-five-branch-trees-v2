@@ -1,0 +1,481 @@
+\subsection{The genuine length-two reference for connectors two through five}\label{proof:Q5-C037}
+For the same terminal $F=qf_2$ and reference arm $f_2$,
+let $X_n=T^nF$, with all connector edges directed toward the reference
+root. We prove $\E[f_2X_n^4]\le1$ for $n=2,3,4,5$.
+Together with Sections~\ref{proof:Q5-C032} and~\ref{proof:Q5-C033} this supplies every positive
+connector for precisely this terminal and reference. The quantitative
+bounds proved here are
+\begin{equation}\tag{L37.0}\label{eq:L37:claims}
+\begin{array}{c|cc}
+n&\text{first score interval}&\text{remaining interval}\\\hline
+4&1-303d/400\quad(0<d\le1/10)&1473/1600\quad(1/10\le d\le1/3)\\
+5&1-483d/400\quad(0<d\le1/10)&1-853/124416\quad(1/10\le d\le1/3)\\
+3&1-41d/3328\quad(0<d\le1/4)&61/64\quad(1/4\le d\le1/3)\\
+2&\multicolumn{2}{c}{1-259d/128000\quad(0<d\le1/3).}
+\end{array}
+\end{equation}
+The bounds on the remaining interval for $n=4,5,3$, and the $n=2$
+bound, are strict. At $d=0$ all actual
+messages are one. Equal-arm factors are restored by positivity, and
+full reversal applies to every original edge and weight together.
+
+Use $B=-K$, $u=B\one=-g$, $r=Kg$, $s=K^2g$, $t_3=K^3g$,
+$c=19/32$, $\theta=13/32$, $\tau=d-\delta_2$,
+$\gamma=d-\delta_2/2$, and $\Pi z=z-\E z$.
+The finite polynomials $S_n,\widehat S_n,P_n$ are as in
+Section~\ref{proof:Q5-C033}. In the following envelope notation
+$\mathcal U_n$ is distinct from the paper's receiving message $W_n$.
+The same difference of squares and finite Duhamel identity give
+\[
+0\le X_n\le T^n\{(1+r/2)^2\}\le
+\mathcal U_n:=\bar f_n+T^nr+(\delta_2/2)\bar f_{n-1},
+\qquad\mathcal U_{n+1}=T\mathcal U_n.
+\]
+Explicitly,
+\begin{equation}\tag{L37.1.4}\label{eq:L37:envelopes}
+\begin{aligned}
+\mathcal U_2&=(1-\gamma)q+r+t_3,\\
+\mathcal U_3&=\widehat S_3-\tau-\gamma\bar f_2,\\
+\mathcal U_4&=\widehat S_4-d-\tau\bar f_1-\gamma\bar f_3,\\
+\mathcal U_5&=\widehat S_5-(\tau+\delta_3)-d\bar f_1
+-\tau\bar f_2-\gamma\bar f_4.
+\end{aligned}
+\end{equation}
+All are nonnegative by the preceding actual comparison. The short paths are
+\[
+\bar f_1=q,\quad\bar f_2=q+r,\quad\bar f_3=q+r-s-d,\quad
+\bar f_4=1-2d+(1-d)u+r-s+t_3,
+\]
+of means $1,1-d,1-2d,1-3d+\delta_2$.
+
+We use precisely the coefficient and scalar comparisons already proved
+in Section~\ref{proof:Q5-C033}. Put
+\[
+\begin{gathered}
+M=1-95d/32+57d^2/32,\quad H=-3/16+2d,\quad C=37/4-10d,\\
+\mathcal V(d,v)=1-7v/15-d(1-v)[6-9d-(4+d)v+2v^2].
+\end{gathered}
+\]
+For $Z\ge0$, $\mu=\E Z$, the bounds
+$Z\le(1-cd)q-cd+\sqrt d$, $\mu\le M$ give
+$f_2(Z^2+2\mu Z+3\mu^2)\le C$.
+If also $\E[f_2(Z-\mu)]\le dH$ and
+$\operatorname{Var}Z\le d\mathcal V(d,v)$, $d\le v\le\theta$,
+the two scalar conclusions \eqref{eq:L33:small} and the final high-score
+bound there apply. In every case the starting identity is
+\begin{equation}\tag{L37.2.5}\label{eq:L37:expansion}
+\E[f_2Z^4]=(1-d)\mu^4+4\mu^3\E[f_2(Z-\mu)]
++\E\{f_2(Z-\mu)^2[Z^2+2\mu Z+3\mu^2]\}.
+\end{equation}
+
+\proofpart{Connector four: exact moments and retained variance}
+Take $Z=\mathcal U_4$, $d>0$, $v=\delta_2/d\in[d,\theta]$.
+The finite signed sums give
+\[
+\begin{gathered}
+\E\widehat S_4=1-\tau-\delta_3,\quad \E[u\widehat S_4]=\tau,\\
+\E[r(\widehat S_4-1)]=\delta_2-\delta_3+\delta_4.
+\end{gathered}
+\]
+Consequently
+\begin{equation}\tag{L37.3.1}\label{eq:L37:mean4}
+\mu_4=1-4d+(5/2)\delta_2+2d^2-d\delta_2-\delta_3
+\le1-d[4-(5/2)v+v^2]+d^2(2-v)\le M.
+\end{equation}
+The last comparison reduces to
+$4-(5/2)v+v^2-5c-d(2-v-3c)\ge0$.
+Its left side decreases in $v$ and at $\theta$ equals
+$185/1024+3d/16>0$. The actual covariances
+$\operatorname{Cov}(f_2,\bar f_1)=-d$,
+$\operatorname{Cov}(f_2,\bar f_3)=-d+2\delta_2-d^2$ give
+\[
+\E[f_2(Z-\mu_4)]=-d+2\delta_2-(1+d)\delta_3+\delta_4
++\gamma d(1-2v+d).
+\]
+Using $\delta_4\le\theta\delta_3$, $\gamma\le d$ and
+$1-2v+d\le1+d\le4/3$ bounds this divided by $d$ by
+$-3/16+(4/3)d\le H$.
+
+On $[0,\theta]$,
+$|P_3(i\sqrt x)|^2=1-x+3x^2-2x^3+x^4\le1$,
+because $j(x)=1-3x+2x^2-x^3$ decreases to
+$j(\theta)=1451/32768>0$.
+Thus $\widehat S_4\le q+\sqrt d$ by the row bound and
+$\widehat S_4-1-u=BP_3(B)u$.
+Retaining $-d,-\tau q$ in \eqref{eq:L37:envelopes} yields
+$0\le Z\le(1-cd)q-cd+\sqrt d$. Hence the full coefficient $C$ applies.
+Exactly,
+\[
+Z-\mu_4=\Pi\{[P_4(B)-(\tau+\gamma)-\gamma B-\gamma B^2]u\}.
+\]
+The real and normalized imaginary parts of $P_4(i\sqrt x)$ are
+$1-x$ and $1-x+x^2$, and
+$|P_4|^2=1-x-x^2+3x^3-2x^4+x^5\le1-x$ by $j\ge0$.
+The respective subtracted parts lie in $[\tau(2-x),2d]$ and $[\tau,d]$.
+Since $2(1-x)-2d>0$ and $2(1-x)-d>0$, their square difference gives
+\[
+\begin{aligned}
+|P_4-(\tau+\gamma)-\gamma z-\gamma z^2|^2
+&\le1-x-\tau\{(2-x)[2(1-x)-2d]+x[2(1-x)-d]\}\\
+&=1-x-\tau[4-4d-(4-d)x].
+\end{aligned}
+\]
+Integrating against the same spectral measure of $u$, of mass $d$ and
+first moment $\delta_2$, and contracting by $\Pi$, gives
+\begin{equation}\tag{L37.3.8}\label{eq:L37:V4}
+\operatorname{Var}(Z)/d\le V_4(d,v):=(1-v)[(1-2d)^2+d(4-d)v].
+\end{equation}
+
+For $0<d\le1/10$, the preceding spectral bracket is at least
+$18/5-4\theta=79/40$, whence
+$\operatorname{Var}(Z)/d\le1-d-c(79/40)d\le1-2d$.
+Set $\mathcal A=893/320$ and $N=1-\mathcal A d\ge\mu_4$.
+The function $(1-d)t^4+4dHt^3$ has its maximum on $[0,N]$ at $N$:
+its derivative either is nonnegative or changes once from negative to
+positive, and $(1-d)N+4dH\ge(9/10)(7/10)-3/40>0$.
+Here the actual variance factor is \(1-2d\), so the polynomial
+\(\mathcal S_2\) in Table~\ref{tab:reference-synthesis:long-scalars}
+is the divided difference between \(1-303d/400\) and the resulting
+fourth-moment upper bound. Its strictly positive coefficients prove
+the first \(n=4\) bound in \eqref{eq:L37:claims}.
+
+For $1/10\le d\le1/3$, the mean part is at most
+$P_0=M^3B_1$, where $B_1=1-151d/32+51d^2/4-57d^3/32$.
+Equation~\eqref{eq:reference-synthesis:P0-decreasing} gives
+\(P_0'<0\) throughout this actual interval.
+The endpoint estimates are
+\[
+\begin{array}{c|rrr}
+d&M\text{ upper bound}&B_1\text{ upper bound}&P_0\text{ upper bound}\\\hline
+1/10&3/4&2/3&9/32\\
+3/20&3/5&23/40&621/5000<1/8\\
+1/5&12/25&9/16&972/15625<1/16\\
+1/4&37/100&3/5&151959/5000000<1/32.
+\end{array}
+\]
+Writing $A_1=(1-2d)^2$, $B_2=d(4-d)$ makes $V_4=(1-v)(A_1+B_2v)$
+concave in $v$. On $[1/10,1/4]$ it decreases in $d$, since
+$\partial_dV_4=-(1-v)[4-8d-(4-2d)v]<0$, with bracket at least
+$2-(7/2)\theta=37/64$. The allowed $v$ interval also shrinks.
+The first three endpoint maxima occur at $v=d$; the later ones are
+bounded by the unrestricted quadratic maximum $(A_1+B_2)^2/(4B_2)$:
+\[
+\begin{array}{c|rr}
+d&\text{upper bound on }\max_vV_4&\text{simpler bound}\\\hline
+1/10&6111/10000&5/8\\1/8&2233/4096&11/20\\
+3/20&78421/160000&1/2\\1/5&196/475&5/12\\
+1/4&361/960&2/5\\1/3&4/11&2/5.
+\end{array}
+\]
+Each simpler bound is strict. On $[1/4,1/3]$, for each fixed
+$v\in[0,\theta]$, $V_4$ is convex in $d$, so its last two endpoint
+bounds give $V_4<2/5$ on the entire interval. Since $dC(d)$ increases,
+the following closed intervals cover the full remaining domain:
+\[
+\begin{array}{c|rrrr}
+d\text{ interval}&P_0&dC&V_4&\text{total upper bound}\\\hline
+{}[1/10,1/8]&9/32&1&5/8&29/32\\
+{}[1/8,3/20]&9/32&93/80&11/20&1473/1600\\
+{}[3/20,1/5]&1/8&29/20&1/2&17/20\\
+{}[1/5,1/4]&1/16&27/16&5/12&49/64\\
+{}[1/4,1/3]&1/32&71/36&2/5&1181/1440.
+\end{array}
+\]
+Thus $\E[f_2X_4^4]\le\E[f_2Z^4]<1473/1600$.
+
+\proofpart{Connector five: verification of all common comparison inputs}
+Let $Z=\mathcal U_5$. The finite signed sums are
+\[
+\begin{gathered}
+\E\widehat S_5=1-\tau,\quad \E[u\widehat S_5]=\tau+\delta_3-\delta_4,\\
+\E[r(\widehat S_5-1)]=\delta_2-\delta_3.
+\end{gathered}
+\]
+The exact mean is
+\[
+\mu_5=1-5d+(7/2)\delta_2+4d^2-(7/2)d\delta_2
++\delta_2^2/2-\delta_3.
+\]
+Since $\mu_5-\mu_4=-\tau[1-(d/2)(4-v)]\le0$, one has $0\le\mu_5\le M$.
+The actual covariances are
+$\operatorname{Cov}(f_2,\bar f_2)=-d+\delta_2-d^2$ and
+$\operatorname{Cov}(f_2,\bar f_4)=-d+2\delta_2-\delta_3+d\delta_2$.
+Consequently
+\[
+\begin{aligned}
+\E[f_2(Z-\mu_5)]={}&-d+2\delta_2-2\delta_3+\delta_4+d^2
+-\tau(\delta_2-d^2)\\
+&+\gamma(d-2\delta_2+\delta_3-d\delta_2).
+\end{aligned}
+\]
+After $\delta_4\le\theta\delta_3$ the total coefficient of
+$\delta_3$ is at most $-(2-\theta-\gamma)<0$.
+Discarding this and $-\tau(\delta_2-d^2)$, using $\gamma\le d$ and
+$1-2v-dv\le1$, gives $\E[f_2(Z-\mu_5)]/d\le-1+2v+d+\gamma\le H$.
+The bound $|P_4|\le1$ proved above gives $\widehat S_5\le q+\sqrt d$.
+Retain the constant $\tau+\delta_3$ and $dq$ in
+\eqref{eq:L37:envelopes}; then $0\le Z\le(1-cd)q-cd+\sqrt d$.
+
+The real and normalized imaginary parts of $P_5$ are
+$\rho=1-x+x^2-x^3$ and $1-x$, and
+\[
+|P_5(i\sqrt x)|^2=1-x+x^2-3x^3+3x^4-2x^5+x^6\le1-6x/7.
+\]
+Indeed its loss divided by $x$ is at least
+$1-x+3cx^2\ge1-1/(12c)=49/57>6/7$, using $1-x\ge c$ and
+$2x^4-x^5\ge0$; at zero equality is direct.
+In the centered polynomial the subtracted parts are
+$r_0=d+\tau+\gamma(1-d-x)$ and $r_1=\tau+\gamma(1-x)$.
+As $1-d-x>0$, these lie in $[\tau(3-d-x),3d]$ and
+$[\tau(2-x),2d]$. The factors $2\rho-3d$ and $2(1-x)-2d$ are
+positive, so the componentwise square difference is at least $\tau B_5$,
+where
+\[
+\begin{aligned}
+B_5&=(3-d-x)(2\rho-3d)+x(2-x)[2(1-x)-2d]\\
+&=6-11d+3d^2+(d-4)x+2x^2-(6-2d)x^3+2x^4\\
+&\ge6-11d+3d^2-L(d)x,\qquad L(d)=(2139-681d)/512.
+\end{aligned}
+\]
+The last inequality uses $x^3\le\theta x^2$, drops $2x^4$, and uses
+$(6-2d)\theta-2\ge1/6$ and $x^2\le\theta x$.
+Spectral integration and centering give
+\[
+\operatorname{Var}(Z)/d\le V_5(d,v):=1-6v/7
+-\tau[6-11d+3d^2-L(d)v].
+\]
+Its exact difference from the common variance factor is
+\[
+V_5-\mathcal V=-41v/105+\tau[2d-3d^2+(91-1193d)v/512+2v^2].
+\]
+For $d\ge1/10$ the linear coefficient is negative, and
+\[
+\frac\tau v(2d-3d^2+2v^2)
+\le d(1-v)(2-3d+2v)\le d(1-d)(2-d)\le10/27<41/105.
+\]
+Here the derivative in $v$ is $3d-4v<0$, and the final cubic increases
+on $[0,1/3]$; the strict difference is $19/945$.
+For $0<d\le1/10$, retaining the positive part of the linear term yields
+\[
+\begin{gathered}
+\frac\tau v[2d-3d^2+(91-1193d)v/512+2v^2]
+\le2d(1-v^2)+(91/512)d(1-v)\\
+\le1115d/512\le1115/5120<41/105.
+\end{gathered}
+\]
+Thus $V_5<\mathcal V$ everywhere. All common coefficient, mean,
+covariance and variance hypotheses have now been verified, so
+Section~\ref{proof:Q5-C033} gives both stated $n=5$ bounds.
+
+\proofpart{Connector three: negative reference covariance retained}
+Let $Z=\mathcal U_3$, $\alpha=51/64$, $h=c^2=361/1024$.
+Exactly,
+\[
+\mu_3=1-3d+(3/2)\delta_2+d^2-d\delta_2/2
+\le M_3(d):=1-3\alpha d+\alpha d^2\le1-2d.
+\]
+The first upper bound takes $v=\theta$ in an increasing affine expression.
+From $\E\widehat S_3=1-d$, $\E[u\widehat S_3]=\tau+\delta_3$,
+$\E[r(\widehat S_3-1)]=\delta_2$ and the covariance of $\bar f_2$,
+\[
+\E[f_2(Z-\mu_3)]=-d+2\delta_2-\delta_3-d^2
++\gamma d(1-v+d)\le-d(1-v)^2\le-hd.
+\]
+This uses $\delta_3\ge dv^2$, $v\ge d$ and $\gamma(1-v+d)\le d$.
+The centered polynomial is $\Pi\{[P_3(B)-\gamma-\gamma B]u\}$.
+Its norm before centering obeys
+$|P_3-\gamma-\gamma z|^2=|P_3|^2-2\gamma(1+x^2)+\gamma^2(1+x)
+\le1-2\gamma+\gamma^2(1+x)$.
+Its exact mean is $-(1-\gamma)d$, so
+\[
+\operatorname{Var}(Z)/d\le1-2\gamma+\gamma^2(1+v)-(1-\gamma)^2d.
+\]
+This decreases in $\gamma\in[\alpha d,d]$, because its derivative
+divided by two is $-(1-d)+\gamma(1+v-d)<0$:
+$\gamma(1+v-d)\le(1+\theta)/3=15/32<2/3\le1-d$.
+It increases in $v$, hence
+\[
+\begin{gathered}
+\operatorname{Var}(Z)/d\le1-(83/32)d+(325941/131072)d^2-(2601/4096)d^3
+\\\le V_3(d):=1-(83/32)d+(5/2)d^2.
+\end{gathered}
+\]
+
+For the $p$ coefficient set $S=\widehat S_3-\gamma r$;
+then $Z=S-\tau-\gamma q$. The four coefficient parameters for
+Section~\ref{calc:fourthcomparison} are
+$\alpha_0=d(1-\gamma)$, $a_0=\tau$, $b_0=\gamma$,
+$\eta_0=\tau+\delta_3$, all in $[\tau,d]$:
+$\alpha_0-\tau=\delta_2-d\gamma\ge0$ and $\tau+\delta_3\le d$.
+The polynomial $P_3-\gamma z$ only reduces the normalized imaginary
+part from one to $1-\gamma$, so $\|S-1\|_2^2\le d$.
+Its tail polynomial $(1-\gamma)+z+z^3$ has squared modulus
+$(1-\gamma)^2+x(1-x)^2\le(1-\gamma)^2+4/27$,
+giving row tail at most $(13/12)\sqrt d$ everywhere.
+For $d\ge1/10$, $\gamma\ge51/640$ and
+$2\gamma-\gamma^2\ge62679/409600>4/27$, improving it to $\sqrt d$.
+The standard and enlarged-tail comparisons of that section cover the
+whole domain and give
+$p[Z^2+2\mu_3Z+3\mu_3^2]\le7-10d$.
+Throughout, $Z\le(1-cd)q-cd+(13/12)\sqrt d$.
+
+For the additional $r$ weight set $x=\sqrt d$, $\lambda=13/12$,
+$b=1-cx^2$, $e=\lambda x-cx^2$, $m=1-2x^2$.
+The same original-row bound and extrema of $q^j\sqrt{pq}$ used in
+Section~\ref{proof:Q5-C035} bound the added term by
+$x\{(25/12)b^2+(21/8)b(e+m)+(e+m)^2+2m^2\}$.
+All substituted terms are nonnegative; taking $b\le1$ gives
+\[
+\begin{aligned}
+\mathcal E_3(x)&=x\{25/12+(21/8)U+U^2+2m^2\},
+\quad U=1+(13/12)x-(83/32)x^2\\
+&=(185/24)x+(481/96)x^2-(43367/2304)x^3
+-(1079/192)x^4+(15081/1024)x^5.
+\end{aligned}
+\]
+For $0\le x\le1/3$, $43367/2304-15081/9216>17$, so
+$\mathcal E_3\le(185/24)x+(481/96)x^2-17x^3$.
+Its derivative is concave and positive at both endpoints, giving
+the upper bound $719/288<5/2$.
+For the remaining interval use \(1/\sqrt3<3/5\), and set
+\(\mathcal T(y)=3-\mathcal E_3(1/3+4y/15)\).
+This degree-five polynomial has the six Bernstein coefficients
+\[
+ \frac1{777600000}\begin{gathered}
+(450809375,249628875,115378375,\\
+62732115,91480239,171085851)
+\end{gathered}.
+\]
+They are all positive, so Lemma~\ref{lem:bernstein-certificate}
+gives \(\mathcal E_3<3\) on \([1/3,1/\sqrt3]\).
+Consequently the full coefficient is at most $10-10d$.
+
+The pure variance branch is
+\[
+G(d)=10d(1-d)V_3(d)=10d-(575/16)d^2+(815/16)d^3-25d^4.
+\]
+Its second derivative $-575/8+(2445/8)d-300d^2$ increases on
+$[0,1/3]$ to $-10/3$. As $G(1/4)=975/1024$ and $G'(1/4)=5/256$,
+strong concavity gives $G\le975/1024+15/262144<61/64$.
+The remaining part is $\phi(t)=(1-d)t^4-4hdt^3$, whose maximum on
+any $[0,N]$ is at an endpoint. For $d\le1/4$, take
+$N=1-\mathcal A d\ge\mu_3$, $\mathcal A=561/256$.
+The divided excess of $\phi(N)+G$ is exactly
+\begin{align*}
+-301/256
+&+[6\mathcal A^2+(4+12h)\mathcal A-575/16]d\\
+&+[-4\mathcal A^3-(6+12h)\mathcal A^2+815/16]d^2\\
+&+[\mathcal A^4+(4+4h)\mathcal A^3-25]d^3-\mathcal A^4d^4.
+\end{align*}
+The middle coefficients are less than $11,-40,56$, respectively, using
+$219/100<\mathcal A<274/125$ and $44/125<h<353/1000$:
+\[
+\begin{aligned}
+6(274/125)^2+(4+12\cdot353/1000)(274/125)-575/16&<11,\\
+-4(219/100)^3-(6+12\cdot44/125)(219/100)^2+815/16&<-40,\\
+(274/125)^4+(4+4\cdot353/1000)(274/125)^3-25&<56.
+\end{aligned}
+\]
+The entire excess is therefore at most
+$-301/256+11d-26d^2\le-41/3328$, by the maximum of this concave
+quadratic. The zero endpoint $G<61/64$ also satisfies the required
+$1-41d/3328$ bound. For $d\ge1/4$, $M_3$ and $(1-d)M_3$ decrease,
+whereas $4hd$ increases. At $1/4$, $(1-d)M_3-4hd=-55/4096<0$.
+Hence $\phi(M_3)<0$ and its maximum on $[0,M_3]$ is zero, so the
+whole remaining interval is bounded strictly by $61/64$.
+
+\proofpart{Connector two: exact moment budget}
+Let $Z_2=\mathcal U_2=aq+R$, $a=1-d+\delta_2/2$, $R=r+t_3$.
+The exact moments are
+\begin{equation}\tag{L37.7.1}\label{eq:L37:twoledger}
+\begin{aligned}
+\mu_2&=1-2d+(3/2)\delta_2,\\
+\E[f_2(Z_2-\mu_2)]&=-d+\delta_2-\delta_3+d\delta_2/2,\\
+\operatorname{Var}(Z_2)&=a^2d+\delta_2-2\delta_3+\delta_4-(d-\delta_2)^2.
+\end{aligned}
+\end{equation}
+The complete continuous pointwise proof in
+Section~\ref{proof:Q5-C037-coefficient} supplies
+\begin{equation}\tag{L37.7.C}\label{eq:L37:C2}
+f_2[Z_2^2+2\mu_2Z_2+3\mu_2^2]\le C_2(d):=1023/128-8d.
+\end{equation}
+Keeping the same $\delta_3$ in both moments and using
+$\delta_3\ge dv^2$, $\delta_4\le\theta\delta_3$ in
+\eqref{eq:L37:expansion} gives
+\[
+\E[f_2Z_2^4]\le P(d,v):=(1-d)\mu^4+4d\mu^3H_2+C_2(d)dV_2,
+\]
+where
+$\mu=1-2d+(3/2)dv$, $a=1-d+dv/2$,
+$H_2=-1+v-v^2+dv/2$ and
+$V_2=a^2+v-(51/32)v^2-d(1-v)^2$.
+The following monotonicity works for any $v$-independent coefficient
+$21/4\le C(d)\le8$, which includes $C_2$:
+\[
+\frac{\partial_vP}{d}=6\mu^2\mathcal B+4\mu^3H_{2,v}+CV_{2,v},
+\quad\mathcal B=1-6d+2d^2+(9/2)dv-3dv^2,
+\]
+\[
+H_{2,v}=1-2v+d/2>0,\qquad
+V_{2,v}\ge W(d):=-151/512+(35/16)d-(51/64)d^2.
+\]
+$W$ increases on $[0,1/3]$. Use the following five intervals.
+For $0<d\le1/16$, use $\mu\ge7/8$, $\mathcal B\ge5/8$,
+$H_{2,v}\ge3/16$, $CV_{2,v}\ge-151/64$; the resulting sum is
+$2077/2048>0$.
+For $1/16\le d\le1/8$, use $\mu\ge3/4$,
+$\mathcal B\ge9/32$, $H_{2,v}\ge7/32$ and
+$8W(1/16)=-2643/2048$, giving
+$243/256+189/512-2643/2048=57/2048>0$.
+For $1/8\le d\le3/20$, use $\mu\ge7/10$,
+$\mathcal B\ge29/200$, $H_{2,v}\ge1/4$ and $8W(1/8)=-139/512$;
+the second term alone is $343/1000>139/512$, and the first is positive.
+For $3/20\le d\le1/5$, $W\ge391/25600>0$ and
+\[
+\mathcal B\ge\mathcal B_{\min}(d):=1-6d+(13/2)d^2-3d^3>0.
+\]
+Here $v(9/2-3v)$ increases for $v\in[0,\theta]$,
+$\mathcal B_{\min}$ decreases on $[0,1/3]$, and
+$\mathcal B_{\min}(1/5)=9/250$.
+For $1/5\le d\le1/3$, the second term is at least $23/160$, since
+$\mu\ge1/2$ and $H_{2,v}\ge23/80$; the third exceeds $29/50$, because
+$(21/4)W(1/5)=29757/51200>29/50$.
+Only a negative first term needs payment. Set $m=1-(89/64)d$.
+On the subdomain $\mathcal B_{\min}<0$,
+$6\mu^2\mathcal B\ge6m^2\mathcal B_{\min}$.
+The derivative of $m^2(-\mathcal B_{\min})$, divided by positive $m$,
+is at least
+$(103/192)(8/3)-2(89/64)(7/18)=67/192>0$,
+using $m\ge103/192$, $-\mathcal B_{\min}\le7/18$ and
+$(-\mathcal B_{\min})'\ge8/3$.
+Thus $6\mu^2\mathcal B\ge-74263/110592>-27/40$.
+The total exceeds $-27/40+23/160+29/50=39/800>0$.
+If $\mathcal B_{\min}\ge0$ all terms were already nonnegative.
+Consequently $P$ increases strictly in $v$, and $v=\theta$ is a
+compatible common endpoint.
+
+At this endpoint, $\mu=1-(89/64)d$,
+$H_2=-777/1024+(13/64)d$ and
+$V_2=37461/32768-(1993/1024)d+(2601/4096)d^2$.
+The exact divided excess is
+\[
+\begin{aligned}
+Q(d):=\frac{P(d,\theta)-1}{d}={}&-1932885/4194304
++(778497/131072)d\\
+&-(23816013/1048576)d^2+(1496032917/67108864)d^3
+\\&-(99400629/16777216)d^4.
+\end{aligned}
+\]
+Its third derivative exceeds $6\cdot22-8\cdot6=84$, since its cubic
+coefficient exceeds $22$ and quartic coefficient exceeds $-6$.
+So $Q''$ increases. The quadratic, cubic and quartic coefficients are
+less than $-227/10,223/10,-59/10$, giving
+$Q''(1/3)<-227/5+223/5-118/15=-26/3<-8$.
+The anchor values are
+$Q(1/6)=-278262102/86973087744<-3/1000$ and
+$Q'(1/6)=844767381/7247757312\in(0,1/8)$.
+Strong concavity yields
+$Q(d)<-3/1000+1/1024=-259/128000$ on the full interval.
+Using \eqref{eq:L37:C2} and $0\le X_2\le Z_2$ proves the claimed
+$n=2$ bound. All four connectors have now been treated with the same
+actual terminal, reference measure and fixed directions.

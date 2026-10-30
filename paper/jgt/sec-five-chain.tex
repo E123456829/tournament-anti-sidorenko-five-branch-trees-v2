@@ -1,0 +1,119 @@
+\section{The five-vertex path}\label{sec:five-chain}
+Write the core in path order as
+\[
+ t\;--_{L_-}\;r\;--_{M_-}\;c\;--_{M_+}\;w\;--_{L_+}\;z,
+ \qquad L_-,M_-,M_+,L_+\ge1.
+\]
+Here $L_\pm$ counts a terminal connector and $M_\pm$ the connector
+from an off-center root to $c$. In a local outlet formula, $L$ denotes
+the terminal-connector length and $M$ the receiving-connector length.
+After Lemma~\ref{lem:five-reduction}, the two terminal residuals have
+at least two entries and the three internal residuals are nonempty.
+Call an internal residual S if it is a singleton and R otherwise.
+
+\subsection{A central singleton: the maximal S spine}
+Suppose $c$ is S. Take the maximal consecutive S sequence among
+$r,c,w$ that contains $c$. Orient its singleton arms alternately as
+$f_a$ and $\bar f_b$, starting with an outward arm at its left end.
+Every connector between consecutive S vertices points from the
+negative end toward the positive end. The corresponding operators
+between square roots of the actual arm messages are
+\[
+ B_i=\sqrt{f_a}T^{M_i}\sqrt{\bar f_b}
+ \quad\hbox{or their adjoints},\qquad \|B_i\|\le1
+\]
+by Proposition~\ref{q3:prop:operators}.
+
+At a positive S end whose arm has message \(f_s\), an ordinary
+terminal supplies
+\[
+ y=\sqrt{f_s}\,T^LF_t,\qquad \|y\|_2\le1,
+\]
+where \(F_t\) is positive canonical for an even residual list and
+negative canonical for an odd residual list; the norm bound is
+\eqref{q3:eq:singleendpoint}. An R half-tree supplies instead
+\[
+ y=\sqrt{f_s}\,T^MH,\qquad
+ H=C^-TG=\sqrt q\,h,\qquad \|h\|_2\le1.
+\]
+Equations~\eqref{eq:inverse-half} and~\eqref{eq:five-normalized}
+give \(\|y\|_2\le1\) for every \(M\ge1\).
+At a negative S end reverse the entire outside configuration:
+the two endpoint functions become
+\(\sqrt{\bar f_s}A^LF_t^-\) and
+\(\sqrt{\bar f_s}A^MH^-\), respectively, with the same norm bound.
+
+Bounding the genuine equal-pair factors on the spine by one gives
+\[
+ \ip{y_L}{B_1\cdots B_{j-1}y_R}\le1,
+ \qquad \|y_L\|_2,\|y_R\|_2\le1.
+\]
+For a one-vertex spine this is $\ip{y_L}{y_R}$. This covers the patterns SSS, RSS,
+SSR and RSR. The two square roots of each arm contribute one arm factor, and each
+original connector appears once.
+
+\subsection{A unit off-center arm with a unit receiving connector}
+Now suppose the center is R and, say, $r$ has one unit residual arm
+and its receiving connector $r-c$ has $M_-=1$. Put $L=L_-$ and choose the terminal direction with
+step count $L-1$. Its composite message at $r$ is
+\[
+ F_*^+=E_r^-qA^LF^-_{t,L-1}.
+\]
+The actual unit arm is the factor $q$. Row H\"older and $pq\le1$ give,
+for every real $G$,
+\[
+ \E[q|pTG|^4]\le\E[(pq)^4T(|G|^4)]\le\E[p|G|^4].
+\]
+Full reversal proves $\E[p(F_*^+)^4]\le1$. The one edge from $r$ to
+$c$ has not yet been integrated. Choose the central negative R factor
+$C^-$ with $\E[q(C^-)^4]\le1$ and put $H_c=C^-TF_*^+$.
+Lemma~\ref{lem:halftree} gives $N_+(H_c)\le1$.
+
+At $w$, use the right R or S construction in Table~\ref{tab:roles},
+with its actual terminal and terminal-connector length $L_+$. It gives a message
+$H_w$ with $N_-(H_w)\le1$. Direct the entire $M_+$-path from $c$ to
+$w$. The exact density is
+\[
+ Z_D=\ip{H_c}{A^{M_+}H_w}\le1.
+\]
+This whole-tree construction replaces the $I_q$ outlet at $r$.
+
+\subsection{Two compatible outlets}
+In the remaining structural branch $c$ is R, and any unit singleton
+off-center has receiving-connector length at least two. Choose the central negative
+zero-step factor $C_c$ as follows. An even residual uses negative
+canonical pairs. An odd residual beginning with one uses
+$E_c^-p\bar f_aW_b$ followed by negative canonical pairs. A nonunit
+odd residual uses $E_c^+f_a$ followed by positive canonical pairs.
+These are the full reversals of the corresponding zero-step
+directions, so
+\[
+ \E[qC_c^4]\le1.
+\]
+Proposition~\ref{prop:five-outlet} supplies actual outputs $U_-,U_+$
+for the two sides, both using this same $q$. Integration over their
+disjoint interiors gives $Z_D=\E[C_cU_-U_+]$.
+H\"older at exponents $4,8/3,8/3$ yields
+\begin{align}\label{eq:five-chain-close}
+ Z_D&\le(\E[qC_c^4])^{1/4}
+             I_q(U_-)^{3/8}I_q(U_+)^{3/8}\notag\\
+ &\le e^{-(\eta_-+\eta_+)d/8}\le e^{-d/2000}\le1.
+\end{align}
+The weight powers $1/4,-1/8,-1/8$ cancel, and both side functions are evaluated at the same central label.
+
+\begin{figure}[htbp]\centering
+\includegraphics{figures/five-path-closure.pdf}
+\caption{The remaining path branch. The two structural alternatives are applied first; only then are the two local outlets joined with the same central reference weight.}\label{fig:five-path}
+\end{figure}
+
+The root catalogue divides nonempty residual lists into singletons,
+pairs, odd lists of at least three entries, and even lists of at least four. Singletons split according to their arm and
+receiving-connector lengths: the two-step construction treats an arm of
+length two differently from one of length at least three, and the choice
+depends on the length; $d$ enters in the estimates. The minimum-two odd row with a
+terminal $(2,t)$ has its own first-edge choices, notably $W_2\bar f_t$ at
+$L=1$ and $\bar f_2W_t$ at $L\ge2$; the table in the technical appendix
+lists them all. Together with the two whole-tree alternatives above,
+\eqref{eq:five-chain-close} proves every $P_5$.
+
+\input{sec-five-example}

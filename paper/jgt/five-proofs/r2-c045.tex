@@ -1,0 +1,581 @@
+\subsection{Finite geometric cancellation and every nonunit singleton at three outer edges}\label{proof:R2-C045}
+\paragraph{R45.1 Original model and exact statements}
+
+Work on the original finite probability space after deleting zero-mass atoms,
+with a real skew kernel \(K\) satisfying \(|K(x,\allowbreak y)|\le1\).
+All norms, inner products, adjoints and expectations use the same original measure.
+Write
+\fitdisplay{
+Jv=(Ev)1,\quad A=J+K,\quad T=J-K=A^*,\quad
+ g=K1,\quad p=1+g,\quad q=1-g,
+}{}
+\fitdisplay{
+f_n=A^{n}\one,\quad \bar f_n=T^{n}\one,\quad
+ h_n=T f_{n-1},\quad W_n=A \bar f_{n-1},\quad
+ \delta_j=\|K^{j}\one\|_2^2,\quad d=\delta_1.
+}{}
+In particular p(x), \(q(x)\ge \mu(x)>0.\) A finite actual tree message is positive
+because the all-equal labeling contributes positive original mass.
+Define
+\fitdisplay{
+I_q(U)=E[q^{-1/3}|U|^{8/3}],\qquad B_n=E[\bar f_n^4/q],
+}{}
+and let \(M_v\) be multiplication by the actual function v. The supplied
+finite calculus gives
+\fitdisplay{
+\theta=13/32,\quad\kappa=19/32,\quad
+ 0\le d\le1/3,\quad d^2\le \delta_2\le\theta d,\quad
+ \delta_{j+1}\le\theta \delta_j,\quad \|K\|^2\le\theta.
+}{R45.1.1}
+
+Theorem A: exact improved bare-row bounds. For every integer \(n\ge 4,\allowbreak \)
+\fitdisplay{
+B_n\le
+ \begin{cases}
+ 1-7d/4,&0\le d\le2/15,\\
+ 1-3d/2,&0\le d\le7/40,\\
+ 1-29d/20,&0\le d\le1/5.
+ \end{cases}
+}{R45.1.2}
+The overlapping bounds are all valid on their stated domains for the
+same actual n-edge path. Section3 also proves a single explicit continuous
+bound on the entire original domain, before these convenient relaxations.
+For \(n\ge 5\) there is the separate all-domain estimate
+\fitdisplay{
+B_n\le8(1-2d)(1-5d/2)^3.
+}{R45.1.3}
+The restriction \(n\ge 5\) in (R45.1.3) is essential to the present proof.
+
+Theorem B: every nonunit singleton, outer length three. Suppose the
+actual internal vertex has, after maximal genuine equal-length pairing,
+exactly one residual arm of length \(a\ge 2.\) Its actual terminal has any
+strict residual list of size at least two. Let \(L\ge 1\) be the inner original
+connector length. Include every original root and terminal equal pair.
+Section5 prescribes a direction depending only on these integers. For
+outer length \(M=3,\allowbreak \) its actual message into the original center satisfies
+\fitdisplay{
+\boxed{I_q(U)^3\le e^{-d/80}.}
+}{R45.1.4}
+There is no relation required between a, L and the terminal lengths and
+no ordinary-eighth input assumption. 
+
+Theorem C: precise union and original P5 consequence. The
+E008 construction and Theorem B together give, for every such half-tree,
+\fitdisplay{
+I_q(U)^3\le e^{-\eta_M d},\qquad
+ \eta_M=
+ \begin{cases}
+ 1/2,&M=1,\\
+ 1/80,&M=3,\\
+ 1/2+\lfloor(M-1)/3\rfloor/2,&M\ge4.
+ \end{cases}
+}{R45.1.5}
+ A P5 with both noncentral internal residuals
+nonunit singletons and both outer lengths different from two therefore
+has an original structure-only orientation with \(Z\le 1\) for arbitrary
+terminal and central multisets, and both independent positive inner
+lengths. When both ends are nonreducible and the center has a nonempty
+R residual, the common strict bound is \(Z\le \exp(-d/320).\) Sections~\ref{sec:five-chain} and~\ref{sec:completion} give
+the comparison branches and the separately qualified mixed use.
+
+\paragraph{R45.2 The finite geometric identity which sharpens the C100 row}
+
+Define
+\fitdisplay{
+G_m(z)=\sum_{j=0}^{m-1}z^j,\qquad
+ E_r(x)=\sum_{j=0}^{r-1}(-x)^j\quad(r\ge1).
+}{}
+For x in [0, theta], \(1-x\le E_r(x)\le 1.\) All sums here are finite.
+At the original spectral block \(z=i \sqrt{x}\), write
+\fitdisplay{
+G_m(z)=A_m(x)+zD_m(x).
+}{}
+The letter \(D_m\) is a scalar polynomial here, not an orientation. Fix
+\(n\ge 4\) and \(m=n-1\ge 3.\) In the actual C100 notation set
+\fitdisplay{
+R=K G_m(-K)g,\quad h=E[gR],\quad V=ER^2.
+}{}
+Let \(\nu_g\) be the actual finite spectral measure of -\(K^2\) at g. Its mass
+is d and its first moment is \(\delta_2.\) The exact identities are
+\fitdisplay{
+h=\int xD_m(x)\,d\nu_g(x),\quad
+ V=\int x\{A_m(x)^2+xD_m(x)^2\}\,d\nu_g(x).
+}{R45.2.1}
+This is the same actual R and h as in C100; it is not an independent
+replacement vector. We now retain cancellation in V-h.
+
+If \(m=2r\) is even, then \(r\ge 2\) and \(A_m=D_m=E_r.\) Hence
+\fitdisplay{
+x(A_m^2+xD_m^2-D_m)
+ =(-1)^{r+1}x^{r+1}E_r.
+}{R45.2.2}
+Indeed (\(1+x)E_r=1-(-x)^r.\) When the right side is positive, r is odd
+and \(r\ge 3.\) It is then at most \(x^4,\allowbreak \) which is at most
+\(x^3(1-x+x^2),\allowbreak \) since \(1-x+x^2-x=(1-x)^2\ge 0.\) Negative cases already
+satisfy the same upper bound.
+
+If \(m=2r+1\) is odd, \(r\ge 1,\allowbreak \) then \(D_m=E_r\) and \(A_m=E_{r+1}=1-xE_r.\)
+Direct substitution gives
+\fitdisplay{
+A_m^2+xD_m^2-D_m=(-x)^r A_m.
+}{R45.2.3}
+Only even \(r\ge 2\) gives a positive right side. In that case
+\fitdisplay{
+A_m=\frac{1+x^{r+1}}{1+x}
+ \le\frac{1+x^3}{1+x}=1-x+x^2,
+}{}
+and \(x^{r+1}\le x^3.\) Thus every \(m\ge 3,\allowbreak \) including m3 and m4, obeys
+\fitdisplay{
+x(A_m^2+xD_m^2-D_m)\le x^3(1-x+x^2).
+}{R45.2.4}
+The derivative of \(x^2(1-x+x^2)\) is \(x(2-3x+4x^2)\ge 0:\) the quadratic
+has negative discriminant and positive leading coefficient. Consequently
+\fitdisplay{
+\boxed{V-h\le r_*\delta_2,\qquad
+ r_*=\theta^2(1-\theta+\theta^2)=\frac{131313}{1048576}.}
+}{R45.2.5}
+This replaces the weaker C100 bound \(V-h\le \theta \delta_2.\) The estimate is
+uniform over all finite \(m\ge 3.\) It makes no assumption \(x\ge d\) and uses no
+infinite geometric series. Useful exact scalar comparisons are
+\fitdisplay{
+\frac18<r_*<\frac{13}{100},\qquad
+ \theta r_* =\frac{1707069}{33554432}<\frac{51}{1000}.
+}{R45.2.6}
+For the last comparison, \(1707069000<1711276032.\) Put
+\fitdisplay{
+\delta_*:=\theta^2-51/1000=\frac{14597}{128000}>\frac9{80}.
+}{R45.2.7}
+It follows that \(\theta(\theta-r_*)>\delta_*.\)
+
+\paragraph{R45.3 Same-row fourth expansion and a continuous explicit bound}
+
+This section reuses the exact C100 calculation only through its
+given identities. To avoid confusing an arm length with a scalar,
+put \(\alpha=\kappa\) d, \(C=1-\alpha,\allowbreak  t=1+d/2.\) The two positive finite-convolution
+upper bounds on the SAME actual path are
+\fitdisplay{
+\bar f_n\le Cq+R-\alpha,\qquad \bar f_n\le2Cq.
+}{R45.3.1}
+They hold for every \(n\ge 4.\) The second retains the actual mean of \(\bar f_{n-2}.\)
+For \(s\ge -1,\allowbreak \)
+\fitdisplay{
+\min(1+s,2)^4\le1+4s+7s^2+4s^3.
+}{}
+Applying this at \(s=(R-\alpha)/(Cq),\allowbreak \) then retaining the correlated cubic
+through \(W=2R-Cg,\allowbreak \) gives the exact C100(2.10):
+\fitdisplay{
+\begin{aligned}
+ B_n\le{}&C^4(1+3d)+C^3[td-6\alpha d-8\alpha]
+                 +C\alpha^2[19-d-33\alpha]\\
+ &+C B(d)(V-h)
+  +C[-1+(13+d)\alpha-30\alpha^2]h-C^2E(gR^2),
+\end{aligned}
+}{R45.3.2}
+where
+\fitdisplay{
+B(d)=9-\frac{481}{32}d>0.
+}{}
+Here B(d) is a scalar coefficient; it is unrelated to the index in \(B_n.\)
+The beta monotonicity, cubic signs and coefficient collection behind
+(R45.3.2) are unchanged Q5-C100 steps, given.
+
+The genuine h bounds are kappa \(\delta_2\le h\le \delta_2.\) Separating the three terms
+of its coefficient by sign, as C100 does, gives
+\fitdisplay{
+[-1+(13+d)\alpha-30\alpha^2]h
+ \le H(d)\delta_2,
+}{}
+\fitdisplay{
+H(d)=-\kappa+13\kappa d+\kappa(1-30\kappa^2)d^2.
+}{R45.3.3}
+After (R45.2.5), the combined coefficient of C \(\delta_2\) is now
+\(S_new(d)=r_*B(d)+H(d).\) It is positive throughout [0, \(1/3\)]. Indeed
+\fitdisplay{
+9r_*-\kappa>17/32,\quad
+ 13\kappa-(481/32)r_*>5,\quad
+ \kappa(1-30\kappa^2)=-93157/16384>-6,
+}{}
+so \(S_new(d)>17/32+5d-6d^2>0.\) Only AFTER this sign check may we
+replace the combined \(\delta_2\) by theta d.
+
+The exact old C100 polynomial was
+\fitdisplay{
+\begin{aligned}
+ P(d)=1&-\frac{963}{512}d+\frac{171113}{32768}d^2
+ -\frac{7275575}{1048576}d^3\\
+ &+\frac{14103187}{16777216}d^4
+ +\frac{1063145}{1048576}d^5.
+\end{aligned}
+}{}
+The only changed term is therefore exactly
+-C B(d) \(\theta(\theta-r_*)d.\) The unchanged actual correlation satisfies
+\(|E(gR^2)|\le (2/3)d^{3/2}.\) Thus
+\fitdisplay{
+B_n\le P(d)+\frac23 C^2d^{3/2}
+             -C B(d)\theta(\theta-r_*)d.
+}{R45.3.4}
+The already proved C100 rational comparison, valid on all \(d\le 1/3,\allowbreak \) is
+\fitdisplay{
+(P(d)-1)/d\le-963/512+(21/4)d-(32/5)d^2.
+}{R45.3.5}
+It follows from \(A2<21/4,\allowbreak  A3<-69/10,\allowbreak  A4<1,\allowbreak  A5<33/32\) and
+\(d^3+(33/32)d^4\le (43/96)d^2\).
+
+Combining (R45.2.7),(R45.3.4),(R45.3.5), for \(d>0\) we obtain the claimed continuous
+same-row bound
+\fitdisplay{
+\boxed{B_n\le1-s(d)d,}
+}{}
+\fitdisplay{
+s(d)=\frac{963}{512}-\frac{21}{4}d+\frac{32}{5}d^2
+       -\frac23(1-\kappa d)^2\sqrt d
+       +\delta_*(1-\kappa d)\left(9-\frac{481}{32}d\right).
+}{R45.3.6}
+It extends continuously to \(d=0.\) This is an analytic formula, not a
+finite scan. It holds for every \(n\ge 4\) without changing the actual path.
+
+The function s is decreasing on [0, \(1/3\)]. The first polynomial's derivative
+is at most -\(59/60.\) The product C B(d) is decreasing with both factors
+positive. Finally \(C^2 \sqrt{d}\) is increasing: for \(d>0\) its derivative has
+the sign of C(1-5kappa d), and \(1-5\kappa/3=1/96>0.\) These three signs
+prove monotonicity on the whole interval, including the continuous
+endpoint at zero.
+
+\paragraph{R45.4 Exact endpoint payments and the higher-domain row}
+
+It now suffices to lower-bound s at three exact rational endpoints.
+Evaluate the monotone analytic formula at those endpoints. Write \(F(d)=963/512-(21/4)d+(32/5)d^2.\)
+
+\paragraph{R45.4.1 Endpoint \(d=2/15\)}
+
+Here \(C=221/240>23/25\) and \(B=1679/240>69/10.\) Therefore
+\fitdisplay{
+\delta_*CB>\frac9{80}\frac{23}{25}\frac{69}{10}
+ =\frac{14283}{20000}>7/10.
+}{}
+Also \(F(2/15)=963/512-7/10+128/1125>129/100:\) use
+\(963/512>47/25\) and \(128/1125>11/100.\) Since
+\(C^2=48841/57600<17/20\) and \(\sqrt{2/15}<11/30,\allowbreak \)
+\fitdisplay{
+\frac23 C^2\sqrt{2/15}<\frac{187}{900}.
+}{}
+Consequently
+\fitdisplay{
+s(2/15)>129/100+7/10-187/900=401/225>7/4.
+}{R45.4.1}
+
+\paragraph{R45.4.2 Endpoint \(d=7/40\)}
+
+Here \(C=1147/1280>89/100\) and \(B=8153/1280>63/10.\) Hence
+\fitdisplay{
+\delta_*CB>\frac9{80}\frac{89}{100}\frac{63}{10}
+ =\frac{50463}{80000}>5/8.
+}{}
+The exact F is \(963/512-147/160+49/250>23/20,\allowbreak \) by
+\(963/512>47/25,\allowbreak  147/160<23/25,\allowbreak  49/250>19/100.\)
+Furthermore \(C<9/10\) and \(\sqrt{7/40}<21/50,\allowbreak \) so
+\fitdisplay{
+\frac23 C^2\sqrt{7/40}<\frac{567}{2500}<11/40.
+}{}
+It follows that
+\fitdisplay{
+s(7/40)>23/20+5/8-567/2500>3/2.
+}{R45.4.2}
+
+\paragraph{R45.4.3 Endpoint \(d=1/5\)}
+
+Now \(C=141/160,\allowbreak  B=959/160\) and \(CB=135219/25600.\) The retained gain
+is greater than \(3/5,\allowbreak \) because
+\fitdisplay{
+14597\cdot135219=1973791743>1966080000
+ =\frac35(128000\cdot25600).
+}{}
+The remaining exact comparisons are
+\fitdisplay{
+F(1/5)=\frac{69559}{64000},\quad
+ \sqrt{1/5}<9/20,\quad
+ \frac23C^2\sqrt{1/5}<\frac{59643}{256000}.
+}{}
+Thus
+\fitdisplay{
+s(1/5)>\frac{372193}{256000}
+          >\frac{371200}{256000}=29/20.
+}{R45.4.3}
+Equations (R45.4.1)-(R45.4.3) and monotonicity prove every line of (R45.1.2).
+
+\paragraph{R45.4.4 The original finite path-mean bound}
+
+For clarity, the exact finite argument used on the other domain
+is included. Define \(\beta_1=\beta_2=0\) and
+\fitdisplay{
+\beta_j=\sum_{r=1}^{\lfloor(j-1)/2\rfloor}(-1)^{r-1}\delta_r,
+ \qquad \tau=d-\delta_2.
+}{}
+The actual finite positive convolution is
+\fitdisplay{
+\sum_{r=0}^n(-K)^r1=\bar f_n+\sum_{j=3}^n\beta_j\bar f_{n-j},
+ \qquad \tau\le\beta_j\le d\quad(j\ge3).
+}{R45.4.4}
+Its exact means \(\mu_n=E\bar f_n=Ef_n\) satisfy
+\fitdisplay{
+\begin{aligned}
+ \mu_2&=1-d,&\mu_3&=1-2d,\\
+ \mu_4&=1-3d+\delta_2,&\mu_5&=1-4d+2\delta_2+d^2,\\
+ \mu_6&=1-5d+3\delta_2+3d^2-\delta_3,\\
+ \mu_7&=1-6d+4\delta_2+6d^2-2\delta_3-2d\delta_2.
+\end{aligned}
+}{}
+For n4, 5, 6, 7 their losses divided by d are at least respectively
+\(83/32,\allowbreak  137/48,\allowbreak  89/32,\allowbreak  127/48.\) These follow from \(d\le 1/3\) and
+\(\delta_2\le \theta\) d, retaining the displayed positive losses. For example,
+\fitdisplay{
+6d-(4-2d)\delta_2-6d^2
+ \ge[6-4\theta-(6-2\theta)d]d\ge127d/48.
+}{}
+For \(n\ge 8,\allowbreak \) take the expectation in (R45.4.4) and retain the six actual
+terms corresponding to \(\mu_0,\allowbreak ...,\allowbreak  \mu_5,\allowbreak \) together with \(\beta_{n+1}.\)
+The three coefficients \(\beta_{n+1},\allowbreak  \beta_n,\allowbreak  \beta_{n-1}\) are at least
+tau+kappa \(\delta_3.\) This gives
+\fitdisplay{
+\begin{aligned}
+ 1-\mu_n
+ &\ge\tau(7-10d+3\delta_2+d^2)+3\kappa \delta_3\\
+ &\ge\kappa d(7-10d+7d^2)\ge95d/36>83d/32.
+\end{aligned}
+}{R45.4.5}
+For the middle step use \(\delta_2\ge d^2\) and \(\delta_3\ge d \delta_2\ge d^3\); the latter
+is the Cauchy moment inequality \(\delta_2^2\le d \delta_3\) combined with \(\delta_2\ge d^2.\)
+The bracket is positive. The final quadratic decreases on [0, \(1/3\)].
+Hence
+\fitdisplay{
+\mu_j\le1-2d\ (j\ge3),\qquad
+ \mu_j\le1-83d/32\le1-5d/2\ (j\ge4).
+}{R45.4.6}
+
+
+If \(n\ge 5,\allowbreak \) the positive original kernel gives \(Tv\le 2Ev\) and
+\(T^2v\le 2(Ev)q\) for \(v\ge 0.\) Thus, for the SAME path,
+\fitdisplay{
+\bar f_n\le2(1-2d)q,
+ \quad \bar f_n\le2(1-5d/2),\quad E\bar f_n\le1-5d/2.
+}{}
+All right sides are nonnegative for \(d\le 1/3.\) Consequently
+\fitdisplay{
+B_n\le2(1-2d)E \bar f_n^3
+ \le8(1-2d)(1-5d/2)^3,
+}{}
+which is (R45.1.3). The first mean is \(\mu_{n-2}\); it is exactly mu3 when
+\(n=5.\) The latter two require indices at least four. No n4 endpoint is
+hidden in this argument.
+
+\paragraph{R45.5 Every actual terminal and the original weighted input}
+
+Theorem B uses the E008 Section10 construction. The
+complete outward-reference table is reproduced to make its integer-only
+choice explicit. Canonical pairs mean \(h_s f_t\) with \(s<t\); \(h_{1}=q.\) Every
+genuine terminal equal-pair decoration stays inside its original
+connector. The full outward connector is \(T^L.\)
+
+
+\begingroup\small
+\setlength{\tabcolsep}{3pt}
+\setlength{\LTleft}{0pt}\setlength{\LTright}{\fill}
+\begin{longtable}{@{}p{0.2200\linewidth}p{0.7000\linewidth}@{}}
+\caption{Finite geometric cancellation and every nonunit singleton at three outer edges: parameter values.}\label{tab:parameters:r2-c045:1}\\
+\toprule
+Entry & Actual outward-reference \(F_ref\) \\
+\midrule\endfirsthead
+\toprule
+Entry & Actual outward-reference \(F_ref\) \\
+\midrule\endhead
+\bottomrule\endfoot
+Exact (1, b) & \(q f_b\). \\
+\addlinespace[2pt]
+Exact (2, b) & \(h_{2} f_b\). \\
+\addlinespace[2pt]
+Exact (3, b), \(L=1\) or2 & \(f_{3} \bar f_b\). \\
+\addlinespace[2pt]
+Exact (3, b), \(L\ge 3\) & \(h_{3} f_b\). \\
+\addlinespace[2pt]
+Exact pair of \(minimum\ge 4\); every even multipair & Product of all canonical \(h_s f_t\). \\
+\addlinespace[2pt]
+Odd \(minimum\ge 2,\allowbreak \) second \(length\ge 4\) & \(\bar f_a\) times all later canonical pairs. \\
+\addlinespace[2pt]
+Odd prefix (2, 3, c) & \(\bar f_2 f_{3} h_c times later canonical pairs\). \\
+\addlinespace[2pt]
+Exact (1, s, t), \(s\ge 4\) & \(q f_s h_t\). \\
+\addlinespace[2pt]
+Unit-minimum odd, \(second\ge 4,\allowbreak \) at least five arms & q times all later canonical pairs. \\
+\addlinespace[2pt]
+Unit-minimum odd prefix (1, 3, c) & \(q f_{3} h_c times later canonical pairs\). \\
+\addlinespace[2pt]
+Exact (1, 2, 3), \(L=1\) & \(qf_2\bar f_3\). \\
+\addlinespace[2pt]
+Exact (1, 2, 3), \(L\ge 2\) & \(qf_2h_3\). \\
+\addlinespace[2pt]
+Exact (1, 2, c), \(c\ge 4\) & \(q f_{2} h_c\). \\
+\addlinespace[2pt]
+Odd prefix (1, 2, 3, 4, t2), at least five arms & \(q f_{2} h_{t_2} h_{3} f_{4} times later pairs\). \\
+\addlinespace[2pt]
+Other odd prefix (1, 2, c), at least five arms & \(q f_{2} h_c times later pairs\). \\
+\end{longtable}
+\endgroup
+
+
+In the odd \(minimum\ge 2\) row, a denotes the terminal minimum; the
+singleton arm length is a separate parameter. The first pair in a five-or-more-arm
+unit prefix is displayed explicitly; later pairs are the consecutive
+strict residual pairs left after those displayed arms. The rows are
+exhaustive by parity, minimum, next integer and the indicated length
+exception. The exact unit123 exception is L1 for this reference role;
+it is not C106's different ordinary-eighth L2 exception.
+
+Fully reverse this reference construction, including the actual arm,
+the L connector, every terminal arm, and both equal-pair decorations.
+Superscript minus means precisely this full reversal. Put
+\fitdisplay{
+X_0=A^L(E_t^-F_{\rm ref}^-),\qquad X=E_r^-X_0,
+}{}
+\fitdisplay{
+Q_a(d)=\begin{cases}1,&a=2,\\1-d/3000,&a\ge3.\end{cases}
+}{}
+The reference theorem and \(0<E_r^-\le 1\) give
+\fitdisplay{
+E[\bar f_aX^4]\le E[E_r^-\bar f_aX_0^4]\le Q_a(d)\le1.
+}{R45.5.1}
+In particular, \(qf_b\) becomes \(p\bar f_b\), and the short \(f_3\bar f_b\) row becomes
+\(\bar f_3f_b\). The actual singleton arm points toward its internal root and
+has message \(\bar f_a.\) The inner connector points from that root toward its
+terminal. The outer connector has \(M=3\) edges from the root toward the
+central receiver. Its message is exactly
+\fitdisplay{
+U=T^3(\bar f_aX).
+}{R45.5.2}
+The description retains every original edge in its displayed operator order.
+
+\paragraph{R45.5.1 The weighted bridge and positive interpolation}
+
+For every real X and every M, actual row Cauchy gives
+\fitdisplay{
+|T^M(\bar f_aX)|^2\le \bar f_{M+a}\,T^M(\bar f_a|X|^2).
+}{}
+Original-measure Holder, then ordinary L2 norm factorization, yield
+\fitdisplay{
+\begin{aligned}
+ I_q(T^M(\bar f_aX))^3
+ &\le B_{M+a}\{E[T^M(\bar f_a|X|^2)^2]\}^2\\
+ &\le B_{M+a}\|T^M M_{\sqrt{\bar f_a}}\|^4
+                  (E[\bar f_a|X|^4])^2.
+\end{aligned}
+}{R45.5.3}
+The vector inside the norm is
+\((T^M M_{\sqrt{\bar f_a}})(\sqrt{\bar f_a}|X|^2)\). This is the weighted input and its
+matching operator, not an ordinary-fourth substitution into a different
+multiplier theorem.
+
+For any positive original operator P and \(w\ge 0,\allowbreak \) row Cauchy gives
+\(|P(\sqrt{w}v)|^2\le (P|v|)(P(w|v|)).\) Integration and L2 Cauchy therefore
+prove
+\fitdisplay{
+\|P M_{\sqrt w}\|^2\le\|P\|\,\|P M_w\|.
+}{R45.5.4}
+Use \(P=T^3,\allowbreak  w=\bar f_a.\) The full-multiplier theorem is
+||T \(M_{\bar f_a}||^2\le 1-d/72\) for every \(a\ge 2.\) Factor it in the displayed order:
+\(T^3 M_{\bar f_a}=T^2(T M_{\bar f_a}).\) The separate original norm bounds are
+\fitdisplay{
+\|T^3\|\le1-d/8,\qquad
+ \|T^2\|\le(1+(1024/855)\delta_2)^2.
+}{}
+Squaring (R45.5.4) consequently gives
+\fitdisplay{
+\|T^3 M_{\sqrt{\bar f_a}}\|^4
+ \le(1-d/8)^2(1+(1024/855)\delta_2)^4(1-d/72).
+}{R45.5.5}
+Set \(c=416/855,\allowbreak \) so (\(1024/855)\delta_2\le c\) d and \(12/25<c<1/2.\)
+For the actual \(n=a+3\ge 5,\allowbreak \) (R45.5.1)-(R45.5.5) imply
+\fitdisplay{
+I_q(U)^3\le
+ B_n(1-d/8)^2(1+c d)^4(1-d/72)Q_a(d)^2.
+}{R45.5.6}
+We keep the genuine \(\delta_2\) until this justified reduction. The remaining
+proof pays exactly (R45.5.6), with \(Q_a\le 1.\)
+
+\paragraph{R45.6 Complete continuous payment for every M3 output}
+
+The basic logarithmic inequalities, valid on the indicated positive
+domains, are
+\fitdisplay{
+\log(1-u)\le-u-u^2/2\quad(0\le u<1),
+}{}
+\fitdisplay{
+\log(1+z)\le z-\frac{z^2}{2(1+z)}\quad(z\ge0).
+}{R45.6.1}
+The second follows by writing \(z-\log(1+z)=\int _0^z\) t/(1+t)dt
+and replacing the denominator by 1+z. Since \(d\le 1/3\) and \(c<1/2,\allowbreak \)
+\fitdisplay{
+4\log(1+c d)\le4c d-\frac38d^2.
+}{R45.6.2}
+Indeed the exact quadratic coefficient is at least
+\(2c^2/(1+c/3)>(12/7)(12/25)^2=1728/4375>3/8.\)
+
+\paragraph{R45.6.1 Domain \(0<d\le 2/15\)}
+
+Use \(B_n\le 1-7d/4\) and the linear logarithmic bounds. The logarithm of
+the right side of (R45.5.6), with \(Q_a\le 1,\allowbreak \) is at most
+\fitdisplay{
+(-7/4-1/4-1/72+4c)d\le-d/72\le-d/80.
+}{R45.6.3}
+This uses \(4c<2.\) All factors inside the logarithms are positive.
+
+\paragraph{R45.6.2 Domain \(2/15\le d\le 7/40\)}
+
+Use \(B_n\le 1-3d/2,\allowbreak \) retain its quadratic term \(9d^2/8,\allowbreak \) and use (R45.6.2).
+The linear coefficient satisfies
+\fitdisplay{
+4c-7/4-1/72<3/16,
+}{}
+since \(1664*144=239616<240255=281*855.\) The logarithm is at most
+\fitdisplay{
+\frac3{16}d-\frac32d^2
+ \le(3/16-1/5)d=-d/80.
+}{R45.6.4}
+
+\paragraph{R45.6.3 Domain \(7/40\le d\le 1/5\)}
+
+Use \(B_n\le 1-29d/20.\) Its quadratic contribution is \(841d^2/800.\)
+Together with (R45.6.2) this gives total quadratic loss \(1141d^2/800.\)
+The linear coefficient satisfies
+\fitdisplay{
+4c-1/4-1/72-29/20<15/64,
+}{}
+because \(1/4+1/72+29/20=617/360\) and
+\(1664*2880=4792320<4797405=5611*855.\) Thus the logarithm is at most
+\fitdisplay{
+\left(\frac{15}{64}-\frac{1141}{800}\frac7{40}\right)d
+ =-\frac{487}{32000}d\le-d/80.
+}{R45.6.5}
+
+\paragraph{R45.6.4 Domain \(1/5\le d\le 1/3\)}
+
+Here use (R45.1.3) and \(c<1/2\) in (R45.5.6), and discard only factors already
+bounded above by one. The right side is at most
+\fitdisplay{
+F_*(d)=8(1-2d)(1-5d/2)^3(1+d/2)^4.
+}{R45.6.6}
+Every factor is positive. Its logarithmic derivative is
+\fitdisplay{
+-\frac2{1-2d}-\frac{15/2}{1-5d/2}+\frac2{1+d/2}<0.
+}{}
+The first and last terms have nonpositive sum, and the middle term is
+negative. Hence
+\fitdisplay{
+F_*(d)\le F_*(1/5)=\frac{43923}{50000}<\frac9{10}
+ <\frac{239}{240}\le1-d/80\le e^{-d/80}.
+}{R45.6.7}
+The four domains are exhaustive. They all use the same X, the same
+outer \(T^3,\allowbreak \) the same singleton arm, and the same original measure.
+This proves Theorem B for every \(d>0.\)
+
+At \(d=0,\allowbreak  K1=0\) on positive support; it does not follow that \(K=0.\)
+Original leaf integration gives every actual tree message one, so
+\(U=q=1\) and \(Iq(U)^3=1.\) Thus the zero endpoint is also proved.

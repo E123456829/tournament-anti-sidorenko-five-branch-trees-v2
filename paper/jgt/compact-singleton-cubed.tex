@@ -1,0 +1,104 @@
+\subsection{Singletons with the cubed boundary weight}\label{loc:S36}
+We prove $\E[q^3f_a^4]\le1$ for all $a\ge1$ in the outward direction.
+For $a=1$, $q^3p^4=p(pq)^3\le p$.
+For $a\ge3$ use Cauchy--Schwarz with the same outward estimates from
+Sections~\ref{loc:S19} and~\ref{loc:S20}:
+\[
+ \E[q^3f_a^4]\le\sqrt{\E[qf_a^4]\E[q^5f_a^4]}\le1.
+\]
+It remains to prove the stronger bound $1-3d/160$ for $a=2$.
+
+\proofpart{A scalar inequality on the full row domain}
+The row domain is \eqref{q3:eq:cyclepoint}.
+We prove on the whole closed domain $-1\le g\le1$, $|r|\le pq/2$ that
+\begin{equation}\label{eq:compact-singleton-row}
+ q^3(p+r)^4\le p+(4+3g)r+49r^2/5.
+\end{equation}
+Put $\gamma=49/5$, $z=pq$, $S=1+z+z^2$.
+The right side minus the left is exactly
+\[
+ D=pg^2S+(4g^2S+3g)r+(\gamma-6p^2q^3)r^2-4pq^3r^3-q^3r^4.
+\]
+Set $A=\gamma-C(q)$, $C(q)=p^2q^3(6+2q+q^2/4)$ and
+$A_-=\gamma-6p^2q^3$. For $r\ge0$,
+$D\ge pg^2S+(4g^2S+3g)r+Ar^2$.
+For $r=-v\le0$, the cubic and quartic remainder is
+$q^3v^3(4p-v)\ge0$, so
+$D\ge pg^2S-(4g^2S+3g)v+A_-v^2$.
+
+\proofpart{Two shared scalar budgets}
+The derivative of $C=q^3(2-q)^2(q^2+8q+24)/4$ has sign
+$144-56q-38q^2-7q^3$, which decreases and has its unique zero in
+$(5/4,63/50)$; its endpoint values are $61/64,-111429/125000$.
+Since $\log C$ is strictly concave,
+$C(5/4)=640125/65536<489/50$ and
+$(\log C)'(5/4)=244/8535<1/34$ give
+$C<33252/3399<49/5$.
+Also $\max p^2q^3=3456/3125$, whence $A_-\ge9889/3125$.
+Write $S(u)=3-3u^2+u^4$, $R(u)=uS(u)$ for $0\le u\le1$.
+Its unique interior maximum lies below $2/3$; there
+$R\le3u-23u^3/9\le6/\sqrt{23}<63/50$.
+The minimum on $[2/7,1]$ occurs at an endpoint, giving
+$3-4R(u)\le0$ for $u\ge2/7$.
+
+\proofpart{Nonnegative $r$}
+If $g\ge0$ the lower quadratic for $D$ is already nonnegative.
+For $g=-u$, let $B=3-4R(u)$. Only $u<2/7$, $B>0$ needs attention.
+There $pS\ge3-4u$, $B\le3-21u/2$, and
+\[
+ A(1+u)\ge A_0=31/20-43u/4+55u^2/4+85u^3/4-6u^4.
+\]
+The discriminant comparison is
+\[
+ 4pSA-B^2\ge P_0=48/5-454u/5+907u^2/4+35u^3-412u^4+96u^5>0.
+\]
+For its sign put $v=u-1/4\in[-1/4,1/28]$:
+$P_0=33/320+421v/80+227v^2/2-317v^3-292v^4+96v^5$.
+For $v=-w\le0$ the last three terms are nonnegative, and the remaining
+quadratic has minimum $122399/2905600$.
+For $v\ge0$ absorb the negative higher powers into the quadratic;
+its coefficient remains greater than $100$.
+
+\proofpart{Negative $r$ and nonnegative $g$}
+For $g=u\ge0$ the lower quadratic is
+$pSu^2-u[3+4R(u)]v+A_-(1-u)v^2$.
+The following intervals certify its discriminant, using $3+4R\le201/25$:
+\[
+ \begin{array}{c|c|c|c}
+ I&pS\ge&A_-\ge&\text{comparison}\\\hline
+ {}[0,1/4]&3&19/5&228/5>6^2\\
+ {}[1/4,1/2]&3&14963/2560&44889/640>(201/25)^2\\
+ {}[1/2,1]&2&649/80&649/10>(201/25)^2.
+ \end{array}
+\]
+Here $pS\ge3$ on $u\le1/2$ by expansion, and $pS\ge2$ globally from
+$pS-2=(1-u)(1+4u+u^2-2u^3-u^4)\ge0$.
+The $A_-$ bounds use the decreasing function $(1-u)(1-u^2)^2$.
+
+\proofpart{Negative $r$ and negative $g$}
+For $g=-u$, only $B_-=4R-3>0$ needs attention.
+If $u\le3/4$, $pS\ge417/1024$, $B_-\le51/25$, and
+$4pSA_--B_-^2\ge794433/800000>0$.
+For $u\ge3/4$ write $p=1-u\in[0,1/4]$.
+Then $S\ge1+2p$, $R\le1+p+p^2$, $B_-\le(1+2p)^2$.
+For $p\ge1/20$,
+$B_-^2/(4pS)\le(1+2p)^3/(4p)\le1331/200<A_-$,
+using $A_-\ge19943/2560$.
+For $0<p\le1/20$, $R\ge1+p$, so $uB_-\ge1$ whereas
+$A_-pq\le49/50$. Thus the lower quadratic $Q(v)$ decreases up to
+$v_{\max}=pq/2$. Its endpoint is
+\[
+ Q(v_{\max})/p=u[3q/2-uS(1+2u)]+A_-pq^2/4.
+\]
+The bracket equals
+$-5p/2-p^2+23p^3-29p^4+13p^5-2p^6>-13p/5$.
+Since $A_->19/2$, $q>19/10$, it follows that
+$Q(v_{\max})/p>(4779/800)p>0$.
+At $p=0$ one has $r=0$, $D=0$ directly.
+All closed sign regions are now covered, proving
+\eqref{eq:compact-singleton-row}.
+Taking the original expectation, $\E p=1$, $\E r=-d$, $\E[gr]=0$ and
+$\delta_{2}\le13d/32$ yield
+$\E[q^3f_2^4]\le1-4d+49\delta_{2}/5\le1-3d/160$.
+This completes the singleton catalogue, including equal-pair restoration
+and full reversal by the common rules.

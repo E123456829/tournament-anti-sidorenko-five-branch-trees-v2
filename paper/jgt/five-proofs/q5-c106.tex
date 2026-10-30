@@ -1,0 +1,284 @@
+\subsection{The unit ordinary terminal catalogue}\label{proof:Q5-C106}
+\paragraph{Q106.1 Original model and what is proved}
+
+Let (X, mu) be any nonempty finite probability space and let K be real with
+\(K(x,\allowbreak y)=-K(y,\allowbreak x)\) and \(|K(x,\allowbreak y)|\le1\). All expectations and operators below use mu:
+
+\fitdisplay{
+Jv=(Ev)1,\quad A=J+K,\quad T=J-K=A^*,\quad
+g=K1,\quad p=1+g,\quad q=1-g,\quad d=Eg^2\in[0,1/3],
+}{}
+\fitdisplay{
+f_n=A^{n}\one,\qquad \bar f_n=T^{n}\one,\qquad h_n=Tf_{n-1}.
+}{}
+
+An \(f_n\) arm points entirely away from its root. A \(\bar f_n\) arm points entirely
+toward its root. An \(h_n\) arm has its first edge toward the root and all
+remaining edges toward its leaf. In particular \(f_1=p\) and \(h_1=q.\) 
+
+At each root, pair equal-length original arms as far as possible using
+\(f_\ell\) and \(h_\ell\) on each pair. Their actual product \(E_0\) satisfies
+\(0<E_0\le 1\) after zero-mass atoms are removed. Entire pairs may instead be
+reversed when the complete construction calls for it. The residual lengths
+are distinct. The original equal pairs remain in the tree and edge ledger.
+
+Write
+
+\fitdisplay{
+Q(d)=1-d/20000,\qquad
+I_q(U)=E[q^{-1/3}|U|^{8/3}].
+}{Q106.1.1}
+
+Theorem A (complete ordinary terminal supply). Let Sigma be any
+finite original terminal arm multiset with at least two distinct residual
+arms after maximum equal pairing. For every positive original connector
+length L, the tables in parts Q106.2--3 select a terminal orientation
+\(F^{\rm ord}_{\Sigma,\allowbreak L}\), depending only on Sigma and L, such that
+
+\fitdisplay{
+\boxed{E[(E_rpT^L(E_tF^{ord}_{Sigma,L}))^8]\le Q(d).}
+}{Q106.1.2}
+
+Here \(E_t\) and \(E_r\) contain arbitrary genuine equal pairs at the terminal and
+receiving root. The receiving root has an original outward unit arm,
+whose factor is p. All L connector edges point toward the receiving root.
+The statement covers residual size at least two; the same-direction PW4 and an f2-reference fourth for the chosen F are separate assertions.
+
+Theorem B (root pair (1, a), all terminals and both lengths). At an
+original internal root with residual exactly (1, a), \(a\ge 2,\allowbreak \) orient the unit
+arm outward and the a-arm entirely inward. With any Sigma as in A and
+any independent positive L, M, put
+
+\fitdisplay{
+Y=E_rpT^L(E_tF^{ord}_{Sigma,L}),\qquad
+U=T^M(\bar f_aY).
+}{}
+
+Then
+
+\fitdisplay{
+\boxed{I_q(U)^3\le(1-d/72)Q(d)\le1.}
+}{Q106.1.3}
+
+All M outer edges point from the internal root toward the output root.
+The \(\bar f_a\) factor is multiplied before \(T^M\); it is not commuted through T.
+
+Theorem C (unit internal root, all terminals, outer length at least three).
+If the internal root instead has residual exactly one outward unit arm,
+the same Y satisfies, for every \(M\ge 3,\allowbreak \)
+
+\fitdisplay{
+\boxed{I_q(T^MY)^3\le(1-d)Q(d)\le1.}
+}{Q106.1.4}
+
+The applications of these ordinary roles are given in Sections~\ref{sec:five-chain} and \ref{sec:five-star-fork}.
+
+\paragraph{Q106.2 Every even residual terminal, with every direction exception}
+
+Write the distinct residual table as
+
+\fitdisplay{
+a_1<b_1<\cdots<a_j<b_j,\qquad j\ge1.
+}{}
+
+All rows below use every \(L\ge 1\) except where explicitly split by L. Each
+table entry omits the common genuine \(E_t\) only. The displayed factor holds in the displayed range.
+
+
+\begingroup\small
+\setlength{\tabcolsep}{3pt}
+\setlength{\LTleft}{0pt}\setlength{\LTright}{\fill}
+\begin{longtable}{@{}p{0.2200\linewidth}p{0.2333\linewidth}p{0.2333\linewidth}p{0.2333\linewidth}@{}}
+\caption{The unit ordinary terminal catalogue: parameter values.}\label{tab:parameters:q5-c106:1}\\
+\toprule
+Entry & Connector & F & Proof \\
+\midrule\endfirsthead
+\toprule
+Entry & Connector & F & Proof \\
+\midrule\endhead
+\bottomrule\endfoot
+\(j=1,\allowbreak  a_1=1,\allowbreak  b_1\ge 2\) & every L; & \(q f_{b_1}\); & Section~\ref{proof:Q5-C058-ordinary}. \\
+\addlinespace[2pt]
+\(j=1,\allowbreak  a_1=2,\allowbreak  b_1\ge 3\) & \(L=1\); & \(h_2 f_{b_1}\); & Sections~\ref{proof:Q5-C053-unit} and \ref{proof:Q5-C057}. \\
+\addlinespace[2pt]
+\(j=1,\allowbreak  (a_1,\allowbreak b_1)=(2,\allowbreak 3)\) & \(L=2\); & \(h_2 f_3\); & Section~\ref{proof:Q5-C085}. \\
+\addlinespace[2pt]
+\(j=1,\allowbreak  a_1=2,\allowbreak  b_1\ge 4\) & \(L=2\); & \(f_2 h_{b_1}\); & Section~\ref{proof:Q5-C085}. \\
+\addlinespace[2pt]
+\(j=1,\allowbreak  a_1=2,\allowbreak  b_1\ge 3\) & \(L\ge 3\); & \(h_2 f_{b_1}\); & Section~\ref{proof:Q5-C085}/Section~\ref{proof:Q5-C086} exact union. \\
+\addlinespace[2pt]
+\(j=1,\allowbreak  a_1=3,\allowbreak  b_1\ge 4\) & \(L=1\); & \(f_3 h_{b_1}\); & Section~\ref{proof:Q5-C089}. \\
+\addlinespace[2pt]
+\(j=1,\allowbreak  (a_1,\allowbreak b_1)=(3,\allowbreak 4)\) & \(L=2\); & \(h_3 f_4\); & Section~\ref{proof:Q5-C089}. \\
+\addlinespace[2pt]
+\(j=1,\allowbreak  a_1=3,\allowbreak  b_1\ge 5\) & \(L=2\); & \(f_3 h_{b_1}\); & Section~\ref{proof:Q5-C089}. \\
+\addlinespace[2pt]
+\(j=1,\allowbreak  a_1=3,\allowbreak  b_1\ge 4\) & \(L\ge 3\); & \(h_3 f_{b_1}\); & Section~\ref{proof:Q5-C089}. \\
+\addlinespace[2pt]
+\(j=1,\allowbreak  a_1\ge 4\) & every L; & \(h_{a_1}f_{b_1}\); & Section~\ref{proof:Q5-C090-ordinary}. \\
+\addlinespace[2pt]
+\(j\ge 2,\allowbreak  a_1=1\) & every L; & \(q f_{b_1} \prod_{i=2}^j h_{a_i}f_{b_i}\); & Section~\ref{proof:Q5-C092}. \\
+\addlinespace[2pt]
+\(j\ge 2,\allowbreak  a_1\ge 2\) & every L; & \(\prod_{i=1}^j h_{a_i}f_{b_i}\); & Section~\ref{proof:Q5-C090-ordinary}. \\
+\end{longtable}
+\endgroup
+
+
+Section~\ref{proof:Q5-C058-ordinary} supplies 1-d/12000. The Section~\ref{proof:Q5-C085}/Section~\ref{proof:Q5-C086} union supplies Q(d). Section~\ref{proof:Q5-C089}
+supplies 1-d/500. Section~\ref{proof:Q5-C090-ordinary} supplies exp(-d/6) for its multiple-pair row;
+for \(a_1\ge 4,\allowbreak  j\ge 1\) its stronger expression is
+exp(-(128j/5-24)d), whose coefficient is at least \(8/5.\) Section~\ref{proof:Q5-C092} supplies
+\(\exp(-(1/4+16(j-2))d).\) Each is at most Q(d): for the exponential rows
+use \(\exp(-ad)\le 1-ad/(1+ad),\allowbreak \) with \(d\le 1/3\) and the stated \(a\ge 1/6.\)
+The latter fraction is at least d/7, which is more than d/20000.
+
+Exhaustion is structural. A positive even residual has either \(j=1\) or
+\(j\ge 2.\) With \(j=1\) the shorter length is 1, 2, 3 or at least 4. The cases
+shorter 2 and 3 are partitioned by \(L=1,\allowbreak  L=2\) and \(L\ge 3,\allowbreak \) retaining the
+actual shorter-pair exceptions. With \(j\ge 2\) the shorter length is 1 or
+at least 2. These cases are disjoint and cover all even residual lists.
+No direction is chosen using K, mu, or d.
+
+\paragraph{Q106.3 Every odd residual terminal}
+
+Write
+
+\fitdisplay{
+a<b_1<c_1<\cdots<b_k<c_k,\qquad k\ge1.
+}{}
+
+\paragraph{Q106.3.1 Minimum \(a\ge 2\)}
+
+The catalogue in Section~\ref{proof:Q5-C097}, with the unit and adjacent proofs in Sections~\ref{proof:Q5-C070}, \ref{proof:Q5-C093} and \ref{proof:Q5-C095}, gives the following table:
+
+
+\begingroup\small
+\setlength{\tabcolsep}{3pt}
+\setlength{\LTleft}{0pt}\setlength{\LTright}{\fill}
+\begin{longtable}{@{}p{0.2200\linewidth}p{0.3500\linewidth}p{0.3500\linewidth}@{}}
+\caption{The unit ordinary terminal catalogue: parameter values.}\label{tab:parameters:q5-c106:2}\\
+\toprule
+Entry & Connector & Actual F \\
+\midrule\endfirsthead
+\toprule
+Entry & Connector & Actual F \\
+\midrule\endhead
+\bottomrule\endfoot
+\(b_1\ge 5,\allowbreak  \text{any } a\ge 2,\allowbreak k\ge 1\) & every L; & \(\bar f_a \prod_{i=1}^k h_{b_i}f_{c_i}\). \\
+\addlinespace[2pt]
+\(b_1=4,\allowbreak  a=2\) or 3, any \(k\ge 1\) & every L; & \(\bar f_a \prod_{i=1}^k h_{b_i}f_{c_i}\). \\
+\addlinespace[2pt]
+\(a=2,\allowbreak b_1=3,\allowbreak k\ge 2\) & every L; & \(\bar f_2 f_3 h_{c_1} \prod_{i=2}^k h_{b_i}f_{c_i}\). \\
+\addlinespace[2pt]
+exact (2, 3, 4) & every L; & \(\bar f_2 f_3 h_4\). \\
+\addlinespace[2pt]
+exact (2, 3, c), \(c\ge 5\) & \(L=1\); & \(\bar f_2 h_3 f_c\). \\
+\addlinespace[2pt]
+exact (2, 3, c), \(c\ge 5\) & \(L\ge 2\); & \(\bar f_2 f_3 h_c\). \\
+\end{longtable}
+\endgroup
+
+
+Each row gives at most \(\exp(-d/27)\le 1-d/28\le Q(d).\) Since \(b_1>a\ge 2,\allowbreak  b_1\) is either 3, 4 or at least 5; the value 3 forces \(a=2.\) The last
+three rows split the remaining k and c cases. Thus all minima at least
+two and all positive L are covered. In particular the \(L=1\) direction
+for (2, 3, \(c\ge 5)\) is not changed to the \(L\ge 2\) direction.
+
+\paragraph{Q106.3.2 Minimum \(a=1\)}
+
+In the following table, later pairs mean the displayed increasing pairs,
+and every row uses all \(L\ge 1\) unless a connector is specified.
+
+
+\begingroup\small
+\setlength{\tabcolsep}{3pt}
+\setlength{\LTleft}{0pt}\setlength{\LTright}{\fill}
+\begin{longtable}{@{}p{0.2200\linewidth}p{0.2333\linewidth}p{0.2333\linewidth}p{0.2333\linewidth}@{}}
+\caption{The unit ordinary terminal catalogue: parameter values.}\label{tab:parameters:q5-c106:3}\\
+\toprule
+Entry & Connector & Actual F & Reference \\
+\midrule\endfirsthead
+\toprule
+Entry & Connector & Actual F & Reference \\
+\midrule\endhead
+\bottomrule\endfoot
+\(b_1\ge 4,\allowbreak  \text{any } k\ge 1\) & every L; & \(q \prod_{i=1}^k h_{b_i}f_{c_i}\); & Section~\ref{proof:Q5-C096-ordinary}. \\
+\addlinespace[2pt]
+\(b_1=3,\allowbreak k\ge 2\) & every L; & \(q f_3 h_{c_1} \prod_{i=2}^k h_{b_i}f_{c_i}\); & Section~\ref{proof:Q5-C096-ordinary}. \\
+\addlinespace[2pt]
+exact (1, 3, 4) & every L; & \(q f_3 h_4\); & Section~\ref{proof:Q5-C096-ordinary}. \\
+\addlinespace[2pt]
+exact (1, 3, c), \(c\ge 5\) & every L; & \(q f_3 h_c\); & Section~\ref{proof:Q5-C098}. \\
+\addlinespace[2pt]
+\(b_1=2,\allowbreak k\ge 3\) & every L; & \(q f_2 h_{c_1} \prod_{i=2}^k h_{b_i}f_{c_i}\); & Section~\ref{proof:Q5-C096-ordinary}. \\
+\addlinespace[2pt]
+exact (1, 2, c, b, e), \(4\le c<b<e\) & every L; & \(q f_2 h_c h_b f_e\); & Section~\ref{proof:Q5-C098}. \\
+\addlinespace[2pt]
+exact (1, 2, 3, b, e), \(5\le b<e\) & every L; & \(q f_2 h_3 h_b f_e\); & Section~\ref{proof:Q5-C098}. \\
+\addlinespace[2pt]
+exact (1, 2, 3, 4, e), \(e\ge 5\) & every L; & \(q f_2 h_e h_3 f_4\); & Section~\ref{proof:Q5-C098}. \\
+\addlinespace[2pt]
+exact (1, 2, c), \(c\ge 5\) & every L; & \(q f_2 h_c\); & Section~\ref{proof:Q5-C098}. \\
+\addlinespace[2pt]
+exact (1, 2, 4) & every L; & \(q f_2 h_4\); & Section~\ref{proof:Q5-C102}. \\
+\addlinespace[2pt]
+exact (1, 2, 3) & \(L=2\); & \(q f_2 \bar f_3\); & Section~\ref{proof:Q5-C102}. \\
+\addlinespace[2pt]
+exact (1, 2, 3) & \(L=1\) or \(L\ge 3\); & \(q f_2 h_3\); & Section~\ref{proof:Q5-C102}. \\
+\end{longtable}
+\endgroup
+
+
+The Section~\ref{proof:Q5-C096-ordinary} rows give exp(-d), exp(-d/2), or 1-d/601, all at most Q(d).
+Section~\ref{proof:Q5-C098} gives 1-d/601, 1-d/12000, exp(-d/2), or exp(-8d), as recorded
+in its local proof. Section~\ref{proof:Q5-C102} gives 1-d/601 for the complete 123 table,
+and 1-d/12000 for the complete 124 table. Thus every row supplies (Q106.1.2).
+
+For exhaustion, \(b_1\) is 2, 3 or at least 4. When it is 3, k is 1 or
+at least 2; \(k=1\) has \(c_1=4\) or \(c_1\ge 5.\) When \(b_1=2,\allowbreak \) first split \(k\ge 3,\allowbreak  k=2,\allowbreak \) and \(k=1.\) With \(k=2,\allowbreak \) either \(c_1\ge 4\); or \(c_1=3\) and \(b_2\ge 5\); or
+\(c_1=3\), \(b_2=4\). With \(k=1,\allowbreak  c_1\) is 3, 4 or at least 5. All lengths in
+these partitions are original integers. In the crossed five-arm row
+each of the lengths 1, 2, 3, 4, e is used exactly once. There is no artificial
+pair or omitted arm. The Section~\ref{proof:Q5-C102} \(L=2\) row uses \(\bar f_3,\allowbreak \) not \(h_3.\)
+
+\paragraph{Q106.3.3 Genuine decorations, reversal, and degenerate kernels}
+
+The moment statements include actual equal pairs. Alternatively
+positivity gives \(E_rpT^L(E_tF)\le pT^LF,\allowbreak \) and hence (Q106.1.2) from the undecorated
+row. This comparison retains all original pair edges in the orientation.
+After removal of zero-mass atoms, p, \(q\ge \mu(x)>0,\allowbreak \) so inverse q powers below
+are defined. If \(d=0,\allowbreak  g=0\) but K need not be zero; original leaf integration
+gives every actual message one. All bounds then hold with equality.
+
+Applying the same fixed rule to -K reverses every original arm, connector
+and pair and exchanges A/T and p/q. This gives the full reversed version.
+
+
+parts Q106.2 and 3 prove Theorem A from exact local statements.
+
+\paragraph{Q106.4 The complete internal-root transfers}
+
+The theorem of Section~\ref{proof:Q5-C066} applies to every real Y on the original space:
+
+\fitdisplay{
+I_q(T^M(\bar f_aY))^3\le(1-d/72)E|Y|^8,
+\qquad a\ge2,\quad M\ge1.
+}{Q106.4.1}
+
+Substitute the actual Y from (Q106.1.2). This proves Theorem B with no
+restriction on Sigma besides its at least two residual arms. The root's
+original a-arm provides exactly \(\bar f_a,\allowbreak \) and its original unit arm provides
+p. Thus (Q106.4.1) is applied in its actual operator order and with no added
+reference arm. All original L and M are independent.
+
+For Theorem C, the all-real map of Section~\ref{proof:Q5-C079} for every \(M\ge 3\) is
+
+\fitdisplay{
+I_q(T^MY)^3\le(1-d)E|Y|^8.
+}{Q106.4.2}
+
+Substituting (Q106.1.2) proves (Q106.1.4). The proof covers \(M\ge3\). For \(M=1,2\) the Section~\ref{proof:Q5-C079} costs need not leave enough loss in \(Q(d)\) for a contraction.
+
+For a half-tree of type B put \(B_pair=(1-d/72)Q(d),\allowbreak \) and for type C put
+\(B_unit=(1-d)Q(d).\) Both outputs satisfy \(I_q(U)^3\le B_type\le 1.\)
+

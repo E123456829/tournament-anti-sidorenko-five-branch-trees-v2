@@ -1,0 +1,71 @@
+% Insert after odd-common-calculus.tex. Three different literal pairs are
+% distinguished; their constants must not be interchanged.
+\subsection{The three length-three pair envelopes}
+\label{sec:odd-common:root-three}
+
+\begin{lemma}[Length-three pairs, with their full constants]
+\label{lem:odd-common:root-three}
+Let \(c\ge4\), \(m=c-3\), \(G_m=E+zD\), and put
+\(\Gamma_+=3d-2\delta_2\),
+\(\beta=\beta_{c-1}\) and \(\Gamma_-=d+\beta_c+\beta\).
+The three literal arm products have the following envelopes:
+\begin{equation}\label{eq:odd-common:positive-three}
+ h_3f_c\le e^{-\Gamma_++BV_+},\qquad
+ V_+=(-xE+zxD)u+\tau\one;
+\end{equation}
+\begin{equation}\label{eq:odd-common:reversed-three}
+ W_3\bar f_c\le e^{-\Gamma_++BV_{\rm rev}},\qquad
+ V_{\rm rev}=(-xE-zxD)u-\tau\one;
+\end{equation}
+\begin{equation}\label{eq:odd-common:exchanged-three}
+ \bar f_3W_c\le e^{-\Gamma_-+B(U_-+\beta\one)},\qquad
+ U_-=(xE+zxD)u,\quad\Gamma_-\ge3d-2\delta_2.
+\end{equation}
+The nonconstant parts of all three vectors have norm less than
+\(\sqrt d/2\). In addition
+\begin{equation}\label{eq:odd-common:three-norms}
+\begin{gathered}
+ \E B(V_+-\tau\one)\le\delta_2,\qquad
+ \E BU_-\le0,\quad-\delta_2\le\E U_-\le0,\\
+ \|Bu+U_-\|\le\sqrt d,\qquad
+ \|-u+U_-\|\le\sqrt d.
+\end{gathered}
+\end{equation}
+At \(m=1\), \((E,D)=(1,0)\). No lower bound on \(D\) is imposed
+there. Constants \(\tau\one\), \(-\tau\one\) and
+\(\beta\one\) belong to their respective complete vectors.
+\end{lemma}
+\begin{proof}
+The exact arm identity is \(h_3+f_3=2-2d\).
+In the finite convolution for \(f_c\), retain
+\(\beta_cf_0+\beta_{c-1}f_1\ge\tau(1+p)\).
+With \(R_{3c}=\sum_{j=4}^cK^j\one=B^3G_m(-B)u\), this gives
+\[
+ h_3+f_c\le2-(3d-2\delta_2)+R_{3c}+\tau u.
+\]
+The actual factors are nonnegative, so \(xy\le e^{x+y-2}\) proves
+\eqref{eq:odd-common:positive-three}. Complete reversal gives
+\eqref{eq:odd-common:reversed-three}.
+For the exchanged pair, retain \(\beta\bar f_0\) before applying
+\(A\) to \(\bar f_{c-1}\); then add the exact \(\bar f_3\).
+Using \(G_{c-1}=1+B+B^2G_m\) gives
+\[
+ \bar f_3+W_c\le2-d-\beta_c-\beta
+                   +B[-B^2G_m(B)u+\beta\one].
+\]
+This proves \eqref{eq:odd-common:exchanged-three}.
+The common nonconstant square is
+\(\int x^2(E^2+xD^2)\,d\nu\le\theta^2(1+\theta)d<d/4\).
+The means are given by \eqref{eq:odd-common:coordinates}.
+Finally
+\[
+ \|Bu+U_-\|^2\le\int[x^2+x(1+x)^2]\,d\nu\le d,
+\quad
+ \|-u+U_-\|^2\le\int[(1-x+x^2)^2+x^3]\,d\nu\le d.
+\]
+The first bound uses \(\theta+3\theta^2+\theta^3<1\), and the
+second is the positive-exponent-two case of
+Lemma~\ref{lem:odd-common:joint-paths}. These norm estimates concern
+the displayed nonconstant vectors; a constant-square payment in a
+later certificate is retained separately.
+\end{proof}

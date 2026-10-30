@@ -1,0 +1,495 @@
+\subsection{A genuine two-edge singleton at two outer edges}\label{proof:R2-C047}
+\paragraph{R47.1 Original model and exact new statements}
+
+The original target is an orientation of every edge of every finite tree
+with at most five vertices of original degree at least three, chosen from
+the tree before the host, with original partition at most one for every
+finite original probability and every real skew kernel bounded by one.
+This section proves the following half-tree estimate, retaining all
+original vertices, subdivisions, arms and their repetitions, and the
+independent original core lengths.
+
+Work on the unchanged original finite probability space, after deleting
+only zero-mass host atoms. Put
+\fitdisplay{
+Jv=(Ev)1,\quad A=J+K,\quad T=J-K=A^*,\quad
+ g=K1,\quad p=1+g,\quad q=1-g,
+}{}
+\fitdisplay{
+f_n=A^{n}\one,\quad \bar f_n=T^{n}\one,\quad h_n=T f_{n-1},\quad
+ W_n=A \bar f_{n-1},\qquad \delta_j=\|K^{j}\one\|_2^2,\quad d=\delta_1.
+}{}
+All expectations, norms, adjoints and spectral measures use this same \(\mu\).
+The finite calculus is
+\fitdisplay{
+\theta=13/32,\quad\kappa=19/32,\quad
+ 0\le d\le1/3,\quad d^2\le \delta_2\le\theta d,\quad
+ \delta_{j+1}\le\theta \delta_j,\quad\|K\|^2\le\theta,
+ \quad |Kv(x)|\le\|v\|_2.
+}{R47.1.1}
+Moment Cauchy also gives \(\delta_2^2\le d \delta_3.\) Define
+\fitdisplay{
+I_q(U)=E[q^{-1/3}|U|^{8/3}],\qquad
+ B_n=E[\bar f_n^4/q],\qquad
+ N(d)=(1+d/2)^4(1+32d/19)^2.
+}{R47.1.2}
+At each retained atom, \(p,q\ge\mu(x)>0\). An actual finite rooted-tree
+message is positive, because the all-equal labeling contributes positive
+mass. 
+
+Theorem A — exact original weighted two-step transfer. On every such
+original host,
+\fitdisplay{
+\boxed{B_4N(d)\le1-d/100.}
+}{R47.1.3}
+Consequently every real original function \(X\) satisfies
+\fitdisplay{
+\boxed{
+ I_q(T^2(\bar f_2X))^3
+ \le(1-d/100)\bigl(E[\bar f_2|X|^4]\bigr)^2.}
+}{R47.1.4}
+The weight and operator in (R47.1.4) are part of the statement. It is not a
+claim about an ordinary fourth input to a different operator.
+
+Theorem B — every actual \(a=2,\allowbreak  M=2\) singleton. Let an original internal
+vertex \(r\) have, after maximal equal-length pairing, exactly one residual
+arm of length two. Its original terminal has any strict residual list of
+size at least two, its inner connector has any positive length \(L\), and
+both vertices may have arbitrarily many genuine equal pairs. Give every
+edge the direction in \mbox{\hyperref[part:R47.2]{part R47.2}}. At outer length \(M=2\) the actual message
+into the original center obeys
+\fitdisplay{
+\boxed{I_q(U)^3\le1-d/100\le e^{-d/100}.}
+}{R47.1.5}
+The same direction table applies on both sides of \(d=6/25\).
+
+Theorem C — exact original assembly. A side from Theorem B can be
+combined with any separately supported actual opposite output on the
+same \(q\). If that output has \(I_q^3\le1\), the nonreducible-end, nonempty
+R-center P5 branch has \(Z\le \exp(-d/800).\) If both sides are from Theorem B,
+the corresponding deficit is \(d/400\). With the separate original Q4 and
+central-singleton constructions, the latter gives \(Z\le 1\) for arbitrary
+original terminal and central multisets, both inner lengths independently
+positive, both actual outer lengths two, and both residual internal arms
+of length two. No other original length is identified with these twos.
+
+Appendix A gives a separate optional high-domain theorem for \(a\ge 3.\)
+
+
+\paragraph{R47.2 Complete actual original direction and reference input}\label{part:R47.2}
+
+For an arm, \(f_n\) means every edge outward from its attachment, \(\bar f_n\) every
+edge inward, \(h_n\) the first edge inward and the remaining \(n-1\) outward,
+and \(W_n\) the first outward and the remaining \(n-1\) inward. These definitions
+also specify \(n=1: h_{1}=q\) and \(W_{1}=p.\)
+
+Pair equal arm lengths maximally using a fixed ordering of the original
+tree. A genuine pair can be oriented as \(f_l h_l\) in the positive table,
+or \(\bar f_l W_l\) in its full reverse. Its factor is in \((0,1]\). The original
+two arms are retained, with their actual location and edge count.
+The unpaired residual lengths are strictly increasing. 
+
+The complete C034 theorem supplies \(E[f_2(T^L F_{\rm ref})^4]\le1\)
+and its genuine-decoration version for all terminal residuals below.
+In the table, a canonical pair is \(h_s f_t\) with \(s<t.\) Later pairs are the
+remaining consecutive strict residual pairs, each retained once.
+Each row gives the outward-reference construction followed by
+the actual terminal factor used here after full reversal.
+
+\begin{description}[style=nextline,leftmargin=1.6em]
+\item[{Exact \((1,t)\)}] \(F_{\rm ref}=qf_t\); its full reverse is \(p\bar f_t\).
+\item[{Exact \((2,t)\)}] \(F_{\rm ref}=h_2f_t\); its full reverse is \(W_2\bar f_t\).
+\item[{Exact \((3,t)\), \(L=1\) or \(2\)}] \(F_{\rm ref}=f_3\bar f_t\); its full reverse is \(\bar f_3f_t\).
+\item[{Exact \((3,t)\), \(L\ge3\)}] \(F_{\rm ref}=h_3f_t\); its full reverse is \(W_3\bar f_t\).
+\item[{Single pair with minimum at least four; every even list with at least four arms}] The product of the canonical pairs \(h_sf_t\); its full reverse is the product of \(W_s\bar f_t\).
+\item[{Odd minimum \(\ell\ge2\), second length at least four}] \(\bar f_\ell\) times the later canonical pairs; its full reverse is \(f_\ell\) times the later negative pairs.
+\item[{Odd prefix \((2,3,t)\)}] \(\bar f_2f_3h_t\) times the later canonical pairs; its full reverse is \(f_2\bar f_3W_t\) times the later negative pairs.
+\item[{Exact \((1,s,t)\), \(s\ge4\)}] \(F_{\rm ref}=qf_sh_t\); its full reverse is \(p\bar f_sW_t\).
+\item[{Unit minimum, odd list, second length at least four, at least five arms}] \(q\) times the later canonical pairs; its full reverse is \(p\) times the later negative pairs.
+\item[{Odd prefix \((1,3,t)\)}] \(qf_3h_t\) times the later canonical pairs; its full reverse is \(p\bar f_3W_t\) times the later negative pairs.
+\item[{Exact \((1,2,3)\), \(L=1\)}] \(F_{\rm ref}=qf_2\bar f_3\); its full reverse is \(p\bar f_2f_3\).
+\item[{Exact \((1,2,3)\), \(L\ge2\)}] \(F_{\rm ref}=qf_2h_3\); its full reverse is \(p\bar f_2W_3\).
+\item[{Exact \((1,2,t)\), \(t\ge4\)}] \(F_{\rm ref}=qf_2h_t\); its full reverse is \(p\bar f_2W_t\).
+\item[{Odd prefix \((1,2,3,4,t_2)\), at least five arms}] \(qf_2h_{t_2}h_3f_4\) times the canonical pairs from index three; its full reverse is \(p\bar f_2W_{t_2}W_3\bar f_4\) times the negative pairs from index three.
+\item[{Other odd prefix \((1,2,t)\), at least five arms}] \(qf_2h_t\) times the later canonical pairs; its full reverse is \(p\bar f_2W_t\) times the later negative pairs.
+\end{description}
+
+The table is indexed by parity, minimum, second minimum and the
+displayed short exceptions. In particular the reference \((1,2,3)\)
+exception is at \(L=1.\) It is not the different C106 ordinary-eighth \(L=2\)
+exception. A predetermined integer priority resolves overlapping labels.
+
+Let \(E_r^-\) and \(E_t^-\) be the genuine negative pair decorations at \(r\) and
+the terminal. Define
+\fitdisplay{
+X_0=A^L(E_t^-F_{\rm ref}^-),\qquad X=E_r^-X_0,
+ \qquad U=T^2(\bar f_2X).
+}{R47.2.1}
+Thus the sole two-edge arm points toward \(r\), the inner \(L\)-edge connector
+points from \(r\) toward its terminal, and both outer edges point from \(r\)
+toward the original center. All terminal directions listed as full reversals,
+all pair decorations and the genuine reference arm were reversed together.
+This is a legal fixed orientation of the complete original half-tree.
+
+The fully reversed C034 reference theorem gives
+\fitdisplay{
+E[E_r^- \bar f_2 X_0^4]\le1.
+}{}
+Since \((E_r^-)^4\le E_r^-\) for \(0<E_r^-\le1\),
+\fitdisplay{
+\boxed{E[\bar f_2X^4]\le1.}
+}{R47.2.2}
+There is one original \(\bar f_2\) arm in (R47.2.1). The square-root
+factorization below uses that arm.
+
+\paragraph{R47.3 Original weighted bridge and its exact norm cost}
+
+For any real \(X\), positivity and row Cauchy for \(T^2M_{\bar f_2}\) give
+\fitdisplay{
+|T^2(\bar f_2X)|^2\le \bar f_4\,T^2(\bar f_2|X|^2).
+}{}
+H\"older on the original measure \(\mu\), with exponents \(3\) and \(3/2\),
+followed by the ordinary \(L^2\) bound, gives
+\fitdisplay{
+\begin{aligned}
+ I_q(T^2(\bar f_2X))^3
+ &\le B_4\{E[T^2(\bar f_2|X|^2)^2]\}^2\\
+ &\le B_4\|T^2M_{\sqrt{\bar f_2}}\|^4
+                     (E[\bar f_2|X|^4])^2.
+ \end{aligned}
+}{R47.3.1}
+The vector acted on is \(\sqrt{\bar f_2}|X|^2.\) The weight and the square-root
+operator are changed together in this exact factorization.
+
+For every positive original operator \(P\) and \(w\ge 0,\allowbreak \) row Cauchy implies
+\fitdisplay{
+|P(\sqrt w\,v)|^2\le(P|v|)(P(w|v|)).
+}{}
+After integration and ordinary \(L^2\) Cauchy,
+\fitdisplay{
+\|PM_{\sqrt w}\|^2\le\|P\|\,\|PM_w\|.
+}{R47.3.2}
+The actual full-multiplier interface is
+\fitdisplay{
+\|TM_{\bar f_2}\|^2\le1-d/72.
+}{}
+Its order follows from full reversal and ordinary adjunction of the
+original outward-arm interface, as reconstructed in actual E008 §3.1.
+Use \(P=T^2,\allowbreak  w=\bar f_2\) and \(T^2M_{\bar f_2}=T(TM_{\bar f_2}).\) The actual C064 norms give
+\fitdisplay{
+\begin{aligned}
+ \|T^2M_{\sqrt{\bar f_2}}\|^4
+ &\le\|T^2\|^2\|T\|^2(1-d/72)\\
+ &\le(1+(1024/855)\delta_2)^4(1+32d/19)^2(1-d/72)\\
+ &\le N(d).
+ \end{aligned}
+}{R47.3.3}
+The last step uses \(\delta_2\le 13d/32,\allowbreak \) so (\(1024/855)\delta_2\le 416d/855<d/2,\allowbreak \)
+and drops only the positive factor \(1-d/72\le 1.\)  Equations (R47.3.1)-(R47.3.3) reduce Theorem A exactly to (R47.1.3).
+
+\paragraph{R47.4 Exact four-edge row and correlated cubic}
+
+Write \(\tau=d-\delta_2,\allowbreak  C=1-d,\allowbreak \) and
+\fitdisplay{
+R=K G_3(-K)g=Kg-K^2g+K^3g,
+ \qquad G_3(z)=1+z+z^2.
+}{}
+Direct finite multiplication gives
+\fitdisplay{
+\boxed{\bar f_4=Cq+R-d.}
+}{R47.4.1}
+Also \(\bar f_4=T^2\bar f_2\le 2(\E\bar f_2)q=2Cq.\) The exact same-vector moments are
+\fitdisplay{
+ER=-\tau,\qquad h:=E(gR)=\delta_2,\qquad
+ V:=ER^2=\delta_2-\delta_3+\delta_4.
+}{R47.4.2}
+For example \(E(Kg)=-d,\allowbreak  E(K^2g)=0,\allowbreak  E(K^3g)=\delta_2\); the odd cross
+inner products vanish by skewness. These are finite identities.
+
+On the original finite spectral block \(z=i \sqrt{x}\),
+\(|G_{3}(z)|^2=1-x+x^2\le 1\) for \(0\le x\le \theta.\) Hence
+\fitdisplay{
+|R|\le\sqrt d,\quad V\le \delta_2,\quad
+ |E(gR^2)|\le d\sqrt V\le\tfrac23d^{3/2}.
+}{R47.4.3}
+The last inequality uses original Cauchy, \(R^2\le d\) and \(\theta<4/9.\)
+
+Set \(W=2R-Cg.\) Its actual precursor is 2G3(-K)g-C1, with
+E[G3(-K)g]=d. The original row bound therefore proves
+\fitdisplay{
+|W|^2\le C^2+4d-4Cd=1-2d+5d^2\le1
+ \quad(0\le d\le1/3).
+}{R47.4.4}
+This improves the looser generic correlated cap specifically at the
+actual n4 row. No arbitrary n is relabeled as four.
+The genuine mean and second moment are
+\fitdisplay{
+EW=-2\tau,\qquad EW^2=C^2d+4V-4Ch.
+}{}
+Since (\(W+2\tau)^2(W-1)\le 0\) pointwise,
+\fitdisplay{
+EW^3\le(1-4\tau)EW^2-4\tau^2+8\tau^3,
+ \qquad E(g^2W)\le d.
+}{R47.4.5}
+
+For \(s\ge -1,\allowbreak \)
+\fitdisplay{
+\min(1+s,2)^4\le1+4s+7s^2+4s^3.
+}{R47.4.6}
+For -\(1\le s\le 1\) the difference from (\(1+s)^4\) is \(s^2(1-s^2)\ge 0.\)
+For \(s\ge 1\) the right side is16 at1 and has positive derivative.
+Apply (R47.4.6) at \(s=(R-d)/(Cq),\allowbreak \) which is >-1 by (R47.4.1), keeping
+the cap \(\bar f_4\le 2Cq.\) This yields
+\fitdisplay{
+B_4\le C^4Eq^3+4C^3E[q^2(R-d)]
+             +7C^2E[q(R-d)^2]+4CE(R-d)^3.
+}{R47.4.7}
+The correlated cubic identity used in expanding it is exactly
+\fitdisplay{
+\begin{aligned}
+ &-C^4Eg^3+4C^3E(g^2R)-6C^2E(gR^2)+4CER^3\\
+ &\hspace{12mm}=\frac{C}{2}\{EW^3+C^2E(g^2W)\}.
+ \end{aligned}
+}{R47.4.8}
+The coefficient -7 in (R47.4.7) leaves the additional -\(C^2E(gR^2).\)
+Substitute (R47.4.2),(R47.4.5) into (R47.4.7)-(R47.4.8). Direct collection gives
+\fitdisplay{
+\begin{aligned}
+ B_4\le{}&K_0+C(9-27d+8\delta_2)(V-h)\\
+         &+C(-1+13d-30d^2+8d\delta_2)h-C^2E(gR^2),
+ \end{aligned}
+}{R47.4.9}
+where the complete constant part is
+\fitdisplay{
+\begin{aligned}
+ K_0={}&C^4(1+3d)
+ +C^3[(1-2\tau-4d)d-4(d+\tau)]\\
+ &+7C^2d^2+14C^2d\tau-12Cd^2\tau-4Cd^3
+                     -2C\tau^2+4C\tau^3.
+ \end{aligned}
+}{R47.4.10}
+Every coefficient here comes from the exact n4 identities. In particular
+the cap in (R47.4.4) is1, so this is not a transcription of the generic
+C100 expression with \(t=1+d/2\) or with beta lowered to kappa d.
+
+\paragraph{R47.5 Complete low-domain row payment, \(0<d\le 6/25\)}
+
+Put \(x=\delta_2/d,\allowbreak \) so \(d\le x\le \theta.\) This is one global moment ratio. Moment Cauchy and (R47.1.1) give
+\fitdisplay{
+V-h=-\delta_3+\delta_4\le-\kappa \delta_3\le-\kappa x^2d.
+}{}
+The coefficient 9-27d+8d2 is positive on this domain. Use this bound,
+the exact \(h=xd,\allowbreak \) and (R47.4.3) in (R47.4.9). Then
+\fitdisplay{
+B_4\le C\{1-A(x)d+B(x)d^2-D(x)d^3-E(x)d^4\}
+                  +\tfrac23 C^2d^{3/2},
+}{R47.5.1}
+with
+\fitdisplay{
+\begin{aligned}
+ A(x)&=7-3x+9\kappa x^2,\\
+ B(x)&=21-3x+(27\kappa-2)x^2-8\kappa x^3,\\
+ D(x)&=20+16x-20x^2+4x^3,\\
+ E(x)&=9-2x.
+ \end{aligned}
+}{R47.5.2}
+One direct check of the collection is to write \(v=\tau/d=1-x.\) The
+constant part alone satisfies
+\fitdisplay{
+K_0/C=1-(3+4v)d+(3+20v-2v^2)d^2
+                    +(2-26v+4v^3)d^3-(7+2v)d^4.
+}{}
+Adding the exact h term and the signed V-h term gives precisely (R47.5.2).
+
+The following uniform rational reductions retain enough curvature:
+\fitdisplay{
+A(x)\ge125/19,\quad B(x)\le22,\quad
+ D(x)\ge20+(63/8)d,\quad E(x)\ge8.
+}{R47.5.3}
+For A, complete its square:
+\fitdisplay{
+A(x)=9\kappa(x-1/(6\kappa))^2+7-1/(4\kappa)
+     =9\kappa(x-1/(6\kappa))^2+125/19.
+}{}
+For B, its second derivative on [0, theta] is at least \(1055/64>0.\)
+Its maximum is therefore at an endpoint; \(B(0)=21\) and
+\fitdisplay{
+B(\theta)=2854549/131072<22.
+}{}
+For D use
+\(16x-20x^2\ge x(16-20\theta)=63x/8\ge 63d/8\) and \(4x^3\ge 0.\)
+Finally \(E\ge 131/16>8.\) Thus (R47.5.1) gives
+\fitdisplay{
+B_4\le(1-d)[1-(125/19)d+22d^2-20d^3-(127/8)d^4]
+                                  +\tfrac23(1-d)^2d^{3/2}.
+}{}
+Since \(d\le 6/25<1/4,\allowbreak  \sqrt{d}\le 1/2.\) Therefore
+\fitdisplay{
+\boxed{B_4\le(1-d)R(d),}
+ \qquad
+ R(d)=1-\frac{356}{57}d+\frac{65}{3}d^2-20d^3-\frac{127}{8}d^4.
+}{R47.5.4}
+
+\paragraph{R47.5.1 Exact continuous polynomial certificate}
+
+Let \(P(d)=(1-d)R(d)N(d).\) This is a fixed polynomial. The coefficients of (1-d)R(d), in degrees0 through5, are
+\fitdisplay{
+(1,-413/57,1591/57,-125/3,33/8,127/8).
+}{R47.5.5}
+The coefficients of N(d), in degrees0 through6, are
+\fitdisplay{
+(1,102/19,7995/722,8105/722,34665/5776,588/361,64/361).
+}{R47.5.6}
+Write \(P=1+\sum_{j=1}^{11}c_j d^j.\) Manual convolution gives the following
+exact coefficients and bounds. Equations (R47.5.5)-(R47.5.6) specify every
+coefficient even where a positive expression is more useful than a large
+single numerator.
+
+
+\begingroup\small
+\setlength{\tabcolsep}{3pt}
+\setlength{\LTleft}{0pt}\setlength{\LTright}{\fill}
+\begin{longtable}{@{}p{0.1200\linewidth}p{0.4000\linewidth}p{0.4000\linewidth}@{}}
+\caption{A genuine two-edge singleton at two outer edges: parameter values.}\label{tab:parameters:r2-c047:2}\\
+\toprule
+Entry & Exact coefficient or exact positive description & Bound used \\
+\midrule\endfirsthead
+\toprule
+Entry & Exact coefficient or exact positive description & Bound used \\
+\midrule\endhead
+\bottomrule\endfoot
+1 & \(-107/57\); & retained at the endpoint through P. \\
+\addlinespace[2pt]
+2 & \(191/2166\); & \(>0\). \\
+\addlinespace[2pt]
+3 & \(1612016/41154\); & \(>39\). \\
+\addlinespace[2pt]
+4 & \(4671427/329232\); & \(>0\). \\
+\addlinespace[2pt]
+5 & \(-50007635/329232\); & \(>-153\). \\
+\addlinespace[2pt]
+6 & \(-59573162/329232\); & \(>-182\). \\
+\addlinespace[2pt]
+7 & \(5337151/329232\); & \(>0\). \\
+\addlinespace[2pt]
+8 & \((127/8)n_3+(33/8)n_4-(125/3)n_5+(1591/57)n_6\); & \(>0\). \\
+\addlinespace[2pt]
+9 & \((127/8)n_4+(33/8)n_5-(125/3)n_6\); & \(>0\). \\
+\addlinespace[2pt]
+10 & \((127/8)n_5+(33/8)n_6\); & \(>0\). \\
+\addlinespace[2pt]
+11 & \((127/8)n_6\); & \(>0\). \\
+\end{longtable}
+\endgroup
+
+
+Here \(n_j\) denotes the actual coefficient in (R47.5.6), not a path length.
+For c8, the first two terms exceed165+24 and the sole negative term
+has magnitude less than70, since \(n_3>11,\allowbreak  n_4>6,\allowbreak  n_5<5/3.\)
+For c9 the first term exceeds90 and the negative term has magnitude
+less than \(42/5,\allowbreak \) since \(n_6<1/5.\) The last two rows are positive termwise.
+The listed integer fractions also show \(c3<40,\allowbreak  c4<15,\allowbreak  c5<-151\) and
+\(c6<-180,\allowbreak \) providing further coefficient bounds.
+
+Define \(Q(d)=(P(d)-1)/d\) for \(d>0\) and extend it polynomially at zero.
+For every \(0\le d\le 6/25,\allowbreak \) its derivative is bounded below by
+\fitdisplay{
+\begin{aligned}
+ Q'(d)&\ge\frac{191}{2166}+78d-612d^3-910d^4\\
+ &\ge\frac{191}{2166}
+  +d\left[78-612(6/25)^2-910(6/25)^3\right]\\
+ &=\frac{191}{2166}+\frac{471390}{15625}d>0.
+ \end{aligned}
+}{R47.5.7}
+This proves monotonicity on the entire continuous interval. It is not
+a statement inferred from checking finitely many d values.
+
+\paragraph{R47.5.2 Exact upper endpoint}
+
+At \(d*=6/25,\allowbreak \) the exact values from (R47.5.4) are
+\fitdisplay{
+R(d_*)=3116469/7421875,\qquad
+ (1-d_*)R(d_*)=3116469/9765625.
+}{}
+Also
+\fitdisplay{
+N(d_*)=(28/25)^4(667/475)^2<25/8.
+}{R47.5.8}
+For an explicit integer check, after multiplying by the positive
+denominators (R47.5.8) is
+\fitdisplay{
+2187629545472<2203369140625.
+}{}
+Thus
+\fitdisplay{
+P(d_*)<3116469/3125000=1-8531/3125000.
+}{}
+By (R47.5.7), \(Q(d)\le Q(d*)<-8531/750000<-1/100.\) Combining with (R47.5.4)
+proves
+\fitdisplay{
+\boxed{B_4N(d)\le1-d/100\qquad(0<d\le6/25).}
+}{R47.5.9}
+Every expression is for the same actual four-edge path.
+
+\paragraph{R47.6 Complete high-domain row payment, \(6/25\le d\le 1/3\)}
+
+Here a different estimate of that SAME path is more efficient. Its exact
+second moment, from (R47.4.1)-(R47.4.2), is
+\fitdisplay{
+E \bar f_4^2=1-5d+6d^2+d^3+(1-2d)\delta_2-\delta_3+\delta_4.
+}{R47.6.1}
+For example the cross term in the direct square is
+2C E[q(R-d)]=-4Cd, since \(\tau+h=d.\) This retains the true mean.
+As in Section5, with \(x=\delta_2/d,\allowbreak \)
+\fitdisplay{
+(1-2d)x-\kappa x^2\le(1-2d)^2/(4\kappa).
+}{}
+Consequently
+\fitdisplay{
+\boxed{E\bar f_4^2\le F(d):=
+ 1-\frac{87}{19}d+\frac{82}{19}d^2+\frac{51}{19}d^3.}
+}{R47.6.2}
+No maximizer of this scalar square is imposed on an actual spectral
+frequency or on the global moment ratio.
+
+Positivity gives the two simultaneous bounds
+\fitdisplay{
+b_4\le2(1-d)q,\qquad b_4\le2(1-2d).
+}{}
+The second uses the exact \(Eb3=1-2d.\) Thus
+\fitdisplay{
+B_4\le4(1-d)(1-2d)E\bar f_4^2
+      \le4(1-d)(1-2d)F(d).
+}{R47.6.3}
+Let \(H(d)=4(1-d)(1-2d)F(d)N(d).\) The polynomial F is positive
+on the entire original domain: its derivative is
+\fitdisplay{
+F'(d)=(-87+164d+153d^2)/19\le-46/57<0,
+ \qquad F(1/3)=1/19.
+}{}
+In particular \(0<F\le 1\) and F'/\(F\le -46/57.\) On \(d\ge 6/25\) the logarithmic
+derivative of H is therefore at most
+\fitdisplay{
+-25/19-50/13-46/57+2+64/19=-445/741<0.
+}{R47.6.4}
+All logarithmic factors are positive, so this is a valid continuous
+monotonicity proof through \(d=1/3.\)
+
+At \(d*=6/25,\allowbreak \)
+\fitdisplay{
+F(d_*)=55441/296875,\qquad
+ 4(1-d_*)(1-2d_*)F(d_*)=2882932/9765625.
+}{}
+Using the same \(N(d*)<25/8\) from (R47.5.8),
+\fitdisplay{
+H(d)\le H(d_*)<2882932/3125000<19/20
+              <299/300\le1-d/100.
+}{R47.6.5}
+Together (R47.5.9) and (R47.6.5) prove (R47.1.3) for all \(d>0.\) The estimates apply at their shared endpoint.
+
+At \(d=0,\allowbreak  K1=0\) on the positive support, \(A\one=T\one=\one\) and \(\bar f_4=q=1.\)
+Thus (R47.1.3) is equality. The arbitrary-real (R47.1.4) follows directly from
+(R47.3.1)-(R47.3.3), also at zero; an arbitrary X need not equal one.
+For the actual tree in (R47.2.1), original successive leaf integration does
+give \(X=U=q=1,\allowbreak \) even when the balanced skew kernel K is nonzero.
+This proves Theorems A and B.

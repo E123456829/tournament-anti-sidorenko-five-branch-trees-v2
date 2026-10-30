@@ -1,0 +1,300 @@
+\subsection{The retained multiplier and every even internal root}\label{proof:R2-C042}
+\paragraph{R42.1 Original model and precise claims}
+
+For a real skew kernel K with pointwise absolute value at most one on
+one original finite probability space, put
+\fitdisplay{
+B=-K,\quad u=B\one,\quad T=J+B,\quad A=J-B=T^*,\quad
+ p=1-u,\quad q=1+u,\quad d=E u^2\in[0,1/3].
+}{}
+All adjoints, norms and expectations use this unchanged original measure.
+Write \(f_n=A^{n}\one,\allowbreak  \bar f_n=T^{n}\one,\allowbreak  h_n=T f_{n-1},\allowbreak  W_n=A \bar f_{n-1}. M_v\) denotes multiplication by the actual function v. After zero-mass
+atoms are removed, p(x), \(q(x)\ge \mu(x)>0\); there is no uniform cutoff.
+Define \(I_q(V)=\E[q^{-1/3}|V|^{8/3}]\).
+
+Theorem A — arbitrary real fourth input with an actual arm.
+For every real original Y, every \(a\ge 2\) and every \(M\ge 1,\allowbreak \)
+\fitdisplay{
+I_q(T^M(\bar f_aY))^3
+ \le(1-d/2)(1-d/72)^2\,N_{M-1}^4(E|Y|^4)^2,
+}{R42.1.1}
+where valid original norm bounds are
+\fitdisplay{
+N_0=1,\quad N_1=1+32d/19,\quad
+ N_2=(1+(1024/855)\delta_2)^2,
+}{}
+\fitdisplay{
+N_n=(1-d/8)^{\lfloor n/3\rfloor}\quad(n\ge3),
+ \qquad \delta_2=\|B^21\|^2\le(13/32)d.
+}{R42.1.2}
+Consequently a useful all-length exponential form is
+\fitdisplay{
+I_q(T^M(\bar f_aY))^3\le e^{c_Md}(E|Y|^4)^2,
+\quad
+ c_M=\begin{cases}
+ -19/36,&M=1,\\
+ 4247/684,&M=2,\\
+ 11507/3420,&M=3,\\
+ -19/36-\lfloor(M-1)/3\rfloor/2,&M\ge4.
+ \end{cases}
+}{R42.1.3}
+In particular \(c_M\le 4247/684\) for EVERY M. Thus any actual H with
+\(EH^4\le \exp(-\lambda\) d) has the same-direction output
+\fitdisplay{
+I_q(T^M(\bar f_aH))^3
+ \le\exp[-(2\lambda-c_M)d]
+ \le\exp[-(2\lambda-4247/684)d].
+}{R42.1.4}
+No ordinary eighth hypothesis occurs in this theorem.
+
+Theorem B — every even root with at least four residual arms.
+At an original internal root let the maximally unpaired side-arm lengths
+be strictly increasing \(r_{1}<...<r_{2j},\allowbreak  j\ge 2.\) Its terminal has any finite
+strict residual list of size at least two. All original equal-pair
+decorations, all independent \(innerL\ge 1\) and \(outerM\ge 1\) are allowed.
+Section3 specifies all original directions from these integers alone.
+The actual output \(U_D\) satisfies
+\fitdisplay{
+I_q(U_D)^3\le
+ \begin{cases}
+ e^{-15701d/3420},&r_1=1,\\
+ e^{-3277d/684},&r_1\ge2.
+ \end{cases}
+}{R42.1.5}
+The common first coefficient applies to the whole family.
+
+Theorem C — complete unit-minimum even roots and original P5.
+Every unit-minimum even residual, including an exact pair(1, t), has,
+for every nonreducible terminal, an all-L/M actual output satisfying
+\(Iq(U)^3\le \exp(-d/72).\)
+For a P5 whose two noncentral internal roots each either have an even
+residual of size at least four, or have an exact pair(1, t), the two
+terminal and central multisets may be arbitrary, and all four positive
+core lengths independent: there is a structure-only direction with \(Z\le 1.\)
+In the nonreducible-end, central-R branch, the common deficit is d/288.
+If both internal residuals have size at least four, it improves to
+15701d/13680. Section5 gives precisely qualified mixed-side consequences.
+
+\paragraph{R42.2 The complete analytic proof: retain and pay the multiplier}
+
+\paragraph{R42.2.1 Exact original ingredients}
+
+The actual ordinary multiplier statement is
+\fitdisplay{
+\|T M_{\bar f_a}\|_{2\to2}^2\le1-d/72\quad(a\ge2).
+}{R42.2.1}
+This is C064(1.6)/C066(1.4). Q4/C115(8.3) states
+\(\lVert M_{f_a}T\rVert ^2\le 1-d/72.\) Replacing K by -K changes that operator to
+\(M_{\bar f_a}A\); taking its ordinary adjoint gives T \(M_{\bar f_a},\allowbreak \) exactly (R42.2.1).
+Reversal and adjunction use the same probability measure.
+This estimate uses the full multiplier.
+
+C100 TheoremA (A068) gives
+\fitdisplay{
+E[\bar f_n^4/q]\le1-(13639/23040)d\le1-d/2\quad(n\ge4).
+}{R42.2.2}
+The distinct n3 bound is the C056 inequality
+E[\(\bar f_3^4/q\)]\ensuremath{\le}\(1-23d/36\le 1-d/2.\) Thus (R42.2.2)'s weaker final bound holds for
+EVERY \(n\ge 3.\) The C100 proof in Sections2-3 uses
+two retained finite convolution losses, a truncated quartic majorant and
+the true correlated cubic. The derivation uses these finite bounds directly.
+
+The ordinary T power bounds are exactly (R42.1.2). N2 is the separate
+two-step bound; the \(n\ge 3\) bound uses \(separate3/4/5\) bases and finite
+blocks. In particular no assumption \(\lVert T^{n+1}\rVert \le \lVert T^n\rVert \) is introduced.
+
+\paragraph{R42.2.2 Every real input, every actual positive path length}
+
+Let P be any original positive-kernel operator and \(h=P1.\) Pointwise row
+Cauchy and original Holder with exponents3 \(and3/2\) give
+\fitdisplay{
+|PY|^2\le hP(|Y|^2),
+}{}
+\fitdisplay{
+I_q(PY)\le
+ \{E[h^4/q]\}^{1/3}
+ \{E[(P(|Y|^2))^2]\}^{2/3}.
+}{}
+The ordinary L2 norm then yields
+\fitdisplay{
+I_q(PY)^3\le E[h^4/q]\cdot\|P\|^4(E|Y|^4)^2.
+}{R42.2.3}
+This calculation uses \(|Y|^2,\allowbreak \) so it allows any real Y, without a sign or
+actual-tree assumption on Y. The original positive row h is unchanged.
+
+Now put \(P=T^M M_{\bar f_a}.\) Its EXACT row and factorization are
+\fitdisplay{
+h=T^M \bar f_a=\bar f_{M+a},\qquad
+ P=T^{M-1}(T M_{\bar f_a}).
+}{R42.2.4}
+Because \(M+a\ge 3,\allowbreak \) the bare-row bound applies at every allowed boundary,
+including a2, M1. The actual norm satisfies
+\fitdisplay{
+\|P\|^4\le\|T^{M-1}\|^4(1-d/72)^2.
+}{R42.2.5}
+Inserting (R42.2.2),(R42.2.5) into (R42.2.3) proves (R42.1.1). In particular we did NOT
+replace \(\lVert T^M M_{\bar f_a}\rVert \) by \(\lVert T^M\rVert .\) The actual multiplier is paid before
+the remaining M-1 original edges; all operator orders are retained.
+
+For (R42.1.3), \(\log(1-d/2)+2\log(1-d/72)\le -(19/36)d.\)
+When M2 the remaining norm contributes at most128d/19, and
+\(128/19-19/36=4247/684.\) When M3 it contributes at most
+\(8(1024/855)\delta_2\le 3328d/855,\allowbreak \) and
+\(3328/855-19/36=11507/3420.\) For \(M\ge 4,\allowbreak \) (R42.1.2) contributes at most
+-floor((M-1)/3)d/2. M1 has no remaining norm cost. These four exact
+cases cover every positive integer M and prove the common maximum.
+
+At d0, the actual \(\bar f_a\) and q equal1 although B need not vanish.
+The same norm and positive-operator proof gives (R42.1.1) for all realY.
+Leaf integration is used only later for actual tree messages, not for an
+arbitrary real function. No division by d occurs in the transfer proof.
+
+\paragraph{R42.3 Actual orientation algorithm for every even residual of \(size\ge 4\)}
+
+Fix an original ordering of equal-length arms to choose their maximal
+pairing. Orient each real equal pair as a valid \(f_l h_l\) pair or its
+complete reversal. Assign ALL root equal pairs to the inner factor H;
+terminal pairs remain in \(E_t\) at the original terminal. Positivity permits comparison while leaving the original edges and $e(U)$ unchanged.
+
+\paragraph{R42.3.1 Minimum one: omit only the second arm from H}
+
+Write the actual root list as
+\fitdisplay{
+(1,t,a,b,s_1,v_1,\ldots,s_k,v_k),\quad
+ 1<t<a<b<s_1<v_1<\cdots,
+ \qquad k=j-2\ge0.
+}{R42.3.1}
+Retain the actual t arm fully inward, as \(\bar f_t.\) Every remaining root arm
+forms the actual odd list(1, a, b, s1, v1,...), with \(a\ge 3.\) Use EXACTLY C186
+Section1 at that root and terminal. The root factor is
+\fitdisplay{
+H=E_r pW_a \bar f_b\prod_i W_{s_i}\bar f_{v_i}
+          T^L(E_tF_{\Sigma,L}^{186}),\qquad
+ U=T^M(\bar f_tH).
+}{R42.3.2}
+The C186 ordinary fourth gives \(EH4\le \exp(-27d/5)\) for allk, L.
+Its later-pair improvement is optional; the base suffices. Apply (R42.1.4):
+\fitdisplay{
+2(27/5)-4247/684=15701/3420>0.
+}{R42.3.3}
+This includes t2, a3, b4 and every finite post list. No minimum-four post
+restriction is imposed on the first actual pair \(W_a \bar f_b:\) C186 itself
+includes a3. The \(\bar f_t\) arm is not inside H and is used exactly once outside.
+
+\paragraph{R42.3.2 Minimum at least two: omit only the shortest arm from H}
+
+Write the original root list as
+\fitdisplay{
+(s,a,b,c,s_1,v_1,\ldots,s_k,v_k),\quad
+ 2\le s<a<b<c<s_1<v_1<\cdots,\quad k=j-2\ge0.
+}{R42.3.4}
+Retain the actual s arm fully inward, as \(\bar f_s.\) The remaining actual
+odd root(a, b, c, s1, v1,...) has \(a\ge 3\) and falls exactly in C189 TheoremA.
+Define \(Pplus=h_b f_c\) product \(h_si f_{v_i}\) and
+\(Pminus=W_b \bar f_c\) product \(W_si \bar f_{v_i}.\) The actual root/terminal choices are:
+
+
+\begingroup\small
+\setlength{\tabcolsep}{3pt}
+\setlength{\LTleft}{0pt}\setlength{\LTright}{\fill}
+\begin{longtable}{@{}p{0.2200\linewidth}p{0.3500\linewidth}p{0.3500\linewidth}@{}}
+\caption{The retained multiplier and every even internal root: parameter values.}\label{tab:parameters:r2-c042:1}\\
+\toprule
+Entry & Actual root factor inside H & Actual F \\
+\midrule\endfirsthead
+\toprule
+Entry & Actual root factor inside H & Actual F \\
+\midrule\endhead
+\bottomrule\endfoot
+Exact(1, z), L1 & \(f_a Pminus\); & \(p\bar f_z\). \\
+\addlinespace[2pt]
+Exact(1, z), \(L\ge 2\) & \(W_a Pminus\); & \(q f_z\). \\
+\addlinespace[2pt]
+Every other terminal & \(f_a Pplus\); & The exact C189 table below. \\
+\end{longtable}
+\endgroup
+
+
+In all cases \(H=E_r(rootfactor)T^L(E_tF),\allowbreak  U=T^M(\bar f_sH).\)
+C189's ordinary fourth is \(EH4\le \exp(-11d/2),\allowbreak \) including both
+special(1, z) rows and all equal pairs. The new output coefficient is
+\fitdisplay{
+11-4247/684=3277/684>15701/3420.
+}{R42.3.5}
+The special first root arm \(W_a\) is not changed to \(f_a\) by notation.
+The negative pairs in the two short-one rows are not changed to Pplus.
+The s arm is distinct from all displayed H arms and appears only as \(\bar f_s.\)
+
+\paragraph{R42.3.3 The complete inherited terminal directions used in both rows}
+
+The following table specifies the terminal directions. All
+lists are strictly increasing and later products contain only displayed
+original pairs. The two ordinary-root bounds agree here except for the
+exact(1, z), L1 row described above.
+
+
+\begingroup\small
+\setlength{\tabcolsep}{3pt}
+\setlength{\LTleft}{0pt}\setlength{\LTright}{\fill}
+\begin{longtable}{@{}p{0.2200\linewidth}p{0.3500\linewidth}p{0.3500\linewidth}@{}}
+\caption{The retained multiplier and every even internal root: parameter values.}\label{tab:parameters:r2-c042:2}\\
+\toprule
+Entry & C186 F & C189 F \\
+\midrule\endfirsthead
+\toprule
+Entry & C186 F & C189 F \\
+\midrule\endhead
+\bottomrule\endfoot
+Exact(1, z), \(z\ge 2,\allowbreak \) L1 & \(q f_z\); & \(p\bar f_z\). \\
+\addlinespace[2pt]
+Exact(1, z), \(z\ge 2,\allowbreak  L\ge 2\) & \(q f_z\); & \(q f_z\). \\
+\addlinespace[2pt]
+Exact(2, 3) & h2 f3; & h2 f3. \\
+\addlinespace[2pt]
+Exact(2, z), \(z\ge 4\) & \(\bar f_2 W_z\); & \(\bar f_2 W_z\). \\
+\addlinespace[2pt]
+Exact(3, 4) & h3 f4; & h3 f4. \\
+\addlinespace[2pt]
+Exact(3, z), \(z\ge 5,\allowbreak \) L1 & \(h_{3} f_z\); & \(h_{3} f_z\). \\
+\addlinespace[2pt]
+Exact(3, z), \(z\ge 5,\allowbreak  L\ge 2\) & \(\bar f_3 W_z\); & \(\bar f_3 W_z\). \\
+\addlinespace[2pt]
+Single pair \(minimum\ge 4\) & \(h_\alpha f_\beta\); & same. \\
+\addlinespace[2pt]
+Every even list with at least two pairs & \(\prod h_{\alpha_i} f_{\beta_i}\); & same. \\
+\addlinespace[2pt]
+Exact(1, A, C), \(2\le A<C\) & \(q f_A h_C\); & same. \\
+\addlinespace[2pt]
+Unit-minimum odd multipair with(A1, C1, \(A2)=(2,\allowbreak \) 3, 4) & \(q f_{2} h_{C_2} h_{3} f_{4} \prod_{i\ge 3}h_{A_i} f_{C_i}\); & same. \\
+\addlinespace[2pt]
+All other unit-minimum odd multipairs & \(q f_{A_1} h_{C_1} \prod_{i\ge 2}h_{A_i} f_{C_i}\); & same. \\
+\addlinespace[2pt]
+Nonunit-minimum odd list, first paired \(shortB1=3\) & \(\bar f_2 f_{3} h_{C_1} \prod_{i\ge 2}h_{B_i} f_{C_i}\); & same. \\
+\addlinespace[2pt]
+Nonunit-minimum odd list, first paired \(shortB1\ge 4\) & \(\bar f_{A} \prod_i h_{B_i} f_{C_i}\); & same. \\
+\end{longtable}
+\endgroup
+
+
+The first paired \(shortB1=3\) forces \(A=2.\) The crossed unit row requires at
+least five residual arms. Exactly three unit-minimum arms use the triple row. This gives the stated estimate for every finite nonreducible terminal. All inner connector
+edges are T and all outer connector edges T; the arm turns are exactly
+the h/W definitions. 
+
+\paragraph{R42.4 Complete unit-minimum even roots, including the pair boundary}
+
+An even residual starting at one either has at least four entries and
+uses (R42.3.1)-(R42.3.3), or is exactly(1, t), \(t\ge 2.\) In the latter case use the
+complete Q5-C106 ordinary table \(F_ord\) for its actual nonreducible terminal:
+\fitdisplay{
+H=E_r pT^L(E_tF_{ord}),\quad EH8\le1-d/20000,
+ \quad U=T^M(\bar f_tH).
+}{}
+The original C066 arbitrary-real eighth theorem yields
+\fitdisplay{
+I_q(U)^3\le(1-d/72)(1-d/20000)\le e^{-d/72}.
+}{R42.4.1}
+The exact-pair boundary uses the eighth-moment theorem for the C106 rows.
+The structural branches have their stated directions. Together they prove
+the first assertion of TheoremC. TheoremB's nonunit minimum rows also
+have a much stronger output than exp(-d/72).

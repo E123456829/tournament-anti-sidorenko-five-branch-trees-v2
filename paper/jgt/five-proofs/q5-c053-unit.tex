@@ -1,0 +1,145 @@
+\subsection{The unit eighth moments for minimum-three even lists and the pair $(2,\allowbreak 3)$}\label{proof:Q5-C053-unit}
+Use $A=\allowbreak J+K$, $T=\allowbreak J-K$, $g=\allowbreak K\one$, $p=\allowbreak 1+g$, $q=\allowbreak 1-g$,
+$d=\allowbreak \E g^2$, $\delta_j=\allowbreak \|K^j\one\|^2$, $\theta=\allowbreak 13/32$, $\kappa=\allowbreak 19/32$,
+$f_n=\allowbreak A^n\one$ and $h_n=\allowbreak Tf_{n-1}$.
+For $3=\allowbreak b_1<\allowbreak c_1<\allowbreak b_2<\allowbreak c_2<\allowbreak \cdots<\allowbreak b_j<\allowbreak c_j$, set
+\[
+ F=f_3h_{c_1}\prod_{i=2}^j h_{b_i}f_{c_i}.
+\]
+We prove
+\begin{equation}\tag{Q53.1.4}\label{eq:Q53:minthree-unit}
+ \E(pTF)^8\le e^{-(16j-61/4)d}\le e^{-3d/4}.
+\end{equation}
+We also prove
+\begin{equation}\tag{Q53.1.3}\label{eq:Q53:twothree-unit}
+ \E[pT(h_2f_3)]^8\le1-d/500.
+\end{equation}
+In these formulas the eighth power is inside the expectation. All directions
+are determined by the listed arm lengths. The receiving unit arm points
+outward, and the unit connector points from the terminal toward that root.
+
+\paragraph{Q53.2 Exponential transfer at a unit connector}\label{part:Q53.2}
+For $|u|\le\allowbreak 8/5$,
+\begin{equation}\tag{Q53.2.1}\label{eq:Q53:small-exp}
+ e^u\le1+u+u^2.
+\end{equation}
+Divide the absolute Taylor tail by $u^2$. Its quadratic term is $1/2$,
+the cubic term is at most $4/15$, and the fourth and later terms sum to at
+most $(8/75)/(1-8/25)=\allowbreak 8/51$. Their total is $157/170<\allowbreak 1$.
+Suppose $F\ge\allowbreak 0$, $F\le\allowbreak  e^{R-\Lambda d}$, $|R|\le\allowbreak 8/5$ and $|8KR|\le\allowbreak 8/5$.
+Write $V=\allowbreak \E R^2$ and $Z=\allowbreak KR$. Since the kernel of $T$ is at most two,
+\[
+ Te^R\le q+\E R-Z+2V=:U.
+\]
+The function $U$ is nonnegative. Arithmetic--geometric mean gives
+\[
+ pTF\le e^{-\Lambda d}pU
+ \le e^{-\Lambda d}[1+\E R/2+V-Z/2]^2.
+\]
+The base is $(p+U)/2\ge\allowbreak 0$. Raising to the eighth power and using
+$1+y\le\allowbreak  e^y$, followed by \eqref{eq:Q53:small-exp} for $-8Z$, yields
+\begin{equation}\tag{Q53.2.2}\label{eq:Q53:transfer}
+ \E(pTF)^8\le
+ e^{-8\Lambda d+8\E R+16V-8\E Z+64\E Z^2}.
+\end{equation}
+Because $\E Z^2\le\allowbreak \theta V$ and $16+64\theta=\allowbreak 42$, the conditions
+$\E R\le\allowbreak  md$, $V\le\allowbreak  vd$, $-\E Z\le\allowbreak  ad$ imply
+\begin{equation}\tag{Q53.2.4}\label{eq:Q53:budget}
+ \E(pTF)^8\le e^{-(8\Lambda-8m-42v-8a)d}.
+\end{equation}
+If instead $F\le\allowbreak  e^{-cd}$ for $c\ge\allowbreak 0$, positivity and $pq\le\allowbreak 1$ give
+\begin{equation}\tag{Q53.2.5}\label{eq:Q53:pointwise}
+ \E(pTF)^8\le e^{-8cd}.
+\end{equation}
+
+\paragraph{Q53.5 The minimum-three list}\label{part:Q53.5}
+The retained envelope of Section~\ref{loc:S28}, with the same direction
+$f_3h_b$, gives a function $R_0$ such that
+\begin{equation}\tag{Q53.5.1}\label{eq:Q53:firstpair}
+ f_3h_b\le e^{R_0-3d},\qquad \E R_0\le-\kappa\delta_2.
+\end{equation}
+Its explicit estimates \eqref{eq:compact-min3-small} and
+\eqref{eq:compact-min3-large} are
+\begin{equation}\tag{Q53.5.2}\label{eq:Q53:pair-ranges}
+ \begin{cases}
+ \|R_0\|\le(31/100)\sqrt d,\quad |R_0|\le1/4,&0<d\le1/9,\\
+ |R_0|\le(69/32-1/4000)d,&1/9\le d\le1/3.
+ \end{cases}
+\end{equation}
+For the mean, the spectral representation there is
+$\E R_0=\allowbreak -\int B(x)\,\allowbreak d\nu_g$, where $B=\allowbreak D+xb_x$, $D\ge\allowbreak 0$ and
+$b_x\ge\allowbreak 1-x\ge\allowbreak \kappa$.
+Set $S=\allowbreak \sum_{i=\allowbreak 2}^jR_{b_ic_i}$, with $S=\allowbreak 0$ for $j=\allowbreak 1$.
+Each later shorter arm is at least five, and each of its exponents begins
+at six. The finite-mask bound \eqref{eq:L90:mask} and the pair estimate give
+\begin{equation}\tag{Q53.5.3}\label{eq:Q53:whole-envelope}
+ F\le e^{R-(2j+1)d},\qquad R=R_0+S.
+\end{equation}
+Writing $S=\allowbreak K^5P(K)g$ with a finite zero--one polynomial gives
+\begin{equation}\tag{Q53.5.4}\label{eq:Q53:tail}
+ \|S\|\le(3/2)\theta^{5/2}\sqrt d<\sqrt d/6,
+ \qquad |S|\le(3/2)\theta^2\sqrt d<\sqrt d/4.
+\end{equation}
+Here $\theta^2<\allowbreak 1/6$ and $\sqrt\theta<\allowbreak 2/3$. Its possible positive mean
+starts at $\delta_4$, so
+\begin{equation}\tag{Q53.5.5}\label{eq:Q53:mean}
+ \E S\le\frac{\delta_4}{1-\theta^2}
+ \le\frac{\theta^2}{1-\theta^2}\delta_2<\delta_2/5,
+ \qquad\E R\le-(\kappa-1/5)\delta_2\le0.
+\end{equation}
+For $0<\allowbreak d\le\allowbreak 1/9$,
+\[
+\begin{gathered}
+\|R\|\le(143/300)\sqrt d<\sqrt d/2,\quad\\
+V\le d/4,\quad |R|\le1/4+\sqrt d/4\le1/3,\\
+\quad |8KR|\le4\sqrt d\le4/3<8/5.
+\end{gathered}
+\]
+Skew-adjointness gives $-\E(KR)=\allowbreak \E(gR)\le\allowbreak  d/2$.
+Taking $\Lambda=\allowbreak 2j+1$, $m=\allowbreak 0$, $v=\allowbreak 1/4$ and $a=\allowbreak 1/2$ in
+\eqref{eq:Q53:budget} gives
+\begin{equation}\tag{Q53.5.6}\label{eq:Q53:small-payment}
+ \E(pTF)^8\le e^{-(16j-13/2)d}.
+\end{equation}
+For $1/9\le\allowbreak  d\le\allowbreak 1/3$, use $\sqrt d\le\allowbreak 3d$ to obtain
+$R\le\allowbreak (93/32)d$, and hence
+\begin{equation}\tag{Q53.5.7}\label{eq:Q53:large-envelope}
+ F\le e^{-(2j-61/32)d}.
+\end{equation}
+The loss is at least $3/32$ when $j\ge\allowbreak 1$, so
+\eqref{eq:Q53:pointwise} gives
+\begin{equation}\tag{Q53.5.8}\label{eq:Q53:large-payment}
+ \E(pTF)^8\le e^{-(16j-61/4)d}.
+\end{equation}
+The small-domain bound is stronger, proving \eqref{eq:Q53:minthree-unit}.
+
+\paragraph{Q53.7 The pair $(2,\allowbreak 3)$}\label{part:Q53.7}
+Put $r=\allowbreak Kg$, $s=\allowbreak Kr$, $t=\allowbreak Ks$ and $a=\allowbreak 1-d/2\ge\allowbreak 5/6$.
+The identities $h_2=\allowbreak q-r$, $f_3=\allowbreak p-d+r+s$ give
+$h_2+f_3=\allowbreak 2-d+s$, so $h_2f_3\le\allowbreak (a+s/2)^2$.
+Since $\E s=\allowbreak 0$, $Ts=\allowbreak -t$ and $T(s^2)\le\allowbreak 2\delta_3$,
+\[
+ T(h_2f_3)\le a^2q-at+\delta_3/2=:U\ge0.
+\]
+Arithmetic--geometric mean for $ap$ and $U/a$ gives
+\begin{equation}\tag{Q53.7.1}\label{eq:Q53:twothree-square}
+ 0\le pT(h_2f_3)\le[a-t/2+\delta_3/(4a)]^2.
+\end{equation}
+The base is half the sum of the two nonnegative factors. Moreover,
+\[
+ a+\delta_3/(4a)\le1-d/2+(3/10)\theta^2d
+ =1-(4613/10240)d\le1-(51/128)d=:c.
+\]
+The two loss coefficients differ by $533/10240>\allowbreak 0$. Thus
+\begin{equation}\tag{Q53.7.3}\label{eq:Q53:twothree-majorant}
+ 0\le pT(h_2f_3)\le(c-t/2)^2.
+\end{equation}
+The row estimate of Section~\ref{proof:Q5-C049}, applied to $t=\allowbreak K^2r$, gives
+\begin{equation}\tag{Q53.7.4}\label{eq:Q53:twothree-data}
+ \E t=\delta_2\ge0,\qquad |t|^2\le\delta_2/3\le d/3,
+ \qquad \E t^2=\delta_4\le\theta^3d\le\theta^2d.
+\end{equation}
+These are precisely the hypotheses of \eqref{eq:Q51:2.2}; with $Z=\allowbreak t$ it
+proves \eqref{eq:Q53:twothree-unit}. Positivity restores all equal-arm
+decorations. At $d=\allowbreak 0$ the bounds follow by leaf integration, and replacing
+$K$ by $-K$ gives their full reversals.

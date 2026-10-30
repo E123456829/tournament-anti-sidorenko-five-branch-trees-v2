@@ -1,0 +1,1490 @@
+\subsection{Every genuine length-two reference arm: the complete directory}\label{proof:R2-C034}
+\paragraph{R34.1 Exact theorem, actual directions and exhaustive structural table}
+
+On the original finite probability space put
+
+\fitdisplay{
+Jv=(Ev)1,\quad B=-K,\quad u=B\one,\quad T=J+B,\quad A=J-B,
+\quad p=1-u,\quad q=1+u,
+}{}
+\fitdisplay{
+f_n=A^{n}\one,\quad \bar f_n=T^{n}\one,\quad h_n=T f_{n-1},\qquad
+\delta_i=\|B^{i}\one\|^2,\quad d=\delta_1,\quad
+\theta=13/32,\quad\kappa=19/32,\quad\tau=d-\delta_2.
+}{}
+
+The receiver in the theorem is exactly the existing outward arm
+\(C=f_2=A^2 1\). There is no variable receiving length in the theorem.
+For every strictly increasing positive finite residual table \(\Sigma\) of
+size at least two and every integer \(L\ge1\), select the actual terminal
+product in the table below. Every connector edge points from terminal to
+receiver, so its actual message is \(X=T^LF\). Then
+
+\fitdisplay{
+E[f_2X^4]\le1.
+}{R34.1.1}
+
+The directions use only \(\Sigma,\allowbreak  L\). In an \(f_s\) arm every edge points
+toward its leaf; in an \(h_s\) arm the first edge points toward the terminal
+and all remaining edges toward the leaf; in \(\bar f_s\) every edge points toward
+the terminal. These statements specify each original edge, including all
+degree-two subdivisions. A split of the proof by \(d\) leaves them unchanged.
+
+\begin{description}[style=nextline,leftmargin=1.6em]
+\item[{even, \((1,\allowbreak  b)\)}] Actual terminal product, all unmentioned pairs retained: \(qf_b\);\par\noindent Proof: exact Section~\ref{proof:Q5-C058}.
+\item[{even, \((2,\allowbreak  b)\)}] Actual terminal product, all unmentioned pairs retained: \(h_2f_b\);\par\noindent Proof: exact Section~\ref{proof:Q5-C077}.
+\item[{even, \((3,\allowbreak  b),\allowbreak  b\ge4\)}] Actual terminal product, all unmentioned pairs retained: \(f_3\bar f_b\) for \(L=1,\allowbreak  2\);\par\noindent \(h_3f_b\) for \(L\ge3\);\par\noindent Proof: §4.
+\item[{even, \(s_1<t_1<\cdots<s_j<t_j\), \(s_1\ge4\)}] Actual terminal product, all unmentioned pairs retained: \(\prod h_{s_i}f_{t_i}\);\par\noindent Proof: §5.
+\item[{even, \(j\ge2,\allowbreak  s_1=2\) or \(3\)}] Actual terminal product, all unmentioned pairs retained: \(\prod h_{s_i}f_{t_i}\);\par\noindent Proof: §6.
+\item[{even, \(1<b_1<a_2<b_2<\cdots<a_j<b_j\), \(j\ge2\)}] Actual terminal product, all unmentioned pairs retained: \(qf_{b_1}\prod_{i=2}^j h_{a_i}f_{b_i}\);\par\noindent Proof: §7.
+\item[{odd, \(2\le\ell<s_1<t_1<\cdots<s_j<t_j\), \(s_1\ge4\)}] Actual terminal product, all unmentioned pairs retained: \(\bar f_\ell\prod h_{s_i}f_{t_i}\);\par\noindent Proof: Lemma~\ref{lem:R34:nonunit-odd}, family \(\mathcal C\).
+\item[{odd, \((2,\allowbreak  3,\allowbreak  c,\allowbreak  s_2,\allowbreak  t_2,\allowbreak  \ldots)\)}] Actual terminal product, all unmentioned pairs retained: \(\bar f_2f_3h_c\prod_{i=2}^j h_{s_i}f_{t_i}\);\par\noindent Proof: Lemma~\ref{lem:R34:nonunit-odd}, family \(\mathcal P\).
+\item[{odd, \((1,\allowbreak  2,\allowbreak  3)\)}] Actual terminal product, all unmentioned pairs retained: \(qf_2\bar f_3\) at \(L=1\);\par\noindent \(qf_2h_3\) at \(L\ge2\);\par\noindent Proof: Section~\ref{proof:Q5-C114};\par\noindent Section~\ref{proof:Q5-C104}.
+\item[{odd, \((1,\allowbreak  2,\allowbreak  4)\)}] Actual terminal product, all unmentioned pairs retained: \(qf_2h_4\);\par\noindent Proof: Section~\ref{proof:Q5-C105}.
+\item[{odd, \((1,\allowbreak  2,\allowbreak  c),\allowbreak  c\ge5\)}] Actual terminal product, all unmentioned pairs retained: \(qf_2h_c\);\par\noindent Proof: §12.
+\item[{odd, \((1,\allowbreak  3,\allowbreak  c),\allowbreak  c\ge4\)}] Actual terminal product, all unmentioned pairs retained: \(qf_3h_c\);\par\noindent Proof: §10.
+\item[{odd, \((1,\allowbreak  b,\allowbreak  c),\allowbreak  4\le b<c\)}] Actual terminal product, all unmentioned pairs retained: \(qf_bh_c\);\par\noindent Proof: §11.
+\item[{odd, \(j\ge2,\allowbreak  s_1\ge4\)}] Actual terminal product, all unmentioned pairs retained: \(q\prod h_{s_i}f_{t_i}\);\par\noindent Proof: Lemma~\ref{lem:R34:unit-multipair}, family \(A\).
+\item[{odd, \(j\ge2,\allowbreak  s_1=3\)}] Actual terminal product, all unmentioned pairs retained: \(qf_3h_{t_1}\prod_{i=2}^j h_{s_i}f_{t_i}\);\par\noindent Proof: Lemma~\ref{lem:R34:unit-multipair}, family \(B\).
+\item[{odd, \(j\ge2,\allowbreak  s_1=2,\allowbreak  t_1\ge4\)}] Actual terminal product, all unmentioned pairs retained: \(qf_2h_{t_1}\prod_{i=2}^j h_{s_i}f_{t_i}\);\par\noindent Proof: Lemma~\ref{lem:R34:unit-multipair}, family \(II\).
+\item[{odd, \(j\ge2,\allowbreak (s_1,\allowbreak  t_1)=(2,\allowbreak  3),\allowbreak  s_2\ge5\)}] Actual terminal product, all unmentioned pairs retained: \(qf_2h_3\prod_{i=2}^j h_{s_i}f_{t_i}\);\par\noindent Proof: Lemma~\ref{lem:R34:unit-multipair}, family \(III\).
+\item[{odd, \(j\ge2,\allowbreak (s_1,\allowbreak  t_1,\allowbreak  s_2)=(2,\allowbreak  3,\allowbreak  4)\)}] Actual terminal product, all unmentioned pairs retained: \(qf_2h_{t_2}h_3f_4\prod_{i=3}^j h_{s_i}f_{t_i}\);\par\noindent Proof: Lemma~\ref{lem:R34:unit-multipair}, families \(IV,V\).
+\end{description}
+
+The last row crosses the roles of the first two pairs, as prescribed by their lengths. The table is exhaustive by parity, minimum,
+second minimum and, in the last odd case, the next original integer.
+
+Arbitrary original equal-pair factors \(E_o,\allowbreak  E_t\) satisfy
+
+\fitdisplay{
+E[E_o f_2\{T^L(E_tF)\}^4]\le1.
+}{R34.1.2}
+
+Every positive length, arbitrary original repeats and unbounded finite
+numbers of pairs are retained. The complete reversal uses the same result
+with \(-K\), on the same measure.
+
+\paragraph{R34.2 Genuine f2 calculus and scalar estimates}
+
+All strict inequalities proportional to \(d\) in the proof are used for
+\(d>0\). At \(d=0\), \(B\one=0\), and successive integration
+of the original leaves gives every actual tree density one.
+
+\paragraph{R34.2.1 Finite original identities}
+
+The supplied C014 calculus gives
+
+\fitdisplay{
+0\le d\le1/3,\quad d^2\le \delta_2\le\theta d,\quad
+\delta_{i+1}\le\theta \delta_i,\quad\|B\|^2\le\theta,
+\quad |BV(x)|\le\|V\|.
+}{}
+
+The original positive operators have kernel in \([0,\allowbreak  2]\). The path
+messages \(f_n,\allowbreak  \bar f_n\) lie in \([0,\allowbreak  2]\) and have mean at most one. One must
+not extend the mean assertion to \(h_n\): \(Eh_2=1+d\).
+
+Write
+
+\fitdisplay{
+G_n(z)=\sum_{r=0}^{n-1}z^r,\quad G_0=0,\quad
+\beta_1=\beta_2=0,\quad
+\beta_n=\sum_{i=1}^{\lfloor(n-1)/2\rfloor}(-1)^{i-1}\delta_i.
+}{}
+
+The exact finite positive convolution is
+
+\fitdisplay{
+1+G_n(B)u=\bar f_n+\sum_{r=3}^n\beta_r \bar f_{n-r},\qquad
+\tau\le\beta_r\le d\ (r\ge3),\quad\beta_3=\beta_4=d.
+}{R34.2.1}
+
+All sums are finite; positive geometric series bound their subcollections.
+At \(z=i\sqrt x\), \(0\le x\le\theta\), write \(G_n=A_n+zC_n\).
+For \(n\ge2\), \(1-x\le A_n,\allowbreak  C_n\le1\); for \(n\ge3\),
+\(A_n\le1-x+x^2\); for \(n\ge4\), the same holds for \(C_n\).
+The exceptional \(G_1=1\) has imaginary coordinate zero. Every finite
+\(G_n,\allowbreak  n=1\) or \(n\ge3\), contracts, and
+\(|G_2|<19/16<6/5\). In particular, \(G_2\) is not contractive.
+
+\paragraph{R34.2.2 Exact receiving covariance and basic products}
+
+Directly,
+
+\fitdisplay{
+C=f_2=1-u+Bu,\quad EC=1-d,\quad
+0\le C\le p+\sqrt d\le p+\tfrac65\sqrt d,
+\quad C\le2-q^2/2,
+}{R34.2.2}
+\fitdisplay{
+\sigma(C)^2=d+\delta_2-d^2\le45d/32<(6/5)^2d.
+}{}
+
+The point cap in \(2.2\) is also a direct original-row fact. For the fixed
+row \(v(y)=B(x,\allowbreak  y)\), skewness gives
+\(Bu(x)=\tfrac12E_{y,\allowbreak  z}[(v(y)-v(z))B(y,\allowbreak  z)]\).
+Since \(|v(y)-v(z)|\le1-v(y)v(z)\) on \([-1,\allowbreak  1]^2\),
+\(Bu(x)\le(1-u(x)^2)/2\), which is exactly \(C\le2-q^2/2\).
+
+Let \(\nu\) be the original spectral measure of \(-B^2\) at \(u\):
+its mass is \(d\), support is \([0,\allowbreak  \theta]\), and
+\(\int x^r\,\allowbreak  d\nu=\delta_{r+1}\). If \(H=Q(B)u\) and \(EH=-\alpha\),
+then the exact identity is
+
+\fitdisplay{
+\operatorname{Cov}(C,H)
+ =-\int\operatorname{Re}[(1+z)Q(z)]\,d\nu-d\alpha.
+}{R34.2.3}
+
+The final signed mean product is retained in the covariance estimates.
+
+The decisive genuine-f2 products are
+
+\fitdisplay{
+\begin{array}{c|c}
+n&\operatorname{Re}(G_2G_n)\\\hline
+1&1\\
+2&1-x\ge\kappa\\
+3&1-2x\ge3/16\\
+n\ge4&\ge(1-x)^2\ge\kappa^2=361/1024.
+\end{array}
+}{R34.2.4}
+
+For even \(n\), \(A_n=C_n\ge1-x\). For odd \(n\ge5\),
+\(A_n=1-xC_n\) and \(C_n\le1-x+x^2\), whence
+\(A_n-xC_n\ge1-2x+2x^2-2x^3\ge(1-x)^2\).
+Every product in \(2.4\) is at most one. Also
+
+\fitdisplay{
+|\operatorname{Re}(G_2z^r)|=x^{\lceil r/2\rceil}\le x
+\quad(r\ge2),\qquad \operatorname{Re}(G_2z)=-x,
+}{}
+\fitdisplay{
+\operatorname{Re}(G_2(2+z))=2-x\le2,\quad
+\operatorname{Re}(G_2(3+2z+z^2))=3-3x\le3.
+}{R34.2.5}
+
+For later positive additions, the actual bare covariances are
+
+\fitdisplay{
+\begin{aligned}
+\operatorname{Cov}(C,q)&=-d,\\
+\operatorname{Cov}(C,\bar f_2)&=-d+\delta_2-d^2<0,\\
+\operatorname{Cov}(C,\bar f_3)&=-d+2\delta_2-d^2<0,\\
+\operatorname{Cov}(C,\bar f_4)&=-d+2\delta_2-\delta_3+d\delta_2\le-667d/3072,\\
+\operatorname{Cov}(C,\bar f_5)&=-d+2\delta_2-2\delta_3+d^2+d^3\le-337d/4608.
+\end{aligned}
+}{R34.2.6}
+
+For the last two use \(v=\delta_2/d\le\theta\), \(\delta_3/d\ge v^2\),
+and monotonicity of \(-1+2v-v^2+dv\) and
+\(-1+2v-2v^2+d+d^2\) on the stated rectangle. Their respective
+upper corners give the displayed exact rationals.
+
+\paragraph{R34.2.3 Taylor, signed cubic means and exact bracket compensation}
+
+For nonnegative actual \(Y\), with its actual \(m=EY\),
+
+\fitdisplay{
+E[CY^4]=(1-d)m^4+4m^3\operatorname{Cov}(C,Y)
+ +E[C(Y-m)^2\{(Y+m)^2+2m^2\}].
+}{R34.2.7}
+
+If \(W=e^{-\Gamma}Y\), the first two terms scale by \(e^{-4\Gamma}\).
+A pointwise coefficient \(M\) proved on \(W\) multiplies
+\(e^{-2\Gamma}\operatorname{\operatorname{Var}}Y\), not \(e^{-4\Gamma}\operatorname{\operatorname{Var}}Y\).
+If instead \(M\) is proved on \(Y\), all terms have the fourth-power scale.
+
+We will use the following comparison of scalar brackets. Suppose an old bracket
+is \((1-\eta d)m^4+4vm^3\), \(1\le\eta\le2\). If \(0\le m\le M\)
+and
+
+\fitdisplay{
+\operatorname{Cov}(C,Y)\le v-(\eta-1)Md/4,
+}{R34.2.8}
+
+then the new mean-plus-covariance bracket is no larger: its difference is
+at most \((\eta-1)d m^3(m-M)\le0\). Usually \(M=1\).
+This compensates for the mean \(1-d\). When covariance is negative,
+all actual cubic means or their valid lower bounds are kept; no replacement
+of \(m^3\) by an upper bound is made with the wrong sign.
+
+\paragraph{R34.2.4 Pointwise curvature and scalar certificates}
+
+For \(x,\allowbreak  y,\allowbreak  m\ge0\), \(x+y\le H\), \(H\ge3m\), the cubic estimate is
+
+\fitdisplay{
+x(y^2+2m^2)\le4H^3/27+2Hm^2/3+m^3/2.
+}{R34.2.9}
+
+To verify it, put \(y=H-x\), then \(x=H/3+t\). For \(t\le0\) the
+remaining cubic terms are nonpositive; for \(0\le t\le H/3\), complete
+the quadratic square to get at most \(3m^4/(2H)\le m^3/2\).
+On \(x\ge2H/3\) the polynomial is convex and its two endpoint values
+are covered by the same bound using \(H^2\ge9m^2\).
+Thus the curvature constants used below are:
+
+
+\begingroup\small
+\setlength{\tabcolsep}{3pt}
+\setlength{\LTleft}{0pt}\setlength{\LTright}{\fill}
+\begin{longtable}{@{}p{0.1200\linewidth}p{0.4000\linewidth}p{0.4000\linewidth}@{}}
+\caption{Every genuine length-two reference arm: the complete directory: parameter values.}\label{tab:parameters:r2-c034:2}\\
+\toprule
+Entry & Bound for \(m\) & Valid coefficient \\
+\midrule\endfirsthead
+\toprule
+Entry & Bound for \(m\) & Valid coefficient \\
+\midrule\endhead
+\bottomrule\endfoot
+\(4\) & \(1\); & \(13\). \\
+\addlinespace[2pt]
+\(18/5\) & \(1\); & \(10\). \\
+\addlinespace[2pt]
+\(17/5\) & \(33/32\); & \(9\). \\
+\addlinespace[2pt]
+\(18/5\) & \(21/20\); & \(41/4\). \\
+\end{longtable}
+\endgroup
+
+
+The same statement applies to \(W\) and \(EW\). All the pointwise proofs
+below use the actual \(2.2\); the stronger old \((1-d)p\) bound is not assigned to \(f_2\).
+
+If \(C_0\ge A_0/2\) and \(A_0>B_0\ge0\), then
+
+\fitdisplay{
+e^{-A_0d}+B_0d e^{-C_0d}
+ \le1-(A_0-B_0)d e^{-A_0d/2}.
+}{R34.2.10}
+
+This follows from \(2\sinh(A_0d/2)\ge A_0d\). We use the elementary
+finite positive-series estimates \(e<3,\allowbreak  e^2<9,\allowbreak  e^4<81\).
+Other, tighter continuous certificates with their polynomial lower bounds are stated below.
+
+\paragraph{R34.2.5 Finite masks and positive propagation}
+
+For an actual ordered pair put
+
+\fitdisplay{
+R_{s,t}=\sum_{r=s+1}^{t}K^{r}\one.
+}{R34.2.11}
+
+Disjoint original pairs give disjoint finite intervals and a single
+finite coefficient mask; no sum of separate worst-case norms is charged
+once per pair. For any finite coefficient polynomial \(P\) with coefficients
+in \([0,\allowbreak  1]\), split its four residue classes. Positive and negative
+subcollections in each coordinate give
+
+\fitdisplay{
+|P(i\sqrt x)|^2\le\frac{1+x}{(1-x^2)^2}
+ \le\frac{32768}{16245}.
+}{R34.2.12}
+
+The actual finite pair inequalities are
+
+\fitdisplay{
+h_2+f_t\le2+R_{2,t}-\kappa d,\quad
+h_3+f_t\le2+R_{3,t}-(2-\theta)d,\quad
+h_s+f_t\le2+R_{s,t}-16d/5\quad(s\ge4).
+}{R34.2.13}
+
+The \(s=4\) loss may be strengthened in the indicated single-pair packets.
+These are finite positive-convolution facts, proved in \hyperref[part:R25.3]{the finite-mask calculation of Section~\ref{proof:R2-C025}} and the
+corresponding C020/C022 packets. AM--GM applies to their actual nonnegative
+left sides. A pair product is bounded by its corresponding exponential.
+
+For \(D_i=EB^iR\) the exact Duhamel identity is
+
+\fitdisplay{
+T^rR=B^rR+\sum_{i=0}^{r-1}D_i \bar f_{r-1-i}.
+}{R34.2.14}
+
+Every upper used below is obtained by positive propagation of a true first
+row. Signed \(D_i\) remain signed unless explicitly replaced by positive
+parts in a positive message coefficient. The displayed \(\gamma\)'s
+record every finite convolution loss, including the one needed for the
+actual mean. Precursor and output norms are different quantities.
+
+\paragraph{R34.3 Exact genuine-f2 boundary rows}
+
+
+
+
+\begingroup\small
+\setlength{\tabcolsep}{3pt}
+\setlength{\LTleft}{0pt}\setlength{\LTright}{\fill}
+\begin{longtable}{@{}p{0.2200\linewidth}p{0.7000\linewidth}@{}}
+\caption{Every genuine length-two reference arm: the complete directory: parameter values.}\label{tab:parameters:r2-c034:3}\\
+\toprule
+Entry & Actual object and exact usable scope \\
+\midrule\endfirsthead
+\toprule
+Entry & Actual object and exact usable scope \\
+\midrule\endhead
+\bottomrule\endfoot
+Section~\ref{proof:Q5-C058} & \(E[f_2\{T^L(qf_b)\}^4]\le1\), every \(b\ge2,\allowbreak  L\ge1\). \\
+\addlinespace[2pt]
+Section~\ref{proof:Q5-C077} & \(E[f_2\{T^L(h_2f_b)\}^4]\le1-d/10000\), every \(b\ge3,\allowbreak  L\ge1\). \\
+\addlinespace[2pt]
+Section~\ref{proof:Q5-C101} & \(E[f_2\bar f_n^4]\le1-d/20\), every \(n\ge3\). \\
+\addlinespace[2pt]
+Section~\ref{proof:Q5-C114} & \(E[f_2\{T(qf_2\bar f_3)\}^4]\le1-d/256\). \\
+\addlinespace[2pt]
+Section~\ref{proof:Q5-C104} & \(E[f_2\{T^L(qf_2h_3)\}^4]\le1-d/500\), every \(L\ge2\). \\
+\addlinespace[2pt]
+Section~\ref{proof:Q5-C105} & \(E[f_2\{T^L(qf_2h_4)\}^4]\le1\), every \(L\ge1\). \\
+\end{longtable}
+\endgroup
+
+
+Section~\ref{proof:Q5-C101}'s bare \(n=3,\allowbreak  4,\allowbreak  5\) proofs are stronger than the uniform \(d/20\),
+and its exact Section~\ref{proof:Q5-C099} input covers every \(n\ge6\). Bare \(n=1,\allowbreak  2\) are not
+contractions and will be paid separately whenever they arise. The
+C090/C092/Section~\ref{proof:Q5-C101} larger-terminal thresholds enter in their stated ranges.
+
+\paragraph{R34.4 The single pair (3, b) under the genuine f2 reference}
+
+This section independently changes the receiver in the C032 finite proof. Its low-length direction is \(F=f_3\bar f_b\); its \(L\ge3\)
+direction is \(F=h_3f_b\). Here \(b\ge4\).
+
+\paragraph{R34.4.1 Length one and the full all-k precursor}
+
+Put \(n=b-3\), \(G_n=A_0+zC_0\), and
+
+\fitdisplay{
+R=2Bu+B^3G_n(B)u,\quad\Gamma=d+\beta_b\ge51d/32,
+\quad m_0=1-\Gamma/2,\quad k=m_0^{-1}\in[1,3/2].
+}{}
+
+The exact coordinates of (R/u), interpreted as a polynomial and not a
+pointwise quotient, are \(x^2C_0+zr\), \(r=2-xA_0\). The finite first row
+in C032 §§4--5, derived from the actual pair sum, gives
+
+\fitdisplay{
+e^\Gamma TF\le Y_1=q+kBR-c,\qquad c=3d/5,
+}{}
+\fitdisplay{
+ER\le-51d/32,\quad D_1=EBR\le0,\quad ER^2\le21d/16,
+\quad\|u+kBR\|^2\le d-2\delta_2.
+}{R34.4.1}
+
+For every \(k\in[1,\allowbreak  3/2]\), not merely its endpoints, the output symbol
+
+\fitdisplay{
+Q_k=1-kxr+zkx^2C_0
+}{}
+
+satisfies
+
+\fitdisplay{
+\operatorname{Re}(G_2Q_k)=1-kxr-kx^3C_0
+ \ge1-2kx\ge1-3x\ge1-4x.
+}{R34.4.2}
+
+The signed mean product in \(2.3\) is favorable here. Equations \(4.1\),
+\(4.2\), the exact \(EC=1-d\), and \(C\le p+\sqrt d\) meet every premise of
+the receiver-independent C032 length-one curvature/scalar certificate
+(coefficient 10). Thus its \(d/10\) deficit is retained. In particular no
+bound \(|G_2|\le1\) has been inserted.
+
+\paragraph{R34.4.2 Length two: actual negative constant, covariance and cubic mean}
+
+The true precursor is
+
+\fitdisplay{
+V=-c\,1+u+kBR,\quad
+Y_2=q+\epsilon+BV,\quad\epsilon=-c+kD_1.
+}{}
+
+It is not ((1-c)u+kBR). The entire constant cross is
+
+\fitdisplay{
+\begin{aligned}
+\|V\|^2
+&=\|u+kBR\|^2+c^2-2ckD_1\\
+&\le d-2\delta_2+9d^2/25+(9/5)d\,\delta_3\\
+&\le d-(281/160)\delta_2+9d^2/25
+ \le d-(1117/800)d^2\le d.                           
+\end{aligned}
+}{R34.4.3}
+
+This uses \(D_1=-\int x^2C_0\,\allowbreak  d\nu\), \(\delta_3\le\theta \delta_2\),
+\(d\le1/3\), \(\delta_2\ge d^2\); its cross term has the positive sign it
+actually has. Consequently \(Y_2\le q+\epsilon+\sqrt d\le q+\sqrt d\).
+
+Write \(a_0=1-c\). The output symbol, distinct from the precursor, is
+
+\fitdisplay{
+Q_2=(a_0-kx^3C_0)+z(1-kxr).
+}{}
+
+Its genuine-f2 product is at least
+
+\fitdisplay{
+4/5-x+2x^2-2x^3>7/12.
+}{R34.4.4}
+
+The derivative is \(-6(x-1/3)^2-1/3<0\), and its value at the larger
+endpoint \(5/12\) is \(2531/4320>7/12\). The possibly adverse signed
+mean product is at most \(3d^2/40\). Hence
+
+\fitdisplay{
+\operatorname{Cov}(C,Y_2)\le-7d/12+3d^2/40
+ \le-67d/120\le-3d/10.
+}{R34.4.5}
+
+The actual mean lies in ([1-8d/5, 1-21d/40]), in particular above
+\(7/15\). The required function is now
+
+\fitdisplay{
+g(\mu)=(1-d)\mu^4-(6/5)d\mu^3.
+}{}
+
+On this actual interval,
+\(g'(\mu)/\mu^2=4(1-d)\mu-(18/5)d\ge56/45-6/5=2/45>0\).
+It is therefore legitimate to use the upper mean endpoint in the
+negative cubic bracket. At that endpoint its exponential rate is at least
+\(33/8\); combined with \(4\Gamma\ge51d/8\) it is stronger than \(52/5\).
+The full output variance is at most ([\(13/12-27d/25\)]d). The genuine
+pointwise bound above gives coefficient 9. Thus the exact continuous
+certificate reconstructed in C032 and A016 applies:
+
+\fitdisplay{
+e^{-52d/5}+\left(39d/4-243d^2/25\right)e^{-51d/16}
+ \le1-3d/320,\qquad0\le d\le1/3.
+}{R34.4.6}
+
+
+\paragraph{R34.4.3 Every length at least three}
+
+For \(d\le1/8\), the canonical \(h_3f_b\) packet is
+
+\fitdisplay{
+R=\tau u+B^3G_{b-3}(-B)u,
+\quad\Gamma\ge35d/16,\quad U=\tau-x^2C_0-xzA_0,
+\quad|U|<9/20.
+}{}
+
+The same finite first row has \(\sigma<55d/448\),
+\(D\le47d/80\), \(\epsilon=D+D_1\in[-d^2,\allowbreak  11d/16]\), and
+\(D+(D_1)_+\le11d/16\). The exact losses include
+\(\gamma_3\ge d,\allowbreak  \gamma_4\ge243d/256,\allowbreak  \gamma_n\ge227d/448\)
+for \(n\ge5\). The actual means and norms are
+
+\fitdisplay{
+EY_3\le1-97d/80,\quad EZ_{L\ge4}\le1-13d/16,
+\quad|P_n|\le1\ (n\ge3),
+}{}
+\fitdisplay{
+|Q_2|<7/5,\quad|Q_3|\le1+4d/5,\quad
+|Q_n|\le1+16d/15\ (n\ge4).
+}{}
+
+For \(P_n=G_n+z^nU\), the genuine receiving real product is positive
+for every \(n\ge3\): its minimum baseline is \(3/16\), whereas
+\((6/5)(9/20)\theta^{3/2}<(6/5)(9/20)(4/15)=18/125<3/16\).
+Positive \(\epsilon G_{n-2}\) is favorable; negative (epsilon) costs
+at most \(d^3\), since all products \(2.4\) are between zero and one.
+The \(Dz^{n-2}\) and the retained (h(1+q)) costs remain exactly those
+of \(2.5\). The full signed mean terms therefore preserve the upper bounds
+\(\operatorname{Cov}(C,\allowbreak  Y_3)\le9d/50+3d^2/8\) and
+\(\operatorname{Cov}(C,\allowbreak  Z_{L\ge4})\le d^2\).
+
+The actual pointwise upper \(C\le p+\sqrt d\) meets the coefficients
+9 and 8. The complete low-domain scalar certificates are consequently
+
+\fitdisplay{
+e^{-13d}+9d e^{-111d/40}\le1-63d/2048,
+\quad
+e^{-12d}+8d e^{-269d/120}\le1-21d/640.
+}{R34.4.7}
+
+For \(d\ge1/8\), the same canonical actual pair satisfies
+\(h_3f_b\le e^{-d}\). The centered finite proof uses
+\(\beta_*=\beta_{b-1}\); \(b=4\) is its actual short endpoint, not an
+unavailable geometric tail. Hence
+
+\fitdisplay{
+E[f_2\{T^L(h_3f_b)\}^4]
+ \le e^{-4d}E[f_2\bar f_L^4]\le e^{-4d}(1-d/20),\quad L\ge3.
+}{}
+
+This completes (3, b), with a conservative common \(d/1000\) deficit.
+
+\paragraph{R34.5 Every even table of minimum at least four}
+
+Let \(F=\prod_{i=1}^j h_{s_i}f_{t_i}\), \(j\ge1,\allowbreak  s_1\ge4\).
+The entire finite C022 mask has
+
+\fitdisplay{
+F\le e^{R-\Gamma},\quad\Gamma\ge16jd/5,
+\quad R=BV_0,\quad\|V_0\|^2<d/7,
+\quad ER^2<d/18,\quad |R|<1/4.
+}{}
+
+For the single pair starting at four, the stronger loss is (69d/20).
+The actual moments satisfy
+
+\fitdisplay{
+D_0\in[-d/5,d/12],\quad D_1\in[-d/12,d/5],\quad
+D_i\le d/12\ (i\ge2).
+}{}
+
+Since \(e^R\le1+R+5R^2/8\), take \(D=11d/72\ge D_0+5ER^2/4\).
+Positive propagation gives
+
+\fitdisplay{
+e^\Gamma T^LF\le Y_L=\bar f_L+B^LR+D \bar f_{L-1}
+                +\sum_{i=1}^{L-1}D_i \bar f_{L-1-i}.
+}{R34.5.1}
+
+The finite loss \(\gamma_r=\beta_r-D_{r-1}\ge d/2\) for every \(r\ge3\).
+The \(r=1,\allowbreak  2\) terms are paid separately in long rows. The successive
+spectral tail constants for \(BR,\allowbreak  B^2R,\allowbreak  \ldots,\allowbreak  B^6R\), in units of
+\(\sqrt d\), are respectively
+
+\fitdisplay{
+5/32,\quad1/10,\quad1/16,\quad1/25,\quad1/40,\quad1/60.
+}{R34.5.2}
+
+They follow directly from \(\|B\|^2\le\theta\) and the same finite
+mask, so cover every subsequent finite power as well.
+
+\paragraph{R34.5.1 Low domain \(0<d\le1/16\), with all new receiving fees}
+
+At \(L=1\), the actual mean satisfies
+\(1+5d/72\le m\le1+127d/360\le21/20\), and
+\(\operatorname{\operatorname{Var}}Y\le1369d/1024\). By \(2.3\) or Cauchy on the tail,
+
+\fitdisplay{
+\operatorname{Cov}(C,Y)\le-d+(6/5)(5/32)d=-13d/16.
+}{}
+
+The negative cubic therefore contributes at most (-13d/4), since
+\(m\ge1\). The actual pointwise sum is
+
+\fitdisplay{
+C+Y+m\le3+(31/25)\sqrt d+(91/180)d<18/5,
+}{}
+
+so coefficient \(41/4\) is legal. The mean exponent is \(223/18>12\),
+and the combined variance/covariance coefficient is
+
+\fitdisplay{
+(41/4)(1369/1024)-13/4=42817/4096<11.
+}{}
+
+Thus \(2.10\) applies with \((A_0,\allowbreak  B_0,\allowbreak  C_0)=(12,\allowbreak  11,\allowbreak  64/5)\).
+
+At \(L=2\),
+
+\fitdisplay{
+m\le1-203d/360,\quad m\ge1-313d/288\ge9/10,
+\quad\operatorname{\operatorname{Var}}Y\le169d/100,
+}{}
+\fitdisplay{
+\operatorname{Cov}(C,Y)\le-\kappa d+(6/5)(1/10)d
+=-379d/800\le-9d/20.
+}{}
+
+Hence \(4m^3\operatorname{Cov}(C,\allowbreak  Y)\le-6561d/5000\le-5d/4\),
+with the lower, not upper, mean used. The genuine pointwise sum is
+
+\fitdisplay{
+C+Y+m\le3+(69/32)\sqrt d-7d/120<18/5.
+}{}
+
+The coefficient is 10, and the scalar triple is
+
+\fitdisplay{
+(A_0,B_0,C_0)=(289/18,313/20,64/5).
+}{}
+
+Its gap is \(73/180\); since \(A_0d/2<1\), the deficit exceeds
+\(73d/540>d/100\).
+
+For \(L=3,\allowbreak  4,\allowbreak  5\), use the actual positive upper from the full finite
+convolution, with all negative coefficients treated as in \(5.1\). It has
+
+\fitdisplay{
+m\le1-7d/5,\quad\operatorname{\operatorname{Var}}Y\le121d/100,
+\quad\operatorname{Cov}(C,Y)\le(6/5)(11/10)d=33d/25.
+}{}
+
+The pointwise sums are bounded by
+\(3+(37/16)\sqrt d-(609/360)d\) at \(L=3\), and by
+\(3+(21/10)\sqrt d\) at \(L=4,\allowbreak  5\), all below \(18/5\).
+For \(L\ge6\), pay the two exceptional finite coefficients by
+\(E_0=127d/180\), retain the loss \(h=d/2\), and use the same shifted
+finite polynomial as C022 §7. Then
+
+\fitdisplay{
+m\le1-8d/5,\quad\operatorname{\operatorname{Var}}Y\le121d/100,
+\quad C+Y+m\le3+(81/40)\sqrt d+(37/180)d+d^2/2<18/5.
+}{}
+
+The same Cauchy covariance bound applies. All \(L\ge3\) therefore have
+coefficient \(10\) and common scalar triple
+\((19,\allowbreak  18,\allowbreak  64/5)\); the actual remainder coefficient is only
+\(10(121/100)+4(33/25)=869/50<18\). Every low row has deficit at least
+\(d/100\).
+
+\paragraph{R34.5.2 High domain, including the two bare short obstructions}
+
+For \(d\ge1/16\), the same actual entire pair product satisfies
+\(F\le e^{-2d}\), by the finite centered C022 pair bound. For \(L\ge3\)
+use the exact bare genuine-f2 theorem. At \(L=1\), the direct coefficient
+11 with \(C\le p+3/4\), \(Eq=1\), \(\operatorname{Cov}(C,\allowbreak  q)=-d\), gives
+
+\fitdisplay{
+E[Cq^4]\le1+6d,
+\quad e^{-8d}E[Cq^4]\le1-2d e^{-8d}<1-2d/27.
+}{}
+
+At \(L=2,\allowbreak  d\in[1/16,\allowbreak  1/8]\), coefficient 10 is valid because
+\(C\le p+9/20\); \(2.6\) gives
+
+\fitdisplay{
+E[C\bar f_2^4]\le(1-d)^5+10d(45/32-d)-(19/8)(1-d)^3d
+ \le1+(30603/4096)d<1+8d.
+}{R34.5.3}
+
+For the second inequality use \((1-d)^5\le1-5d+10d^2\) and
+\((1-d)^3\ge(7/8)^3\); the \(d^2\) terms cancel. Comparison with
+\(e^{8d}\ge1+8d\) leaves more than \(d/100\) after scaling.
+
+At \(L=2,\allowbreak  d\ge1/8\), coefficient 12 is valid under \(C\le p+3/4\).
+Discarding the negative covariance,
+
+\fitdisplay{
+e^{-8d}E[C\bar f_2^4]
+ \le e^{-8d}(1-d)^5+12d(45/32-d)e^{-8d}
+ \le239349/262144<14/15\le1-d/5.
+}{R34.5.4}
+
+Indeed the first term is at most \(50421/262144\), using \(e^{-1}<3/8\).
+The derivative of \(d(45/32-d)e^{-8d}\) is negative on ([\(1/8,\allowbreak  1/3\)]):
+the derivative of its bracket (\(45/32-2d-8d(45/32-d))\) is negative there,
+and its value at \(1/8\) is negative. Its second term is at most
+\(1476/2048\). Thus every minimum-at-least-four even table has deficit
+at least \(d/100\), including all single pairs and all positive \(L\).
+
+For clarity, the two bare \(\bar f_2\) curvature constants above have complete
+one-variable certificates. The actual bound
+\(\bar f_2+Eb_2\le13/4-p\) follows from
+\(\sqrt d-d\le1/4\). On the lower strip the polynomial is
+\fitdisplay{
+\Phi(p)=(p+9/20)[(13/4-p)^2+225/128]\le10.
+}{}
+On \(0\le p\le3/2\), \(\Phi''\le-3\),
+\(\Phi(1)=25317/2560<99/10\), and
+\(|\Phi'(1)|=189/640<3/10\); its quadratic-tangent excess is below
+\(3/200\). Beyond \(3/2\), its derivative is negative and decreasing.
+On the upper strip use
+\fitdisplay{
+\Psi(p)=(p+3/4)[(13/4-p)^2+49/32]\le12.
+}{}
+For \(p\le1\), \(\Psi''\le-5\),
+\(\Psi(3/4)=747/64,\allowbreak  \Psi'(3/4)=9/32\); its excess is at most
+\(81/10240\). On \([1,\allowbreak  2]\), the convex quadratic derivative has two
+negative endpoint values, so it remains negative. These are continuous
+proofs of the exact coefficients used in \(5.3\)--\(5.4\).
+
+\paragraph{R34.6 Even multipairs of minimum two or three}
+
+Let \(j\ge2\), \(s_1\in\{2,3\}\), and retain the actual
+canonical terminal \(F=\prod_{i=1}^j h_{s_i}f_{t_i}\), with its
+strict original arm order. Lemma~\ref{lem:R25:even-mask}, at the
+genuine receiving length \(a=2\), gives
+\[
+ \E[f_2(T^LF)^4]\le1-d/100
+ \qquad\text{for every integer }L\ge1.
+\]
+The shared proof retains the full finite mask, signed first constants,
+the constant vector in the length-two precursor, and all actual
+long mean indices. Its genuine \(G_2\) receiving branch is proved
+in paragraph~\ref{part:R25:genuine-two}. The original directions
+and the decoration bound are therefore exactly those in the
+reference directory.
+
+\paragraph{R34.7 All minimum-one even multipair tables}
+
+The fixed product is
+
+\fitdisplay{
+F=qf_{b_1}\prod_{i=2}^j h_{a_i}f_{b_i},\quad
+1<b_1<a_2<b_2<\cdots<a_j<b_j,\quad j\ge2.
+}{R34.7.1}
+
+For classes I, II and IIIa, Section~\ref{proof:R2-C028} supplies the
+finite masks, positive first rows, norms and scalar certificates;
+the genuine \(f_2\) receiving products are checked below.
+For class IIIb, Lemma~\ref{lem:R28:global-mask} applies with the actual
+receiver length \(a=2\), retaining the stronger deficit \(2d/405\).
+
+Every higher-index \(D_i\) bound in this section is ONE-SIDED. Negative
+\(D_i\) values are retained in the finite formulas.
+
+Throughout this section, \(D_i=EB^iR\) belongs to its one actual finite
+mask, and positive propagation is exactly
+\fitdisplay{
+Y_L=\bar f_L+B^LR+D \bar f_{L-1}+\sum_{i=1}^{L-1}D_i \bar f_{L-1-i}.
+}{}
+The symbols \(P_n=G_n+z^nU,\allowbreak  \ Q_n=P_n+\epsilon G_{n-2}+Dz^{n-2}\),
+\(\epsilon=D+D_1\), and every finite \(\gamma_n\) use the algebraic identities in
+\hyperref[part:R25:finite-propagation]{Section~\ref{proof:R2-C025}},
+with this same \(U,\allowbreak  R,\allowbreak  D,\allowbreak  D_i\); the mask bounds are those of this section.
+Thus all displayed mean bounds retain the extra finite index rather than setting a spectral mean to zero.
+
+\paragraph{R34.7.1 Classes I and II}
+
+Class I is \(b_1\ge3\); class II is \(b_1=2,\allowbreak  a_2\ge4\).
+On \(d\le1/64\), write the one actual finite mask as
+
+\fitdisplay{
+R=zP_0(-z)u=Uu,\quad P_0(-z)=U_0-zV_0,\quad
+c_x=(1-x^2)^{-1},\quad |U|<1.
+}{}
+
+The actual mask, before coordinate bounds, is
+\fitdisplay{
+P_0(w)=G_{b_1-1}(w)+
+ \sum_{i=2}^j\sum_{r=a_i+1}^{b_i}w^{r-2}.
+}{}
+Its exponent intervals are disjoint. Together with
+\(R=zP_0(-z)u\), this specifies both classes. Its complete coordinate bounds are
+
+\fitdisplay{
+\begin{array}{c|cc}
+&U_0&V_0\\\hline
+\mathrm I &[1-xc_x,c_x]&[1-xc_x,c_x]\\
+\mathrm {II}&[1-x^3c_x,1+x^2c_x]&[-xc_x,x^2c_x].
+\end{array}
+}{}
+
+The losses satisfy
+\(\Gamma_{\mathrm I}\ge607d/160+16(j-2)d/5\) and
+\(\Gamma_{\mathrm {II}}\ge16(j-1)d/5\).
+The true first-row constants are \(D=3d/8\) and \(D=0\), respectively;
+\(\epsilon=D+D_1\in[-d/8,\allowbreak  3d/8]\) or ([-d/12, d/5]).
+The finite moments obey \(0\le D_2\le d/2,\allowbreak  D_3\le d/5\),
+\(D_i\le d/10\) for \(i\ge4\), and every retained \(\gamma\ge3d/8\).
+The resulting exact mean/variance table is
+
+
+\begingroup\small
+\setlength{\tabcolsep}{3pt}
+\setlength{\LTleft}{0pt}\setlength{\LTright}{\fill}
+\begin{longtable}{@{}p{0.1200\linewidth}p{0.4000\linewidth}p{0.4000\linewidth}@{}}
+\caption{Every genuine length-two reference arm: the complete directory: parameter values.}\label{tab:parameters:r2-c034:6}\\
+\toprule
+Entry & Mean upper (I / II where different) & Variance upper \\
+\midrule\endfirsthead
+\toprule
+Entry & Mean upper (I / II where different) & Variance upper \\
+\midrule\endhead
+\bottomrule\endfoot
+1 & \((1+3d/8) / (1+d/5)\); & \((27d/20)\). \\
+\addlinespace[2pt]
+2 & \((1-d/8) / (1-3d/10)\); & \((13d/8)\). \\
+\addlinespace[2pt]
+3 & \((1-37d/40)\); & \((51/40)^2d\). \\
+\addlinespace[2pt]
+\(\ge4\) & \((1-3d/4)\); & \((36d/25)\). \\
+\end{longtable}
+\endgroup
+
+
+The new length-one product has
+\(Q_1=(1-xU_0)+zxV_0\). Its genuine real product is at least
+\(1-x/(1-x)\ge6/19\) in I, and at least
+\(\kappa-\theta^3/\kappa>0\) in II. The latter's possible signed
+mean cost is at most \(d^2/5\); both covariances are therefore nonpositive.
+At length two both full coordinates are positive, so the old
+\((1-x)Q_e-xQ_o\) lower bound improves to \(Q_e-xQ_o\), with favorable
+signed mean. Its covariance remains nonpositive.
+
+For \(P_n=G_n+z^nU\), \(n\ge4\), the product is at least
+\(\kappa^2-(6/5)\theta^2>0\). For \(n=3\) it is at least
+\(3/16-(6/5)(4/15)=-53/400>-1/3\).
+Equation \(2.4\) pays every signed (epsilon) term, and \(2.5\) every
+\(D\) term. The actual translated mean products then preserve
+
+\fitdisplay{
+\operatorname{Cov}(C,Y_3)\le d/3+3d^2/10,\qquad
+\operatorname{Cov}(C,Z_{L\ge4})\le d^2.
+}{}
+
+The original coefficient 8 is valid with \(2.2\). The full continuous
+low-domain scalar rows are
+
+\fitdisplay{
+e^{-64d/5}+(54/5)d e^{-32d/5},\quad
+e^{-15d}+13d e^{-6d},\quad
+e^{-14d}+(53/4)d e^{-6d};
+}{R34.7.2}
+
+Each is at most \(1-d/4\) on \(0\le d\le1/64\), by the
+continuous payments following (R28.6.3) in
+Section~\ref{proof:R2-C028}. For \(d\ge1/64\), every later actual pair is at most
+\(e^{-d/2}\). Preserve that factor:
+
+\fitdisplay{
+F\le e^{-(j-1)d/2}qf_{b_1},\qquad
+E[C(T^LF)^4]\le e^{-2d}\le1-6d/5.
+}{R34.7.3}
+
+The last inequality follows from \(1-e^{-2d}\ge2d/(1+2d)\ge6d/5\).
+Merely discarding these pairs would prove a weaker conclusion and would
+not justify the strict margin in \(7.3\).
+
+\paragraph{R34.7.2 Class III, two pairs}
+
+Here \(F=qf_2h_3f_b\), \(b\ge4\). On \(d\le1/8\),
+
+\fitdisplay{
+R=[\tau+z+z^3G_{b-3}(-z)]u,\quad\Gamma\ge35d/16,\quad D=0.
+}{}
+
+Writing \(G_{b-3}=A_0+zC_0\), the actual short packet is
+
+\fitdisplay{
+\epsilon=D_1\in[-d^2,\delta_3],\quad \delta_2-\delta_3\le D_2\le \delta_2,
+\quad D_3\le\theta d^2,\quad D_i\le d/10\ (i\ge4),
+}{}
+\fitdisplay{
+\gamma_3\ge\kappa d,\quad\gamma_4\ge243d/256,
+\quad\gamma_n\ge7d/16\quad(n\ge5).
+}{}
+
+The two actual output symbols are
+
+\fitdisplay{
+Q_1=(1-x+x^2A_0)+z(\tau-x^2C_0),
+\quad
+Q_2=(1-\tau x+x^3C_0)+z(1-x+x^2A_0).
+}{R34.7.4}
+
+The first genuine product is at least \(\kappa-\theta/8\); its only
+adverse mean cost is at most \(\theta^2d^2\). Thus its covariance is
+nonpositive. The second has positive coordinates, so its old lower
+product \(1/4\) is preserved, giving covariance at most (-d/4).
+This is the sign needed in the tight second-length cubic bracket.
+The actual mean is between \(55/64\) and (1-d/2), the output variance
+is at most \(11d/8-\kappa^2d^2\), and the entire constant-containing
+precursor is at most \(21\sqrt d/20\). These are distinct bounds.
+
+For the later \(P_n\), use \(|U|<31/40\):
+
+\fitdisplay{
+\operatorname{Re}(G_2P_3)\ge3/16-(6/5)(31/40)(4/15)>-4/15,
+}{}
+\fitdisplay{
+\operatorname{Re}(G_2P_n)\ge\kappa^2-(6/5)(31/40)\theta^2>0
+\quad(n\ge4).
+}{}
+
+Positive (epsilon) is favorable; its negative part costs at most
+\(d^3\). Full translated covariance bounds remain \(4d/15+d^3\)
+at \(L=3\), and \(3d^2/5\) for longer lengths. The other actual data are
+
+\fitdisplay{
+\begin{array}{c|cc}
+L&\text{mean upper}&\text{variance upper}\\\hline
+1&1+D_1\le1+\delta_3\le1+\theta^2d&d+\theta d^3\\
+3&1-4d/3&169d/144\\
+\ge4&1-9d/8&(1+d/5)^2d.
+\end{array}
+}{}
+
+The genuine \(C\) satisfies the exact pointwise premises for coefficients
+8 at lengths 1, 2 and 9 later. All low-domain scalar certificates are
+
+\fitdisplay{
+e^{-9d}+8d e^{-4d},
+}{}
+\fitdisplay{
+e^{-247d/20}+(11d-361d^2/128)e^{-35d/8},
+}{}
+\fitdisplay{
+e^{-13d}+(169/16)d e^{-35d/8},\qquad
+e^{-13d}+9d e^{-15d/4}.
+}{R34.7.5}
+
+Their respective R2-C028 continuous deficits are at least
+(d/4, 37d/640, 25d/128, 35d/64). For \(d\ge1/8\), retain the same
+actual inequality \(h_3f_b\le e^{-d}\) and compare with the exact
+Section~\ref{proof:Q5-C058} \(qf_2\) row. This gives \(E[C(T^LF)^4]\le e^{-4d}\) for every \(L\).
+
+\paragraph{R34.7.3 Class III, at least three pairs, on the whole domain}
+
+The actual terminal is
+\[
+ F=qf_2h_3f_{b_2}\prod_{i=3}^j h_{a_i}f_{b_i},
+ \qquad 4\le b_2<a_3<b_3<\cdots<a_j<b_j,\quad j\ge3.
+\]
+Its finite polynomial is
+\[
+ P_0(w)=1+w^2G_{b_2-3}(w)
+       +\sum_{i=3}^j\sum_{r=a_i+1}^{b_i}w^{r-2}.
+\]
+The original intervals are disjoint, so every coefficient is zero or
+one, with \((P_0)_0=(P_0)_2=1\) and \((P_0)_1=0\).
+The actual pair inequalities give
+\[
+ F\le e^{R-\Gamma},\qquad R=BP_0(-B)u+\tau u,\qquad
+ \Gamma=3d-2\delta_2+\frac{16}{5}(j-2)d
+       \ge\frac{431}{80}d.
+\]
+Lemma~\ref{lem:R28:global-mask}, in its genuine \(a=2\) case, yields
+\(\E[f_2(T^LF)^4]\le1-2d/405\) for every integer \(L\ge1\),
+throughout \(0\le d\le1/3\). Together with the preceding classes,
+this proves the minimum-one even multipair family with deficit
+\(d/3000\).
+
+\paragraph{R34.8 Nonunit odd terminals}
+\label{part:R34:nonunit-odd}
+
+\begin{lemma}\label{lem:R34:nonunit-odd}
+For every integer \(L\ge1\), the following actual terminals satisfy
+\(\E[f_2(T^LF)^4]\le1-d/100\):
+\[
+\begin{array}{c|l|l}
+ &\text{original residual lengths}&F\\\hline
+\mathcal C&2\le\ell<s_1<t_1<\cdots<s_j<t_j,\quad s_1\ge4
+ &\bar f_\ell\prod_{i=1}^j h_{s_i}f_{t_i}\\
+\mathcal P&(2,3,c,s_2,t_2,\ldots,s_j,t_j),\quad c\ge4
+ &\bar f_2 f_3h_c\prod_{i=2}^j h_{s_i}f_{t_i}.
+\end{array}
+\]
+Here \(j\ge1\), all listed lengths increase strictly, every connector
+edge points toward the receiver, and the existing receiving arm has
+length two and points outward.
+\end{lemma}
+\begin{proof}
+Use \(C=f_2\), with mass \(1-d\), pointwise bound
+\(C\le p+\sqrt d\), and \(\sigma(C)<(6/5)\sqrt d\).
+Leaf integration handles \(d=0\). First suppose \(0<d\le1/8\).
+
+The actual finite packets. For \(\mathcal C\), put
+\(\mu_\ell=\E\bar f_\ell\in[0,1]\).
+The finite anchored calculation \eqref{eq:R20:rows} gives
+\(F\le\bar f_\ell e^{R-\Gamma}\) and the positive upper
+\begin{equation}\label{eq:R34:nonunit-propagation}
+ e^\Gamma T^LF\le Y_L=\bar f_n+\mu_\ell B^LR+D\bar f_{L-1}
+     +\mu_\ell\sum_{i=1}^{L-1}D_i\bar f_{L-1-i},
+ \quad n=\ell+L,\quad D_i=\E B^iR.
+\end{equation}
+Write \(D=c_0d\). Its linked parameters are
+\[
+\begin{array}{c|c|c|c|c|c}
+ &\Gamma/d\ge g&\|R\|/\sqrt d<\rho&c_0&(D_1)_+/d\le c_1
+ &(D_i)_+/d\le c_2,\ i\ge2\\\hline
+I:\ j=1,s_1=4&69/20&1/5&72/125&1/6&7/100\\
+II:\ j=1,s_1\ge5&16/5&3/20&3/5&1/30&1/12\\
+III:\ j\ge2&16j/5&1/4&5/6&1/5&1/12.
+\end{array}
+\]
+In row \(I\), necessarily \(\ell=2,3\), and the actual
+\(\beta_{\ell+1}=d\) is retained. In every row \(D\) is the
+upper for the anchored first constant, including the actual
+\(\bar f_\ell\) mixed terms; no larger anchor variance is combined
+with a different row's smaller mask.
+For \(n\le5\), raise coefficients only before nonnegative paths in
+\eqref{eq:R34:nonunit-propagation}. The mean losses at
+\(L=1,2,3\) are respectively
+\[
+ k=2-c_0-c_1,\qquad
+ k=5/2-c_0-c_1-c_2,\qquad
+ k=11/4-c_0-c_1-2c_2,
+\]
+and \(\E Y_L\le1-kd\).
+The norm bounds are \(1+\sqrt\theta\rho\),
+\(1+\theta\rho+c_0d\), and
+\(1+\theta^{3/2}\rho+(6c_0/5+c_1)d\), in units of \(\sqrt d\).
+Thus the standard deviation is at most \(7\sqrt d/6\) for
+single pairs and \(5\sqrt d/4\) for multipairs.
+
+For \(n\ge6\), the same finite convolution gives
+\eqref{eq:R20:long}, with
+\[
+\begin{gathered}
+ Y=1-h(4-d)+[G_n-h(3+2z+z^2)](B)u+\mu_\ell B^LR+E,\\
+ (h/d,E/d)=(2/5,0),(1/2,81/80),(3/8,59/48).
+\end{gathered}
+\]
+The exceptional original coefficient at \(\ell+1\) is paid by
+\(E\), and the extra actual mean coefficient is retained. Hence
+\(\E Y\le1-5h+3hd+E\), giving mean losses
+\(37/20,13/10,97/192\). The finite shifted-symbol inequalities
+\eqref{eq:R18:shiftfour}--\eqref{eq:R18:shifttwo} apply to
+\(n\ge6\) and \(n-1\ge5\). The long standard deviation is at
+most \((1+\rho\sqrt\theta)\sqrt d\). Consequently all single
+rows have \(k\ge5/4\), variance at most \(49d/36\); all
+multiple rows have \(k\ge97/192\), variance at most \(25d/16\).
+
+For \(\mathcal P\), the actual packets
+\eqref{eq:R13:terminal}, \eqref{eq:R14:envelope}, and
+\eqref{eq:R18:old} use
+\[
+ R_0=r_0(B)u,\quad r_0=-\beta+x^2V+zxU,\quad
+ \beta=\beta_{c-1},\quad U\in[1-x,1],\quad V\in[0,1].
+\]
+The endpoint \(c=4\) is \((U,V)=(1,0)\).
+The signed real coordinate gives the useful common improvement
+\[
+ |r_0|^2=(-\beta+x^2V)^2+x^3U^2
+ \le d^2+x^4+x^3\le1/64+\theta^4+\theta^3<1/9.
+\]
+Thus \(\|R_0\|<\sqrt d/3\). For \(j\ge2\), add the one
+complete later mask \(S\), with \(\|S\|<3\sqrt d/20\), so
+\(\|R_0+S\|<(29/60)\sqrt d\).
+The first constants remain \(D=3d/5\) and \(3d/2\), and the
+losses remain \(g=35/16\) and \(431/80\), respectively.
+Their finite propagation is \eqref{eq:R34:nonunit-propagation}
+with \(n=L+2\) and coefficient one before \(B^LR,D_i\).
+The actual \(\bar f_2=1+u+Bu\) is retained in this first row.
+The same finite identities give the following mean/variance data:
+\[
+\begin{array}{c|cc|cc}
+ &\multicolumn{2}{c|}{j=1}&\multicolumn{2}{c}{j\ge2}\\
+ L&k&\operatorname{Var}Y/d&k&\operatorname{Var}Y/d\\\hline
+1&51/40&1&41/120&121/100\\
+2&17/10&1&2/3&2209/1600\\
+3&2&81/64&1&25/16\\
+\ge4&37/20&1849/1600&7/24&121/100.
+\end{array}
+\]
+For \(L\ge4\), use the distinct positive bounds
+\eqref{eq:R18:longsingle}--\eqref{eq:R18:longmulti}, with
+\(h=2d/5,d/3\). The multirow's negative coefficient
+\(\gamma_3=d-D=-d/2\) is paid by \(\bar f_{L-1}\le2\),
+giving the actual extra constant \(d\), rather than deleting it.
+
+Genuine covariances. For \(\mathcal C\) with \(n\le5\), the
+bare and every positively added short path have nonpositive covariance
+by \(2.6\). Only the full tail is charged, at most
+\((6/5)\rho\theta^{L/2}d\); this is at most \(4d/25\) for
+single pairs and \(d/5\) for multipairs.
+In the long rows the core product is at least \(\kappa^2-3h\),
+its signed mean parameter \(\beta_{n+1}-2hd\) is positive, and
+\[
+ \kappa^2-3(h/d)/8>(6/5)\rho\sqrt\theta
+\]
+in each of the three linked rows. Thus all long covariances are
+nonpositive, even when \(L=1\) and the anchor is long.
+
+For \(\mathcal P\) at \(L=1\), the joint core
+\(G_3+zr_0\) has genuine product at least
+\(1-2x-x^2-x^3>-1/20\) and positive mean parameter.
+Its covariance is at most \(d/20\); adding \(BS\) costs at
+most \(3d/25\). At \(L=2\), the single core
+\(G_4+z^2r_0-2d/5\) has positive imaginary coordinate and
+genuine real product at least \((1-x)^2-2d/5-x^4\).
+Its gap exceeds the whole later fee \(3d/40\). The added
+\((9/10)du\) has negative covariance, so both single and multiple
+covariances are nonpositive.
+At \(L=3\), keep the signed constants
+\[
+ P=G_5-a_0+\epsilon z+z^Lr,\qquad
+ (a_0,\epsilon)=
+ \begin{cases}
+ (7d/5-D_1,-2d/5),&j=1,\\
+ (d/2-D_1,d/2),&j\ge2.
+ \end{cases}
+\]
+The retained cores \(G_5-a_0+\epsilon z\) have mean parameters
+\(\tau-2d^2/5\) and \(\tau+d^2/2\), both positive; the
+complete \(z^Lr\) tails are paid separately in the following gaps:
+\[
+ \kappa^2-(7/5+\theta^2)/8-18/125>0,\qquad
+ \kappa^2-(49/60+\theta/2)/8-24/125>0.
+\]
+Here \(D_1\) keeps its sign; its range gives the displayed upper
+bound for \(a_0\), not an unjustified favorable \(D_1q\) term.
+For \(L\ge4\), the genuine products of the retained four-path
+or two-path core exceed their whole tail fees \(9d/100,3d/25\),
+respectively, and their actual signed mean parameters are positive.
+Thus every \(\mathcal P\) covariance at \(L\ge2\) is nonpositive.
+
+One curvature coefficient. Every positive upper above satisfies
+\(C+Y+\E Y<4\) and \(\E Y\le1\). For \(\mathcal C,n\le5\),
+the bound is \(3+(5/2)\sqrt d<4\). In the long rows the
+pointwise precursor norm is at most \((1+\rho)\sqrt d\), by
+the second shifted-symbol inequality, giving the common upper
+\(3+(9/4)\sqrt d+19d/48<4\).
+For \(\mathcal P,L=1\), the improved \(R_0\) norm gives sums
+at most
+\[
+ 3+(38/15)\sqrt d,\qquad
+ 3+(161/60)\sqrt d+19d/120
+\]
+for single and multiple rows; both are below four using
+\(\sqrt{1/8}<17/48\). At \(L=2\), the actual upper is at
+most \(q+\sqrt d\) or \(q+83/192\); their sums are below four.
+The finite pointwise forms \eqref{eq:R18:three},
+\eqref{eq:R18:longsingle}, and \eqref{eq:R18:longmulti} give,
+for \(L\ge3\), the common upper
+\(3+(12/5)\sqrt d+3d/8<4\).
+By \(2.9\), the one unscaled coefficient is therefore
+\(K=64/5>683/54\).
+
+One payment. If \(\E Y\le1-kd\),
+\(\operatorname{Var}Y\le vd\), and
+\(\operatorname{Cov}(C,Y)\le bd\) with \(b\ge0\), the exact
+fourth identity gives
+\[
+ \E[C(T^LF)^4]\le e^{-Ad}+Bd\,e^{-4gd},\qquad
+ A\le4g+1+4k,\quad B\ge(64/5)v+4b.
+\]
+The receiving mass \(1-d\) and every actual negative mean loss
+are retained. The whole nonunit odd family is paid by five rows:
+\[
+\begin{array}{c|c|c|c|c|c|c|c}
+ &L&g&k&v&b&A&B\\\hline
+\mathcal C,j=1&\ge1&16/5&5/4&49/36&4/25&94/5&91/5\\
+\mathcal C,j\ge2&\ge1&32/5&97/192&25/16&1/5&28&21\\
+\mathcal P,j=1&1&35/16&51/40&1&1/20&74/5&13\\
+\mathcal P,j=1&\ge2&35/16&17/10&81/64&0&33/2&81/5\\
+\mathcal P,j\ge2&\ge1&431/80&7/24&25/16&1/5&23&21.
+\end{array}
+\]
+Each has \(4g\ge A/2\), \(A-B\ge3/10\), and \(Ad/2<2\).
+By \(2.10\) and \(e^2<9\), the low-domain deficit exceeds
+\(d/30>d/100\).
+
+For \(d\ge1/8\), the same actual pair comparisons give
+\(F\le e^{-d}\bar f_\ell\) in \(\mathcal C\), and
+\(F\le e^{-(2j-1)d}\bar f_2\) in \(\mathcal P\).
+The propagated bare index is at least three in both cases, so
+\eqref{eq:Q101:bare-all} yields at most \(e^{-4d}(1-d/20)\).
+Since \(1-e^{-4d}\ge4d/(1+4d)\ge12d/7\), the same margin
+holds in the high domain. Both closed endpoints and every original
+direction agree across the split.
+\end{proof}
+
+\paragraph{R34.10 Unit odd triple (1, 3, c), every c and every length}
+The genuine length-two extension \eqref{eq:Q175:f2-extension}
+gives, in the actual direction \(F=qf_3h_c\),
+\[
+ \E[f_2\{T^L(qf_3h_c)\}^4]\le1-d/800
+ \qquad(c\ge4,\ L\ge1).
+\]
+Its proof uses the genuine \(G_2\) product and receiving mass
+\(1-d\), all five connector windows, and the high-domain path
+comparison. Equal-pair decorations follow by positivity.
+
+\paragraph{R34.11 Unit odd triples (1, b, c), \(4\le b<c\)}
+Apply \eqref{eq:Q178:f2-extension} with the same terminal
+\(F=qf_bh_c\), the same outward receiving arm of length two,
+and the same terminal-to-receiver connector of length \(L\ge1\).
+The moment is at most \(1-d/3000\) on \(0<d\le1/4\), and at
+most one on \(1/4\le d\le1/3\). The upstream proof retains
+the three nonunit \(b\) ranges and all four unit configurations,
+including the stronger actual loss for \(b\ge6\).
+At \(d=0\), use leaf integration; decorations use positivity.
+
+\paragraph{R34.12 Unit odd triples (1, 2, c), \(c\ge5\)}
+\label{part:R34:unit-two-triple}
+Use \eqref{eq:Q184:f2-extension} with the actual terminal
+\(F=qf_2h_c\), the same receiving arm \(f_2\), and the original
+terminal-to-receiver connector \(T^L\), for every \(L\ge1\).
+It gives \(1-d/800\) throughout the host domain, with loss \(d/600\)
+for nonunit connectors. On \(d\le1/5\), the stronger unit and
+connector-dependent bounds are those of
+Lemma~\ref{lem:retained-reference-payments}.
+The cases \(c=3,4\) retain their separate inputs in §3, including
+the \(d/50\) low-domain bound of \eqref{eq:Q105:0.3}.
+
+\paragraph{R34.13 A common estimate for unit-leading multipairs}
+\label{part:R34:unit-multipair}
+
+\begin{lemma}\label{lem:R34:unit-multipair}
+Let all arm lengths be strictly increasing in their original order,
+and let \(j\ge2\). The following six terminals satisfy
+\(\E[f_2(T^LF)^4]\le1-d/800\) for every integer \(L\ge1\):
+\[
+\begin{array}{c|l|l}
+\text{family}&\text{original lengths}&F\\\hline
+A&s_1\ge4&q\prod_{i=1}^j h_{s_i}f_{t_i}\\
+B&s_1=3, c=t_1\ge4&qf_3h_c\prod_{i=2}^j h_{s_i}f_{t_i}\\
+II&s_1=2, c=t_1\ge4&qf_2h_c\prod_{i=2}^j h_{s_i}f_{t_i}\\
+III&(s_1,t_1)=(2,3),\ s_2\ge5&qf_2h_3\prod_{i=2}^j h_{s_i}f_{t_i}\\
+IV&(s_1,t_1,s_2)=(2,3,4),\ j=2&qf_2h_eh_3f_4,\quad e=t_2\ge5\\
+V&(s_1,t_1,s_2)=(2,3,4),\ j\ge3&qf_2h_eh_3f_4\prod_{i=3}^j h_{s_i}f_{t_i}.
+\end{array}
+\]
+Family \(A\) satisfies the stronger bound \(1-d/100\).
+\end{lemma}
+\begin{proof}
+Write \(C=f_2\), so \(\E C=1-d\),
+\(C\le p+\sqrt d\) and \(\sigma(C)<(6/5)\sqrt d\).
+At \(d=0\), integrate the original leaves. Suppose henceforth \(d>0\).
+
+The finite packets. The positive first rows for families \(A,B\)
+are \eqref{eq:R21:firstrow} and \eqref{eq:R23:firstrow}.
+For families \(II\)--\(V\), use
+\eqref{eq:R24:mask}--\allowbreak\eqref{eq:R24:V}.
+Together these give
+\[
+ F\le qe^{R-\Gamma},\qquad
+ T(qe^R)\le\bar f_2+BR+D,\qquad D_i=\E B^iR.
+\]
+These are inequalities between actual messages, before a receiving
+factor is inserted. In the following table \(D=\delta d\),
+\(h=\eta d\), and \((D_i)_+\le\alpha_i d\) for \(i=1,2,3\).
+\[
+\begin{array}{c|c|c|c|c|c|c}
+ &d_0&\Gamma/d\ge g&\|R\|/\sqrt d\le\rho&\delta&\eta
+ &(\alpha_1,\alpha_2,\alpha_3)\\\hline
+A&1/8&32/5&1/4&11/15&1/2&(1/5,1/12,1/12)\\
+B&1/64&431/80&1/2&4/3&3/8&(1/2,1/3,1/4)\\
+II&1/64&351/80&2/3&11/10&1/3&(33/64,1/4,1/4)\\
+III&1/8&21/5&14/25&11/10&15/32&(1/2,1/12,1/10)\\
+IV&1/8&21/4&1/2&11/10&1/2&(19/40,1/16,1/12)\\
+V&1/8&169/20&3/5&7/4&1/3&(2/3,1/3,1/8).
+\end{array}
+\]
+For \(III\), \(R=B^2u+S\) and
+\(\|S\|<3\sqrt d/20\), whence
+\(\rho\le\theta+3/20=89/160<14/25\).
+For \(IV\), retain the signed crossing coordinates
+\eqref{eq:R24:crosscoordinates}: \(R=(-A_c+zB_c)(B)u\),
+\(0\le A_c\le19/40\), \(-x^2\le B_c\le19d/16\), and
+\(A_c+B_c\ge d/2+x/16\). Family \(V\) adds its one complete
+later mask to this same crossing. Thus the table preserves every
+original interval and, in particular, a possibly negative \(B_c\).
+
+For \(L=1,2\), take
+\[
+ Y_1=\bar f_2+BR+D,\qquad
+ Y_2=\bar f_3+B^2R+Dq+D_1.
+\]
+For \(L=3,4\), raise only coefficients of nonnegative paths and take
+\[
+\begin{aligned}
+ Y_3&=\bar f_4+B^3R+D\bar f_2+\alpha_1dq+\alpha_2d,\\
+ Y_4&=\bar f_5+B^4R+D\bar f_3
+              +\alpha_1d\bar f_2+\alpha_2dq+\alpha_3d.
+\end{aligned}
+\]
+For every finite \(L\ge5\), take the retained four-path upper
+\eqref{eq:R24:long}, also used in \eqref{eq:R21:long}:
+\[
+ Y_L=1-h(4-d)+[G_{L+1}-h(3+2z+z^2)](B)u+B^LR+2D.
+\]
+In each case \(0\le e^\Gamma T^LF\le Y_L\).
+The finite packets give \(\beta_r-D_{r-2}\ge h\) at all retained
+indices \(r\ge3\), including the additional mean index. Consequently
+\(\E Y_L\le1-5h+3hd+2D\) for \(L\ge5\).
+
+Genuine receiving covariances. Apply
+\eqref{eq:reference-common:covariance} with \(a=2,t=0\).
+For a joint core \(Q(B)u\) with mean \(-\zeta\), this is
+\[
+ \operatorname{Cov}(C,Q(B)u)
+ =-\int\operatorname{Re}(G_2Q)\,d\nu-d\zeta.
+\]
+For \(B,II\), write respectively
+\(r_0=-\beta+x^2V+zxU\) and
+\(r_0=-\beta-xU+zxV\), with \(U\in[1-x,1]\), \(V\in[0,1]\).
+The latter interval includes the actual \(B\)-endpoint \(c=4\), where \((U,V)=(1,0)\).
+For \(III\), use \(R=B^2u+S\); for \(IV\), use the signed
+coordinates above. At \(L=1,2\), the joint cores
+\(G_{L+1}+z^Lr_0\) have positive imaginary coordinates, and hence
+\(\zeta>0\). Their real products with \(G_2\) are at least
+\[
+\begin{array}{c|c|c|c}
+ &L=1&L=2&\text{later-mask covariance fees}\\\hline
+B&1-x-x^2-x^3&1-2x-x^4&(3d/25,3d/40)\\
+II&1-x-x^3&1-2x&(3d/25,3d/40)\\
+III&1-x+x^2&(1-x)^2&(3d/25,3d/40)\\
+IV&1-x-19dx/16&1-2x-x^4&(0,0).
+\end{array}
+\]
+Every displayed gap exceeds its fee throughout its stated domain.
+The term \(Dq\) is favorable. These eight covariances are therefore
+nonpositive. For \(A,V\) at \(L=1\), the bare gap \(\kappa d\)
+exceeds \((6/5)\rho\sqrt\theta\,d\); for \(A,V\) at \(L=2\),
+only the tail fee \((6/5)\rho\theta d\) need be retained.
+
+At \(L=3,4\), all added path covariances are nonpositive by
+\(2.6\), so only \(B^LR\) is charged. Uniformly its fee is
+\((6/5)\rho\theta^{L/2}d\). Use
+\(\theta^{3/2}<13/50\) and \(\theta^2<1/6\).
+For \(L\ge5\), the core has real product at least
+\(\kappa^2-3h\); its actual mean parameter is
+\(\beta_{L+2}-2hd>0\). The full tail costs at most
+\((6/5)\rho\theta^{5/2}d\), with \(\theta^{5/2}<8/75\).
+The six parameter rows give
+\(\kappa^2-3\eta d_0>(6/5)\rho(8/75)\).
+Thus the long covariances, too, are nonpositive.
+
+One payment. Put \(\mu=\E Y_L\), and suppose that
+\[
+ \mu\le1+ad,\quad \operatorname{Var}Y_L\le vd,\quad
+ \operatorname{Cov}(C,Y_L)\le bd,\quad b\ge0.
+\]
+If the scaled curvature coefficient on \(W=e^{-\Gamma}Y_L\)
+is \(K\), the exact fourth identity gives
+\begin{equation}\label{eq:R34:unit-payment}
+ \E[C(T^LF)^4]\le e^{-Ad}+Bd\,e^{-2gd}
+ \quad\text{when}\quad
+ A\le4g-\max\{0,4a-1\},\quad B\ge Kv+4br,
+\end{equation}
+where \(r\ge\mu^3\) is needed only when \(b>0\).
+Indeed \((1-d)\mu^4\le e^{(4a-1)d}\), while the nonnegative
+covariance fee and the variance fee have the common upper scale
+\(e^{-2gd}\). No mean above one is discarded.
+
+Here is sufficient finite data for this single payment. The mean and
+variance columns follow by substituting the displayed positive uppers
+in \eqref{eq:R21:propagation}, \eqref{eq:R23:propagation}, and
+\eqref{eq:R24:propagation}, using their joint short norms and finite
+shifted-symbol bounds. The covariance column was proved above.
+\[
+\begin{array}{c|c|c|c|c|c|c|c|c}
+ &L&a&v&b&K&r&A&B\\\hline
+A&\ge1&0&1681/900&1/5&13&1&128/5&251/10\\
+B&\ge1&5/6&169/100&4/25&9&9/8&19&16\\
+II&1&197/320&169/100&0&9&1&16&61/4\\
+II&\ge2&3/5&25/16&16/75&9&9/8&16&61/4\\
+III&\ge1&3/5&36/25&22/125&10&5/4&77/5&153/10\\
+IV&1&23/40&25/16&0&10&1&19&16\\
+IV&\ge2&0&121/64&4/25&10&1&21&20\\
+V&1\le L\le4&17/12&64/25&3/10&10&5/3&29&28\\
+V&\ge5&2&121/100&0&10&1&26&13.
+\end{array}
+\]
+Here are direct norm checks for the variance column. At \(L=1,2\),
+the joint cores for \(B,II,III,IV\) have norm bounds respectively
+\((6/5,1),(6/5,1),(43/40,1),(5/4,17/16)\); add the single
+\(B^LS\) tail and, at \(L=2\), \(Du\).
+For \(A,V\), add the full tail to the bare \(G_2,G_3\) cores.
+The ordinary triangle bounds on \(\sigma(Y_L)/\sqrt d\) at
+\(L=3,4\) are respectively
+\[
+ 1+(6\delta/5+\alpha_1)d+\rho\theta^{3/2},\qquad
+ 1+(-2+\delta+6\alpha_1/5+\alpha_2)d+\rho\theta^2.
+\]
+These use the bare centered norms \(6/5,1,1,1-2d\) for indices
+\(2,3,4,5\). Only \(III\) needs its tighter joint cores:
+at \(L=3\) the coordinates are
+\((1-x+3d/5,1-x+x^2+11d/10)\), of norm at most \(1+3d/5\);
+the square difference divided by \(x\) is at most
+\(-1+\theta+d+121d^2/100<0\).
+At \(L=4\), its positive real coordinate is at most the real
+coordinate of \(G_5\), and its imaginary coordinate exceeds that
+of \(G_5\) by \(3d/5\); the norm is therefore at most
+\(1+(3/5)\sqrt\theta d<1+2d/5\).
+Add \(\|B^3S\|<\sqrt d/25\),
+\(\|B^4S\|<\sqrt d/40\) in these two rows.
+Finally the long norm is at most \(1+\rho\theta^{5/2}\), by the
+retained finite shifted-symbol inequality. Substitution of the six
+parameter rows proves every listed variance bound; precursor and
+output norms have not been identified.
+For the four positive-covariance groups with \(a>0\), the displayed
+\(r\)'s follow from \((1+ad_0)^3\); all other charged groups have
+\(\mu\le1\). Every listed \(A,B\) satisfies
+\eqref{eq:R34:unit-payment}.
+
+Curvature. In \(A,B,II\), direct path-row bounds give respectively
+\[
+ C+Y_L+\mu\le
+ 3+\tfrac{12}{5}\sqrt d+\tfrac23d<4,\quad
+ 3+\tfrac{38}{15}\sqrt d+\tfrac{13}{3}d<\tfrac{17}{5},\quad
+ 3+\tfrac83\sqrt d+\tfrac{1189}{320}d<\tfrac{17}{5}.
+\]
+Also \(\mu\le1,33/32,33/32\), respectively. Thus \(2.9\)
+gives \(K=13,9,9\), on \(Y_L\) and hence on its contraction \(W\).
+For \(III,IV\), the positive rows satisfy
+\[
+ Y_L+\mu\le(1+\delta d)q+1+\tfrac85\sqrt d+\tfrac94d,
+ \quad0\le\delta\le11/10,\quad\mu\le1+3d/5.
+\]
+For \(V\), they satisfy
+\(Y_L+\mu\le(1+3d)q+1+2\sqrt d+21d/4\),
+\(\mu\le1+2d\). These bounds follow from the same positive
+coefficients displayed above, including the long excess \(2D\).
+In both groups \(\E W\le1\), and the coefficient of \(q\) in
+\(C+W+\E W\), using \(C\le2-q+\sqrt d\), is nonpositive.
+Put \(t=\sqrt d<3/8\), and use \(e^{-gd}\le(1+gt^2)^{-1}\).
+The numerator of the gap to \(18/5\) is at least
+\[
+\begin{array}{c|l}
+III,IV&\frac35-\frac{13}{5}t+\frac{447}{100}t^2-\frac{21}{5}t^3
+ \ \ge\ \frac35-\frac{13}{5}t+\frac{579}{200}t^2\\
+V&\frac35-3t+\frac{827}{100}t^2-\frac{169}{20}t^3
+ \ \ge\ \frac35-3t+\frac{4081}{800}t^2.
+\end{array}
+\]
+The last two quadratics have negative discriminants
+\(-47/250,-3243/1000\). Therefore \(C+W+\E W<18/5\),
+and \(2.9\) gives \(K=10\) with the variance scale \(e^{-2\Gamma}\).
+
+For every payment row, \(A-B\ge1/10\), \(2g\ge A/2\), and
+\(Ad_0/2<2\). Applying \(2.10\) and \(e^2<9\) therefore gives
+the common low-domain bound \(1-d/100\).
+
+The high domains use the same directed terminals. For \(A\),
+\(d\ge1/8\) gives \(F\le e^{-4d}q\). At \(L\ge2\), use
+\eqref{eq:Q101:bare-all}, whose index is \(L+1\ge3\). At \(L=1\),
+\[
+ \E[C\bar f_2^4]\le8\E[C\bar f_2]\le8(1-d)^2\le49/8,
+ \qquad e^{-16d}\E[C\bar f_2^4]\le147/152<1-d/100,
+\]
+using \(e^{-2}<3/19\) and the nonpositive bare covariance.
+For \(B,II\) at \(d\ge1/64\), every later pair is at most
+\(e^{-8d/5}\). Use \eqref{eq:Q175:f2-extension} for \(B\), and
+Section~\ref{proof:Q5-C105} or paragraph~\ref{part:R34:unit-two-triple}
+for \(II\), in their same actual directions.
+For \(III\) at \(d\ge1/8\), regroup the same product as
+\[
+ F=(qf_2h_{s_2})(h_3f_{t_2})\prod_{i=3}^j h_{s_i}f_{t_i}.
+\]
+Here \(s_2\ge5\), \(h_3f_{t_2}\le e^{-d}\), and the first factor
+is the genuine base of paragraph~\ref{part:R34:unit-two-triple}.
+For \(IV,V\), the fixed crossing
+is already \((qf_2h_e)(h_3f_4)\) times the later pairs;
+\(h_3f_4\le e^{-d}\). The two pair inequalities are the actual
+pointwise comparisons at the end of Section~\ref{proof:R2-C024}.
+These last three families have bound at most \(e^{-4d}\), and
+all later factors are at most one. Thus the high domains retain the
+claimed margins, including both closed splitting endpoints.
+\end{proof}
+
+\paragraph{R34.19 Supplementary finite certificates used in §§11--12}
+
+\paragraph{R34.19.1 The stronger actual unit loss when \(b\ge 6\)}
+Paragraph~\ref{part:Q178.5.4} proves, from the actual finite
+alternating moments and \(\delta_3\ge\delta_2^2/d\),
+\[
+ \Gamma\ge4\tau+\delta_3\ge(4-4v+v^2)d
+ \ge(2601/1024)d>5d/2,\qquad v=\delta_2/d.
+\]
+This is the stronger unit-row loss used in
+\eqref{eq:Q178:f2-extension}.
+
+\paragraph{R34.19.3 The weak-receiver coefficient nine}
+Lemma~\ref{lem:reference-coefficient-nine}, case \(w\), applies whenever
+\(C_0,Z\ge0\) and
+\[
+ C_0\le p+(6/5)\sqrt d,\quad
+ Z\le(1-5d/8)q-d/2+(13/12)\sqrt d,\quad
+ \E Z\le1-3d/2.
+\]
+It gives \(C_0[(Z+\E Z)^2+2(\E Z)^2]\le9\) throughout
+\(0\le d\le1/3\). The actual \(f_2\) satisfies this pointwise
+receiver condition by (R34.2.2).
+
+\paragraph{R34.19.5 The high-domain path mean}
+The stronger finite estimate \eqref{eq:compact-strong-path-means},
+with \(83/32>5/2\), gives
+\fitdisplay{
+ \mu_n=\E f_n=\E\bar f_n\le1-5d/2\quad(n\ge4).
+}{R34.19.2}
+Its proof covers every finite short and long index on \(0\le d\le1/3\).
+Consequently \(h_c\le2\mu_{c-1}\le2-5d\) for \(c\ge5\),
+as used in the same-direction high comparisons above. At \(d=0\)
+the bound follows directly from leaf integration.

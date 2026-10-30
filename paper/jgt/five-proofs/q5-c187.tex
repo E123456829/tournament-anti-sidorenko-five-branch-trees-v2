@@ -1,0 +1,356 @@
+\subsection{All receiving arms at the unit terminal pair}\label{proof:Q5-C187}
+\paragraph{Q187.0 The local claim}
+Work on the original finite probability space with a real skew kernel
+$|K(x,y)|\le1$. Write
+\fitdisplay{
+B=-K,\quad T=J+B,\quad A=J-B=T^*,\quad u=B\one,
+ \quad p=1-u,\quad q=1+u,
+}{}
+\fitdisplay{
+f_n=A^n\one,\quad\bar f_n=T^n\one,\quad h_n=Tf_{n-1},
+ \quad\delta_j=\|B^j\one\|_2^2,\quad d=\delta_1,
+ \quad\theta=13/32,\quad\kappa=19/32,\quad\tau=d-\delta_2.
+}{}
+The terminal residual is $(1,2)$. Its actual message is $F=qf_2$:
+the unit arm points inward, the two-edge arm outward, and the
+single connector edge points from terminal to receiver. The receiver
+has an outward arm $f_a$ of length $a\ge3$. We prove
+\fitdisplay{
+\E[f_a\{T(qf_2)\}^4]\le1-d/50.
+}{Q187.T198.0}
+The same bound holds with genuine equal-pair factors $E_o,E_t$
+in their original positions, as
+$\E[E_of_a\{T(E_tqf_2)\}^4]\le1-d/50$.
+The claim here concerns
+one connector edge; the $L\ge6$ row is supplied separately by
+Section~\ref{proof:Q5-C117}.
+
+\paragraph{Q187.1 The receiving upper}
+The finite calculus gives
+\fitdisplay{
+0\le d\le1/3,\quad d^2\le\delta_2\le\theta d,
+ \quad\|B\|^2\le\theta,\quad |BV(x)|\le\|V\|_2.
+}{}
+The kernels of $A,T$ lie in $[0,2]$. Their path messages have
+$\E f_n=\E\bar f_n\le1$, and $\E f_n\le1-2d$ for $n\ge3$.
+Set
+\fitdisplay{
+G_n(z)=\sum_{j=0}^{n-1}z^j,\quad\beta_1=\beta_2=0,
+ \quad\beta_n=\sum_{j=1}^{\lfloor(n-1)/2\rfloor}
+                   (-1)^{j-1}\delta_j.
+}{}
+For $n\ge3$, $\tau\le\beta_n\le d$. Finite positive convolution
+gives $f_a\le S_a-\beta_a$, where $S_a=1-G_a(-B)u$.
+For $a\ge4$ retain one more nonnegative convolution term:
+\fitdisplay{
+f_a\le C_a:=S_a-\beta_a-\beta_{a-1}p.\label{eq:Q187:receiver}
+}{Q187.T198.1}
+For $a=3$ set $C_3=f_3=S_3-d$. These uppers are nonnegative,
+being $f_a$ plus unused nonnegative convolution terms.
+With $V_a=G_{a-1}(-B)u$, finite skew identities give
+\fitdisplay{
+\E V_a=\beta_a,\qquad
+ S_a-\beta_a=(1-\beta_a)p+B(V_a-\beta_a).
+}{}
+For $a\ge4$, $\|V_a\|_2\le\sqrt d$. For $a=3$,
+$V_3=u-Bu$ and
+$\operatorname{Var}(V_3)=d+\delta_2-d^2\le45d/32\le36d/25$.
+The centered-row inequality for a mean-zero real $V$ is
+\fitdisplay{
+|BV(x)|\le\sqrt{p(x)q(x)}\,\|V\|_2.
+}{}
+It follows by subtracting the row mean $u(x)$ and bounding its
+variance by $1-u(x)^2=pq$. Since
+$\beta_a+\beta_{a-1}\ge2\tau\ge19d/16\ge d$ for $a\ge4$,
+both cases give
+\fitdisplay{
+0\le C_a\le(1-d)p+\tfrac65\sqrt{pqd}.
+}{Q187.T198.2}
+At $a=3$ this uses $\beta_3=d$; at larger $a$ it uses the retained
+second convolution term.
+
+\paragraph{Q187.2 The terminal square and its actual mean}
+Put $r=Bu$, $s=-B^2u$, agreeing with the $r=Kg,s=K^2g$
+notation in Q5-C117. The identity
+\fitdisplay{
+qf_2=(1+r/2)^2-(-u+r/2)^2
+}{}
+and $T(r^2)\le2\E r^2=2\delta_2$ give
+\fitdisplay{
+0\le X:=T(qf_2)\le W:=q-\gamma+B^2u,
+ \qquad\gamma=d-\delta_2/2.
+}{Q187.T198.3}
+Here $Tr=-d+B^2u$. In particular $W\ge0$ and
+$m:=\E W=1-d+\delta_2/2$. The spectral measure $\nu$ of $u$
+for $-B^2$ has mass $d$, support $[0,\theta]$, and
+$\int x^j\,d\nu=\delta_{j+1}$. Thus
+\fitdisplay{
+W=m+(1+B^2)u,\qquad
+ N:=\operatorname{Var}(W)=d-2\delta_2+\delta_3
+                         =\int(1-x)^2\,d\nu.
+}{Q187.T198.4}
+Since $\E r=-d$, we have $B^2u=-du+B(r+d)$ and
+$\operatorname{Var}(r)=\delta_2-d^2$. The centered-row inequality
+therefore yields
+\fitdisplay{
+W\le(1-d)q+\delta_2/2+\sqrt{pq}\sqrt{\delta_2-d^2}.
+}{Q187.T198.5}
+All these quantities come from the same kernel and measure.
+
+\paragraph{Q187.3 A coupled third-moment bound}
+Set $w=r+d$. Then $\E w=0$, $\|w\|_2^2=\delta_2-d^2$, and
+\fitdisplay{
+B^2u=Bw-du,\qquad
+ \langle Bw,u\rangle=-\langle w,Bu\rangle=-\|w\|_2^2.
+}{}
+The norm bound gives
+$\delta_3\le(\theta+2d)(\delta_2-d^2)+d^3$.
+For $d>0$ put $v=\delta_2/d\in[d,\theta]$ and
+$c=2-\theta-2d=51/32-2d$. Then
+\fitdisplay{
+0\le N\le\overline N
+ :=d[(1-d)^2-c(v-d)].
+}{Q187.T198.6}
+At $v=d$ this is $d(1-d)^2$. This uses a global Hilbert-space
+identity, without imposing a pointwise spectral lower cutoff.
+
+\paragraph{Q187.4 Continuous fourth-expansion coefficients}
+The exact expansion at the actual mean is
+\fitdisplay{
+W^4=m^4+4m^3(W-m)
+       +(W-m)^2[(W+m)^2+2m^2].
+}{}
+We show
+\fitdisplay{
+C_a[(W+m)^2+2m^2]\le k(d),
+}{Q187.T198.7}
+where $k=8$ on $[0,1/8]$, $k=121/16$ on $[1/8,1/5]$,
+and $k=117/16$ on $[1/5,1/4]$. In fact the first coefficient
+works on the whole original domain. Adjacent ranges include their
+common endpoint and use the same direction.
+
+Let $t=\sqrt d$, $\alpha=1-t^2$. From $\sqrt{pq}\le1$,
+$\sqrt\theta<13/20$, and $\delta_2\le\theta d$, we obtain
+\fitdisplay{
+C_a\le\alpha p+\tfrac65t,\quad
+ W+m\le\alpha(q+1)+\tfrac{13}{20}t+\theta t^2=:y,
+ \quad m\le1-\tfrac{51}{64}t^2=:\overline m.
+}{}
+Set $C=3+37t/20-83t^2/32$. Since
+$C-y=\alpha p+6t/5\ge0$,
+\fitdisplay{
+C_a[(W+m)^2+2m^2]\le(C-y)(y^2+2\overline m^2).
+}{Q187.T198.8}
+For $0\le t\le1/4$, $C$ increases and
+$C\le8449/2560<53/16$, while $\overline m\le1$. For
+$0\le y\le53/16$,
+\fitdisplay{
+8-(53/16-y)(y^2+2)=y^3-\tfrac{53}{16}y^2+2y+\tfrac{11}{8}>0.
+}{}
+Indeed, with $h=y-7/4$ this is
+$h^3+31h^2/16-13h/32+23/256$.
+For $-7/4\le h\le0$, group the cubic and quadratic; all resulting
+terms are nonnegative. For $h\ge0$, dropping $h^3$ and completing
+the square leaves at least $23/256-169/7936=17/248>0$.
+
+For $t\ge1/4$, completing the square gives
+$C\le3+1369/4150<10/3$. Also
+$\overline m\le973/1024<61/64$, so $2\overline m^2<15/8$.
+For $0\le y\le10/3$,
+\fitdisplay{
+8-(10/3-y)(y^2+15/8)
+   =y^3-\tfrac{10}{3}y^2+\tfrac{15}{8}y+\tfrac74.
+}{}
+Putting $h=y-2$ gives $h^3+8h^2/3+13h/24+1/6$.
+It is positive for $h\ge0$. On $[-2,0]$,
+$h^3+8h^2/3\ge2h^2/3$, and the remaining quadratic is at least
+$1/6-507/4608=29/512>0$. This proves $k=8$ everywhere.
+
+If $d\ge1/8$, then $\overline m\le461/512$ and
+$2\overline m^2<13/8$. At $y=2+h$,
+\fitdisplay{
+\tfrac{121}{16}-(10/3-y)(y^2+13/8)
+   =h^3+\tfrac83h^2+\tfrac7{24}h+\tfrac1{16}.
+}{}
+It is positive for $h\ge0$; the same quadratic bound on $[-2,0]$
+gives at least $47/1536>0$. If $d\ge1/5$, then
+$\overline m\le269/320$ and $2\overline m^2<23/16$, and
+\fitdisplay{
+\tfrac{117}{16}-(10/3-y)(y^2+23/16)
+   =h^3+\tfrac83h^2+\tfrac5{48}h+\tfrac1{16},
+}{}
+whose analogous lower bound is $359/6144>0$.
+These are continuous polynomial certificates for all three coefficients.
+
+\paragraph{Q187.5 Covariance and the two scalar bounds}
+Write $G_a(z)=E_a(x)+zD_a(x)$ on the spectral block. For $a\ge3$,
+$E_a\ge1-x$. Since the centered polynomial of $W$ is $1-x$,
+\fitdisplay{
+\operatorname{Cov}(S_a,W)=-\int E_a(x)(1-x)\,d\nu,
+ \qquad\operatorname{Cov}(p,W)=-\tau.
+}{}
+For $a=3$, $E_3=1-x$, giving
+\fitdisplay{
+\E C_3=1-2d,\qquad\operatorname{Cov}(C_3,W)=-N.
+}{Q187.T198.9}
+For $a\ge4$, (Q187.T198.1) gives
+\fitdisplay{
+\E C_a=1-\beta_a-\beta_{a+1}-\beta_{a-1},\qquad
+ \operatorname{Cov}(C_a,W)\le-N+\beta_{a-1}\tau.
+}{Q187.T198.10}
+Integrate the exact fourth expansion, retaining the actual mean $m$:
+\fitdisplay{
+R_3=(1-2d)m^4+(k-4m^3)N,
+}{}
+\fitdisplay{
+R_a\le(1-2\tau)m^4+\beta_{a-1}m^3(4\tau-m)+(k-4m^3)N
+ \qquad(a\ge4).
+}{}
+For $d\le1/4$ and $v\ge d$,
+$4\tau-m\le-1+5d-9d^2/2\le-1/32<0$.
+Thus inserting $\beta_{a-1}\ge\tau$ in its combined coefficient
+and $N\le\overline N$ gives
+\fitdisplay{
+\E[f_aX^4]\le\E[C_aW^4]\le R_*(d,v)
+ :=(1-3\tau)m^4+4m^3\tau^2+(k-4m^3)\overline N
+ \quad(a\ge4),
+}{Q187.T198.11}
+\fitdisplay{
+R_3(d,v):=(1-2d)m^4+(k-4m^3)\overline N.
+}{Q187.T198.12}
+Here $m=1-d+dv/2$, $\tau=d(1-v)$, and $c=51/32-2d$.
+The variance coefficient is positive since $k\ge117/16$ and $m\le1$.
+
+\paragraph{Q187.6 Continuous monotonicity in the moment ratio}
+Differentiate in $v$, holding $d,k$ fixed within a closed strip:
+\fitdisplay{
+\frac1d\partial_vR_*
+ =3m^4+(2+4c)m^3-14m^3\tau+6m^2\tau^2
+       -6m^2\overline N-ck,
+}{}
+\fitdisplay{
+\frac1d\partial_vR_3
+ =2m^3(1-2d)+4cm^3-6m^2\overline N-ck.
+}{}
+On $d\le v\le\theta$, $d\le1/4$, $\overline N\ge0$:
+its quotient by $d$ decreases in $v$, and at $v=\theta$ equals
+$1-2\theta+\theta^2+\theta d-d^2\ge\kappa^2$.
+For $0<d\le1/8$, $k=8$, $m\le1$, $\tau\le d$. The first
+derivative divided by $d$ is at most
+\fitdisplay{
+5+6d^2-4c=-11/8+8d+6d^2\le-9/32,
+}{}
+and the second is at most $2-4c<0$.
+For $1/8\le d\le1/5$, $k=121/16$ and
+$m\le461/512<29/32$, hence $m^3<3/4$, $m^4<11/16$,
+$\tau^2\le1/25$, $c\ge1$. The two upper bounds are
+\fitdisplay{
+33/16+3/2+6/25-(73/16)c\le-19/25,
+ \qquad3/2-(73/16)c<0.
+}{}
+For $1/5\le d\le1/4$, $k=117/16$ and
+$m\le269/320<27/32$, so $m^3<5/8$, $m^4<9/16$,
+$\tau^2\le1/16$, $c\ge1$. The corresponding bounds are
+$53/16-(77/16)c\le-3/2$ and $5/4-(77/16)c<0$.
+Both scalar uppers therefore decrease in $v$. Set
+\fitdisplay{
+m_0=1-d+d^2/2,\quad\tau_0=d(1-d),\quad N_0=d(1-d)^2.
+}{}
+Their worst allowed values are
+\fitdisplay{
+G_3=(1-2d)m_0^4+(k-4m_0^3)d(1-d)^2,
+}{}
+\fitdisplay{
+G_*=(1-3d+3d^2)m_0^4-4d(1-d)^3m_0^3+kd(1-d)^2.
+}{}
+
+
+\paragraph{Q187.7 Polynomial payment on the low domain}
+The finite powers are
+\fitdisplay{
+m_0^3=1-3d+\tfrac92d^2-4d^3+\tfrac94d^4-\tfrac34d^5+d^6/8,
+}{}
+\fitdisplay{
+m_0^4=1-4d+8d^2-10d^3+\tfrac{17}{2}d^4-5d^5
+                     +2d^6-d^7/2+d^8/16.
+}{}
+For $d>0$ define $P_3=(1-G_3)/d$, $P_*=(1-G_*)/d$. Expansion gives
+\fitdisplay{
+\begin{aligned}
+ P_3={}&10-k-(36-2k)d+(72-k)d^2-\tfrac{185}{2}d^3
+       +81d^4-49d^5\\
+      &+20d^6-\tfrac{81}{16}d^7+\tfrac58d^8,\\
+ P_*={}&11-k-(47-2k)d+(112-k)d^2-\tfrac{345}{2}d^3
+       +\tfrac{367}{2}d^4-\tfrac{277}{2}d^5\\
+      &+74d^6-\tfrac{433}{16}d^7+\tfrac{99}{16}d^8
+       -\tfrac{11}{16}d^9.
+ \end{aligned}
+}{Q187.T198.13}
+Pairing successive signed higher terms on $[0,1/4]$ gives
+\fitdisplay{
+P_3\ge10-k-(36-2k)d+(72-k)d^2-\tfrac{185}{2}d^3+\tfrac{275}{4}d^4,
+}{}
+\fitdisplay{
+P_*\ge11-k-(47-2k)d+(112-k)d^2-\tfrac{345}{2}d^3+\tfrac{1191}{8}d^4.
+}{}
+For example pair $81d^4-49d^5$ and
+$(367/2)d^4-(277/2)d^5$, then the successive signed terms,
+using $d\le1/4$.
+
+On $[0,1/8]$, $k=8$. Discard nonnegative terms of degree at least
+four and use $d^3\le d^2/8$. The resulting decreasing quadratics give
+\fitdisplay{
+P_3\ge2-20d+\tfrac{839}{16}d^2\ge327/1024,
+ \qquad P_*\ge3-31d+\tfrac{1319}{16}d^2\ge423/1024.
+}{}
+Their derivatives are still negative at the right endpoint.
+
+On $[1/8,1/5]$, $k=121/16$. The cubic lower bound for $P_3$
+has second derivative at least $1031/8-555/5=143/8>0$,
+first derivative $-31/5$ at $1/5$, and endpoint value $1/10$.
+For $P_*$ use
+\fitdisplay{
+Q_*={55\over16}-{255\over8}d+{1671\over16}d^2
+                  -{345\over2}d^3+{1191\over8}d^4.
+}{}
+Its second derivative is $1671/8-1035d+(3573/2)d^2>0$:
+the first two terms alone are at least $15/8$. Its first derivative
+at $1/5$ is $-1509/250$, and $Q_*(1/5)=491/5000$. Thus
+\fitdisplay{
+P_3\ge1/10,\qquad P_*\ge491/5000.
+}{Q187.T198.14}
+On $[1/5,1/4]$, $k=117/16$. The fourth-degree lower bound for
+$P_3$ has second derivative
+$1035/8-555d+825d^2\ge189/8$, first derivative $-133/64$ at
+$1/4$, and endpoint value $215/1024$. For $P_*$ use
+\fitdisplay{
+Q_*={59\over16}-{259\over8}d+{1675\over16}d^2
+                  -{345\over2}d^3+{1191\over8}d^4.
+}{}
+Its second derivative is at least
+$1675/8-1035/4+3573/50=4417/200>0$, its first derivative
+at $1/4$ is $-393/128$, and $Q_*(1/4)=47/2048$. Hence
+\fitdisplay{
+P_3\ge215/1024,\qquad P_*\ge47/2048.
+}{Q187.T198.15}
+The three closed strips cover $[0,1/4]$. Since
+$327/1024$, $491/5000$, and $47/2048$ exceed $1/50$,
+the actual reference expression is at most $1-d/50$ for
+$0<d\le1/4$.
+
+\paragraph{Q187.8 The high domain, zero boundary and decorations}
+On the high domain use $X$ directly:
+\fitdisplay{
+\E(qf_2)=1-2d,\qquad0\le X=T(qf_2)\le2(1-2d).
+}{}
+For $1/4\le d\le1/3$, $X\le1$, so
+$\E[f_aX^4]\le\E f_a\le1-2d\le1-d/50$.
+If $d=0$, then $u=0$ on the positive support, though $K$ need
+not vanish. Leaf integration with $A\one=T\one=\one$ makes
+every actual tree message one.
+
+Each actual equal pair $f_\ell h_\ell$, or its full reversal,
+is at most one. Positivity gives $0\le T(E_tF)\le TF$ and
+$E_o\le1$, proving the decorated claim. All pair edges and
+vertices remain in the original tree and its final edge count.
+The finite positive support has $p,q\ge\mu(x)>0$ throughout.

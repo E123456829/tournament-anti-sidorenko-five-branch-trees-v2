@@ -1,0 +1,206 @@
+\subsection{Bare inward paths of length at least six under the reference $f_2$}\label{proof:Q5-C099}
+Work on a nonempty finite probability space with a real skew kernel
+$|K|\le\allowbreak 1$. Use $A=\allowbreak J+K$, $T=\allowbreak J-K$, $g=\allowbreak K\one$, $p=\allowbreak 1+g$,
+$q=\allowbreak 1-g$, $f_n=\allowbreak A^n\one$, $\bar f_n=\allowbreak T^n\one$ and
+$h_n=\allowbreak Tf_{n-1}$. We prove
+\begin{equation}\tag{Q99.0.1}\label{eq:Q99:bare}
+ \E[f_2\bar f_n^4]\le1-d/20\qquad(n\ge6).
+\end{equation}
+All lengths here are finite. At $d=\allowbreak 0$, leaf integration gives equality.
+The finite calculus in Section~\ref{q3:app:foundations} gives
+$0\le\allowbreak  d\le\allowbreak 1/3$, $d^2\le\allowbreak \delta_2\le\allowbreak \theta d$,
+$\delta_{j+1}\le\allowbreak \theta\delta_j$, $\theta=\allowbreak 13/32$,
+and $0\le\allowbreak  f_n,\allowbreak \bar f_n,\allowbreak h_n\le\allowbreak 2$. The paths $f_n$ and $\bar f_n$ have means at most one.
+On positive-mass atoms $p,\allowbreak q\ge\allowbreak \mu(x)>\allowbreak 0$.
+
+Put $z=\allowbreak -K$, $u=\allowbreak z\one=\allowbreak -g$, $\delta_j=\allowbreak \|K^j\one\|_2^2$,
+$\kappa=\allowbreak 19/32$ and $\tau=\allowbreak d-\delta_2$. Then
+\[
+ \kappa d\le\tau\le d-d^2\le2/9,\qquad
+ \beta_1=\beta_2=0,\quad
+ \beta_j=\sum_{i=1}^{\lfloor(j-1)/2\rfloor}(-1)^{i-1}\delta_i
+ \quad(j\ge3),\qquad \tau\le\beta_j\le d.
+\]
+For $G_n(z)=\allowbreak \sum_{i=\allowbreak 0}^{n-1}z^i$, $G_0=\allowbreak 0$, finite positive
+convolution gives
+\[
+ S'_n:=\sum_{i=0}^nz^i\one
+ =\bar f_n+\sum_{j=3}^n\beta_j\bar f_{n-j}.
+\]
+The norm of $G_m(z)$ is at most one for $m=\allowbreak 0,\allowbreak 1$ or $m\ge\allowbreak 3$;
+$\|G_2(z)\|^2\le\allowbreak 1+\theta$. Equal-arm factors satisfy
+$f_\ell h_\ell\le\allowbreak (\E f_{\ell-1})^2\le\allowbreak 1$.
+For $n\ge\allowbreak 6$, retain four terms of the convolution to obtain
+\[
+ 0<\bar f_n\le Z:=S'_n-\tau(\bar f_0+\bar f_1+\bar f_2+\bar f_3).
+\]
+The four retained coefficients all have index at least three, and
+\[
+ \bar f_0+\bar f_1+\bar f_2+\bar f_3=4-d+3u+2zu+z^2u.
+\]
+Consequently,
+\begin{equation}\tag{Q99.0.2}\label{eq:Q99:majorant}
+ Z=1-\tau(4-d)+Q_n(z)u,\qquad
+ Q_n(z)=G_n(z)-\tau(3+2z+z^2).
+\end{equation}
+
+\paragraph{Q99.1 The finite predecessor family}\label{part:Q99.1}
+At $z=\allowbreak i\sqrt{x}$, $0\le\allowbreak  x\le\allowbreak \theta<\allowbreak 5/12$, each real and normalized
+imaginary coordinate of $G_n$ lies between $1-x$ and $1-x+x^2$.
+Indeed these are finite alternating sums in $-x$ with at least three
+terms, including the longer coordinate when $n$ is odd.
+Put $a=\allowbreak 1-3\tau$ and $b=\allowbreak 1-2\tau$. Both coordinates of $Q_n$ are
+nonnegative, since
+\[
+ a-(1-\tau)x\ge1/3-(7/9)(5/12)=1/108>0,\qquad
+ b-x\ge5/9-5/12>0.
+\]
+Their upper bounds are $a-(1-\tau)x+x^2$ and $b-x+x^2$.
+Thus
+\[
+ |Q_n|^2-a^2\le x\{-1+4\tau-2\tau^2
+ +(1-4\tau+\tau^2)x+(1-2\tau)x^2-x^3+x^4\}.
+\]
+The derivative of the brace with respect to $\tau$ is
+$4(1-x)-\tau(4-2x)-2x^2\ge\allowbreak 79/72>\allowbreak 0$ on this rectangle.
+Taking $\tau=\allowbreak 2/9$ gives
+\[
+ \{\cdots\}\le-17/81+(13/81)x+(5/9)x^2-x^3+x^4
+ \le-17/81+65/972+125/1296=-181/3888<0.
+\]
+Here $-x^3+x^4\le\allowbreak 0$; at $x=\allowbreak 0$ equality holds in the preceding
+norm comparison. Hence
+\begin{equation}\tag{Q99.1.1}\label{eq:Q99:predecessor}
+ \|Q_n(z)\|\le1-3\tau\qquad(n\ge6).
+\end{equation}
+
+\paragraph{Q99.2 Mean, covariance and variance}\label{part:Q99.2}
+The finite moments give
+\[
+ \E[G_n(z)u]=-\beta_{n+1},\qquad
+ \E[Q_n(z)u]=-\beta_{n+1}+2\tau d.
+\]
+Writing $m=\allowbreak \E Z$, we have
+\begin{equation}\tag{Q99.2.1}\label{eq:Q99:mean}
+ 0\le m=1-4\tau-\beta_{n+1}+3\tau d
+ \le1-(5-3d)\tau\le1-4\kappa d=:u_0,
+ \qquad u_0\ge5/24.
+\end{equation}
+For the actual reference $f_2=\allowbreak 1-u+zu$, telescoping gives
+\[
+ \E[f_2S'_n]=1-\beta_{n+1}-\beta_{n+2}-\beta_{n+3},\qquad
+ \operatorname{Cov}(f_2,S'_n)
+ =d-\beta_{n+2}-\beta_{n+3}-d\beta_{n+1}.
+\]
+The short-path covariances are
+\[
+ \begin{gathered}
+ \operatorname{Cov}(f_2,\bar f_1)=-d,\qquad
+ \operatorname{Cov}(f_2,\bar f_2)=-d+\delta_2-d^2,\\
+ \operatorname{Cov}(f_2,\bar f_3)=-d+2\delta_2-d^2.
+ \end{gathered}
+\]
+Their sum is $-3\tau-2d^2$. Therefore
+\[
+ \operatorname{Cov}(f_2,Z)
+ \le d-2\tau-d\tau+3\tau^2+2\tau d^2.
+\]
+The right side decreases with $\tau$, because its derivative satisfies
+$6\tau-2-d+2d^2\le\allowbreak 5d-4d^2-2\le\allowbreak -7/9$.
+At $\tau=\allowbreak \kappa d$ this bound becomes
+\[
+ v(d)=-3d/16+(475/1024)d^2+(19/16)d^3.
+\]
+The quotient $v(d)/d$ increases and equals $913/9216<\allowbreak 1/10$ at
+$d=\allowbreak 1/3$. Thus
+\begin{equation}\tag{Q99.2.2}\label{eq:Q99:covariance}
+ \operatorname{Cov}(f_2,Z)\le d/10.
+\end{equation}
+By \eqref{eq:Q99:predecessor},
+\[
+ \operatorname{Var}Z\le(1-3\tau)^2d-(\beta_{n+1}-2\tau d)^2
+ \le(1-3\tau)^2d-\tau^2(1-2d)^2.
+\]
+This expression decreases with $\tau\le\allowbreak 2/9$, since its derivative is
+$-6d(1-3\tau)-2\tau(1-2d)^2<\allowbreak 0$. Consequently,
+\begin{equation}\tag{Q99.2.3}\label{eq:Q99:variance}
+ \operatorname{Var}Z\le
+ w(d):=d-(6\kappa+\kappa^2)d^2+13\kappa^2d^3-4\kappa^2d^4.
+\end{equation}
+
+\paragraph{Q99.3 The reference coefficient}\label{part:Q99.3}
+We use the following pointwise coefficient with $c=\allowbreak 19/48$:
+\begin{equation}\tag{Q99.3.1}\label{eq:Q99:coefficient}
+ \left.
+ \begin{gathered}
+ Z\ge0,\quad m=\E Z,\\
+ Z\le(1-cd)q-cd+\sqrt d,\qquad m\le1-3cd
+ \end{gathered}\right\}
+ \quad\Longrightarrow\quad f_2[(Z+m)^2+2m^2]\le10.
+\end{equation}
+For the four-term $Z$, positive convolution and
+$\|G_{n-1}\|\le\allowbreak 1$ give
+\[
+ Z\le S'_n-\tau(1+q)\le(1-\tau)q-\tau+\sqrt d
+ \le(1-cd)q-cd+\sqrt d.
+\]
+Also $m\le\allowbreak 1-4\kappa d\le\allowbreak 1-3cd$.
+Here is the coefficient calculation. The row identity
+\[
+ 2Kg(x)=\E_{y,z}[(K(x,y)-K(x,z))K(y,z)]
+\]
+and $|a-b|\le\allowbreak 1-ab$ for $a,\allowbreak b\in[-1,\allowbreak 1]$ imply $|Kg|\le\allowbreak  pq/2$.
+Hence $0\le\allowbreak  f_2\le\allowbreak  w(q):=\allowbreak 2-q^2/2$.
+Put $x=\allowbreak \sqrt d$ and $y=\allowbreak q+1$. The hypotheses give
+$Z+m\le\allowbreak  y+x-c(y+3)x^2$ and $m\le\allowbreak 1-3cx^2$.
+Expand the squares, drop the negative cubic term and use $x^4\le\allowbreak  x^2/3$:
+\[
+ (Z+m)^2+2m^2\le y^2+2+2yx-A(q)x^2,
+\]
+where
+\[
+ A(q)=\frac{5111}{6912}q^2+\frac{3059}{864}q+\frac{17767}{3456}.
+\]
+Coefficient subtraction gives
+\[
+ A(q)-w(q)y^2\ge q^4/2+q^3-(4/5)q^2-q/2+3>0.
+\]
+On $0\le\allowbreak  q\le\allowbreak 1$ the lower bound is $17/10$; on $1\le\allowbreak  q\le\allowbreak 2$ use
+$q^3\ge\allowbreak  q^2$ and $q^4\ge\allowbreak  q$. Moreover,
+\[
+ 9-w(q)(y^2+2)=\tfrac12(q-1)^2(q^2+4q+6)\ge0.
+\]
+Completing the square gives $2yx-Ax^2\le\allowbreak  y^2/A$.
+Multiplication by $w(q)\ge\allowbreak 0$ then bounds the coefficient by
+$9+w(q)y^2/A(q)\le\allowbreak 10$. The polynomial comparisons include $q=\allowbreak 0$.
+
+The fourth-order Taylor identity around $m=\allowbreak \E Z$ is
+\[
+ \E[f_2Z^4]=(1-d)m^4+4m^3\operatorname{Cov}(f_2,Z)
+ +\E[f_2(Z-m)^2\{(Z+m)^2+2m^2\}].
+\]
+Using the positive covariance upper bound in \eqref{eq:Q99:covariance},
+the resulting terms increase with $m\ge\allowbreak 0$. Thus
+\begin{equation}\tag{Q99.3.2}\label{eq:Q99:taylor}
+ \E[f_2\bar f_n^4]\le(1-d)u_0^4+(2/5)du_0^3+10w(d).
+\end{equation}
+
+\paragraph{Q99.4 The scalar estimate}\label{part:Q99.4}
+Put $a=\allowbreak 4\kappa=\allowbreak 19/8$, so $u_0=\allowbreak 1-ad$. The increment of the
+right side of \eqref{eq:Q99:taylor} over one, divided by $d$, is
+\[
+ -\frac1{10}+\frac{3439}{2560}d-\frac{89167}{2560}d^2
+ +\frac{1350501}{20480}d^3-\frac{130321}{4096}d^4.
+\]
+For $0\le\allowbreak  d\le\allowbreak 1/3$, the cubic term is at most
+$(1350501/61440)d^2$. The resulting negative quadratic coefficient
+is $263169/20480>\allowbreak 64/5$, and $3439/2560<\allowbreak 27/20$.
+Drop the negative quartic term and complete the square:
+\[
+ \frac{\E[f_2\bar f_n^4]-1}{d}
+ \le-1/10+(27/20)d-(64/5)d^2
+ \le-1/10+729/20480<-1/20,
+\]
+where the last comparison is $729<\allowbreak 1024$.
+This proves \eqref{eq:Q99:bare} for $d>\allowbreak 0$, and the zero case follows
+from the leaf-integration observation above.

@@ -1,0 +1,194 @@
+\subsection{Residual prefixes of lengths one and two with a nonempty tail}\label{q3:app:tails}
+Consider distinct residual lengths
+$1,2,c,b_2,c_2,\ldots,b_t,c_t$, where $t\ge2$ and
+$c<b_2<c_2<\cdots<b_t<c_t$. We prove the ordinary cubic for the fixed message
+\[
+ F=pP,\qquad P=h_2f_c\prod_{i=2}^t h_{b_i}f_{c_i}.
+\]
+Throughout $x=\E p^3$ satisfies $1\le x\le1+4d$. We will also use $x\le2$. To prove this last bound, sample four independent labels from $\mu$ and, conditionally on the labels, orient each pair of the four distinct indices independently with probability $(1+K(X_i,X_j))/2$. At most one index points to the other three. The expected number of such indices is $4\E(p/2)^3=x/2$, proving $x\le2$, even when some sampled labels coincide.
+
+Write $R_{\rm tail}=\sum_{i=2}^t(S_{c_i}-S_{b_i})$. The later pairs have shorter length at least four, so their product is bounded by $e^{R_{\rm tail}-2(t-1)d}$. All estimates below retain the signed denominator in Lemma~\ref{q3:lem:tiltedcubic}.
+
+\subsubsection{The third residual length is three}
+Since $h_2+f_3=2-d+K^2g$,
+\[
+ P\le e^{R-\Delta},\quad
+ R=K^2g+R_{\rm tail},\quad \Delta=(2t-1)d\ge3d.
+\]
+Write $R=K^2Q(K)g$. The polynomial $Q$ has constant coefficient one and no linear term. Grouping its real and imaginary parts at $i\sqrt z$ gives
+\[
+ |Q(i\sqrt z)|^2\le\frac{1+z^3}{(1-z^2)^2}
+ \le\frac{1118880}{731025}<\lambda,\qquad \lambda=25/16.
+\]
+Its real part is nonnegative because $1-z/(1-z^2)>0$; the imaginary sum starts at degree three. Therefore $M^2=\norm R_\infty^2\le\lambda \delta_{2}$.
+
+The mandatory degree-three term contributes $-3\delta_{2}$ to $\E[(1+3g)R]$, and the absent degree-four term delays positive ordinary means. Discarding other negative terms gives
+\[
+ \E[(1+3g)R]\le-3\delta_{2}+\frac{3\delta_{3}+\delta_{4}}{1-\theta^2}
+ =-\frac{1148}{855}\delta_{2}\le-\frac43\delta_{2}.
+\]
+Thus $B=-(4/3)\delta_{2}+4Md$ bounds $\E[p^3R]$. This budget may be negative.
+
+For $d\le1/5$, completing the square in $\sqrt{\delta_{2}}$ gives
+$3B\le9\lambda d^2\le9/16<1\le x$. Put $u=1+4d$. Lemma~\ref{q3:lem:tiltedcubic} and $\log u\le4d$ give
+\[
+ \log\E[p^3P^3]\le-5d+\left[\frac92\lambda-\frac4u\right]\delta_{2}+\frac{12Md}{u}.
+\]
+The coefficient of $\delta_{2}$ is positive. Substituting $\delta_{2}\le\theta d$ and $M^2\le\lambda\theta d$ bounds this, after division by $d$, by
+\[
+ -5+\theta\left[\frac92\lambda-\frac4u\right]
+       +\frac{12\sqrt{\lambda\theta d}}{1+4d}.
+\]
+On this interval the middle term is at most $18005/9216$ and the last is less than $12/5$, since $\sqrt d/(1+4d)$ increases up to $1/4$ and $\lambda\theta/5< (9/25)^2$. The result is at most $-29783/46080$.
+For $d\ge1/5$, $M\le9d/5$, so $P^3\le e^{-(18/5)d}$. The bound $x\le2$ then gives
+$\E[p^3P^3]\le2e^{-18/25}<1$; the first four Taylor terms of $e^{18/25}$ already sum to $31897/15625>2$.
+
+\subsubsection{The third residual length is four}
+Exact recursion gives
+\[
+ h_2+f_4=2-2d+K^2g+K^3g-dg.
+\]
+Put $\bar R=K^2g+K^3g+R_{\rm tail}$, $R=\bar R-dg$, $\Delta=2td\ge4d$. Writing $\bar R=K^2Q(K)g$ and $V=KQ(K)g$ gives
+\[
+ R=K[V-d\one],\quad
+ \norm V_2^2\le C_*\delta_{2},\quad \E V\ge-d/(1-\theta^2),
+\]
+\[
+ M^2\le C_*\delta_{2}+(17/5)d^2 .
+\]
+The mandatory degrees three and four give $-2\delta_{2}$ in the linear cubic weight; degree five is absent. The remaining positive sum is at most
+$(\delta_{4}+3\delta_{5})/(1-\theta^2)=(11999/27360)\delta_{2}<\delta_{2}/2$. The correction $-dg$ contributes $-3d^2$, so
+\[
+ B=-\frac32\delta_{2}-3d^2+4Md
+\]
+is valid.
+If $d\le1/6$, then $M^2\le6659/28800<(29/60)^2<1/4$, and $3B\le6d-9d^2\le3/4<x$. With $u=1+4d$ the logarithmic bound becomes
+\[
+ -8d+[909/100-9/(2u)]\delta_{2}+
+ [153/10-9/u]d^2+12Md/u.
+\]
+Both bracketed coefficients are positive. After replacing $\delta_{2}$ by $\theta d$, their bounds divided by $d$ are $8307/3200$ and $33/20$. The square of
+$\sqrt{C_*\theta d+(17/5)d^2}/(1+4d)$ has positive derivative numerator $C_*\theta+[34/5-4C_*\theta]d$, so the last term is at most $87/25$. The full bound is $-(877/3200)d$.
+If $d\ge1/6$, then $M\le29d/10$ and $P^3\le e^{-(33/10)d}$. Since $d/(1+4d)\ge1/10$, \eqref{q3:eq:logbound} gives $\log x\le(16/5)d$, leaving $-d/10$.
+
+\subsubsection{The third residual length is five}
+We need a sharper polynomial bound. If the first three coefficients of a zero-one polynomial $Q$ are one, then $\norm{Q(K)}^2\le5/4$. For $z\in[0,5/12]$,
+\[
+ |Q(i\sqrt z)|^2\le[1-z+(6/5)z^2]^2+(36/25)z
+ =1-\frac{14}{25}z+\frac{17}5z^2-\frac{12}5z^3+\frac{36}{25}z^4.
+\]
+The last polynomial is convex, since its second derivative is at least $4/5$; its endpoint values are $1$ and $3533/2880<5/4$.
+
+Direct recursion gives
+\[
+ h_2+f_5=2-(3d-\delta_{2})+K^2g+K^3g+K^4g-2dg-dKg.
+\]
+Put $\bar R=K^2g+K^3g+K^4g+R_{\rm tail}$, $R=\bar R-2dg-dKg$, and
+$\Delta=(2t+1)d-\delta_{2}\ge5d-\delta_{2}$. The polynomial in $\bar R=K^2Q(K)g$ has its first three coefficients one and the next zero. With $V=KQ(K)g$,
+\[
+ \E V\ge-d+\delta_{2}-\frac{\delta_{3}}{1-\theta^2},\qquad
+ \E(gV)\ge-\delta_{2}-\frac{\delta_{4}}{1-\theta^2}.
+\]
+Expansion of $R=K[V-2d\one-dg]$ gives
+\[
+ M^2\le(5/4)\delta_{2}+8d^2+d^3+(292/855)d\delta_{2}
+ \le(5/4)\delta_{2}+(17/2)d^2.
+\]
+The linear cubic-weight mean of $\bar R$ is at most
+$[-2+3\theta+\theta^2(1+3\theta)/(1-\theta^2)]\delta_{2}
+=-(293/855)\delta_{2}\le-\delta_{2}/3$.
+The two corrections contribute $-5d^2$, so $B=-\delta_{2}/3-5d^2+4Md$.
+
+For $d\le1/7$, $M^2\le1543/6272<1/4$ and $3B\le27/49<x$. Retain the improvement \eqref{q3:eq:logbound} in $\log u$. The resulting bound is
+\[
+ \log\E[p^3P^3]\le
+ -11d+[69/8-1/u]\delta_{2}+[153/4-23/u]d^2+12Md/u .
+\]
+Both coefficients are positive. The upper bounds after substituting $\delta_{2}\le\theta d$ increase with $d$. The last quotient does too, since its squared derivative numerator is
+$(5/4)\theta+[17-5\theta]d>0$.
+At $d=1/7$, the bound divided by $d$ is at most
+\[
+ -11+9139/2816+1039/308+42/11=-11099/19712.
+\]
+For $d\ge1/7$, $M\le7d/2$ and $\Delta\ge147d/32$, so $P^3\le e^{-(105/32)d}$.
+Here $\log x\le(36/11)d$, leaving the negative logarithmic bound $-3d/352$.
+
+\subsubsection{Every third residual length at least six}
+Put $r=\delta_{2}/d$ and $\tau=d(1-r)$. Retaining four final terms in positive convolution yields
+\[
+ P\le e^{R-\Delta},\quad
+ \bar R=S_c-S_2+R_{\rm tail},\quad
+ R=\bar R-\tau(3g+2Kg+K^2g),
+\]
+\[
+ \Delta\ge\delta=\tau(4-d)+2d.
+\]
+The first four coefficients of the polynomial $Q$ in $\bar R=K^2Q(K)g$ are one. Such a polynomial satisfies $\norm{Q(K)}\le1$. Indeed both its real part and its imaginary part divided by the frequency are nonnegative and at most $1-z+(6/5)z^2$; thus
+\[
+ |Q(i\sqrt z)|^2\le(1+z)[1-z+(6/5)z^2]^2
+ =1-z+\frac75z^2+z^3-\frac{24}{25}z^4+\frac{36}{25}z^5\le1.
+\]
+For the last comparison use $(7/5)z+z^2+(36/25)z^4\le461/576<1$ on $[0,5/12]$.
+
+Set $V=KQ(K)g$, $Z=3\one+2g+Kg$. The mandatory first four degrees give
+\[
+\begin{split}
+ \E V&\ge-d+\delta_{2}-\delta_{3}/(1-\theta^2),\\
+ \E(gV)&\ge-\delta_{2}+\delta_{3}-\delta_{4}/(1-\theta^2),\\
+ \E[(Kg)V]&\ge \delta_{2}-\delta_{3}-\delta_{5}/(1-\theta^2).
+\end{split}
+\]
+Consequently $\ip VZ\ge-3d+(2/5)\delta_{2}$ and $\norm Z_2^2=9-2d+\delta_{2}\le9$. The full row expansion gives
+\[
+ M^2\le\norm{V-\tau Z}_2^2
+ \le \delta_{2}+9\tau^2+6\tau d-(4/5)\tau \delta_{2}
+ =rd+a(r)d^2,
+\]
+\[
+ a(r)=15-(124/5)r+(49/5)r^2>0\quad(0\le r\le\theta).
+\]
+The mandatory degrees three through six contribute $-2\delta_{2}+2\delta_{3}$ to the linear cubic weight; later positive contributions are at most
+$(\delta_{4}+3\delta_{5})/(1-\theta^2)$. Thus $\E[(1+3g)\bar R]\le-(7/10)\delta_{2}$.
+Also $\E[(1+3g)(3g+2Kg+K^2g)]=7d-3\delta_{2}$, so
+\[
+ B=-\frac7{10}\delta_{2}-\tau(7d-3\delta_{2})+4Md
+\]
+is a valid signed budget.
+
+For $d\le1/7$, convexity in $r$ gives
+$M^2\le\max\{15d^2,\theta d+(33497/5120)d^2\}\le15/49$.
+Both associated quotients by $(1+4d)^2$ increase, so $M/u<4/11$. Also $3B<48/49<x$. Substitution into Lemma~\ref{q3:lem:tiltedcubic}, retaining its signed denominator and using \eqref{q3:eq:logbound}, gives
+\[
+\begin{split}
+ \frac1d\log\E[p^3P^3]\le{}&
+ -14+\frac{33}2r-\frac{21r}{10u}\\
+ &+d\left[3(1-r)+\frac92a(r)-\frac{29-30r+9r^2}{u}\right]
+ +\frac{12M}{u}.
+\end{split}
+\]
+Except for the last term, already bounded by $48/11$, the expression increases with $d$: the square bracket is increasing in $u$ and at $u=1$ is at least
+$83/2-(423/5)\theta=1141/160>0$.
+Put $d=1/7,u=11/7$. The resulting function is convex in $r$, its quadratic coefficient being $(1/7)(441/10-63/11)>0$.
+At $r=0$ it is $-339/154<-1/6$.
+At $r=\theta$ it is
+\[
+ -467/64-1911/3520+57/224+301473/71680-18737/11264+48/11
+ \le-1/6,
+\]
+using the respective bounds $-29/4,-1/2,1/3,17/4,-3/2,9/2$.
+This proves the low range.
+
+For $d\ge1/7$,
+\[
+ M^2/d^2\le15-(89/5)r+(49/5)r^2,\qquad
+ \delta/d\ge17/3-(11/3)r .
+\]
+The positive function $s(r)=137/30-(11/3)r$ satisfies
+\[
+ s(r)^2-[15-(89/5)r+(49/5)r^2]
+ =5269/900-(706/45)r+(164/45)r^2>0.
+\]
+The last polynomial decreases on $[0,\theta]$ and has endpoint value $4741/57600>0$. Thus $M\le\delta-(11/10)d$, so $P^3\le e^{-(33/10)d}$.
+Since $\log x\le(36/11)d$, the resulting logarithmic bound is at most $-3d/110$.
+
+All four ranges $c=3,4,5,c\ge6$ have now been proved for every $d$. At $d=0$ there is equality. Multiplication by the actual equal-pair factors preserves the cubic without changing any edge or orientation.

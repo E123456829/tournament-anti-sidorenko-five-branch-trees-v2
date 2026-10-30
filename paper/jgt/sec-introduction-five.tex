@@ -1,0 +1,107 @@
+\section{Introduction}\label{sec:intro}
+For an oriented graph $D$ and a finite tournament $\mathcal T$, let
+$\homc(D,\mathcal T)$ be the number of arc-preserving vertex maps from
+$D$ to $\mathcal T$; the maps need not be injective. An orientation $D$
+of a tree $U$ is \emph{tournament anti-Sidorenko} if
+\begin{equation}\label{eq:tas}
+ \homc(D,\mathcal T)\le 2^{-e(U)}|V(\mathcal T)|^{|V(U)|}
+\end{equation}
+for every nonempty finite loopless tournament. The factor $2^{-e(U)}$
+is the limiting density of $D$ in a uniformly random tournament. Thus
+\eqref{eq:tas} bounds the number of maps from $D$ into any tournament
+by this random benchmark. Fox, Himwich, Mani and Zhou conjectured that every tree
+admits such an orientation~\cite[Conjecture 1.12]{FHMZ}. We prove their
+conjecture for trees with at most five branch vertices.
+
+Here a \emph{branch vertex} of $U$ is a vertex of degree at least three,
+and
+\[
+ b(U)=|\{v\in V(U):\deg_U(v)\ge3\}|,\qquad e(U)=|E(U)|.
+\]
+All degrees refer to $U$.
+
+\begin{theorem}\label{thm:main}
+Every nonempty finite tree $U$ with $b(U)\le5$ has an orientation
+$D=D(U)$ satisfying \eqref{eq:tas} for every nonempty finite loopless
+tournament $\mathcal T$.
+\end{theorem}
+
+We prove a kernel form of the theorem, in which one orientation serves
+every host. For a nonempty finite probability space $(X,\mu)$ and a real
+skew kernel $K:X^2\to[-1,1]$, put
+\begin{equation}\label{eq:density}
+ Z_D(K,\mu)=\E_{\mu^{V(U)}}
+       \prod_{u\to v\in E(D)}(1+K(x_u,x_v)).
+\end{equation}
+All labels are independently sampled from the same measure; coincident
+labels are included.
+\begin{theorem}\label{thm:kernel}
+For every nonempty finite tree $U$ with $b(U)\le5$, there is an
+orientation $D=D(U)$ of all its edges such that
+\begin{equation}\label{eq:kernelbound}
+ Z_D(K,\mu)\le1
+\end{equation}
+for every nonempty finite probability space and every real skew kernel
+bounded in absolute value by one.
+\end{theorem}
+
+\paragraph{Related results.}
+Sidorenko's conjecture bounds the homomorphism density of a bipartite
+graph from below in terms of its edge density~\cite{Sidorenko}; the
+tournament problem seeks an orientation with a universal upper bound
+at the random benchmark. Table~\ref{tab:prior} lists the tree classes covered by the
+relevant results. These classes overlap only partly: arbitrary
+subdivisions produce many vertices of degree two, whereas a bound on
+$b(U)$ restricts neither the degrees nor the multiplicities of equal
+branches.
+
+\begin{table}[htbp]\centering\small
+\caption{Tree classes covered by the closest prior results and by this paper.}\label{tab:prior}
+\begin{tabular}{@{}p{45mm}p{103mm}@{}}\toprule
+Work & Scope\\\midrule
+Fox--Himwich--Mani--Zhou~\cite[Proposition 1.13]{FHMZ} & Trees with at most one vertex of even degree.\\
+Chen--Clemen--Noel~\cite{CCN} & Every three-legged spider, with arbitrary leg lengths.\\
+He--Mani--Nie--Tung--Wei~\cite[Theorems 1.3 and 1.4]{HMNTW} & Isomorphic-branch attachment and every caterpillar.\\
+Theorem~\ref{thm:main} & Every tree with at most five original vertices of degree at least three, with unrestricted degrees, multiplicities and positive subdivision lengths.\\\bottomrule
+\end{tabular}
+\end{table}
+Chen and Lin prove path anti-Sidorenko inequalities when the length is
+large relative to the number of direction flips~\cite{CL}. Paths enter
+our argument in a different role, as connectors that carry rooted
+messages between branch vertices; their lengths are arbitrary, including
+one.
+
+\paragraph{Proof strategy.}
+The proof separates the assembly of a tree from the local moment
+estimates. Table~\ref{tab:proof-route} gives the route through the
+assembly; the technical appendix proves the inputs listed there.
+
+\begin{table}[htbp]\centering\small
+\caption{The proof of Theorems~\ref{thm:main} and~\ref{thm:kernel}. Each row uses the preceding structural reductions and the indicated local estimates.}\label{tab:proof-route}
+\begin{tabular}{@{}p{29mm}p{77mm}p{39mm}@{}}\toprule
+Stage & Argument or required input & Location\\\midrule
+Path interface & Weighted second moments at two roots control every positive connector length. & Lemma~\ref{lem:weighted-interface}\\
+Four branches & Pair equal arms; convert terminal fourth moments to the second moments needed by the interface. & Sections~\ref{sec:geometry}--\ref{sec:star}\\
+Five-branch reduction & Reduce to four branches or to $P_5$, $K_{1,4}$ and the fork $T_5$. & Lemma~\ref{lem:five-reduction}\\
+Star and fork & Allocate disjoint arms to simple-reference fourth, ordinary eighth and compound-reference second moments. & Section~\ref{sec:five-star-fork}; Propositions~\ref{prop:five-reference}--\ref{prop:five-compound}\\
+Path alternatives & First treat a central singleton and a unit off-center arm whose receiving connector has length one. & Section~\ref{sec:five-chain}\\
+Remaining path & Give both sides the same inverse-weighted boundary estimate; close by H\"older at the center. & Proposition~\ref{prop:five-outlet}; \eqref{eq:five-chain-close}\\
+Conclusion & Fix all choices from the tree, restore equal pairs, and pass from kernels to tournaments. & Section~\ref{sec:completion}\\\bottomrule
+\end{tabular}
+\end{table}
+
+For four branch vertices the terminal fourth moments close the path
+$P_4$ and the star $K_{1,3}$. For five, the star and fork need one
+existing central arm as a reference, while the path uses
+$I_q(V)=\E[q^{-1/3}|V|^{8/3}]$, with $q=1-K\one$.
+After the two structural path alternatives, both side messages satisfy
+this bound with the same $q$; the three weight powers cancel in the
+central H\"older inequality. The arm allocation, rather than a
+restriction on the connector lengths, distinguishes these assemblies.
+
+Appendix~\ref{app:local-calculus} gives the shared scalar calculus,
+and Appendix~\ref{app:worked} proves one terminal estimate in full.
+Appendix~\ref{app:five-directions} is the entry point to the remaining
+direction tables: it separates reference, ordinary and outlet inputs,
+whose directions and weights differ. The local proofs retain the
+short-length exceptions before treating the finite tails.

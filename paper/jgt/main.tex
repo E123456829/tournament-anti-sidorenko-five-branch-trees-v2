@@ -1,0 +1,147 @@
+% !TeX program = lualatex
+\documentclass[11pt]{article}
+\usepackage[a4paper,margin=27mm,headheight=14pt]{geometry}
+\usepackage{fontspec}
+\setmainfont{texgyretermes-regular.otf}[Path=fonts/,BoldFont=texgyretermes-bold.otf,ItalicFont=texgyretermes-italic.otf,BoldItalicFont=texgyretermes-bolditalic.otf]
+\setsansfont{texgyreheros-regular.otf}[Path=fonts/,BoldFont=texgyreheros-bold.otf,ItalicFont=texgyreheros-italic.otf,BoldItalicFont=texgyreheros-bolditalic.otf]
+\setmonofont{lmmono10-regular.otf}[Path=fonts/,ItalicFont=lmmono10-italic.otf]
+\usepackage{amsmath,amssymb,amsthm,unicode-math}
+\setmathfont{latinmodern-math.otf}[Path=fonts/]
+\usepackage{graphicx,array,booktabs,longtable,enumitem,xcolor,needspace}
+\usepackage{xr-hyper}
+\usepackage[numbers,sort&compress]{natbib}
+\usepackage[unicode,colorlinks=true,allcolors=blue!45!black,bookmarksnumbered,hypertexnames=false]{hyperref}
+\hypersetup{pdftitle={Tournament anti-Sidorenko orientations of trees with at most five branch vertices},pdfauthor={Yanbin Qiao and Liwei Yao}}
+\renewcommand{\theHtable}{lt.\arabic{table}}
+\setlength{\emergencystretch}{2em}
+\setlength{\parskip}{2pt}
+\setlength{\parindent}{1.4em}
+\setlength{\lineskiplimit}{4pt}
+\setlength{\lineskip}{4pt}
+\allowdisplaybreaks[2]
+\numberwithin{equation}{section}
+\newcommand{\proofpart}[1]{\par\smallskip\noindent\textbf{#1.}\enspace}
+\newsavebox{\mathfitbox}
+\newcommand{\fitdisplay}[2]{%
+ \begin{equation*}%
+ \sbox{\mathfitbox}{$\displaystyle #1$}%
+ \ifdim\wd\mathfitbox>\linewidth
+  \typeout{MATHFIT original=\the\wd\mathfitbox target=\the\linewidth inputline=\the\inputlineno}%
+  \resizebox{\linewidth}{!}{\usebox{\mathfitbox}}%
+ \else\usebox{\mathfitbox}\fi
+ \if\relax\detokenize{#2}\relax\else\tag{#2}\fi
+ \end{equation*}%
+}
+\makeatletter
+\renewcommand{\@pnumwidth}{2.5em}
+\renewcommand{\@tocrmarg}{3.5em}
+\ifdefined\ArticleView\else
+ \renewcommand*\l@subsection{\@dottedtocline{2}{1.5em}{3.4em}}
+\fi
+\renewcommand\paragraph{\@startsection{paragraph}{4}{\z@}{1.8ex plus .5ex minus .2ex}{.6ex plus .2ex}{\normalfont\normalsize\bfseries}}
+\makeatother
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollary}
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+\theoremstyle{remark}
+\newtheorem{remark}[theorem]{Remark}
+\newcommand{\E}{\mathbb E}
+\newcommand{\one}{\mathbf1}
+\newcommand{\homc}{\operatorname{hom}}
+\newcommand{\ip}[2]{\left\langle#1,#2\right\rangle}
+\newcommand{\norm}[1]{\left\lVert#1\right\rVert}
+\newcommand{\op}{2\to2}
+\newcommand{\can}{\mathrm{can}}
+\newcommand{\Nplus}[1]{N_+(#1)}
+\newcommand{\Nminus}[1]{N_-(#1)}
+\title{Tournament anti-Sidorenko orientations of trees\\with at most five branch vertices}
+\author{%
+\begin{tabular}{c}
+Yanbin Qiao\thanks{Yanbin Qiao and Liwei Yao contributed equally and should be considered joint first authors. Both authors are corresponding authors.}\quad Liwei Yao\\[0.4em]
+\normalsize School of Mathematics, China University of Mining and Technology\\
+\normalsize Xuzhou, Jiangsu 221116, China\\[0.3em]
+\small Yanbin Qiao: \href{mailto:a15024953277@qq.com}{a15024953277@qq.com}\\
+\small Liwei Yao: \href{mailto:10235419@cumt.edu.cn}{10235419@cumt.edu.cn}\\
+\small ORCID: \href{https://orcid.org/0009-0005-2476-208X}{0009-0005-2476-208X}\quad
+\href{https://orcid.org/0009-0005-6990-9372}{0009-0005-6990-9372}
+\end{tabular}}
+\date{}
+
+
+% Reading views share one source graph and one mathematical manuscript.
+\ifdefined\ArticleView
+ \externaldocument{article-external}[02_Technical_Appendix.pdf]
+\fi
+\ifdefined\SupplementView
+ \externaldocument{supplement-external}[01_Article.pdf]
+\fi
+\begin{document}
+\raggedbottom
+\maketitle
+\ifdefined\SupplementView
+% The main text contains nine tables and six figures.
+\setcounter{table}{9}
+\setcounter{figure}{6}
+\begin{center}\large Appendices\end{center}
+This file contains all appendices to the accompanying article. It includes
+the shared calculus, the worked estimate, the four-branch foundations,
+the direction tables and the local proofs cited by the main text.
+\setcounter{tocdepth}{2}
+\tableofcontents
+\clearpage
+\else
+\begin{abstract}
+A finite tree with at most five vertices of degree at least three admits an orientation whose homomorphism density into any tournament is at most the random-tournament benchmark. Degrees, arm multiplicities and positive subdivision lengths are unrestricted, and a single orientation, chosen from the tree alone, satisfies the stronger kernel inequality for every finite probability space and every real skew kernel of absolute value at most one. For four branch vertices we convert terminal fourth moments into weighted second moments across a connector; for five we allocate reference arms in the star and fork skeletons and join the two halves of the path skeleton through compatible fractional moments. Separate arguments cover a central singleton arm and a unit outer connector. The kernel inequality also yields an entropy bound that holds for arbitrarily correlated vertex labels.
+\end{abstract}
+\noindent\textbf{Keywords:} tournaments; anti-Sidorenko inequality; oriented trees; skew kernels; weighted moments.\\
+\textbf{MSC 2020:} 05C20, 05C05, 05C35, 47A30.\\
+\ifdefined\ArticleView\else
+\setcounter{tocdepth}{2}\tableofcontents\clearpage
+\fi
+\input{sec-introduction-five}
+\input{sec-preliminaries}
+\input{sec-four-foundation}
+\input{sec-geometry}
+\input{sec-terminal-catalogue}
+\input{sec-four-chain}
+\input{sec-four-star}
+\input{sec-five-geometry}
+\input{sec-five-inputs}
+\input{sec-five-star-fork}
+\input{sec-five-chain}
+\input{sec-five-completion}
+\input{sec-five-discussion}
+\input{declarations}
+\clearpage
+\nocite{*}
+\phantomsection
+\ifdefined\ArticleView
+ \pdfbookmark[1]{References}{references}
+\else
+ \addcontentsline{toc}{section}{References}
+\fi
+\bibliographystyle{plainnat}
+\bibliography{references}
+\fi
+\ifdefined\ArticleView
+\else
+\clearpage
+\appendix
+\input{app-local-calculus}
+\input{app-worked-certificate}
+\input{sec-three-branches}
+ \input{app-three-foundations}
+ \input{app-three-operators}
+ \input{app-root-moments}
+ \input{app-path-moments}
+ \input{app-zero-moments}
+ \input{app-even-propagation}
+ \input{app-odd-propagation}
+ \input{app-center-moments}
+ \input{app-five-directions}
+ \input{app-five-local-proofs}
+\fi
+\end{document}

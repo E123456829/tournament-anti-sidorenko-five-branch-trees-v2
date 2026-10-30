@@ -1,0 +1,469 @@
+\subsection{The genuine $f_2$ reference at the reversed unit terminal $(1,\allowbreak 2,\allowbreak 3)$}\label{proof:Q5-C114}
+% Source Q5-C114: lines 14--654.
+\paragraph{Q114.0 The actual unit interface}\label{part:Q114.0}
+Let $(X,\allowbreak \mu)$ be any nonempty original finite probability space and $K$
+a real skew kernel with $|K|\le\allowbreak 1$. Every operator, expectation, inner
+product, norm, adjoint and spectral measure uses this same original $\mu$.
+Put
+\fitdisplay{
+Jv=(\E v)\one,\quad A=J+K,\quad T=J-K=A^*,\quad
+ g=K\one,\quad p=1+g,\quad q=1-g,
+}{}
+\fitdisplay{
+f_n=A^n\one,\quad\bar f_n=T^n\one,\quad h_n=Tf_{n-1},
+\quad r=Kg,\quad s=K^2g,\quad\delta_j=\|K^j\one\|_2^2,
+\quad d=\delta_1.
+\label{eq:Q114:0.1}
+}{Q114.0.1}
+The terminal residual after maximal equal pairing is $(1,\allowbreak 2,\allowbreak 3)$ and the
+original connector is one edge. The receiver's original outward two-edge
+arm gives the genuine reference $f_2$.
+Use the fixed actual terminal and output
+\fitdisplay{
+F_{\rm alt}=qf_2\bar f_3,\qquad X=TF_{\rm alt}.
+\label{eq:Q114:0.2}
+}{Q114.0.2}
+For arbitrary original equal-pair products $E_t,\allowbreak E_o$,
+\fitdisplay{
+\E[E_of_2\{T(E_tF_{\rm alt})\}^4]\le1-d/256\le1.
+\label{eq:Q114:0.3}
+}{Q114.0.3}
+The terminal unit arm points inward, the two-edge arm outward throughout,
+and the three-edge arm inward throughout. The connector points
+to the receiver, whose two-edge arm is outward.
+The direction precedes the host. The three-edge arm is $\bar f_3$,
+rather than canonical $h_3$.
+The low and high analyses use this same direction. For $0\le\allowbreak  d\le\allowbreak 1/4$
+the stronger bound is
+\fitdisplay{
+\|X\|_{L^4(f_2\mu)}\le1-d/256.
+\label{eq:Q114:0.4}
+}{Q114.0.4}
+The high domain gives $\E[f_2X^4]\le\allowbreak 83521/131072<\allowbreak 3/4$.
+
+\paragraph{Q114.1 Original foundations, positivity and the zero boundary}\label{part:Q114.1}
+The original Q3-C014 finite framework, with $\theta=\allowbreak 13/32$, gives
+\fitdisplay{
+0\le d\le1/3,\quad\|K\|^2\le\theta,\quad|Kv(x)|\le\|v\|_2,
+\quad d^2\le\delta_2\le\theta d,\quad\delta_{j+1}\le\theta\delta_j.
+\label{eq:Q114:1.1}
+}{Q114.1.1}
+Skewness gives $\E K^{2j}\one=\allowbreak (-1)^j\delta_j$ and
+$\E K^{2j+1}\one=\allowbreak 0$.
+In particular $\E r=\allowbreak -d$, $\E s=\allowbreak 0$,
+$\E(gr)=\allowbreak \E(rs)=\allowbreak 0$, and $\E(gs)=\allowbreak -\delta_2$.
+After zero-mass atoms are removed, $p,\allowbreak q\ge\allowbreak \mu(x)>\allowbreak 0$, and $A,\allowbreak T$ are
+positive. Actual tree messages are nonnegative; path means are at most
+one, $0\le\allowbreak  f_n,\allowbreak \bar f_n\le\allowbreak 2$ and $f_\ell h_\ell\le\allowbreak 1$.
+The genuine reference obeys
+\fitdisplay{
+f_2=p+r,\qquad\E f_2=1-d,\qquad0<f_2\le2.
+\label{eq:Q114:1.2}
+}{Q114.1.2}
+At $d=\allowbreak 0$, $g=\allowbreak 0$ with possibly nonzero $K$; original leaf integration
+gives all actual messages one. Below every division by $d$ requires $d>\allowbreak 0$.
+For a mean-zero original vector $w$, the centered row gives
+\fitdisplay{
+|Kw(x)|^2
+=|\E_y[(K(x,y)-g(x))w(y)]|^2\le p(x)q(x)\|w\|_2^2.
+\label{eq:Q114:1.3}
+}{Q114.1.3}
+All spectral polynomials are finite.
+The original spectral measure $\nu$ at $g$ is supported in $[0,\allowbreak \theta]$,
+has mass $d$ and satisfies $\int x^j\,\allowbreak d\nu=\allowbreak \delta_{j+1}$.
+Only global moment inequalities such as $\delta_2\ge\allowbreak  d^2$ are used.
+
+\paragraph{Q114.2 The true five-edge mean and the high domain}\label{part:Q114.2}
+The short-path identities are
+\fitdisplay{
+f_2=p+r,\qquad\bar f_3=q-d\one+r-s.
+\label{eq:Q114:2.1}
+}{Q114.2.1}
+The original adjoint gives
+\fitdisplay{
+\mu_5:=\E[f_2\bar f_3]
+=\langle A^2\one,T^3\one\rangle=\E[A^5\one]
+=1-4d+2\delta_2+d^2.
+\label{eq:Q114:2.2}
+}{Q114.2.2}
+The same finite expansion follows by applying $A$ once more to
+$f_3=\allowbreak p+r+s-d\one$ and
+$f_4=\allowbreak \one-2d\one+(1-d)g+r+s+K^3g$.
+In particular $\mu_5\ge\allowbreak 0$, and the actual mean has
+\fitdisplay{
+u=\E X=\E[pqf_2\bar f_3]\le\mu_5.
+\label{eq:Q114:2.3}
+}{Q114.2.3}
+Also $\E F_{\rm alt}\le\allowbreak 2\mu_5$ and $X\le\allowbreak 4\mu_5$, so
+\fitdisplay{
+\E[f_2X^4]\le2\E X^4\le2(4\mu_5)^3\E X\le128\mu_5^4.
+\label{eq:Q114:2.4}
+}{Q114.2.4}
+For $d\ge\allowbreak 1/4$, $\mu_5\le\allowbreak 1-(51/16)d+d^2\le\allowbreak 17/64$;
+the scalar decreases on $[1/4,\allowbreak 1/3]$.
+Therefore
+\fitdisplay{
+\E[f_2X^4]\le83521/131072<3/4\qquad(1/4\le d\le1/3).
+\label{eq:Q114:2.5}
+}{Q114.2.5}
+
+\paragraph{Q114.3 The actual square and a nonnegative auxiliary}\label{part:Q114.3}
+For $0<\allowbreak d\le\allowbreak 1/4$ put
+\fitdisplay{
+m=1-3d/2\in[5/8,1],\quad k=1/m\in[1,8/5],
+\quad U=r+d\one-s/2,\quad V_0=g+(d\one+s)/2.
+\label{eq:Q114:3.1}
+}{Q114.3.1}
+Here $m$ differs from $\E f_2$.
+The actual arm identities $f_2+\bar f_3=\allowbreak 2(m\one+U)$ and
+$f_2-\bar f_3=\allowbreak 2V_0$ give
+\fitdisplay{
+F_{\rm alt}=q\{(m+U)^2-V_0^2\}\le q(m+U)^2.
+\label{eq:Q114:3.2}
+}{Q114.3.2}
+Define the analytic auxiliary
+\fitdisplay{
+H=q+2k(r+d\one)-ks,\qquad\mathcal B=TH.
+\label{eq:Q114:3.3}
+}{Q114.3.3}
+We prove $H\ge\allowbreak 0$, $\E H=\allowbreak 1$, and $0\le\allowbreak \mathcal B\le\allowbreak 2$.
+Let $w=\allowbreak 2g-r-d\one$, so $\E w=\allowbreak 0$ and
+$\|w\|_2^2=\allowbreak 4d+\delta_2-d^2$.
+The centered row yields
+$mH=(1-5d/2)q+3d\one+Kw
+\ge a_0q+b_0\one-\sqrt{pqd(4+b-d)}$,
+where $a_0=\allowbreak 1-5d/2>\allowbreak 0$, $b_0=\allowbreak 3d$, $b=\allowbreak \delta_2/d\le\allowbreak \theta$.
+The exact square is
+$(a_0q+b_0)^2-b_0(2a_0+b_0)pq=\allowbreak ((a_0+b_0)q-b_0)^2\ge\allowbreak 0$.
+Also $b_0(2a_0+b_0)=\allowbreak 6d(1-d)\ge\allowbreak  d(4+b-d)$, since
+$b+5d\le\allowbreak 13/32+5/4=\allowbreak 53/32<\allowbreak 2$.
+Thus $H\ge\allowbreak 0$. Its mean is one, and the original kernel of $T$ lies
+in $[0,\allowbreak 2]$, so $0\le\allowbreak  TH\le\allowbreak 2\E H=\allowbreak 2$.
+This is an analytic auxiliary, not an added actual tree message.
+Expanding at the original kernel gives
+\fitdisplay{
+\mathcal B=q+r-2k(s+dg)+kK^3g.
+\label{eq:Q114:3.4}
+}{Q114.3.4}
+
+\paragraph{Q114.4 The full genuine-$f_2$ exponential budget}\label{part:Q114.4}
+We prove
+\fitdisplay{
+\E[f_2\mathcal B^4]\le\exp\{3d+(29/2)d^2\}.
+\label{eq:Q114:4.1}
+}{Q114.4.1}
+For $-1<\allowbreak x\le\allowbreak 1$,
+\fitdisplay{
+\log(1+x)\le x-(3/10)x^2.
+\label{eq:Q114:4.2}
+}{Q114.4.2}
+The difference has derivative $x(2-3x)/(5(1+x))$;
+on the negative half and $[0,\allowbreak 2/3]$ its sign is direct,
+while on $[2/3,\allowbreak 1]$ use the positive endpoint $7/10-\log2$.
+This follows from $e^{7/10}>\allowbreak 1+7/10+49/200+343/6000>\allowbreak 2$.
+For every real $z$,
+\fitdisplay{
+e^{z-z^2/8}\le1+z+(13/32)z^2.
+\label{eq:Q114:4.3}
+}{Q114.4.3}
+The right side $Q(z)>\allowbreak 0$ and
+$[\log Q-z+z^2/8]'=\allowbreak z(13z^2-20z+8)/(128Q)$.
+The quadratic has negative discriminant, making zero the global minimum.
+Let $e_1=\allowbreak f_2-1$, $e_2=\allowbreak \mathcal B-1$, and $S=\allowbreak e_1+4e_2$.
+Since $f_2,\allowbreak \mathcal B\in[0,\allowbreak 2]$, \eqref{eq:Q114:4.2} and continuity give
+$f_2\mathcal B^4\le\allowbreak \exp\{S-(3/10)e_1^2-(6/5)e_2^2\}$.
+The exact completion is
+\fitdisplay{
+S^2/8-(3/10)e_1^2-(6/5)e_2^2
+=-(3/8)\{(9e_1+4e_2)/5\}^2+(26/25)(e_1+e_2)^2.
+\label{eq:Q114:4.4}
+}{Q114.4.4}
+Here $e_1+e_2=\allowbreak Kw_1$, with $w_1=\allowbreak 2g-2kr+ks-2kd\one$, and
+\fitdisplay{
+J_1:=\|w_1\|_2^2=4d+(4k^2-4k)\delta_2+k^2\delta_3-4k^2d^2.
+\label{eq:Q114:4.5}
+}{Q114.4.5}
+The row bound gives $(e_1+e_2)^2\le\allowbreak  J_1$.
+Integrating \eqref{eq:Q114:4.3} and using $1+y\le\allowbreak  e^y$ yields
+\fitdisplay{
+\E[f_2\mathcal B^4]\le e^{\mathcal E},
+\quad\mathcal E=(26/25)J_1+\E S+(13/32)\E S^2.
+\label{eq:Q114:4.6}
+}{Q114.4.6}
+The quantity $\E Q(S)$ is strictly positive.
+From the actual auxiliary expansion,
+$S=\allowbreak -(3+8kd)g+5r-8ks+4kK^3g$, $\E S=\allowbreak -5d+4k\delta_2$.
+Odd and even powers are orthogonal, giving
+\fitdisplay{
+\E S^2=(3+8kd)^2d+(25-48k-128k^2d)\delta_2
++(64k^2-40k)\delta_3+16k^2\delta_4.
+\label{eq:Q114:4.7}
+}{Q114.4.7}
+Thus $\mathcal E=\allowbreak \int P(x)\,\allowbreak d\nu$, where
+\fitdisplay{
+\begin{aligned}
+P&=C_0+C_1x+C_2x^2+C_3x^3,\\
+C_0&=-21/25+(13/32)(3+8kd)^2-(104/25)k^2d,\\
+C_1&=(104/25)k^2-(983/50)k+325/32-52k^2d,\\
+C_2&=(676/25)k^2-(65/4)k>0,\qquad C_3=(13/2)k^2>0.
+\end{aligned}\label{eq:Q114:4.8}
+}{Q114.4.8}
+The convex chord on $[0,\allowbreak \theta]$ gives
+\fitdisplay{
+\mathcal E\le C_0d+S_0\delta_2,\qquad S_0=C_1+C_2\theta+C_3\theta^2.
+\label{eq:Q114:4.9}
+}{Q114.4.9}
+Set $h=\allowbreak k-1\in[0,\allowbreak 3/5]$, so $d=\allowbreak 2h/[3(1+h)]$.
+The exact expansion is
+\fitdisplay{
+C_0=2253/800+(767/75)h+(1976/225)h^2.
+\label{eq:Q114:4.10}
+}{Q114.4.10}
+As a quadratic in $k$, $S_0$ has coefficients
+$A_*=\allowbreak -2833753/153600$, $B_*=\allowbreak 80689/9600$, $C_*=\allowbreak 325/32$.
+At $k=\allowbreak 1$ it equals $5757/51200<\allowbreak 1/8$, with derivative
+$-2188241/76800<\allowbreak -28$, and $A_*<\allowbreak -18$.
+Hence $S_0\le\allowbreak 1/8-28h-18h^2$. Global $d^2\le\allowbreak \delta_2\le\allowbreak \theta d$ gives
+\fitdisplay{
+\mathcal E/d\le C_0+\theta/8-(28h+18h^2)d.
+\label{eq:Q114:4.11}
+}{Q114.4.11}
+Let $\epsilon=\allowbreak 851/6400=\allowbreak 3-2253/800-\theta/8$.
+Subtract $3+(29/2)d$ and multiply by $1+h$ to get exactly
+\fitdisplay{
+-\epsilon+(14/25-\epsilon)h+(77/225)h^2-(724/225)h^3.
+\label{eq:Q114:4.12}
+}{Q114.4.12}
+Use $h^2\le\allowbreak 3h/5$, $\epsilon>\allowbreak 17/128$,
+$287/375-\epsilon<\allowbreak 2/3$ and $724/225>\allowbreak 16/5$ to bound it by
+$-17/128+(2/3)h-(16/5)h^3<\allowbreak 0$.
+The positive cubic combination has maximum $\sqrt{10}/27<\allowbreak 17/128$,
+with squared comparison $163840<\allowbreak 210681$.
+This proves \eqref{eq:Q114:4.1} on the whole low domain.
+
+\paragraph{Q114.5 The true square remainder and its variance}\label{part:Q114.5}
+Using $\E U=\allowbreak 0$ and $\E(gU)=\allowbreak \delta_2/2$, the expansion of
+\eqref{eq:Q114:3.2} gives
+\fitdisplay{
+ X\le m^2\mathcal B-m\delta_2+2mK(gU)+T(qU^2).
+ \label{eq:Q114:5.1}
+}{Q114.5.1}
+Put $V=\allowbreak \E U^2=\allowbreak \delta_2+\delta_3/4-d^2$. Then
+\fitdisplay{
+ |K(gU)|\le\sqrt{dV},\qquad
+ T(qU^2)\le\min\{4V,\,2V+2|\E[gU^2]|\}.
+ \label{eq:Q114:5.2}
+}{Q114.5.2}
+Since $\E g=\allowbreak 0$, Cauchy--Schwarz gives
+$|\E[gU^2]|^2\le\allowbreak  d\operatorname{Var}(U^2)$.
+Also $U=\allowbreak K(g-r/2)+d\one$ and $\E(gr)=\allowbreak 0$, so
+\fitdisplay{
+ \|U\|_\infty\le d+\sqrt{d+\delta_2/4}=:M_U,\qquad
+ \operatorname{Var}(U^2)\le M_U^2V-V^2.
+ \label{eq:Q114:5.3}
+}{Q114.5.3}
+The negative term $-V^2$ is retained in the subsequent estimate.
+
+\paragraph{Q114.5.1 Reduction of the global moment parameters}\label{part:Q114.5.1}
+Write $b=\allowbreak \delta_2/d$, $c=\allowbreak \delta_3/d$, $v=\allowbreak V/d=\allowbreak b+c/4-d$ and $t=\allowbreak \sqrt d$.
+Then $b\in[d,\allowbreak \theta]$, $0\le\allowbreak  c\le\allowbreak \theta b$, and
+\fitdisplay{
+ 0\le v\le\alpha-d,\qquad
+ \beta=1+\theta/4=141/128,\qquad
+ \alpha=\beta\theta=1833/4096.
+ \label{eq:Q114:5.4}
+}{Q114.5.4}
+Equations \eqref{eq:Q114:5.1}--\eqref{eq:Q114:5.3} give
+$X\le\allowbreak  m^2\mathcal B+\rho d$, where either of the following expressions
+is an upper bound for the same error coefficient:
+\fitdisplay{
+ \begin{gathered}
+ -mb+2m\sqrt v+4v,\\
+ -mb+2m\sqrt v+2v+
+ 2t\sqrt{v\{(t+\sqrt{1+b/4})^2-v\}}.
+ \end{gathered}\label{eq:Q114:5.5}
+}{Q114.5.5}
+Both are bounded above by their values at $b=\allowbreak \theta$, $c=\allowbreak \theta b$.
+For fixed $b$, $v(W-v)$ increases with $v$, because
+$W=\allowbreak (t+\sqrt{1+b/4})^2\ge\allowbreak 1>\allowbreak 2\alpha\ge\allowbreak 2v$.
+After setting $c=\allowbreak \theta b$, we have $v=\allowbreak \beta b-d$ and $W$ increases with $b$.
+The derivative of $-mb+2m\sqrt v$ with respect to $b$ is
+$-m+m\beta/\sqrt v>\allowbreak 0$, since $v\le\allowbreak \alpha<\allowbreak \beta^2$.
+The other terms also increase; the case $v=\allowbreak 0$ follows by continuity.
+Thus the two global bounds are
+\fitdisplay{
+ \begin{aligned}
+ \rho_4&=-m\theta+2m\sqrt{\alpha-d}+4(\alpha-d),\\
+ \rho_2&=-m\theta+2m\sqrt{\alpha-d}+2(\alpha-d)\\
+ &\hspace{2em}+2t\sqrt{(\alpha-d)\{(t+\sqrt\beta)^2-(\alpha-d)\}}.
+ \end{aligned}\label{eq:Q114:5.6}
+}{Q114.5.6}
+One may use $\min\{\rho_2,\allowbreak \rho_4\}$. Every parameter belongs to the
+same original kernel. 
+
+\paragraph{Q114.5.2 Two finite square-root bounds}\label{part:Q114.5.2}
+The tangent bound from a nonnegative square gives
+\fitdisplay{
+ \sqrt{\alpha-d}\le\tfrac34(\alpha-d+4/9)
+ =32881/49152-3d/4\le67/100-3d/4.
+ \label{eq:Q114:5.7}
+}{Q114.5.7}
+Also $\sqrt\beta<\allowbreak 21/20$. Put $\gamma=\allowbreak \beta-\alpha=\allowbreak 2679/4096$ and
+$I(t)=\allowbreak (\alpha-t^2)\{\gamma+2t^2+(21/10)t\}$.
+This bounds the expression inside the second square root in
+\eqref{eq:Q114:5.6}. For every $0\le\allowbreak  t\le\allowbreak 1/2$,
+\fitdisplay{
+ \sqrt{I(t)}\le Q(t):=11/20+(9/10)t-(21/20)t^2.
+ \label{eq:Q114:5.8}
+}{Q114.5.8}
+Here is the finite certificate. The polynomial $Q$ is positive on this
+interval. Put $z=\allowbreak t-1/4\in[-1/4,\allowbreak 1/4]$. The exact expansion is
+\fitdisplay{
+ Q^2-I=\frac{478089}{419430400}-\frac{97}{10240}z
+ +\frac{75261}{102400}z^2+\frac{53}{16}z^3+\frac{1241}{400}z^4.
+ \label{eq:Q114:5.9}
+}{Q114.5.9}
+Its constant term exceeds $1/1000$, its linear coefficient belongs to
+$(-1/100,\allowbreak 0)$, and its quadratic coefficient exceeds $73/100$.
+For $z\ge\allowbreak 0$, the first three terms are at least
+$1/1000-z/100+(73/100)z^2>\allowbreak 0$, and the last two are nonnegative.
+For $z\le\allowbreak 0$, the linear term is nonnegative. The bracket multiplying $z^2$,
+\fitdisplay{
+ 75261/102400+(53/16)z+(1241/400)z^2,
+}{}
+increases on $[-1/4,\allowbreak 0]$; its left endpoint is at least
+$73/100-53/64+1241/6400=\allowbreak 613/6400>\allowbreak 0$.
+Thus \eqref{eq:Q114:5.9} is strictly positive throughout and proves
+\eqref{eq:Q114:5.8}.
+
+\paragraph{Q114.5.3 The two polynomial error bounds}\label{part:Q114.5.3}
+Substituting \eqref{eq:Q114:5.7}--\eqref{eq:Q114:5.8} into
+\eqref{eq:Q114:5.6} gives
+\fitdisplay{
+ \rho_2\le\Delta_2(d)
+ =747/800+2\alpha+(11/10)\sqrt d
+ -(4961/1600)d-(21/10)d^{3/2}+(9/4)d^2,
+ \label{eq:Q114:5.10}
+}{Q114.5.10}
+\fitdisplay{
+ \rho_4\le\Delta_4(d)
+ =747/800+4\alpha-(11041/1600)d+(9/4)d^2.
+ \label{eq:Q114:5.11}
+}{Q114.5.11}
+Both are positive on the ranges where they are used:
+for $d\le\allowbreak 4/25$,
+$\Delta_2\ge\allowbreak 747/800+2\alpha-4961/10000-168/1250>\allowbreak 0$;
+for $d\le\allowbreak 1/4$,
+$\Delta_4\ge\allowbreak 747/800+4\alpha-11041/6400>\allowbreak 0$.
+
+\paragraph{Q114.6 Minkowski with the original reference mass}\label{part:Q114.6}
+The norm $L^4(f_2\mu)$ uses the original nonnegative finite weighted
+measure, of total mass $\E f_2=\allowbreak 1-d$.
+Minkowski applied to the positive upper bound in
+\eqref{eq:Q114:5.1}, retaining the norm of the constant function, yields
+\fitdisplay{
+ \begin{aligned}
+ \|X\|_{L^4(f_2\mu)}
+ &\le m^2\|\mathcal B\|_{L^4(f_2\mu)}+\Delta d(1-d)^{1/4}\\
+ &\le m^2\exp\{(3/4)d+(29/8)d^2\}+\Delta d.
+ \end{aligned}\label{eq:Q114:6.1}
+}{Q114.6.1}
+Use $\Delta=\allowbreak \Delta_2$ for $d\le\allowbreak 4/25$ and $\Delta=\allowbreak \Delta_4$ for
+$d\ge\allowbreak 4/25$. The measure in this estimate remains $f_2\mu$ for the
+same kernel. The inequality $\log(1-x)\le\allowbreak -x-x^2/2$ gives
+$2\log m\le\allowbreak -3d-(9/4)d^2$.
+Consequently the first term of \eqref{eq:Q114:6.1} is at most
+$\exp\{-h(d)\}$, where $h(d)=\allowbreak (9/4)d-(11/8)d^2>\allowbreak 0$.
+Using $e^{-h}\le\allowbreak 1-h+h^2/2$ and putting
+$L(d)=\allowbreak 9/4-(125/32)d+(99/32)d^2-(121/128)d^3$, we obtain
+\fitdisplay{
+ \|X\|_{L^4(f_2\mu)}\le1-d\{L(d)-\Delta(d)\}.
+ \label{eq:Q114:6.2}
+}{Q114.6.2}
+
+\paragraph{Q114.6.1 The interval $0<\allowbreak d\le\allowbreak 4/25$}\label{part:Q114.6.1}
+Write $t=\allowbreak \sqrt d\le\allowbreak 2/5$. The exact difference is
+\fitdisplay{
+ \begin{aligned}
+ L(d)-\Delta_2(d)=P(t)
+ &=21567/51200-(11/10)t-(1289/1600)t^2\\
+ &\quad+(21/10)t^3+(27/32)t^4-(121/128)t^6.
+ \end{aligned}\label{eq:Q114:6.3}
+}{Q114.6.3}
+The polynomial decreases strictly: using $t^2\le\allowbreak (2/5)t$ and
+$t^3\le\allowbreak (4/25)t$ gives
+$P'(t)\le\allowbreak -11/10+(1159/800)t\le\allowbreak -1041/2000<\allowbreak 0$.
+Hence throughout this interval,
+\fitdisplay{
+ P(t)\ge P(2/5)=142671/32000000>1/256.
+ \label{eq:Q114:6.4}
+}{Q114.6.4}
+
+\paragraph{Q114.6.2 The interval $4/25\le\allowbreak  d\le\allowbreak 1/4$}\label{part:Q114.6.2}
+Here the exact difference is
+\fitdisplay{
+ L(d)-\Delta_4(d)=R(d)
+ =-12129/25600+(4791/1600)d+(27/32)d^2-(121/128)d^3.
+ \label{eq:Q114:6.5}
+}{Q114.6.5}
+It increases strictly, since $R'\ge\allowbreak 4791/1600-363/2048>\allowbreak 0$. Thus
+\fitdisplay{
+ R(d)\ge R(4/25)=368623/16000000>1/256.
+ \label{eq:Q114:6.6}
+}{Q114.6.6}
+Equations \eqref{eq:Q114:6.2}, \eqref{eq:Q114:6.4} and
+\eqref{eq:Q114:6.6} prove \eqref{eq:Q114:0.4} for all $0<\allowbreak d\le\allowbreak 1/4$.
+They imply
+\fitdisplay{
+ \E[f_2X^4]\le(1-d/256)^4\le1-d/256.
+ \label{eq:Q114:6.7}
+}{Q114.6.7}
+Together with the high-domain estimate and the case $d=\allowbreak 0$, this proves
+the bare interface in \eqref{eq:Q114:0.3} for every allowed original kernel.
+
+\paragraph{Q114.7 Decoration, full reversal and the original-edge count}\label{part:Q114.7}
+Every genuine equal pair $f_\ell h_\ell$ is at most one in the original
+integral. Positivity of $T$ gives
+\fitdisplay{
+ \E[E_of_2\{T(E_tF_{\rm alt})\}^4]\le\E[f_2(TF_{\rm alt})^4].
+}{}
+This restores every original equal-pair multiplicity and its original
+edges and vertices. If the sums of pair half-lengths at the terminal and
+receiver are $S_t,\allowbreak S_o$, respectively, a single original component has
+$9+2S_t+2S_o$ edges and $10+2S_t+2S_o$ vertices.
+The fourth-moment test tree has $30+8S_t+2S_o$ edges and
+$31+8S_t+2S_o$ vertices. The reference two-edge arm remains a single
+original arm; analytic copies add no reference arm to the original tree.
+Reversing all original edges at once corresponds to $K\mapsto-K$.
+The terminal becomes $p\bar f_2f_3$, the connector uses $A$, and the
+receiving reference becomes $\bar f_2$. The true reversed interface is
+\fitdisplay{
+ \E[\overline E_o\bar f_2\{A(\overline E_t p\bar f_2f_3)\}^4]
+ \le1-d/256,
+ \label{eq:Q114:7.1}
+}{Q114.7.1}
+with the same scope. This is a simultaneous reversal of terminal,
+propagation and reference.
+
+The genuine $f_2$ reference catalogue for $(1,\allowbreak 2,\allowbreak 3)$ can now be combined
+with \eqref{eq:Q104:1.1}, which supplies canonical $qf_2h_3$ with the
+same-direction propagation $T^L$ and bound $1-d/500$ for every original
+$L\ge\allowbreak 2$. Define, before the host is chosen,
+\fitdisplay{
+ F_L=\begin{cases}
+ qf_2\bar f_3,&L=1,\\
+ qf_2h_3,&L\ge2.
+ \end{cases}
+}{}
+Then for every positive integer original connector length,
+\fitdisplay{
+ \E[E_of_2\{T^L(E_tF_L)\}^4]\le1-d/500.
+ \label{eq:Q114:7.2}
+}{Q114.7.2}
+The choice depends on the original integer length and precedes the kernel.
+A single original component has $L+8+2S_t+2S_o$ edges and
+$L+9+2S_t+2S_o$ vertices.
+The changed unit direction is used here only for the genuine reference
+fourth moment. 
+The conclusion concerns this terminal reference interface; its receiving
+weight is exactly $f_2$, not a general reference $f_a$ or a compound output.

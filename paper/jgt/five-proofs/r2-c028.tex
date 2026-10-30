@@ -1,0 +1,1033 @@
+\subsection{Even terminal lists of minimum one, including the global third class}\label{proof:R2-C028}
+
+\paragraph{R28.1 Target, original objects and exact structural partition}
+
+The original problem is unchanged: for every finite original tree \(U\) with at most five vertices of original degree at least three, choose every original edge direction before the host, so that
+
+\fitdisplay{
+Z_D=E_{\mu^V(U)} \prod_{v\to w}(1+K(x_v,x_w))\le 1
+}{R28.L20}
+
+for every original finite probability \(\mu\) and real antisymmetric \(\lvert K\rvert \le 1\). Every original arm, multiplicity, vertex and subdivision vertex remains.
+
+The local theorem of this module is the following all-parameter family. After actual maximal equal-length pairing, take an even terminal residual
+
+\fitdisplay{
+\begin{gathered}
+1=\mathrm{basis}_{\min} < b_{1} < a_{2} < b_{2} < \ldots < a_{j} < b_{j}, j\ge 2,\\
+F=q f_{b_{1}} \prod_{i=2}^{j} h_{a_{i}} f_{b_{i}}.
+\end{gathered}
+}{R28.L29}
+
+The first unit arm points toward the terminal, each \(f\) arm points entirely outward, and each \(h\) arm has its first edge toward the terminal and all later edges toward the leaf. Every one of the \(L\ge 1\) connector edges points from terminal toward receiver. The actual existing receiving arm points outward and has its original length \(a\ge 3\). Its factor is exactly \(f_a\). The bound is:
+
+\fitdisplay{
+E[E_o f_a {T^L(E_t F)}^4] \le 1-d/3000.
+}{R28.1.1}
+
+\(E_t\) and \(E_o\) are arbitrary actual equal-pair products in their original locations. All finite residual lengths/gaps and all finite \(j\) are allowed. In this particular theorem one fixed \(F\) works for every \(L\) and every host. No orientation is selected according to \(d\) or another host statistic.
+
+We divide the integer parameters into four cases:
+
+\begin{description}[style=nextline,leftmargin=1.6em,before=\raggedright]
+\item[{I}] Exact condition: \(b_{1}\ge 3\);\par\noindent Analytic ranges: low \(d\le \frac{1}{64}\);\par\noindent same-direction high comparison.
+\item[{II}] Exact condition: \(b_{1}=2,\allowbreak \allowbreak a_{2}\ge 4\);\par\noindent Analytic ranges: low \(d\le \frac{1}{64}\);\par\noindent same-direction high comparison.
+\item[{IIIa}] Exact condition: \(b_{1}=2,\allowbreak \allowbreak a_{2}=3,\allowbreak \allowbreak j=2\);\par\noindent Analytic ranges: low \(d\le \frac{1}{8}\);\par\noindent same-direction high comparison.
+\item[{IIIb}] Exact condition: \(b_{1}=2,\allowbreak \allowbreak a_{2}=3,\allowbreak \allowbreak j\ge 3\);\par\noindent Analytic ranges: complete global finite-mask proof.
+\end{description}
+
+The low/high partitions change only estimates of the same message.
+
+\paragraph{R28.2 Original finite calculus and the actual receiver}
+
+Work on the positive support of the original \(\mu\). Write
+
+\fitdisplay{
+\begin{gathered}
+B=-K, u=B\one, T=J+B, A=J-B=T^*, Jv=(Ev)\one,\\
+p=1-u, q=1+u, f_n=A^n\one, \bar f_n=T^n\one, h_n=T f_{n-1},\\
+\delta_i=\lVert B^i\one\rVert ^2, d=\delta_1, \theta=\frac{13}{32}, \kappa=\frac{19}{32}, \tau=d-\delta_2.
+\end{gathered}
+}{R28.L60}
+
+The original C014 finite calculus gives \(0\le d\le \frac{1}{3},\allowbreak \allowbreak  d^2\le \delta_2,\allowbreak \allowbreak  \delta_{i+1}\le \theta\cdot \delta_i,\allowbreak \allowbreak  \lVert B\rVert ^2\le \theta\) and \(\lvert BV(x)\rvert \le \lVert V\rVert \). \(A,\allowbreak \allowbreak T\) are positive kernels, all actual path messages lie in[0,2], and \(E f_n=E \bar f_n\le 1\). On every positive-mass atom, \(p,\allowbreak \allowbreak q\ge \mu(x)>0\). The equality \(f_l+h_l=2E f_{l-1}\) gives \(0\le f_l h_l\le 1\) for genuine equal pairs.
+
+Put \(G_n(z)=\sum_{r=0}^{n-1}z^r,\allowbreak \allowbreak  G_{0}=0,\allowbreak \allowbreak  \beta_{1}=\beta_{2}=0\) and
+
+\fitdisplay{
+\beta_n=\sum_{i=1}^{{\lfloor (n-1)/2\rfloor}}(-1)^{i-1}\delta_i, n\ge 3.
+}{R28.L72}
+
+Finite positive convolution gives
+
+\fitdisplay{
+\begin{gathered}
+1+G_n(B)u=\bar f_n+\sum_{r=3}^{n} \beta_r \bar f_{n-r},\\
+\tau\le \beta_r\le d (r\ge 3), \beta_{3}=\beta_{4}=d.
+\end{gathered}
+}{R28.2.1}
+
+These are finite identities, with the actual \(\beta_{1},\allowbreak \allowbreak \beta_{2}\) retained as zero. For \(z=i \sqrt{x},\allowbreak \allowbreak 0\le x\le \theta\), the real/normalized-imaginary coordinates of \(G_n\) lie in \([1-x,\allowbreak \allowbreak 1]\) for \(n\ge 2\). Its real coordinate is \(\le 1-x+x^2\) for \(n\ge 3\); both coordinates obey that upper for \(n\ge 4\). Every \(n\ge 3\) contracts, while \(\lVert G_{2}\rVert =\sqrt{1+x}<\frac{6}{5}\). The strengthened finite gap is
+
+\fitdisplay{
+\lvert G_n\rvert ^2\le 1-7x/15, n\ge 3.
+}{R28.2.2}
+
+This exact finite fact is proved in Q5-C025/E004. For example the only potentially larger tail numerator is \((1+x^3)^2\); comparison after multiplying by \(1+x\) reduces to \(8-7x-30x^2-15x^5\ge \frac{1311885}{33554432}>0\) at its decreasing endpoint \(\theta\). Odd tails and multiples of four satisfy the stronger respective bounds.
+
+The same weak receiver is
+
+\fitdisplay{
+\begin{gathered}
+0\le f_a\le C=1-G_a(-B)u-\beta_a,\\
+EC=1-\beta_a-\beta_{a+1}\le 1-d,\\
+C\le p+(\frac{6}{5})\sqrt{d}, a\ge 3.
+\end{gathered}
+}{R28.2.3}
+
+Let \(\sigma\) denote \(u\)'s original spectral measure for \(-B^2\); its mass isd and \(\int  x^r d \sigma=\delta_{r+1}\). If \(H=Q(B)u\) and \(EH=-\alpha\), exact adjunction gives
+
+\fitdisplay{
+\operatorname{Cov}(C,H)=-\int  \operatorname{Re}(G_a Q)d \sigma-\beta_{a+1}\cdot \alpha.
+}{R28.2.4}
+
+For every actual nonnegative \(Y\) and its actual mean \(m\),
+
+\fitdisplay{
+E[CY^4]=(EC)m^4+4m^3\operatorname{Cov}(C,Y)
++E[C(Y-m)^2{(Y+m)^2+2m^2}].
+}{R28.2.5}
+
+
+Useful all-finite receiving bounds are
+
+\fitdisplay{
+\begin{gathered}
+\operatorname{Re}(G_a G_{2})\ge 1-2x\ge \frac{3}{16},\\
+\operatorname{Re}(G_a G_{3})\ge 1-3x+x^2\ge -\frac{55}{1024}>-\frac{3}{50},\\
+\operatorname{Re}(G_a G_{4})\ge (1-x)(1-2x)\ge \frac{57}{512},\\
+\operatorname{Re}(G_a G_{5})\ge (1-x)^3>\frac{1}{5},\\
+\operatorname{Re}(G_a G_n)\ge 1-3x+2x^2-x^3\ge \frac{1451}{32768}, n\ge 6.
+\end{gathered}
+}{R28.2.6}
+
+Also \(G_{6}=A_{3}(x)(1+z),\allowbreak \allowbreak  A_{3}=1-x+x^2\), so its receiving lower is at least \(\frac{57}{512}\). The last cubic in(R28.2.6) decreases on \([0,\allowbreak \allowbreak \theta]\). In all cases \(a=3\) and zero frequency are included.
+
+\paragraph{R28.3 Finite masks and positive propagation}
+
+For an actual pair define \(R_{st}=\sum_{n=s+1}^{t}K^n\one\). Exact finite differences and nonnegative AM-GM give
+
+\fitdisplay{
+\begin{gathered}
+q f_{b_{1}}\le \exp(R_{1b_1}-\beta_{b_{1}}),\\
+h_s f_t\le \exp(R_{st}-16d/5), 4\le s<t,
+\end{gathered}
+}{R28.3.1}
+
+\fitdisplay{
+h_{3} f_t\le \exp(R_{3t}-\tau\cdot g-(3d-2\delta_2)), t\ge 4,
+g=K\one=-u.
+}{R28.L130}
+
+For the last line retain the actual \(\beta_{t-1}f_{1}\) term in \(f_t-f_{3}\). For the long-pair line \(s=4\) retain \(-\tau\cdot f_{2}\) and use \(f_{2}\ge p^2/2\), which bounds \(\delta_2(1+p)-\tau f_{2}\) by \(3d/4\). For \(s\ge 5\) the actual path mean \(E f_n\le 1-83d/32,\allowbreak \allowbreak n\ge 4\), combined with the finite difference positive part \(4\delta_2/(1-\theta^2)\le 1664d/855\) leaves loss \(\frac{83}{16}-\frac{1664}{855}>\frac{16}{5}\). These exact finite proofs are given in the actual C092§2, C067§2 and reproduced E004§2.2.
+
+Let \(R_0=\sum_i R_{a_i,\allowbreak \allowbreak b_i}\) with \(a_{1}=1\). Then \(R_0=BP_{0}(-B)u\), where \(P_0\) is one finite \(\frac{0}{1}\) polynomial coming from all disjoint original pair intervals. Write at \(z=i \sqrt{x}\)
+
+\fitdisplay{
+P_0(-z)=U_0(x)-z V_0(x), c(x)=1/(1-x^2),
+R_0=(x V_0+z U_0)(B)u.
+}{R28.L146}
+
+Grouping the four coefficient residue classes gives
+
+
+\begingroup\small
+\setlength{\tabcolsep}{3pt}
+\setlength{\LTleft}{0pt}\setlength{\LTright}{\fill}
+\begin{longtable}{@{}p{0.1200\linewidth}p{0.2667\linewidth}p{0.2667\linewidth}p{0.2667\linewidth}@{}}
+\caption{Even terminal lists of minimum one, including the global third class: parameter values.}\label{tab:parameters:r2-c028:2}\\
+\toprule
+Entry & Mandatory coefficients & Exact useful coordinates & \(\lvert P_0\rvert ^2\) upper \\
+\midrule\endfirsthead
+\toprule
+Entry & Mandatory coefficients & Exact useful coordinates & \(\lvert P_0\rvert ^2\) upper \\
+\midrule\endhead
+\bottomrule\endfoot
+I & \((P_0)_0=(P_0)_1=1\); & \(1-xc\le U_0,\allowbreak \allowbreak V_0\le c\); & \(\frac{100}{49}\). \\
+\addlinespace[2pt]
+II & \((P_0)_0=1,\allowbreak \allowbreak (P_0)_1=(P_0)_2=0\); & \(1-x^3c\le U_0\le 1+x^2c; -xc\le V_0\le x^2c\); & \(\frac{25}{16}\). \\
+\addlinespace[2pt]
+III & \((P_0)_0=(P_0)_2=1,\allowbreak \allowbreak (P_0)_1=0\); & \(1-xc\le U_0\le 1-x/3; -xc\le V_0\le x^2c\); & 1. \\
+\end{longtable}
+\endgroup
+
+
+For a general \(\frac{0}{1}\) mask its square is at most \((1+x)/(1-x^2)^2\le \frac{32768}{16245} <\frac{100}{49}\). The missing II coefficients improve this to \((1+x^3)/(1-x^2)^2<\frac{25}{16}\). In III the compulsory negative real term gives \((1-x/3)^2+(\frac{16}{9})x^3\le 1-x/6\le 1\). These bounds apply to each finite mask.
+
+Thus \(F\le \exp(R-\Gamma)\), where
+
+
+\begingroup\small
+\setlength{\tabcolsep}{3pt}
+\setlength{\LTleft}{0pt}\setlength{\LTright}{\fill}
+\begin{longtable}{@{}p{0.1200\linewidth}p{0.4000\linewidth}p{0.4000\linewidth}@{}}
+\caption{Even terminal lists of minimum one, including the global third class: parameter values.}\label{tab:parameters:r2-c028:3}\\
+\toprule
+Entry & Actual \(R\) & \(\Gamma\) lower \\
+\midrule\endfirsthead
+\toprule
+Entry & Actual \(R\) & \(\Gamma\) lower \\
+\midrule\endhead
+\bottomrule\endfoot
+I & \(R_0\); & \((\frac{607}{160})d+(\frac{16}{5})(j-2)d\). \\
+\addlinespace[2pt]
+II & \(R_0\); & \((\frac{16}{5})(j-1)d\). \\
+\addlinespace[2pt]
+III & \(R_0+\tau\cdot u\); & \((\frac{35}{16})d+(\frac{16}{5})(j-2)d\). \\
+\end{longtable}
+\endgroup
+
+
+Suppose \(e^R\le 1+R+(\eta/2)R^2\). Write \(D_i=E B^iR\) and choose a scalar \(D\ge D_0+\eta\cdot ER^2; D\) can be an explicitly enlarged nonnegative value. Original positive \(T\) and \(T(R^2)\le 2ER^2\) give the actual nonnegative upper
+
+\fitdisplay{
+\begin{gathered}
+0\le e^\Gamma T^LF\le Y_L\\
+=\bar f_L+B^L R+D \bar f_{L-1}+\sum_{i=1}^{L-1}D_i \bar f_{L-1-i}.
+\end{gathered}
+}{R28.3.2}
+
+Put \(\epsilon=D+D_1\) and for \(n\ge 2\)
+
+\fitdisplay{
+P_n=G_n+z^n U, R=U(B)u,
+Q_n=P_n+\epsilon G_{n-2}+D z^{n-2}.
+}{R28.L180}
+
+Then \(Q_{2}=G_{2}+D+z^2U,\allowbreak \allowbreak  Q_{n+1}=1+\epsilon+zQ_n\). The exact finite identity is
+
+\fitdisplay{
+\begin{gathered}
+Y_L=1+\epsilon+Q_Lu-\sum_{n=3}^{L}\gamma_n \bar f_{L-n},\\
+\gamma_{3}=d-D_2, \gamma_{4}=d+Dd-D_3,\\
+\gamma_n=\beta_n+D \beta_{n-1}+D_1 \beta_{n-2}-D_{n-1}, n\ge 5.
+\end{gathered}
+}{R28.3.3}
+
+In particular
+
+\fitdisplay{
+\begin{gathered}
+Y_{1}=q+D+BR,\\
+Y_{2}=q+\epsilon+B(D\one+u+BR),\\
+Y_{3}=(1+\epsilon)q-\gamma_{3}+BQ_2 u,\\
+EY_{1}=1+\epsilon, EY_{2}=1+\epsilon-\gamma_{3},\\
+EY_{3}=1+\epsilon-\gamma_{3}-\gamma_{4}.
+\end{gathered}
+}{R28.3.4}
+
+If all \(\gamma_n\ge h\cdot d,\allowbreak \allowbreak n\ge 3\), every original \(L\ge 4\) permits retaining exactly the last two true paths \(\gamma_L \bar f_{0}\) and \(\gamma_{L-1}\bar f_1\):
+
+\fitdisplay{
+0\le Y_L\le Z_L=1+\epsilon+Q_Lu-hd(1+q)
+=(1+\epsilon-hd)q-hd+BQ_{L-1}u.
+}{R28.L200}
+
+If \(H=Q_Lu\), then \(EH=-\gamma_{L+1},\allowbreak \allowbreak \langle H,\allowbreak \allowbreak u\rangle =\gamma_{L+2}\). Hence
+
+\fitdisplay{
+\begin{gathered}
+EZ\le 1+\epsilon-3hd,\\
+\operatorname{Var} Z=\lVert H\rVert ^2-2hd \gamma_{L+2}+h^2d^3-\gamma_{L+1}^2\\
+\le \lVert Q_L\rVert ^2d.
+\end{gathered}
+}{R28.3.5}
+
+Both extra mean indices are paid by the complete \(\gamma\) bound. The full \(L=2\) predecessor \(D\one+u+BR\) is distinct from its output centered variance.
+
+\paragraph{R28.4 Four self-contained scaled fourth-remainder estimates}
+
+Let \(t=\sqrt{d},\allowbreak \allowbreak 0\le q\le 2\) and suppose the nonnegative \(W\) and \(m=EW\) obey \(W\le e^{-\lambda d}(q+A t+v d),\allowbreak \allowbreak m\le e^{-\lambda d}(1+w d)\). Equation(R28.2.3) bounds the coefficient of \((W-m)^2\) in(R28.2.5) by \(e^{-2\lambda d} H\), where
+
+\fitdisplay{
+H=(2-q+(\frac{6}{5})t)[(q+1+A t+(v+w)t^2)^2+2(1+w t^2)^2].
+}{R28.4.1}
+
+With \(b=v+w,\allowbreak \allowbreak c=\frac{6}{5}\), direct multiplication gives \(H_{0}=6+q-q^3\le \frac{32}{5}\) and
+
+\fitdisplay{
+\begin{gathered}
+H_{1}=(c-2A)q^2+(2A+2c)q+4A+3c,\\
+H_{2}=-2bq^2+(2b-A^2-4w+2Ac)q+2A^2+4b+8w+2Ac,\\
+H_{3}=2b(c-A)q+4Ab+cA^2+2bc+4cw,\\
+H_{4}=(2-q)(b^2+2w^2)+2Abc,\\
+H_{5}=c(b^2+2w^2).
+\end{gathered}
+}{R28.4.2}
+
+The following table is proven below over the whole indicated intervals.
+
+
+\begingroup\small
+\setlength{\tabcolsep}{3pt}
+\setlength{\LTleft}{0pt}\setlength{\LTright}{\fill}
+\begin{longtable}{@{}p{0.2200\linewidth}p{0.1400\linewidth}p{0.1400\linewidth}p{0.1400\linewidth}p{0.1400\linewidth}p{0.1400\linewidth}@{}}
+\caption{Even terminal lists of minimum one, including the global third class: parameter values.}\label{tab:parameters:r2-c028:4}\\
+\toprule
+Entry & \(A,\allowbreak \allowbreak v,\allowbreak \allowbreak w\) & \(\lambda\) lower & \(t\) upper & \(H_{1},\allowbreak \allowbreak \ldots,\allowbreak \allowbreak H_{5}\) upper & Coefficient \(M\) \\
+\midrule\endfirsthead
+\toprule
+Entry & \(A,\allowbreak \allowbreak v,\allowbreak \allowbreak w\) & \(\lambda\) lower & \(t\) upper & \(H_{1},\allowbreak \allowbreak \ldots,\allowbreak \allowbreak H_{5}\) upper & Coefficient \(M\) \\
+\midrule\endhead
+\bottomrule\endfoot
+\(I/\) II & \(\frac{8}{5},\allowbreak \allowbreak \frac{3}{4},\allowbreak \allowbreak \frac{3}{4}\); & \(\frac{16}{5}\); & \(\frac{1}{8}\); & 14,22,20,13,5; & 8. \\
+\addlinespace[2pt]
+IIIa \(L=1\) & \(\frac{7}{10},\allowbreak \allowbreak \frac{1}{40},\allowbreak \allowbreak \frac{9}{40}\); & \(\frac{35}{16}\); & \(\frac{3}{8}\); & \(\frac{66}{5},\allowbreak \allowbreak 6,\allowbreak \allowbreak \frac{7}{2},\allowbreak \allowbreak \frac{3}{4},\allowbreak \allowbreak \frac{1}{5}\); & 8. \\
+\addlinespace[2pt]
+IIIa \(L=2\), new & \(\frac{21}{20},\allowbreak \allowbreak \frac{1}{6},\allowbreak \allowbreak 0\); & \(\frac{35}{16}\); & \(\frac{3}{8}\); & \(\frac{66}{5},\allowbreak \allowbreak \frac{189}{25},\allowbreak \allowbreak \frac{13}{5},\allowbreak \allowbreak \frac{1}{2},\allowbreak \allowbreak \frac{1}{20}\); & 8. \\
+\addlinespace[2pt]
+IIIa later & \(\frac{6}{5},\allowbreak \allowbreak \frac{1}{6},\allowbreak \allowbreak 0\); & \(\frac{35}{16}\); & \(\frac{3}{8}\); & \(\frac{66}{5},\allowbreak \allowbreak 9,\allowbreak \allowbreak 3,\allowbreak \allowbreak 1,\allowbreak \allowbreak 1\); & 9. \\
+\end{longtable}
+\endgroup
+
+
+For \(I/\) II, \(H_{1}=10+28q/5-2q^2<14,\allowbreak \allowbreak  H_{2}=\frac{524}{25}+(\frac{32}{25})q-3q^2<22,\allowbreak \allowbreak H_{3}=\frac{2484}{125}-(\frac{6}{5})q<20; H_{4}\le \frac{1251}{100}<13,\allowbreak \allowbreak H_{5}=\frac{81}{20}<5\). With \(t\le \frac{1}{8}\) this gives \(H\le \frac{32}{5}+14t+25t^2\). The difference from \(8e^{32t^2/5}\) is at least \(\frac{8}{5}-14t+(\frac{131}{5})t^2\), decreasing on \([0,\allowbreak \allowbreak \frac{1}{8}]\) to \(\frac{83}{320}>0\).
+
+For IIIa \(L=1,\allowbreak \allowbreak H_{1}=\frac{32}{5}+19q/5-q^2/5\le \frac{66}{5},\allowbreak \allowbreak  H_{2}=\frac{273}{50}+(\frac{79}{100})q-q^2/2<6\). The remaining coefficients follow directly from(R28.4.2). Thus \(H\le \frac{32}{5}+(\frac{66}{5})t+(\frac{15}{2})t^2\). The lower difference from \(8e^{35t^2/8}\) is \(\frac{8}{5}-(\frac{66}{5})t+(\frac{55}{2})t^2\), discriminant \(-\frac{44}{25}\).
+
+For the NEW \(L=2\) row, \(H_{1}\) and \(H_{2}\) increase on \(q\in  [0,\allowbreak \allowbreak 2]\) and reach \(\frac{66}{5}\) and \(\frac{189}{25}\). \(H_{3}=\frac{2423}{1000}+q/20<\frac{13}{5},\allowbreak \allowbreak H_{4}\le \frac{1}{18}+\frac{21}{50}<\frac{1}{2},\allowbreak \allowbreak H_{5}=\frac{1}{30}<\frac{1}{20}\). Consequently \(H\le \frac{32}{5}+(\frac{66}{5})t+(\frac{44}{5})t^2\). Positive exponential Taylor gives
+
+\fitdisplay{
+8e^{35t^2/8}-H\ge \frac{8}{5}-(\frac{66}{5})t+(\frac{131}{5})t^2+75t^4.
+}{R28.4.3}
+
+For \(t\le \frac{1}{8}\) its quadratic alone is \(\ge \frac{23}{64}\). For \(t\ge \frac{1}{8}\) use \(75t^4\ge 75t^2/64\): the resulting quadratic has \(t^2\) coefficient \(\frac{8759}{320}\) and discriminant \(-\frac{47}{50}\). This pays the full actual range, without a scan.
+
+For the last row, \(H_{1}=\frac{42}{5}+24q/5-6q^2/5\le \frac{66}{5}\) and \(H_{2}=\frac{482}{75}+(\frac{133}{75})q-q^2/3<9\); the remaining coefficients are \(\le 3,\allowbreak \allowbreak 1,\allowbreak \allowbreak 1\). Thus \(H\le \frac{32}{5}+(\frac{66}{5})t+11t^2\), and the difference from \(9e^{35t^2/8}\) is at least \(\frac{13}{5}-(\frac{66}{5})t+(\frac{227}{8})t^2\), with negative discriminant.
+
+All squared majorants dominate the same nonnegative \(W+m\). These comparisons prove that the actual remainder coefficient is \(\le M\). In particular for \(W=e^{-\lambda d} Y\),
+
+\fitdisplay{
+\begin{gathered}
+E[CW^4]\le e^{-4\lambda d}[(EC)(EY)^4+4(EY)^3\operatorname{Cov}(C,Y)]\\
++M e^{-2\lambda d} \operatorname{Var}Y.
+\end{gathered}
+}{R28.4.4}
+
+The variance has the second-power scale, not the fourth-power scale.
+
+\paragraph{R28.5 Classes I and II: complete low-domain packet and finite bounds}
+
+Assume \(0<d\le \frac{1}{64}\). The original row bound gives \(\lvert R_0\rvert ^2<100d/49<\frac{1}{25}\), so \(\eta=\frac{15}{14}\) is valid (use \(n!\ge 2\cdot 3^{n-2}\)). Set \(D=3d/8\) in I and \(D=0\) in II. The actual signed packet, from the finite coordinates in§3, is
+
+
+\begingroup\small
+\setlength{\tabcolsep}{3pt}
+\setlength{\LTleft}{0pt}\setlength{\LTright}{\fill}
+\begin{longtable}{@{}p{0.1200\linewidth}p{0.2667\linewidth}p{0.2667\linewidth}p{0.2667\linewidth}@{}}
+\caption{Even terminal lists of minimum one, including the global third class: parameter values.}\label{tab:parameters:r2-c028:5}\\
+\toprule
+Entry & \(\E R_0^2\) upper & \(D_1/d\) & \(\epsilon/d\) \\
+\midrule\endfirsthead
+\toprule
+Entry & \(\E R_0^2\) upper & \(D_1/d\) & \(\epsilon/d\) \\
+\midrule\endhead
+\bottomrule\endfoot
+I & \(325d/392\); & \([-\frac{1}{2},\allowbreak \allowbreak 0]\); & \([-\frac{1}{8},\allowbreak \allowbreak \frac{3}{8}]\). \\
+\addlinespace[2pt]
+II & \(325d/512\); & \([-\frac{1}{12},\allowbreak \allowbreak \frac{1}{5}]\); & \([-\frac{1}{12},\allowbreak \allowbreak \frac{1}{5}]\). \\
+\end{longtable}
+\endgroup
+
+
+Indeed I has \(\E R_0\le -439d/855\) and \(\E R_0+(\frac{15}{14})\E R_0^2\le (-\frac{439}{855}+\frac{4875}{5488})d<3d/8\). II has \(\E R_0\le -11d/12\) and corresponding scalar \(\le (-\frac{11}{12}+\frac{4875}{7168})d<0\). For I the real/imaginary first coefficients give \(D_1\le 0\); for II use \(V_0\in  [-xc,\allowbreak \allowbreak x^2c]\). In both cases
+
+\fitdisplay{
+0\le D_2\le d/2, D_3\le d/5, D_i\le d/10 \quad\text{for } \text{every } i\ge 4.
+}{R28.5.1}
+
+Explicitly \(D_2=\int  xU_{0},\allowbreak \allowbreak D_3=\int  x^2V_0,\allowbreak \allowbreak D_4=-\int  x^2U_0\le 0,\allowbreak \allowbreak  D_5=-\int  x^3V_0\le d/30,\allowbreak \allowbreak D_6\le C_\beta\cdot \delta_4<d/10,\allowbreak \allowbreak D_7\le C_\beta\cdot \delta_5<d/10\); each later residue class decays by \(\theta^2\). Here \(C_\beta=\frac{1024}{855}\). These are upper bounds on the actual signed means, not absolute values.
+
+Equation(R28.3.3) gives \(\gamma_{3}\ge d/2,\allowbreak \allowbreak \gamma_{4}\ge 4d/5\). For \(n\ge 5\), using \(D\ge 0\) and \(\beta\le d\),
+
+\fitdisplay{
+\gamma_n \ge  \kappa\cdot d-d/10-d^2/2 \ge 3d/8.
+}{R28.L299}
+
+The II lower \(D_1=-d/12\) is stronger. Thus take \(h=\frac{3}{8}\) for every required index. The actual means from(R28.3.4)-(R28.3.5) obey
+
+\fitdisplay{
+\begin{gathered}
+EY_{1}\le 1+3d/8 (I), \le 1+d/5 (II),\\
+EY_{2}\le 1-d/8 (I), \le 1-3d/10 (II),\\
+EY_{3}\le 1-37d/40, EZ_L\le 1-3d/4 (L\ge 4).
+\end{gathered}
+}{R28.5.2}
+
+\(At\) frequencyz the actual \(U=R_0/u=zP_{0}(-z)\) has \(\lvert U\rvert <1\), since \(x\lvert P_0\rvert ^2\le \frac{325}{392}<1\). The symbols are
+
+\fitdisplay{
+Q_{1}=1+z^2P_0(-z): (1-xU_{0}, xV_{0}),
+Q_{2}: (1+D-x^2V_0, 1-xU_{0}).
+}{R28.5.3}
+
+All \(Q_{2}\) coordinates are positive. In I its real coordinate \(\le 1+\frac{3}{512}\), in II \(\le \frac{13}{12}\); both imaginary coefficient \(s\le 1\). Hence
+
+\fitdisplay{
+\lVert Q_{2}\rVert ^2\le \frac{13}{8}, \lVert Q_{2}\rVert <4/3.
+}{R28.5.4}
+
+For \(Q_{3},\allowbreak \allowbreak \lvert P_{3}\rvert \le 1+\theta^{3/2}<\frac{19}{15}\); the added \(\epsilon+\) Dz vector costs at most \(9d/20\) in I andd/5 in II. Thus \(\lVert Q_{3}\rVert <\frac{4891}{3840}<\frac{51}{40}\). For every \(n\ge 4\),
+
+\fitdisplay{
+\lVert Q_n\rVert \le 6/5.
+}{R28.5.5}
+
+\(At n=4\) use \(1+\theta^2+(\frac{3}{8})(\frac{6}{5}+\theta)/64<\frac{6}{5}\). Subsequent \(G\) predecessors contract and their perturbation powers decrease. The II fee is smaller.
+
+Here are all receiving signs, including the genuine short cases. \(At L=1\),I has \(\operatorname{Re}(G_a Q_{1})\ge 1-x-x/(1-x^2)\ge \frac{2933}{27360}>\frac{17}{160}\). II has lower \(1-(\frac{11}{5})x+x^2>\frac{17}{160}\). I's mean correction is favorable; II's adverse correction is \(\le d^2/5\), smaller than \(17d/160\). Thus \(\operatorname{Cov}(C,\allowbreak \allowbreak Y_{1})\le 0\). \(At L=2\),
+
+\fitdisplay{
+\begin{gathered}
+\operatorname{Re}(G_a Q_{2})\ge (1-x)(1+D-x^2V_0)-x(1-xU_{0})\\
+\ge 1-2x+x^2[U_0-(1-x)V_0].
+\end{gathered}
+}{R28.5.6}
+
+I gives lower \(1-2x-x^4/(1-x^2)\ge \frac{3}{16}-\frac{1}{30}>0\). II gives \(U_0\ge \frac{11}{12},\allowbreak \allowbreak V_0\le \frac{1}{5}\), so the bracket is positive. The actual \(\alpha=\gamma_{3}>0\); hence \(\operatorname{Cov}(C,\allowbreak \allowbreak Y_{2})\le 0\).
+
+For every \(n\ge 4,\allowbreak \allowbreak \operatorname{Re}(G_a P_n)\ge 0\). \(At n=4\), I gives the decreasing lower \(1-3x+2x^2-(\frac{6}{5})x^3\), still \(\frac{1}{96}\) at \(x=\frac{5}{12}\). In II, after multiplication by \(1-x^2\), the lower is \(1-3x+x^2+2x^3-3x^4+x^5\). Its derivative is negative on \([0,\allowbreak \allowbreak \frac{5}{12}]\), and its \(\theta\) value is \(\frac{326653}{33554432}>0\). \(At n=5\) use baseline \(\frac{1}{5}\) and perturb \(\theta^{5/2}<\frac{1}{5}\). \(At n=6\) use the exact \(G_{6}\) baseline \(\frac{57}{512}\) and perturb \(\theta^3<\frac{57}{512}\). \(At\) every \(n\ge 7\) use the last baseline in(R28.2.6) and
+
+\fitdisplay{
+\theta^{7/2}<(\frac{16}{25})\theta^3<1451/32768.
+}{R28.L349}
+
+Thus the general \(\frac{1}{10}\) bound is unnecessary. \(At n=3\) the lower is greater than \(-\frac{3}{50}-\theta^{3/2}>-\frac{1}{3}\). Including the true \(\epsilon\) and D terms,
+
+\fitdisplay{
+\begin{gathered}
+\operatorname{Cov}(C,Y_{3})\le d/3+(\frac{3}{10})d^2,\\
+\operatorname{Cov}(C,Z_L)\le d^2, L\ge 4.
+\end{gathered}
+}{R28.5.7}
+
+For \(L=3\) the adverse fee is \(\le d^2/8+(3\theta/8)d^2<3d^2/10\) in I and \(\le d^2/12\) in II. For long \(L\) use(R28.2.4), the paid \(P_L\) sign, the actual real \(G_{2}\) product in \([\frac{3}{16},\allowbreak \allowbreak 1]\) at \(L=4\), and the translationhd \(*u\). Its fee is at most \((\frac{3}{8}+3\theta/8+\frac{3}{8})d^2<d^2\); II is smaller. The mean correction is favorable.
+
+\paragraph{R28.6 Classes I and II: all low lengths and final continuous payment}
+
+Every row fits the \(I/\) II coefficient-eight lemma of§4. \(At L=1\) use \(\lVert R_0\rVert <\sqrt{d}\) and \(D\le 3d/8\). \(At L=2\) the FULL precursor norm is
+
+\fitdisplay{
+\lVert D\one+u+BR\rVert ^2=d-2D_2+\lVert BR\rVert ^2+D^2+2D D_1 <(\frac{8}{5})^2d.
+}{R28.6.1}
+
+In I the last cross is nonpositive; in II \(D=0\). \(At L=3\) use \(\lVert Q_{2}\rVert <\frac{4}{3}\) and \(\epsilon\cdot q-\gamma_{3}\le d/4\). For \(L=4\) the predecessor \(Q_{3}<\frac{51}{40}\); later one \(s<\frac{6}{5}\), and \((\epsilon-hd)q-hd\le 0\). All actual means are \(\le 1+3d/4\).
+
+The actual variances are
+
+\fitdisplay{
+\begin{gathered}
+\operatorname{Var}Y_{1}=d-2D_2+\lVert BR\rVert ^2-D_1^2\le 27d/20,\\
+\operatorname{Var}Y_{2}\le 13d/8,\\
+\operatorname{Var}Y_{3}\le (\frac{51}{40})^2d,\\
+\operatorname{Var}Z_L\le 36d/25.
+\end{gathered}
+}{R28.6.2}
+
+The \(L=2\) variance uses its output \(Q_{2}\), not(R28.6.1). The long bound follows only after retaining the full mean/cross terms in(R28.3.5).
+
+Use \(\lambda=\frac{607}{160}\) in I and \(\frac{16}{5}\) in II. Formula(R28.4.4) gives
+
+\fitdisplay{
+\begin{gathered}
+L1: E[CW^4]\le e^{-64d/5}+(\frac{54}{5})d e^{-32d/5},\\
+L2: E[CW^4]\le e^{-15d}+13d e^{-6d},\\
+L3 \text{or } L\ge 4: E[CW^4]\le e^{-14d}+(\frac{53}{4})d e^{-6d}.
+\end{gathered}
+}{R28.6.3}
+
+For \(L=1\) the mean exponents are at least \(\frac{587}{40}\) and 13; the covariance is nonpositive. \(L=2\) gives mean exponents at least \(\frac{667}{40}\) and 15. For \(L=3\) use mean \(\le 1-37d/40\) and(R28.5.7): its first two terms are at most \(e^{-31d/2}[1+(\frac{4}{3}+\frac{3}{160})d]\le e^{-14d}\). Its variance coefficient is \(\frac{2601}{200}<\frac{53}{4}\). The long mean exponent is \(\ge \frac{84}{5}\); the covariance term has exponent \(\ge \frac{301}{20}>15\), so their sum \(\le e^{-15d}(1+4d^2)\le e^{-14d}\). Its variance coefficient \(\frac{288}{25}\) is smaller than \(\frac{53}{4}\). In all rows \(2\lambda\ge \frac{32}{5}>6\).
+
+Full continuous scalar certificates on \(0\le d\le \frac{1}{64}\):
+
+\begin{itemize}
+\item The first row use \(s2\sinh\): loss \(\ge 2d e^{-32d/5}>d\).
+\item The second uses the quadratic exponential upper and gives loss
+\end{itemize}
+
+\fitdisplay{
+\ge 2d-(\frac{69}{2})d^2-234d^3>d.
+}{R28.L400}
+
+\begin{itemize}
+\item The third gives loss \(\ge (\frac{3}{4})d-(\frac{37}{2})d^2-(\frac{477}{2})d^3\)
+\end{itemize}
+
+\fitdisplay{
+\ge 3299d/8192>d/4.
+}{R28.L402}
+
+All are stronger than(R28.1.1).
+
+\paragraph{R28.7 Class IIIa: the true short symbols and complete low packet}
+
+Now \(F=q f_{2} h_{3} f_b,\allowbreak \allowbreak b\ge 4\), with \(0<d\le \frac{1}{8}\). Put \(m=b-3\ge 1\) and \(G_m(-z)=A_0-z C_0,\allowbreak \allowbreak 1-x\le A_0\le 1,\allowbreak \allowbreak 0\le C_0\le 1\). The exponent is
+
+\fitdisplay{
+R=[\tau+z+z^3G_m(-z)]u,
+\Gamma=3d-2\delta_2\ge 35d/16.
+}{R28.7.1}
+
+Thus \(R_0=zP_{0}(-z)u\) with \(P_0(-z)=1+z^2G_m(-z)\), coordinates \(U_0=1-xA_{0},\allowbreak \allowbreak V_0=-xC_{0}\le 0,\allowbreak \allowbreak \lvert P_0\rvert \le 1\). The original row gives \(\lvert R\rvert \le \sqrt{d}+d<\frac{1}{2}\) and \(\eta=\frac{6}{5}\) is legal. The full signed square obeys
+
+\fitdisplay{
+\begin{gathered}
+ER^2\le \delta_2+\tau^2d,\\
+ER\le -d+\delta_2,\\
+ER+(\frac{6}{5})ER^2\le -d+(\frac{11}{5})\delta_2+(\frac{6}{5})\tau^2d\le -7d/80<0.
+\end{gathered}
+}{R28.7.2}
+
+The cross \(2\tau\langle u,\allowbreak \allowbreak R_0\rangle \) is nonpositive, not discarded as an absolute value. Choose \(D=0\). Then
+
+\fitdisplay{
+\begin{gathered}
+\epsilon=D_1=-\tau\cdot d+\int  x^2 C_0 \in [-d^2,\delta_3],\\
+D_2=\delta_2-\int  x^2 A_0 \in [\delta_2-\delta_3,\delta_2],\\
+D_3=\tau\cdot \delta_2-\int  x^3 C_0\le \theta\cdot d^2.
+\end{gathered}
+}{R28.7.3}
+
+For every \(i\ge 4,\allowbreak \allowbreak D_i\le d/10: D_4\le 0,\allowbreak \allowbreak D_5\le \delta_5,\allowbreak \allowbreak D_6\le \delta_4,\allowbreak \allowbreak D_7\le \tau\cdot \delta_4\), and the four signed classes subsequently decay by \(\theta^2\). Therefore
+
+\fitdisplay{
+\begin{gathered}
+\gamma_{3}\ge \kappa\cdot d,\gamma_{4}\ge 243d/256,\\
+\gamma_n\ge [\kappa-\frac{1}{10}-d^2]d\ge 153d/320>7d/16,n\ge 5.
+\end{gathered}
+}{R28.7.4}
+
+Take \(h=\frac{7}{16}\) for all needed indices. The short symbols are
+
+\fitdisplay{
+\begin{gathered}
+Q_{1}=1+z^2+z^4G_m(-z)+\tau\cdot z,\\
+Q_{2}=G_{2}+\tau\cdot z^2+z^3+z^5G_m(-z),\\
+Q_{2} coordinates: (1-\tau\cdot x+x^3C_0, 1-x+x^2A_0).
+\end{gathered}
+}{R28.7.5}
+
+These expressions follow from (R28.3.4).
+
+\paragraph{R28.7.1 \(L=1\)}
+
+Let \(Q_{0}=1+z^2+z^4G_m(-z)\), with coordinates \((1-x+x^2A_0,\allowbreak \allowbreak -x^2C_0)\). Then \(\lvert Q_{0}\rvert ^2\le (1-x+x^2)^2+x^5\le 1\) on \(x\le \theta<\frac{1}{2}\), and \(\langle Q_0 u,\allowbreak \allowbreak Bu\rangle =-\int  x^3C_0\le 0\). Hence
+
+\fitdisplay{
+\operatorname{Var}Y_{1}\le d+\tau^2\delta_2\le d+\theta\cdot d^3.
+}{R28.7.6}
+
+The receiving lower is \(\operatorname{Re}(G_a Q_{1})\ge (1-x)^2-\tau\cdot x \ge \kappa^2-\theta/8\). Its possible bad mean correction is \(\le \theta^2d^2\), so \(\operatorname{Cov}(C,\allowbreak \allowbreak Y_{1})\le 0\). The actual mean is \(\le 1+\theta^2d\) and pointwise \(Y_{1}\le q+\sqrt{\delta_2+\tau^2d}\le q+(\frac{7}{10})\sqrt{d}\). These meet the IIIa \(L=1\) lemma in§4. The mean exponent \(4\lambda+1-4\theta^2>9\); the variance exponent \(2\lambda-\theta/8>4\). Thus
+
+\fitdisplay{
+E[CW^4]\le e^{-9d}+8d e^{-4d}.
+}{R28.7.7}
+
+\paragraph{R28.7.2 \(L=2\): variance, curvature and covariance}
+
+The finite parity identity gives \(C_0-A_0\le x\): even \(m\) has equal coordinates; odd \(m\) contributes one signed power (and \(m=1\) has difference-1). By(R28.7.3),
+
+\fitdisplay{
+\begin{gathered}
+EY_{2}=1-\tau-\tau\cdot d+\int  x^2(C_0-A_0),\\
+\frac{55}{64}\le 1-d-d^2\le EY_{2}\le 1-(\kappa-\theta^3)d\le 1-d/2.
+\end{gathered}
+}{R28.7.8}
+
+The \(Q_{2}\) coordinates in(R28.7.5) are positive, and
+
+\fitdisplay{
+\begin{gathered}
+\operatorname{Re}(G_a Q_{2})\ge (1-x)(1-\tau\cdot x)-x(1-x+x^2)\\
+\ge \frac{8367}{32768}>1/4.
+\end{gathered}
+}{R28.7.9}
+
+The polynomial decreases on \([0,\allowbreak \allowbreak \theta]\) after \(\tau\le \frac{1}{8}\). The actual mean parameter is \(\gamma_{3}>0\), so \(\operatorname{Cov}(C,\allowbreak \allowbreak Y_{2})\le -d/4\).
+
+The correct squared symbol is bounded by
+
+\fitdisplay{
+P(x)=(1+x^3)^2+x(1-x+x^2)^2
+=1+x-2x^2+5x^3-2x^4+x^5+x^6.
+}{R28.L481}
+
+\(P'\ge 1-4x+11x^2>0\) on \([0,\allowbreak \allowbreak \theta]\); the exact endpoint difference is \(\frac{11}{8}-P(\theta)=\frac{2692519}{1073741824}>0\). Keep the actual mean subtraction:
+
+\fitdisplay{
+\operatorname{Var}Y_{2}\le (\frac{11}{8})d-\kappa^2d^2.
+}{R28.7.10}
+
+The FULL predecessor \(Q_1 u\) has squared norm \(\le d+\tau^2\delta_2<(\frac{21}{20})^2d\) by(R28.7.6), and \(\epsilon\le \theta^2d<d/6\). Hence \(Y_{2}\le q+(\frac{21}{20})\sqrt{d}+d/6\), with \(EY_{2}\le 1\). The NEW coefficient-eight lemma of§4 applies. From(R28.7.8)-(R28.7.9),
+
+\fitdisplay{
+\begin{gathered}
+e^{-4\lambda d}[(EC)(EY_{2})^4+4(EY_{2})^3\operatorname{Cov}(C,Y_{2})]\\
+\le e^{-4\lambda d}[e^{-3d}-(\frac{3}{5})d]\le e^{-247d/20},
+\end{gathered}
+}{R28.7.11}
+
+because \((\frac{55}{64})^3>\frac{3}{5}\) and \(e^{-3d}-e^{-18d/5}\le 3d/5\). Thus
+
+\fitdisplay{
+E[CW^4]\le e^{-247d/20}+[11d-(\frac{361}{128})d^2]e^{-35d/8}.
+}{R28.7.12}
+
+The covariance sign and squared mean are retained; the argument needs no bound \(\lVert Q_{2}\rVert \le 1\).
+
+\paragraph{R28.7.3 \(L=3\)}
+
+The correct symbol is \(Q_{3}=G_{3}+\epsilon+\tau\cdot z^3+z^4+z^6G_m(-z)\). Before \(\epsilon\), its positive coordinates are \(1-x+x^2-x^3A_0\) and \(1-\tau\cdot x+x^3C_0\). Their squared sum is at most
+
+\fitdisplay{
+1-x+3x^2-2x^3+3x^4+x^7<9/8.
+}{R28.L509}
+
+Indeed \([-1+3x-2x^2+3x^3+x^6]\) increases on \([0,\allowbreak \allowbreak \frac{5}{12}]\) to \(\frac{373321}{2985984}<\frac{1}{6}\). Negative \(\epsilon\) reduces the positive real coordinate; positive \(\epsilon\) costs at most \(\theta^2d\). Thus \(\lVert Q_{3}\rVert <\frac{17}{16}+\frac{1}{48}=\frac{13}{12}\). The exact mean formula gives \(EY_{3}\le 1-4d/3\).
+
+Here \(\lvert U\rvert \le \tau+\sqrt{\theta}<\frac{31}{40}\), and(R28.2.6) gives \(\operatorname{Re}(G_a P_{3})>-\frac{3}{50}-(\frac{31}{40})(\frac{4}{15})=-\frac{4}{15}\). Positive \(\epsilon\) is favorable; negative \(\epsilon\) costs at most \(d^3;\gamma_{4}>0\). Hence
+
+\fitdisplay{
+\operatorname{Cov}(C,Y_{3})\le 4d/15+d^3.
+}{R28.7.13}
+
+The correct predecessor satisfies \(\lVert Q_{2}\rVert \le \sqrt{11/8}<\frac{6}{5}\), and \(\epsilon\cdot q-\gamma_{3}\le 2\delta_3-\kappa\cdot d<0\). So \(Y_{3}\le q+(\frac{6}{5})\sqrt{d}\) and the coefficient-nine lemma applies. The mean term \(\le e^{-15d}\) and the covariance term \(\le (16d/15+d^2/2)e^{-51d/4}\). Their sum \(\le e^{-13d}\): after dividing by \(e^{-51d/4}\), the needed difference is \(\ge 2d e^{-9d/4}>4d/3\), which exceeds \((\frac{16}{15}+\frac{1}{16})d\). Therefore
+
+\fitdisplay{
+E[CW^4]\le e^{-13d}+(\frac{169}{16})d e^{-35d/8}.
+}{R28.7.14}
+
+\paragraph{R28.7.4 Every finite \(L\ge 4\), with the preceding estimates}
+
+All \(P_n,\allowbreak \allowbreak n\ge 4\) contract. \(At n=4\) use \(\lvert G_{4}\rvert \le 1-x/2\) and perturb \(\le 31x^2/40<x/2\). \(At n=5\) use \(\lvert G_{5}\rvert \le 1-\kappa\cdot x/2\) and perturb \(\le 31x^{5/2}/40<\kappa\cdot x/2\). For every \(n\ge 6\) use(R28.2.2 \(),\allowbreak \allowbreak \lvert G_n\rvert \le 1-7x/30\), and \(31x^3/40<7x/30\). As \(\lvert \epsilon\rvert \le \theta^2d\) and \(\lVert G_{2}\rVert <\frac{6}{5}\),
+
+\fitdisplay{
+\lVert Q_n\rVert \le 1+(\frac{6}{5})\theta^2d<1+d/5, n\ge 4.
+}{R28.7.15}
+
+Every receiving \(P_n\) product is nonnegative. \(At n=4\) its exact coordinates are \(1-x+\tau\cdot x^2-x^4C_0\) and \(1-x+x^2-x^3A_0\). The receiving lower is \(1-3x+2x^2-x^3-x^4+x^5\), decreasing on \([0,\allowbreak \allowbreak \frac{5}{12}]\) to \(\frac{1817}{248832}>0\). \(At n=5\) use baseline \(\frac{1}{5}\) and its smaller perturbation. \(At n=6\) use the exact \(G_{6}\) baseline \(\frac{57}{512}\), which exceeds \((\frac{31}{40})\theta^3\). For \(n\ge 7\) use(R28.2.6) and
+
+\fitdisplay{
+(\frac{31}{40})\theta^{7/2}<(\frac{62}{125})\theta^3<1451/32768.
+}{R28.L546}
+
+With \(h=\frac{7}{16}\), the true \(Z_L\) has mean \(\le 1-9d/8\) and variance \(\le (1+d/5)^2d\) by(R28.3.5). Its \(L=4\) predecessor is the proved \(Q_{3}<\frac{13}{12}\); all later ones are \(\le 1+d/5<\frac{6}{5}\). The \(q\) excess \((\epsilon-hd)q-hd\) is nonpositive, so the same coefficient-nine lemma applies.
+
+For the covariance, negative \(\epsilon\) costs at most \(d^3\). Positive \(\epsilon\) can only be unfavorable when the predecessor is \(G_{3} (L=5)\), costing \(3\theta^2d^2/50\). The retained \(-hd\cdot u\) costs at most \(hd^2\), and the actual mean correction is favorable. Thus \(\operatorname{Cov}(C,\allowbreak \allowbreak Z_L)<3d^2/5\). Its first two terms are at most
+
+\fitdisplay{
+e^{-57d/4}+(\frac{12}{5})d^2e^{-97d/8}\le e^{-13d}.
+}{R28.L558}
+
+For the last comparison divide by \(e^{-97d/8}\) and use \(e^{-7d/8}-e^{-17d/8}\ge (\frac{5}{4})d e^{-17d/8}\ge 235d/256>3d/10\). The variance cost is \(\le 9d e^{-159d/40}\le 9d e^{-15d/4}\). Hence
+
+\fitdisplay{
+E[CW^4]\le e^{-13d}+9d e^{-15d/4}.
+}{R28.7.16}
+
+\paragraph{R28.8 Complete low-domain scalar payments for IIIa}
+
+All statements here hold throughout \(0\le d\le \frac{1}{8}\). The positive Taylor lower of \(e^{Bd}\) and the degree-four upper of \(e^{-Cd}\) give the following exact continuous lower polynomials. After division by \(d\), the negative cubic terms are bounded using \(d\le \frac{1}{8}\).
+
+For(R28.7.7 \(),\allowbreak \allowbreak \frac{e^{4d}-e^{-5d}}{d}\ge 9-(\frac{9}{2})d+29d^2>\frac{17}{2}\). The all-real minimum of the quadratic is \(9-\frac{81}{464}>\frac{17}{2}\). Subtract 8 and multiply by \(e^{-4d}>\frac{1}{2}\); the deficit exceeds \(d/4\).
+
+For(R28.7.12), take \(A=\frac{247}{20},\allowbreak \allowbreak  B=\frac{35}{8},\allowbreak \allowbreak  C=\frac{319}{40}\). Then
+
+\fitdisplay{
+\begin{gathered}
+\frac{e^{Bd}-e^{-Cd}}{d}-11+(\frac{361}{128})d\\
+\ge \frac{27}{20}-(\frac{39}{2})d+77d^2\ge 37/320.
+\end{gathered}
+}{R28.8.1}
+
+The exact linear coefficient before weakening is \(-\frac{62111}{3200}>-\frac{39}{2}\). The quadratic coefficient, even discarding the positive fourth Taylor term, is \(\frac{38055750399}{491520000}>77\). The final quadratic decreases on \([0,\allowbreak \allowbreak \frac{1}{8}]\) and reaches \(\frac{37}{320}\). Since \(e^{35/64}<2\), the deficit is \(\ge 37d/640\).
+
+For(R28.7.14),
+
+\fitdisplay{
+\frac{e^{35d/8}-e^{-69d/8}}{d}
+\ge 13-(\frac{221}{8})d+90d^2\ge 701/64.
+}{R28.8.2}
+
+The exact quadratic coefficient before weakening, including the positive fourth term, is \(\frac{2309619}{24576}>90\). The displayed quadratic decreases on \([0,\allowbreak \allowbreak \frac{1}{8}]\). Subtract \(\frac{169}{16}=\frac{676}{64}\) and multiply by \(e^{-35d/8}>\frac{1}{2}\); the deficit is \(\ge 25d/128\).
+
+For(R28.7.16),
+
+\fitdisplay{
+\frac{e^{15d/4}-e^{-37d/4}}{d}
+\ge 13-(\frac{143}{4})d+100d^2\ge 323/32.
+}{R28.8.3}
+
+The exact quadratic coefficient even without the positive fourth term is \(\frac{5041423}{49152}>100\). Again the quadratic decreases over the interval. Subtract 9 and multiply by \(e^{-15d/4}>\frac{1}{2}\); the deficit is \(\ge 35d/64\).
+
+The elementary bound \(e^{2/3}<2\) used here follows, for example, from its positive Taylor series with the factorial tail bounded geometrically. Every low IIIa row is consequently stronger than(R28.1.1).
+
+\paragraph{R28.9 Same-direction high comparisons, preserving every actual arm}
+
+\paragraph{R28.9.1 I and II, \(d\ge \frac{1}{64}\)}
+
+Every actual later pair has shorter arma \(_i\ge 4\). For its original finite \(R_{ab}=K^a G_{b-a}(K)g,\allowbreak \allowbreak  \lVert G_m\rVert \le \frac{19}{16}\) for every \(m\ge 1: m=1\) is \(1,\allowbreak \allowbreak m=2\) is \(\sqrt{1+x}\le \sqrt{45/32}<\frac{19}{16}\), and all \(m\ge 3\) contract. The row bound gives
+
+\fitdisplay{
+\begin{gathered}
+\lvert R_{ab}\rvert \le \theta^{(a-1)/2}(\frac{19}{16})\sqrt{d}\\
+<(\frac{39}{125})\sqrt{d}\le (\frac{312}{125})d.
+\end{gathered}
+}{R28.L618}
+
+Together with(R28.3.1 \(),\allowbreak \allowbreak h_a f_b\le \exp(-d/2\)). Thus the SAME actual canonical \(F\le q f_{b_{1}}\) pointwise. The exact Section~\ref{proof:R2-C009} \(D_{\rm full}\) row is
+
+\fitdisplay{
+E[f_a{T^L(q f_b)}^4]\le 1-d/3000,
+a\ge 3,b\ge 2,L\ge 1.
+}{R28.9.1}
+
+For \(b=2\) it has the strongerd/1000 margin. Original positivity now proves (R28.1.1) throughout this high domain. Original arms are still oriented and present; the pointwise estimate is only inside their actual \(\int \).
+
+\paragraph{R28.9.2 IIIa, \(d\ge \frac{1}{8}\)}
+
+Lemma~\ref{lem:unit-p:three-centered} proves the same actual
+\(h_3f_b\le e^{-d}\) for every \(b\ge4\) on \(d\ge1/8\).
+It includes the genuine \(G_1\) case \(b=4\) and retains
+the centered original row for every later finite length.
+
+The same canonical \(F\le e^{-d} q f_{2}\), and(R28.9.1) proves(R28.1.1) for every \(L\). Both low and high proofs include their common boundary \(\frac{1}{8}\).
+
+\paragraph{R28.10 A uniform payment for class IIIb}
+\label{part:R28:global-mask}
+
+The compulsory coefficients of the class-III mask make it possible
+to pay every connector with the same estimate.
+
+\begin{lemma}[A finite-mask receiving estimate]
+\label{lem:R28:global-mask}
+Let \(P\) be a finite polynomial with coefficients in \(\{0,1\}\),
+with \(P_0=P_2=1\) and \(P_1=0\). Put
+\[
+ R=BP(-B)u+\tau u,\qquad \tau=d-\delta_2.
+\]
+If a nonnegative function \(F\) satisfies
+\[
+ F\le e^{R-\Gamma},\qquad \Gamma\ge \frac{431}{80}d,
+\]
+then, for all integers \(a\ge2\) and \(L\ge1\),
+\begin{equation}\label{eq:R28:global-mask-conclusion}
+ \E\!\left[f_a(T^LF)^4\right]\le1-\frac{2d}{405}.
+\end{equation}
+\end{lemma}
+
+\begin{proof}
+When \(d=0\), one has \(u=0\), \(R=0\) and \(A\one=T\one=\one\);
+positivity gives the assertion. Assume \(d>0\), and use the
+receiver \(C\) of (R28.2.3) when \(a\ge3\).
+When \(a=2\), set \(C=f_2=p+Bu\).
+In both cases
+\[
+ f_a\le C,\qquad \E C\le1-d,\qquad C\le2-q+\frac65\sqrt d.
+\]
+All the spectral integrals below use the measure \(\nu\) at \(u\):
+\(\nu([0,\theta])=d\) and \(\int x^r\,d\nu=\delta_{r+1}\).
+
+\emph{The finite input.}
+Write \(P(-z)=U_0-zV_0\), \(z=i\sqrt x\), and \(c=(1-x^2)^{-1}\).
+The four coefficient residue classes, with the three compulsory
+coefficients retained, give
+\begin{equation}\label{eq:R28:global-mask-coordinates}
+ \begin{gathered}
+ 1-xc\le U_0\le1-x+x^2c\le1-x/3,\qquad
+ -xc\le V_0\le x^2c,\\
+ |P|^2\le(1-x/3)^2+\frac{16}{9}x^3\le1.
+ \end{gathered}
+\end{equation}
+Indeed each allowed residue class is bounded by its geometric sum,
+\(c\le1024/855<4/3\), and the last inequality follows from
+\(2x+32x^2\le9\) on \(0\le x\le1/2\).
+Set
+\[
+ U(z)=\tau+zP(-z)=\tau+xV_0+zU_0,\qquad R=U(B)u.
+\]
+Since \(\tau\le d-d^2\le2/9\), one has
+\(|U|\le\tau+\sqrt x<9/10\).
+For the original pointwise bound use
+\(R=B\{P(-B)u+\tau\one\}\).
+Here \(\E[P(-B)u]=\int V_0\,d\nu<d/5\), whence
+\[
+ |R|^2\le d+\tau^2+\frac{2\tau d}{5}
+ \le d+\frac75d^2\le\frac{22}{45}<\frac9{16}.
+\]
+Also, with \(\sigma_R=\E R^2\),
+\begin{equation}\label{eq:R28:global-mask-signed-data}
+ \begin{gathered}
+ \sigma_R\le\delta_2+\frac{\tau d}{6}+\tau^2d
+ \le\frac{1277}{2592}d<d/2,\\
+ D_0=-\int U_0\,d\nu,\qquad
+ D_1=-\tau d-\int xV_0\,d\nu,\\
+ D_2=\int xU_0\,d\nu,\qquad
+ D_3=\tau\delta_2+\int x^2V_0\,d\nu,
+ \qquad D_i=\E B^iR.
+ \end{gathered}
+\end{equation}
+The cross term in the bound for \(\sigma_R\) uses
+\(\langle u,BP(-B)u\rangle=\int xV_0\,d\nu<d/12\).
+The resulting bounds are
+\[
+ D_0\le-\frac{439}{855}d,\quad
+ -\frac{11}{36}d\le D_1\le\frac15d,\quad
+ 0\le D_2\le\delta_2,\quad D_3<\frac18d.
+\]
+For every \(r\ge1\), the same coordinates give
+\[
+ D_{2r}=(-1)^{r+1}\int x^rU_0\,d\nu,\qquad
+ D_{2r+1}=(-1)^{r+1}
+ \left(\tau\delta_{r+1}+\int x^{r+1}V_0\,d\nu\right).
+\]
+Thus \(D_i\le d/12\) for every \(i\ge4\).
+For even indices the first positive bound is
+\(\theta^3d<d/14\). For odd indices \(1\pmod4\) the
+\(\tau\) term is favorable and the bound is
+\((1024/855)\theta^4d<d/30\). For odd indices \(3\pmod4\),
+starting at seven, it is
+\(\{(2/9)\theta^3+(1024/855)\theta^6\}d<d/30\).
+Subsequent indices in each class decrease by \(\theta^2\).
+
+\emph{One propagated packet.}
+Since \(|R|<3/4\), the Taylor comparison (R28.3.2) applies
+with \(\eta=4/3\). Choose
+\[
+ D=\frac d4,\qquad \epsilon=D+D_1,\qquad h=\frac3{10},
+ \qquad \lambda=\frac{431}{80}.
+\]
+This choice is valid because
+\[
+ D_0+\frac43\sigma_R
+ \le\left(-\frac{439}{855}+\frac{1277}{1944}\right)d
+ <\frac3{20}d<D,\qquad
+ -\frac d{18}\le\epsilon\le\frac{9d}{20}.
+\]
+Use \(Y_L,Q_L,\gamma_n\) from (R28.3.2)--(R28.3.4), with
+\[
+ Q_1=1+zU,\qquad
+ Q_n=G_n+z^nU+\epsilon G_{n-2}+Dz^{n-2}\quad(n\ge2).
+\]
+Their short coordinates and loss bounds are
+\begin{equation}\label{eq:R28:global-mask-propagation}
+ \begin{gathered}
+ Q_1=(1-xU_0)+z(\tau+xV_0),\\
+ Q_2=(1+D-\tau x-x^2V_0)+z(1-xU_0),\\
+ \gamma_3=d-D_2\ge\frac{19}{32}d,\qquad
+ \gamma_4=d+Dd-D_3\ge\frac78d+Dd,\\
+ \gamma_n\ge
+ \left(\frac{19}{32}-\frac1{12}\right)d-\frac{11}{36}d^2
+ \ge\frac{353}{864}d>hd\quad(n\ge5).
+ \end{gathered}
+\end{equation}
+The first two losses use \(\beta_2=0\).
+For \(L\ge4\), retain the last two path terms, as in
+(R28.3.5), and put
+\[
+ X_L=
+ \begin{cases}
+ Y_L,&L=1,2,3,\\
+ Z_L=1+\epsilon+Q_Lu-hd(1+q),&L\ge4.
+ \end{cases}
+\]
+Then \(0\le T^LF\le e^{-\lambda d}X_L\).
+The identities
+\(\E Q_nu=-\gamma_{n+1}\) and
+\(\langle Q_nu,u\rangle=\gamma_{n+2}\) give
+\[
+ \operatorname{Var}Z_L
+ =\|Q_Lu\|^2-2hd\gamma_{L+2}
+   +h^2d^3-\gamma_{L+1}^2
+ \le\|Q_L\|^2d.
+\]
+
+\emph{Finite spectral bounds.}
+The coordinates of \(Q_2\) lie respectively in
+\((0,7/6)\) and \((0,1]\), so
+\[
+ |Q_2|^2\le\frac{509}{288}<\frac95.
+\]
+The pointwise predecessor at \(L=2\) is the full vector
+\(V_2=D\one+u+BR\). Its constant and its cross term give
+\[
+ \|V_2\|^2
+ =d-2D_2+\|BR\|^2+D^2+2DD_1
+ \le\frac{1207}{960}d<\frac{64}{25}d.
+\]
+For \(Q_3=P_3+\epsilon+Dz\), where \(P_n=G_n+z^nU\),
+\[
+ |P_3|<\frac{31}{25},\qquad
+ |\epsilon+Dz|^2
+ \le\left(\frac{81}{400}+\frac{13}{512}\right)d^2
+ <\frac14d^2.
+\]
+Consequently \(\|Q_3\|<211/150\) and
+\((211/150)^2<2\). For every \(n\ge4\), one has
+\(\|Q_n\|<7/5\). At \(n=4\) the bound is
+\[
+ 1+\theta^2+d(27/50+\theta/4)
+ \le1+\frac{29099}{76800}<\frac75;
+\]
+for \(n\ge5\) it is at most
+\[
+ 1+\frac9{10}\theta^{5/2}
+       +d(9/20+\theta^{3/2}/4)
+ <1+\frac{971}{3600}<\frac75.
+\]
+These comparisons include the exceptional \(G_2\) predecessor.
+
+For \(a\ge3\), the receiving products needed below satisfy
+\[
+ \operatorname{Re}(G_aQ_1)
+ \ge1-\frac{20}{9}x+\frac45x^2\ge\frac{23}{108},
+\]
+\[
+ \operatorname{Re}(G_aQ_2)
+ \ge1-\frac{20}{9}x+\frac1{45}x^2+\frac15x^3
+ \ge\frac2{27}.
+\]
+Here the \(Q_2\) coordinates are positive; for \(Q_1\) a
+negative imaginary coordinate contributes favorably.
+For \(P_3\), (R28.2.6) and \(|U|<9/10\) give
+\(\operatorname{Re}(G_aP_3)>-3/10\).
+For every \(n\ge4\), \(\operatorname{Re}(G_aP_n)>0\).
+At \(n=4\), its exact coordinates give the lower bound
+\[
+ 1-3x+2x^2-x^3-(1-x)cx^4
+ >\frac{1451}{32768}-\frac1{30}>0.
+\]
+At \(n=5,6\) the perturbations are respectively less than
+\(39/400\) and \(9/140\), below the baselines \(1/5\) and
+\(57/512\). For \(n\ge7\) the perturbation is less than
+\(3/70<1451/32768\). Thus each finite index is covered by
+the same geometric bounds.
+
+For the genuine receiver \(a=2\), both short products have the
+stronger lower bound \(1-11x/9-x^2/5\), which exceeds \(23/108\)
+on \(0\le x\le\theta\). Also
+\[
+ \operatorname{Re}(G_2P_3)>
+ \frac3{16}-\frac65\frac9{10}\frac4{15}>-\frac3{10}.
+\]
+For every \(n\ge4\), the finite coordinates give
+\(\operatorname{Re}(G_2G_n)\ge1-2x\ge3/16\), whereas
+\[
+ |G_2z^nU|<\frac{27}{25}\theta^2<\frac3{16}.
+\]
+Thus the same receiving bounds hold for every \(a\ge2\).
+
+\emph{One fourth-moment payment.}
+The preceding bounds and the exact covariance identity (R28.2.4)
+give the following data for \(X=X_L\), with \(\mu=\E X\).
+\begin{table}[htbp]\centering\small
+\caption{The data for the global class-III packet.}
+\label{tab:R28:global-mask-data}
+\begin{tabular}{@{}ccccc@{}}
+\toprule
+\(L\)&\(\mu\) upper&
+\(\operatorname{Var}X/d\) upper&
+\(\operatorname{Cov}(C,X)\) upper&
+\(X-q\) upper\\
+\midrule
+\(1\)&\(1+9d/20\)&\(77/64\)&\(0\)&
+ \(\sqrt{d/2}+d/4\)\\
+\(2\)&\(1-23d/160\)&\(509/288\)&\(0\)&
+ \(8\sqrt d/5+9d/20\)\\
+\(3\)&\(1-163d/160\)&\((211/150)^2\)&
+ \(3d/10+d^2/6\)&\(8\sqrt d/5+49d/160\)\\
+\(\ge4\)&\(1-9d/20\)&\(49/25\)&
+ \(d^2/2\)&\(8\sqrt d/5\)\\
+\bottomrule
+\end{tabular}
+\end{table}
+
+For the first row the covariance is at most
+\(-23d/108+d^2/5<0\) and
+\(\operatorname{Var}Y_1=d-2D_2+\|BR\|^2-D_1^2\le77d/64\).
+For the second row both the receiving integral and the
+\(-\beta_{a+1}\gamma_3\) correction are nonpositive.
+At \(L=3\) the two corrections \(\epsilon+Dz\) cost at most
+\((1/18+13/128)d^2<d^2/6\) beyond the \(3d/10\) baseline.
+At \(L\ge4\), the \(\epsilon G_{L-2}\), \(Dz^{L-2}\) and
+\(-hd\) terms cost at most
+\[
+ \left(\frac1{18}+\frac{13}{128}+\frac3{10}\right)d^2
+ <\frac12d^2.
+\]
+For \(a\ge3\), this uses
+\(-3/50\le\operatorname{Re}(G_aG_n)\le1\) for \(n\ge2\).
+For \(a=2\) the latter interval improves to \([3/16,1]\), and
+\(\operatorname{Re}(G_2z)=-x\).
+Moreover \(\operatorname{Re}(G_2z^k)\ge-\theta\) for every
+\(k\ge2\), by the four finite parity classes, so the \(D\)-term
+has the same fee.
+The remaining mean corrections are
+\(-\beta_{a+1}\gamma_{L+1}\le0\).
+Finally, the pointwise rows follow from \(Y_1,Y_2,Y_3\)
+and the representation
+\(Z_L=(1+\epsilon-hd)q-hd+BQ_{L-1}u\);
+its extra \(q\) term is at most zero.
+
+In particular, every row has variance at most \(2d\), and
+\[
+ X\le q+\frac85\sqrt d+2d,\qquad \mu\le1+\frac32d.
+\]
+Apply the \hyperref[part:R25:scaled-curvature]{coefficient-ten
+comparison} with \(W=e^{-\lambda d}X\).
+Its scalar proof uses only the displayed cap on \(C\), so it
+includes \(a=2\).
+The fourth-order identity (R28.2.5) gives
+\[
+ \E[CW^4]\le e^{-4\lambda d}
+ \{(1-d)\mu^4+4\mu^3\operatorname{Cov}(C,X)\}
+ +20d\,e^{-2\lambda d}.
+\]
+The expression in braces is at most \(e^{4d/5}\).
+For \(L=1\) this follows from
+\((1-d)(1+9d/20)^4\le e^{4d/5}\); for \(L=2\) it is at most one.
+For \(L=3\), replace \(\mu\) by \(\mu_0=1-163d/160\)
+after taking the nonnegative covariance upper. The result is
+\[
+ \mu_0^3\left\{1-\frac{131}{160}d+\frac{809}{480}d^2\right\}
+ \le\mu_0^3(1-37d/144)\le1.
+\]
+For \(L\ge4\) the corresponding expression, with
+\(\mu_0=1-9d/20\), is at most
+\[
+ \mu_0^3\{1-29d/20+49d^2/20\}
+ \le\mu_0^3(1-19d/30)\le1.
+\]
+All replacements use nonnegative coefficients of
+\(\mu^4\) and \(\mu^3\).
+Since \(4\lambda-4/5=83/4\) and \(2\lambda>83/8\),
+every connector therefore satisfies the single bound
+\[
+ \E[CW^4]\le e^{-83d/4}+20d\,e^{-83d/8}
+ \le1-\frac34d\,e^{-83d/8}.
+\]
+The last step uses \(2\sinh(83d/8)\ge83d/4\).
+For \(d\le1/3\), one has \(83d/8<4\) and \(e^4<81\),
+so the deficit is greater than \(d/108>2d/405\).
+This proves the lemma.
+\end{proof}
+
+For the actual class-IIIb terminal, the pair estimates (R28.3.1)
+give \(F\le e^{R-\Gamma}\) with its single finite mask and
+\[
+ \Gamma=3d-2\delta_2+\frac{16}{5}(j-2)d
+ \ge\frac{431}{80}d\qquad(j\ge3).
+\]
+Lemma~\ref{lem:R28:global-mask} proves (R28.1.1) for this last
+class. Positivity restores the equal-pair factors at their
+original locations, as in the other three classes.

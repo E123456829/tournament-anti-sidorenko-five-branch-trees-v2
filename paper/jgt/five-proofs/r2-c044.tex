@@ -1,0 +1,499 @@
+\subsection{Path second moments and the mixed central estimate}\label{proof:R2-C044}
+\paragraph{R44.1 The local central estimates}
+
+All expectations use the finite measure and kernel of
+Section~\ref{sec:prelim}. This module proves the path second moment
+and the mixed estimate used at a center whose residual begins with
+a unit arm.
+
+At each branching vertex, maximally pair equal side-arm lengths. A
+residual list consists of the remaining distinct lengths in increasing
+order. Each paired arm is still directed and retained. The central
+families treated here are exactly
+\fitdisplay{
+(1,s),\quad s\ge2,
+}{R44.1.2}
+and
+\fitdisplay{
+(1,s,a,b,u_1,v_1,\ldots,u_k,v_k),\qquad
+ 2\le s<a<b<u_1<v_1<\cdots<u_k<v_k,\quad k\ge0.
+}{R44.1.3}
+Together they are all nonempty even residual lists of minimum one.
+
+For every \(s\ge2\), the actual outward path message satisfies
+\[
+  E f_s^2\le1.
+\]
+For the central residual in (R44.1.3), set
+\[
+  Q=W_a\bar f_b\prod_{i=1}^k W_{u_i}\bar f_{v_i}.
+\]
+The same-label mixed estimate is
+\[
+  E[f_s^2Q^8]\le e^{-17d/64}.
+\]
+For (R44.1.2), take \(Q=1\) and use the path second moment.
+The strict ordering in (R44.1.3) includes \(s=2\) and \(a=3\).
+These are the local inputs to Table~\ref{tab:five-center}; the
+compound reference-second construction is proved in
+Proposition~\ref{prop:five-compound}.
+
+\paragraph{R44.2 Original finite calculus and genuine path moments}
+
+All operators are on the same original real L2(mu). Delete only
+zero-mass host atoms, which leaves every original integral unchanged. Put
+\fitdisplay{
+B=-K,\quad u=B\one,\quad T=J+B,\quad A=J-B=T^*,\quad
+ p=1-u,\quad q=1+u,\quad Jv=(Ev)1,
+}{}
+\fitdisplay{
+f_n=A^{n}\one,\quad \bar f_n=T^{n}\one,\quad
+ h_n=Tf_{n-1},\quad W_n=A\bar f_{n-1},\quad f_0=\bar f_0=1.
+}{R44.2.1}
+An \(f_n\) arm points entirely away from its root; \(\bar f_n\) points entirely
+toward it; \(h_n\) has its first edge toward the root and every remaining
+edge away along the arm; \(W_n\) has its first edge away from the root and
+every remaining edge toward that first neighbor. In particular
+\(f_1=W_1=p\) and \(\bar f_1=h_1=q.\) An incoming connector of length L has
+operator \(T^L,\allowbreak \) with every original edge directed toward the receiver.
+
+Write
+\fitdisplay{
+\delta_j=\|B^{j}\one\|_2^2,\quad d=\delta_1,\quad
+ \theta=13/32,\quad \kappa=19/32,\quad \tau=d-\delta_2.
+}{}
+The exact C014 finite calculus gives
+\fitdisplay{
+0\le d\le1/3,\quad d^2\le \delta_2\le\theta d,\quad
+ \delta_{j+1}\le\theta \delta_j,\quad \|B\|^2\le\theta,\quad
+ |BV(x)|\le\|V\|_2,\quad Eu=0,
+}{R44.2.2}
+\fitdisplay{
+EB^{2j}1=(-1)^j\delta_j,\qquad EB^{2j+1}1=0.
+}{R44.2.3}
+In particular \(\delta_2\) is a spectral moment, whereas \(d^2\) is the square of
+the first moment; they are never identified.
+
+For \(G_n(z)=\sum_{j=0}^{n-1}z^j\), with \(G_0=0,\allowbreak \) define
+\fitdisplay{
+\beta_1=\beta_2=0,\qquad
+ \beta_n=\sum_{j=1}^{\lfloor(n-1)/2\rfloor}(-1)^{j-1}\delta_j
+       \quad(n\ge3).
+}{}
+The exact finite positive convolution and its complete reverse are
+\fitdisplay{
+S_n^+=1+G_n(B)u
+       =\bar f_n+\sum_{j=3}^n\beta_j\bar f_{n-j},
+}{}
+\fitdisplay{
+S_n^-=1-G_n(-B)u
+       =f_n+\sum_{j=3}^n\beta_jf_{n-j}.
+}{R44.2.4}
+Every coefficient \(\beta_j,\allowbreak  j\ge 3,\allowbreak \) lies in [tau, d], and \(\beta_3=\beta_4=d.\)
+The sums are finite and empty at \(n=1,\allowbreak \) 2. Their means are
+\fitdisplay{
+ES_n^+=ES_n^-=1-\beta_{n+1}.
+}{R44.2.5}
+The positive path messages \(f_n,\allowbreak  \bar f_n\) lie in [0, 2] and have means at most
+one. The mean assertion is not extended to \(h_n\) or \(W_n: Eh_2=EW_2=1+d.\)
+
+The finite geometric estimate needed below is
+\fitdisplay{
+\|G_n(B)\|\le1\quad(n=0,1\text{ or }n\ge3),\qquad
+ \|G_2(B)\|^2\le1+\theta.
+}{R44.2.6}
+Here is the finite calculation, including every integer n. On an
+original real skew rotation block put \(z=i \sqrt{x}\), \(0\le x\le \theta<1/2.\)
+The exact finite geometric identity gives
+\fitdisplay{
+|G_n(z)|^2=\frac{1-2\operatorname{Re}(z^n)+x^n}{1+x}.
+}{}
+For odd \(n\ge 3,\allowbreak  Re(z^n)=0\) and \(x^n\le x.\) For n divisible by four,
+\(x^n-2 x^{n/2}\)\ensuremath{\le}\(0\le x.\) For n congruent to two modulo four and
+\(n\ge 6,\allowbreak \)
+\fitdisplay{
+x^n+2x^{n/2}\le x^6+2x^3
+       =x(x^5+2x^2)\le(17/32)x\le x.
+}{}
+The estimate uses only \(x\le 1/2\); it therefore covers every original
+rotation block and the zero block. The remaining exact cases are
+\(G_0=0,\allowbreak  G_1=1\) and \(|G_2(z)|^2=1+x.\) Orthogonal summation over
+the original finite blocks proves (R44.2.6), with no spectral limit.
+
+Write \(G_n(z)=E_n(x)+zD_n(x).\) For every \(n\ge 1,\allowbreak \)
+\fitdisplay{
+0\le E_n\le1,\quad 0\le D_n\le1;\qquad E_1=1,\ D_1=0.
+}{R44.2.7}
+For \(n\ge 2\) the two coordinates lie in [1-x, 1]. These are finite
+alternating partial sums. No restriction \(x\ge d\) is made.
+
+Let nu be the original spectral measure of -\(B^2\) at u. Its mass is d,
+its support is [0, theta], and int \(x^j d\nu= \delta_{j+1}\). For a real
+polynomial \(Q(z)=E(x)+zD(x),\allowbreak \)
+\fitdisplay{
+\|Q(B)u\|^2=\int(E^2+xD^2)d\nu,\qquad
+ E[Q(B)u]=-\int D\,d\nu,\qquad
+ EB[Q(B)u]=-\int E\,d\nu.
+}{R44.2.8}
+Every constant-vector cross below is computed on this same original
+space before any norm estimate.
+
+\paragraph{R44.2.1 Complete ordinary second moments of the actual reference arms}
+
+For \(s=2\) the exact actual formula is
+\fitdisplay{
+f_2=1-u+Bu,\quad Ef_2=1-d,\quad
+ Ef_2^2=1-d+\delta_2\le1-\kappa d.
+}{R44.2.9}
+Indeed, \(\E Bu=-d\) and \(\langle u,Bu\rangle=0\).
+
+For every \(s\ge 3,\allowbreak \) (R44.2.4) gives \(0\le f_s\le S_s^-\) and (R44.2.6) gives
+\fitdisplay{
+E(S_s^--1)^2=\|G_s(-B)u\|^2\le d.
+}{}
+Consequently
+\fitdisplay{
+Ef_s^2\le E(S_s^-)^2
+  =1-2\beta_{s+1}+\|G_s(-B)u\|^2
+  \le1-d+2\delta_2\le1-3d/16.
+}{R44.2.10}
+Thus \(Ef_s^2\le 1\) for every genuine \(s\ge 2,\allowbreak \) directly from the
+finite G and positive-convolution calculus. Only these finite bounds
+enter this estimate.
+The unit arm is different: \(Ep^2=1+d.\)
+
+\paragraph{R44.2.2 A uniform fourth bound for every genuine \(s\ge 2\)}\label{part:R44.2.2}
+
+For -\(1\le y\le 1,\allowbreak \)
+\fitdisplay{
+(1+y)^4\le1+4y+11y^2,
+}{R44.2.11}
+because the difference is \(y^2(1-y)(5+y)\ge 0.\)
+
+At \(s=2,\allowbreak  f_2\) in [0, 2], \(E(f_2-1)=-d\) and
+\(E(f_2-1)^2=d+\delta_2.\) Therefore
+\fitdisplay{
+Ef_2^4\le1+7d+11\delta_2
+       \le1+\frac{367}{32}d
+       \le e^{367d/32}.
+}{R44.2.12}
+
+At \(s\ge 3,\allowbreak \) put \(g_s=min(2,\allowbreak  S_s^-).\) This is only an analytical
+nonnegative majorant: the actual arm remains \(f_s.\) Positivity in (R44.2.4)
+and \(f_s\le 2\) give \(0\le f_s\le g_s\le 2.\) Moreover
+\fitdisplay{
+E(g_s-1)\le-\beta_{s+1}\le0,\qquad
+ E(g_s-1)^2\le E(S_s^--1)^2\le d.
+}{}
+The second inequality is pointwise before integration: clipping \(S_s^-\)
+at two can only decrease its squared distance from one. Using (R44.2.11),
+\fitdisplay{
+Ef_s^4\le Eg_s^4\le1-4\beta_{s+1}+11d
+       \le1+11d\le e^{367d/32}.
+}{R44.2.13}
+This proves the uniform actual-path estimate
+\fitdisplay{
+\boxed{Ef_s^4\le e^{367d/32}\quad(s\ge2).}
+}{R44.2.14}
+It holds for every finite s, including the genuine \(s=3/G_3\) case.
+There is no large-length limit and no arbitrary positive-function
+replacement of \(f_s.\)
+
+\paragraph{R44.2.3 Equal original pairs}
+
+For each actual equal-length pair,
+\fitdisplay{
+f_\ell+h_\ell=2Ef_{\ell-1},\qquad
+ 0\le f_\ell h_\ell\le(Ef_{\ell-1})^2\le1.
+}{R44.2.15}
+Complete reversal gives \(0\le \bar f_\ell W_\ell\le 1.\) Products of these actual
+factors are denoted \(E_v\) at their original vertices. They can be compared
+with one only inside a nonnegative original integral or positive
+propagation. 
+
+\paragraph{R44.3 The full signed exponential estimate at exponent sixteen}
+
+On the original probability space, apply
+\hyperref[part:Q81.2]{the signed-exponential theorem} with
+\(W=K(-V)=BV\), \(U=\|V\|_2\), and \(s=t\).
+The bounds in (R44.2.2) give \(|W|\le U\) and
+\(EW^2=\|BV\|_2^2\le\theta U^2\).
+Thus every real complete vector \(V\), with either sign of its actual
+mean \(E(BV)\), satisfies
+\fitdisplay{
+E e^{tBV}\le
+ \exp\{tEBV+(17/64)t^2\|V\|^2\},\qquad
+ V\text{ \text{any } real original vector},\quad t\ge0.
+}{R44.3.1}
+Taking \(t=16\) gives \((17/64)16^2=68\), hence
+\fitdisplay{
+\boxed{Ee^{16BV}\le e^{16EBV+68\|V\|^2}.}
+}{R44.3.4}
+
+\paragraph{R44.4 New central mixed moment, with every short and finite-pair case}\label{part:R44.4}
+
+Let the genuine central lengths satisfy (R44.1.3), and put
+\fitdisplay{
+Q=W_a\bar f_b\prod_{i=1}^kW_{u_i}\bar f_{v_i}.
+}{R44.4.1}
+This directs each of the original central arms other than 1, s
+exactly once. The central unit arm will not be used anywhere in this
+section.
+
+Central lemma. For the same actual \(f_s\) and Q in (R44.4.1),
+\fitdisplay{
+\boxed{E[f_s^2Q^8]\le e^{-17d/64}.}
+}{R44.4.2}
+Arbitrary actual equal-pair factors may be restored by positivity,
+though the final assembly assigns all central equal pairs to its
+separate C106 component.
+
+\paragraph{R44.4.1 The finite mask and the higher-pair envelope}
+
+For \(4\le c<e\) the full reversal of \eqref{eq:L90:pair} gives
+\fitdisplay{
+W_c\bar f_{e}\le\exp\{BV_{c,e}-16d/5\},\qquad
+ V_{c,e}=\sum_{j=c+1}^{e}B^{j-2}u.
+}{R44.4.3}
+This is an actual original pair bound, also explicitly proved in
+C096 \mbox{\hyperref[part:R44.2.2]{part R44.2.2}} and preserved under complete reversal. Only this
+exact pair interface is needed from C186's larger terminal theorem.
+
+For any finite polynomial P with coefficients zero or one, the four
+residue classes of its powers at i \(\sqrt{x}\) give
+\fitdisplay{
+|P(i\sqrt x)|^2\le\frac{1+x}{(1-x^2)^2}
+ \le\frac{32768}{16245}<\frac{101}{50}=:C_*.
+}{R44.4.4}
+For each coordinate, bound its positive and negative subcollections
+and take the larger absolute bound; do not add the two. Consequently
+a finite union of disjoint exponent intervals beginning at degree h
+has original vector norm squared at most \(C_*\theta^h\) d.
+All intervals used below are disjoint because the original arm
+lengths are strictly increasing.
+
+If V is such a union beginning at degree at least three, its positive
+terms in EBV begin at \(\delta_4.\) Hence
+\fitdisplay{
+EBV\le\frac{\delta_4}{1-\theta^2}<\frac d{12},\qquad
+ \|V\|^2\le C_*\theta^3d<\frac9{64}d.
+}{R44.4.5}
+The first rational comparison is
+\(\theta^3/(1-\theta^2)=2197/27360<1/12.\)
+The norm comparison is \(221897<230400\) after the common denominator
+1638400. These bounds do not grow with the number of intervals.
+
+\paragraph{R44.4.2 Every \(a\ge 4,\allowbreak \) with every finite later pair block}
+
+There are \(r=k+1\) actual pairs. Let V be their single full finite mask.
+Equations (R44.4.3)-(R44.4.5), followed by (R44.3.4), give
+\fitdisplay{
+EQ^{16}\le
+ \exp\left[-\left\{\frac{256r}{5}-\frac43-\frac{153}{16}\right\}d\right].
+}{R44.4.6}
+At \(r=1\) the coefficient is \(9673/240>40.\) Each further original
+pair adds \(256/5\) to this coefficient, while the full-vector estimate
+already pays every cross term. Thus, by Cauchy on the original mu
+and the actual path bound (R44.2.14),
+\fitdisplay{
+E[f_s^2Q^8]\le(Ef_s^4)^{1/2}(EQ^{16})^{1/2}
+ \le e^{-(40-367/32)d/2}
+ \le e^{-17d/64}.
+}{R44.4.7}
+
+
+\paragraph{R44.4.3 The actual \(a=3\) envelope, derived before any moment estimate}
+
+Here the strict order forces \(s=2.\) Write \(n=b-3\ge 1\) and
+\fitdisplay{
+V_0=B^2G_n(B)u,\qquad \Gamma=3d-2\delta_2=d+2\tau.
+}{}
+The exact \(W_3+\bar f_3=2E\bar f_2=2-2d\) and (R44.2.4) give
+\fitdisplay{
+W_3+\bar f_b=2-d+\sum_{j=4}^{b}B^{j}\one
+                 -\sum_{j=3}^{b}\beta_j\bar f_{b-j}.
+}{}
+Retain the two genuine last terms \(\beta_b \bar f_0\) and
+\(\beta_{b-1}\bar f_1,\allowbreak \) both with coefficient at least tau. Since \(b\ge 4,\allowbreak \)
+both indices are at least three. Their sum is at least tau(2+u).
+Therefore
+\fitdisplay{
+W_3+\bar f_b\le2+BV_0-\tau u-\Gamma.
+}{}
+The left side is the sum of two actual nonnegative messages.
+AM-GM and \(1+t\le e^t\) imply
+\fitdisplay{
+Q_0:=W_3\bar f_b\le
+       \exp\{B(V_0-\tau1)-\Gamma\}.
+}{R44.4.8}
+The vector is \(V_0\) minus tau times the constant vector 1. It is
+not \(V_0-\tau\) u.
+
+In (R44.2.7), write \(G_n=E_n+zD_n.\) Then \(V_0\) has coordinates
+-\(xE_n-zxD_n.\) From (R44.2.8),
+\fitdisplay{
+0\le EV_0=\int xD_n\,d\nu\le \delta_2,\qquad
+ EBV_0=\int xE_n\,d\nu\le \delta_2.
+}{R44.4.9}
+Thus the full constant square is
+\fitdisplay{
+\|V_0-\tau1\|^2=\|V_0\|^2+\tau^2-2\tau EV_0.
+}{R44.4.10}
+Every following estimate starts with (R44.4.10). Its cross is not
+discarded when needed in the genuine \(n=2\) exception.
+
+\paragraph{R44.4.4 No later pairs, low domain \(0<d\le 1/16:\) n not equal to two}
+
+If \(n=1\) or \(n\ge 3,\allowbreak \) (R44.2.6) gives \(\lVert V_0\rVert ^2\le \delta_3.\)
+By (R44.4.9)-(R44.4.10),
+\fitdisplay{
+\|V_0-\tau1\|^2\le\theta \delta_2+\tau^2.
+}{}
+The signed mean in (R44.3.4) satisfies
+\(EB(V_0-tau1)=EBV_0\le \delta_2,\allowbreak \) since \(Eu=0.\) Put \(t=\delta_2/d\) only
+after these original integrated inequalities. Then
+\fitdisplay{
+\frac{\log EQ_0^{16}}d
+ \le-48+(48+68\theta)t+68d(1-t)^2.
+}{R44.4.11}
+For every fixed \(d\le 1/16\) its derivative in t is at least
+\(48+68\theta-136/16>0\) on [0, theta]. Its maximum is therefore
+at \(t=\theta.\) The remaining d coefficient is nonnegative, so use
+\(d=1/16.\) The resulting loss is exactly
+\fitdisplay{
+48\kappa-68\theta^2-\frac{17}{4}\kappa^2
+       =\frac{64631}{4096}>15.
+}{R44.4.12}
+This handles $b=4$ and every $b\ge6$.
+
+\paragraph{R44.4.5 No later pairs, low domain: the genuine \(n=2,\allowbreak  b=5\) exception}
+
+Now \(G_2=1+B,\allowbreak \) so it must not be treated as a contraction:
+\fitdisplay{
+V_0=B^2u+B^3u,\quad EV_0=\delta_2,\quad
+ \|V_0\|^2=\delta_3+\delta_4.
+}{}
+The cross between consecutive B powers vanishes by skewness.
+The nonzero constant cross in (R44.4.10) is exactly -2tau \(\delta_2.\)
+Hence
+\fitdisplay{
+\|V_0-\tau1\|^2
+ \le\theta(1+\theta)\delta_2+(d-\delta_2)(d-3\delta_2).
+}{R44.4.13}
+This expression comes from the same actual vector; a potentially
+negative second summand is kept with its sign. Equations (R44.3.4)
+and (R44.4.8) give
+\fitdisplay{
+\frac{\log EQ_0^{16}}d
+ \le-48+\{48+68\theta(1+\theta)\}t
+                   +68d(1-t)(1-3t).
+}{R44.4.14}
+For fixed \(d\le 1/16\) the derivative in t is at least
+\(48+68\theta(1+\theta)-17>0.\) At \(t=\theta\) the last term is
+nonpositive, because \(1-3\theta=-7/32.\) Dropping only that
+nonpositive term yields the loss
+\fitdisplay{
+48\kappa-68\theta^2(1+\theta)
+       =\frac{104187}{8192}>12.
+}{R44.4.15}
+Consequently (R44.4.11)-(R44.4.15) prove, for every \(b\ge 4,\allowbreak \)
+\fitdisplay{
+EQ_0^{16}\le e^{-12d},\qquad 0<d\le1/16.
+}{R44.4.16}
+Since the reference is the actual \(f_2,\allowbreak \) Cauchy and (R44.2.12) give
+\fitdisplay{
+E[f_2^2Q_0^8]\le
+ e^{-(12-367/32)d/2}=e^{-17d/64}.
+}{R44.4.17}
+
+\paragraph{R44.4.6 No later pairs, high domain \(1/16\le d\le 1/3\)}
+
+The actual direction (R44.4.8) is unchanged. From (R44.2.6), (R44.4.9)
+and (R44.4.10),
+\fitdisplay{
+\|V_0-\tau1\|^2
+ \le(1+\theta)\delta_3+\tau^2
+ \le(1+\theta)\theta^2d+d^2.
+}{R44.4.18}
+Also \(\Gamma\ge 35d/16.\) For \(d\ge 1/16,\allowbreak \)
+\fitdisplay{
+(1+\theta)\theta^2=\frac{7605}{32768}
+ <\frac{7752}{32768}
+ =\frac{969}{256}\frac1{16}
+ \le\frac{969}{256}d.
+}{}
+Adding \(d^2\) in (R44.4.18) therefore gives
+\fitdisplay{
+\|V_0-\tau1\|^2\le(35d/16)^2\le\Gamma^2.
+}{}
+The original row bound in (R44.2.2), applied to the full real vector,
+shows \(B(V_0-tau1)\le \Gamma\) pointwise. Thus
+\fitdisplay{
+Q_0\le1,\qquad
+ E[f_2^2Q_0^8]\le Ef_2^2\le1-\kappa d
+                         \le e^{-\kappa d}
+                         \le e^{-17d/64}.
+}{R44.4.19}
+This pointwise conclusion is proved only on its stated high
+domain.  Both proofs include \(d=1/16\) and use the same
+literal \(W_3 \bar f_b\) direction.
+
+\paragraph{R44.4.7 \(a=3\) with every nonempty finite later pair block}
+
+Let \(k\ge 1.\) The original order gives \(u_1>b\ge 4,\allowbreak \) hence \(u_1\ge 5.\)
+Let
+\fitdisplay{
+V_*=\sum_{i=1}^k\sum_{j=u_i+1}^{v_i}B^{j-2}u,\qquad
+ V=V_0+V_*.
+}{}
+The entire set of powers in V is one disjoint finite zero-one
+mask beginning at degree two. Therefore
+\fitdisplay{
+\|V\|^2\le C_*\theta^2d
+             =\frac{17069}{51200}d<\frac9{25}d.
+}{R44.4.20}
+For the later vector alone, the positive terms in \(EBV_*\) begin
+at \(\delta_4,\allowbreak \) while the negative terms in \(EV_*\) begin at -\(\delta_3.\)
+Thus, for the actual finite subcollections,
+\fitdisplay{
+EBV_*\le\frac{\delta_4}{1-\theta^2}<d/12,\qquad
+ EV_*\ge-\frac{\delta_3}{1-\theta^2}>-d/5.
+}{R44.4.21}
+The second rational comparison is \(\theta^2/(1-\theta^2)\)
+=\(169/855<1/5.\) Combined with \(EV_0\ge 0,\allowbreak \) these imply
+\fitdisplay{
+\|V-\tau1\|^2
+ =\|V\|^2+\tau^2-2\tau EV
+ \le\frac9{25}d+\frac75d^2
+ \le\frac{62}{75}d.
+}{R44.4.22}
+The bound includes the root-pair cross terms and the constant-vector cross term.
+
+Using (R44.4.3), (R44.4.8) and (R44.4.21),
+\fitdisplay{
+Q\le\exp\{B(V-\tau1)-\Gamma-16kd/5\},
+}{}
+\fitdisplay{
+\Gamma+16kd/5-EB(V-\tau1)
+ \ge\{57/32+16k/5-1/12\}d.
+}{R44.4.23}
+At \(k=1,\allowbreak \) sixteen times the last coefficient is \(2351/30.\)
+The entire variance cost in (R44.3.4) is at most \(68(62/75)=4216/75.\)
+Their exact difference is
+\fitdisplay{
+\frac{2351}{30}-\frac{4216}{75}
+       =\frac{3323}{150}>22.
+}{}
+Every further original pair adds \(256/5.\) Hence, on the whole
+original domain without a d split,
+\fitdisplay{
+EQ^{16}\le
+ \exp[-\{3323/150+256(k-1)/5\}d]\le e^{-22d}.
+}{R44.4.24}
+Cauchy with (R44.2.12) again proves (R44.4.2), with substantial room.
+There is no upper bound on k or on any original length.
+
+Parts R44.4.2 and 4.3-4.7 treat \(a\ge 4\) and \(a=3,\allowbreak \) respectively.
+At \(d=0\) the actual messages all equal one, by leaf integration. This completes the new central lemma.
+
+

@@ -1,0 +1,78 @@
+\paragraph{Shared propagation identities.}\label{calc:duhamel}
+Write $\operatorname{Alt}_h=\sum_{i=1}^h(-1)^{i-1}\delta_{i}$ for each finite $h\ge0$.
+For the propagation catalogue write $\tau=d-\delta_{2}$ and $S'_n=\sum_{j=0}^nK'^j\one$.
+Here and below $K'=-K$, $g'=-g$, $\bar f_{n}=T^n\one$ and
+$\|F\|_{4,p}=(\E[p|F|^4])^{1/4}$.
+The finite Duhamel identity, obtained by iterating $T=J+K'$, is
+\begin{equation}\label{eq:compact-duhamel}
+ T^Lu=K'^Lu+\sum_{j=0}^{L-1}\E[K'^ju]\bar f_{L-1-j}.
+\end{equation}
+The actual path means also satisfy the stronger uniform loss
+\begin{equation}\label{eq:compact-strong-path-means}
+ \mu_n=\E f_n=\E \bar f_{n}\le1-83d/32\qquad(n\ge4).
+\end{equation}
+For $n=4,5,6$ use their exact formulas; the losses divided by $d$ are at
+least $83/32,137/48,89/32$. For
+$\mu_7=1-6d+4\delta_{2}+6d^2-2\delta_{3}-2d\delta_{2}$ the loss is at least $127/48$.
+For $n\ge8$ retain $f_0,\ldots,f_5$ in convolution. The three preceding
+beta indices are at least seven, each contributing an additional
+$c_0\delta_{3}$, $c_0=19/32$. Hence
+\[
+ 1-\mu_n\ge\tau(7-10d+3\delta_{2}+d^2)+3c_0\delta_{3}
+ \ge c_0d(7-10d+7d^2)\ge95d/36>83d/32.
+\]
+This uses integral moment inequalities $\delta_{2}\ge d^2$, $\delta_{3}\ge d^3$,
+without imposing a lower bound on individual spectral frequencies.
+
+\paragraph{A finite perturbation of $G_n$.}
+If a spectral polynomial has the form $G_n(z)+E_n(z)$ with
+\[
+ |E_n(i\sqrt x)|\le(4/5)x^{(n-1)/2},\qquad 0\le x\le\theta,
+\]
+then its modulus is at most one for every $n\ge4$.
+For odd $n\ge5$, use
+$1-|G_n|\ge(x-x^n)/[2(1+x)]$; the required worst-index comparison is
+$17/18+625/20736=20209/20736<1$.
+For $n=4$, $|G_4|\le1-x/2-x^2/2$ and
+$(4/5)x^{3/2}\le x(1+x)/2$ by a positive quadratic in $\sqrt x$.
+For $n\equiv0\pmod4$, $n\ge8$, compare against
+$1-1/\sqrt{1+x}\ge x/[2(1+x)]$; the worst bound is
+$3/(5\sqrt2)<1$.
+For $n\equiv2\pmod4$, $n\ge6$, the sufficient inequality is
+\[
+ (8/5)(1+x)x^{(n-3)/2}+2x^{n/2-1}+x^{n-1}\le1.
+\]
+At the worst index $n=6$, use $x\le5/12$, $\sqrt x\le2/3$ and
+$x^5<1/64$ to obtain $17/27+25/72+1/64=1715/1728<1$.
+All higher powers improve these bounds; at $x=0$ there is equality.
+
+\paragraph{Fourth-moment endpoint comparison.}
+For $Z\ge0$, put $\mu=\E Z$, $w=Z-\mu$ and $h=\E[-gw]$.
+The original $p$-weighted expansion is exactly
+\[
+ \E[pZ^4]=\mu^4-4\mu^3h+
+            \E[pw^2(Z^2+2\mu Z+3\mu^2)].
+\]
+If $0\le\mu\le\bar\mu$, $h\ge h_0\ge0$,
+$\operatorname{Var}Z\le V$ and the pointwise coefficient is at most $M$,
+then
+\begin{equation}\label{eq:compact-fourth-endpoints}
+ \E[pZ^4]\le MV+\max\{0,\bar\mu^3(\bar\mu-4h_0)\}.
+\end{equation}
+This treats the two opposite-sign mean terms together: the maximum of
+$u^3(u-4h_0)$ on $[0,\bar\mu]$ is at an endpoint.
+
+
+For later error estimates,
+\begin{equation}\label{eq:compact-qnorm}
+ \E[pq^4]\le1+12d/5,\qquad \|q\|_{4,p}\le e^{3d/5}.
+\end{equation}
+Indeed $pq^4=1-3g+2g^2+g^3(1-g)(2-g)$; its last term is nonpositive
+when $g\le0$, and for $g\ge0$ use
+$g(1-g)(2-g)\le2/(3\sqrt3)<2/5$.
+The elementary exponential remainder used with these bounds is
+\begin{equation}\label{eq:compact-exp-remainder}
+ e^x\le1+x+\frac{x^2}{2(1-x/3)}\qquad(0\le x<3).
+\end{equation}
+Its proof bounds $j!\ge2\,3^{j-2}$ for every $j\ge2$ and sums the
+positive geometric tail.

@@ -1,0 +1,113 @@
+\section{The complete terminal fourth-moment catalogue}\label{sec:terminals}
+Let $\Sigma$ be a terminal arm multiset whose distinct residual list has at least two entries, with arbitrary original multiplicities. We use the following local estimate.
+
+\begin{theorem}[Terminal supply]\label{thm:terminal}
+For each integer $n\ge0$ there is an orientation of all the arms, with actual message $F^+_{\Sigma,n}$, determined by $\Sigma$ and $n$, such that
+\begin{equation}\label{eq:terminalplus}
+ \E\bigl[p(T^nF^+_{\Sigma,n})^4\bigr]\le1.
+\end{equation}
+Its complete reversal $F^-_{\Sigma,n}=\bar F^+_{\Sigma,n}$ satisfies
+\begin{equation}\label{eq:terminalminus}
+ \E\bigl[q(A^nF^-_{\Sigma,n})^4\bigr]\le1.
+\end{equation}
+The parameter $n$ is a prescribed integer determined by the original connector length.
+\end{theorem}
+
+The catalogue below proves the theorem, with analytic estimates in the indicated sections of Appendices~\ref{app:zero-moments}--\ref{app:odd-propagation}.
+
+\subsection{Zero-step directions}
+Every direction in this subsection includes the equal-pair multiplier $E_0$. For an even residual list, put
+\[
+ P=\prod_{i=1}^t h_{a_i}f_{b_i},\qquad
+ a_1<b_1<\cdots<a_t<b_t.
+\]
+This direction $F^+_{\Sigma,0}=E_0P$ satisfies $\E[p(F^+_{\Sigma,0})^4]\le1$. The pair $(1,2)$ is treated directly in Section~\ref{loc:S13}. Every other even residual list also satisfies a weighted sixth-moment bound, which yields the fourth moment by H\"older against $p\mu$; the complete even catalogue, with its component ranges, is collected at the end of Section~\ref{loc:even-zero-catalogue}, with proofs in Appendix~\ref{q3:app:foundations} and Sections~\ref{loc:S2}--\ref{loc:S9}.
+
+For an odd residual list $a<b_1<c_1<\cdots<b_t<c_t$, $t\ge1$, use
+\begin{equation}\label{eq:zeroOdd}
+ F^+_{\Sigma,0}=
+ \begin{cases}
+ E_0 qf_{b_1}h_{c_1}\displaystyle\prod_{i=2}^t h_{b_i}f_{c_i},&a=1,\\[3pt]
+ \displaystyle\overline{E_0f_a\prod_{i=1}^t h_{b_i}f_{c_i}},&a\ge2.
+ \end{cases}
+\end{equation}
+The first line is proved in Section~\ref{loc:S14}, for every number of pairs. The second line is the full reversal of the $q$-weighted fourth estimates for positive canonical odd messages, with minimum two in Section~\ref{loc:S15} and minimum at least three in Section~\ref{loc:S16}; there the equal-pair arms are reversed together with the residual arms, which is what converts the $q$ weight into the $p$ weight.
+
+\subsection{Positive steps: even residual lists}
+Write the residual list as $a_1<b_1<\cdots<a_t<b_t$, $t\ge1$. The following table gives the residual part of $F^+_{\Sigma,n}$ for every $n\ge1$; multiply each row by its actual $E_0$.
+
+\begin{table}[htbp]
+\centering
+\caption{Positive-step terminal directions for even residual lists.}\label{tab:terminal-even}
+\fontsize{9}{11}\selectfont
+\setlength{\tabcolsep}{1pt}\noindent\begin{tabular}{@{}p{57mm}p{68mm}p{29mm}@{}}
+\toprule
+Residual condition & Residual message & Complete proof\\\midrule
+$t=1$, $(a_1,b_1)=(1,2)$ & $qf_2$ & Section~\ref{loc:S21}\\
+$t=1$, $a_1=1$, $b_1\ge3$ & $qf_{b_1}$ & Section~\ref{loc:S24}\\
+$t\ge2$, $a_1=1$ & $\prod_{i=1}^t h_{a_i}f_{b_i}$ & Section~\ref{loc:S29}\\
+$t=1$, $(a_1,b_1)=(2,3)$ & $h_2f_3$ & Section~\ref{loc:S23}\\
+$t=1$, $a_1=2$, $b_1\ge4$ & $h_2f_{b_1}$ & Section~\ref{loc:S25}\\
+$t\ge2$, $a_1=2$ & $\prod_{i=1}^t h_{a_i}f_{b_i}$ & Section~\ref{loc:S33}\\
+$a_1=3$, any $t\ge1$ & $f_3h_{b_1}\prod_{i=2}^t h_{a_i}f_{b_i}$ & Sections~\ref{loc:S28}, \ref{loc:S30}\\
+$a_1\ge4$, any $t\ge1$ & $\prod_{i=1}^t h_{a_i}f_{b_i}$ & Section~\ref{loc:S27}\\
+\bottomrule
+\end{tabular}
+
+\end{table}
+
+The row of minimum three uses $f_3h_{b_1}$, with the first pair reversed.
+
+\subsection{Positive steps: odd residual lists}
+Write
+\[
+ a<b_1<c_1<b_2<c_2<\cdots<b_t<c_t,\qquad t\ge1.
+\]
+Again the table gives only the residual part and covers all $n\ge1$. Here $\bar f_a=T^a\one$ is a path function, whereas $b_i$ in the ordered list is an arm length.
+
+\begin{table}[htbp]
+\centering
+\caption{Positive-step terminal directions for odd residual lists.}\label{tab:terminal-odd}
+\fontsize{9}{11}\selectfont
+\setlength{\tabcolsep}{1pt}\noindent\begin{tabular}{@{}p{54mm}p{71mm}p{29mm}@{}}
+\toprule
+Residual condition & Residual message & Complete proof\\\midrule
+$a=1,t=1,b_1=2,c_1=3$ & $qf_2h_3$ & Section~\ref{loc:S22}\\
+$a=1,t=1,b_1=2,c_1\ge4$ & $qf_2h_{c_1}$ & Section~\ref{loc:S26}\\
+$a=1,t=1,3\le b_1<c_1$ & $qf_{b_1}h_{c_1}$ & Section~\ref{loc:S31}\\
+$a=1,t\ge2$ & $qf_{b_1}h_{c_1}\prod_{i=2}^t h_{b_i}f_{c_i}$ & Section~\ref{loc:S35}\\
+$a=2,b_1=3$, any $t\ge1$ & $\bar f_2f_3h_{c_1}\prod_{i=2}^t h_{b_i}f_{c_i}$ & Section~\ref{loc:S34}\\
+$a\ge2,b_1=4$ & $\bar f_af_4h_{c_1}\prod_{i=2}^t h_{b_i}f_{c_i}$ & Section~\ref{loc:S32}\\
+$a\ge2,b_1\ge5$ & $\bar f_a\prod_{i=1}^t h_{b_i}f_{c_i}$ & Section~\ref{loc:S32}\\
+\bottomrule
+\end{tabular}
+
+\end{table}
+
+\paragraph{Completeness of the terminal classification.}
+For an even list the minimum is $1,2,3$, or at least four; the first
+two cases split into one pair and multiple pairs.  For an odd list of
+minimum one, the cases split by the number of pairs and then by the second
+length.  At minimum two the second length is three, four, or at
+least five; at larger minimum it is at least four.  The inward
+anchor $\bar f_a$ is an actual arm with all of its edges directed toward
+the root.
+
+\subsection{Restoration, reversal, and interface length}
+The proofs in the tables are for the residual message and already allow arbitrary equal-pair factors. Since $0\le E_0\le1$ and $P\ge0$ give $T^n(E_0P)\le T^nP$, taking fourth powers and integrating against the nonnegative weight $p$ restores the paired arms without weakening the bound.
+
+Applying \eqref{eq:terminalplus} at $-K$ interchanges $T$ with $A$, $p$ with $q$, and the selected arm message with its complete reversal, which proves \eqref{eq:terminalminus}.
+
+For a connector of original length $L$, keeping the edge nearest the internal vertex leaves $n=L-1$ edges to integrate, so $L=1$ uses the zero-step catalogue and $L\ge2$ the positive-step one. In the empty-center star construction of Section~\ref{sec:emptystar} one terminal is propagated through all $L$ edges.
+
+\subsection{The two internal side-table roles}
+After equal pairing, an internal side table in a chain is of one of two kinds. Call it type R if its residual list is empty or has at least two entries. For an empty list take $V^+=E_0$, and otherwise use the zero-step catalogue. In either case
+\begin{equation}\label{eq:R}
+ \E[p(V^+)^4]\le1,\qquad V^-=\bar V^+,
+ \qquad \E[q(V^-)^4]\le1.
+\end{equation}
+Call the table type S if it has exactly one residual arm, of length $a\ge1$. Put $C^+=E_0f_a$ and $C^-=\bar C^+$. The complete singleton estimate is
+\begin{equation}\label{eq:S}
+ \E[q^5(C^+)^4]\le1,\qquad \E[p^5(C^-)^4]\le1.
+\end{equation}
+For $a=1$, $q^5p^4=q(pq)^4\le q$ proves this directly. The length-two proof is Section~\ref{loc:S17}, and all lengths $a\ge3$ are proved in Section~\ref{loc:S19}.

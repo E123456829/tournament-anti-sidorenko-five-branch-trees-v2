@@ -1,0 +1,281 @@
+% Shared finite transport on the original probability space.
+\subsection{Finite packets at a unit root}
+\label{sec:unit-two-step-packets}
+Work on the original finite probability space. Put
+\[
+ A=J+K,\quad T=J-K=J+B,\quad u=B\one=-g,\quad
+ p=1-u,\quad q=1+u,\quad d=\|g\|^2,
+\]
+where $K^*=-K$, $|K(x,y)|\le1$, and $\|K\|^2\le13/32$.
+Zero-mass atoms are omitted. Thus $p,q>0$ on the remaining support.
+The notation $\bar f_0=\one$ includes the constant vector. Write
+$G_n(z)=\sum_{j=0}^{n-1}z^j$ and use the positive-convolution
+coefficients $\beta_j$ of \eqref{eq:Q188:conv}.
+In particular $\beta_j\ge d-\delta_2\ge\kappa d$ for $j\ge3$,
+where $\delta_2=\|K^2\one\|^2$ and $\kappa=19/32$.
+Paragraph~\ref{part:Q81.2} supplies the signed-mean bound
+\begin{equation}\label{eq:unit-two-step:signed-exponential}
+ \E e^{sBW}\le
+ e^{s\E BW+(17/64)s^2\|W\|^2}
+ \qquad(W\text{ real},\ s\ge0).
+\end{equation}
+
+\begin{lemma}[Finite continuation]\label{lem:oc:finite-continuation}
+For a real vector $Z$ and an integer $m\ge0$,
+\begin{equation}\label{eq:oc:finite-duhamel}
+ T^mZ=B^mZ+\sum_{i=0}^{m-1}(\E B^iZ)\bar f_{m-1-i}.
+\end{equation}
+\end{lemma}
+\begin{proof}
+The empty sum gives $m=0$. Apply $T$, use
+$TB^mZ=B^{m+1}Z+(\E B^mZ)\one$ and
+$T\bar f_j=\bar f_{j+1}$, and induct on $m$.
+\end{proof}
+
+\begin{lemma}[A finite exponential envelope]
+\label{lem:unit-two-step:exponential-envelope}
+If $|S|\le b<3$ and $c\ge(1-b/3)^{-1}$, then
+$e^S\le1+S+cS^2/2$.
+\end{lemma}
+\begin{proof}
+For $S\ge0$, use $n!\ge2\cdot3^{n-2}$ for $n\ge2$ in the
+exponential series. For $S\le0$, its integral remainder is at
+most $S^2/2$. Both give the displayed bound.
+\end{proof}
+
+\begin{lemma}[The unit-arm logarithm]\label{lem:unit-two-step:unit-log}
+For $-1\le u<1$,
+\[
+ \log(1-u)\le-u-3u^2/10.
+\]
+\end{lemma}
+\begin{proof}
+The derivative of $\log(1-u)+u+3u^2/10$ is
+$-u(2+3u)/[5(1-u)]$. Its maxima on $[-1,1)$ occur at $-1$
+and $0$. Their values are negative and zero, respectively,
+since the first four terms of $e^{7/10}$ sum to $12013/6000>2$.
+\end{proof}
+
+\begin{theorem}[Unit-root finite-packet transport]
+\label{thm:unit-two-step-transport}
+\smallskip\noindent
+\textit{The positive first row and its continuation.}
+Suppose $0\le w\le W$, $Tw=\bar f_r$, $r\ge1$, and
+\[
+ 0<F\le w(s_0+s_1Z+s_2Z^2),\qquad s_0>0,\quad s_2\ge0.
+\]
+For any real $\lambda$, set
+\[
+ R=\frac{s_1\lambda}{s_0}Z,
+\qquad
+ D\ge\frac{s_1}{s_0}\E(wZ)
+       +\frac{|s_1|}{s_0}\|w-\lambda\one\|\|Z\|
+       +\frac{2Ws_2}{s_0}\|Z\|^2.
+\]
+For every integer $L\ge1$, with $D_i=\E B^iR$,
+\begin{equation}\label{eq:unit-two-step:finite-row}
+ 0<T^LF\le s_0Y_L,\qquad
+ Y_L=\bar f_{r+L-1}+B^LR+D\bar f_{L-1}
+             +\sum_{i=1}^{L-1}D_i\bar f_{L-1-i}.
+\end{equation}
+In particular the scalar $D$ propagates to $D\bar f_{L-1}$.
+For $n=r+L-1$, put $m_L=\max(n-3,L-1)$ and, for
+$0\le k\le m_L$, define the finite coefficient
+\begin{equation}\label{eq:unit-two-step:path-ledger}
+ e_k=D\,\mathbf1_{\{k=L-1\}}
+ +D_{L-1-k}\,\mathbf1_{\{0\le k\le L-2\}}
+ -\beta_{n-k}\,\mathbf1_{\{0\le k\le n-3\}}.
+\end{equation}
+An indexed term outside its indicated range is absent. For any subset
+$\mathcal J\subseteq\{0,\ldots,m_L\}$ the same comparison gives
+\begin{equation}\label{eq:unit-two-step:retained-ledger}
+ Y_L\le1+G_n(B)u+B^LR
+       +\sum_{k\in\mathcal J}e_k\bar f_k
+       +2\sum_{k\notin\mathcal J}(e_k)_+.
+\end{equation}
+
+\smallskip\noindent
+\textit{Pairing with the actual unit arm.}
+If $0<G\le Cq+S$, $C>0$, then
+\begin{equation}\label{eq:unit-two-step:unit-pairing}
+ pG\le C\left(1+\frac{S}{2C}\right)^2,
+ \qquad 1+\frac{S}{2C}\ge0.
+\end{equation}
+
+\smallskip\noindent
+\textit{The complete-vector moment payment.}
+Suppose an actual positive message obeys
+\[
+ 0<G\le sY,\quad s>0,\qquad
+ Y\le Cq+c+t u+BV,\quad C>0.
+\]
+For $\nu\in\{4,8\}$,
+\begin{equation}\label{eq:unit-two-step:moment-payment}
+ \log\E(pG)^\nu\le\nu\log(sC)+\frac\nu C(c+\E BV)
+ +\frac1{C^2}\left\{
+       \frac{17\nu^2}{64}\|V\|^2
+                    +\frac{5\nu}{6}t^2\right\}.
+\end{equation}
+For one fixed comparison, use the same norm upper bound
+$N_0\ge\|V\|^2/C^2$ in both right-hand sides.
+Their values satisfy $\mathcal B_4=\mathcal B_8/2-17N_0/4$.
+
+If instead the actual positive message has the square form
+\[
+ 0<H\le\eta(c+BV/2)^2,\qquad c+BV/2\ge0,\quad\eta>0,
+\]
+then
+\begin{equation}\label{eq:unit-two-step:square-log-scale}
+ \log\E H^4\le4\log\eta+8(c-1)+4\E BV
+                  +\tfrac{17}{4}\|V\|^2.
+\end{equation}
+The last term may instead be $2\|V\|^2+6\|BV\|^2$.
+The underlying exponential estimate, valid for every real $V$, is
+\begin{equation}\label{eq:unit-two-step:variance-exponential}
+ \E e^{4BV}\le e^{4\E BV+2\|V\|^2+6\|BV\|^2}.
+\end{equation}
+
+\end{theorem}
+
+\begin{proof}
+Write $wZ=\lambda Z+(w-\lambda)Z$. The identity
+$T(wZ)=\E(wZ)+\lambda BZ+B((w-\lambda)Z)$ and the row bound give
+\[
+|B((w-\lambda)Z)|\le\E|(w-\lambda)Z|
+                  \le\|w-\lambda\one\|\|Z\|,
+ \qquad T(wZ^2)\le2W\|Z\|^2.
+\]
+This proves the first positive comparison. Apply the finite identity
+\eqref{eq:oc:finite-duhamel} to
+$BR$ and then use positivity to obtain
+\eqref{eq:unit-two-step:finite-row}. Subtract the exact positive path convolution from $\bar f_n$ in
+\eqref{eq:unit-two-step:finite-row}. Its term of index $k$ is
+$-\beta_{n-k}\bar f_k$, and the other two terms have exactly the
+indices in \eqref{eq:unit-two-step:path-ledger}. On unretained indices use
+$0\le\bar f_k\le2$ according to the sign of $e_k$, proving
+\eqref{eq:unit-two-step:retained-ledger}.
+For \eqref{eq:unit-two-step:unit-pairing}, the upper bound
+$Cq+S$ is positive because it dominates $G>0$.
+Apply AM--GM to the two nonnegative functions $p$ and
+$(Cq+S)/C$, whose sum is $2+S/C$.
+
+For the moment payment use Lemma~\ref{lem:unit-two-step:unit-log},
+$\log p\le-u-3u^2/10$ and
+$\log Y\le\log C+(Y-C)/C$. Completing the scalar square gives
+\[
+ \nu t u/C-3\nu u^2/10\le\frac{5\nu}{6C^2}t^2.
+\]
+The signed-mean exponential estimate at $\nu/C$ now proves
+\eqref{eq:unit-two-step:moment-payment}.
+Using the same norm upper $N_0$ in both formulas, the other
+terms are linear in $\nu$, proving their stated relation.
+
+For \eqref{eq:unit-two-step:square-log-scale}, first keep the
+positive factor $\eta$ outside the fourth moment, and use
+$\log(c+BV/2)\le c+BV/2-1$. This retains the exact $4\log\eta$.
+Here is the variance-sensitive alternative, retaining the same mean.
+For a real $W$ with $|W|\le U$, put
+$h=\E W^2/U^2\le\theta$ and $m=\E W$. The moment-matching
+two-point comparison in paragraph~\ref{part:Q81.2} applies.
+If $m\ge0$, its separation is at most $(1+h)U$, so its centered
+log moment is at most $s^2U^2(1+3h)/8$, using
+$(1+h)^2\le1+3h$. If $m\le0$, write
+$w=-m/U$, $a=(h-w^2)/(1+w)^2$. The same Bernoulli estimate gives
+the desired coefficient precisely when
+\[
+ \frac{3(1+a)^4}{4(1+a+a^2)}
+ \le\frac{1+3w^2}{(1+w)^2}+3a.
+\]
+After subtracting $3a$, the left side is
+$3(1+a^2)^2/[4(1+a+a^2)]\le3/4$, since
+$a^3+a\le\theta^3+\theta<1$; the other side differs from $3/4$
+by $(3w-1)^2/[4(1+w)^2]$.
+Consequently $\E e^{sW}\le
+e^{s\E W+s^2(U^2+3\E W^2)/8}$.
+Apply this with $W=BV$, $U=\|V\|$ and $s=4$;
+the zero and degenerate moment cases follow directly.
+
+\end{proof}
+
+\begin{corollary}[The original two-edge output]\label{cor:unit-two-step:output}
+For an actual nonnegative $H$, put $U=T^2H$ and
+$I_q(U)=\E[q^{-1/3}|U|^{8/3}]$. Then
+\[
+ I_q(U)^3\le\min\left\{
+       [\E(U^4/q)]^2,
+       e^{(24427/3420)d-5d^2}[\E H^4]^2\right\}.
+\]
+\end{corollary}
+\begin{proof}
+H\"older and $\E q=1$ give the first bound. For the second, apply
+the generic transfer \eqref{eq:unit-output:ordinary-transfer},
+the inverse row \eqref{eq:unit-output:inverse-row}, and its
+cost \eqref{eq:unit-output:curvature}. The ordinary norm input
+is proved in paragraph~\ref{part:Q64.7.2}.
+\end{proof}
+
+\begin{corollary}[The first connector of a square]
+\label{cor:unit-two-step:first-square}
+Let $m>0$ and use the same original kernel throughout.
+If $0<F\le(m+Z/2)^2$, then
+\begin{equation}\label{eq:unit-two-step:first-unweighted-square}
+ pTF\le(c+BZ/2)^2,\qquad
+ c=m+\tfrac12\E Z+\frac{\|Z\|^2}{4m}.
+\end{equation}
+If instead $0<F\le q(m+Z/2)^2$, $Z=ag-W$, and
+$e=\E W$, put
+\[
+ N=K((m-a)g+W),\qquad
+ \Delta\ge m\{\sqrt{d\|Z\|^2}-\E(gZ)\}+\|Z\|^2.
+\]
+Then
+\begin{equation}\label{eq:unit-two-step:first-q-square}
+ 0<TF\le m^2q+mN-me+\Delta,\qquad
+ pTF\le\left(m-e/2+\frac\Delta{2m}+N/2\right)^2.
+\end{equation}
+Both square bases are nonnegative. The assertions hold for the
+actual signed $e,\E(gZ)$ and need no separate sign condition on $q+Z/m$.
+\end{corollary}
+\begin{proof}
+Use the first row of Theorem~\ref{thm:unit-two-step-transport}
+with $s_0=m^2$, $s_1=m$, $s_2=1/4$, and $\lambda=1$.
+For $w=1$, $r=1$, it gives
+$TF\le m^2q+mBZ+m\E Z+\|Z\|^2/2$.
+Equation~\eqref{eq:unit-two-step:unit-pairing} gives
+\eqref{eq:unit-two-step:first-unweighted-square}.
+For $w=q$, $r=2$, use $\bar f_2=q+Kg$ and
+$\E Z=-e$ to obtain
+\[
+ m^2\bar f_2+mBZ=m^2q+mK((m-a)g+W).
+\]
+The first-row scalar error is at most $-me+\Delta$.
+The complete upper bound in \eqref{eq:unit-two-step:first-q-square}
+is therefore positive. Apply the same unit pairing with $C=m^2$.
+\end{proof}
+
+\begin{corollary}[Bare inward paths]\label{cor:unit-two-step:bare-paths}
+For the actual paths on the same measure,
+\[
+ \E(p\bar f_2)^4\le e^{d/4},\qquad
+ \E(p\bar f_3)^4\le e^{-259d/128},\qquad
+ \E(p\bar f_n)^4\le e^{-d/2}\quad(n\ge4).
+\]
+\end{corollary}
+\begin{proof}
+At $n=2$, $p+\bar f_2=2+Bu$ and $\E Bu=-d$.
+For $n\ge3$, retain $\beta_n\bar f_0$ in the positive convolution:
+\[
+ p+\bar f_n\le2-\beta_n+BG_{n-1}(B)u,
+ \qquad \E BG_{n-1}(B)u=-\beta_{n+1}.
+\]
+The squared norm of $G_2(B)u$ is $d+\delta_2\le45d/32$;
+for $n\ge4$, Lemma~\ref{lem:odd-common:spectral} gives
+$\|G_{n-1}(B)u\|^2\le d$.
+Apply \eqref{eq:unit-two-step:square-log-scale} to the positive
+arithmetic-mean square. Its fourth exponent is
+$-4\beta_n-4\beta_{n+1}+(17/4)\|G_{n-1}(B)u\|^2$.
+At $n=3$, $\beta_3=\beta_4=d$, so this is at most
+$-259d/128$; thereafter use
+$\beta_n,\beta_{n+1}\ge\kappa d$ and
+$8\kappa-17/4=1/2$.
+\end{proof}

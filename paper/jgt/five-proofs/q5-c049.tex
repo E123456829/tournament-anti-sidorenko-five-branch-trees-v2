@@ -1,0 +1,230 @@
+\subsection{The ordinary eighth moment of the unit short-one connector}\label{proof:Q5-C049}
+On any nonempty finite probability space \((X,\allowbreak \mu)\), let \(K\) be real and antisymmetric with \(|K(x,\allowbreak y)|\le\allowbreak 1\). Delete zero-mass atoms and use the same \(\mu\) for all operators and inner products. Set
+\[
+\begin{gathered}
+Jv=(\E v)\one,\quad A=J+K,\quad T=J-K=A^*,\quad\\
+g=K\one,\quad p=1+g,\quad q=1-g,\quad r=Kg,\quad s=K^2g,
+\end{gathered}
+\]
+\[
+d=\E g^2,\qquad \delta_2=\E r^2,\qquad
+\delta_3=\E s^2,\qquad \theta=13/32.
+\]
+The finite spectral input in Section~\ref{proof:Q5-C081} gives
+\[
+0\le d\le1/3,\qquad
+\delta_2\le\theta d,\qquad \delta_3\le\theta\delta_2\le\theta^2d.
+\tag{Q49.1.1}\label{eq:Q49:1.1}
+\]
+The actual terminal and unit-connector messages are
+\[
+f_2=A^2\one=p+r,\qquad F=qf_2,\qquad H=pTF=pT(qf_2).
+\tag{Q49.1.2}\label{eq:Q49:1.2}
+\]
+The terminal unit arm points inward, its two-edge arm points outward, the connector points from the terminal to the receiving root, and the receiving unit arm points outward. These directions are fixed by the tree.
+We prove, for every such host,
+\[
+\E H^8\le1-d/500.
+\tag{Q49.1.3}\label{eq:Q49:1.3}
+\]
+Complete reversal gives
+\[
+\E\bigl[\{qA(p\bar f_2)\}^8\bigr]\le1-d/500,\qquad
+\bar f_2=T^2\one.
+\tag{Q49.1.4}\label{eq:Q49:1.4}
+\]
+Genuine equal pairs can be restored at their roots using \(f_\ell h_\ell\le\allowbreak 1\) and positivity.
+
+\paragraph{Q49.2 A row bound for $K^2$}
+For every real \(v\) with \(|v|\le\allowbreak 1\),
+\[
+\|Kv\|_2^2\le1/3.
+\tag{Q49.2.1}\label{eq:Q49:2.1}
+\]
+To see this, for a legal antisymmetric kernel \(L\), put
+\(a=\allowbreak L(x,\allowbreak y)\), \(b=\allowbreak L(y,\allowbreak z)\), \(c=\allowbreak L(z,\allowbreak x)\).
+Pointwise,
+\[
+1+ab+bc+ca
+=\frac{(1+a)(1+b)(1+c)+(1-a)(1-b)(1-c)}2\ge0.
+\]
+Integrating over three independent labels with measure \(\mu\), each quadratic term equals \(-\E(L\one)^2\). Hence
+\[
+\E(L\one)^2\le1/3.
+\tag{Q49.2.2}\label{eq:Q49:2.2}
+\]
+For \(v\in\{-1,\allowbreak 1\}\), the kernel \(L(x,\allowbreak y)=\allowbreak v(x)K(x,\allowbreak y)v(y)\) is legal and
+\(L\one(x)=\allowbreak v(x)Kv(x)\), proving \eqref{eq:Q49:2.1}.
+For general \(|v|\le\allowbreak 1\), choose independent signs \(\sigma(x)\) at the finitely many atoms, with \(\E_\sigma\sigma(x)=\allowbreak v(x)\). Convexity gives
+\[
+\|Kv\|_2^2
+=\|\E_\sigma K\sigma\|_2^2
+\le\E_\sigma\|K\sigma\|_2^2\le1/3.
+\]
+
+For a fixed \(x\), let \(k_x(y)=\allowbreak K(x,\allowbreak y)\). Since \(|k_x|\le\allowbreak 1\), for every real \(w\),
+\[
+K^2w(x)=\ip{k_x}{Kw}=-\ip{Kk_x}{w},\qquad
+|K^2w(x)|^2\le\|Kk_x\|_2^2\|w\|_2^2\le\|w\|_2^2/3.
+\tag{Q49.2.3}\label{eq:Q49:2.3}
+\]
+In particular,
+\[
+|s(x)|^2\le d/3.
+\tag{Q49.2.4}\label{eq:Q49:2.4}
+\]
+Equation \eqref{eq:Q49:2.1} is an \(L^\infty\)-to-\(L^2\) estimate, while
+\eqref{eq:Q49:2.3} is a row estimate for \(K^2\). The spectral bound used below remains \(\theta=\allowbreak 13/32\).
+
+\paragraph{Q49.3 A positive square envelope}
+Since \(q,\allowbreak f_2\ge\allowbreak 0\) and \(q+f_2=\allowbreak 2+r\), AM--GM gives
+\(F=\allowbreak qf_2\le\allowbreak (1+r/2)^2=\allowbreak 1+r+r^2/4\).
+Using \(\E r=\allowbreak -d\), \(Kr=\allowbreak s\), and \(0\le\allowbreak  T(r^2)\le\allowbreak 2\E r^2=\allowbreak 2\delta_2\),
+\[
+TF\le q-d-s+\delta_2/2\le q-(51/64)d-s.
+\tag{Q49.3.1}\label{eq:Q49:3.1}
+\]
+The last inequality uses \(\delta_2\le\allowbreak 13d/32\), and its right side is nonnegative because it dominates \(TF\).
+Put \(a=\allowbreak 51/128\) and \(c=\allowbreak 1-ad\).
+AM--GM for \(p\) and the nonnegative upper in \eqref{eq:Q49:3.1} gives
+\[
+0\le H=pTF\le[1-(51/128)d-s/2]^2=(c-s/2)^2.
+\tag{Q49.3.2}\label{eq:Q49:3.2}
+\]
+Moreover,
+\[
+c\ge111/128>0,\qquad |s|/2\le\sqrt{d/12}\le1/6<c.
+\tag{Q49.3.3}\label{eq:Q49:3.3}
+\]
+Skewness gives \(\E s=\allowbreak \ip{\one}{K^3\one}=\allowbreak 0\), and
+\[
+\E s^2=\delta_3\le\theta^2d.
+\tag{Q49.3.4}\label{eq:Q49:3.4}
+\]
+
+\paragraph{Q49.4 The scalar sixteenth-moment estimate}
+At \(d=\allowbreak 0\), \(g=\allowbreak r=\allowbreak s=\allowbreak 0\) and the actual messages \(p,\allowbreak q,\allowbreak f_2,\allowbreak F,\allowbreak H\) are one.
+For \(d>\allowbreak 0\), set
+\[
+x=\frac{\sqrt{d/12}}c,\qquad \eta=-\frac{s}{2c},\qquad
+\alpha=3\theta^2=\frac{507}{1024},\qquad
+k=12a=\frac{153}{32},\qquad w=\frac1c.
+\]
+The function \(\sqrt d/(1-ad)\) increases, so
+\[
+0<x\le\frac{1/6}{111/128}=\frac{64}{333}<\frac15.
+\tag{Q49.4.1}\label{eq:Q49:4.1}
+\]
+The row and second-moment bounds give
+\[
+|\eta|\le x,\qquad \E\eta=0,\qquad \E\eta^2\le\alpha x^2.
+\tag{Q49.4.2}\label{eq:Q49:4.2}
+\]
+For every integer \(j\ge\allowbreak 2\), \(\eta^j\le\allowbreak  x^{j-2}\eta^2\):
+for even \(j\) use absolute values; for odd \(j\) and negative \(\eta\), the left side is nonpositive.
+The binomial expansion therefore gives
+\[
+\E(1+\eta)^{16}
+\le1+\alpha[(1+x)^{16}-1-16x].
+\tag{Q49.4.3}\label{eq:Q49:4.3}
+\]
+The exact relation \(1-c=\allowbreak ad\) implies
+\[
+w^2-w=kx^2.
+\tag{Q49.4.4}\label{eq:Q49:4.4}
+\]
+
+Put \(v=\allowbreak w-1\ge\allowbreak 0\) and \(t=\allowbreak kx^2\). Then \(w-v=\allowbreak 1\), \(wv=\allowbreak t\), and the two roots \(w,\allowbreak -v\) satisfy \(z^2=\allowbreak z+t\).
+Thus
+\[
+\begin{aligned}
+w^{16}+v^{16}
+={}&1+16t+104t^2+352t^3+660t^4\\
+&+672t^5+336t^6+64t^7+2t^8.
+\end{aligned}
+\tag{Q49.4.5}\label{eq:Q49:4.5}
+\]
+For example, the finite identity follows from
+\(S_0=\allowbreak 2\), \(S_1=\allowbreak 1\), \(S_n=\allowbreak S_{n-1}+tS_{n-2}\), where
+\(S_n=\allowbreak w^n+(-v)^n\).
+Since \(v^2\le\allowbreak  wv=\allowbreak t\), we have \(v^{16}\le\allowbreak  t^8\); retaining the first three positive terms gives
+\[
+w^{16}\ge1+16kx^2+104k^2x^4+352k^3x^6.
+\tag{Q49.4.6}\label{eq:Q49:4.6}
+\]
+
+For \(0\le\allowbreak  x\le\allowbreak 1/5\), the ratio of consecutive binomial terms after degree five is at most
+\(((16-5)/(5+1))x\le\allowbreak 11/30\). Hence
+\[
+\sum_{j=5}^{16}\binom{16}{j}x^j
+\le\frac{4368}{1-11/30}x^5
+=\frac{131040}{19}x^5<7000x^5.
+\tag{Q49.4.7}\label{eq:Q49:4.7}
+\]
+Combining \eqref{eq:Q49:4.6} and \eqref{eq:Q49:4.7} yields
+\[
+w^{16}-1-\alpha[(1+x)^{16}-1-16x]
+\ge x^2[A-Bx+Cx^2-Dx^3+Ex^4].
+\tag{Q49.4.8}\label{eq:Q49:4.8}
+\]
+Here \(A,\allowbreak B,\allowbreak C,\allowbreak D,\allowbreak E\) are scalar coefficients:
+\[
+\begin{aligned}
+A&=16k-120\alpha=2187/128>17,\\
+B&=560\alpha=17745/64<278,\\
+C&=104k^2-1820\alpha=377949/256>1476,\\
+D&=7000\alpha=443625/128<3500,\\
+E&=352k^3=39397347/1024>38000.
+\end{aligned}
+\]
+Therefore
+\[
+w^{16}-1-\alpha[(1+x)^{16}-1-16x]
+\ge x^2[17-278x+1476x^2-3500x^3+38000x^4].
+\tag{Q49.4.9}\label{eq:Q49:4.9}
+\]
+The polynomial in brackets is
+\[
+(17-278x+1152x^2)+x^2(324-3500x+38000x^2).
+\]
+Completing the first square gives
+\[
+17-278x+1152x^2
+=1152(x-139/1152)^2+263/1152\ge263/1152.
+\tag{Q49.4.10}\label{eq:Q49:4.10}
+\]
+The second bracket is positive for every real \(x\), since
+\[
+3500^2=12250000<49248000=4\cdot324\cdot38000.
+\tag{Q49.4.11}\label{eq:Q49:4.11}
+\]
+Consequently, on the entire interval,
+\[
+w^{16}-1-\alpha[(1+x)^{16}-1-16x]\ge(263/1152)x^2.
+\tag{Q49.4.12}\label{eq:Q49:4.12}
+\]
+
+\paragraph{Q49.5 The uniform deficit}
+Using the positive square envelope,
+\[
+\E H^8
+\le c^{16}\{w^{16}-(263/1152)x^2\}
+=1-(263/13824)c^{14}d.
+\tag{Q49.5.1}\label{eq:Q49:5.1}
+\]
+Since \(111\cdot15=\allowbreak 1665>\allowbreak 1664=\allowbreak 128\cdot13\), we have \(c>\allowbreak 13/15\).
+Furthermore,
+\[
+(13/15)^7=\frac{62748517}{170859375}>\frac4{11},
+\qquad
+11\cdot62748517=690233687>683437500=4\cdot170859375.
+\]
+Thus \(c^{14}>\allowbreak 16/121>\allowbreak 1/8\), and
+\[
+\E H^8\le1-(263/110592)d\le1-d/500,
+\tag{Q49.5.2}\label{eq:Q49:5.2}
+\]
+because \(263\cdot500=\allowbreak 131500>\allowbreak 110592\).
+This proves \eqref{eq:Q49:1.3}.
+The conclusion allows one-atom and unequal-mass spaces, zero edge factors, and nonzero balanced kernels at \(d=\allowbreak 0\).
+At positive-mass atoms, \(p,\allowbreak q>\allowbreak 0\); the argument uses division only by the positive scalar \(c\).

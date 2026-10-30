@@ -1,0 +1,65 @@
+\subsection{Five continuous payments for a retained reference square}
+\label{sec:retained-reference-payments}
+\begin{lemma}\label{lem:retained-reference-payments}
+For the functions $\mathcal U_i$ below, one has
+$\mathcal U_i(d)\le1-\varepsilon_i d$ throughout $0\le d\le D_i$.
+\begin{align*}
+ \mathcal U_1(d)={}&e^{-37d/4}
+   +\frac{39}{4}d e^{-4d-2d^2}
+   -\frac34d e^{-851d/96}
+   -9d^2(\kappa-2d)^2e^{-7d/3},\\
+ \mathcal U_2(d)={}&e^{-159d/16}
+   +\frac{261}{26}d e^{-9d/2-81d^2/32}
+   -\frac34d e^{-10d},\\
+ \mathcal U_3(d)={}&e^{-203d/16}
+   +\frac{72}{7}d e^{-15d/4-81d^2/32},\\
+ \mathcal U_4(d)={}&e^{-209d/16}
+   +9d e^{-25d/8-2d^2}
+   +(d/4+4d^2)e^{-349d/32},\\
+ \mathcal U_5(d)={}&e^{-25d/2}
+   +\frac{91}{10}d e^{-7d/2}.
+\end{align*}
+Here $\kappa=19/32$, and the parameters are
+\[
+ \begin{array}{c|cc|cc}
+  i&D_i&\varepsilon_i&\deg P_i&\min_j b_{i,j}\text{ lower bound}\\\hline
+  1&1/4&1/800&32&1/100\\
+  2&1/5&1/16&32&1/5\\
+  3&1/5&1/160&32&1/10\\
+  4&1/4&1/600&32&1/20\\
+  5&1/4&1/60&16&1/100.
+ \end{array}
+\]
+The polynomials $P_i$ and their Bernstein coefficients $b_{i,j}$ are
+defined in the proof, on one interval for each row.
+\end{lemma}
+\begin{proof}
+Put
+\[
+ E(z)=\sum_{j=0}^{16}\frac{(-z)^j}{j!},\qquad
+ O(z)=\sum_{j=0}^{15}\frac{(-z)^j}{j!}.
+\]
+The signed Taylor remainder gives $O(z)\le e^{-z}\le E(z)$ for
+every $z\ge0$. In the displayed $\mathcal U_i$, replace an exponential
+with a positive prefactor by $E$, and one with a negative prefactor by
+$O$; call the resulting polynomial $\widehat{\mathcal U}_i$.
+All prefactors have the indicated sign on their stated intervals.
+The polynomial
+\[
+ P_i(d)=\frac{1-\varepsilon_i d-\widehat{\mathcal U}_i(d)}{d}
+\]
+has a removable zero in the numerator at $d=0$.
+If $P_i(d)=\sum_{k=0}^{n_i}a_{i,k}d^k$, its coefficients in
+the Bernstein basis on $[0,D_i]$ are exactly
+\[
+ b_{i,j}=\sum_{k=0}^{j}
+  a_{i,k}D_i^k\frac{\binom jk}{\binom{n_i}k},\qquad 0\le j\le n_i.
+\]
+Substitution of the five displayed formulas gives the 149 positive
+coefficients with the rational lower bounds in the table.
+ Applying
+Lemma~\ref{lem:bernstein-certificate} gives $P_i\ge0$ on the entire
+interval. Therefore
+$\mathcal U_i\le\widehat{\mathcal U}_i\le1-\varepsilon_i d$,
+including the endpoint $d=0$.
+\end{proof}

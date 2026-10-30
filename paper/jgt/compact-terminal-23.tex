@@ -1,0 +1,149 @@
+\subsection[The propagated pair (2,3)]{The propagated pair $(2,3)$}\label{loc:S23}
+In this proof $\tau=d-\delta_{2}$.
+Here $P=h_2f_3$. We prove $\E[p(T^LP)^4]\le1$ for every $L\ge1$,
+with the same actual directions at every length and parameter.
+Put $m=1-d/2$, $k=1/m$ and $s=K^2g$. Since
+$h_2+f_3=2-d+s$, positivity and AM--GM give
+\[
+ P\le F_0=(m+s/2)^2,\qquad Y_L=T^LF_0\ge T^LP\ge0.
+\]
+We shall compare all moments with
+\begin{equation}\label{eq:compact-23-taylor}
+ m^{-8}\ge1+4d+9d^2,\qquad dm^8<1/9.
+\end{equation}
+The first is the positive Taylor remainder of $(1-d/2)^{-8}$.
+The second follows by differentiation: its maximum is
+$(2/9)(8/9)^8<1/9$ at $d=2/9$.
+
+\proofpart{Finite spectra and every $L\ge4$}
+Let $Q_n(z)=G_n(z)-kz^{n+2}$. For every $n\ge3$ its spectral norm
+is at most one. To see this write
+\[
+ Q_n=\frac{1-z^n(1+kz^2-kz^3)}{1-z},\quad
+ A_x=1-kx\ge41/80,\quad C_x=A_x^2+k^2x^3\le1.
+\]
+For $n\equiv0,3\pmod4$ the numerator of the squared modulus is at most
+one. For residues $1,2$ the losses after division by $x$ are at least
+$1-(12/5)x^3-x^4\ge51/80$ and
+$1-2x^2-x^5\ge15/32$, respectively. This includes every finite length.
+For $V_L=S'_L-kK'^{L+3}\one$, $L\ge3$, finite alternating means give
+$\alpha=1-\E V_L,\eta=\E[g'V_L]\in[\tau,d]$.
+Even added powers are $\beta_{2j-2}+k(-1)^j\delta_{j}$; pair consecutive terms,
+using $k\theta^2<1$, with the first case $d-k\delta_{3}\ge\tau$.
+Hence $\|V_L-1\|^2\le d$ and, for $L\ge4$,
+$|V_L-q|\le\sqrt d$.
+
+Duhamel and $T(s^2)\le2\delta_{3}$ give
+\[
+ Y_L\le m^2V_L-m\delta_{2}\bar f_{L-2}+(\delta_{3}/2)\bar f_{L-1}
+                 -\sum_{j=3}^L\omega_j\bar f_{L-j},
+\]
+where $\omega_j=m^2\beta_j$ for odd $j$, and
+$\omega_j=m^2\beta_j-m(-1)^{j/2}\delta_{j/2+1}$ for even $j$.
+All are at least $m^2\tau$: for $j\equiv0\pmod4$ pair the final
+positive beta term with $\delta_{j/2+1}$, using $m>\theta^2$;
+the boundary $j=4$ uses $m>\theta$.
+For $L\ge4$ this implies $Y_L\le m^2Z$ with
+\[
+ Z=V_L-a-\tau q,\quad a=\tau-\delta_{3}/m^2\ge2279d/6400>d/3.
+\]
+Then $\mu=\E Z\le1-d$, covariance $\E[g'(Z-\mu)]\ge0$,
+$\operatorname{Var}Z\le d$, and
+$Z\le(1-d/3)q-d/3+\sqrt d$.
+Profile A of Section~\ref{calc:coefficientprofiles} bounds the fourth
+coefficient by seven for exactly this mean and row envelope.
+Thus $\E[pY_L^4]\le m^8[(1-d)^4+7d]\le1$;
+the Taylor difference is $d+3d^2+4d^3-d^4\ge0$.
+
+\proofpart{Three and two steps}
+For each short case below define $H=p(B^2+2uB+3u^2)$ using that case's stated mean upper bound $u$ and pointwise upper bound $B$.
+For $L=3$, retain the actual term $-m\delta_{2}q$:
+\[
+ Y_3\le m^2Z,\quad Z=V_3-a-bq,\quad
+ a=d-\delta_{3}/m^2\ge4879d/6400,\quad b=k\delta_{2}.
+\]
+The mean is at most $1-d$, covariance at least $3d/10$, and variance
+at most $d$. The tail $Q_2$ has squared modulus
+$(1-kx^2)^2+x\le233/200<(13/12)^2$.
+Thus $Z\le q-3d/4+13\sqrt d/12$. The coefficient certificate is
+\begin{align*}
+ D&=-1/4-407x^2/144-91x^3/24+81x^4/16,\\
+ Q&=-5/8+39x/8-1163x^2/96-91x^3/16+243x^4/32.
+\end{align*}
+Here $D=H'(3/2)$, $Q=H(3/2)-7$ and $H''\le-3$ on the maximizing
+interval. For $x\le1/3$, $-D<2/3$, $Q<-1/8$, giving margin $-11/216$.
+For $x\ge1/3$, convexity and negative endpoints of $Q'$ give
+$Q\le-25/54$, $-D<7/5$, giving margin $-92/675$.
+The same Taylor comparison proves the three-step case.
+
+For $L=2$, set $\varepsilon=\delta_{3}/(2m^2)$ and
+$Z=V_2-k\delta_{2}+\varepsilon q\ge Y_2/m^2$.
+Then
+\[
+ \mu\le1-d,\qquad h\ge4d/5,\qquad
+ \operatorname{Var}Z\le25d/22,\qquad Z\le q+21\sqrt d/20.
+\]
+For the variance, use $v=\delta_{2}/d$ and
+\[
+ d+\delta_{2}-2k\delta_{3}+k^2\delta_{5}\le d[1+v-(2-\theta^2)v^2]<25d/22;
+\]
+the remaining $-d^2+2\varepsilon(d-k\delta_{3})+\varepsilon^2d$ is
+nonpositive since $\varepsilon<3d/25$.
+The row bound is $\sqrt{d+k^2\delta_{4}}\le21\sqrt d/20$.
+For $\lambda=21/20$ the corresponding coefficient function is concave,
+has maximum below $3/2$ and curvature at most $-3$; its derivative there
+has absolute value below $4/3$, while its value is at most $57/8$.
+The tangent bound $57/8+8/27<15/2$ proves $M\le15/2$.
+The endpoint comparison is therefore
+\[
+ \E[pY_2^4]\le m^8\max\{Cd,(1-d)^3(1-21d/5)+Cd\},\quad C=375/44.
+\]
+The first branch is below $125/132$ by \eqref{eq:compact-23-taylor}.
+For the second, its difference below $1+4d+9d^2$ is at least
+$21d/44+61d^3/5\ge0$.
+
+\proofpart{One step}
+Exactly $Y_1=m^2Z$, where
+\[
+ Z=q-kK^3g+e,\quad e=(\delta_{3}-K(s^2))/(4m^2),\quad
+ 0\le e\le \delta_{3}/(2m^2).
+\]
+The mean, covariance and centered variance obey
+\[
+ \mu\le1-3\delta_{2}/4,\quad h\ge d-\delta_{2}/10,\quad
+ \operatorname{Var}Z\le d+7\delta_{2}/16.
+\]
+Indeed the mean loss and covariance error are bounded by
+\[
+ (1-\theta/2)\delta_{2}=51\delta_{2}/64,\qquad
+ (117/800)\sqrt d\,\delta_{2}<\delta_{2}/10,
+\]
+respectively.
+For the variance, use the square of
+\[
+ \sqrt{d+k^2\delta_{4}}+\delta_{3}/(4m^2).
+\]
+The three added coefficients are
+$1521/6400$, $2457\sqrt d/8000$, $13689\delta_{2}/640000$,
+whose sum is below $751/1750<7/16$.
+Put $u=\sqrt{\delta_{2}}<3/8$. The row envelope is
+$Z\le q+4u/5+3u^2/10$.
+For this envelope and mean $1-3u^2/4$, the concave fourth coefficient
+has curvature at most $-3$ below $3/2$ and
+\begin{align*}
+ D&=-1/4-59u^2/25-18u^3/25+531u^4/400,\\
+ H(3/2)&=51/8+18u/5-1113u^2/200-27u^3/25+1593u^4/800.
+\end{align*}
+$-D<5/8$; the cubic and quartic sum is nonpositive, and the quadratic
+gain is below $3/5$. Hence $M<51/8+3/5+25/384<57/8$.
+The zero mean endpoint is below $247/256$ by $\delta_{2}\le d/2$ and
+\eqref{eq:compact-23-taylor}.
+For the other endpoint, expand with $\delta=3\delta_{2}/4$:
+\[
+ (1-\delta)^3(1-\delta-4h)
+ \le1-4d-13\delta_{2}/5+9d\delta_{2}+99\delta_{2}^2/40.
+\]
+Adding $M(d+7\delta_{2}/16)$ and subtracting from the Taylor lower bound
+leaves at least $789d/1280+621d^2/160\ge0$.
+This completes every positive length. Equal pairs are restored by
+positivity, full reversal exchanges $p,T$ with $q,A$, and $d=0$ gives equality.

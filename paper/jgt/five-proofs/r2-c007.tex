@@ -1,0 +1,265 @@
+\subsection{The unit connector with terminal arms of lengths two and three}\label{proof:R2-C007}
+We use the auxiliary coordinates $B=-K$ and $u=B\one=-g$. Thus
+$T=J+B=A^*$, $A=J-B$, $p=1-u$, $q=1+u$, and
+$\bar f_n=T^n\one$, $h_n=Tf_{n-1}$, $\delta_i=\|B^i\one\|_2^2$,
+$d=\delta_1$, $\theta=13/32$, and $\tau=d-\delta_2$.
+All expectations and adjoints use the original measure. The two residual
+terminal arms have lengths $(2,3)$ and messages $h_2,f_3$; the unit
+connector points from the terminal to the receiving root and has output
+$X=T(h_2f_3)$. The receiving arm has its actual outward message $f_a$,
+where $a\ge3$. These directions depend only on the original arm lengths.
+We prove
+\begin{equation}\tag{R07.0.1}\label{eq:R07:claim}
+ \E[f_aX^4]\le1-d/100.
+\end{equation}
+The same conclusion holds with $\E[E_of_a\{T(E_th_2f_3)\}^4]$ on the left,
+where $E_o,E_t$ are any actual equal-arm decorations.
+
+The finite calculus of Q3-C014 gives
+$0\le d\le1/3$, $d^2\le\delta_2\le\theta d$,
+$\delta_{i+1}\le\theta\delta_i$, $\|B\|^2\le\theta$,
+$|BV(x)|\le\|V\|_2$, $f_n\le2$, and $\E f_n\le1-2d$ for $n\ge3$.
+The operators $A,T$ are positive. Equal-arm pairs lie in $[0,1]$,
+and $p,q>0$ on the original positive support.
+Put $G_n(z)=\sum_{j=0}^{n-1}z^j$, $\beta_1=\beta_2=0$, and
+$\beta_n=\sum_{j=1}^{\lfloor(n-1)/2\rfloor}(-1)^{j-1}\delta_j$.
+The exact positive convolution \eqref{eq:Q117:conv} and the receiving uppers
+\eqref{eq:Q117:receiver} and \eqref{eq:Q187:receiver} give the receiving bounds
+\begin{equation}\tag{R07.1.1}\label{eq:R07:receiving}
+ \begin{gathered}
+ S_a=1-G_a(-B)u,\qquad C_3=f_3=S_3-d,\\
+ C_a=S_a-\beta_a-\beta_{a-1}p\quad(a\ge4),\qquad
+ 0\le f_a\le C_a,\qquad \tau\le\beta_j\le d\quad(j\ge3),\\
+ C_a\le(1-d)p+\tfrac65\sqrt{pqd}
+       \le(1-d)p+\tfrac65\sqrt d\quad(a\ge3).
+ \end{gathered}
+\end{equation}
+For $a=3$ the last bound uses the actual variance
+$d+\delta_2-d^2\le36d/25$ of $u-Bu$. For $a\ge4$ it retains two
+convolution terms, uses $\beta_a+\beta_{a-1}\ge2\tau\ge d$, and
+$\|G_{a-1}(-B)u\|_2\le\sqrt d$.
+On the original spectral measure $\nu$ of $-B^2$ at $u$, write
+$z=i\sqrt x$, $0\le x\le\theta$, and
+$\int x^j\,d\nu=\delta_{j+1}$. If $G_a=E_a+zD_a$, then
+$1-x\le E_a,D_a\le1$ for $a\ge3$.
+
+Put $m=1-d/2$ and $s=-B^2u$. Since $h_2+f_3=2m+s$,
+\begin{equation}\tag{R07.2.1}\label{eq:R07:Y}
+ 0\le X\le T(m+s/2)^2\le Y:=m^2q-mB^3u+\delta_3/2.
+\end{equation}
+Here $\E s=0$, $Ts=-B^3u$, and $T(s^2)\le2\delta_3$; in particular,
+$Y\ge0$. With $w=Y-m^2$ and $c=\delta_3/2$ the exact moments are
+\begin{equation}\tag{R07.2.2}\label{eq:R07:moments}
+ \E w=-m\delta_2+c,\qquad
+ \E w^2=m^4d+m^2\delta_4-m\delta_2\delta_3+\delta_3^2/4.
+\end{equation}
+The mixed product of $u$ and $B^3u$ vanishes; the negative constant--mean
+cross term in \eqref{eq:R07:moments} is retained. We use the identity
+\begin{equation}\tag{R07.2.3}\label{eq:R07:fourth}
+ Y^4=m^8+4m^6w+w^2(Y^2+2m^2Y+3m^4).
+\end{equation}
+
+For $0\le d\le1/4$ the following continuous pointwise bound holds:
+\begin{equation}\tag{R07.3.1}\label{eq:R07:curvature}
+ C_a(Y^2+2m^2Y+3m^4)\le8m^2\quad(a\ge3).
+\end{equation}
+Here is its full certificate. Set $t=\sqrt d\in[0,1/2]$,
+$\alpha=1-t^2$, $c_0=6t/5$, and $C=5t/12+t^2/10$.
+The row bound and $\delta_3\le\theta^2d$ give $Y\le m^2q+mC$:
+indeed $\theta<5/12$, $\theta^2/(2m)\le4\theta^2/7<1/10$, and
+$m\ge7/8$. After division by $m^2$ it suffices to bound
+\[
+ Q(q,t)=[\alpha(2-q)+c_0]\{[m(q+1)+C]^2+2m^2\}\le8,
+ \qquad0\le q\le2.
+\]
+Let $h=C/m\le4/15$. The derivative $Q_q$ is a concave quadratic, and
+\[
+ \frac{Q_q(0)}{m^2}=\alpha(1+2h-h^2)+2c_0(1+h)>0,\quad
+ \frac{Q_q(1/2)}{m^2}=\alpha(1/4-h^2)+2c_0(3/2+h)>0.
+\]
+Thus $Q$ increases on $[0,1/2]$. On $q\ge1/2$,
+\[
+ Q_{qq}=2m^2(c_0-3\alpha q)-4\alpha mC\le-5/4.
+\]
+For $t\le2/5$ the first term is at most $-41262/31250<-5/4$.
+For $t\ge2/5$, use $m^2\ge49/64$, $c_0-3\alpha/2\le-21/40$,
+$\alpha m\ge21/32$, and $C\ge137/750$ to obtain
+$-Q_{qq}\ge1029/1280+2877/6000>5/4$.
+The same formula gives $Q_{qq}\le-\lambda$ with
+\[
+\begin{array}{c|ccccc}
+ t\text{ upper bound}&1/8&1/5&1/4&1/3&1/2\\\hline
+ \lambda&5/2&9/4&2&3/2&5/4
+\end{array}
+\]
+by inserting the respective bounds for $c_0,\alpha,m$ and retaining the
+nonpositive final term. Direct multiplication gives
+\begin{align*}
+ Q(1,t)&=6+\tfrac{133}{15}t-\tfrac{6787}{720}t^2
+ -\tfrac{5357}{600}t^3+\tfrac{21011}{3600}t^4
+ +\tfrac{1161}{500}t^5-\tfrac{131}{100}t^6\\
+ &\le F(t):=6+\tfrac{133}{15}t-\tfrac{159}{20}t^2-\tfrac{25}{3}t^3,\\
+ D(t):=Q_q(1,t)&=-2+\tfrac{119}{30}t+\tfrac{3331}{720}t^2
+ -\tfrac{509}{150}t^3-\tfrac{9131}{3600}t^4
+ +\tfrac{56}{75}t^5+\tfrac{41}{100}t^6.
+\end{align*}
+The first comparison uses $t^4\le t^2/4$, $t^5\le t^3/4$.
+$F$ increases on $[0,1/3]$, $F'(1/3)=71/90$, and
+$F''\le-159/10$, so
+$F\le12577/1620+(71/90)^2(5/159)<39/5$ on the full interval.
+Discarding positive derivative terms and bounding the two negative
+ones at $t=1/2$ gives $D'\ge1105/7200>0$.
+Exact endpoint substitution gives
+$D(0)=-2$, $D(1/8)>-3/2$, $D(1/5)>-16/15$,
+$D(1/4)>-4/5$, $D(1/3)>-1/3$, and $D(1/2)<3/5$.
+The strong concavity bound $Q\le Q(1,t)+D(t)^2/(2\lambda)$ therefore
+has the following certificates on five closed intervals:
+\[
+\begin{array}{c|c|c|l}
+ t&|D|&\lambda&\text{upper bound, strictly below }8\\\hline
+ {}[0,1/8]&2&5/2&F(1/8)+4/5\\
+ {}[1/8,1/5]&3/2&9/4&F(1/5)+1/2\\
+ {}[1/5,1/4]&16/15&2&F(1/4)+64/225\\
+ {}[1/4,1/3]&4/5&3/2&F(1/3)+16/75\\
+ {}[1/3,1/2]&3/5&5/4&39/5+18/125
+\end{array}
+\]
+These rational comparisons, including $12577/1620+16/75<8$ in the
+fourth row, prove \eqref{eq:R07:curvature} throughout its domain.
+
+For $a=3$ and $0<d\le1/4$, put $v=\delta_2/d$,
+$w_3=\delta_3/d$, $w_4=\delta_4/d$. Then
+$d\le v\le\theta$, $v^2\le w_3\le\theta v$, $w_4\le\theta w_3$,
+and the actual receiving moments are
+\begin{align*}
+ \E C_3&=1-2d,\\
+ \E[C_3(m^2u-mB^3u)]&=-m^2(d-\delta_2)-m(1-d)\delta_2+m\delta_3,\\
+ \E[C_3w]/d&=-m^2+(md/2)v+\tfrac32(1-d)w_3.
+\end{align*}
+Equations \eqref{eq:R07:moments}--\eqref{eq:R07:curvature} bound
+$\E[C_3Y^4]$ by
+\[
+ m^8(1-6d)+8m^6d+2m^7vd^2+6m^6(1-d)w_3d
+ +8m^4w_4d-8m^3vw_3d^2+2m^2w_3^2d^2.
+\]
+Writing its normalized deficit as $D_3=(1-\text{bound})/(m^4d)$,
+the positive Taylor expansion gives
+\[
+ \frac{m^{-4}-m^4(1-6d)}d-8m^2
+ \ge2-3d+10d^2-\tfrac78d^3.
+\]
+Use the spectral bounds above and $m^2\ge49/64$, and discard the
+positive term $8vw_3d/m$. This gives
+\begin{align*}
+ D_3&\ge2-3d+10d^2-\tfrac78d^3-2\theta d
+ -[6m^2(1-d)+8\theta]\theta^2-\tfrac{128}{49}\theta^4d\\
+ &\ge\tfrac{15}{32}-2d+\tfrac{17}{2}d^2
+ \ge\tfrac{191}{544}>1/3.
+\end{align*}
+For the intermediate comparison the constant is
+$2-6\theta^2-8\theta^3=1939/4096>15/32$,
+the linear coefficient is greater than $-2$, and, after absorbing the
+negative cubic using $d\le1/4$, the quadratic coefficient is
+$313/32-(57/8)\theta^2>17/2$. Completing the square proves the last
+inequality. Hence the actual deficit exceeds $m^4d/3>d/6$.
+
+For $a\ge4$ work on $0<d\le1/5$, set $\beta=\beta_{a-1}$,
+$e_a=\int E_a\,d\nu$, $l_a=\int x^2D_a\,d\nu$. The exact finite
+receiving data are
+\begin{equation}\tag{R07.5.1}\label{eq:R07:covariance}
+\begin{gathered}
+ \E C_a=1-\beta_a-\beta_{a+1}-\beta,\qquad
+ \E[C_au]=-e_a+\beta d,\\
+ \E[C_aB^3u]=(1-\beta_a-\beta)\delta_2-l_a,\qquad
+ \tau\le e_a\le d,\quad0\le l_a\le\delta_3.
+\end{gathered}
+\end{equation}
+In $m^8\E C_a+4m^6\E[C_aw]$ the coefficients of $\beta_a$ and
+$\beta_{a+1}$ are negative: for the former use
+$m^2+2\delta_3-4m\delta_2\ge m(m-4\theta d)>0$.
+The coefficient of $\beta$ is $m^6J$, where
+$J=-m^2(1-4d)-2\delta_3+4m\delta_2$.
+Lowering all three betas and $e_a$ to $\tau$ and raising $l_a$ to
+$\delta_3$ costs at most $m^6\delta_2J_+$ beyond the resulting bound $M_0$.
+Its normalized deficit satisfies
+\begin{align*}
+ D_0:=\frac{1-M_0}{m^4d}\ge{}&B_0(d)-3m^4v-2m^3vd(1+d-4v)
+ -[m^2(6-8d)+8\theta]w_3\\
+ &+vw_3d(8/m-6m^2)-2w_3^2d/m^2,\\
+ B_0(d):={}&\frac{m^{-4}-m^4(1-7d+4d^2)}d-8m^2\\
+ \ge{}&3-9d+\tfrac{39}{2}d^2-\tfrac{59}{8}d^3+\tfrac{67}{16}d^4.
+\end{align*}
+The right side decreases in $w_3$: its negative main coefficient is
+at least $8\theta$, whereas its positive correction is at most
+$vd(8/m)\le13/18$. Insert $w_3=\theta v$. The resulting expression is
+$B_0-Lv+dQv^2$, with
+\[
+ L=3m^4+2m^3d(1+d)+\theta[m^2(6-8d)+8\theta],\quad
+ Q=8m^3+\theta(8/m-6m^2)-2\theta^2/m^2<12.
+\]
+Its $v$ derivative is at most $-3m^4+24d\theta<0$, because
+$3m^4\ge3(9/10)^4>39/20\ge24d\theta$. Thus $v=\theta$ gives
+\begin{align*}
+ D_0\ge{}&B_0-3\theta m^4-2\theta m^3d(1+d-4\theta)
+ -\theta^2[m^2(6-8d)+8\theta]\\
+ &+\theta^3d(8/m-6m^2)-2\theta^4d/m^2\\
+ \ge{}&P(d):=\tfrac{1043}{4096}-\tfrac{11}{3}d
+                +\tfrac{151}{10}d^2-\tfrac{49}{10}d^3.
+\end{align*}
+Indeed $m^{-2}\le1+6d/5$ and
+$8/m-6m^2\ge2+10d+d^2/2+d^3$; terms of degree at least four are
+nonnegative, while the first four coefficients are bounded by
+\[
+\begin{gathered}
+c_0=1043/4096,\quad
+c_1=-9+\tfrac{29}{4}\theta+14\theta^2+2\theta^3-2\theta^4\ge-11/3,\\
+c_2=\tfrac{39}{2}-\tfrac{67}{8}\theta-\tfrac{19}{2}\theta^2
+       +10\theta^3-\tfrac{12}{5}\theta^4\ge151/10,\\
+c_3=-\tfrac{59}{8}+\tfrac{87}{16}\theta+2\theta^2+\theta^3/2\ge-49/10.
+\end{gathered}
+\]
+For example $c_1+11/3=3373/1572864$ and
+$c_2-151/10=9145/262144$.
+The positive-beta cost is controlled using $\delta_3\ge\delta_2^2/d$:
+\[
+ J\le-m^2(1-4d)+(4mv-2v^2)d
+ \le J_*(d):=-1+\tfrac{3223}{512}d-\tfrac{81}{16}d^2+d^3.
+\]
+The second comparison uses $m>v$. The polynomial $J_*$ increases on
+$[0,1/5]$, $J_*(9/50)<0$, and $J_*(1/5)=4127/64000<1/15$.
+For $d\le9/50$ the cost vanishes, and
+\[
+ P(d)\ge1043/4096-(11/3)d+(7109/500)d^2>1/64.
+\]
+Completing the square reduces this to
+$1043/4096-15125/63981>1/64$, whose cross-multiplied positive
+difference is $685399$. On $[9/50,1/5]$, $P$ increases and
+$P(9/50)>1/20$, whereas the normalized extra cost is
+$m^2vJ_+<\theta/15<1/36$. The remaining deficit is at least
+$1/20-1/36=1/45>1/64$. Consequently
+\[
+ \E[C_aY^4]\le1-(m^4/64)d\le1-d/100.
+\]
+
+For the remaining range use the actual terminal, whose exact mean is
+$\E[h_2f_3]=1-2d-d^2$. This follows by multiplication, or by subtracting
+the means of the squares in
+\[
+h_2f_3=(m+s/2)^2-(-u+Bu-B^2u/2-d/2)^2;
+\]
+the two square means are $m^2+\delta_3/4$ and
+$d+\delta_3/4+5d^2/4$. Positivity gives $X\le2(1-2d-d^2)$.
+For $1/5\le d\le1/3$ both nonnegative factors decrease, so
+\[
+ \E[f_aX^4]\le(1-2d)[2(1-2d-d^2)]^4
+ \le\tfrac35(28/25)^4=1843968/1953125<19/20\le1-d/100.
+\]
+This overlaps both low ranges and proves \eqref{eq:R07:claim}.
+Decorations follow from $0\le E_o,E_t\le1$ and positivity of $T$.
+At $d=0$, $u=0$ and successive leaf integration gives every original
+tree message equal to one; the kernel need not vanish. All original
+arms, decorations, and the unit connector retain their original edges.
+Full reversal changes the receiving arm, terminal arms, connector, and
+decorations together. Combining this unit row with \eqref{eq:q117-unified:shorttwo}
+at $L\ge2$ gives, for terminal $(2,3)$, every $L\ge1$ with deficit
+$d/400$. Terminals $(2,t)$ with $t\ge4$ require a separate estimate.

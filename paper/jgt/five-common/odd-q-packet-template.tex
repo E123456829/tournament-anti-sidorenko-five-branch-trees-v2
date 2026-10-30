@@ -1,0 +1,82 @@
+% Insert after the ordinary and odd fourth-moment entrances.
+% This is the q-anchored/W_2 interface, not the ordinary no-pair lemma.
+\subsection{An anchored packet and its reversed unit row}
+\label{sec:odd-common:q-packet}
+
+\begin{lemma}[A correlated first row and the \(W_2\) cancellation]
+\label{lem:odd-common:q-packet}
+Let \(F\) be an actual terminal, \(R=r(B)u\), and suppose its actual
+first row has been proved in the form
+\begin{equation}\label{eq:odd-common:q-first-row}
+ TF\le e^{\alpha}(\bar f_2+BR+D),\qquad D\ge0.
+\end{equation}
+For a terminal \(F\le q e^{R-\Gamma}\), \(\alpha=-\Gamma\).
+A square row with prefactor \(m^2e^{-\Gamma}\) instead has
+\(\alpha=2\log m-\Gamma\); that scalar is kept throughout.
+Set \(D_i=\E B^iR\) and \(\gamma_j=\beta_j-D_{j-2}\).
+Finite propagation and the positive path convolution give
+\begin{equation}\label{eq:odd-common:q-finite}
+ T^LF\le e^{\alpha}\left[
+ 1+G_{L+1}(B)u+B^LR+D\bar f_{L-1}
+       -\sum_{j=3}^{L+1}\gamma_j\bar f_{L+1-j}\right].
+\end{equation}
+For \(L\ge2\), if the displayed \(\gamma_j\) are nonnegative,
+\begin{equation}\label{eq:odd-common:q-long}
+\begin{gathered}
+ T^LF\le e^{\alpha}[1+u+c_L+BQ_L(B)u],\qquad
+ c_L=2D-\gamma_{L+1},\quad Q_L=G_L+z^{L-1}r,\\
+ \E BQ_L(B)u=-\gamma_{L+2}.
+\end{gathered}
+\end{equation}
+The mean identity requires the same actual moment at index \(L+2\).
+
+Under complete terminal reversal, \(\bar R=-r(-B)u\) and
+\begin{equation}\label{eq:odd-common:q-reversal}
+ \E\bar R=\E R,\quad\|\bar R\|=\|R\|,
+ \quad\E(u\bar R)=-\E(uR).
+\end{equation}
+If the first-row proof used
+\(D\ge\max\{\E R+\E(uR)+\sqrt{d\E R^2}+c_T\E R^2,0\}\),
+the same proof and the same \(D\) give
+\(T\bar F\le e^{\alpha}[Tp+B\bar R+D]\).
+The coefficient \(c_T\) is the one proved for the actual terminal.
+
+Suppose the chosen root pair has the full envelope
+\(P_r\le e^{-\Gamma_r+BV_r}\), including its actual constant.
+The resulting complete certificates are
+\begin{equation}\label{eq:odd-common:q-cancel}
+\begin{array}{c|c|c}
+ \text{actual message}&a&\text{complete }V\\ \hline
+ f_2P_rT\bar F&\alpha+D-\Gamma_r&\bar R+V_r\\
+ W_2P_rT^LF,\ L\ge2&\alpha+c_L-\Gamma_r&(Q_L-1)u+V_r.
+\end{array}
+\end{equation}
+They mean \(\log H\le a+BV\), with fourth exponent
+\(4(a+\E BV)+(17/4)\|V\|^2\).
+For the second row its scalar-plus-mean, before the actual root
+mean \(\E BV_r\), is
+\(\alpha-\Gamma_r+2D+d-\gamma_{L+1}-\gamma_{L+2}\).
+\end{lemma}
+
+\begin{proof}
+Apply \(T^{L-1}\) to \eqref{eq:odd-common:q-first-row} and use
+the bare finite Duhamel identity
+\eqref{eq:oc:finite-duhamel}. Substituting
+\eqref{eq:Q188:conv} gives
+\eqref{eq:odd-common:q-finite}. Retaining the final
+\(\gamma_{L+1}\bar f_0\) and using
+\(\bar f_{L-1}\le2\) gives \eqref{eq:odd-common:q-long}; the
+two spectral means give its next-index identity and
+\eqref{eq:odd-common:q-reversal}.
+In the first-row calculation
+\(T(qR)=\E R+\E(uR)+BR+B(uR)\).
+Reversal changes its mean sum to
+\(\E\bar R-\E(u\bar R)\), which is the same number;
+the row-product bound remains \(\sqrt{d\E R^2}\).
+Finally \(f_2=1-u+Bu\) cancels both \(u\) and \(Bu\) in
+\(Tp=1+u-Bu\), whereas \(W_2=1-u-Bu\) cancels \(u\) and
+subtracts one \(u\) from the primitive in the long row.
+Apply \(\log y\le y-1\) to these positive factors and their
+positive majorants. This gives the displayed full vectors,
+without a new unit-arm curvature reserve.
+\end{proof}

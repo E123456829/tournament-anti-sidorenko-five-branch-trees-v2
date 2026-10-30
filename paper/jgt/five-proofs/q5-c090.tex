@@ -1,0 +1,116 @@
+\subsection{Actual unequal-pair envelopes and finite masks}\label{proof:Q5-C090}
+We use the pair and finite-mask bounds of Q5-C090, Sections 2.1--2.3.
+For actual residual arm lengths $a<b$ write
+$R_{ab}=\sum_{n=a+1}^bK^n\one=\sum_{n=a}^{b-1}K^ng$.
+The exact finite positive-convolution difference is
+\begin{equation}\tag{L90.2.4}\label{eq:L90:difference}
+f_b-f_a=R_{ab}
++\sum_{i=0}^{a-3}(\beta_{a-i}-\beta_{b-i})f_i
+-\sum_{i=a-2}^{b-3}\beta_{b-i}f_i.
+\end{equation}
+The first sum's positive part is at most
+$4\delta_2/(1-\theta^2)\le1664d/855$; this is the finite
+alternating-beta difference bound from the original Q3 convolution,
+using $f_i\le2$. In particular the short sums give
+\[
+h_2+f_b\le2+R_{2b}-\beta_b\le2+R_{2b}-\kappa d,
+\qquad h_3+f_b\le2+R_{3b}-(2d-\delta_2).
+\]
+The shortest cases $b=3,4$ retain the actual $\beta_bf_0$ term.
+
+We include the precise all-integer path-mean input, also recorded in
+Q5-C067, Section 2, and the Q4 path foundation. For $n=4,5,6,7$,
+the exact means are respectively
+\[
+\begin{gathered}
+1-3d+\delta_2,\quad1-4d+2\delta_2+d^2,\quad
+1-5d+3\delta_2+3d^2-\delta_3,\\
+1-6d+4\delta_2+6d^2-2\delta_3-2d\delta_2.
+\end{gathered}
+\]
+Their losses divided by $d$ are at least
+$83/32,137/48,89/32,127/48$.
+For every finite $n\ge8$, retain $f_0,\ldots,f_5$ and three
+additional convolution indices at least seven. Positive convolution
+gives
+\[
+1-\mu_n\ge\tau(7-10d+3\delta_2+d^2)+3\kappa\delta_3
+\ge\kappa d(7-10d+7d^2)\ge95d/36>83d/32.
+\]
+Here $\delta_2\ge d^2$, $\delta_3\ge d^3$ are original global
+spectral moment inequalities; the bracket is positive and decreasing
+on $[0,1/3]$. Thus $\mu_n\le1-83d/32$ for every $n\ge4$,
+without using monotonicity of the sequence $\mu_n$.
+
+For $a=4$, retain the actual negative $f_2$ term in
+\eqref{eq:L90:difference}:
+$f_b-f_4\le R_{4b}+\delta_2(1+p)-\tau f_2$.
+The original pointwise row inequality $|Kg|\le pq/2$ gives
+$f_2=p+Kg\ge p^2/2$.
+For $d>0$, completing the square gives
+\[
+\delta_2(1+p)-\tau f_2
+\le\delta_2+\delta_2p-\tau p^2/2
+\le\delta_2+\frac{\delta_2^2}{2\tau}\le3d/4.
+\]
+Since $h_4+f_4=2-4d$, the sum loss is at least $13d/4>16d/5$.
+For $a\ge5$, use $h_a+f_a=2\mu_{a-1}\le2-83d/16$ and the
+finite positive-difference bound. The loss is at least
+$[83/16-1664/855]d=(44341/13680)d
+=[16/5+113/2736]d>16d/5$.
+Every actual two-arm sum is nonnegative, so AM--GM followed by
+$1+t\le e^t$ applies with a nonnegative square base and gives
+\begin{equation}\tag{L90.2.3}\label{eq:L90:pair}
+h_af_b\le\begin{cases}
+e^{R_{ab}-\kappa d},&a=2,\\
+e^{R_{ab}-(2-\theta)d},&a=3,\\
+e^{R_{ab}-16d/5},&a\ge4.
+\end{cases}
+\end{equation}
+For a finite ordered pair list, its intervals are disjoint; sum them
+once into $R$. The actual product $F$ satisfies $F\le e^{R-\lambda d}$,
+where
+\[
+\lambda=\begin{cases}
+\kappa+16(j-1)/5,&a_1=2,\\
+2-\theta+16(j-1)/5,&a_1=3,\\
+16j/5,&a_1\ge4.
+\end{cases}
+\]
+For $j\ge2$ the first two values are at least $607/160,767/160$.
+No expectations of distinct pair factors are multiplied.
+
+If a finite polynomial $P$ has all coefficients in $[0,1]$, put
+$z=i\sqrt x$, $0\le x\le\theta$.
+The positive and negative real-coordinate subsums are each bounded
+by their geometric sums, so the absolute real coordinate is at most
+$1/(1-x^2)$. The imaginary coordinate, divided by $\sqrt x$, has
+the same bound. Consequently
+\begin{equation}\tag{L90.2.5}\label{eq:L90:mask}
+|P(i\sqrt x)|^2\le\frac{1+x}{(1-x^2)^2}
+\le C_*:=\frac{32768}{16245}<\frac{100}{49}.
+\end{equation}
+Apply this on each original skew-operator rotation block.
+The actual finite mask is $R=K^{a_1}P(K)g$, with coefficients zero
+or one and lowest coefficient one. Hence
+\begin{equation}\tag{L90.2.6}\label{eq:L90:masknorm}
+\begin{gathered}
+\|R\|_2^2\le\theta^{a_1}C_*d,\quad |R(x_0)|^2\le\theta^{a_1-1}C_*d,\quad |U(i\sqrt x)|^2\le x^{a_1}C_*,\\
+\|B^rR\|_2^2\le\theta^{a_1+r}C_*d.
+\end{gathered}
+\end{equation}
+Here $U$ is the actual polynomial representing $R$ in $B,u$
+coordinates; it is not pointwise division by $u$. The pointwise
+bound removes only the outermost original kernel using its row bound.
+For $|R|\le t<3$, the positive Taylor terms obey
+$n!\ge2\cdot3^{n-2}$ for $n\ge2$, and negative $R$ is bounded by
+the integral remainder. Thus
+\[
+e^R\le1+R+\frac{R^2}{2(1-t/3)}.
+\]
+For $a_1\ge4$, $|R|^2<d/7\le1/21<1/16$, so $t=1/4$ works;
+for $a_1=3$, $|R|^2<d/3\le1/9$, so $t=1/3$ works.
+Both give $e^R\le1+R+3R^2/5$.
+For $a_1=2$, $|R|^2<5d/6\le5/18<9/25$; take $t=3/5$ to get
+$e^R\le1+R+5R^2/8$.
+At $d=0$ the actual messages are one by original leaf integration.

@@ -1,0 +1,367 @@
+\subsection[Propagated triples (1,2,c), c >= 4]{Propagated triples $(1,2,c)$, $c\ge4$}\label{loc:S26}
+Let $P_c=qf_2h_c$. We prove $\E[p(T^LP_c)^4]\le1$ for every $L\ge1$.
+The common path mean \eqref{eq:compact-strong-path-means} gives
+$h_c\le77/80$ for $c\ge5,d\ge1/5$; for $c=4,d\ge1/4$,
+$h_4\le2\mu_3=2(1-2d)\le1$.
+Positivity and Section~\ref{loc:S21} therefore cover all these large
+parameters in the same actual direction. Below $d\le1/5$ for $c\ge5$,
+or $d\le1/4$ for $c=4$.
+
+\proofpart{Positive input and the actual error}
+Put
+\begin{gather*}
+ \alpha=\beta_c,\quad B=\beta_{c-1},\quad
+ m=1-(\alpha+B)/2,\quad k=1/m,\quad a_0=\beta_{c-2},\\
+ W_c=K^2G_{c-2}(K)g,\quad U=Bg-W_c,\quad H=q+kU,\quad B_L=T^LH,\\
+ D_1=d-\beta_{c+1},\quad D_2=d-\beta_{c+2},\quad
+ E_3=\beta_{c+3}-\tau,\quad E_4=\beta_{c+4}-\tau,\\
+ v=1-kB,\quad\epsilon=kD_1.
+\end{gather*}
+The inward-path convolution gives
+$h_c\le(1-B)q-r-W_c-\alpha$, and thus
+$P_c\le q(m+U/2)^2$.
+We next verify $H\ge0$.
+Take $z=S_{c-3}\ge0$; then
+\[
+ T^3z=(1-a_0+B)q+(1-a_0)r-\alpha-W_c\ge0.
+\]
+Add $(1-a_0)[(1-B)q-r-\alpha-W_c]\ge0$ and divide by $2-a_0$.
+This proves $q-W_c\ge\alpha+a_0(1-B)q/(2-a_0)\ge\alpha$.
+It follows that $H\ge k[(\alpha-B)+(\alpha+3B)g]/2$.
+For $g\ge1/4$ the right side is at least $k(d-2\delta_{2})/2\ge0$.
+For $g\le1/4$, $q+kBg\ge3/4$ and
+$k|W_c|<3/4$, since
+$|W_c|^2\le\theta(1+\theta)d\le195/1024<1/4$.
+Thus $H\ge0$ and $\E H=1+k(\beta_{c+1}-d)\le1$.
+
+Expansion of the actual first step gives
+\[
+ TP_c\le m^2B_1-m\E[gU]+mK(gU)+T(qU^2)/4.
+\]
+For $J_U=\E U^2$, $v_0=\E[gU]$, its error is at most
+$m(\sqrt{dJ_U}-v_0)+J_U$.
+For $c\ge5$,
+$v_0\ge Bd+c_0\delta_{2}$, $\sqrt{J_U}\le B\sqrt d+\sqrt{\delta_{3}}$,
+where $c_0=19/32$. Hence, uniformly on $d\le1/5$,
+\begin{equation}\label{eq:compact-12c-error}
+ T^LP_c\le m^2B_L+C_Ed\,\bar f_{L-1},\qquad
+ C_E=\theta/(4c_0)+(1/5+\theta)^2.
+\end{equation}
+This completes a square in $\rho=\delta_{2}/d$, without a spectral-support
+assumption. The sharper error retained for short lengths is
+\begin{equation}\label{eq:compact-12c-rho-error}
+ d[m(y-c_0\rho)+(B+y)^2],\qquad y=\sqrt{\theta\rho}.
+\end{equation}
+For $c=4$, $J_U=d^3+2d\delta_{2}+\delta_{3}+\delta_{4}$, $v_0=d^2+\delta_{2}$;
+the error is at most $C_4d$, $C_4=2889/4096$, using
+$\sqrt{dJ_U}-v_0\le\theta(1+\theta)d/4$ and $J_U/d\le9/16$.
+
+\proofpart{All long connectors for $c\ge5$}
+Let $n=L+1$ and $s_0=c-2\ge3$. Define
+\begin{gather*}
+ \Pi_n(z)=G_n(z)+kz^{n-1}[-B+z^2G_{s_0}(-z)],\\
+ V_n=S'_n-kB K'^n\one+kG_{s_0}(-K')K'^{n+2}\one.
+\end{gather*}
+The perturbation budget is
+$k(B+\theta)\le97/128<4/5$; the shared finite-$G$ lemma therefore gives
+$\|\Pi_n(K')\|\le1$ for $n\ge4$.
+Duhamel and convolution give the exact finite coefficient identity
+\begin{gather*}
+ B_L=V_n-\sum_{j=2}^n\omega_j\bar f_{n-j},\\
+ \omega_j=v\beta_j+kB\beta_{j-1}
+                +k(-1)^j[\beta_{j+1}-\beta_{c+j-1}],\\
+ 1-\E V_n=\omega_{n+1},\qquad\E[g'V_n]=\omega_{n+2}.
+\end{gather*}
+Here $\omega_2=kD_1\ge0$, $\omega_3=vd-kD_2\ge0$,
+and $\tau\le\omega_j\le d$ for all $j\ge4$.
+To see the full index range, expand each beta as its finite alternating
+sum. For even $j=2h$, the initial terms are
+$\operatorname{Alt}_{h-1}$ and the next retained tail starts at
+$k(-1)^{h+1}\delta_{h+1}$, skipping $\delta_{h}$.
+The transition is decreasing since $k\delta_{h+1}\le \delta_{h-1}$;
+for $h=2$ check $d-k\delta_{3}\ge\tau$ directly.
+For odd $j=2h+1\ge5$ the sequence is
+\[
+ \operatorname{Alt}_{h-1}+(-1)^{h-1}v\delta_{h}
+       +k[(-1)^h\delta_{h+1}+(-1)^{h+1}\delta_{h+2}+\cdots].
+\]
+Both transitions decrease because $\delta_{h-1}\ge v\delta_{h}\ge k\delta_{h+1}$.
+Every tail ends at the highest index of $\beta_{c+j-1}$, so the argument
+applies to finite paths of either parity.
+For $L\ge4$ retain the last two losses:
+$0\le B_L\le Z=V_n-\omega_n-\omega_{n-1}q$.
+Since $V_n-1=\Pi_n(K')g'$ and
+$V_n-1-g'=K'\Pi_{n-1}(K')g'$, all four beta coefficients, variance and
+row-tail conditions of \eqref{eq:compact-fourth-comparison} hold.
+Thus $\E[pB_L^4]\le1-d/9$.
+Minkowski in the original probability $p\mu$ and $\bar f_{L-1}\le2$ now give
+\[
+ \|T^LP_c\|_{4,p}\le m^2+2C_Ed
+ \le1-19363d/486400.
+\]
+The exact margin is
+$5719/5120-13/38-9409/12800=19363/486400$.
+
+\proofpart{The distinct $c=4$ spectral family}
+Here $m=1-d$, $k\le4/3$, $v=2-k$, and
+$\Pi_n=G_n+kz^{n-1}(-d+z^2-z^3)$.
+The same finite coefficient formulas apply and
+$k(d+\theta)\le7/8<1$ preserves their alternating transitions.
+For $z=i\sqrt x$ write
+\[
+ \Pi_n=\frac{1-z^{n-1}W}{1-z},\quad
+ W=a+i\sqrt x\,b,\quad a=k(d+x-x^2),\quad b=1-kd-2kx.
+\]
+Then $0\le a\le2/3$, $-5/12\le b\le1$,
+$|W|^2\le245/288<1$ and $a\ge x(1-x)$.
+For $n\equiv1\pmod4$, $n\ge5$, the numerator is at most one because
+$x^{(n-1)/2}|W|^2\le2a$.
+For the other three residue classes the sufficient upper bounds are
+\[
+ \begin{array}{c|c}
+ n\equiv3,\ n\ge7&(4/3)x^2+x^5<35/96\\
+ n\equiv0,\ n\ge4&(5/6)x+x^2<2/3\\
+ n\equiv2,\ n\ge6&2x^2+x^4<9/16.
+ \end{array}
+\]
+Each is less than one, proving $\|\Pi_n\|\le1$ for every $n\ge4$.
+The same long-connector comparison gives $\E[pB_L^4]\le1-d/9$ and
+\[
+ \|T^LP_4\|_{4,p}\le(1-d)^2+2C_4d\le1-695d/2048.
+\]
+At large parameters the reduction to $qf_2$ gives norm at most $1-d/36$.
+Together with the $c\ge5$ margin, this proves the optional uniform loss
+$\E[p(T^LP_c)^4]\le e^{-d/9}$ for $L\ge4,c\ge4$.
+
+\proofpart{Three short connectors for $c=4$}
+For $d\le1/4$ the following output conditions imply
+$\E[pZ^4]\le e^{4d}$:
+\[
+ Z\ge0,\quad \E Z\le1-d/2,\quad\E[-gZ]\ge3d/4,\quad
+ \operatorname{Var}Z\le9d/8,\quad Z\le q+(13/12)\sqrt d.
+\]
+To certify the coefficient, put $x=\sqrt d$, $u=1-x^2/2$,
+$W=2-p+13x/12$, and $H_x(p)=p(W^2+2uW+3u^2)$.
+At $p=3/2$,
+\begin{align*}
+ H_0&=51/8+39x/8-335x^2/96-13x^3/8+9x^4/8,\\
+ D_0&=-1/4-119x^2/144-13x^3/12+3x^4/4.
+\end{align*}
+Here $H_0\le1499/192$, $|D_0|\le157/288<3/5$;
+$H'_x(2)<0$, and on the maximizing interval $p\le3/2$, $H_x''\le-3$.
+Thus the coefficient is at most $1499/192+3/50<63/8<8$.
+The endpoint expansion \eqref{eq:compact-fourth-endpoints} is bounded by
+$\max\{9d,(1-d/2)^3(1-7d/2)+9d\}\le e^{4d}$,
+by the quadratic Taylor lower bound of the exponential.
+
+For $B_1$, the exact outputs are
+\begin{gather*}
+ B_1=(1-\epsilon)q+Kz_0,\quad
+ z_0=vg+k(s+K^3g)-\epsilon,\\
+ \E B_1=1-d+kd^2,\quad\E[-gB_1]=d-k\delta_{3},\\
+ \operatorname{Var}B_1=d+v^2\delta_{2}-2k(v+1)\delta_{3}+k^2(\delta_{4}+\delta_{5})-(vd-k\delta_{2})^2.
+\end{gather*}
+Use $2k(v+1)-k^2\theta(1+\theta)>9/4$ and
+$\delta_{3}\ge \delta_{2}^2/d$ to get variance at most $10d/9<9d/8$.
+Also $\|z_0\|^2\le v^2d-2vk\delta_{2}+k^2(\delta_{3}+\delta_{4})\le d$.
+The mean and covariance satisfy $\E B_1\le1-2d/3$,
+$\E[-gB_1]\ge599d/768>3d/4$.
+
+For $B_2=V_3-\epsilon q-\omega_3$,
+$\omega_3=vd-k\delta_{2}\ge d/8$, $\alpha_3=d-k\delta_{3}$ and
+$\eta_3=\tau+kd\delta_{2}+k\delta_{3}$.
+Its mean is at most $1-d/2$ and covariance at least $3d/4$.
+The squared spectral polynomial is
+\[
+ F_k(x)=[1-2x+kx(1+x)]^2+x(1-kx^2)^2.
+\]
+At $k=1$, $F_1-1=xQ(x)$,
+$Q=-1+3x-4x^2+x^3+x^4\le-1/3$:
+$Q$ increases and $Q(\theta)=-363983/1048576$.
+Also $\partial_kF_k\le45x/16$, $k-1\le4d/3$, so
+$F_k\le1+[-1/3+15d/4]x$.
+After centering, $\alpha_3\ge3d/4$ and
+$\epsilon^2d-2\epsilon\eta_3\le0$ give variance at most $9d/8$;
+for $d\ge4/45$ its divided bound is $1+161/1536<9/8$.
+The row-tail square is
+$(1-kx^2)^2+x(v-kx)^2\le1+v^2x-9x^2/4\le10/9<169/144$.
+Both $B_1,B_2$ therefore satisfy the displayed fourth comparison.
+
+For $B_3$ retain $\epsilon r$:
+\[
+ B_3=\widehat V-a-bq,\quad\widehat V=V_4-\epsilon r,\quad
+ a=d-k\delta_{3},\quad b=vd,
+\]
+with $1-\E\widehat V=\tau+k\delta_{3}$ and
+$\E[g'\widehat V]=\tau+k\delta_{4}$.
+These four coefficients lie in $[c_0d,d]$.
+Subtracting $\epsilon z$ lowers the nonnegative imaginary part of $\Pi_4$,
+so $\|\widehat V-1\|^2\le d$.
+For its row tail $\|\Pi_3-\epsilon\|\le1$ follows by multiplying its
+squared-modulus difference by $(1-d)^2$ and bounding it by
+$xQ+A(x)d-C(x)d^2$, where
+\[
+ A=4x-6x^2+6x^3,\quad C=23/16+2x-2x^2.
+\]
+Completing the square reduces this to
+$-4CxQ-A^2=xD(x)/4\ge0$, with
+\[
+ D=23-101x+156x^2-135x^3+105x^4-144x^5+32x^6.
+\]
+Here $D'\le-105931/8192<0$ and
+$D(\theta)=2479497/33554432>0$.
+Thus \eqref{eq:compact-fourth-comparison} gives $\E[pB_3^4]\le1-d/9$.
+Restoring the actual error, for $L=1,2$ use
+$m^2e^d+C_4de^d\le1-2671d/28672$,
+since $m^2e^d\le1-d$ and $e^d\le9/7$.
+For $L=3$ use $1-695d/2048$ as above. This completes all short $c=4$ cases.
+
+\proofpart{The first two steps for $c\ge5$}
+For $B_1$ the exact mean and covariance are
+\[
+ \E B_1=1-d+kBd+k(D_2-D_1),\qquad\E[-gB_1]=d-kE_3.
+\]
+They are at most $1-2d/3$ and at least $3d/4$, respectively.
+For the mean, $D_2-D_1\le0$ at $c=5,6$; for $c\ge7$ use
+$D_2-D_1\le \delta_{4}$, $B\le d-c_0\delta_{2}$ and
+$kB+k\delta_{4}/d<5/16<1/3$.
+Write $G_{s_0}(-i\sqrt x)=a-i\sqrt x\,b$, so $1-x\le a,b\le1$.
+The squared polynomial for $V_2-1$ is
+$(1-kx^2b)^2+x(v-kxa)^2$.
+Both brackets are positive, and it is at most
+\[
+ F_0=(1-x^2+x^3)^2+x(1-x+x^2)^2
+ \le1+x-4x^2+5x^3\le13/12.
+\]
+The last cubic has possible maxima at $1/5$ and $\theta$, with values
+$2/25,2665/32768<1/12$.
+The row-tail square is at most
+$v^2+kx[-2v+(2v+k)x]\le v^2\le1$.
+Thus $B_1$ has variance at most $13d/12$ and row bound $q+\sqrt d$.
+Using the coefficient $63/8$ proved above for the short $c=4$ connectors in the endpoint expansion gives
+\[
+ \E[pB_1^4]\le\max\{273d/32,
+ 1+275d/96+26d^2/3-140d^3/27+88d^4/81\}\le e^{13d/4}.
+\]
+For the two branches, comparison with exponential Taylor polynomials
+leaves respectively $31/200$ and the positive quadratic
+$37/96-325d/96+10d^2$, whose minimum is $36455/368640$.
+
+For $B_2$ the exact outputs are
+\begin{gather*}
+ B_2=V_3-\epsilon q-\omega_3,\quad\omega_3=vd-kD_2,\quad
+ \alpha_3=d-kE_3,\quad\eta_3=\tau+kB\delta_{2}+kE_4,\\
+ \mu=1-(1+v)d+k(E_3+D_2-D_1),\qquad
+ h=\tau+kB\delta_{2}+kE_4-kD_1d.
+\end{gather*}
+Finite alternating sums give $0\le E_3+D_2-D_1\le \delta_{3}$, hence
+$\mu\le1-3d/2$.
+Retain $E_4\ge c_0\delta_{3}$ in the covariance. With $\rho=\delta_{2}/d$,
+\[
+ h/d\ge1-\rho+\frac{c_0-d}{1-d+\rho d}\rho^2
+ \ge32125/48128>2/3.
+\]
+The first expression decreases in both $d$ and $\rho$ on
+$[0,1/5]\times[0,\theta]$, giving the endpoint certificate.
+For variance use $1-x\le a\le1-x+x^2$, $1-x\le b\le1$ in
+$[1-vx+kx^2a]^2+x[1-kx^2b]^2$.
+Writing $R_0=1-x+x^2-x^3+x^4$, the increase over $k=1$ is at most
+$(10/3)dx$; the unperturbed square is $1+xQ_*$, where
+\[
+ Q_*=-1+3x-6x^2+7x^3-3x^4+x^5-x^6+x^7\le Q\le-1/3.
+\]
+Indeed $Q_*-Q=x^2[-2(1-x)(1-2x)+x^3-x^4+x^5]\le0$ on $[0,\theta]$.
+Consequently $\|V_3-1\|^2\le d+[-1/3+10d/3]\delta_{2}$.
+Centering with $\alpha_3\ge3d/4$ and
+$\epsilon^2d-2\epsilon\eta_3\le0$ gives
+$\operatorname{Var}B_2\le33d/32$; on $d\ge1/10$ the divided upper bound
+is $491/480$.
+The preceding $\Pi_2$ row tail gives $B_2\le q+(13/12)\sqrt d$.
+Thus
+\[
+ \E[pB_2^4]\le\max\{2079d/256,
+ 1-419d/768+51d^2/2-63d^3/2+225d^4/16\}\le e^{21d/8}.
+\]
+Comparison with the quadratic and cubic exponential Taylor lower bounds
+has endpoint margins $247/6400$ and
+$2129/76800$ after their decreasing remainder polynomials are evaluated
+at $d=1/5$.
+
+\proofpart{The actual ratio errors}
+By \eqref{eq:compact-12c-rho-error}, the two norm bounds have the common
+upper function
+\[
+ F=m^2e^{\lambda d}+\gamma d[m(y-c_0\rho)+(B+y)^2].
+\]
+Use $(\lambda,\gamma)=(13/16,1)$ for one step and $(21/32,8/7)$ for two
+steps; \eqref{eq:compact-qnorm} gives $\|q\|_{4,p}<8/7$ on $d\le1/5$.
+The function decreases in $\alpha$ and $B$; its $B$ derivative is at most
+$-m+2\gamma d(B+\theta)<0$. Hence put $\alpha=B=(1-\rho)d$.
+Writing $a=1-\rho$, use
+$e^{\lambda d}\le1+\lambda d+Cd^2$, with $C=7/20$ or $1/4$.
+Then $(F-1)/d$ is bounded by $L+Qd+Rd^2+Sd^3$, where
+\begin{gather*}
+ L=\lambda-2+[2+\gamma(2\theta-1)]\rho+\gamma y,\\
+ Q=C-2a\lambda+a^2+\gamma a(y+c_0\rho),\quad
+ R=a^2(\lambda+\gamma)-2aC,\quad S=Ca^2.
+\end{gather*}
+These full polynomials increase in $\rho$. In the first row the derivative
+bounds are $L'\ge29/16$, $Q'>0$, $R'\ge-117/40$, $S'\ge-7/10$;
+the total is at least $16899/10000$.
+In the second they are $25/14,-129/112,-347/112,-1/2$, yielding
+at least $1961/1400$. Values at $\rho=0$ follow by continuity.
+The complete endpoint coefficients are
+\[
+ \begin{array}{c|cccc|c}
+ L&L(\theta)&Q(\theta)&R(\theta)&S(\theta)&(F-1)/d\le\\\hline
+ 1&-23/512&20009/163840&18297/81920&2527/20480&-216589/20480000\\
+ 2&-69/448&7529/28672&77387/229376&361/4096&-2503049/28672000.
+ \end{array}
+\]
+The last three coefficients are positive, so evaluating at $d=1/5$
+bounds the polynomial throughout the rectangle.
+
+\proofpart{Three steps for $c\ge5$}
+Retain $\widehat V=V_4-\epsilon r$ and write $B_3=\widehat V-a-bq$, where
+\begin{gather*}
+ a=d-kE_3,\quad b=d-kBd+k(D_1-D_2),\quad
+ \alpha=1-\E\widehat V=\omega_5-\epsilon d,\quad\eta=\omega_6.
+\end{gather*}
+Here $a,b\ge3d/4$, $\alpha\ge2d/3$,
+$b\le(4941/4096)d<1/4$, and
+$\eta=\tau+kF_5$ with $F_5=\tau+\delta_{3}-\beta_{c+5}\ge c_0\delta_{4}$.
+For the lower bound on $b$, only $c\equiv3\pmod4$ has a negative
+$D_1-D_2$. At $c=7$ use $B=\tau$, $|D_1-D_2|=\delta_{4}$;
+for $c\ge11$ use $B\le d-c_0\delta_{2}$ and $|D_1-D_2|\le \delta_{6}$.
+Both give $B+|D_1-D_2|/d\le1/5$.
+Subtracting $\epsilon z$ decreases the nonnegative imaginary part of
+$\Pi_4$, so $\|\widehat V-1\|^2\le d$.
+The exact centered outputs satisfy
+\begin{gather*}
+ \mu\le1-13d/6\le1-3c_0d,\quad
+ h=\eta-bd\ge\tau-d^2,\\
+ \operatorname{Var}B_3\le d-769d^2/576+9d^3/16
+                         \le d-3c_0^2d^2+d^3.
+\end{gather*}
+For the covariance when $b>d$, necessarily $c\equiv1\pmod4$.
+At $c=5$ use $\delta_{4}\ge d\delta_{3}$, the integral covariance inequality
+$\frac12\iint(x-y)(x^3-y^3)\,d\nu(x)d\nu(y)\ge0$.
+For $c\ge9$ use $b-d\le k\delta_{5}$ and $c_0\delta_{4}\ge d\delta_{5}$.
+For variance the exact expression is
+$\|\widehat V-1\|^2-\alpha^2+b^2d-2b\eta$;
+its last two terms decrease in the actual $b$ interval.
+The row tail obeys
+\[
+ \|\Pi_3-\epsilon\|^2\le1+\max\{0,\theta(10d-1)/3\}.
+\]
+For $d\le1/10$ it contracts. Otherwise the extra row term is at most
+$\theta(10d-1)\sqrt d/6\le5d/32$.
+The extra losses $a,b\ge3d/4$ absorb it, giving
+$0\le B_3\le(1-c_0d)q-c_0d+\sqrt d$.
+All four outputs of \eqref{eq:compact-fourth-comparison} hold, so
+$\E[pB_3^4]\le1-d/9$.
+Restoring \eqref{eq:compact-12c-error} gives the same actual norm
+$1-19363d/486400$ as the long case.
+The large-parameter reductions and the two short-step margins all join
+their small ranges. Every $c\ge4,L\ge1$ is therefore covered with the
+original arm and connector directions unchanged.

@@ -1,0 +1,300 @@
+\subsection{Odd terminals with a unit anchor and multiple pairs}\label{loc:S35}
+Let $2\le b_1<c_1<b_2<c_2<\cdots<b_t<c_t$, $t\ge2$, and
+$F=qf_{b_1}h_{c_1}\prod_{i=2}^th_{b_i}f_{c_i}$.
+We prove $\E[p(T^LF)^4]\le e^{-2d/5}$ for every $L\ge1$.
+Use $b=b_1$, $c=c_1$, $B=\beta_{c-1}$ and the finite sums
+\[
+ W=\sum_{j=b}^{c-1}K^jg,\quad
+ S=\sum_{i=2}^t\sum_{j=b_i}^{c_i-1}K^jg,\quad
+ R=Bg-W+S=Kv,\quad\Delta_0=\beta_b+\beta_c+B.
+\]
+Here the specific row factor is
+\[
+ v=B\one-\sum_{j=b}^{c-1}K^{j-1}g
+       +\sum_{i=2}^t\sum_{j=b_i}^{c_i-1}K^{j-1}g.
+\]
+All original directions, including the inward unit arm, are fixed.
+
+\proofpart{A common square and the actual error}
+For $d\ge1/24$, the later mask starts at length at least four and
+$|S|<(3/8)\sqrt d\le15d/8$.
+Its actual product is at most $e^{-d/8}$.
+Therefore $F\le e^{-d/8}qf_bh_c$, and the complete three-arm results
+in Sections~\ref{loc:S22}, \ref{loc:S26}, \ref{loc:S31} prove the bound.
+
+For $0<d\le1/24$, the actual arm sums are bounded by
+$2-\Delta_0+Bg-W$ and $2-2d+$ the corresponding later sum.
+AM--GM reduces the positive $2t$-th root to $t=2$:
+\[
+ f_bh_c\prod_{i=2}^th_{b_i}f_{c_i}\le(m_4+R/4)^4,\quad
+ m_4=1-(\Delta_0+2d)/4.
+\]
+To justify the continuous reduction, $d\le\Delta_0\le3d$ and the
+signed-mask bound give $|R|\le d+13\sqrt d/10$.
+With $u=(R-(\Delta_0-2d))/(2t(1-d))$,
+$|u|\le103\sqrt d/230<1/10$.
+Then $\log(1-d)+\log(1+u)-u/(1+u)<-7d/8$.
+The inequality follows by integration of $u/(1+u)^2$;
+its positive correction is at most $530450d/4284900<d/8$.
+Since $m_4^2+\|R\|_\infty^2/16\le1-307439d/230400$,
+we have the common positive square envelope
+\[
+ F\le qm^2(1+kR/2)^2,\quad m=1-4d/3,\quad
+ k=m_4/m<16/15.
+\]
+Below $m$ is improved for each prefix and $k$ is updated accordingly.
+Set $H=q+kR$, $H_L=T^LH$.
+One exact original-row comparison gives
+\begin{equation}\label{eq:compact-unit-row}
+ 0\le T^LF\le m^2H_L+\epsilon d\,\bar f_{L-1},
+\end{equation}
+whenever
+$\epsilon d\ge\sqrt{dJ}-\E[gR]+J$, $J=\E R^2$.
+This uses $m^2k,m^2k^2\le1$, Cauchy, and $T(qR^2)\le4J$.
+As in Section~\ref{loc:S34}, every actual $\bar f_{j}$ has fourth norm at
+most $6/5$ on this small range.
+
+The finite expansion common to all three prefixes is, for $n=L+1$,
+\begin{equation}\label{eq:compact-unit-deltas}
+ V_n=S'_n+kK'^{n-1}R,\quad
+ \omega_j=\beta_j-k\E[K'^{j-2}R],\quad
+ H_L=V_n-\sum_{j=2}^n\omega_j\bar f_{n-j}.
+\end{equation}
+Its two mean coefficients are $\omega_{n+1}$ and $\omega_{n+2}$.
+To distinguish polynomials from their values at $K$, write
+$W_{b,c}(z)=\sum_{j=b}^{c-1}z^j$ and
+$U(z)=\sum_{i=2}^t\sum_{j=b_i}^{c_i-1}z^j$.
+The general vector polynomial, in the original $z$ convention, is
+\[
+ \Pi_n(z)=G_n(-z)+k(-z)^{n-1}[-B+W_{b,c}(z)-U(z)].
+\]
+The formulas below specialize this same finite family.
+Write $D_j=\delta_{j}/(1-\theta^2)$ for finite same-sign tail bounds.
+Only $\omega_2$ may be negative; set $e=k(\E R)_+$ to control it.
+
+\proofpart{The first pair $(2,3)$}
+Here $R=-s+S$, $S=K^4Q_0(K)g$, $B=0$.
+The finite frequency bound
+$|1-z^2Q_0(z)|\le177/112$ gives
+$\|v\|^2\le5\delta_{2}/2$, $J\le5\delta_{3}/2$,
+$\E[gR]\ge \delta_{2}-D_4$.
+The improved constant is $m=1-45d/32$, $k=m_4/m\le16/15$;
+$m_4^2+\|R\|_\infty^2/16\le1-1447d/1024\le m$.
+Optimizing $\sqrt{(5/2)\theta\rho}-\rho$ at $\rho=\delta_{2}/d$ shows
+that \eqref{eq:compact-unit-row} holds with $\epsilon=3/4$:
+$5\theta/8+D_4/d+5\theta^2/2<3/4$.
+
+Here $H\ge0$ by the original row-covariance inequality.
+In general, if $k\|v\|^2\le2\E v$, then
+\[
+ q+kKv\ge(a/2)p+(1-a/2)q-\sqrt{a(2-a)pq}\ge0,
+ \quad a=k\E v\in[0,2].
+\]
+For this prefix $\E v\ge d-D_3$ and
+$k\|v\|^2\le13d/12<2(1-2\theta^2)d/(1-\theta^2)$.
+The finite coefficient ranges are
+\[
+\begin{gathered}
+ e\le4d/45,\quad
+ 7d/20\le\omega_3\le11d/10,\\
+ 41d/45\le\omega_4\le11d/10,\quad
+ 11d/20\le\omega_j\le11d/10\ (j\ge5).
+\end{gathered}
+\]
+For the later mask the first positive/negative mean bounds at indices
+$j=3,4,5,6,7$ are $(D_3,D_4)$, $(D_4,D_5)$,
+$(D_5,D_4)$, $(D_6,D_5)$, $(D_5,D_6)$.
+Each four-step shift raises both moment indices by two.
+Combining these with the alternating beta sums gives every stated index,
+including the first boundary $d-k(\delta_{2}+D_3)\ge7d/20$.
+
+Let $U(z)$ be the finite $S$ mask. The vector polynomial is
+$\Pi_n=G_n(-z)+k(-z)^{n-1}(z^2-U(z))$.
+Its required squared vector norms are
+\[
+ \|(1+kK^2-kU(K))g\|^2\le d,\quad
+ \|\Pi_2g\|^2\le d+\delta_{2},\quad
+ \|\Pi_3g\|^2\le3d/2,\quad\|\Pi_ng\|^2\le d\ (n\ge4).
+\]
+For the first three use
+$-x^3/(1-x^2)\le\Re U\le x^2/(1-x^2)$ and
+$-\sqrt x x^3/(1-x^2)\le\Im U\le\sqrt x x^2/(1-x^2)$.
+The first loss divided by $kx$ is at most
+$-8/5+(16/25)kx+kx^4/(1-x^2)^2<0$.
+For $\Pi_2$ the sufficient comparison is
+$2x^2/(1-x^2)+kx^6/(1-x^2)^2<1/2<8/5-(16/25)kx$.
+For $\Pi_3$ the real part lies in $[0,1]$ and its imaginary modulus
+is below $(21/20)\sqrt x$.
+For all $n\ge4$,
+$|\Pi_n-G_n(-z)|\le k[x+(10/7)x^2]x^{(n-1)/2}
+\le(4/5)x^{(n-1)/2}$; use the shared perturbation proof.
+
+For $L=1$, the actual combined mean, covariance and variance bounds are
+$1-4d/15$, $41d/45$, $45d/32$.
+The first uses the joint positive terms of $\E S+\E[gS]$,
+with the joint upper bound $\delta_{3}/(1-\theta)$.
+For $L=2$ use $Z=V_3-\omega_3+eq\ge H_2\ge0$;
+for $L\ge3$ use
+$Z=V_n-\omega_n-\omega_{n-1}q+e\bar f_{n-2}\ge H_L\ge0$.
+Their fourth certificates are in the first three rows of the table below.
+
+\proofpart{The first pair $(2,c)$, $c\ge4$}
+The finite prefix/tail bound is
+$|G_{c-2}(z)-z^{c-1}Q_0(z)|^2\le5/2$.
+At $c=4$ the norm is at most $701/448$, whose square is below $5/2$;
+for $c\ge5$ it is at most $1+(10/7)\theta^2$.
+Thus $\|v-B\one\|^2\le5\delta_{2}/2$ and $\|W-S\|^2\le5\delta_{3}/2$.
+Now $m=1-23d/16$, $k\le16/15$ and $H\ge0$ by the same row lemma:
+$\E v\ge79d/80$, $\|v\|^2\le25d/16$.
+The improved square constant before relaxation is $1-144471d/98304$.
+The actual error is $\epsilon=1$.
+To check this retain $\rho=\delta_{2}/d$:
+\[
+ J\le d[d+\sqrt{(5/2)\theta\rho}]^2,\qquad
+ \E[gR]\ge(1-\theta)\rho d-D_4.
+\]
+The error increases in $\rho$ and is at most
+$263/384+1/12-247/1024+(263/384)^2=146881/147456<1$.
+The coefficient bounds improve to
+\[
+ 7d/15\le\omega_3\le d,\quad11d/15\le\omega_4\le d,
+ \quad11d/20\le\omega_j\le11d/10\ (j\ge5),\quad e\le4d/45.
+\]
+For the first two use respectively
+$0\le\E[gR]\le d^2+\delta_{2}+D_5$ and
+$0\le\E[rR]\le \delta_{3}+D_4$.
+For later indices pair the last modified beta term with its predecessor;
+the sufficient bounds are $k(B+\theta)<1$ and
+$k(B\theta+\theta^2)\le53/270<1-\theta$.
+Restoring the $S$ mask adds at most $D_5$ to a positive tail and
+$D_4$ to a negative tail, as above.
+
+Here $Q(z)=1-kB+kW_{2,c}(z)-kU(z)$ satisfies $\|Q(K)\|\le1$.
+Its real part lies between zero and $1-3kx/8$ and its imaginary
+modulus is at most $(3/2)kx\sqrt x$; the square loss divided by $kx$
+is at most $-3/4+(9/64)kx+(9/4)kx^2\le-23/80$.
+Also $\langle g,KQg\rangle=k\E[rR]\ge0$, so the short vector bounds
+are again $45d/32,3d/2$.
+For $n\ge4$ the perturbation budget is $263/360<4/5$.
+The combined one-step mean is at most $1-5d/6$:
+its positive finite terms, after the $Bd$ term, are disjoint and total
+at most $\delta_{4}/(1-\theta)$.
+The fourth certificates occupy the next three rows of the table.
+
+\begin{center}\small
+\begin{tabular}{@{}cccccc@{}}
+\toprule
+first pair & $L$ & mean loss $a$ & covariance ratio $h_0$ & variance ratio & $M$\\\midrule
+$(2,3)$&1&$4/15$&$41/45$&$45/32$&$15/2$\\
+ &2&$7/6$&$11/20$&$3/2$&8\\
+ &$\ge3$&$4/3$&$9/20$&$6/5$&8\\
+$(2,c\ge4)$&1&$5/6$&$7/10$&$45/32$&$15/2$\\
+ &2&$10/9$&$11/20$&$3/2$&8\\
+ &$\ge3$&$4/3$&$9/20$&$6/5$&8\\\bottomrule
+\end{tabular}
+\end{center}
+The mean is at most $1-ad$ and covariance at least $h_0d$.
+Each row uses both endpoints from \eqref{eq:compact-fourth-endpoints}.
+For the coefficients, if $0\le Z\le q+\alpha$, $\mu\le1$,
+the tangent at $p=3/2$ is
+$51/8+9\alpha/2+3\alpha^2/2+(-1/4+\alpha^2)^2/6$.
+It is below $15/2$ at $\alpha=7/32$ and below eight at $\alpha=1/4$.
+The one-step row bounds use $q+\sqrt d+kD_4\le q+7/32$.
+For $L=2$, $\omega_3-2e>0$ gives the endpoint $q+1/4$.
+For $L\ge3$ the first boundary uses
+$q+5\sqrt d/4-67d/180\le q+1/4$; all later tails use $\|\Pi_{n-1}\|\le1$.
+The two-step variance follows from
+$-\omega_4^2+2e\omega_5+e^2d\le0$;
+the later variance is bounded by
+$[1+(11/10)d+(4/45)\sqrt{2d}]^2d\le6d/5$.
+The positive endpoint's linear and quadratic coefficients in the
+centered fourth identity are $MV/d-4(a+h_0)$ and $6a^2+12ah_0$;
+all higher terms sum to a nonpositive quantity on $d\le1/24$.
+These formulas and the table give $\E[pH_L^4]\le e^{6d}$ in all six rows.
+The zero endpoints are below one; the closest second endpoint is
+$1+241d/45+398d^2/27$ at $(2,c\ge4),L=2$,
+whose increment ratio is at most $9671/1620<6$.
+Thus the actual norms from \eqref{eq:compact-unit-row} are at most
+$e^{-21d/16}+9d/10\le1-3d/8$ and
+$e^{-11d/8}+6d/5\le1-d/8$, respectively.
+
+\proofpart{All remaining first pairs, $b\ge3$}
+The signed-mask bounds give
+$\|v-B\one\|^2\le4\delta_{3}$, $\|W-S\|^2\le4\delta_{4}$.
+Use $m=1-7d/4$, $k\le16/15$;
+the square constant before relaxation is at most $1-107d/60$.
+The actual error is $\epsilon=9/8$, since
+\[
+ d+2\theta^{3/2}+\theta^2+D_4/d+[d+2\theta^{3/2}]^2
+ \le6470929/5760000<9/8.
+\]
+Here $H$ may be signed. The original centered row estimate gives
+$|\E v|\le13d/8$, $\|v\|^2\le21d/20$, and
+\[
+ H\ge q-k|\E v|-k\sqrt{2q\|v\|^2}\ge-5d/2,
+ \qquad H_L\ge-5d.
+\]
+For any proxy $Z\ge H_L$, it is therefore sufficient to add $625d^4$
+to its fourth moment when bounding $\E[p|H_L|^4]$.
+The finite coefficient ranges are
+\begin{gather*}
+ e\le4d/45\ (b=3),\quad e\le4d/15\ (b\ge4),\\
+ 5d/6\le\omega_3\le4d/3,\quad11d/15\le\omega_4\le4d/3,\\
+ 9d/20\le\omega_j\le4d/3\ (j\ge5).
+\end{gather*}
+These follow from $\E R=\beta_{c+1}-\beta_{b+1}+\E S$,
+$\E[gR]=Bd+\beta_{b+2}-\beta_{c+2}+\E[gS]$,
+and the alternating beta ranges, retaining the first $b=3,4$ boundaries.
+The long perturbation budget is $674/1125<4/5$;
+the short norms are $\|\Pi_2\|<8/5$, $\|\Pi_3\|<5/4$.
+
+For $L=1$ the exact mean satisfies $1-3d\le\mu$ and
+$\mu\le1-5d/6$ at $b=3,4$, $\mu\le1-13d/20$ at $b\ge5$.
+The positive terms are at most $\delta_{4}/(1-\theta)$ for $b=3,4$
+and $\delta_{3}/(1-\theta)$ otherwise.
+The covariance is at least $11d/15$ at $b=3$, and $19d/20$ otherwise;
+the latter uses $k\theta^4/(1-\theta)<1/20$.
+The row bounds are $[-5d,q+1/3]$ and $[-5d,q+7/24]$,
+with fourth coefficients $17/2$ and eight. Convexity includes the
+negative endpoint $-5/24$.
+For clarity, the finite-arm variance calculation is
+\[
+ \operatorname{Var}H_1\le d+a_0^2\delta_{2}+2k\E[rP]
+              -2ka_0\E[sP]+k^2\|KP\|^2,\quad
+ a_0=1-kB,\quad P=W-S.
+\]
+For $b=3$ the excess over $d+\delta_{2}$ is at most
+$2k[-\delta_{3}+2\delta_{4}+2D_5]+4k^2\delta_{5}<3d/40+d/8$.
+For $b=4$ split $c=5,6,\ge7$; the cross-term bounds are
+$3d/10$, $7d/18$, $d/3$, and each square term is below $d/30$.
+These are the finite $G_1,G_2$ exceptions plus their later masks.
+For $b\ge5$ the cross and square bounds are $3d/10,d/40$.
+The resulting triples $(M,V/d,a,h_0)$ are
+\[
+ (17/2,13/8,5/6,11/15),\quad
+ (8,11/6,5/6,19/20),\quad(8,7/4,13/20,19/20).
+\]
+Their positive-endpoint coefficient pairs are
+$(1811/240,23/2)$, $(113/15,41/3)$, $(38/5,1989/200)$;
+each is bounded by the corresponding coefficients $8,32$ of $e^{8d}$.
+All zero endpoints are below one. Thus $\E[p|H_1|^4]\le e^{8d}$.
+
+For $L=2$ use $Z=V_3-\omega_3+eq\ge H_2$.
+It has mean at most $1-13d/10$, covariance at least $9d/20$,
+variance at most $8d/5$, and row interval $[-5d,q+1/3]$.
+Its positive endpoint is at most $1+33d/5+429d^2/25$.
+Add $625d^4\le2d^2$ to control the actual negative part;
+the result is below $e^{8d}$, and the zero endpoint is below $821/1440$.
+For $L\ge3$ use $Z=V_n-\omega_n-\omega_{n-1}q+e\bar f_{n-2}$.
+Its corresponding bounds are $1-d$, $d/4$, $4d/3$ and
+$[-5d,q+7/24]$. The positive endpoint after adding the negative-part
+cost is at most $1+17d/3+11d^2<e^{8d}$; the zero endpoint is below one.
+This proves the absolute fourth norm at every length.
+Finally \eqref{eq:compact-unit-row} gives
+\[
+ \|T^LF\|_{4,p}\le e^{-3d/2}+27d/20\le1-d/10.
+\]
+The three small-range cases all imply the stated loss $2d/5$.
+The large range gives loss $d/2$ with the same directions.
+The common rules restore decorations, full reversal and $d=0$;
+the half-tree application is already proved in Section~\ref{sec:chain}.

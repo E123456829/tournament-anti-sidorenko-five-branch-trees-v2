@@ -1,0 +1,95 @@
+\subsection{All zero-step odd tables with a unit anchor}\label{loc:S14}
+Throughout this proof $\tau=d-\delta_{2}$ and $D_j=\delta_{j}/(1-\theta^2)$.
+Let
+$F=E_0qf_bh_c\prod_{i=2}^th_{b_i}f_{c_i}$,
+$1<b<c<b_2<c_2<\cdots<b_t<c_t$.
+For $t=1,b=2$ apply Section~\ref{loc:S12}.
+The remaining cases satisfy
+\[
+ \E[pF^4]\le
+ \begin{cases}e^{-5d/2},&t=1,b=3,\\
+ e^{-2d/3},&t=1,b\ge4,\\e^{-3d},&t\ge2.
+ \end{cases}
+\]
+Only the first residual pair is reversed relative to the canonical pair rule.
+
+\proofpart{A signed packet master}
+Set $B=\beta_{c-1}$, $C=\beta_b$,
+$T_0=\sum_{j=b}^{c-1}K^jg$,
+$S=\sum_{i=2}^t\sum_{j=b_i}^{c_i-1}K^jg$, and
+\[
+ W=T_0-S=Kv,\quad R=Bg-W,\quad
+ \Delta=\beta_c+B+C+2(t-1)d,\quad I=\|v\|^2,\quad J_1=\|W\|^2.
+\]
+The exact inward-path identity and $f_b\le S_b-\beta_b$ give
+$F/E_0\le q e^{R-\Delta}$.
+Use the score inequality from Section~\ref{loc:S12} and the sharper
+$3/8$ quadratic from \eqref{eq:compact-log-tools}.
+The same weighted Cauchy decomposition with $V=3g-4R$ yields
+\begin{equation}\label{eq:compact-unit-odd-master}
+ \E[p(F/E_0)^4]\le e^\Xi,\quad
+ \Xi=-4\Delta+16I/3+4\E R+27d/8-9\E[gR]+6\E R^2.
+\end{equation}
+The actual signed outputs are
+\begin{gather*}
+ \E R=\beta_{c+1}-\beta_{b+1}+\E S,\\
+ \E[gR]=Bd+\beta_{b+2}-\beta_{c+2}+\E[gS],\\
+ \E R^2=B^2d+2B[\beta_{b+2}-\beta_{c+2}+\E[gS]]+J_1.
+\end{gather*}
+
+\proofpart{Finite masks and exceptional prefixes}
+The signed-mask estimate gives $I\le4\delta_{b}$, $J_1\le4\delta_{b+1}$.
+For one pair replace $4$ by $1+\theta<3/2$.
+For later positive masks, the skew sign sequence gives
+$\E S\le D_4$, $\E[gS]\ge-D_4$.
+If $b_2\ge5$, also $\E[gS]\le D_5$.
+The positive terms begin at exponent seven for $\E S$, the negative mixed
+terms at six, and the positive mixed terms at eight; summing their finite
+geometric tails proves these bounds, with $D_4<d/12$, $D_5<d/24$.
+For $b=2$ separate the first interval from the later mask:
+$W=K^2[G_{c-2}(K)-K^NQ_0(K)]g$, $N\ge c-1$.
+Since $\|Q_0\|<10/7$, the norm factor is at most $177/112$ when
+$c=3$, giving $I\le5\delta_{2}/2$, $J_1\le5\delta_{3}/2$.
+For $c\ge5$, it is at most $1+(10/7)\theta^2<5/4$,
+so factor $2$ suffices. For $c=4$ retain factor $4$, including $G_2$.
+
+\proofpart{Coefficient certificate}
+The beta intervals and the preceding signed outputs give the following
+upper polynomials for \eqref{eq:compact-unit-odd-master}:
+\begin{align*}
+ t=1,b=3:\quad\Xi\le{}&-69d/8+4\delta_{2}+21\delta_{3}+9\delta_{4}+Q_1,\\
+ t=1,b\ge4:\quad\Xi\le{}&-69d/8+12\delta_{2}+13\delta_{3}+8\delta_{4}+9\delta_{5}+Q_1,\\
+ t\ge2,b\ge3:\quad\Xi\le{}&-133d/8+12\delta_{2}+103\delta_{3}/3+24\delta_{4}+13D_4+Q_2,\\
+ t\ge2,b=2,c=3:\quad\Xi\le{}&-69d/8+13\delta_{2}/3+15\delta_{3}+13D_4,\\
+ t\ge2,b=2,c=4:\quad\Xi\le{}&-101d/8+25\delta_{2}/3+24\delta_{3}+13D_4+Q_3,\\
+ t\ge2,b=2,c\ge5:\quad\Xi\le{}&-101d/8+17\delta_{2}/3+25\delta_{3}+13D_4+Q_4,
+\end{align*}
+where the exact remaining terms are
+\begin{align*}
+ Q_1&=-9d^2+9d\delta_{2}+12d\delta_{3}+6d^3,\\
+ Q_2&=Q_1+12dD_4,\\
+ Q_3&=-9d^2+12d\delta_{2}+12dD_5+6d^3,\\
+ Q_4&=-9d^2+21d\delta_{2}+12dD_5+6d^3.
+\end{align*}
+The first three are nonpositive by the rational spectral bounds;
+$Q_4/d\le65/96<1$.
+For clarity the one-pair rows use respectively
+$\Delta\ge d+2\tau$ or $3\tau$,
+$\E R\le-\delta_{2}+\delta_{3}$ or $\delta_{3}$,
+$\E[gR]\ge\tau d-\delta_{3}$ and $\E R^2\le d^3+2d\delta_{3}+J_1$.
+For $t\ge2,b\ge3$ add $2d$ to the loss and $D_4$ to the mean/tail budget.
+For the final three rows the respective loss bounds are
+$3d,4d,4d-2\delta_{2}$; retain $B=0$ in the $c=3$ row.
+Their mean upper bounds are $D_4,-\delta_{2}+D_4,-\delta_{2}+\delta_{3}+D_4$;
+the mixed lower bounds are
+$\delta_{2}-D_4,d^2+\delta_{2}-D_4,d^2-d\delta_{2}+\delta_{2}-\delta_{3}-D_4$.
+For the last two, the square-moment upper bound is
+$d^3+2d(\delta_{2}+D_5)+J_1$; for $c=3$ it is simply $J_1$.
+Thus all signs and the exceptional zero coefficient are retained.
+
+Substitution gives the respective strict linear bounds
+$-65d/24$, $-1781d/2400$, $-1469d/450$, $-233d/72$,
+$-293d/72$, and $(-361/72+65/96)d$.
+They imply the announced losses $5/2,2/3,3$ in all branches.
+These six rows, together with Section~\ref{loc:S12}, exhaust $t\ge1$.
+Restore the original equal pairs and reverse every edge through the common rules.

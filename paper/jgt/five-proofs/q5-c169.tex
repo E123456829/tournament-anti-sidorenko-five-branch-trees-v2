@@ -1,0 +1,294 @@
+\subsection{Terminal triples (1,2,w) at a root (1,2,v)}\label{proof:Q5-C169}
+% Common local aliases for the former repeated C168.1--C168.3 prefaces.
+Use the original-measure calculus of
+Section~\ref{sec:odd-common-calculus} and the complete root-pair
+certificates of Section~\ref{sec:odd-common:fourth}.
+For a root \((1,2,v)\), write \(m=v-2\), \(G_m=E+zD\),
+\(\beta=\beta_{v-1}=\int D\,d\nu\),
+\(\beta_v=\int E\,d\nu\),
+\(P_+=h_2f_v\), \(P_-=\bar f_2W_v\),
+\(\ell_+=\ell_a\), and \(\ell_-=\ell_s\).
+The two vectors, their signed means and full constants are
+\eqref{eq:odd-common:root-standard}--\eqref{eq:odd-common:root-losses}.
+At \(v=3\), \((E,D)=(1,0)\) and \(\beta=0\).
+All subsequent direction choices and packet estimates retain their
+stated integer and parameter ranges.
+Here $n=v-2$, $\ell_+=\ell_a$ and $\ell_-=\ell_s$. The ordinary-fourth bridge of Q5-C084, Section 2, has cost $11d$ for every $M\ge1$. Its same-direction terminal $(1,2)$ row, Sections 3--6 and equations (0.4)--(0.5), states $\E[p\bar f_2W_vT^L(qf_2)]^4\le e^{-705d/128}$ for every $v\ge3,L\ge1$. This exact actual message supplies the high-domain comparison below.
+\paragraph{C169.0 The actual root and terminal triples}
+
+All vertices, arm multiplicities, subdivisions, independent original connector lengths and label laws retain their original meanings.
+
+% Replace a pure model-definition block only; keep local root/terminal data.
+Use the original finite-space model and arm messages of
+Section~\ref{sec:odd-common-calculus}.
+When the original \(K\)-notation is used, \(K=-B\) and
+\(g=K\one=-u\); in either notation
+\(\delta_j=\|B^j\one\|_2^2=\|K^j\one\|_2^2\).
+All means, norms, adjoints and spectral integrals use the same
+original probability measure.
+The root residual is \((1,\allowbreak \allowbreak  2,\allowbreak \allowbreak  v)\), \(v\ge3\), and the terminal residual is \((1,\allowbreak \allowbreak  2,\allowbreak \allowbreak  w)\), \(w\ge3\). Genuine equal pairs are restored by positivity. The original positive lengths \(L,\allowbreak \allowbreak  M\) are independent. Always take the actual canonical terminal \(F=qf_2h_w\). Choose the root using only the original integer \(w\):
+\[
+P_{v,w}=\begin{cases}h_2f_v,&w=3,\\\bar f_2W_v,&w\ge4,\end{cases}
+\qquad H=pP_{v,w}T^L F.                                      \tag{C169.0.1}
+\]
+
+
+For every original v, w at least three and positive independent L, M,
+\[
+\boxed{\begin{gathered}
+EH^4\le\exp(-2817d/512),\qquad\\
+I_q(T^M H)^3\le\exp(-d/256),\quad I_q(Y)=E[q^{-1/3}|Y|^{8/3}].
+\end{gathered}}\tag{C169.0.2}
+\]
+The more precise same-direction rates are
+\[
+\begin{array}{c|c|c}
+\text{Terminal}&\text{Root pair}&\text{Fourth loss }\lambda\text{; }EH^4\le e^{-\lambda d}\\\hline
+w=3&h_2f_v&11/2+3581/921600\\
+w=4&\bar f_2W_v&705/128\\
+w\ge5&\bar f_2W_v&705/128.
+\end{array}                                                        \tag{C169.0.3}
+\]
+For \(w=4\), the low-domain rate on \(d\le1/4\) is at least \(239821/43200\); for \(w\ge5\), the low-domain rate on \(d\le1/5\) is at least six. The corresponding high domains use the exact same-direction Q5-C084 ordinary fourth input. The common rate follows from \(3581/921600-1/512=1781/921600>0\) and \(705/128-2817/512=3/512>0\). The Q5-C084 all-length cost \(11d\) leaves the stated \(1/256\) output loss.
+
+\paragraph{C169.0.1 Literal directions}
+
+Use the four genuine arm types. The root unit arm points outward, giving \(p\). At the terminal the unit arm points inward, the two-edge arm outward, and the \(w\)-arm first inward and then outward. All inner edges point from terminal to root, and outer edges from root to receiver, giving \(T^L,\allowbreak \allowbreak  T^M\).
+
+
+\paragraph{C169.3 The actual q-square first row and every finite propagation}
+
+For the same actual terminal \(F\le q(m+S/2)^2\), \(m>0\), put
+\(k=1/m\), \(R=kS=r(B)u\). Then
+\[
+ \begin{gathered}
+ TF/m^2\le\bar f_2+BR+\delta,\\
+ \delta=\E R+\E(uR)+\sqrt{d\E R^2}+\E R^2.
+ \end{gathered}\tag{C169.3.1}
+\]
+Indeed \(T(qR)=\E R+\E(uR)+BR+B(uR)\), with the last term
+at most \(\sqrt{d\E R^2}\), and \(T(qR^2/4)\le\E R^2\).
+Choose the proved upper bound \(D_0\ge\max(\delta,0)\), and write
+\(D_i=\E B^iR\) for \(i\ge1\).
+Apply Lemma~\ref{lem:odd-common:q-packet} with
+\(\alpha=2\log m\) and its \(D=D_0\).
+Thus \(\gamma_j=\beta_j-D_{j-2}\),
+\(Q_L=G_L+z^{L-1}r\), \(c_L=2D_0-\gamma_{L+1}\),
+and \(\E BQ_L(B)u=-\gamma_{L+2}\) for \(L\ge2\), after the
+required \(\gamma\)-signs have been proved.
+
+For the complete root pair, set \(n=v-2\) and use
+\eqref{eq:odd-common:root-interface} with \(C_0=1\), \(c_0=c_L\):
+\[
+ \begin{gathered}
+ \log\E H^4\le8\log m+4(2D_0-\gamma_{L+1}-\gamma_{L+2})\\
+ -4\ell_\pm+(17/4)\|[Q_L-zG_n(\mp z)]u\|^2
+ +(10/3)\beta^2.
+ \end{gathered}\tag{C169.3.4}
+\]
+The positive root uses \(G_n(-z)\), and the negative root \(G_n(z)\).
+At \(L=1\), use the exact majorant
+\(1+u+D_0+B(u+R)\), replacing the scalar gamma expression by
+\(D_0-d+D_1\). In particular \(D_0\) is not doubled there.
+
+\paragraph{C169.4 Terminal (1, 2, 3) on the full kernel domain}\label{part:C169.4}
+
+The actual arm sum is \(f_2+h_3=2-d+B^2u\). Thus \(m=1-d/2\), \(S=B^2u\), \(k\le6/5\), and \(F\le q(m+S/2)^2\). Here \(R=-kxu\), \(ER^2=k^2\delta_3\), \(ER=0\), \(E(uR)=-k\delta_2\). The first row gives
+\[
+\delta=-k\delta_2+k\sqrt{d\delta_3}+k^2\delta_3\le d/4.                 \tag{C169.4.1}
+\]
+For the full payment put \(a=\delta_2/d\), \(b=1-k\theta\ge41/80\). Completing a square gives \(\delta/d\le k[-ba+\sqrt{\theta a}]\le k\theta/(4b)\le39/164<1/4\). Take \(D_0=d/4\). The signed moments are \(D_1=k\delta_2,\allowbreak \allowbreak  D_2=0,\allowbreak \allowbreak  D_3=-k\delta_3,\allowbreak \allowbreak  D_4=0\); positive classes have \(D_{4j+1}=k\delta_{2j+2}\). Hence \(\gamma_3\ge41d/80>d/2\), \(\gamma_4=d\), and every \(j\ge5\) has \(\gamma_j\ge[\kappa-(6/5)\theta^3]d=42049d/81920>d/2\).
+
+Always use \(h_2f_v\) here. Put \(Q_{\rm joint}=G_L-kxz^{L-1}-zG_n(-z)\), \(Q_{\rm base}=G_L-zG_n(-z)\). For \(L\ge3\), the base coordinates are \(U-xD,\allowbreak \allowbreak  V-E\), with real part in \([1-2x,\allowbreak \allowbreak  1-x+x^2]\) and imaginary coefficient of absolute value at most \(x\). Thus
+\[
+|Q_{base}|^2\le(1-x+x^2)^2+x^3\le1-(7/8)x.                \tag{C169.4.2}
+\]
+The final difference divided by \(x\) is \(2-3x+x^2-x^3-7/8\), decreasing, with \(\theta\)-endpoint \(139/32768>0\).
+
+\paragraph{C169.4.1 Every L at least five}
+
+The perturbation modulus is at most \(kx^{(L+1)/2}\), giving squared-frequency bound \(1-7x/8+12x^3/5+36x^6/25\). Since \(\theta^5<1/90\), by \(33416370<33554432\), and \(12\theta^2/5+36\theta^5/25<507/1280+2/125<83/200\),
+\[
+\|Q_{joint}u\|^2\le d-(23/50)\delta_2.                        \tag{C169.4.3}
+\]
+At most one of adjacent \(D_{L-1},\allowbreak \allowbreak  D_L\) is positive, of size at most \(k\delta_4\). Thus their adjacent gamma sum is at least \([2\kappa-(6/5)\theta^3]d\). Using \(8\log m\le-4d\), \(\ell_+\ge969d/1024\), the common payment gives
+\[
+\begin{gathered}
+\log EH^4\le-\frac{209169}{20480}d+\frac{17}{4}d\\
++\left(\frac{10}{3}-\frac{391}{200}\right)d^2\\
+\le-\left(\frac{11}{2}+\frac{3581}{921600}\right)d.
+\end{gathered}\tag{C169.4.4}
+\]
+Use \(\delta_2\ge d^2\), \(d\le1/3\) in the last step. The coefficient \(209169/20480\) is \(4[1-1/2+2\kappa-(6/5)\theta^3+969/1024]\).
+
+\paragraph{C169.4.2 Lengths two, three and four}
+
+At \(L=2\), the joint coordinates are \(1-xD,\allowbreak \allowbreak  1-kx-E\), lying in \([0,\allowbreak \allowbreak  1]\) and \([-kx,\allowbreak \allowbreak  0]\). Thus the squared norm is at most \(d+k^2\theta^2\delta_2\), and \(\gamma_3+\gamma_4=2d-k\delta_2\). With \(\theta^2<1/6\),
+\[
+\begin{gathered}
+\log EH^4\le-(2441/256)d+(1373/150)\delta_2\\
+\le-(111679/19200)d<-(23/4)d.
+\end{gathered}\tag{C169.4.5}
+\]
+The full curvature cost \(10\beta^2/3\) is paid using \(d^2\le \delta_2\). At \(L=3\), the coordinates are \(1-x+kx^2-xD,\allowbreak \allowbreak  1-E\), with square at most \(1-3x/4\): bound it by \((1-x+6x^2/5)^2+x^3\), whose difference divided by \(x\) decreases to the positive margin \(667/204800\). The gamma sum is at least \((1+\kappa)d\), yielding loss \(18113/2304>7\). At \(L=4\), the coordinates are \(1-x-xD,\allowbreak \allowbreak  1-x+kx^2-E\); their square is at most \((1-x)^2+x^3\le1-7x/5\). With gamma sum at least \(2\kappa d\), the loss is \(1609/256>6\).
+
+\paragraph{C169.4.3 The unit connector in the same canonical direction}
+
+The joint vector is [1-kx-xD-zE]u, with exact payment
+\[
+\begin{gathered}
+\log EH^4\le8\log m+4D_0-4d+4k\delta_2-4\ell_+\\
++(17/4)\|Q_{joint}u\|^2+(10/3)\beta^2.
+\end{gathered}\tag{C169.4.6}
+\]
+At \(v=3\), \(D=0,\allowbreak \allowbreak  E=1,\allowbreak \allowbreak  \beta=0,\allowbreak \allowbreak  \ell_+=d\). The joint \(\delta_2\) coefficient \(4k+(17/4)(1-2k+k^2\theta)\) decreases for \(1\le k\le6/5\), with maximum \(189/128\). The loss is at least \(27/4-2457/4096=25191/4096>6\). For \(v\ge4\), combine root loss and joint norm at one frequency: \(J=-4E-4(1-x)D+(17/4)[(1-kx-xD)^2+xE^2]\). The real coordinate is positive, and \(J\) decreases in \(D,\allowbreak \allowbreak  E\). Set both to \(1-x\), then bound with \(k=1\). This gives \(J\le-15/4-3x/4+13x^2-51x^3/4+17x^4/4\le-5/2\). Its second derivative \(26-153x/2+51x^2\) decreases but is positive at \(\theta\), with value \(3419/1024\). Both endpoints lie below \(-5/2\), the last margin being \(-621887/4194304\). Using \(8\log m\le-4d-d^2\) yields loss at least \(1219/180>6\).
+
+\paragraph{C169.5 Joint-frequency payments for the negative root}
+
+For \(w\ge4\), use \(\bar f_2W_v\). Write \(G_n=E+zD\), with \((D,\allowbreak \allowbreak  E)=(0,\allowbreak \allowbreak  1)\) at \(n=1\), and both in \([1-x,\allowbreak \allowbreak  1]\) later. The root-loss integrand is \(l=E+(1+x)D\). A propagated polynomial \(U+zV\) has joint square \((U+xD)^2+x(V-E)^2\). For the stated ranges \(U\le1,\allowbreak \allowbreak  V\ge1-x\),
+\[
+\begin{gathered}
+\partial_D[-4l+(17/4)\{(U+xD)^2+x(V-E)^2\}]<0,\\
+\quad\partial_E[\cdots]<0,
+\end{gathered}\tag{C169.5.1}
+\]
+The first derivative is at most \((1+x)(17x/2-4)<0\), the second at most \(-4+17x^2/2<0\). Thus for \(n\ge2\), take \(D=E=1-x\); retain \(n=1\) separately.
+
+Let \(0\le t,\allowbreak \allowbreak  s\le1\). The following joint estimates include the propagation means and root loss.
+
+For the first-row type, \(U=1-t,\allowbreak \allowbreak  V=s\), and the actual \(D_1=\int t\) gives
+\[
+4t-4l+(17/4)[(1-t+xD)^2+x(s-E)^2]\le2.                  \tag{C169.5.2}
+\]
+At \(n=1\), \(4t+17(1-t)^2/4\le17/4\), so the left side is at most \(1/4+17x/4<2\). For \(n\ge2\), set \(D=E=1-x\), then \(s=0\), and use convex endpoint values of \(t\). The \(t=0\) value is larger by \(1/4+17(x-x^2)/2>0\). The resulting \(B(x)=-15/4+67x/4-35x^2/4-17x^3/4+17x^4/4\) increases, with \(B(\theta)-3/2=-245759/4194304<0\).
+
+For the two-step type, \(U=1-sx,\allowbreak \allowbreak  V=1-t\), with actual mean \(D_1+D_2=\int(t+sx)\),
+\[
+4t+4sx-4l+(17/4)[(1+x(D-s))^2+x(1-t-E)^2]\le6.             \tag{C169.5.3}
+\]
+After the same coordinate derivatives, the \(s\)-derivative is \(x[4-(17/2)(1+x(D-s))]<0\). The expression is convex in \(t\), and its value at one exceeds that at zero by \(4+17x(2E-1)/4>0\). At \(n=1\), the result is \(17(1+x)/4<6\); later it is \(4+B(x)\le11/2\).
+
+For the three-step type, \(U=1-x+tx,\allowbreak \allowbreak  V=1-sx\),
+\[
+-4l+(17/4)[(U+xD)^2+x(V-E)^2]\le5/4.                    \tag{C169.5.4}
+\]
+For \(n\ge2\), take \(D=E=1-x,\allowbreak \allowbreak  t=1,\allowbreak \allowbreak  s=0\). The result \(C(x)=-15/4+25x/2-x^2/4-17x^3/4+17x^4/4\) increases, and \(C(\theta)-5/4=-555007/4194304<0\). At \(n=1\), the square is at most \(1+x^3\), yielding the same claim.
+
+For \(L=4\), take \(U=1-x+sx^2,\allowbreak \allowbreak  V=1-x+tx\); for the long base take the two coordinates of \(G_L\), \(L\ge3\), with \(U\le1-x+x^2,\allowbreak \allowbreak  V\in[1-x,\allowbreak \allowbreak  1]\). Then
+\[
+-4l+(17/4)[(U+xD)^2+x(V-E)^2]\le1/4.                    \tag{C169.5.5}
+\]
+For \(n\ge2\), the extreme real coordinate is at most one and imaginary coefficient at most \(x\); the bound is \(-15/4+4x+4x^2+17x^3/4\le-7/32<1/4\), using \(x\le1/2\). At \(n=1\), use \((1-x+x^2)^2+x^3\le1\). All derivative uses have the stated \(U,\allowbreak \allowbreak  V\) scopes; those in the first two types include the displayed \(t\) terms directly.
+
+The long-base modulus also satisfies
+\[
+|G_L-zG_n(z)|\le23/16,\quad L\ge3,                       \tag{C169.5.6}
+\]
+Indeed its square is at most \((1+x)^2+x^3\), whose endpoint is \(66997/32768\), while \((23/16)^2=67712/32768\).
+
+\paragraph{C169.6 Terminal (1, 2, 4) on its full low domain}\label{part:C169.6}
+
+The actual sum is \(f_2+h_4=2-2d-du+B^2u-B^3u\). Put \(m=1-d\), \(k=1/m\), \(S=-du+B^2u-B^3u\), \(R=[-k(d+x)+kxz]u\). On \(0<d\le1/4\), \(k\le4/3\), \(t=k(d+x)\le7/8\), \(s=kx\le13/24\). Put \(a=\delta_2/d\), \(V=ES^2=d^3+2d\delta_2+\delta_3+\delta_4\), \(J=V/d\le d^2+(2d+\theta+\theta^2)a\). The first row gives
+\[
+\delta=-k(d^2+2\delta_2)+k\sqrt{dV}+k^2V\le(5/12)d.           \tag{C169.6.1}\label{eq:C169:6.1}
+\]
+Use \(\sqrt J\le3/8+2J/3\), \(k+2/3\le2\). Then \(\delta/(kd)\le3/8-d+2d^2+a[-2+4d+2\theta+2\theta^2]\). If the coefficient of \(a\) is nonpositive, subtracting \((5/12)(1-d)\) leaves at most \(-1/24-7d/12+2d^2<0\). Otherwise take \(a=\theta\), obtaining a convex quadratic in \(d\), negative at both endpoints; the \(d=1/4\) value is \(-75/16384\). Thus the full interval is covered; take \(D_0=5d/12\).
+
+The same R has signed moments
+\[
+\begin{gathered}
+D_1=k(d^2+\delta_2),\ D_2=k\delta_3,\ D_3=-k(d\delta_2+\delta_3),\ D_4=-k\delta_4,\\
+\quad D_5=k(d\delta_3+\delta_4),\ D_6=k\delta_5.
+\end{gathered}\tag{C169.6.2}
+\]
+Here \(D_1\le7d/8,\allowbreak \allowbreak  D_2<d/4\); positive \(D_i\), \(i\ge3\), are below \(d/6\). Hence \(\gamma_3\ge d/8\), \(\gamma_4\ge3d/4\), and \(\gamma_j\ge41d/96\) for every \(j\ge5\). For \(L\ge5\), the positive adjacent-moment sum is at most \(k\theta^2(d+\theta+\theta^2)d<5d/27\), so
+\[
+\gamma_{L+1}+\gamma_{L+2}\ge(433/432)d.                   \tag{C169.6.3}
+\]
+This uses \(\theta<5/12\), \(\theta^2<1/6\), on the entire integer tail.
+
+Combining the common fourth payment with the four joint estimates gives the following explicit short rows.
+
+At \(L=1\), use \(8\log m\le-8d\), \(4D_0\le5d/3\), the actual \(-4d\) term, the joint cost \(2d\), and curvature cost at most \(5d/6\), giving loss at least \(15/2\). At \(L=2\), the terms are \(-8d+10d/3-8d+6d+5d/6\), giving loss at least \(35/6\). At \(L=3\), \(2D_0-2d+\delta_2+D_2+D_3\le-49d/96\), and the third joint estimate gives loss \(191/24\). At \(L=4\), the adjacent gamma sum is at least \(2\kappa d\), so the scalar is at most \(-17d/48\); the fourth joint estimate gives loss \(25/3\).
+
+For \(L\ge5\), the polynomial is \(G_L+z^{L-1}(-t+sz)\). The perturbation primitive has square at most \(k^2[(d+x)^2+x^3]\le16309/18432<(19/20)^2\), so its modulus is at most \(19x^2/20\). The long-base bound gives additional joint square at most
+\[
+(437/160)x^2+(361/400)x^4,
+\]
+After integration this is at most \(1729d/3600\), using \(\theta^2<1/6,\allowbreak \allowbreak  \theta^4<1/36\); its norm cost is \(29393d/14400\). The adjacent gamma sum, \(8\log m\le-8d\) and curvature payment give loss
+\[
+8+73/108-1/4-29393/14400-5/6=239821/43200>705/128.         \tag{C169.6.4}
+\]
+The margin above \(705/128\) is \(3767/86400>0\), completing every low-domain connector.
+
+\paragraph{C169.7 Every terminal (1, 2, w), w at least five, on the low domain}
+
+On \(0<d\le1/5\), use Lemma~\ref{lem:unit-retained-pair} with $\sigma=9/4$. Lemmas~\ref{lem:reference-retained:strong-norm} and \ref{lem:reference-retained-packet} prove the strong continuous norm and first-row error for this same actual retained arm sum. In the present \(B=-K\) notation they give
+\[
+\begin{gathered}
+f_2+h_w\le2m-U,\quad m=1-9d/8,\ k=1/m\le40/31,\\
+\quad U=[a(x)-zb(x)]u.
+\end{gathered}\tag{C169.7.1}
+\]
+Thus \(F\le q(m-U/2)^2\), \(R=-kU=(-t+sz)u\), with \(t=ka,\allowbreak \allowbreak  s=kb\), and the complete retained-coordinate properties are
+\[
+\begin{gathered}
+a,b\ge0,\quad a\ge\tau+(1-x)b,\quad\\
+a^2+xb^2\le u_0^2,\quad u_0=3/8+9d/5\le147/200,\\
+\quad b\le z_0=\theta+13d/16\le91/160.
+\end{gathered}\tag{C169.7.2}
+\]
+Hence \(0\le t\le147/155<1\), \(0\le s\le91/124<1\), and the primitive modulus is at most \(147/155\). At \(w=5\), the retained coefficients are \(c_1=d,\allowbreak \allowbreak  c_2=d/4+\delta_2,\allowbreak \allowbreak  c_3=0\). For \(w\ge6\), take \(c_1=\beta_{w-1}\), \(c_2=\lambda\beta_{w-2}\), \(c_3=\lambda\beta_{w-3}\), where \(\lambda=(9d/4-\beta_w-\beta_{w-1})/[\beta_{w-2}+(1-d)\beta_{w-3}]\in[0,\allowbreak \allowbreak  1]\). Set \(C=c_1+c_2+c_3,\allowbreak \allowbreak  D=c_2+c_3,\allowbreak \allowbreak  E=c_3\). Then \(a=C+x(a_f-E)\), \(b=D+xb_f\), with \(a_f,\allowbreak \allowbreak  b_f\) the finite coordinates of \(G_{w-2}\). Retaining \(c_1q+c_2h_2+c_3h_3\) after applying the genuine \(T\) to the positive convolution for \(f_{w-1}\) gives exact constant loss \(\beta_w+c_1+c_2+(1-d)c_3=9d/4\). Its remaining polynomial is exactly \(U\), with the stated sign. The global \(\delta_2\) is constant. The full continuous coefficient inequality is \eqref{eq:reference-retained:coefficient}, for this same $\sigma=9/4$ vector.
+
+That quadratic-error certificate gives
+\[
+\begin{gathered}
+\delta=-k\int(a+b)+k\sqrt{d\int(a^2+xb^2)}\\
++k^2\int(a^2+xb^2)\le2d/5.
+\end{gathered}\tag{C169.7.3}
+\]
+Use \(\sqrt{dV}\le3d/10+5V/6\), \(k+5/6\le15/7\), and \(3k/10\le12/31<2/5\). Take \(D_0=2d/5\). The moments are \(D_1=\int t,\allowbreak \allowbreak  D_2=\int xs,\allowbreak \allowbreak  D_3=-\int xt,\allowbreak \allowbreak  D_4=-\int x^2s\). Every later positive \(D_i\) is at most \(d/6\); thus the first gamma values are positive, and \(\gamma_j\ge41d/96\) for \(j\ge5\). Also
+\[
+\begin{gathered}
+D_1+D_2\le k(u_0+\theta z_0)d\le24731d/19840<5d/4,\\
+\quad D_2\le1183d/3968<d/3.
+\end{gathered}\tag{C169.7.4}
+\]
+The positive-tail bound uses \(ku_0\le147/155\), \(\theta^2<1/6\); the \(b\)-coordinate terms are smaller.
+
+The actual negative root and joint vector remain unchanged.
+
+The four short losses are respectively \(9-8/5+4-2-2/3=131/15>8\), \(9-16/5+8-6-2/3=107/15>7\), \(357/40>8\), using \(2D_0-2d+\delta_2+D_2+D_3\le-221d/480\), and \(83/10>8\), using \(2D_0-\gamma_5-\gamma_6\le-13d/240\). Each uses its corresponding full joint-frequency bound.
+
+For \(L\ge5\), the long joint base costs at most \(d/4\). The perturbation modulus is at most \(x^2\), while the base modulus is at most \(3/2\), so the added square is at most \(3x^2+x^4\). Its integrated norm cost is at most \(323d/144\). Thus the fourth loss is at least
+\[
+9+13/60-1/4-323/144-2/3=4361/720>6.                       \tag{C169.7.5}
+\]
+Every row pays the complete \(\beta u\) curvature cost, at most \(2d/3\) on \(d\le1/5\). This proves the rate six for every low-domain inner length.
+
+\paragraph{C169.8 The same actual direction on the high domain and every outer length}
+
+The exact finite-mean proof in \mbox{\hyperref[part:R29.3.1]{part R29.3.1}} of Section \ref{proof:R2-C029} gives the stronger \(\mu_n\le1-83d/32\) for every \(n\ge4\), hence in particular
+\[
+\mu_n=Ef_n=E\bar f_n\le1-(5/2)d\quad(n\ge4).                 \tag{C169.8.1}
+\]
+It uses the exact four initial means and, for \(n\ge8\), retains \(\mu_0,\allowbreak \allowbreak  \ldots,\allowbreak \allowbreak  \mu_5\) and the actual \(\beta_{n+1},\allowbreak \allowbreak  \beta_n,\allowbreak \allowbreak  \beta_{n-1}\) improvements. The resulting bound is \(1-\mu_n\ge\tau(7-10d+3\delta_2+d^2)+3\kappa \delta_3\ge\kappa d(7-10d+7d^2)\ge95d/36\), with \(\delta_3\ge d^3\). 
+\[
+\begin{gathered}
+1-\mu_n\ge\tau(7-10d+3\delta_2+d^2)+3\kappa \delta_3\\
+\ge\kappa d(7-10d+7d^2)\ge95d/36>5d/2.
+\end{gathered}
+\]
+
+
+For \(w=4,\allowbreak \allowbreak  d\ge1/4\), \(h_4\le2\mu_3=2-4d\le1\). For \(w\ge5,\allowbreak \allowbreak  d\ge1/5\), \(h_w\le2\mu_{w-1}\le2-5d\le1\). Thus on each corresponding high domain, with the same actual direction,
+\[
+0\le p \bar f_2W_v T^L(qf_2h_w)\le p \bar f_2W_v T^L(qf_2).         \tag{C169.8.2}
+\]
+The right side is exactly the Q5-C084 ordinary fourth input, with original \(p\), root pair and \(L\) retained, giving loss \(705/128\). The positive comparison only bounds the actual extra arm factor; original edge and vertex counts remain. Together with the low-domain proofs this covers every \(w\ge4,\allowbreak \allowbreak  d,\allowbreak \allowbreak  L\) in the same fixed orientation.
+
+For \(w=3\), use \mbox{\hyperref[part:C169.4]{part C169.4}}; otherwise use the two-domain proof. The precise rates give the uniform ordinary fourth conclusion. The Q5-C084 all-length bridge then gives
+\[
+I_q(T^MH)^3\le e^{11d}(EH^4)^2\le e^{-d/256}.             \tag{C169.8.3}
+\]
+At \(d=0\), \(u=0\) even when \(B\ne0\), and original leaf integration makes every actual message one.

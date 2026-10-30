@@ -1,0 +1,239 @@
+\subsection{Unit shortest arm and second shortest arm three}\label{proof:R2-C023}
+For any finite residual list
+$(1,3,c,s_2,t_2,\ldots,s_j,t_j)$,
+$4\le c<s_2<t_2<\cdots<s_j<t_j$, fix the actual terminal
+$F=qf_3h_c\prod_{i=2}^jh_{s_i}f_{t_i}$.
+Orient every $L\ge1$ connector edge toward the receiving root and its
+arm $a\ge3$ outward. Then
+\begin{equation}\tag{R23.1.1}\label{eq:R23:claim}
+\E[f_a(T^LF)^4]\le1-d/800.
+\end{equation}
+The $j=1$ row is the $(1,3,c)$ row of Section~\ref{proof:R2-C009}/$D_{\rm full}$.
+The argument below treats every finite $j\ge2$ with the same
+directions in both parameter ranges. Decorations may be restored.
+
+Use the finite original receiving bounds, the exact covariance
+\eqref{eq:R17:covariance}, and the Taylor formula
+\eqref{eq:R17:taylor}.
+$G_1$ has coordinates $(1,0)$; for $n\ge2$ the finite alternating
+coordinates are in $[1-x,1]$. $\|G_n\|\le1$ for $n=1$ or $n\ge3$,
+whereas $G_2$ has norm $\sqrt{1+x}<6/5$.
+In particular $\operatorname{Cov}(C_a,\bar f_2)
+\le-3d/16+\theta d^2$.
+The full continuous cubic inequality \eqref{eq:R12:cubic}, with
+$D=17/5$, $m\le33/32$, gives
+\begin{equation}\tag{R23.2.5}\label{eq:R23:curvature}
+C_a+Y+m\le17/5\ \Longrightarrow\
+C_a[(Y+m)^2+2m^2]\le9,\qquad m^3\le9/8.
+\end{equation}
+Indeed $D\ge3m$, and its three terms are below $35/6$, $29/12$,
+$11/20$, totaling $44/5<9$.
+In the low range $0<d\le1/64$, each exponential payment below has
+$C\ge A/2$, $A>B\ge0$, $Ad/2<1$. By
+\eqref{eq:R14:exponential} the deficit exceeds $(A-B)d/3$.
+
+The actual canonical first pair from Q5-C181, Section 4, has
+\begin{equation}\tag{R23.3.1}\label{eq:R23:firstpair}
+\begin{gathered}
+f_3h_c\le e^{R_0-\Gamma_0},\quad \Gamma_0=d+\beta_c+\beta_{c-1}\ge35d/16,\quad R_0=\mathfrak r_0(B)u,\\
+\mathfrak r_0=-\beta-z^3G_{c-3}(-z),\quad \beta=\beta_{c-1}.
+\end{gathered}
+\end{equation}
+Write $G_{c-3}(-z)=U-zV$, with $(U,V)=(1,0)$ for $c=4$ and
+$U,V\in[1-x,1]$ otherwise. Thus
+$\mathfrak r_0=-\beta+x^2V+zxU$ and the actual signed mixed mean is
+\begin{equation}\tag{R23.3.2}\label{eq:R23:mixedmean}
+\E R_0+\E(uR_0)=-\beta d-\int x(U-xV)\,d\nu\le0,
+\end{equation}
+because $U-xV\ge1-2x\ge3/16$.
+Every later actual pair has the envelope \eqref{eq:L96:long},
+$h_sf_t\le e^{R_{s,t}-16d/5}$,
+$R_{s,t}=\sum_{r=s+1}^tK^r\one$.
+Let $S$ be their one complete finite interval mask, $R=R_0+S$.
+Then
+\[
+F\le qe^{R-\Gamma},\qquad
+\Gamma\ge431d/80+(16/5)(j-2)d.
+\]
+Since $s_2\ge5$, the first original power of $S$ is at least six.
+The four residue classes of its finite zero--one mask give
+\begin{equation}\tag{R23.3.4}\label{eq:R23:mask}
+\|S\|_2^2\le\theta^5\frac{1+\theta}{(1-\theta^2)^2}d
+=\frac{371293}{16634880}d<9d/400,\quad
+\E S+\E(uS)\le\frac{2\delta_4}{1-\theta^2}<d/6.
+\end{equation}
+The positive mixed-mean contributions start with the paired original
+$K^7,K^8$ terms $\delta_4$, with later same-sign indices spaced by two.
+The geometric sums bound finite masks only. The row bound gives
+$|S|<\sqrt d/4$ and
+\[
+\|R\|_2/\sqrt d\le d+(6/5)\theta^{3/2}+3/20
+<777/1600<1/2,\qquad |R|\le d+2\sqrt d\le17/64<1/2.
+\]
+Therefore $e^R\le1+R+(3/5)R^2$. Expanding the actual $q=1+u$,
+using the kernel of $T$ bounded by two and $q\le2$, gives
+\begin{equation}\tag{R23.3.6}\label{eq:R23:firstrow}
+T(qe^R)\le\bar f_2+BR+\delta,\qquad
+\delta=\E R+\E(uR)+\sqrt d\|R\|_2+(12/5)\|R\|_2^2
+\le19d/15<D:=4d/3.
+\end{equation}
+The $B(uR)$ cost is $\E|uR|$ and $T(qR^2)\le4\E R^2$.
+The signed means $D_i=\E B^iR$ satisfy
+\begin{equation}\tag{R23.3.7}\label{eq:R23:signed}
+\begin{gathered}
+|D_i|\le\tfrac12\theta^{(i-1)/2}d\ (i\ge1),\quad D_1\le d/2,\quad D_2\le d/3,\\
+D_i\le\theta d/2\ (i\ge3).
+\end{gathered}
+\end{equation}
+Finite propagation preserves the nonnegative upper bound
+\begin{equation}\tag{R23.3.8}\label{eq:R23:propagation}
+e^\Gamma T^LF\le Y_L=\bar f_{L+1}+B^LR+D\bar f_{L-1}
++\sum_{i=1}^{L-1}D_i\bar f_{L-1-i}\ge0.
+\end{equation}
+
+Two joint symbols retain the actual cross terms with $R_0$.
+For $G_2+z\mathfrak r_0$, the coordinates are
+$Q_e=1-x^2U$, $Q_o=1-\beta+x^2V$, both positive. Hence
+\begin{equation}\tag{R23.4.1}\label{eq:R23:jointtwo}
+|G_2+z\mathfrak r_0|^2
+\le1+x-2x^2+4x^3+x^4-x^5+x^6
+\le1+x+x^4\le1+\theta+\theta^4<36/25.
+\end{equation}
+Use $x<1/2$ for the two negative pairs; the last rational comparison
+is $37578025<37748736$.
+For $G_3+z^2\mathfrak r_0$ the coordinates are
+$Q_e=1-x+\beta x-x^3V$, $Q_o=1-x^2U$, positive with lower
+bounds $1-x-x^3$, $1-x^2$. Their square is bounded by
+\begin{equation}\tag{R23.4.2}\label{eq:R23:jointthree}
+[1-(1-\beta)x]^2+x
+=1+x[-1+2\beta+(1-\beta)^2x]\le1,
+\end{equation}
+since $\beta\le1/64$, $x\le\theta$. Both symbols include $c=4$.
+
+For $L=1$, $Y=\bar f_2+BR+D$ has actual mean
+$m=1-d+D+D_1\le1+5d/6\le33/32$.
+Its random vector is $[G_2+z\mathfrak r_0](B)u+BS$.
+Using \eqref{eq:R23:jointtwo} and $\|BS\|_2<\sqrt d/10$ gives
+$\operatorname{Var}Y\le169d/100$.
+Since $\sigma(C_a)\le65\sqrt d/64$ and $\|BR\|_2<\sqrt d/3$,
+\[
+\operatorname{Cov}(C_a,Y)
+\le-3d/16+\theta d^2+(65/64)(1/3)d
+\le967d/6144<d/6.
+\]
+The pointwise row uses $|BR|\le\|R\|_2\le\sqrt d/2$, giving
+$Y\le q+(3/2)\sqrt d+D$ and
+$C_a+Y+m\le3+(27/10)\sqrt d+(13/6)d
+\le3+713/1920<17/5$.
+By \eqref{eq:R23:curvature}, the remainder is at most
+$9(169/100)+4(9/8)(1/6)=399/25<16$.
+
+For $L=2$, $Y=\bar f_3+B^2R+Dq+D_1$ has
+$m\le1+d/6\le1+5d/6$.
+Its random vector is $[G_3+z^2\mathfrak r_0](B)u+Du+B^2S$.
+By \eqref{eq:R23:jointthree}, $D\le1/48$ and
+$\|B^2S\|_2<\sqrt d/16$, its standard deviation is at most
+$(13/12)\sqrt d$, and covariance at most
+$(65/64)(13/12)d<9d/8$.
+The correct three-step recurrence gives
+$Y\le(1+D)q+(23/15)\sqrt d-d/2$ and
+$C_a+Y+m\le3+(41/15)\sqrt d+(7/3)d
+\le3+121/320<17/5$.
+The remainder is at most
+$9(169/144)+4(9/8)^2=125/8<16$.
+For both rows the actual mean exponent is at least
+$431/20+57/32-10/3=9599/480>19$, so
+\begin{equation}\tag{R23.5.10}\label{eq:R23:shortpayment}
+\E[f_a(T^LF)^4]\le e^{-19d}+16de^{-(431/20)d}.
+\end{equation}
+Its deficit exceeds $d>d/800$.
+
+For $L=3,4$ raise coefficients only before nonnegative actual paths:
+\[
+\begin{aligned}
+\overline Y_3&=\bar f_4+B^3R+D\bar f_2+(d/2)q+d/3,\\
+\overline Y_4&=\bar f_5+B^4R+D\bar f_3+(d/2)\bar f_2+(d/3)q+d/4.
+\end{aligned}
+\]
+They dominate \eqref{eq:R23:propagation} and are nonnegative.
+The correct bare recurrences and vector polynomials are those of
+Modules R2-C014 and R2-C017, with means at most $1-83d/32$ and
+$1-11d/4$, and norms $\|G_4-d\|\le1$,
+$\|G_5-d(2+z)\|\le1-2d$.
+At $L=3$, retain $\E B^3R\le\theta d/2$ to get
+$m\le1-[83/32-4/3-1/2-1/3-\theta/2]d=1-43d/192\le1$.
+The whole-vector norm is at most
+$[1+(21/10)d+2/15]\sqrt d<(6/5)\sqrt d$, including the true
+$G_2$ cost. The row bound is
+$\overline Y_3\le(1+5d/6)q+(5/4)\sqrt d-2d/3$,
+so $C_a+\overline Y_3+m\le3+d+(49/20)\sqrt d<17/5$.
+At $L=4$, $\E B^4R<(2/15)d$ gives
+$m\le1-[11/4-4/3-1/2-1/3-1/4-2/15]d=1-d/5$.
+The whole-vector norm is at most
+$[1+(34/15)d+1/12]\sqrt d<(6/5)\sqrt d$.
+The actual row bound is
+$\overline Y_4\le(1+d/6)q+(6/5)\sqrt d-\tau+d/4$;
+the scalar remainder is negative, so
+$C_a+\overline Y_4+m\le3+d/3+(12/5)\sqrt d<17/5$.
+Both rows have variance at most $36d/25$, covariance at most $5d/4$,
+and remainder at most $9(36/25)+5=449/25<18$.
+The mean exponent is at least $431/20+57/32=3733/160>23$, giving
+\begin{equation}\tag{R23.6.8}\label{eq:R23:middlepayment}
+\E[f_a(T^LF)^4]\le e^{-23d}+18de^{-(431/20)d}.
+\end{equation}
+Its deficit exceeds $5d/3>d/800$.
+
+For all finite $L\ge5$, put $n=L+1\ge6$. The term
+$D\bar f_{L-1}$ has index two, where $\beta_2=0$, and is paid
+explicitly at cost $2D=8d/3$.
+For $r\ge3$, $\gamma_r=\beta_r-D_{r-2}$ satisfies
+$\gamma_3\ge d/2$, $\gamma_4\ge2d/3$, and
+$\gamma_r\ge(\kappa-\theta/2)d=25d/64\ge h=3d/8$ for $r\ge5$.
+The additional actual mean index satisfies
+$\beta_{n+1}-D_L\ge h$ as well.
+Retaining the last four actual paths gives the nonnegative bound
+\[
+e^\Gamma T^LF\le\widehat Y
+=1-h(4-d)+[G_n-h(3+2z+z^2)](B)u+B^LR+8d/3.
+\]
+The exact mean estimate is
+$m\le1-5h+3hd+8d/3
+=1+(19/24)d+(9/8)d^2\le1+5d/6\le33/32$.
+The full finite shifted-symbol certificates
+\eqref{eq:R18:shiftfour}--\eqref{eq:R18:shifttwo} apply.
+Since $\|B^LR\|_2\le(1/2)\theta^{L/2}\sqrt d<\sqrt d/16$,
+variance is at most $289d/256$ and covariance at most
+$(1105/1024)d<(11/10)d$.
+The pointwise form is $(1-3h)q+BV-h(1-d)+8d/3$, where
+$V=[G_L-h(2+z)](B)u+B^{L-1}R$ and
+$\|V\|_2\le(1-2h+1/12)\sqrt d\le(13/12)\sqrt d$.
+As $dp+3hq\ge2d$,
+\[
+C_a+\widehat Y+m\le3+(9/8)d+(3/8)d^2+(137/60)\sqrt d
+\le3+(6/5)d+(12/5)\sqrt d<17/5.
+\]
+The remainder is at most
+$9(289/256)+4(9/8)(11/10)=19341/1280<16$.
+Thus \eqref{eq:R23:shortpayment} covers every $L\ge5$ too,
+completing the entire low range.
+
+For $d\ge1/64$, retain the actual first three arms.
+Every later pair has $s\ge5$ and its original interval satisfies
+$|R_{s,t}|\le(6/5)\theta^{(s-1)/2}\sqrt d
+<\sqrt d/5\le8d/5$.
+Its loss is at least $16d/5$, so $h_sf_t\le e^{-8d/5}$.
+Consequently, with unchanged directions,
+\[
+F\le e^{-(8/5)(j-1)d}qf_3h_c,\qquad
+T^LF\le e^{-(8/5)(j-1)d}T^L(qf_3h_c).
+\]
+The exact Module Section~\ref{proof:R2-C009}/$D_{\rm full}$ row, originating in Q5-C175,
+gives $\E[f_a\{T^L(qf_3h_c)\}^4]\le1-d/800$ for every
+$a\ge3,c\ge4,L\ge1$.
+The full target is therefore at most
+$e^{-(32/5)(j-1)d}(1-d/800)\le1-d/800$.
+This joins the low range at $d=1/64$; $j=1$ uses the same directory
+row directly. At $d=0$ original leaf integration gives equality,
+without $K=0$. Positivity restores original equal pairs and full
+reversal reverses the receiving arm, first three arms, all subsequent
+pairs, connectors, and decorations together.

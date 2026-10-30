@@ -1,0 +1,44 @@
+\subsection{All even terminals of minimum three}\label{loc:S30}
+For $t\ge2$ use the fixed actual message
+$P=f_3h_{b_1}\prod_{i=2}^th_{a_i}f_{b_i}$,
+where $3<b_1<a_2<\cdots<a_t<b_t$.
+We prove the stronger bound
+\[
+ \E[p(T^LP)^4]\le e^{-[8(t-2)+257/1000]d}\quad(L\ge1).
+\]
+Let $R_0$ be the preceding first-pair exponent and
+$S=\sum_{i=2}^tK^{a_i}G_{b_i-a_i}(K)g$, $R=R_0+S$.
+Disjoint exponent intervals give a finite $0/1$ mask, and hence
+\[
+ \|S\|\le(3/2)\theta^{a_2/2}\sqrt d,\quad
+ |S|\le(3/2)\theta^{(a_2-1)/2}\sqrt d,\quad
+ \E S\le \delta_{4}/(1-\theta^2)<\delta_{2}/5.
+\]
+Thus $\E R\le-63\delta_{2}/160\le0$ and the actual product satisfies
+$P\le e^{R-(2t+1)d}$.
+For $d\le1/9$,
+$\|R\|\le9\sqrt d/20$ and $|4R|\le5/4$.
+If $b_1=4$, use $\|R_0\|<2\sqrt d/7$ and
+$\|S\|<13\sqrt d/80$, while
+$|R_0|<3/16$, $|S|<1/12$.
+If $b_1\ge5$, $a_2\ge6$ gives
+$\|R\|<83\sqrt d/200$ and $|R|\le73/240<5/16$.
+For $|u|\le5/4$, Taylor through degree four and series ratio $u/5$
+give $e^u\le1+u+4u^2/5$; its positive remainder coefficient is
+at most $229/288<4/5$.
+Using the masses and pointwise bounds from Section~\ref{loc:S27},
+and \eqref{eq:compact-min3-weights}, the total exponent costs of
+$\E[W_Le^{4R}]$ are respectively
+\[
+ 3363/250<14,\quad19743/1000,\quad2421/125
+ \qquad\text{times }d\quad(L=1,2,\ge3).
+\]
+The first is $12/5+207/50+864/125$;
+the second is $27/8+6+1296/125$; the last is $9+1296/125$.
+Subtracting the actual loss $(8t+4)d$ leaves margins
+$8(t-2)+6$, $8(t-2)+257/1000$, and $8(t-2)+79/125$.
+For $d\ge1/9$, $|S|\le\sqrt d/4\le3d/4$ gives
+$|R|\le93d/32$ and total cost at most $15d$;
+the resulting margin is $8(t-2)+5$.
+For $t=1$ use Section~\ref{loc:S28}. The common restoration and reversal
+rules complete all stated ranges, including $d=0$.

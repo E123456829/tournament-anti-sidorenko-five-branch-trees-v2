@@ -1,0 +1,428 @@
+\subsection{The unit ordinary eighth moment for terminal $(1,\allowbreak 2,\allowbreak 3)$}\label{proof:Q5-C062}
+\paragraph{Q62.1 Model, directions and local bound}
+
+Let $(X,\allowbreak  \mu)$ be a nonempty finite probability space and let $K$ be real and skew with $|K(x,\allowbreak  y)|\le\allowbreak 1$.
+All integrals, adjoints, norms and spectral measures use $\mu$. Put
+
+\[
+Jv=(Ev)1,\quad A=J+K,\quad T=A^*=J-K,
+\quad g=K1,\ p=1+g,\ q=1-g,\ d=Eg^2.
+\]
+
+Write $f_n=\allowbreak A^n\one$, $\bar f_n=\allowbreak T^n\one$, $h_n=\allowbreak Tf_{n-1}$, and
+
+\[
+r=Kg,\quad s=K^2g,\quad \delta_j=\|K^j1\|_2^2,
+\quad \theta=13/32.
+\]
+
+The finite calculus of Section \ref{q3:app:foundations} gives
+$0\le\allowbreak  d\le\allowbreak 1/3$, $d^2\le\allowbreak  \delta_2\le\allowbreak \theta d$, $\|K\|^2\le\allowbreak \theta$,
+$|Kv(x)|\le\allowbreak \|v\|_2$, path positivity and the equal-arm bound
+$0\le\allowbreak  f_\ell h_\ell\le\allowbreak 1$.
+
+
+The terminal residual lengths are $(1,\allowbreak  2,\allowbreak  3)$, with messages $q,\allowbreak  f_2,\allowbreak  h_3$, respectively.
+The unit arm points toward the terminal, the two-edge arm points outward, and only the first edge of the three-edge arm points toward the terminal.
+Allow any finite number of equal-arm pairs and put
+
+\[
+\begin{gathered}
+E_0=\prod_j f_{\ell_j}h_{\ell_j},\qquad\\
+F=E_0q f_2h_3,\qquad X=TF,\qquad H=pX.
+\end{gathered}\tag{Q62.1.1}\label{eq:Q62:Q62:1:1}
+\]
+
+The connector has one edge, directed from the terminal to the receiving root, whose unit arm points outward.
+These choices depend only on the arm lengths and pair multiplicities.
+
+For every such structure and every finite host,
+
+\[
+\boxed{EH^8\le e^{-d/200}\le1-d/601.}
+\tag{Q62.1.2}\label{eq:Q62:Q62:1:2}
+\]
+
+The bound also permits equal-arm decorations at the receiving root. Full reversal gives the corresponding
+ordinary eighth-moment bound for $qAF^-$.
+
+
+
+\paragraph{Q62.2 Positive envelope with the same kernel parameters}
+
+By $E_0\le\allowbreak 1$ and positivity of $T$, it suffices to consider $P=\allowbreak qf_2h_3$.
+Define
+
+\[
+t=1-d/2,\qquad k=t^{-1},\qquad a=t^2,
+\qquad 5/6\le t\le1.
+\]
+
+The path identities are
+
+\[
+f_2=p+r,\quad h_3=q-d-r-s,\quad \bar f_3=q-d+r-s,
+\quad f_2+h_3=2-d-s.
+\]
+
+Arithmetic--geometric mean for the two nonnegative factors gives
+
+\[
+0\le P\le q(t-s/2)^2.
+\tag{Q62.2.1}\label{eq:Q62:Q62:2:1}
+\]
+
+To establish positivity of $H_0=\allowbreak q-ks$, use $h_3,\allowbreak  \bar f_3\ge\allowbreak 0$, which imply
+$q-s\ge\allowbreak  d+|r|$, together with
+$|s|\le\allowbreak \sqrt{\delta_2}\le\allowbreak \sqrt{13/96}<\allowbreak 3/8$. Thus
+
+\[
+H_0=(q-s)-(k-1)s
+\ge d-\frac{d}{2t}|s|\ge31d/40\ge0.
+\]
+
+Since $Es=\allowbreak 0$, we have $EH_0=\allowbreak 1$. The kernel of $T$ lies in $[0,\allowbreak  2]$, so
+
+\[
+B=TH_0=q+R,\qquad R=r+kK^3g,\qquad 0\le B\le2.
+\tag{Q62.2.2}\label{eq:Q62:Q62:2:2}
+\]
+
+
+Expanding (Q62.2.1) gives
+
+\[
+\begin{aligned}
+TP&\le a(q+r)+tK^3g-tK(gs)-t\delta_2+\tfrac14T(qs^2)\\
+&\le aB+t\bigl(|K(gs)|-\delta_2\bigr)+\tfrac12E(qs^2).
+\end{aligned}
+\]
+
+Here $T(qs)=\allowbreak \delta_2-K^3g+K(gs)$. The row bound gives
+$|K(gs)|\le\allowbreak \sqrt{d\delta_3}\le\allowbreak \sqrt{\theta d\delta_2}$.
+For $d>\allowbreak 0$, put $v=\allowbreak \delta_2/d$. Completing the square in
+$\sqrt{\theta v}-v\le\allowbreak \theta/4$ retains the negative term $-t\delta_2$.
+Also $E(qs^2)/2\le\allowbreak  \delta_3\le\allowbreak \theta^2d$. Hence
+
+\[
+0\le TP\le t^2(q+R)+\gamma d,
+\qquad\gamma=t\theta/4+\theta^2.
+\tag{Q62.2.3}\label{eq:Q62:Q62:2:3}
+\]
+
+
+Taking the arithmetic mean of the nonnegative quantities $tp$ and $t(q+R)+\gamma d/t$ yields
+
+\[
+0\le pTP\le(c+N/2)^2,
+\quad N=tR=K(tg+s),
+\quad c=t+\gamma d/(2t).
+\tag{Q62.2.4}\label{eq:Q62:Q62:2:4}
+\]
+
+The base of this square is nonnegative, being their arithmetic mean.
+As $t\ge\allowbreak 5/6$,
+
+\[
+c\le1-\frac{1793}{5120}d\le1-\frac7{20}d=:c_0.
+\tag{Q62.2.5}\label{eq:Q62:Q62:2:5}
+\]
+
+The last comparison has slack $d/5120$. Enlarging the base preserves its nonnegativity.
+
+Retain the same parameter $v=\allowbreak \delta_2/d$ throughout. Then
+
+\[
+d\le v\le\theta,\qquad m=t-v>0,\qquad EN=-m d.
+\tag{Q62.2.6}\label{eq:Q62:Q62:2:6}
+\]
+
+The spectral measure $\sigma$ of $g$ has mass $d$, support $[0,\allowbreak  \theta]$,
+and first moment $\delta_2$. The second derivative of $x(t-x)^2$ is $-4t+6x<\allowbreak 0$,
+since $-4(5/6)+6(13/32)<\allowbreak 0$. Jensen gives
+
+\[
+EN^2=\int x(t-x)^2\,d\sigma(x)
+\le v(t-v)^2d.
+\tag{Q62.2.7}\label{eq:Q62:Q62:2:7}
+\]
+
+Here Jensen is applied to the probability measure $\sigma/d$, with mean $v$.
+The row bound and $\delta_3\le\allowbreak \theta \delta_2$ also give
+
+\[
+\begin{gathered}
+|N|^2\le\|tg+s\|_2^2\\
+=t^2d-2t\delta_2+\delta_3\\
+\le d\{t^2-(2t-\theta)v\}=:U^2.
+\end{gathered}\tag{Q62.2.8}\label{eq:Q62:Q62:2:8}
+\]
+
+Since $2t-\theta>\allowbreak 0$ and $v\ge\allowbreak  d$,
+
+\[
+U^2\le f(d):=d-\frac{83}{32}d^2+\frac54d^3<\frac19.
+\tag{Q62.2.9}\label{eq:Q62:Q62:2:9}
+\]
+
+To verify the last comparison, first take $d\le\allowbreak 1/4$. Then
+$f(d)\le\allowbreak  d-(73/32)d^2\le\allowbreak 8/73<\allowbreak 1/9$.
+For $1/4\le\allowbreak  d\le\allowbreak 1/3$,
+$f^{\prime\prime}(d)=\allowbreak -83/16+(15/2)d\le\allowbreak -43/16<\allowbreak 0$ and $f^\prime(1/4)=\allowbreak -1/16$.
+Thus $f$ decreases on $[1/4,\allowbreak  1/3]$ and has maximum $f(1/4)=\allowbreak 55/512<\allowbreak 1/9$.
+Take $U$ to be the nonnegative square root; at zero use continuity.
+
+\paragraph{Q62.3 A scalar exponential bound}
+
+For $U\ge\allowbreak 0$, define
+
+\[
+C(U)=
+\begin{cases}(e^{8U}-1-8U)/U^2,&U>0,\\32,&U=0.
+\end{cases}
+\]
+
+The integral form of the Taylor remainder gives
+$C(U)=\allowbreak 64\int_0^1(1-z)e^{8zU}\,\allowbreak  dz$.
+This representation holds for every real argument and is increasing in that argument. Consequently, for $n\le\allowbreak  U$,
+
+\[
+e^{8n}\le1+8n+C(U)n^2.
+\tag{Q62.3.1}\label{eq:Q62:Q62:3:1}
+\]
+
+For $0\le\allowbreak  U\le\allowbreak 1/3$, we claim
+
+\[
+\boxed{C(U)\le195/2,\qquad C(U)\le48+448U^2.}
+\tag{Q62.3.2}\label{eq:Q62:Q62:3:2}
+\]
+
+The terms of orders zero through four in $e^{4/3}$ sum to $911/243$.
+The fifth term is $128/3645$, and every subsequent ratio is at most $2/9$. Therefore
+
+\[
+\begin{gathered}
+e^{4/3}\le\frac{911}{243}+\frac{128}{3645}\frac9{7}\\
+=\frac{32269}{8505}<\frac{19}{5}.
+\end{gathered}
+\]
+
+The final numerator difference is 50. It follows that
+$e^{8/3}<\allowbreak (19/5)^2=\allowbreak 361/25<\allowbreak 29/2$,
+so $C(1/3)<\allowbreak 195/2$; monotonicity proves the first bound.
+
+Separate the first two terms of $C(U)$. The remaining coefficients are nonnegative and their degrees are at least two. For $U\le\allowbreak 1/3$,
+
+\[
+C(U)\le32+\frac{256}{3}U+\frac{667}{2}U^2.
+\]
+
+The quadratic coefficient is
+$9\{195/2-32-256/9\}=\allowbreak 667/2$.
+The nonnegative square $(32U/3-4)^2$ gives
+
+\[
+\frac{256}{3}U\le16+\frac{1024}{9}U^2.
+\]
+
+Hence $C(U)\le\allowbreak 48+(8051/18)U^2\le\allowbreak 48+448U^2$, proving (Q62.3.2).
+
+
+\paragraph{Q62.4 Reduction to two parameters of the same kernel}
+
+By (Q62.2.4)--(Q62.2.5) and $1+x\le\allowbreak  e^x$,
+
+\[
+E(pTP)^8\le E(c_0+N/2)^{16}
+\le e^{-28d/5}Ee^{8N}.
+\]
+
+Now apply (Q62.3.1), (Q62.2.6)--(Q62.2.8), and $1+x\le\allowbreak  e^x$:
+
+\[
+\boxed{\begin{gathered}
+E(pTP)^8\le\exp\{d\,\mathcal E(d,v)\},\quad\\
+\mathcal E(d,v)=-\frac{28}{5}-8(t-v)+C(U)v(t-v)^2.
+\end{gathered}}\tag{Q62.4.1}\label{eq:Q62:Q62:4:1}
+\]
+
+The integrated polynomial upper bound is positive because it dominates $Ee^{8N}>\allowbreak 0$.
+It can therefore be exponentiated.
+We prove, for $0<\allowbreak d\le\allowbreak 1/3$ and $d\le\allowbreak  v\le\allowbreak 13/32$, that
+
+\[
+\mathcal E(d,v)\le-1/200.
+\tag{Q62.4.2}\label{eq:Q62:Q62:4:2}
+\]
+
+\paragraph{Q62.5 The range $v\le\allowbreak 1/4$}
+
+Here $d\le\allowbreak 1/4$. Since $t\ge\allowbreak 7/8$, the function $v(t-v)^2$ increases on $[0,\allowbreak  1/4]$, and
+
+\[
+\begin{gathered}
+v(t-v)^2\le\frac14(t-1/4)^2\\
+=\frac9{64}-\frac3{16}d+\frac1{16}d^2,\\
+\quad -\frac{28}{5}-8(t-v)\le-\frac{58}{5}+4d.
+\end{gathered}\tag{Q62.5.1}\label{eq:Q62:Q62:5:1}
+\]
+
+\paragraph{Q62.5.1 The range $0<\allowbreak d\le\allowbreak 3/16$}
+
+Using $d^3\le\allowbreak (3/16)d^2$ in (Q62.2.9) gives
+
+\[
+U^2\le d-\frac{151}{64}d^2,
+\qquad C(U)\le48+448d-1057d^2.
+\]
+
+Multiplying by the bounds in (Q62.5.1) and expanding gives
+
+\[
+\begin{gathered}
+\mathcal E\le-\frac{97}{20}+58d-\frac{14697}{64}d^2\\
++\frac{3619}{16}d^3-\frac{1057}{16}d^4.
+\end{gathered}
+\]
+
+Drop the final nonpositive term and use $d^3\le\allowbreak (3/16)d^2$ to obtain
+
+\[
+\begin{gathered}
+\mathcal E\le-\frac{97}{20}+58d-\frac{47931}{256}d^2\\
+\le-\frac{97}{20}+\frac{215296}{47931}<-\frac14.
+\end{gathered}\tag{Q62.5.2}\label{eq:Q62:Q62:5:2}
+\]
+
+The last comparison follows from $5\cdot215296=\allowbreak 1076480<\allowbreak 23\cdot47931=\allowbreak 1102413$.
+The quadratic upper bound is obtained by completing the square and holds for every real $d$.
+
+\paragraph{Q62.5.2 The range $3/16\le\allowbreak  d\le\allowbreak 1/4$}
+
+The variance upper bound in (Q62.5.1) decreases with $d$, so it is at most $441/4096$.
+Also $C(U)\le\allowbreak 195/2$ and $-58/5+4d\le\allowbreak -53/5$. Thus
+
+\[
+\begin{gathered}
+\mathcal E\le\frac{195}{2}\frac{441}{4096}-\frac{53}{5}\\
+=-\frac{4201}{40960}<-\frac1{10}.
+\end{gathered}\tag{Q62.5.3}\label{eq:Q62:Q62:5:3}
+\]
+
+
+
+\paragraph{Q62.6 The range $1/4\le\allowbreak  v\le\allowbreak 5/16$}
+
+Now $d\le\allowbreak 5/16$. On $0\le\allowbreak  v\le\allowbreak  t$, the maximum of $v(t-v)^2$ is $4t^3/27$.
+Moreover,
+
+\[
+-\frac{28}{5}-8(t-v)\le-\frac{111}{10}+4d.
+\]
+
+Using $v\ge\allowbreak 1/4$ in (Q62.2.8) gives
+
+\[
+\begin{gathered}
+U^2\le d\left(\frac{77}{128}-\frac34d+\frac14d^2\right)\\
+\le\frac{77}{128}d-\frac{43}{64}d^2,\\
+\quad C(U)\le48+\frac{539}{2}d-301d^2.
+\end{gathered}\tag{Q62.6.1}\label{eq:Q62:Q62:6:1}
+\]
+
+The second step uses $d\le\allowbreak 5/16$. For $0\le\allowbreak  d\le\allowbreak 1/3$,
+
+\[
+t^3=(1-d/2)^3\le1-\frac54d,
+\tag{Q62.6.2}\label{eq:Q62:Q62:6:2}
+\]
+
+because $(3/4)d^2\le\allowbreak  d/4$ and the remaining cubic term is nonpositive.
+The bound in (Q62.6.1) dominates the positive quantity $C(U)$ and can be multiplied by (Q62.6.2). This yields
+
+\[
+\begin{aligned}
+\mathcal E
+&\le-\frac{359}{90}+\frac{946}{27}d-\frac{189}{2}d^2
++\frac{1505}{27}d^3\\
+&\le-\frac{359}{90}+\frac{946}{27}d-\frac{33299}{432}d^2\\
+&\le-\frac{359}{90}+\frac{3579664}{899073}<-\frac1{200}.
+\end{aligned}
+\tag{Q62.6.3}\label{eq:Q62:Q62:6:3}
+\]
+
+The second line uses $d^3\le\allowbreak (5/16)d^2$; the third completes the square.
+The final rational comparison follows from
+
+\[
+\begin{gathered}
+3579664\cdot1800=6443395200\\
+<899073\cdot7171=6447252483,\\
+\quad \frac{359}{90}-\frac1{200}=\frac{7171}{1800}.
+\end{gathered}
+\]
+
+
+
+\paragraph{Q62.7 The range $5/16\le\allowbreak  v\le\allowbreak \theta$}
+
+By (Q62.2.8) and $d\le\allowbreak 1/3$,
+
+\[
+\begin{aligned}
+U^2&\le d\left(\frac{257}{512}-\frac{11}{16}d+\frac14d^2\right)
+\le\frac{257}{512}d-\frac{29}{48}d^2,\\
+C(U)&\le48+\frac{1799}{8}d-\frac{812}{3}d^2.
+\end{aligned}
+\tag{Q62.7.1}\label{eq:Q62:Q62:7:1}
+\]
+
+For the mean term, use $v\le\allowbreak \theta$ to obtain
+$-28/5-8(t-v)\le\allowbreak -207/20+4d$.
+For the variance use $4t^3/27$ and (Q62.6.2). Expanding and absorbing the cubic term gives
+
+\[
+\begin{aligned}
+\mathcal E
+&\le-\frac{583}{180}+\frac{1535}{54}d
+-\frac{52969}{648}d^2+\frac{4060}{81}d^3\\
+&\le-\frac{583}{180}+\frac{1535}{54}d-\frac{126427}{1944}d^2\\
+&\le-\frac{583}{180}+\frac{4712450}{1517124}<-\frac1{10}.
+\end{aligned}
+\tag{Q62.7.2}\label{eq:Q62:Q62:7:2}
+\]
+
+The second line uses $d^3\le\allowbreak  d^2/3$; the third completes the square.
+The last comparison follows from
+
+\[
+\begin{gathered}
+4712450\cdot36=169648200\\
+<1517124\cdot113=171435012,\\
+\quad \frac{583}{180}-\frac1{10}=\frac{113}{36}
+\end{gathered}
+\]
+
+The bounds (Q62.5.2), (Q62.5.3), (Q62.6.3), and (Q62.7.2) cover the allowed parameter domain.
+Together they prove (Q62.4.2), and hence $EH^8\le\allowbreak  e^{-d/200}$.
+Finally,
+
+\[
+e^{-d/200}\le\frac1{1+d/200}
+=1-\frac{d}{200+d}\le1-\frac{d}{601}
+\]
+
+since $200+d\le\allowbreak 601$.
+
+
+\paragraph{Q62.8 Boundaries, decorations and reversal}
+
+If $d=\allowbreak 0$, then $g=\allowbreak 0$ and $A\one=\allowbreak T\one=\allowbreak \one$. Leaf integration gives every path message equal to one,
+so the conclusion holds with equality. Divisions by $v$ or $U$ above are taken for positive parameters or by the stated continuous extension.
+Omit zero-mass atoms. On the remaining support, $p,\allowbreak  q\ge\allowbreak \mu(x)>\allowbreak 0$.
+
+
+As $E_0\le\allowbreak 1$ and $T$ is positive, the decorated message is bounded by the undecorated one.
+Equal-arm factors at the receiving root can be restored in the same way.
+Replacing $K$ by $-K$ reverses all edges and gives the bound for $qAF^-$ with the same $d$.

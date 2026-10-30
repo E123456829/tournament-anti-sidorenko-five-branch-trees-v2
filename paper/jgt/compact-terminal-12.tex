@@ -1,0 +1,131 @@
+\subsection[The propagated residual pair (1,2)]{The propagated residual pair $(1,2)$}\label{loc:S21}
+Throughout this proof $\tau=d-\delta_{2}$ and $D_j=\delta_{j}/(1-\theta^2)$.
+Let $P=qf_2$. We prove $\E[p(T^LP)^4]\le1$ for every $L\ge1$.
+Use the single nonnegative input envelope
+$P\le F_0=(1+r/2)^2$ and $Y_L=T^LF_0\ge T^LP$.
+
+\proofpart{One step}
+Put $s=K^2g$, $t=K^3g$, $G=\E[gr^2]$, $R_3=\E r^3$,
+$V_3=\E[tr^2]$ and $b=-d+\delta_{2}/4$. Direct expansion gives
+\begin{align*}
+ Y_1&=q-d-s+\delta_{2}/4-K(r^2)/4,\\
+ \E[p(Y_1-1)]&=-2d+5\delta_{2}/4+(G+R_3)/4,\\
+ \E(Y_1-1)^2&=d-2\delta_{2}+\delta_{3}+b^2-(R_3+V_3)/2
+                         +\|K(r^2)\|^2/16+bG/2.
+\end{align*}
+The row bound gives $-1\le Y_1-1\le-g+e$, $e=13/102$.
+Writing $\xi=p(x)\in[0,2]$, the fourth coefficient is bounded by
+\[
+ \xi^3-(6+2e)\xi^2+(11+6e+e^2)\xi<7\quad(0\le \xi\le2).
+\]
+Indeed its derivative at $3/2$ is $-1/4+e^2<0$; its maximum lies
+in $[0,3/2]$, where its second derivative is at most $-3$.
+The quadratic tangent leaves margin $463/27744$ below $7$.
+For $d\le1/4$, $b\in[-1/4,0]$ and $0\le1+7b/2\le1$.
+Using $|R_3|\le\sqrt d\,\delta_{2}$, $|V_3|\le\theta\sqrt d\,\delta_{2}$,
+$|G|\le d\sqrt{\delta_{2}}$, $\|K(r^2)\|^2\le \delta_{2}^2$ gives
+\[
+ \E[pY_1^4]-1\le-d-197\delta_{2}/32+251\sqrt d\,\delta_{2}/64
+                       +d\sqrt{\delta_{2}}+7d^2+7\delta_{2}^2/16.
+\]
+With $z=\sqrt d$ and $v=\delta_{2}/d\in[z^2,\theta]$, the divided right side
+decreases in $v$: its derivative is at most $-3693/1024$.
+At $v=z^2$ it is
+$-1+59z^2/32+251z^3/64+7z^6/16\le-43/1024$.
+Thus $\E[p(TP)^4]\le1-43d/1024$ there.
+For $d\ge1/4$ use the actual mean $\E P=1-2d$ to get $TP\le2\E P\le1$.
+
+\proofpart{All lengths at least three}
+Let $K'=-K$, $S'_L=\sum_{j=0}^LK'^j\one$.
+Finite Duhamel and positive convolution give
+\begin{gather*}
+ Y_L\le S'_L+K'^{L+2}\one-\gamma \bar f_{L-1}
+                         -\sum_{j=3}^L\omega_j\bar f_{L-j},\\
+ \gamma=d-\delta_{2}/2\ge0,\qquad
+ \omega_j=\begin{cases}\beta_j,&j\text{ even},\\\beta_{j+2},&j\text{ odd}.
+ \end{cases}
+\end{gather*}
+For $L\ge4$ retain the last two terms:
+\[
+ Z_L=S'_L+K'^{L+2}\one-\omega_L-\omega_{L-1}q\ge Y_L.
+\]
+Here $a=\omega_L$, $b=\omega_{L-1}$, and the mean coefficients are
+$(\alpha,\eta)=(\beta_{L+3},\beta_{L+2})$ for even $L$ and
+$(\beta_{L+1},\beta_{L+4})$ for odd $L$.
+All four lie in $[\tau,d]$. The variance polynomial is $P_L(K')g'$,
+and the row-tail polynomial is $K'P_{L-1}(K')g'$, so the common
+comparison applies.
+Its finite spectral polynomial is
+\[
+ P_m(z)=G_m(z)+z^{m+1}=\frac{1-z^m(1-z+z^2)}{1-z}.
+\]
+Its squared numerator is
+$1+x^m(1-x+x^2)-2\operatorname{Re}[(i\sqrt x)^m(1-x-i\sqrt x)]$.
+For residues $0,1\pmod4$ it is at most $1$; for residues $2,3$,
+with $m\ge4$, its deficit divided by $x$ is at least
+$(1-2x^2-x^5)/(1+x)\ge7/15$.
+For $m=3$ separately the deficit numerator is
+$1-2x-x^2+x^3-x^4$, decreasing to $65295/1048576>0$.
+Thus $\|P_m(K')\|\le1$ for every required index, proving both the
+variance and row-tail conditions.
+For $L=3$ retain the $\gamma r$ term:
+\[
+ Y_3\le\widehat S-\tau-\gamma q,\quad
+ \widehat S=S'_3+K'^5\one-\gamma r.
+\]
+Its four coefficients are $d(1-\gamma),\tau,\gamma,\tau+\delta_{3}\in[\tau,d]$.
+Moreover $\widehat S-1=[P_3(K')-\gamma K']g'$.
+Subtracting $\gamma z$ changes the imaginary coefficient from one to
+$1-\gamma\in[0,1]$, so its modulus does not exceed that of $P_3$ and
+$\|\widehat S-1\|_2^2\le d$.
+The row-tail factor is $1-\gamma+z+z^3$, whose squared spectral modulus
+is $(1-\gamma)^2+x(1-x)^2\le(1-\gamma)^2+4/27$.
+The original $K'$ row bound multiplies its norm by $\sqrt d$.
+For $d\ge1/10$, $\gamma\ge51/640$ makes this at most $1$;
+for $d\le1/10$ it is at most $31/27<(13/12)^2$.
+Thus the two comparison versions cover $L=3$.
+
+\proofpart{Two steps}
+The same envelope gives $Y_2\le Z=aq+r+K^3g\ge0$,
+$a=1-d+\delta_{2}/2$. With $g'=-g$ its exact outputs are
+\[
+ \mu=1-2d+3\delta_{2}/2,\quad\E[g'(Z-\mu)]=ad,\quad
+ \operatorname{Var}Z=a^2d+\delta_{2}-2\delta_{3}+\delta_{4}-(d-\delta_{2})^2.
+\]
+They imply $\mu\le m=1-89d/64$, covariance at least $h=(1-d)d$,
+and variance at most
+\[
+ V=d[59/51-1993d/1024+2601d^2/4096],
+\]
+using $v-(2-\theta)v^2\le8/51$ for $v=\delta_{2}/d$.
+The row envelope is $Z\le(1-51d/64)q+\sqrt d$.
+The fourth coefficient is at most $7-7d$. Put $x=\sqrt d$,
+$A=1-51d/64$ and define
+\[
+ H_x(\xi)=\xi\{[A(2-\xi)+x]^2+2m[A(2-\xi)+x]+3m^2\}.
+\]
+Its derivative $D=\partial_\xi H_x(3/2)$ and comparison remainder
+$Q=H_x(3/2)+7x^2-7$ are
+\begin{align*}
+ D&=-1/4-125x^2/128-19x^3/16+45735x^4/16384,\\
+ Q&=-5/8+9x/2-2021x^2/256-687x^3/128+347427x^4/32768.
+\end{align*}
+The maximum is in $\xi\le3/2$; curvature is at most $-2$ there and at
+most $-3$ for $x\le1/3$.
+On $x\le1/3$, $Q''<-12$, $Q(1/4)<-9/256$,
+$Q'(1/4)<7/32$ and $|D(1/3)|<3/8$ leave remainder
+$-239/24576$. On $x\ge1/3$, $Q'<0$,
+$Q(1/3)+1/16=-20061/2654208<0$ and $|D|<1/2$ suffice.
+The fourth expansion is therefore bounded by
+$\max\{G,\Phi(m)+G\}$, $G=(7-7d)V$, where here $\Phi(u)=u^3(u-4h)$ with $h=(1-d)d$.
+For the first branch,
+$G\le7d(1-d)(59/51-7105d/4096)<31/32$:
+this cubic has second derivative less than $-16$ and at $d=1/4$
+has value less than $77/80$ and derivative in $(0,7/24)$.
+For the second branch the divided coefficients of $\Phi(m)+G-1$
+are bounded by $-7/5,11,-32,34,-10$.
+The corresponding polynomial is at most $-53/470$ on $d\le1/4$.
+At $d=1/4+h$ it is
+$-101/640+3h/4-41h^2/4+24h^3-10h^4\le-991/7040$.
+Combining both branches yields $\E[p(T^2P)^4]\le1-3d/32$.
+This proves the bound for every positive integer connector length.

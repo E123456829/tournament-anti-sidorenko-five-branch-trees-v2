@@ -1,0 +1,25 @@
+\begin{tikzpicture}[>=Stealth,every node/.style={font=\small},
+ branch/.style={circle,draw,fill=white,inner sep=1.8pt},
+ arm/.style={black!65},core/.style={->,thick}]
+\node[branch,label=above:$t$] (t) at (0,0) {};
+\node[branch,label=below:$r$] (r) at (2.2,0) {};
+\node[branch,label=above:$c$] (c) at (4.4,0) {};
+\node[branch,label=below:$w$] (w) at (6.6,0) {};
+\node[branch,label=above:$z$] (z) at (8.8,0) {};
+\draw[core] (t)--node[above]{$2$}(r);
+\draw[core] (r)--node[above]{$1$}(c);
+\draw[core] (z)--node[above]{$1$}(w);
+\draw[core] (w)--node[above]{$2$}(c);
+\draw[arm] (t)--++(-.6,-1)node[midway,left]{$2$};
+\draw[arm] (t)--++(.6,-1)node[midway,right]{$4$};
+\draw[arm] (r)--++(-.65,1.1)node[midway,left]{$1$};
+\draw[arm] (r)--++(0,1.25)node[midway,right]{$3$};
+\draw[arm] (r)--++(.65,1.1)node[midway,right]{$4$};
+\draw[arm] (c)--++(-.6,-1)node[midway,left]{$4$};
+\draw[arm] (c)--++(.6,-1)node[midway,right]{$5$};
+\draw[arm] (w)--++(-.65,1.1)node[midway,left]{$2$};
+\draw[arm] (w)--++(0,1.25)node[midway,right]{$4$};
+\draw[arm] (w)--++(.65,1.1)node[midway,right]{$5$};
+\draw[arm] (z)--++(-.6,-1)node[midway,left]{$2$};
+\draw[arm] (z)--++(.6,-1)node[midway,right]{$3$};
+\end{tikzpicture}

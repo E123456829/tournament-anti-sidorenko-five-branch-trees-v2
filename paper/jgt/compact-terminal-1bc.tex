@@ -1,0 +1,380 @@
+\subsection[Propagated triples (1,b,c), 3 <= b<c]{Propagated triples $(1,b,c)$, $3\le b<c$}\label{loc:S31}
+We prove $\E[p(T^L(qf_bh_c))^4]\le1$ for every $L\ge1$.
+For $c\ge5,d\ge1/5$ use $h_c\le77/80$ and the pair result in
+Section~\ref{loc:S24}; for $(b,c)=(3,4),d\ge1/4$ use $h_4\le1$.
+Only the complementary small ranges are considered below.
+
+\proofpart{The common positive envelope and finite coefficients}
+Put
+\begin{gather*}
+ \Delta=\beta_b+\beta_c+B,\quad B=\beta_{c-1},\quad
+ m=1-\Delta/2,\quad k=1/m,\quad v=1-kB,\\
+ W=S_c-S_b=K^bG_{c-b}(K)g,\quad U=Bg-W,\quad H=q+kU,\quad B_L=T^LH.
+\end{gather*}
+Retaining the three indicated beta subtractions gives
+$qf_bh_c\le q(m+U/2)^2$.
+For $c\ge5,d\le1/5$, $m\ge7/10$, $k\le10/7$.
+Writing $w=K^{b-1}G_{c-b}(K)g$ gives
+$|w|^2\le(1+\theta)\delta_{b-1}\le117/1024<1/4$,
+$\E w=\beta_b-\beta_c\le \delta_{2}\le B$ and $m-B\ge1/2$.
+Thus $z=w-B+m\ge0$ and $mH=Tz+B-\E w\ge0$.
+The exact actual-error calculation from Section~\ref{loc:S26} gives
+\begin{equation}\label{eq:compact-1bc-error}
+ T^L(qf_bh_c)\le m^2B_L+Cd\,\bar f_{L-1}
+\end{equation}
+whenever $Cd\ge m(\sqrt{dJ}-v_0)+J$, $J=\E U^2$, $v_0=\E[gU]$.
+
+Let $n=L+1$, $s=c-b$, and define
+\begin{gather*}
+ \Pi_n=G_n+kz^{n-1}[-B+(-1)^bz^bG_s(-z)],\\
+ V_n=S'_n-kBK'^n\one+k(-1)^bG_s(-K')K'^{n+b}\one,\\
+ \omega_j=v\beta_j+kB\beta_{j-1}
+                  +k(-1)^j[\beta_{b+j-1}-\beta_{c+j-1}].
+\end{gather*}
+Duhamel gives exactly
+\begin{gather*}
+ B_L=V_n-\sum_{j=2}^n\omega_j\bar f_{n-j},\quad
+ 1-\E V_n=\omega_{n+1},\quad\E[g'V_n]=\omega_{n+2},\\
+ V_n-1=\Pi_n(K')g',\qquad V_n-q=K'\Pi_{n-1}(K')g'.
+\end{gather*}
+For $c\ge5$ the perturbation budget is less than $3/4<4/5$:
+\[
+ k[B+\theta^{b/2}\|G_s\|]
+ \le(10/7)[1/5+\theta\sqrt{\theta(1+\theta)}]<3/4.
+\]
+The shared finite perturbation lemma proves $\|\Pi_n\|\le1$ for all $n\ge4$.
+Let $t=\tau-k\delta_{4}$. The finite beta intervals give
+$|\omega_2|\le k\delta_{3}$ for $b\ge4$, $\omega_2\ge0$ for $b=3$,
+$\omega_3\ge0$, and
+\[
+ t\le\omega_j\le d+k\delta_{4}\quad(j\ge4),\qquad
+ t/d\ge57111/114688>49/100.
+\]
+For $b\ge4$ all shifted beta indices are at least seven and their
+differences have width $\delta_{4}$; for $b=3$ check $j=4$ separately as
+$d-k(\beta_{c+3}-\tau)\in[\tau,d]$.
+
+\proofpart{Every $L\ge4$, $c\ge5$}
+Let $e=( -\omega_2)_+$ and retain
+$Z=V_n+2e-t-tq\ge B_L\ge0$.
+For $b\ge4$ its outputs are
+\[
+ \mu\le1-d,\quad h\ge3d/8,\quad\operatorname{Var}Z\le d,\quad
+ Z\le q+\sqrt d.
+\]
+The mean and row losses use
+$3c_0-(10/7)(2\theta^2+3\theta^3)>1$ and
+$c_0-(10/7)(2\theta^2+\theta^3)>0$.
+Coefficient $63/8$ in the fourth expansion gives
+$\E[pB_L^4]\le e^{13d/4}$.
+For $b=3$, $e=0$ and the sharper outputs are
+\[
+ \mu\le1-7d/5,\quad h\ge3d/8,\quad
+ \operatorname{Var}Z\le d-2d^2/3,\quad
+ Z\le(1-d/3)q-d/3+\sqrt d.
+\]
+Here the fourth coefficient is at most $7$.
+The weaker mean bound $1-d$ and the same row envelope are
+profile A of Section~\ref{calc:coefficientprofiles}, so the coefficient
+is at most seven.
+The endpoint fourth expansion now gives $\E[pB_L^4]\le e^{2d}$.
+Its two branch comparisons have margins $4/15$ and $141292/234375$ at
+$d=1/5$ after decreasing Taylor remainders.
+The corresponding actual errors, retaining their dependence on $m$, are
+\[
+ C_b(m,d)=\begin{cases}
+ (143/300)m+d^2+19/200,&b=3,\\
+ (11/30)m+(d+1/5)^2,&b\ge4.
+ \end{cases}
+\]
+For $b\ge4$ use $\|W\|/\sqrt d<1/5$, $\E[gW]\le \delta_{3}$;
+for $b=3$ use $\E[gW]\ge0$,
+$\|W\|^2\le(1+\theta)\delta_{4}$ and $(1+\theta)\theta^3<19/200$.
+The norm expression is
+$m^2e^{\lambda d}+2dC_b(m,d)$, with
+$\lambda=1/2$ or $13/16$. It increases in $m$; use $m\le1-57d/64$.
+The divided polynomial coefficient bounds are
+\[
+ \begin{array}{c|rrrr|c}
+ b&\text{constant}&d&d^2&d^3&\text{final bound}\\\hline
+ 3&-331/2400&<0&5/2&1/7&-3089/84000\\
+ \ge4&-373/2400&<0&45/16&7/20&-2407/60000.
+ \end{array}
+\]
+The exponential upper coefficients are $1/7$ and $7/20$ in
+\eqref{eq:compact-exp-remainder}; evaluating the positive terms at $d=1/5$
+proves both norm deficits.
+
+\proofpart{Finite short-connector certificates}
+The finite convex hull makes all remaining arm indices explicit.
+For $z=i\sqrt x$, every finite $G_j(z)$ lies in the real convex hull of
+$G_1,G_2,G_3,G_4$, since
+\[
+ G_\infty=(G_3+xG_1)/(1+x),\qquad
+ G_{4h+r}=(1-x^{2h})G_\infty+x^{2h}G_r
+ \quad(r=1,2,3,4).
+\]
+Thus $|A+BG_j|^2$ is at most the largest of its four vertex values.
+Write $\epsilon=k\E W$ and
+\[
+ D=\beta_{b+2}-\beta_{c+2},\quad
+ F=\beta_{b+3}-\beta_{c+3},\quad
+ G=\beta_{b+4}-\beta_{c+4}.
+\]
+The exact first-step outputs are
+\begin{gather*}
+ \mu_1=1-vd+kD-\epsilon,\quad h_1=d+kF,\\
+ \operatorname{Var}B_1=d+v^2\delta_{2}+2kF+2vkG+k^2\|KW\|^2-(-vd+kD)^2,\\
+ B_1=q-\epsilon+Kz_0,\quad z_0=vg+kW,\quad
+ \|z_0\|^2=v^2d-2vkD+k^2\|W\|^2.
+\end{gather*}
+For $b=3,4,5$ the polynomial
+$R_b(z)=-1+vz+kz^{b+1}G_{c-b}(z)$ bounds the variance.
+Its maximizing hull vertices are respectively $3,2,1$;
+the corresponding $z_0$ vertices are $2,2,1$.
+Use $k\le1+(15/7)d$, $k^2\le1+(255/49)d$ and the rational inputs
+$\theta^3<27/400$, $\theta^5<9/800$.
+The resulting complete one-step outputs are
+\begin{center}\small
+\begin{tabular}{@{}ccccc@{}}\toprule
+$b$&$\mu_1\le$&$h_1\ge$&$\operatorname{Var}B_1\le$&row tail coefficient\\\midrule
+$3$&$1-9d/10$&$3d/4$&$45d/32$&$4/3$\\
+$4$&$1-93d/100+221d^2/140$&$d$&$17d/10+7d^2/10$&$11/9$\\
+$5$&$1-23d/30+27d^2/14$&$d$&$31d/20+d^2/3$&$25/24$\\
+$\ge6$&$1-3d/5$&$19d/20$&$3d/2$&$13/12$\\\bottomrule
+\end{tabular}
+\end{center}
+A row tail coefficient $\lambda$ means $B_1\le q+\lambda\sqrt d$.
+For $b=4,5$ the displayed means imply the weaker losses $3d/5,3d/8$.
+Their refined row bounds retain the negative $kB$ term:
+\[
+ b=4:\quad7/6+3/175+k(x/6-x^2/3)\le1699/1400<11/9,
+\]
+and for $b=5$ use
+$1+3/175+k[x/6-(19/32)x^2]<25/24$.
+For $b\ge6$, finite beta parity gives
+\[
+ (-\E W)_+,(-D)_+,(-F)_+\le \delta_{5},\quad F_+,G_+\le \delta_{6},\quad
+ D-\E W\le \delta_{4}.
+\]
+The last difference is exactly $u_{c+1}-u_{b+1}$.
+These signs and $\|W\|/\sqrt d<2/25$ give the fourth row and error below.
+
+The next two steps use the same coefficients:
+\begin{gather*}
+ B_2=V_3-\epsilon q-\omega_3,\quad
+ \mu_2=1-\omega_4-\omega_3-\epsilon,\quad h_2=\omega_5-\epsilon d,\\
+ \operatorname{Var}B_2=\|V_3-1\|^2-\omega_4^2+\epsilon^2d-2\epsilon\omega_5,\\
+ Z_3=V_4+2e-\omega_4-\omega_3q\ge B_3,\quad e=(-\epsilon)_+,\\
+ \mu_3=1-\omega_5-\omega_4-\omega_3+2e,\quad h_3=\omega_6-\omega_3d,\\
+ \operatorname{Var}Z_3=\|V_4-1\|^2-\omega_5^2+\omega_3^2d-2\omega_3\omega_6.
+\end{gather*}
+The finite beta intervals give the following coefficient certificate;
+entries are divided by $d$:
+\begin{center}\small
+\begin{tabular}{@{}cccccc@{}}\toprule
+$b$&$e/d\le$&$\omega_3/d$&$\omega_4/d\ge$&$\omega_5/d$&$\omega_6/d\ge$\\\midrule
+$3$&$0$&$[5/7,26/21]$&$16/21$&$\ge79/160$&$19/32$\\
+$4$&$5/21$&$[5/7,26/21]$&$1$&$[79/160,1]$&$11/20$\\
+$5$&$5/21$&$[43/70,1]$&$1$&$[19/32,73/70]$&$11/20$\\
+$\ge6$&$3/70$&$[43/70,73/70]$&$19/20$&$[4/7,11/10]$&$4/7$\\\bottomrule
+\end{tabular}
+\end{center}
+For $b=3$, additionally $\epsilon\ge k(\delta_{2}-\delta_{3})$ and
+$\omega_3+\omega_4+\epsilon\ge32d/21$;
+the covariance retains $h_2\ge\tau-k\delta_{4}-k\delta_{2}^2\ge1499d/3360$.
+For $b\ge6$, $\epsilon_+\le d/10$.
+Every coefficient range follows from the actual finite alternating sums;
+the possible negative $\epsilon$ is retained in both variance identities.
+
+The two short polynomials, in the original $K$ coordinate, are
+\[
+ P_2=1-vz-kz^{b+1}G_{c-b}(z),\qquad
+ P_3=1-z+vz^2+kz^{b+2}G_{c-b}(z).
+\]
+The vertex certificates are
+\[
+ \begin{array}{c|cc}
+ b&\|P_2\|\le&\|P_3\|^2\le\\\hline
+ 3&19/16&1\\4&11/8&1\\5&13/10&11/10\\
+ \ge6&19/16+13/175&101/100.
+ \end{array}
+\]
+For $b=3$, $|P_3|^2\le(1-vx)^2+x\le1-(347/1568)x$.
+For $b=4$, vertex three adds
+$-2kx^3[1-19x/7+5x^2/7]+k^2x^6(1-x+x^2)$;
+its bracket is at least $109/7168$, and the positive part is at most
+$(6/245)x$, below the base loss.
+For $b=5$, vertex two gives
+$|P_3|^2\le1+[-347/1568+2/5+45/3136]x<1+x/5<11/10$.
+For $b\ge6$, the tail is at most $4x/35$ in modulus, giving
+$\|P_3\|\le501/500$ and the stated squared bound.
+
+Substitution into the exact centered formulas gives the complete outputs:
+\begin{center}\small
+\begin{tabular}{@{}cccccc@{}}\toprule
+step;$b$&mean upper&$h\ge$&variance upper&coefficient $M$&$\E[pZ^4]\le$\\\midrule
+$2;3$&$1-3d/2$&$7d/16$&$d$&$8$&$e^{4d}$\\
+$2;4$&$1-4d/3$&$12d/25$&$d$&$8$&$e^{4d}$\\
+$2;5$&$1-4d/3$&$7d/12$&$11d/10$&$8$&$e^{4d}$\\
+$2;\ge6$&$1-3d/2$&$d/2$&$9d/8$&$8$&$e^{4d}$\\
+$3;3$&$1-9d/5$&$d/3$&$d$&$7$&$e^{3d}$\\
+$3;4$&$1-17d/10$&$3d/10$&$d$&$7$&$e^{3d}$\\
+$3;5$&$1-17d/10$&$3d/10$&$d$&$63/8$&$e^{4d}$\\
+$3;\ge6$&$1-2d$&$d/3$&$d$&$63/8$&$e^{3d}$\\\bottomrule
+\end{tabular}
+\end{center}
+For two steps the row bounds are $q+\lambda\sqrt d$, with
+$\lambda=19/16,11/8,13/10,4/3$ in row order.
+For three steps and $b=3,4$ the row bound is
+$(1-d/3)q-d/3+\sqrt d$, so coefficient $7$ applies.
+For $b\ge5$ it is $q+(13/12)\sqrt d$.
+In the variance calculation the terms caused by negative $\epsilon$ are
+at most $d^2$ for $b=4$, $3d^2/5$ for $b=5$, and $d^2/10$ for $b\ge6$;
+the retained $\omega_4^2$ pays them.
+
+\proofpart{Finite scalar coefficients and exponential certificates}
+The coefficient-$8$ entries use the following complete profiles
+$(a,\lambda)$ for mean $\mu\le1-ad$ and row bound $q+\lambda\sqrt d$:
+\[
+ (9/10,4/3),\ (3/5,11/9),\ (3/8,25/24),\ (3/2,4/3),\ (4/3,3/2).
+\]
+The first four have $d\le1/5$; the last permits $d\le1/4$.
+For $x=\sqrt d$ the common value and derivative at $p=3/2$ are
+\begin{align*}
+ H_0&=51/8+(9\lambda/2)x+[(3/2)\lambda^2-(21/2)a]x^2
+                              -3a\lambda x^3+(9/2)a^2x^4,\\
+ D_0&=-1/4+(\lambda^2-4a)x^2-2a\lambda x^3+3a^2x^4.
+\end{align*}
+For all profiles $D_0,H'(2)<0$ and $H''\le-3$ on $p\le3/2$,
+so the maximum is at most $H_0+D_0^2/6$.
+The respective rational bounds $(H_0,|D_0|)$ are
+\[
+ (51/8+540/407,1),\ (79/10,4/7),\ (159/20,1/2),\
+ (51/8+108/157,3/2),\ (633/85,8/5).
+\]
+Each gives a bound below $8$.
+For the first and fourth profiles discard the nonpositive cubic/quartic
+sum and maximize the remaining quadratic; for the second and third
+$H_0$ increases to the rational endpoint $x=9/20$.
+For the last profile its cubic/quartic sum is again nonpositive.
+The $63/8$ profile was proved in Section~\ref{loc:S26}.
+For one step the four moment bounds from the first output table are
+$e^{5d},e^{7d},e^{6d},e^{6d}$, respectively.
+They and the last output table follow from
+\eqref{eq:compact-fourth-endpoints} and the quadratic/cubic Taylor lower
+bounds of the exponential. The second endpoint branches may be bounded by
+\[
+ \begin{array}{c|l}
+ 1;3&1+93d/20+324d^2/25-5103d^3/500+28431d^4/10000\\
+ 1;4&1+147d/25+29d^2\\
+ 1;5&1+16d/3+24d^2\\
+ 1;\ge6&1+449d/80+9d^2-621d^3/125+594d^4/625\\
+ 2;3&1+d/4+171d^2/8\\
+ 2;4&1+56d/75+1376d^2/75\\
+ 2;5&1+17d/15+20d^2\\
+ 2;\ge6&1+d+45d^2/2-27d^3+189d^4/16\\
+ 3;3&1-23d/15+666d^2/25\\
+ 3;4&1-d+1173d^2/50\\
+ 3;5&1-d/8+1173d^2/50\\
+ 3;\ge6&1-35d/24+32d^2-48d^3+80d^4/3.
+ \end{array}
+\]
+The first endpoint branches are exactly $M$ times the variance bound in
+the corresponding output table. These formulas specify both branches
+and the polynomial signs establish them over each interval in $d$.
+
+\proofpart{Actual short-step error budget}
+The four error functions in \eqref{eq:compact-1bc-error} are
+\[
+ C_b(m,d)=\begin{cases}
+ (143/300)m+d^2+19/200,&b=3,\\
+ (11/30)m+(d+1/5)^2,&b=4,\\
+ m/8+(d+1/8)^2,&b=5,\\
+ (3/20)m+(d+2/25)^2,&b\ge6.
+ \end{cases}
+\]
+For $b=5$ retain the favorable $\E[gW]=-D\le0$ and
+$\|W\|/\sqrt d<1/8$; for $b\ge6$ use the finite sign bounds already given.
+For each step the norm is bounded by
+$m^2e^{\lambda d}+\gamma dC_b(m,d)$, where $\lambda$ is one quarter of
+the moment exponent, and $\gamma=1,8/7,2$ for steps one, two, three.
+It increases with $m$; use $m\le1-ad$ with $a=35/32$ for $b=3,4$ and
+$a=57/64$ for $b\ge5$.
+Expansion using \eqref{eq:compact-exp-remainder} gives the following
+upper coefficients for the divided norm minus one. The final column
+bounds the entire quotient on $0\le d\le1/5$.
+\begin{center}\small
+\begin{tabular}{@{}crrrrc@{}}\toprule
+step;$b$&constant&$d$&$d^2$&$d^3$&final\\\midrule
+$1;3$&$-439/1200$&$<0$&$3$&$2$&$<-1/5$\\
+$1;4$&$-37/1200$&$-7/15$&$<0$&$35/16$&$-1/75$\\
+$1;5$&$-9/64$&$-23/64$&$\le0$&$5/4$&$-209/1600$\\
+$1;\ge6$&$-2497/20000$&$<0$&$\le0$&$5/4$&$-2297/20000$\\
+$2;3$&$-641/1200$&$-5/28$&$5/2$&$5/7$&$<-2/5$\\
+$2;4$&$-6071/8400$&$-59/420$&$5/2$&$5/7$&$<-3/5$\\
+$2;5$&$-139/224$&$-1/7$&$15/7$&$4/7$&$<-1/2$\\
+$2;\ge6$&$-3/5$&$<0$&$15/7$&$4/7$&$-446/875$\\
+$3;3$&$-353/1200$&$-271/300$&$3$&$3/8$&$<-1/6$\\
+$3;4$&$-749/1200$&$-1/120$&$3$&$3/8$&$<-1/2$\\
+$3;5$&$-1/2$&$-5/224$&$2$&$4/7$&$<-2/5$\\
+$3;\ge6$&$-7/10$&$-2/25$&$11/4$&$3/10$&$-1469/2500$\\\bottomrule
+\end{tabular}
+\end{center}
+All entries are substitutions into one explicit polynomial expansion;
+negative linear terms may be discarded and positive higher terms maximized
+at $d=1/5$. The factor $8/7$ follows from \eqref{eq:compact-qnorm}.
+This completes all $c\ge5$ short connectors.
+
+\proofpart{The corner $(b,c)=(3,4)$, every connector length}
+For $d\le1/4$, $\Delta=3d$, $m=1-3d/2$, $k\le8/5$, $B=d$, $W=K^4\one$.
+The positive-input construction remains valid since
+$|K^3\one|\le\sqrt{\theta d}<3/8\le m-B$.
+Now $\Pi_n=G_n+kz^{n-1}(-d-z^3)$ has perturbation budget
+$329/400<5/6$. This larger budget is essential.
+The four residue comparisons for $n\ge4$ give respectively:
+the $n=4$ quadratic $y^2-(5/3)y+1>0$;
+for odd $n\ge5$, $1026961/1048576<1$;
+for $n\equiv0$, $n\ge8$, $5/(8\sqrt2)<1$;
+and for $n\equiv2$, $n\ge6$, $3951/4096<1$.
+Thus $\|\Pi_n\|\le1$ for the full index range.
+Here $\omega_2=k\delta_{2}$, $\omega_3=(1-kd)d$ and every $\omega_j$, $j\ge4$,
+lies in $[\tau,d]$: odd indices are convex combinations of adjacent betas,
+and even indices have the finite form
+$\operatorname{Alt}_{h-1}+k(-1)^{h+1}\delta_{h+1}$.
+Long connectors satisfy \eqref{eq:compact-fourth-comparison}.
+The actual error is less than $2d/5$, since $J=d^3+\delta_{4}$, $v_0=d^2$,
+$\sqrt{dJ}-d^2<(13/50)d$ and $J/d<13/100$.
+For $L\ge4$ this gives norm at most $1-131d/80$.
+
+For the three short steps the exact coefficients are
+\[
+ \epsilon=k\delta_{2},\quad\omega_3=vd,\quad\omega_4=d-k\delta_{3},\quad
+ \omega_5=\tau+kd\delta_{2},\quad\omega_6=\tau+k\delta_{4}.
+\]
+At step one, $\mu\le1-d$, $h\ge7d/10$,
+variance $\le45d/32$, and row tail $\le q+(13/12)\sqrt d$.
+The coefficient $63/8$ gives moment at most $e^{5d}$.
+At step two, $\mu\le1-3d/2$, $h=\tau$, variance $\le d$ and
+row tail $q+(19/16)\sqrt d$ give moment at most $e^{4d}$.
+At step three use $Z=V_4-\omega_4-\omega_3q$, with
+$\mu\le1-9d/5$, $h\ge d/3$, variance $\le d$ and the coefficient-$7$
+row envelope, giving moment at most $e^{3d}$.
+The short spectra here are $P_3=1-z+vz^2+kz^5$, whose square is at most
+$(1-3x/5)^2+x\le1$, and $P_2=1-vz-kz^4$, with square at most $1+x$.
+The actual norm comparisons use $\gamma=1,7/6,2$ respectively,
+$C=2/5$, and the same $m=1-3d/2$.
+Their divided polynomials are bounded by
+\begin{gather*}
+ -27/20-5d/8+3d^2/16+63d^3/32,\\
+ -23/15-5d/28+15d^2/28+9d^3/7,\\
+ -29/20+3d/10+63d^2/80+27d^3/40.
+\end{gather*}
+All are negative on $[0,1/4]$ by their endpoint upper bounds.
+For the last moment comparison retain the full second branch
+$1-23d/15+666d^2/25-4536d^3/125+11421d^4/625$;
+its exponential Taylor remainder decreases to $117697/120000>0$.
+For two steps the corresponding margin is $21/64$.
+Large parameters use $h_4\le1$, completing the corner and the full catalogue.
+Equal-pair restoration and full reversal are the shared operations;
+the half-tree application is exactly Lemma~\ref{lem:halftree}.

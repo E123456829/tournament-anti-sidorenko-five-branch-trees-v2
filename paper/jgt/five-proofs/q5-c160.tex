@@ -1,0 +1,600 @@
+\subsection{Short terminal pairs at a root beginning (1,2,v)}\label{proof:Q5-C160}
+% Common local aliases for the former repeated C168.1--C168.3 prefaces.
+Use the original-measure calculus of
+Section~\ref{sec:odd-common-calculus} and the complete root-pair
+certificates of Section~\ref{sec:odd-common:fourth}.
+For a root \((1,2,v)\), write \(m=v-2\), \(G_m=E+zD\),
+\(\beta=\beta_{v-1}=\int D\,d\nu\),
+\(\beta_v=\int E\,d\nu\),
+\(P_+=h_2f_v\), \(P_-=\bar f_2W_v\),
+\(\ell_+=\ell_a\), and \(\ell_-=\ell_s\).
+The two vectors, their signed means and full constants are
+\eqref{eq:odd-common:root-standard}--\eqref{eq:odd-common:root-losses}.
+At \(v=3\), \((E,D)=(1,0)\) and \(\beta=0\).
+All subsequent direction choices and packet estimates retain their
+stated integer and parameter ranges.
+
+The root residual list is $(1,2,v)$, $v\ge3$. Both original connector lengths $L,M\ge1$ are independent. Write $H=pP T^LF$, with outer message $T^MH$. The unit arm has actual factor $p$; an $f$ arm points entirely outward, a $\bar f$ arm inward, an $h$ arm first inward then outward, and a $W$ arm first outward then inward. Every inner edge points from terminal to root; every outer edge from root to receiver. Fix the following original directions:
+\begin{description}
+\item[U2.] Terminal $(2,b)$, $b\ge4$, $L=1$: $F=\bar f_2W_b$; take $P=\bar f_2W_3$ at $v=3$, and $P=h_2f_v$ at $v\ge4$.
+\item[U3.] Terminal $(3,b)$, $b\ge5$, $L=1$: $F=h_3f_b$, $P=\bar f_2W_v$.
+\item[24.] Terminal $(2,4)$: $F=\bar f_2W_4$; take $P=h_2f_v$ at $L=2$, and $P=\bar f_2W_v$ at $L\ge3$.
+\item[L2B.] Terminal $(2,b)$, $b\ge4$: $F=\bar f_2W_b$; take $P=\bar f_2W_v$ at $L\ge3$, and $P=h_2f_3$ at $L=2,v=3$.
+\item[Auxiliary L2B.] At $L=2,v\ge4$, use the same $F=\bar f_2W_b$, $P=h_2f_v$. The present auxiliary calculation requires $d\le1/8$; the remaining domain is handled by Q5-C163 in the same direction.
+\item[L3B.] Terminal $(3,b)$, $b\ge5$: $F=\bar f_3W_b$; take $P=h_2f_v$ at $L=2$, and $P=\bar f_2W_v$ at $L\ge3$.
+\end{description}
+The direction uses only original integers. The overlapping $(2,4)$ rows agree. Each complete row satisfies $EH^4\le e^{-45d/8}$. The ordinary-fourth outlet in Q5-C084, Section 0, gives $I_q(T^MH)^3\le e^{11d}(EH^4)^2\le e^{-d/4}$ for every $M\ge1$. Genuine equal-pair decorations are restored by positivity.
+
+For later reference, write $m=v-2$, $G_m=E+zD$, $\beta=\int D$ and $\beta_v=\int E$. The standard root $\bar f_2W_v$ has vector $-BG_m(B)u+\beta\one$ and scalar $-\beta_v-\beta$; the alternative root $h_2f_v$ has vector $-BG_m(-B)u+\beta\one$ with the same scalar. Their scalar-plus-mean losses, for $v\ge4$, are at least $1463d/1024$ and $969d/1024$, respectively. Dropping the retained $\beta f_1$ term gives weaker losses $5d/6$ and $3d/16$, without changing the actual direction. At $v=3$ both roots have exactly vector $-Bu$, scalar-plus-mean $-d$ and $\beta_2=0$. The full finite-coordinate proof is Lemma~\ref{lem:odd-common:root-pairs}; the weaker standard bound uses $1-\theta^2=855/1024>5/6$ in even parity, while the odd case has loss $d$.
+
+For $n\ge3,m\ge1$, the full joint bound of C180.3.3 is $\|(G_n-BG_m)u\|<(6/5)\sqrt d$: its frequency square is at most $1+2\theta^2+\theta^3+\theta^4=1493553/1048576<36/25$, with comparison $37338825<37748736$. This includes the exact $G_1=(1,0)$ endpoint. In the following calculations the signed exponential estimate is applied once to each full vector, including all its displayed constants and means.
+
+\paragraph{C160.3.2 One, two and three positive steps for the same remainder}
+
+Suppose \(F\le e^{R-\Gamma}\) and \(e^R\le1+R+\eta R^2/2\). Define \(\sigma=ER^2\), \(D_j=EB^jR\), \(\delta=D_0+\eta\sigma\), and \(\epsilon=\delta+D_1\). Since \(T(R^2)\le2\sigma\),
+
+\[
+TF\le e^{-\Gamma}(q+\delta+BR).
+\]
+
+Apply positive \(T\) again. Use \(\log y\le y-1\) on the complete strictly positive upper bound and \(\log p\le-u\). The resulting vector and scalar-plus-mean \(S=a+EBV\) are
+
+
+\begingroup\small
+\setlength{\tabcolsep}{3pt}
+\setlength{\LTleft}{0pt}\setlength{\LTright}{\fill}
+\begin{longtable}{@{}>{\raggedright\arraybackslash}p{0.1200\linewidth}>{\raggedright\arraybackslash}p{0.8000\linewidth}@{}}
+\caption{Short-connector vectors and scalar-plus-mean terms for \(\log(pT^LF)\).}\label{tab:parameters:q5-c160:2}\\
+\toprule
+\(L\) & V \\
+\midrule\endfirsthead
+\toprule
+\(L\) & V \\
+\midrule\endhead
+\bottomrule\endfoot
+1 & R; S: \(-\Gamma+\epsilon\). \\
+\addlinespace[2pt]
+2 & \(\delta\one+u+BR\); S: \(-\Gamma+\epsilon-d+D_2\). \\
+\addlinespace[2pt]
+3 & \(\epsilon\one+G_2u+\delta u+B^2R\); S: \(-\Gamma+\epsilon-2d+D_2+D_3-\delta d\). \\
+\end{longtable}
+\endgroup
+
+
+For two steps the exponent scalar is \(-\Gamma+\epsilon\), while \(EBV=-d+D_2\). For three steps these are \(-\Gamma+\epsilon-d+D_2\) and \(-d-\delta d+D_3\). Thus the actual mean remains, including the shortest finite \(G_2\).
+
+\paragraph{C160.3.3 Every longer connector and the terminal gamma index}
+
+Use finite continuation \eqref{eq:oc:finite-duhamel} for the same
+first-row data \(\delta,D_i\).
+If \(h\ge0\) and \(\gamma_j=\beta_j-D_{j-1}\ge hd\) for every
+\(j\ge3\), then \eqref{eq:odd-common:long-parameters} gives, for
+\(L\ge4\),
+\[
+ V=G_{L-1}(B)u+B^{L-1}R-hd\one,\qquad
+ a=-\Gamma+2\delta_++2(D_1)_+-2hd.
+\]
+Thus \(\log(pT^LF)\le a+BV\), with
+\(\E BV=-\gamma_{L+1}\) and
+\(S\le-\Gamma+2\delta_++2(D_1)_+-3hd\).
+The periodic moment calculations below establish the index \(L+1\)
+as well; the constant \(-hd\one\) stays in the full vector.
+
+\paragraph{C160.4 The three actual terminal remainders and their pointwise Taylor domains}\label{part:C160.4}
+
+Write \(k=b-2\), \(G_k=A+zC\), and \(\gamma=\beta_{b-1}=\int C\). Each row uses its same actual \(R\) in every \(\sigma,\allowbreak \allowbreak  D_j\) and propagated vector.
+
+
+\begingroup\small
+\setlength{\tabcolsep}{3pt}
+\setlength{\LTleft}{0pt}\setlength{\LTright}{\fill}
+\begin{longtable}{@{}p{0.2200\linewidth}p{0.7000\linewidth}@{}}
+\caption{Short terminal pairs at a root beginning (1,2,v): parameter values.}\label{tab:parameters:q5-c160:3}\\
+\toprule
+Entry & Gamma \\
+\midrule\endfirsthead
+\toprule
+Entry & Gamma \\
+\midrule\endhead
+\bottomrule\endfoot
+\(\bar f_2 W_b,\allowbreak  b\ge 4\) & \(\beta_b+\gamma=\int(A+C)\); Spectral coordinates of R: \((\gamma+xA+zxC)u\). \\
+\addlinespace[2pt]
+\(h_3 f_b,\allowbreak  b\ge 5\) & \(d+\beta_b+\gamma\); Spectral coordinates of R: \((\gamma+x(A-1)-zxC)u\). \\
+\addlinespace[2pt]
+\(\bar f_3 W_b,\allowbreak  b\ge 5\) & \(d+\beta_b+\gamma\); Spectral coordinates of R: \((\gamma-x(1-A)+zxC)u\). \\
+\end{longtable}
+\endgroup
+
+
+The first row is the original arm sum in the root-pair envelope. For the next two use \(h_3=h_2-d+B^2u\) and \(\bar f_3=\bar f_2-d+B^2u\), retaining the actual \(\beta f_1\) term. Each actual arm sum proves \(F\le e^{R-\Gamma}\).
+
+For the first row, the original row inequality gives \(|R|\le d+\sqrt{\delta_2+\delta_3}<1/3+7/16<1\), since \(\delta_2+\delta_3\le195/1024<49/256\). The other two tails have squared row bound \(\delta_3+\delta_4\le2535/32768=7605/98304\); the shortest \(G_2\) retains its factor \(1+x\). Thus the second row has \(|R|<2/3\), and the third has \(|R|<1/3+7/24=5/8\).
+
+On \([-1,\allowbreak \allowbreak  1]\), the positive Taylor remainder coefficient is at most \(1/2+1/6+5/96=23/32<3/4\); the negative remainder is at most \(R^2/2\). Hence the first two rows permit \(\eta=3/2\). On \([0,\allowbreak \allowbreak  5/8]\), consecutive Taylor-tail ratios from degree four are at most \(y/5\), and \(1/2+y/6+y^2/[24(1-y/5)]\le279/448<5/8\). The negative coefficient remains at most \(1/2\), so the third row permits \(\eta=5/4\) throughout the pointwise domain.
+
+For the first row the exact same-vector moments are
+
+\[
+\begin{gathered}
+\sigma=\gamma^2d+2\gamma\int xA+\int(x^2A^2+x^3C^2),\\
+\quad D_0=-\int xC,\quad D_1=-\gamma d-\int xA.
+\end{gathered}
+\]
+
+For the second row, \(D_0=\int xC\), \(D_1=-\gamma d+\int x(1-A)\), and \(\sigma\le\gamma^2d+\delta_4+\delta_5\). For the third, \(D_0=-\int xC\), with the same \(D_1\) and variance bound. Their signs come from their full original terminal directions.
+
+\paragraph{C160.5 The unit connector for terminal (2, b)}
+
+\paragraph{C160.5.1 The shortest root \(v=3\)}
+
+The root vector is exactly \(-Bu\). The full squared norm is \(\sigma+\delta_2-2\int x^2C\). Apply the signed exponential estimate at four. Put \(c=41/4=4\eta+17/4\), the total coefficient of \(\sigma\). The complete exponent is
+
+\[
+-4\Gamma-4d-4\gamma d
++\int[17x/4-4x(A+C)-17x^2C/2]+c\sigma.
+\]
+
+Combine all \(\gamma\) terms before estimating: \(P(\gamma)=-4\gamma-4\gamma d+c\gamma^2d+2c\gamma\int xA\). Its derivative is at most \(-4+(277/64)d+(41/2)d^2\le-161/576<0\). Therefore use the complete block \(P(\kappa d)\). Its contribution \(-4\kappa d^2+c\kappa^2d^3\) is nonpositive because \(c\kappa/3=779/384<4\); the remaining mixed term is at most \(779\delta_2/192\). With \(A,\allowbreak \allowbreak  C\ge\kappa\) and \(\beta_b\ge\kappa d\),
+
+\[
+\log EH^4\le-35d/4+(683/192)\delta_2+(333/64)\delta_3+(41/4)\delta_4.
+\]
+
+The last three costs, divided by \(d\), are at most \(8879/6144<3/2\), \(56277/65536<7/8\), and \(90077/131072<3/4\). Their sum is below \(25/8\), yielding loss greater than \(45/8\).
+
+\paragraph{C160.5.2 Every v at least four and both finite root parities}
+
+Use the entire actual root \(h_2f_v\), with strong vector \(-BG_m(-B)u+\beta\one\). The complete squared norm is
+
+\[
+\begin{gathered}
+\sigma+\int(x^2D^2+xE^2)-2\gamma\int xD\\
+-2\int x^2(AD+CE)+\beta^2+2\beta\int E-2\beta\int xC.
+\end{gathered}
+\]
+
+The \(\gamma\) block now includes \(-(17/2)\gamma\int xD\), so its derivative remains negative. Replace the whole block by its value at \(\gamma=\tau\), also using \(\beta_b\ge\tau\). The term \(-4\tau d+c\tau^2d\) is nonpositive since \(\tau\le2/9\). Retain the negative constant cross term, weakening it to \(-(17\kappa/2)\tau\int xC\), because \(\beta\ge\tau\ge\kappa\tau\).
+
+For even \(m\), use \(E=D\) and \(3\beta^2\le3d\int D^2\le\int D^2\). For odd \(m\),
+
+\[
+\begin{gathered}
+\beta^2+2\beta\int E\\
+\le d\int[D^2+2D-2\kappa xD]\\
+\le\tfrac13\int[D^2+2D-2\kappa xD].
+\end{gathered}
+\]
+
+The bracket is positive. The negative term was first paid with the actual \(\beta\ge\kappa d\), before using \(d\le1/3\). This gives the two complete integral polynomials
+
+\[
+\begin{gathered}
+F_e=-8+8x-4x(A+C)-(8-4x)D\\
++\tfrac{17}4(1+x+x^2)D^2-\tfrac{17}2x^2(A+C)D\\
++c(x^2A^2+x^3C^2)\\
++\tau x[\tfrac{41}2A-\tfrac{17}2D-\tfrac{17\kappa}2C],
+\end{gathered}
+\]
+\[
+\begin{gathered}
+F_o=-12+8x-4x(A+C)+c(x^2A^2+x^3C^2)\\
++\tfrac{17}4x-\tfrac{17}2x^2C\\
++[-\tfrac76+(8-\tfrac{17\kappa}6)x-\tfrac{17}2x^2(1+A)\\
++\tfrac{17}2x^3C]D\\
++[\tfrac{17}{12}+\tfrac{17}4x^2(1+x)]D^2\\
++\tau x[\tfrac{41}2A-\tfrac{17}2D-\tfrac{17\kappa}2C].
+\end{gathered}
+\]
+
+Both expressions are convex separately in \(A,\allowbreak \allowbreak  D\) and affine in \(\tau\). The \(C\) derivative divided by \(x\) is at most \(-4-(17/2)x+29x^2\), negative at zero and at \(\theta\), where it equals \(-2731/1024\). Set \(C=1-x\). At \(\tau=2/9\), the \(A\) derivative divided by \(x\) is at least \(5/9+12x-(41/2)x^2>0\). At \(A=1\), the \(\tau\) coefficient is at least \(445x/64>0\). Thus the complete continuous rectangle reduces to I: \((A,\allowbreak \allowbreak  C,\allowbreak \allowbreak  \tau)=(1,\allowbreak \allowbreak  1-x,\allowbreak \allowbreak  2/9)\), and II: \((1-x,\allowbreak \allowbreak  1-x,\allowbreak \allowbreak  0)\), each with \(D=1\) or \(D=1-x\).
+
+All eight endpoint polynomials, with every finite tail term retained, are
+
+
+\begingroup\small
+\setlength{\tabcolsep}{3pt}
+\setlength{\LTleft}{0pt}\setlength{\LTright}{\fill}
+\begin{longtable}{@{}p{0.1200\linewidth}p{0.8000\linewidth}@{}}
+\caption{Short terminal pairs at a root beginning (1,2,v): parameter values.}\label{tab:parameters:q5-c160:4}\\
+\toprule
+Entry & Endpoint polynomial \\
+\midrule\endfirsthead
+\toprule
+Entry & Endpoint polynomial \\
+\midrule\endhead
+\bottomrule\endfoot
+even I 1 & \(-47/4+(2821/288)x+(755/288)x^2+(75/4)x^3-(41/2)x^4+(41/4)x^5\). \\
+\addlinespace[2pt]
+even I 1-x & \(-47/4+(2677/288)x-(359/96)x^2+(63/2)x^3-(99/4)x^4+(41/4)x^5\). \\
+\addlinespace[2pt]
+even II 1 & \(-47/4+(33/4)x+(11/2)x^2+(27/4)x^3-(41/4)x^4+(41/4)x^5\). \\
+\addlinespace[2pt]
+even II 1-x & \(-47/4+(31/4)x-(11/4)x^2+(39/2)x^3-23x^4+(41/4)x^5\). \\
+\addlinespace[2pt]
+odd I 1 & \(-47/4+(6977/576)x-(1693/288)x^2+(63/2)x^3-29x^4+(41/4)x^5\). \\
+\addlinespace[2pt]
+odd I 1-x & \(-47/4+(6017/576)x-(569/64)x^2+40x^3-(167/4)x^4+23x^5\). \\
+\addlinespace[2pt]
+odd II 1 & \(-47/4+(2029/192)x-3x^2+(39/2)x^3-(75/4)x^4+(41/4)x^5\). \\
+\addlinespace[2pt]
+odd II 1-x & \(-47/4+(1709/192)x-(1517/192)x^2+28x^3-40x^4+23x^5\). \\
+\end{longtable}
+\endgroup
+
+
+For example, even I with \(D=1\) has \(\tau\) contribution \(445x/288+323x^2/288\), constant \(-47/4\), quadratic coefficient \(3/2+323/288=755/288\), and cubic coefficient \(75/4\). Odd I with \(D=1\) has linear coefficient \(17/4+1213/192+445/288=6977/576\). The other rows expand \(D,\allowbreak \allowbreak  D^2\) with \(1-x,\allowbreak \allowbreak (1-x)^2\), retaining the finite parity relations.
+
+For the four even rows, drop nonpositive final terms. Their positive costs are paid respectively by \(4+1/2+4/3\), \(19/5+17/8\), \(27/8+1+1/2\), and \(13/4+4/3\). The resulting upper bounds are \(-71/12,\allowbreak \allowbreak -233/40,\allowbreak \allowbreak -55/8,\allowbreak \allowbreak -43/6\), all below \(-45/8\). In the first row the exact endpoint costs \(36673/9216,\allowbreak \allowbreak  127595/294912,\allowbreak \allowbreak  164775/131072\) are below \(4,\allowbreak \allowbreak  1/2,\allowbreak \allowbreak  4/3\). In the second, \(34801/9216<19/5\) and \(138411/65536<17/8\).
+
+For the four odd rows, use \(x\le\theta\) to fold the cubic into the quadratic. The resulting positive quadratic coefficients are \(3985/576,\allowbreak \allowbreak  471/64,\allowbreak \allowbreak  315/64,\allowbreak \allowbreak  667/192\). After dropping nonpositive final terms the upper bounds are convex. Their endpoint positive costs are respectively below \(493/100+23/20=152/25\), \(17/4+5/4\), \(13/3+5/6\), and \(11/3+3/5\), all below \(49/8\). The tightest first row uses \(90701/18432<493/100\) and \(673465/589824<23/20\), leaving margin at least \(9/200\). These rational comparisons cover the full continuous interval and include the shortest even root \(G_2\). Together with the preceding \(v=3\) proof, this covers all \(b\ge4,\allowbreak \allowbreak  v\ge3,\allowbreak \allowbreak  L=1\).
+
+\paragraph{C160.6 The unit connector for the whole terminal h3 \(f_b\)}
+
+\paragraph{C160.6.1 The root \(v=3\)}
+
+Here \(R=(\gamma+x(A-1)-zxC)u\), \(\sigma\le\gamma^2d+\delta_4+\delta_5\), \(D_0\le \delta_2\), and \(D_1\le-\gamma d+\delta_3\). The root cross term with \(-Bu\) is positive; the full norm is at most \(\sigma+\delta_2+2\delta_3\). Thus the complete exponent is
+
+\[
+-8d-4\beta_b-4\gamma-4\gamma d+(33/4)\delta_2+(25/2)\delta_3+c\sigma.
+\]
+
+The block \(P=-4\gamma-4\gamma d+c\gamma^2d\) has negative derivative. Set the whole block to \(\gamma=\tau\), use \(\beta_b\ge\tau\), and drop \(-4\tau d+c\tau^2d\le0\). The result is \(-16d+(65/4)\delta_2+(25/2)\delta_3+c(\delta_4+\delta_5)\). The three costs per \(d\) are below \(53/8,\allowbreak \allowbreak  17/8,\allowbreak \allowbreak  1\), with sum \(39/4\), giving \(EH^4\le e^{-25d/4}\).
+
+\paragraph{C160.6.2 Every v at least four}
+
+Use the entire root \(\bar f_2W_v\), strong vector \(-BG_m(B)u+\beta\one\). Its full squared norm is
+
+\[
+\begin{gathered}
+\sigma+\int(x^2D^2+xE^2)+2\gamma\int xD\\
++2\int x^2[(A-1)D+CE]\\
++\beta^2+2\beta(\int E+\int xC).
+\end{gathered}
+\]
+
+The \(\gamma\) derivative is at most \(-4-(35/64)d+(41/2)d^2<0\). Set its whole block to \(\tau\). Drop the nonpositive \(2c\tau\int x(A-1)\) and \(-4\tau d+c\tau^2d\), retaining positive \(\tau\) terms until \(\tau\le2/9\). The remaining \(C\) coefficient is nonnegative, so set \(C=1\). In \(s=A-1\in[-x,\allowbreak \allowbreak  0]\), convexity reduces to its two endpoints, and \(s=-x\) exceeds zero by \(4x^2+cx^4-(17/2)x^3D\ge0\). Thus set \(A=1-x\).
+
+The complete even and odd integral polynomials are respectively
+
+\[
+\begin{gathered}
+F_e=-12+(89/6)x+4x^2+c x^3+c x^4\\
++[-8-(19/9)x+(17/2)x^2-(17/2)x^3]D\\
++(17/4)(1+x+x^2)D^2,
+\end{gathered}
+\]
+\[
+\begin{gathered}
+F_o=-16+(229/12)x+(25/2)x^2+c x^3+c x^4\\
++[-7/6+(119/576)x-(17/2)x^2-17x^3]D\\
++[17/12+(17/4)x^2+(17/4)x^3]D^2.
+\end{gathered}
+\]
+
+Handle the actual constant first. For even \(m\), \(3\beta^2+2\beta\int xC\le3d\int D^2+2d\int xC\). For odd \(m\), first use \(\beta^2+2\beta\int E\le d\int[D^2+2D-2\kappa xD]\), then pay the terminal positive cross term \(2\beta\int xC\). Only afterwards use \(d\le1/3\). Convexity in \(D\) gives all four endpoints:
+
+
+\begingroup\small
+\setlength{\tabcolsep}{3pt}
+\setlength{\LTleft}{0pt}\setlength{\LTright}{\fill}
+\begin{longtable}{@{}p{0.1200\linewidth}p{0.8000\linewidth}@{}}
+\caption{Short terminal pairs at a root beginning (1,2,v): parameter values.}\label{tab:parameters:q5-c160:5}\\
+\toprule
+Entry & Expanded polynomial \\
+\midrule\endfirsthead
+\toprule
+Entry & Expanded polynomial \\
+\midrule\endhead
+\bottomrule\endfoot
+even 1 & \(-63/4+(611/36)x+(67/4)x^2+(7/4)x^3+(41/4)x^4\). \\
+\addlinespace[2pt]
+even 1-x & \(-63/4+(593/36)x+(263/18)x^2-11x^3+23x^4\). \\
+\addlinespace[2pt]
+odd 1 & \(-63/4+(11111/576)x+(33/4)x^2-(5/2)x^3+(41/4)x^4\). \\
+\addlinespace[2pt]
+odd 1-x & \(-63/4+(10151/576)x+(5449/576)x^2-(5/2)x^3+23x^4+(17/4)x^5\). \\
+\end{longtable}
+\endgroup
+
+
+For example, the even \(1-x\) linear and quadratic coefficients are \(89/6+53/9-17/4=593/36\) and \(4+19/9+17/2=263/18\). The odd \(1-x\) quadratic is \(25/2-17/2-119/576+17/3=5449/576\). The four endpoint positive costs are below \(1007/100,\allowbreak \allowbreak  199/20,\allowbreak \allowbreak  1911/200,\allowbreak \allowbreak  193/20\), all below \(81/8\). The tightest first row uses \(7943/1152<69/10\), \(11323/4096<277/100\), \(15379/131072<3/25\), and \(1171001/4194304<7/25\), summing to \(1007/100\). Drop the other negative cubic terms. This covers all \(v\ge4\), with \(v=3\) covered separately.
+
+\paragraph{C160.7 Every nonunit inner connector for terminal (2, 4)}
+
+\paragraph{C160.7.1 Exact same-vector data}
+
+At \(b=4\), \(G_2=1+z\), \(\gamma=d\), and \(\Gamma=2d\). Thus
+
+\[
+R=d u-B^2u-B^3u=(d+x+zx)u,
+\quad \sigma=d^3+2d\delta_2+\delta_3+\delta_4,
+\]
+\[
+D_0=-\delta_2,\quad D_1=-d^2-\delta_2,\quad D_2=\delta_3,\quad D_3=d\delta_2+\delta_3.
+\]
+
+The actual expressions give
+
+\[
+\begin{gathered}
+\sigma<5d/8,\quad -\delta_2\le\delta<8d/15,\\
+\quad -13d/16\le\epsilon\le-\tfrac12d^2-\tfrac{293}{2048}\delta_2\le0.
+\end{gathered}
+\]
+
+The four terms of \(\sigma/d\) are at most \(1/9,\allowbreak \allowbreak  13/48,\allowbreak \allowbreak  169/1024,\allowbreak \allowbreak  2197/32768\), respectively below \(9/80,\allowbreak \allowbreak  11/40,\allowbreak \allowbreak  1/6,\allowbreak \allowbreak  11/160\), with total \(299/480<5/8\). Also \(\delta/d\le1/6+(3/2)\theta^2(1+\theta)<31/60<8/15\), using \((3d-1)\delta_2\le0\). The \(\epsilon\) coefficient uses \((3/2)\theta(1+\theta)=1755/2048\). In the other direction, \(|\epsilon|/d\le d-(3/2)d^2+(2-3d)(\delta_2/d)\le2\theta+(1-3\theta)d-(3/2)d^2\le13/16\).
+
+\paragraph{C160.7.2 Two inner edges}
+
+The terminal vector is \(\delta\one+u+BR\), with \(S_2=-3d+\epsilon+\delta_3\le-3d+\delta_3\). Use the weaker envelope for the entire root \(h_2f_v\). The full vector is \(Q+\delta\one\), where
+
+\[
+Q=[1-xD-x^2+z(d+x-E)]u.
+\]
+
+For \(v\ge4\), the real coordinate lies in \([0,\allowbreak \allowbreak  1-x]\), and the imaginary coefficient has absolute value at most \(1-x\), using \(d+3x<2\) on its positive side. Hence \(\|Q\|^2\le\int(1+x)(1-x)^2\le d\). For \(v=3\), the exact \((E,\allowbreak \allowbreak  D)=(1,\allowbreak \allowbreak  0)\) gives \(\|Q\|^2\le\int[1+x-4x^2+x^3+x^4]\le13d/12\), since \(x+x^2<1\) and \(x-3x^2\le1/12\). In both cases \(EQ=\int E-d^2-\delta_2\), so \(|EQ|\le d\). The full constant cost is \(\delta^2+2\delta EQ\le(304/225)d^2\le304d/675\). The resulting norms are below \(3d/2,\allowbreak \allowbreak  5d/3\), respectively; the root losses are \(3d/16\) and exactly \(d\). The fourth losses are \(1463/256,\allowbreak \allowbreak  6341/768\), both greater than \(45/8\).
+
+\paragraph{C160.7.3 Three inner edges}
+
+The exact terminal scalar-plus-mean is \(S_3=-4d+\epsilon+2\delta_3+d\delta_2-\delta d\le-4d+2\delta_3+2d\delta_2\). Use the weaker standard root. The full vector is \(Q+\epsilon\one\), where
+
+\[
+Q=[1+\delta+xD-dx-x^2+z(1-E-x^2)]u.
+\]
+
+The real coordinate is greater than \(1-2\theta/3-\theta^2>1/2\), and is at most \(1+x-x^2+(8/15-x)d\le53/45+(2/3)x-x^2\le58/45\). The imaginary coefficient has absolute value at most \(x\), including the exact \(v=3\) endpoint. Thus \(\|Q\|^2<7d/4\). Since \(EQ=\int E-d+\delta_3\ge-\delta_2\) and \(\epsilon\le0\), the constant cost is at most \(\epsilon^2+2|\epsilon|\delta_2\le169d/384\). The full norm is below \(9d/4\). With root loss \(5d/6\), the fourth loss is \(943/128>45/8\).
+
+\paragraph{C160.7.4 Every L at least four, including the last gamma index}\label{part:C160.7.4}
+
+The same remainder has all the periodic moments
+
+\[
+\begin{gathered}
+D_{4j}=-\delta_{2j+2},\quad\\
+D_{4j+1}=-d\,\delta_{2j+1}-\delta_{2j+2},\quad\\
+D_{4j+2}=\delta_{2j+3},\quad\\
+D_{4j+3}=d\,\delta_{2j+2}+\delta_{2j+3}.
+\end{gathered}
+\]
+
+Here \(\gamma_3=d-\delta_3\), and \(\gamma_4=d-d\delta_2-\delta_3\ge(1-39/128)d\). For later indices, the positive part is at most \((3/4)\delta_4<d/16\), because \(d+\theta<3/4\) and \(\theta^3<1/12\). Thus every \(\gamma_l\ge17d/32\) for \(l\ge3\), including \(L+1\). Set \(h=17/32\), \(n=L-1\ge3\). Propagation gives \(S\le-1213d/480\), with \(V=G_n(B)u+B^nR-hd\one\). Since \(\|R\|<(4/5)\sqrt d\) and \(\theta^{3/2}<4/15\), the actual tail has norm below \(16\sqrt d/75\).
+
+For \(v\ge4\), use the strong standard root. Put \(U=(G_n-BG_m)u+B^nR\); then \(\|U\|<106\sqrt d/75\), and \(EU\le \delta_2+(D_n)_+\le7\delta_2/4\). The complete constant \(c=\beta-hd\) lies in \([0,\allowbreak \allowbreak  15d/32]\), and
+
+\[
+\|U+c1\|^2=\|U\|^2+c^2+2c EU
+<[2+3/40+9/40]d=23d/10.
+\]
+
+The three comparisons are \((106/75)^2<2\), \(75/1024<3/40\), and \(455/2048<9/40\). Add the strong root loss \(1463d/1024\); the fourth loss is \(4645/768>45/8\).
+
+For \(v=3\), use the exact root vector \(-Bu\) and loss \(d\). The base \(G_n(B)u-Bu\) has coordinates \((E_n,\allowbreak \allowbreak  D_n-1)\), with norm below \(21\sqrt d/20\). Adding the tail gives \(379\sqrt d/300\), with square below \(8d/5\). Its mean satisfies \(EU=d-\beta_{n+1}+D_n\ge-(3/4)\delta_3\): the negative moments start at \(D_4,\allowbreak \allowbreak  D_5\), controlled by \(\delta_4,\allowbreak \allowbreak (d+\theta)\delta_3\), and later terms are smaller. Retain the actual negative constant:
+
+\[
+\|U-hd\one\|^2<[8/5+h^2/3+(h/2)\theta^2]d<7d/4.
+\]
+
+The resulting fourth loss is \(1601/240>45/8\). This proves every \(v\) for \(L=2,\allowbreak \allowbreak  3\) and all \(L\ge4\) at terminal \((2,\allowbreak \allowbreak  4)\).
+
+\paragraph{C160.8 Common bounds for a general terminal (2, b)}
+
+Here \(F=\bar f_2W_b\), \(k=b-2\ge2\). Use the same first-row \(R,\allowbreak \allowbreak  \sigma,\allowbreak \allowbreak  D_0,\allowbreak \allowbreak  D_1\) of \mbox{\hyperref[part:C160.4]{part C160.4}} throughout. In particular \(\gamma=\int C\) retains its relation to \(A,\allowbreak \allowbreak  C\).
+
+\paragraph{C160.8.1 Variance, epsilon and delta}
+
+From \(\gamma\le d\) and \(A,\allowbreak \allowbreak  C\le1\), \(\sigma\le d^3+2d\delta_2+\delta_3+\delta_4<5d/8\).
+
+The exact expression for epsilon is
+
+\[
+\begin{gathered}
+\epsilon=d[-\gamma+(3/2)\gamma^2]\\
++\int[(3\gamma-1)xA-xC+(3/2)x^2A^2+(3/2)x^3C^2].
+\end{gathered}
+\]
+
+Fix the actual \(A,\allowbreak \allowbreak  C\). The expression is convex in \(\gamma\in[0,\allowbreak \allowbreak  1/3]\). At zero, the negative terms absorb the square terms separately. At \(1/3\), set \(A=1,\allowbreak \allowbreak  C=1-x\); the scalar is \(-d/6\), and the integral is bounded by \(J=-x+(5/2)x^2+(3/2)x^3-3x^4+(3/2)x^5\). After dropping the nonpositive final term the bound is convex, with endpoint \(7007/65536<1/6\). Thus \(\epsilon\le0\). Inserting the first two actual variance terms in the opposite direction gives
+
+\[
+|\epsilon|\le d[2\theta+\gamma(1-3\theta)-(3/2)\gamma^2]
+\le13d/16.
+\]
+
+The lower bound is \(\delta\ge-\delta_2\). For its upper bound retain \(\gamma=\int C\) and split the domain.
+
+If \(d\le9/32\), enlarge the actual expression using \(A=1,\allowbreak \allowbreak  C=1-x\), obtaining \(\delta/d\le243/2048+\int f/d\), where \(f=-(5/32)x+(5/2)x^2+(3/2)x^3-3x^4+(3/2)x^5\). Since \(f\!\!{}^{\prime\prime}=5+9x-36x^2+30x^3\ge5-9x>0\), its maximum lies at an endpoint. The terms at \(\theta\) are respectively below \(1/8,\allowbreak \allowbreak -1/16,\allowbreak \allowbreak  5/12,\allowbreak \allowbreak  1/9,\allowbreak \allowbreak -1/16\); the last negative comparison is \(4369833>4194304\). Their total is below \(19/36<8/15\).
+
+If \(d\ge9/32\), put \(r=d-\gamma=\int(1-C)\), so \(0\le r\le \delta_2\). Compare with \(\omega_{24}=-\delta_2+(3/2)(d^3+2d\delta_2+\delta_3+\delta_4)\):
+
+\[
+\begin{gathered}
+\delta-\omega_{24}\\
+\le r[\theta-3d^2-3\delta_2+(3/2)dr]\\
+\le r[\theta-6d^2+(3/2)d^3]\le0.
+\end{gathered}
+\]
+
+The bracket decreases and equals \(-2293/65536\) at \(9/32\). Hence again \(\delta<8d/15\). Together the two domains give \(|\delta|\le8d/15\).
+
+\paragraph{C160.8.2 The joint scalar payment}
+
+We prove \(\Gamma-2\delta_+\ge5d/6\). If \(\delta\le0\), use \(\Gamma\ge2\kappa d\). For \(\delta>0\) retain the actual finite parity relation.
+
+For even \(k\), \(A=C\). Put \(X=\int xC\) and \(Y=\int x^2(1+x)C^2\). Then
+
+\[
+\Gamma-2\delta=2\gamma-3\gamma^2d+(2-6\gamma)X-3Y.
+\]
+
+Use \(Y\le\theta(1+\theta)X\) and set \(c=2-6\gamma-3\theta(1+\theta)\). If \(c\ge0\), the bound is \(\gamma(2-3\gamma d)\ge95d/96\). If \(c<0\), use the actual \(X\le\theta\gamma\) and \(t=\gamma/d\in[\kappa,\allowbreak \allowbreak  1]\):
+
+\[
+(\Gamma-2\delta)/d\ge C_0t-(55/48)t^2,
+\quad C_0=69345/32768>21/10.
+\]
+
+The concave quadratic reduces to its two continuous endpoints. At one the lower bound is \(229/240\); at \(\kappa\), it is \(207157/245760>204800/245760=5/6\). The coefficient \(55/48\) comes from \(d(3d+6\theta)\le55/48\), retaining the actual scalar relation.
+
+For odd \(k\), \(A=1-xC\). Put \(X=\int xC,\allowbreak \allowbreak  Z=\int x^2C\). The actual variance is
+
+\[
+\sigma=\gamma^2d+2\gamma \delta_2-2\gamma Z+\delta_3
+-\int x^3C[2-(1+x)C].
+\]
+
+Use \(Z\ge\kappa \delta_3\) and \(C[2-(1+x)C]\ge\kappa^2\), obtaining
+
+\[
+\Gamma-2\delta\ge d+\gamma-3\gamma^2d+\int J_\gamma(x),
+\]
+\[
+J_\gamma=(\kappa-6\gamma)x+(6\gamma\kappa-3)x^2+3\kappa^2x^3.
+\]
+
+Here \(J_\gamma^{\prime\prime}\le4\kappa-6+18\kappa^2\theta<0\); \(\kappa<3/5,\allowbreak \allowbreak  \theta<5/12\) give the stronger bound \(-9/10\). Also \(J_\gamma(0)=0\) and \(J_\gamma(\theta)<0\): its \(\gamma\) coefficient is negative, and at \(\gamma=0\) use \(\kappa-3\theta=-5/8\) and \(3\kappa^2\theta^2<3/16\). Thus the full interval has lower bound \(J_\gamma(\theta)\). With \(d\le1/3\), \(t=\gamma/d\),
+
+\[
+(\Gamma-2\delta)/d\ge A_0+B_0t-t^2/3,
+\quad A_0>13/16,\quad B_0=6283/16384>3/8.
+\]
+
+The exact constant is \(A_0=191/256+\;2379351/33554432\); its comparison uses \(2379351>2228224\). The two concave-quadratic endpoints have lower bounds \(41/48,\allowbreak \allowbreak  233/256\), both above \(5/6\). This includes the shortest odd \(k=3\). Thus the joint payment holds for every original \(b\ge4\).
+
+\paragraph{C160.8.3 All moment orders and every long connector}
+
+The same actual remainder has all the moments
+
+\[
+D_{4j}=-\int x^{2j+1}C,
+\quad D_{4j+1}=-\gamma \delta_{2j+1}-\int x^{2j+1}A,
+\]
+\[
+D_{4j+2}=\int x^{2j+2}C,
+\quad D_{4j+3}=\gamma \delta_{2j+2}+\int x^{2j+2}A.
+\]
+
+The corresponding positive parts are bounded by those of the actual \((2,\allowbreak \allowbreak  4)\) remainder. Thus every \(\gamma_l\ge17d/32\) for \(l\ge3\), including \(L+1\); also \(D_1<0\). The joint payment gives \(S\le-(5/6+51/32)d=-233d/96\) for \(L\ge4\). The identical full norm, mean and root-constant calculations in \mbox{\hyperref[part:C160.7.4]{part C160.7.4}} give, for \(v\ge4\), norm below \(23d/10\) and strong root loss \(1463d/1024\); for \(v=3\), norm below \(7d/4\) and exact root loss \(d\). The fourth losses are \(21689/3840,\allowbreak \allowbreak  301/48\), respectively. The first exceeds \(45/8\) by \(89/3840\). The joint scalar payment remains essential here.
+
+\paragraph{C160.9 Short connectors for general (2, b)}
+
+\paragraph{C160.9.1 Three inner edges and every root}
+
+Put \(X_A=\int xA,\allowbreak \allowbreak  Z_A=\int x^2A,\allowbreak \allowbreak  Z_C=\int x^2C\). Exact propagation gives
+
+\[
+S_3=-\Gamma+(1-d)\delta-2d-\gamma(d-\delta_2)-X_A+Z_A+Z_C.
+\]
+
+If \(\delta\ge0\), the joint payment gives \(\Gamma-(1-d)\delta\ge5d/6\); if \(\delta<0\), use \(\Gamma\ge2\kappa d\). Since \(X_A\ge\kappa \delta_2\) and \(Z_A,\allowbreak \allowbreak  Z_C\le \delta_3\), \(S_3\le-17d/6+(7/32)\delta_2\le-(17/6-91/1024)d\).
+
+For \(v\ge4\), use the strong standard root. Its complete vector is \(Q+c\one\), where
+
+\[
+\begin{gathered}
+Q=[1+\delta+xD-\gamma x-x^2A+z(1-E-x^2C)]u,\\
+\quad c=\epsilon+\beta,\quad -7d/32\le c\le d.
+\end{gathered}
+\]
+
+The real coordinate is above \(1/2\), and at most \(53/45+(77/96)x-x^2+x^3<45/32\). This polynomial has derivative \(3(x-1/3)^2+15/32>0\); the exact endpoint margin is \(911/1474560\). The imaginary coefficient is bounded by \(x\), so \(\|Q\|^2\le66997d/32768\). Its mean is \(EQ=\int E-d+Z_C\in[-\delta_2,\allowbreak \allowbreak  \delta_3]\). If \(c\ge0\), \(2cEQ\le2d\delta_3\); if \(c<0\), it is at most \(7d\delta_2/16\). Both are at most \((2/3)\theta^2d\), and \(c^2\le d/3\). The full norm is at most \(81525d/32768<5d/2\), giving fourth loss \(1165/192>45/8\).
+
+For \(v=3\), use \(E=1,\allowbreak \allowbreak  D=0\). The real coordinate is at most \(53/45\), the imaginary coefficient is \(-x^2C\), and \(EQ=Z_C\ge0\). Since \(\epsilon\le0\), its actual cross term is nonpositive. The comparisons \((53/45)^2<25/18\), \(\theta^5<1/90\) give \(\|Q\|^2<7d/5\). Adding \(\epsilon^2\le169d/768\) gives full norm below \(5d/3\); the exact root loss \(d\) yields fourth loss \(2021/256>45/8\).
+
+\paragraph{C160.9.2 Two inner edges and \(v=3\) on the whole domain}
+
+The entire root is \(h_2f_3\), selected using only \(L,\allowbreak \allowbreak  v\). The exact full vector is \(Q+\delta\one\), where
+
+\[
+Q=[1-x^2C+z(\gamma+xA-1)]u,
+\quad EQ=d-\gamma d-X_A.
+\]
+
+The real coordinate lies in \([0,\allowbreak \allowbreak  1-x^2+x^3]\); the negative imaginary coefficient has absolute value at most \(1-x+x^2\). Its squared polynomial satisfies \(1+x-4x^2+5x^3-x^4-x^5+x^6\le1+x-2x^2\le9/8\), since \(5x-x^2\le1911/1024<2\) and \(-x^5+x^6\le0\). Thus \(\|Q\|^2\le9d/8\), and \(25d/96\le EQ\le d\). If \(\delta\le0\), then \(|\delta|\le\theta d<2EQ\), and the constant cost is nonpositive. If \(\delta\ge0\),
+
+\[
+\begin{gathered}
+\tfrac{17}4(\delta^2+2\delta EQ)\\
+\le\tfrac{17}4\tfrac{38}{15}d\delta\\
+\le\tfrac{323}{90}\delta<4\delta.
+\end{gathered}
+\]
+
+Consequently \(4(-\Gamma+\delta)\) plus the constant cost is at most \(-4(\Gamma-2\delta_+)\le-10d/3\). The remaining exact scalar is \(-2d-\gamma d-X_A+Z_C\le-2d\), using \(\kappa-\theta>0\). The complete exponent is at most \(-34d/3+(17/4)(9/8)d=-629d/96<-45d/8\). This covers all hosts and all \(b\ge4\).
+
+\paragraph{C160.9.3 The same direction for \(L=2\) and v at least four on the auxiliary domain}
+
+Assume \(0<d\le1/8\). Retain the entire root \(h_2f_v\), strong loss \(969d/1024\), and vector \(-BG_m(-B)u+\beta\one\). The improved exact bound is \(\epsilon\le-c_*\delta_2\), where \(c_*=13663/65536>1/5\). Indeed \(\gamma\le1/8\), its scalar term is nonpositive, \((3\gamma-1)xA\le-(5/8)\kappa x\), and the remaining two blocks give \(c_*=\kappa(13/8-(3/2)\theta^2)-(3/2)\theta\). Also \(\delta/d\le18527/65536<2/7\), with \(\delta\ge-\delta_2\). The complete constant \(c=\delta+\beta\) lies in \((0,\allowbreak \allowbreak  9d/7]\).
+
+\[
+Q=[1-xD-x^2C+z(\gamma+xA-E)]u,\quad EQ\le d.
+\]
+
+The real coordinate is positive and at most \(1-x+x^3\), while the imaginary coefficient is bounded by \(1-x+x^2\), using \(\gamma+3x-x^2<2\) on the positive side. The squared polynomial \(1-x-x^2+5x^3-4x^4+x^5+x^6\) is at most one, since \(5\theta^2+\theta^4+\theta^5<7/8\). The complete norm is therefore at most \(d+(207/49)d^2\le599d/392\). For the scalar, first combine \(\epsilon+D_2\le(\theta-1/5)\delta_2\), then use \(\delta_2\le\theta d\), giving \(S_2\le-[35/16-\theta^2+\theta/5]d\). Adding the strong alternative-root loss gives exactly \(61d/20\). The fourth loss is \(44733/7840>45/8\), with margin \(633/7840\).
+
+This auxiliary calculation is restricted to \(d\le1/8\). The fixed direction on the remaining domain is treated separately by Q5-C163.
+
+\paragraph{C160.10 Every nonunit inner connector for terminal (3, b)}
+
+\paragraph{C160.10.1 The actual terminal and its common bounds}
+
+Here \(k=b-2\ge3\), \(t=1-A\in[0,\allowbreak \allowbreak  x]\), \(R=(\gamma-xt+zxC)u\), and \(\Gamma=d+\int(A+C)\ge3d-2\delta_2\ge35d/16\). Use \(\eta=5/4\). The actual envelope \(\bar f_3W_b\le e^{R-\Gamma}\) is the third row of \mbox{\hyperref[part:C160.4]{part C160.4}} and holds independently of \(L\), including \(L=1\).
+
+\[
+\sigma=\gamma^2d-2\gamma\int xt+\int(x^2t^2+x^3C^2)
+\le d^3+\delta_4+\delta_5<5d/24,
+\]
+\[
+\begin{gathered}
+D_0=-\int xC,\quad D_1=-\gamma d+\int xt,\\
+\quad D_2=\int x^2C,\quad D_3=\gamma \delta_2-\int x^2t.
+\end{gathered}
+\]
+
+The variance bound uses \(\theta^3(1+\theta)<7/72\). Set \(c_0=\kappa-(5/4)\theta^2(1+\theta)=39799/131072>3/10\). Then \(-\delta_2\le\delta\le(5/4)d^3-c_0\delta_2\le7d/180<d/24\). This follows by comparing both endpoints of the convex quadratic \(\delta/d\) on the whole \(d\in[0,\allowbreak \allowbreak  1/3]\).
+
+The exact epsilon expression is
+
+\[
+d[-\gamma+(5/4)\gamma^2]-(5/2)\gamma\int xt
++\int x[t-C+(5/4)xt^2+(5/4)x^2C^2].
+\]
+
+The first two terms are nonpositive. The bracket increases with \(t\) and decreases with \(C\); at \(t=x,\allowbreak \allowbreak  C=1-x\), it is bounded by \(f=-1+2x+(5/4)x^2-(5/4)x^3+(5/4)x^4\). This polynomial is increasing and \(f(\theta)=-129867/4194304<0\), proving \(\epsilon\le0\). In the other direction, \(\epsilon\ge-\gamma d-\int xC\ge-(d^2+\delta_2)\ge-71d/96>-3d/4\). The moment \(D_1\) can be positive, so retain \((D_1)_+\le \delta_3\).
+
+\paragraph{C160.10.2 Two inner edges and the entire alternative root}
+
+The terminal has \(S_2\le-4d+2\delta_2+\delta_3\). The weaker alternative-root loss is \(3d/16\) for \(v\ge4\), or exactly \(d\) for \(v=3\). The full vector is \(Q+\delta\one\), where
+
+\[
+Q=[1-xD-x^2C+z(\gamma-xt-E)]u.
+\]
+
+For \(v\ge4\), the real coordinate is positive and at most \(1-x+x^3\), while the negative imaginary coefficient is bounded by \(1+x^2\), since \(\gamma<E\). The squared upper bound is \(1-x+x^2+4x^3-2x^4+x^5+x^6\). Subtract one and divide by \(x\): \(g=-1+x+4x^2-2x^3+x^4+x^5\) is increasing, with derivative at least \(1-6\theta^2>0\), and \(g(\theta)=-985987/33554432<0\). Hence \(\|Q\|^2\le d\).
+
+For both root ranges, \(25d/96\le EQ\le(1+\theta^2)d\). If \(\delta\le0\), the constant cost is nonpositive; if positive it is below \(19d^2/192\le19d/576<d/30\). The full norm for \(v\ge4\) is below \(31d/30\). At the exact \(v=3\) endpoint, \(\|Q\|^2\le d[1+\theta(1+\theta^2)^2]<8d/5\), so its full norm is below \(49d/30\). The fourth losses are \(1093/120-169/256\) and \(1177/120-169/256\), both above eight. This includes every finite root index.
+
+\paragraph{C160.10.3 Three inner edges and the entire standard root}
+
+The terminal satisfies \(S_3\le-5d+2\delta_2+\delta_3+2d\delta_2\). The full vector is \(Q+\epsilon\one\), where
+
+\[
+Q=[1+\delta+xD-\gamma x+x^2t+z(1-E-x^2C)]u.
+\]
+
+The real coordinate is positive and at most \(1+1/72+\theta+\theta^3<3/2\); the imaginary coefficient is bounded by \(x\). Thus \(\|Q\|^2<7d/3\), and \(EQ=\int E-d+\int x^2C\ge-\delta_2\). Retain the epsilon constant and its mean cross term to obtain full norm at most \([7/3+25/64]d<11d/4\). The root loss \(5d/6\) yields fourth loss \(1703/256>45/8\). The exact \(v=3\) coordinates satisfy the same bounds.
+
+\paragraph{C160.10.4 Every L at least four, all gamma indices and the constant cross term}
+
+Choose \(h=9/16\). Here \(\gamma_3\ge d-\delta_3\), \(\gamma_4\ge d-d\delta_2\). For \(l\ge5\), the positive \(D_{l-1}\) is at most \(\delta_5\) or \(d\delta_4\), each below \(d/32\). Therefore \(\gamma_l\ge\kappa d-d/32=9d/16\) for all \(l\ge3\). Explicitly, \(D_4=-\int x^3C\le0\), \(D_5=-\gamma \delta_3+\int x^3t\le \delta_5\), \(D_6=\int x^4C\le \delta_5\), and \(D_7=\gamma \delta_4-\int x^4t\le d\delta_4\). Every later four-step cycle only increases the powers, including the index \(L+1\).
+
+Long propagation gives \(S\le-[91/24-2\theta^2]d\), retaining \(2(D_1)_+\le2\delta_3\). Since \(\|R\|<\sqrt d/2\), its actual tail is below \(2\sqrt d/15\). The joint \(6/5\) estimate gives \(U=(G_n-BG_m)u+B^nR\) with \(\|U\|<4\sqrt d/3\). Its actual mean satisfies the needed lower bound \(EU\ge-\delta_2-(3/4)\delta_3\): the base mean is at least \(-\delta_2\), and negative \(D_n\) for \(n\ge3\) are controlled by \(\delta_4\) or \(d\delta_3\). Retain the full constant \(-hd\one\):
+
+\[
+\begin{gathered}
+\|U-hd\one\|^2\\
+\le[16/9+h^2/3+(2h/3)(\theta+(3/4)\theta^2)]d\\
+=[16/9+9969/32768]d<17d/8.
+\end{gathered}
+\]
+
+Add the standard-root loss \(5d/6\). The fourth loss is \(1043/128>45/8\). The lower bound on the mean has the required sign for the negative constant. Together the cases \(L=2,\allowbreak \allowbreak  3\) and \(L\ge4\) cover every \(b\ge5,\allowbreak \allowbreak  v\ge3,\allowbreak \allowbreak  L\ge2\) in this fixed terminal direction.

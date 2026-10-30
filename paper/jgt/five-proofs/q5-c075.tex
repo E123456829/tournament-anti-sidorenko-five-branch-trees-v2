@@ -1,0 +1,611 @@
+\subsection{The nonunit-inner ordinary eighth moment}\label{proof:Q5-C075}
+\paragraph{Q75.0 Exact new theorem and its original scope}
+
+Let the original finite probability space and original real skew kernel satisfy
+the conventions in \mbox{\hyperref[part:Q75.1]{part Q75.1}}. Put
+\fitdisplay{
+W_s=A \bar f_{s-1},\qquad X_{b,L}=T^L(qf_b).
+}{}
+The claim is
+\fitdisplay{
+\boxed{E(W_sX_{b,L})^8\le e^{-3d/20}\le1-d/7,
+ \qquad s\ge3,\quad b\ge2,\quad L\ge2.}
+}{Q75.T080.1}
+In fact the shortest new arm has the stronger bound
+\fitdisplay{
+E(W_3X_{b,L})^8\le e^{-d}\qquad(b\ge2,L\ge2).
+}{Q75.T080.2}
+
+
+At an actual root with distinct residual arms (s, a), \(1\le s<a,\allowbreak \) the negative
+canonical factor is \(W_s \bar f_a.\) The short arm's first edge points away from
+the root, and all its remaining edges point toward the root. The long arm
+points entirely toward the root. At the terminal with residual arms (1, b),
+the unit arm points toward the terminal and its b-arm points away. The
+inner connector of length L points from terminal to root. These descriptions
+are literal directions of every original subdivision edge.
+
+After multiplication by the genuine equal-pair decorations \(E_r,\allowbreak  E_t,\allowbreak \) the
+actual input and actual receiving-root output are
+\fitdisplay{
+Y_D=E_r W_sT^L(E_tqf_b),\qquad
+ U_D=T^M(\bar f_aY_D),\qquad M\ge1.
+}{Q75.0.1}
+The exact C066 map, valid for every real Y and every \(a\ge 2,\allowbreak  M\ge 1,\allowbreak \)
+is
+\fitdisplay{
+I_q(T^M(\bar f_aY))^3\le(1-d/72)E|Y|^8,
+ \quad I_q(U)=E[q^{-1/3}|U|^{8/3}].
+}{Q75.0.2}
+Consequently the new \(s\ge 3\) family satisfies
+\fitdisplay{
+\boxed{I_q(U_D)^3\le(1-d/72)e^{-3d/20}
+ \quad(3\le s<a,\ b\ge2,L\ge2,M\ge1).}
+}{Q75.T080.4}
+The two connector lengths are independent. Section~\ref{sec:completion} gives the exact
+arbitrary-joint-law and original P5 applications, with no assumption of
+independent branch labels.
+
+This module does not cover unit inner L for \(s\ge 2,\allowbreak \) arbitrary terminal
+tables, multiple unequal residual pairs at the root, or every central
+role. Other work may supply separate directions in some of those cases;
+none is imported here. 
+
+\paragraph{Q75.1 Original objects, positive convolution, and row bounds}\label{part:Q75.1}
+
+Delete zero-mass atoms from the finite probability space and use its expectation and L2 inner product. Set
+\fitdisplay{
+Jv=(Ev)1,\quad A=J+K,\quad T=J-K=A^*,\quad
+ K(x,y)=-K(y,x),\quad |K(x,y)|\le1,
+}{}
+\fitdisplay{
+g=K1,\ p=1+g,\ q=1-g,\ r=Kg,\ s_0=Kr,\ t=Ks_0,
+\quad \delta_j=\|K^{j}\one\|_2^2,\quad d=\delta_1,
+}{}
+\fitdisplay{
+f_n=A^{n}\one,\quad \bar f_n=T^{n}\one,\quad
+ \theta=13/32,\quad\kappa=19/32,\quad\tau=d-\delta_2.
+}{}
+The symbol s is an arm length; \(s_0=K^3\) 1 is a function. This avoids
+confusing a scalar length with the third score.
+
+The C014 calculus supplies
+\fitdisplay{
+\|K\|^2\le\theta,\quad0\le d\le1/3,\quad
+ d^2\le \delta_2\le\theta d,\quad \delta_{j+1}\le\theta \delta_j,
+}{}
+\fitdisplay{
+\kappa d\le\tau\le d-d^2\le2/9,\quad
+ Er=-d,\quad Es_0=0,\quad Et=\delta_2,
+\quad Egr=0,\quad Egs_0=-\delta_2,\quad Ert=-\delta_3.
+}{Q75.1.1}
+All actual path and tree messages are positive on the positive-mass
+atoms. In particular p, \(q\ge \mu(x)>0.\) A and T preserve order.
+
+Define the finite coefficients and finite polynomials
+\fitdisplay{
+\beta_1=\beta_2=0,\qquad
+ \beta_j=\sum_{i=1}^{\lfloor(j-1)/2\rfloor}(-1)^{i-1}\delta_i\quad(j\ge3),
+\qquad G_n(z)=\sum_{i=0}^{n-1}z^i.
+}{}
+The original positive finite convolution is
+\fitdisplay{
+\sum_{j=0}^nK^{j}\one=f_n+\sum_{j=3}^n\beta_j f_{n-j},
+ \qquad\tau\le\beta_j\le d\quad(j\ge3).
+}{Q75.1.2}
+The same finite identity holds after K is replaced everywhere by -K.
+
+
+For every original vector v, row Cauchy gives \(|Kv(x)|\le \lVert v\rVert _2.\)
+The useful two-row estimate is
+\fitdisplay{
+|K^2v(x)|^2\le\|v\|_2^2/3.
+}{Q75.1.3}
+This is \eqref{eq:short-one:two-row}; its proof uses conjugated legal skew kernels and the original row measure.
+
+At \(d=0,\allowbreak  g=0\) and every actual tree message here is one by leaf integration,
+even when K is nonzero. All theorem boundaries hold directly. Subsequent
+divisions by d are restricted to \(d>0.\)
+
+\paragraph{Q75.2 The exact scalar input and its positive majorant interpretation}
+
+Use the positive-mean exponential inequality \eqref{eq:short-one:positive-mgf}. If \(|Z|\le U\) and \(EZ^2\le hU^2,\allowbreak  0\le h<1,\allowbreak \) then, for \(\lambda\ge 0,\allowbreak \)
+\fitdisplay{
+Ee^{\lambda Z}\le
+ \exp\{\lambda\max(EZ,0)+\lambda^2(1+h)^2U^2/8\}.
+}{Q75.2.1}
+Here all moments belong to the same original finite variable.
+A nonnegative upper bound \(M\ge EZ\) may replace max(EZ, 0).
+
+The full proof, allowing either sign of the actual mean, is Lemma~\ref{lem:short-one:exponential}.
+
+At \(\lambda=8/B\) the two forms needed below are:
+\fitdisplay{
+Z=KV,\ \|V\|^2\le D
+ \quad\Longrightarrow\quad
+ \log Ee^{8Z/B}\le8M/B+8c_*D/B^2,
+ \quad c_*=(1+\theta)^2=2025/1024;
+}{Q75.2.2}
+\fitdisplay{
+Z=K^2V,\ \|V\|^2\le D
+ \quad\Longrightarrow\quad
+ \log Ee^{8Z/B}\le8M/B+6D/B^2.
+}{Q75.2.3}
+For (Q75.2.2), the range squared is D and the raw second is at most theta D.
+For (Q75.2.3), (Q75.1.3) gives range squared D/3 and \(\theta^2<1/6\) gives raw
+second at most D/6, so \(h=1/2\) is legitimate.
+
+Apply AMGM to the following positive factors. With \(W_2=Aq=p-r\) and \(X=T^L(qf_b),\allowbreak \) there is
+an actual positive upper bound
+\fitdisplay{
+0<X\le C[Bq+Br+Z-a],\qquad C,B>0.
+}{Q75.2.4}
+Thus AMGM between \(W_2\) and the bracket divided by B gives
+\fitdisplay{
+W_2X\le CB\left(1+\frac{Z-a}{2B}\right)^2.
+}{Q75.2.5}
+The base is half a sum of nonnegative quantities. Consequently its eighth
+power is at most \(C^8B^8\) exp(8(Z-a)/B), including at a zero base.
+
+For a specified nonnegative mean upper M and vector bound D, call the
+right-hand logarithmic estimate
+\fitdisplay{
+\mathcal E=8\log C+8\log B-8a/B+8M/B+
+ \begin{cases}6D/B^2,&Z=K^2V,\\8c_*D/B^2,&Z=KV.\end{cases}
+}{Q75.2.6}
+Section~\ref{proof:Q5-C071} proves every displayed actual mask and
+its complete exponent, including the \(b=2,L=2\) row. These complete
+expressions are used below for the longer root factors.
+
+\paragraph{Q75.3 The compatible scalar table}\label{part:Q75.3}
+
+\paragraph{Q75.3.1 Exact parameters for every b, L}
+
+For \(b=2\) set \(\gamma=d-\delta_2/2\) and \(B_2=1-\gamma.\) The same original terminal
+has \(TF\le q-\gamma-s_0\) and \(T^2F\le B_2q+r+t.\) The C071 finite masks yield:
+
+
+\begingroup\small
+\setlength{\tabcolsep}{3pt}
+\setlength{\LTleft}{0pt}\setlength{\LTright}{\fill}
+\begin{longtable}{@{}>{\raggedright\arraybackslash}p{0.1200\linewidth}>{\raggedright\arraybackslash}p{0.1600\linewidth}>{\raggedright\arraybackslash}p{0.1600\linewidth}>{\raggedright\arraybackslash}p{0.1600\linewidth}>{\raggedright\arraybackslash}p{0.1600\linewidth}>{\raggedright\arraybackslash}p{0.1600\linewidth}@{}}
+\caption{Finite masks and paid scalar bounds for \(b=2\).}\label{tab:parameters:q5-c075:1}\\
+\toprule
+\(L\) & C & B & a & Z and its row form & Paid scalar upper \\
+\midrule\endfirsthead
+\toprule
+\(L\) & C & B & a & Z and its row form & Paid scalar upper \\
+\midrule\endhead
+\bottomrule\endfoot
+\(L=2\) & 1; & \(B_2\); & 0; & \(K^2(\gamma 1+r)\); & \ensuremath{\le}-d/8 by \mbox{\hyperref[part:Q75.3.2]{part Q75.3.2}}. \\
+\addlinespace[2pt]
+\(L=3\) & 1; & \(B_2\); & \(\tau\); & \(-K^2(g+s_0)\); & \(\le -3d/4\), by \eqref{eq:ordinary-short2-L3-paid}. \\
+\addlinespace[2pt]
+\(L=4\) & 1; & \(1-\gamma-\tau\); & \(d(1-\gamma)\); & \(K^2[\tau 1-(1-\gamma)g+r+t]\); & \(\le -d\), by \eqref{eq:ordinary-short2-L4-paid}. \\
+\addlinespace[2pt]
+\(L=5\) & 1; & \(1-2\tau\); & \(\tau\); & \(K[\tau+zP_3(z)]g,\allowbreak  z=-K\); & \(\le -2d/3\), by \eqref{eq:ordinary-short2-L5-paid}. \\
+\addlinespace[2pt]
+\(L\ge 6\) & 1; & \(1-2\tau\); & \(\tau\); & \(K[\tau+zP_{L-2}(z)]g\); & \(\le -4d/5\), by \eqref{eq:ordinary-short2-Lge6-paid}. \\
+\end{longtable}
+\endgroup
+
+
+Here \(P_n(z)=G_n(z)+ z^{n+1}\). For \(L=2\) one may take \(D=\delta_2\) and
+\(M=\delta_2-\gamma d\ge 0.\) For \(L=3\) the exact vector norm is
+\(d-2\delta_2+\delta_3\) and \(M=0.\) For \(L=4\) its exact norm is
+(\(1-\gamma)^2d+\delta_2-2\delta_3+\delta_4-\tau^2,\allowbreak \) and the used upper mean is
+(\(\theta\,\allowbreak \kappa-\tau)d\ge 0.\) The scalar proof uses their stated upper
+bounds.
+For \(L\ge 5\) the old one-row vector is Qg with \(Q=\delta+zP_n,\allowbreak  \delta=\tau.\) Its old bound \(D=A(\tau)d\) and mean \(M=(\theta-\tau)d\) are
+those in Table~\ref{tab:short2:payments}, with
+\fitdisplay{
+A(\tau)=A_0-2\theta\sigma\tau+\tau^2,
+\quad(A_0,\sigma)=
+ \begin{cases}(\theta,1),&L=5,\\(\theta-7\theta^2/15,\kappa),&L\ge6.
+ \end{cases}
+}{Q75.3.1}
+The convex endpoint payment there covers the full region
+kappa \(d\le \tau\le d-d^2,\allowbreak \) not a finite sample of moments.
+
+For every \(b\ge 3\) use the exact C058/C071 same-direction finite toolkit:
+\fitdisplay{
+R=\sum_{j=2}^bK^{j}\one=K G_{b-1}(K)g,\quad
+ m_b=1-\beta_b/2,\quad k=1/m_b,\quad t_0=\beta_{b+1},
+}{}
+\fitdisplay{
+e=d-\beta_{b+2},\quad V=ER^2,\quad\rho=E(rR),
+\quad\gamma=kt_0-k^2V/2,\quad a_1=ke,\quad B_*=\gamma+a_1.
+}{Q75.3.2}
+In particular \(ER=-t_0,\allowbreak  E(gR)=-e\le 0,\allowbreak  1\le k\le 6/5,\allowbreak  3d/10\le \gamma\le 6d/5,\allowbreak  5d/8\le B_*\le 3d/2,\allowbreak  0\le a_1\le 39d/80,\allowbreak \) and \(m_b^2\le 1-209d/384.\)
+Define
+\fitdisplay{
+P_n(z)=G_n(z)+kz^{n+1}G_{b-1}(-z),\quad z=-K.
+}{Q75.3.3}
+Every actual upper mask is a finite positive convolution. Specifically,
+with \(V_L=\sum _{j=0}^L z^j1+kz^L\) R, its upper bracket before discarding
+any nonnegative loss is
+\fitdisplay{
+X_{b,L}\le m_b^2\left[V_L-\gamma \bar f_{L-1}-a_1\bar f_{L-2}
+                  -\sum_{j=3}^L\varepsilon_j\bar f_{L-j}\right],
+}{Q75.3.4}
+where \(\epsilon_3=d-k \rho\ge 41d/80\) and \(\epsilon_j\ge \tau\) for \(j\ge 4.\)
+Only existing indices are used. These exact masks produce (Q75.2.4) with:
+
+
+\begingroup\small
+\setlength{\tabcolsep}{3pt}
+\setlength{\LTleft}{0pt}\setlength{\LTright}{\fill}
+\begin{longtable}{@{}>{\raggedright\arraybackslash}p{0.1200\linewidth}>{\raggedright\arraybackslash}p{0.1600\linewidth}>{\raggedright\arraybackslash}p{0.1600\linewidth}>{\raggedright\arraybackslash}p{0.1600\linewidth}>{\raggedright\arraybackslash}p{0.1600\linewidth}>{\raggedright\arraybackslash}p{0.1600\linewidth}@{}}
+\caption{Finite masks and paid scalar bounds for \(b\ge3\).}\label{tab:parameters:q5-c075:2}\\
+\toprule
+\(L\) & C & B & a & Z and its row form & Paid scalar upper \\
+\midrule\endfirsthead
+\toprule
+\(L\) & C & B & a & Z and its row form & Paid scalar upper \\
+\midrule\endhead
+\bottomrule\endfoot
+\(L=2\) & \(m_b^2\); & \(1-\gamma\); & \(a_1\); & \(K^2(\gamma 1+kR)\); & \(\le -d/8,\allowbreak  \eqref{eq:short2:longer-L2-paid}\). \\
+\addlinespace[2pt]
+\(L=3\) & \(m_b^2\); & \(1-B_*\); & \(d-k \rho\); & \(K[\delta+zP_1(z)]g,\allowbreak  \delta=a_1\); & \(\le -d/10,\allowbreak  \eqref{eq:short2:longer-L3-paid}\). \\
+\addlinespace[2pt]
+\(L=4\) & \(m_b^2\); & \(1-41d/80\); & \(\kappa d\); & \(K[\delta+zP_2(z)]g,\allowbreak  \delta=41d/80\); & \(\le -8d/25,\allowbreak  \eqref{eq:short2:longer-L4-paid}\). \\
+\addlinespace[2pt]
+\(L\ge 5\) & \(1-d/2\); & \(1-d/2\); & \(d/2\); & \(K[\delta+zP_{L-2}(z)]g,\allowbreak  \delta=d/2\); & \(\le -2d/5,\allowbreak  \eqref{eq:short2:longer-tail-paid}\). \\
+\end{longtable}
+\endgroup
+
+
+In the last row \(m_b^2\) is replaced by the larger positive factor 1-d/2
+only after the actual upper bracket is known to be nonnegative.
+For \(L=2\) the vector squared norm is at most \(k^2V,\allowbreak \) its actual mean is
+k rho-gamma d, and \(M=max(k\) rho-gamma d, 0). In the three other
+rows \(M=(\theta-\delta)d\ge 0\) and the old squared vector bounds D/d are,
+respectively,
+\fitdisplay{
+351/1280+\delta^2,\qquad\theta(71/63)+\delta^2,
+ \qquad\theta+d^2/4.
+}{Q75.3.5}
+The nonpositive real cross term in those masks is retained in the
+original scalar bounds. The finite end sign in the \(L=2\) proof can be
+positive for \(b=2\) mod 4; C071 pays it with its same \(\delta_3\) improvement.
+We use that complete paid formula, with its actual b, \(m_b,\allowbreak \) R, not a
+sign-free relaxation of it.
+
+Every B in the two tables is in (0, 1]. The necessary explicit lower
+bounds are \(B_2\ge 13/18,\allowbreak  1-\gamma-\tau\ge 1/2,\allowbreak  1-2\tau\ge 5/9,\allowbreak  1-\gamma\ge 17/25\) in (Q75.3.2), and \(1-B_*\ge 1/2.\)
+
+\paragraph{Q75.3.2 The terminal-two, length-two payment}\label{part:Q75.3.2}
+For this actual row \(B=B_2\), \(Z=K^2(\gamma\one+r)\),
+\(D=\delta_2\), and \(M=\delta_2-\gamma d\).
+Equation~\eqref{eq:short2:L2-paid} proves its complete scalar
+upper bound \(\mathcal E\le-d/8\).
+In particular every row in the two tables has \(\mathcal E\le-d/10\).
+
+\paragraph{Q75.4 Finite coefficients}\label{part:Q75.4}
+For \(z=i\sqrt x\), \(0\le x\le\theta\), the finite coordinates are
+\fitdisplay{
+G_N(z)=A_N(x)+zB_N(x),\quad1-x\le A_N,B_N\le1\quad(N\ge2).
+}{Q75.4.1}
+At \(N=1\), \((A_N,B_N)=(1,0)\).
+For \(P_n=G_n+z^{n+1}\), or the actual polynomial (Q75.3.3), write
+\(P_n=A_P+zB_P\). Equation~\eqref{eq:short-one:coordinates} gives
+\fitdisplay{
+1-x\le A_P,B_P\le1\quad(n\ge3).
+}{Q75.4.2}
+Its short rows are
+\fitdisplay{
+\begin{gathered}
+n=1:\quad A_P=1-kxA_N\ge1-6x/5,\quad0\le B_P=kxB_N\le6x/5;\\
+n=2:\quad A_P=1-kx^2B_N\ge1-x,\quad
+1-6x/5\le B_P=1-kxA_N\le1.
+\end{gathered}
+}{Q75.4.3}
+Thus \(\Re P_n\ge1/2\) at every index used below.
+The same finite spectral calculus, Lemma~\ref{lem:odd-common:spectral},
+also gives
+\fitdisplay{
+\|G_m(-K)\|^2\le A_m,\quad A_2=1+\theta,\quad A_m=1\ (m\ge3).
+}{Q75.4.4}
+The proof in Lemma~\ref{lem:short-one:packet} includes every finite
+endpoint and both \(N=1\) and \(N\ge2\).
+
+\paragraph{Q75.5 The actual shortest-three root}\label{part:Q75.5}
+
+The exact root identity is
+\fitdisplay{
+W_3=A \bar f_2=p-r+s_0-d=W_2+s_0-d.
+}{Q75.5.1}
+In each positive factorization (Q75.2.4), AMGM with \(W_3\) therefore gives
+\fitdisplay{
+W_3X\le CB\left(1+\frac{Z+Bs_0-a-Bd}{2B}\right)^2.
+}{Q75.5.2}
+The base remains nonnegative because the root is actual and the
+terminal upper is positive. The new fluctuation has the same mean,
+and its deterministic loss adds -8d to (Q75.2.6).
+
+For \(b=2,\allowbreak  L=2,\allowbreak \) the new two-row vector is gamma1+Bg+r. Its squared norm
+is \(B^2d+\delta_2-d^2+\delta_2^2/4\le B^2d+\delta_2.\) Thus its cost over the paid expression
+of \mbox{\hyperref[part:Q75.3.2]{part Q75.3.2}} increases by at most 6d. The added -8d leaves a bound
+at most -\(d/8-2d\le -d.\)
+For \(b\ge 3,\allowbreak  L=2,\allowbreak \) the new two-row vector is gamma1+Bg+kR. Since
+\(E(gR)=-e\le 0\) and \(Eg=0,\allowbreak \) its squared norm is at most \(k^2V+B^2d.\)
+The same argument gives at most -\(d/8-2d\le -d.\) This reuses the explicit
+scalar formula with its positive mean, not just the old eighth bound.
+
+For \(b=2,\allowbreak  L=3,\allowbreak \) the new vector is -(gamma \(g+s_0).\) On the original
+skew spectrum,
+\fitdisplay{
+(\gamma-x)^2\le(1-x)^2,
+ \quad (1-x)^2-(\gamma-x)^2=(1-\gamma)(1+\gamma-2x)\ge0.
+}{}
+The two-row norm bound still applies. At \(b=2,\allowbreak  L=4\) the new vector is
+tau1-tau g+r+t. Orthogonality of g to 1, r, t and \(\tau<1-\gamma\) show
+its squared norm is no larger than the old one. Means are unchanged
+in both cases, and their added -8d is more than required.
+
+In every remaining table row, \(Z=K\)[\(\delta+zP_n(z)\)]g with \(z=-K.\)
+The new vector is [\(\delta+z(P_n-B)\)]g. For every original frequency,
+\fitdisplay{
+|\delta+z(P_n-B)|^2-|\delta+zP_n|^2
+ =Bx[B-2\Re P_n].
+}{Q75.5.3}
+This is nonpositive by \mbox{\hyperref[part:Q75.4]{part Q75.4}} and \(0<B\le 1.\) Thus both the original
+row range and the theta raw-second estimate use no larger vector
+norm. Again the mean is unchanged, and the exponent improves by -8d.
+The complete old table therefore proves (Q75.T080.2) for all \(b\ge 2,\allowbreak  L\ge 2.\)
+No step asserted \(W_3\le W_2\) pointwise; that assertion would be false.
+
+\paragraph{Q75.6 Every longer shortest arm: an actual loss and a centered perturbation}
+
+Fix the root arm length \(s\ge 4\) and put
+\fitdisplay{
+m=s-2\ge2,\quad c=1-\tau\ge7/9,\quad
+ U=K^2G_m(-K)g,\quad\beta=\beta_s,
+\quad H=G_m(-K)g-\tau1.
+}{Q75.6.1}
+The letter m here is a root-arm polynomial length; it is not \(m_b\)
+from the terminal toolkit. Their values are independent.
+
+Apply positive A to the negative-sign version of (Q75.1.2) for \(\bar f_{s-1}.\)
+The left side becomes \(p-r+U-\beta_s,\allowbreak \) while the last convolution
+term on the right is \(\beta_{s-1}p.\) Every other term is nonnegative.
+Since \(s-1\ge 3,\allowbreak \) retaining \(\beta_{s-1}p\ge \tau\) p gives
+\fitdisplay{
+0<W_s\le cp-r+U-\beta.
+}{Q75.6.2}
+The upper side is nonnegative because it is the actual \(W_s\) plus
+the remaining nonnegative convolution terms. In particular, it is
+not an arbitrarily signed formal series.
+
+Combine (Q75.6.2) with the positive terminal upper (Q75.2.4). AMGM between
+the root upper divided by c and the terminal upper divided by CB
+gives, with \(h=B/c,\allowbreak \)
+\fitdisplay{
+W_sX\le CBc\left(1+
+ \frac{Z+hK^2H-a-h\beta}{2B}\right)^2.
+}{Q75.6.3}
+To check the algebra, the new fluctuation is
+Z+(B/c)(U-tau r), and \(K^2H=U-\tau\) r. The deterministic addition
+is -(B/c)beta; the constant prefactor is CBc. Both AMGM factors
+are nonnegative. This scaling is needed: it retains the actual
+loss tau p without introducing a fictitious root factor.
+
+\paragraph{Q75.6.1 The same original perturbation has a nonpositive mean}
+
+Let beta'=E \(G_m(-K)g.\) The finite skew identities give
+\fitdisplay{
+\beta'=\beta_{m+1},\quad
+ \tau\le\beta'\le d,\quad 0\le EH=\beta'-\tau\le \delta_2,
+}{}
+\fitdisplay{
+\|H\|^2=\|G_m(-K)g\|^2-2\tau\beta'+\tau^2
+ \le A_m d-\tau^2\le A_m d.
+}{Q75.6.4}
+To control its \(K^2\) mean without separating incompatible moment extrema,
+apply the original norm bound to the centered vector r+d1:
+\fitdisplay{
+\delta_3-2d\delta_2+d^3=\|K(r+\delta_1)\|^2\le\theta(\delta_2-d^2).
+}{}
+It follows that
+\fitdisplay{
+\delta_2-\delta_3-\tau d\ge(\kappa-d)(\delta_2-d^2)\ge0.
+}{Q75.6.5}
+For every \(m\ge 2,\allowbreak \) the finite alternating mean of U begins -\(\delta_2\) and
+is at most -\(\delta_2+\delta_3.\) Hence the same H satisfies
+\fitdisplay{
+EK^2H=EU+\tau d\le0.
+}{Q75.6.6}
+Thus adding \(hK^2H\) never increases any nonnegative mean upper M used
+in the old scalar table. This is also valid when an actual mean was
+already negative.
+
+\paragraph{Q75.6.2 A nonpositive covariance for every terminal at \(L=2\)}
+
+The old two-row vector for \(L=2\) is \(V_0=gamma1+kR.\) For \(b\ge 3\) its
+parameters are (Q75.3.2). For \(b=2\) use \(R=r,\allowbreak  k=1,\allowbreak  t_0=d,\allowbreak  V=\delta_2\) and the
+same identity \(\gamma=kt_0-k^2V/2.\) In both cases
+\fitdisplay{
+EV_0=-k^2V/2\le0.
+}{}
+We prove
+\fitdisplay{
+\operatorname{Cov}(R,G_m(-K)g)\le0,
+ \qquad E(V_0H)\le0.
+}{Q75.6.7}
+The second follows from the first and \(EH\ge 0.\)
+
+For \(b\ge 3\) put \(N=b-1\ge 2,\allowbreak \) and at an original skew rotation block write
+\fitdisplay{
+G_N(z)=A+zB_c,\qquad G_m(z)=C+zD,\qquad z=i\sqrt x.
+}{}
+All four real coefficients belong to [1-x, 1], hence to [kappa, 1].
+Let \(\nu_1\) be the spectral measure of the original vector 1 for -\(K^2.\)
+It has mass one, including any zero block. The corresponding measure
+of \(g=K1\) is x \(\nu_1.\) This is spectral bookkeeping in the original
+finite Hilbert space; it is not a changed host or a new row bound.
+Skew adjunction gives the exact three quantities
+\fitdisplay{
+t_0=\int xA\,d\nu_1,\qquad
+ \beta'=\int xD\,d\nu_1,
+\quad E[R G_m(-K)g]=-\int x^2(AD+B_cC)\,d\nu_1.
+}{Q75.6.8}
+Put \(J_0=\int x^2AD\,d\nu_1\). Pointwise \(B_cC\ge \kappa^2AD,\allowbreak \) and
+A/D lies in [kappa, 1/kappa]. By \(2uv\le u^2+v^2\) and Cauchy with
+the probability measure \(\nu_1,\allowbreak \)
+\fitdisplay{
+t_0\beta'\le\tfrac12(t_0^2+\beta'^2)
+ \le\tfrac12\int x^2(A^2+D^2)\,d\nu_1
+ \le\frac{\kappa+\kappa^{-1}}2 J_0
+ \le(1+\kappa^2)J_0.
+}{Q75.6.9}
+The final comparison is precisely \(2\kappa\ge 1.\) Combining (Q75.6.8)-(Q75.6.9)
+proves the first inequality of (Q75.6.7).
+
+
+Here the covariance in (Q75.6.7) equals
+\fitdisplay{
+-\operatorname{Cov}_{\nu_1}(x,xD(x)).
+}{}
+The function xD(x) is a finite alternating sum \(x-x^2+x^3-...\) .
+It is increasing on [0, theta]. Indeed its derivative begins \(1-2x>0\);
+each subsequent positive/negative pair
+(\(2j+1)x^{2j}-(2j+2)x^{2j+1},\allowbreak  j\ge 1,\allowbreak \) is nonnegative, and an
+unpaired last positive term is nonnegative. For the constant \(D=1\)
+the assertion is immediate. The finite double-integral identity
+\fitdisplay{
+2\operatorname{Cov}_{\nu_1}(u,v)
+ =\iint[u(x)-u(y)][v(x)-v(y)]\,d\nu_1(x)d\nu_1(y)
+}{}
+therefore proves the needed sign. It includes the zero block.
+
+Finally, for both terminal ranges,
+\fitdisplay{
+E(V_0H)=k\operatorname{Cov}(R,G_m(-K)g)+(EV_0)(EH)\le0.
+}{}
+Thus the new two-row vector \(V_0+hH\) obeys
+\fitdisplay{
+\|V_0+hH\|^2\le\|V_0\|^2+h^2A_m d.
+}{Q75.6.10}
+The old relaxed norm D from \mbox{\hyperref[part:Q75.3]{part Q75.3}} may replace \(\lVert V_0\rVert ^2\) on
+the right. The underlying vector and its cross term remain actual.
+
+\paragraph{Q75.6.3 The other two-row cases \(b=2,\allowbreak  L=3,\allowbreak \) 4}
+
+For \(L=3,\allowbreak  V_0=-(g+s_0),\allowbreak  EV_0=0.\) Its product with \(G_m(-K)g\) has
+spectral real part -(1-x)C, so \(E(V_0H)\le 0.\)
+
+For \(L=4,\allowbreak  V_0=tau1-(1-\gamma)g+r+t\) and \(EV_0=0.\) The product with
+H, using the original spectral measure \(\nu_g,\allowbreak \) is exactly
+\fitdisplay{
+E(V_0H)=\tau\beta'-(1-\gamma)\int C\,d\nu_g
+                  -\int x(1-x)D\,d\nu_g
+ \le[\tau-\kappa(1-\gamma)]d\le0.
+}{Q75.6.11}
+For the last sign use \(\tau\le 2/9\) and
+\(\kappa(1-\gamma)\ge \kappa(13/18)=247/576>2/9.\)
+The same bound (Q75.6.10) therefore holds in every old two-row case.
+
+\paragraph{Q75.6.4 Every remaining one-row case}
+
+The old vector is \(V_0=Q(-K)g\) with \(Q=\delta+zP_n(z).\)
+The added vector in the one-row representation is hKH, since
+\(Z+hK^2H=K(V_0+hKH).\) At \(z=-K\) we have
+\fitdisplay{
+KH=-(\tau+zG_m(z))g.
+}{}
+We prove its cross with \(V_0\) is nonpositive at every original frequency.
+Write \(G_m=C+zD\) and \(P_n=A_P+zB_P\) as in \mbox{\hyperref[part:Q75.4]{part Q75.4}}. Direct multiplication
+gives
+\fitdisplay{
+\Re\{Q\overline{\tau+zG_m}\}
+ =\delta\tau+x[\Re(P_n\overline{G_m})-\delta D-\tau B_P].
+}{Q75.6.12}
+Here \(\delta\ge 0.\) Every table row with \(n\ge 3\) has \(\delta\le 2/9.\)
+By (Q75.4.1)-(Q75.4.2) the square bracket is at least
+\fitdisplay{
+(1+x)(1-x)^2-\delta-\tau
+ \ge16245/32768-4/9>0.
+}{Q75.6.13}
+The function (\(1+x)(1-x)^2\) decreases on [0, theta]; its endpoint is
+(\(45/32)(19/32)^2.\) The last rational comparison is
+\(146205>131072.\) This covers every \(b=2,\allowbreak  L\ge 5\) and \(b\ge 3,\allowbreak  L\ge 5.\)
+
+For \(b\ge 3,\allowbreak  L=4,\allowbreak  n=2\) and \(\delta=41d/80\le 2/9.\) Use (Q75.4.3) to bound
+the square bracket by
+\fitdisplay{
+(1-x)(1-6x^2/5)-\delta-\tau
+ \ge78014/163840-4/9>0.
+}{Q75.6.14}
+The displayed frequency function decreases throughout the interval:
+its derivative is \(-1-12x/5+18x^2/5<0\) for \(0\le x\le\theta\). At theta it
+has the stated value; the final comparison is \(702126>655360.\)
+
+For \(b\ge 3,\allowbreak  L=3,\allowbreak  n=1\) and \(\delta=a_1\le 13/80.\) Again (Q75.4.3) gives
+\fitdisplay{
+\Re(P_n\overline{G_m})-\delta D-\tau B_P
+ \ge(1-6x/5)(1-x)-\delta-(6/5)\tau x
+ \ge779/2560-13/80-13/120=257/7680>0.
+}{Q75.6.15}
+Both negative replacements are legitimate since \(D\le 1\) and
+\(B_P\le 6x/5.\) The first product decreases on [0, theta].
+
+These are the full possible n-ranges, including \(n=1,\allowbreak \) 2. Equations
+(Q75.6.12)-(Q75.6.15) show \(E(V_0 KH)\le 0.\) Therefore
+\fitdisplay{
+\|V_0+hKH\|^2\le\|V_0\|^2+h^2\|KH\|^2
+ \le\|V_0\|^2+h^2\theta A_m d.
+}{Q75.6.16}
+This norm bound uses
+\(\lVert H\rVert ^2\) from (Q75.6.4). Row Cauchy and the spectral theta bound apply to this vector.
+
+\paragraph{Q75.7 Payment of every longer root, on the whole continuous domain}
+
+All old mean uppers stay valid by (Q75.6.6). In a two-row case, (Q75.6.10)
+adds at most \(6h^2A_m d/B^2=6A_m d/c^2\) to its exponential cost.
+In a one-row case, (Q75.6.16) adds at most \(8c_*\theta A_m d/c^2.\)
+Since \(6<8c_*\theta=26325/4096,\allowbreak \) both are paid by the common upper
+increment
+\fitdisplay{
+\Delta\le8\log c-8\beta/c+8c_*\theta A_m d/c^2.
+}{Q75.7.1}
+The first two terms come from the actual factor c and actual loss
+beta in (Q75.6.3). 
+
+For \(m\ge 3,\allowbreak \) equivalently \(s\ge 5,\allowbreak  A_m=1\) and \(\beta\ge \tau.\) Using
+log \(c\le -\tau,\allowbreak  \tau/d\ge \kappa\) and \(c\ge 7/9,\allowbreak \) divide by \(8d/c^2\) to get
+\fitdisplay{
+\frac{c^2\Delta}{8d}
+ \le-\kappa(c^2+c)+c_*\theta
+ \le-\frac{133}{162}+\frac{26325}{32768}
+ <-\frac1{64}.
+}{Q75.7.2}
+For the last comparison, \(133/162-26837/32768\) equals
+\(10550/5308416>0.\) Thus \(\Delta\le -d/8\) in this range.
+
+For \(m=2,\allowbreak \) equivalently \(s=4,\allowbreak \) the actual \(\beta_4\) is d and
+\(A_m=1+\theta.\) Consequently
+\fitdisplay{
+\frac{c^2\Delta}{8d}
+ \le-\kappa c^2-c+c_*\theta(1+\theta)
+ \le-\frac{2947}{2592}+\frac{1184625}{1048576}
+ <-\frac1{160}.
+}{Q75.7.3}
+Indeed \(1184625/1048576<113/100\) and
+\(2947/2592-113/100=451/64800>1/160.\) These rational comparisons
+are by hand; no continuous-domain or numerical computation is implicit.
+Thus in every \(s\ge 4\) case \(\Delta\le -d/20.\)
+
+The complete old table, including \mbox{\hyperref[part:Q75.3.2]{part Q75.3.2}}, has scalar exponent
+at most -d/10. Adding the fully paid increment proves
+\fitdisplay{
+E(W_sX_{b,L})^8\le e^{-3d/20}
+ \qquad(s\ge4,b\ge2,L\ge2).
+}{}
+\mbox{\hyperref[part:Q75.5]{part Q75.5}} supplies \(s=3.\) Finally
+\fitdisplay{
+e^{-3d/20}\le\frac1{1+3d/20}
+ =1-\frac{3d/20}{1+3d/20}\le1-d/7
+ \qquad(0\le d\le1/3).
+}{}
+This proves (Q75.T080.1) in every integer and continuous parameter,
+with no exceptional intermediate d interval.

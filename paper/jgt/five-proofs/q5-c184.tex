@@ -1,0 +1,437 @@
+\subsection{A retained reference square for terminals $(1,2,c)$}
+\label{proof:Q5-C184}
+\begin{proposition}\label{prop:retained-reference-family}
+Let $F_c=qf_2h_c$ in the canonical direction: the unit arm points
+toward the terminal, the two-edge arm points outward, and the $c$-arm
+has its first edge toward the terminal and its remaining edges outward.
+The connector of length $L$ points from terminal to receiver.
+For every outward receiving arm $a\ge3$, $c\ge4$, and $L\ge1$,
+\begin{equation}\label{eq:Q184:scope}
+ \E\bigl[E_of_a\{T^L(E_tF_c)\}^4\bigr]\le1-d/800.
+\end{equation}
+For the genuine receiving arm of length two, the same statement holds
+when $c\ge5$:
+\begin{equation}\label{eq:Q184:f2-extension}
+ \E\bigl[E_of_2\{T^L(E_tF_c)\}^4\bigr]\le1-d/800.
+\end{equation}
+Here $E_t,E_o$ are the actual equal-pair factors at the two roots.
+For $L\ge2$ both conclusions have the common stronger loss $d/600$.
+\end{proposition}
+\begin{proof}
+
+\paragraph{The original measure and the two receiving masses.}
+At $d=0$, $u=0$ and leaf integration gives equality. Assume $d>0$
+for the proof.
+Use $B=-K$, $u=B\one$, $q=1+u$, $p=1-u$ and the spectral measure
+$\nu$ at $u$ from Section~\ref{sec:reference-common:receiving}.
+It has mass $d$, support $[0,\theta]$, and $\int x^j\,d\nu=\delta_{j+1}$.
+All means and adjoints below use the original finite measure.
+For $a\ge3$ take
+\[
+ C_a=\one-G_a(-B)u-\beta_a\one\ge f_a,
+ \quad\E C_a\le1-19d/16,\quad C_a\le p+6\sqrt d/5.
+\]
+For $a=2$ take exactly $C_2=f_2=p+Bu$, of mass $1-d$ and cap
+$p+\sqrt d$. The proof below uses the weak coefficient-nine profile of Lemma~\ref{lem:reference-coefficient-nine}.
+
+For every actual upper $Z=c_0\one+Q(B)u$, put
+$\alpha=-\E Q(B)u$. The identities of
+Lemma~\ref{lem:reference-common:receiving} read
+\begin{equation}\label{eq:Q184:actual-moments}
+ \operatorname{Var}Z=\int|Q|^2\,d\nu-\alpha^2,
+ \qquad
+ \operatorname{Cov}(C_a,Z)
+ =-\int\operatorname{Re}(G_aQ)\,d\nu-\beta_{a+1}\alpha.
+\end{equation}
+They also hold at $a=2$, where $G_2=1+z$ and $\beta_3=d$.
+
+\paragraph{One finite square and its positive continuation.}
+For $c\ge5$, $d\le1/5$, use the actual $\sigma=9/4$ row of
+Lemma~\ref{lem:reference-retained-packet}: $m=1-9d/8$, $k=m^{-1}$,
+$U=(a-zb)u$, $R=-kU=(-t+zs)u$ and $D=2d/5$.
+The retained coefficients keep $0\le t,s\le1$,
+$t\ge k\tau+(1-x)s$, $a,b\ge x(1-x)$ and all signed $D_i$.
+For $c=4$, $d\le1/4$, use instead
+\[
+ m=1-d,\quad U=(d+x-xz)u,\quad
+ t=k(d+x),\quad s=kx,\quad D=5d/12.
+\]
+The actual arm sum is $f_2+h_4=2m-U$.
+Its first-row error is bounded by $D$ in \eqref{eq:C169:6.1}.
+Here $D_1=k(d^2+\delta_2)$, $D_2=k\delta_3$,
+$D_3=-k(d\delta_2+\delta_3)$ and $D_4=-k\delta_4$.
+These give $\gamma_3\ge0$, $\gamma_4\ge3d/4$ and
+$\gamma_j\ge41d/96$ for $j\ge5$.
+In both families
+\begin{equation}\label{eq:Q184:duhamel}
+ T^LF_c\le m^2Y_L,
+ \quad
+ Y_L=\one+G_{L+1}(B)u+B^LR+D\bar f_{L-1}
+       -\sum_{j=3}^{L+1}\gamma_j\bar f_{L+1-j}.
+\end{equation}
+This is the finite identity of
+Lemma~\ref{lem:reference-retained:continuation}, with the same direct
+induction for the $c=4$ first row. Every discarded loss is nonnegative.
+
+Retain no final loss at $L=1$, $\gamma_3$ at $L=2$,
+both $g_3q$ and $g_4\one$ at $L=3$, where $g_i=\gamma_i$,
+and $h=41d/96$ on each of the last two
+paths at $L\ge4$. In every case the resulting upper is $W=m^2Z\ge T^LF_c$,
+with the following full polynomial and unscaled mean:
+\begin{equation}\label{eq:Q184:finite-uppers}
+\begin{array}{c|l|l}
+ L&Z=c_0\one+Q(B)u&\E Z\text{ upper}\\\hline
+ 1&c_0=1+D,\quad Q=1-xs+z(1-t)&1+D-d+D_1\\
+ 2&c_0=1+D-\gamma_3,\quad Q=Q_3+D&1-7d/20\\
+ 3&c_0=1+D-g_3-g_4,\quad Q=G_4-tz^3+sz^4+DG_2-g_3
+    &1-31d/32\\
+ \ge4&c_0=1+D-2h,\quad Q=G_{L+1}-tz^L+sz^{L+1}+DG_{L-1}-h
+    &1-83d/96.
+\end{array}
+\end{equation}
+The $L=2$ row is used here only for $c\ge5$; its exceptional
+$c=4$ conclusion is \eqref{eq:Q167:T175.0}.
+In that row $Q_3=1-x+tx+z(1-sx)$.
+At $L=3$, $\alpha=\gamma_5+Dd\ge\tau+Dd$; at $L\ge4$,
+$\alpha=\gamma_{L+2}+D\beta_L\ge h+D\tau$.
+Thus the separate mean term in \eqref{eq:Q184:actual-moments}
+has the favorable sign in all nonunit rows.
+The genuine retained first loss has the uniform lower bound $g_3\ge d/8$:
+for $c=4$, $D_1\le kd(d+\theta)\le7d/8$; for $c\ge5$,
+the actual coordinate cap $a<16/25$ gives
+$D_1<(40/31)(16/25)d=128d/155<7d/8$.
+Also $0\le g_3\le d$ because $D_1\ge0$.
+Thus $\E Z\le1+(5/12)d-d/8-2d/3-\kappa d=1-31d/32$.
+At $L=3$ the retained polynomial subtracts $g_3$, while $g_4$ remains
+a constant loss. This upper follows directly from
+$\bar f_2=\one+G_2(B)u$ in the exact finite continuation.
+
+\paragraph{Finite polynomial bounds.}
+The finite alternating sums give real and normalized imaginary
+coordinates in $[1-x,1]$ for $G_a$, $a\ge3$, and in
+$[1-x,1-x+x^2]$ for $G_n$, $n\ge4$.
+Consequently
+\[
+ \operatorname{Re}(G_aG_n)\ge0\ (n\ge4),\qquad
+ \operatorname{Re}(G_aG_3)\ge1-3x+x^2\ge-1/16,\qquad
+ \operatorname{Re}(G_aG_2)\ge1-2x\ge0.
+\]
+For $H_n=G_{n-1}+z^n$, the $n=4$ coordinates are
+$(1-x+x^2,1)$; for $n\ge5$ they belong to the second rectangle above.
+Thus $\operatorname{Re}(G_aH_n)\ge1-3x+2x^2-x^3>0$.
+All these finite corners have real part at least $\kappa$.
+They contract: $H_4,H_5$ have squared norms
+$1-x+3x^2-2x^3+x^4$ and
+$1-x-x^2+3x^3-2x^4+x^5$, respectively.
+For $H_4$ the residual bracket increases to $-1451/32768$;
+for $H_5$ use $x(3x-1)\le91/1024<1/4$ and
+$-2x^4+x^5\le0$. For $n\ge6$ use
+\[
+ (1-z)H_n=1-z^{n-1}(1-z+z^2),\qquad
+ |1-z+z^2|^2=1-x+x^2\le1,
+ \quad 2\theta^{3/2}+\theta^4<1.
+\]
+The corresponding finite geometric identity gives $\|G_n\|\le1$
+for $n=1$ and $n\ge3$; $\|G_2\|=\sqrt{1+\theta}<6/5$.
+Hence the rectangle polynomial
+$P_L=G_L-tz^{L-1}+sz^L$ contracts for every $L\ge4$.
+
+The two shorter polynomials retain their sharper bounds
+\begin{equation}\label{eq:Q184:tight-short-inputs}
+ |Q_2|^2\le8/7,\qquad |Q_3|^2\le8/7\quad(c\ge5),
+ \qquad Q_2=1-sx+z(1-t).
+\end{equation}
+These are \eqref{eq:retained-reference:Q2-tight} and
+\eqref{eq:retained-reference:Q3-tight}, proved for the actual retained
+coefficients and the full frequency interval. For $c=4$, $Q_3$ instead
+has squared norm less than $7/6<(13/12)^2$.
+Indeed its coordinates are affine in $k\in[1,4/3]$.
+At $k=1$ the squared norm is at most one. At $k=4/3$ it is
+\[
+ 1-x/3+(28/9)x^2-(40/9)x^3+(16/9)x^4+(16/9)x^5.
+\]
+Its second derivative, with $v=x-1/4$, is
+$13/9-(28/3)v+48v^2+(320/9)v^3>0$:
+for $v\le0$ use $v^3\ge-v^2/4$; for $v\ge0$ the quadratic
+has minimum $107/108$. At $x=\theta$ its coordinates are
+$243/256<19/20$, $599/768<4/5$, giving squared norm
+less than $93/80<7/6$.
+
+\paragraph{The weak-receiver rows and the genuine-$f_2$ correction.}
+For $a\ge3$, \eqref{eq:Q184:actual-moments} gives the following
+unscaled covariance budgets:
+\begin{equation}\label{eq:Q184:covariance-budgets}
+\begin{array}{c|c|c|c}
+ L&\text{weak budget }b_0&\text{genuine }\operatorname{Cov}(f_2,Z)\text{ upper}
+    &\E Z\text{ cap for transfer}\\\hline
+ 1&-3d/16&-439d/1024&9/8\\
+ 2&0&-3d/16&1\\
+ 3&d/16+d^2&-3d/16+d^2&1\\
+ \ge4&29d^2/64&-3d/16+hd&1.
+\end{array}
+\end{equation}
+For the unit weak row,
+$\operatorname{Re}(G_aQ)\ge1-2x+x[t-(1-x)s]\ge1-2x$.
+At $L=2$ the nonnegative coordinates and $a,b\ge x(1-x)$ give
+$\operatorname{Re}(G_aQ)\ge1-3x+2x^2-x^3>0$.
+At $L=3$ the $G_3$ corner costs $d/16$, and subtracting $g_3$ costs
+at most $d^2$. At $L\ge4$ the subtracted $h$ costs $hd$ and
+the possible $DG_3$ term costs at most $Dd/16$, giving $29d^2/64$.
+
+For the genuine row use $G_2=1+z$ directly. At $L=1$,
+\[
+ \operatorname{Re}(G_2Q)=1-x+xt-sx
+ \ge1-x-x^2\ge439/1024,\qquad \alpha=d-D_1\ge0.
+\]
+At $L=2$ its product is at least $1-2x\ge3/16$ and
+$\alpha=d-D_2>0$.
+At $L=3$ the corners are $G_3,G_4,G_5,H_4$; their genuine
+products are at least $3/16$.
+For longer connectors the $G$ corners give at least $\kappa^2$;
+$H_5$ gives $1-2x+x^2-x^3>3/16$, and $H_n$, $n\ge6$, gives
+at least $\kappa^2-\theta^3>3/16$.
+The $D$ term and the separate $-d\alpha$ are favorable.
+These facts prove the genuine column of the table.
+
+Lemma~\ref{lem:reference-common:mass-transfer}, with $\eta=19/16$,
+therefore replaces the genuine mass $1-d$ by the common comparison
+mass $1-19d/16$ in the mean/covariance bracket. The required fees are
+$27d/512$ at unit length and $3d/64$ otherwise; each is strictly
+smaller than the gain in the table. In particular, the unscaled unit
+mean may exceed one: it is at most $1+2d/5\le27/25<9/8$.
+No change of measure or replacement of the actual receiving arm occurs.
+
+\paragraph{Curvature on nonunit connectors.}
+For $L\ge2$ the actual scaled upper $W=m^2Z$ satisfies
+\[
+ W\le(1-5d/8)q-d/2+(13/12)\sqrt d,\qquad
+ \E W\le1-3d/2.
+\]
+Here the $L=2$ row uses $\|Q_2\|<15/14$ and
+$\gamma_3\ge dz_0/m$, $z_0=19/32-89d/32>0$.
+The actual $L=3$ pointwise upper is
+\[
+ W\le m^2[(1+D-g_3)q+(13/12+D)\sqrt d-g_4].
+\]
+Here $\|Q_3+D\|\le13/12+D$. To compare with the weak profile,
+drop only the nonnegative loss $g_3q$, use $g_4\ge2d/3$ and
+$D\le5d/12$. This gives $W\le m^2\mathcal B$, where
+\[
+ \mathcal B=(1+5d/12)q+(13/12+5d/12)\sqrt d-2d/3
+       \ge(3/4)\sqrt d\ge0.
+\]
+The lower bound uses $q\ge0$ and $\sqrt d\le1/2$.
+Scale this entire nonnegative row to get
+$W\le(1-d)^2\mathcal B$. Its $q$ coefficient is at most
+$(1-d)^2(1+5d/12)\le1-5d/8$.
+Its remaining constant difference, with the real constant loss
+$-2d/3$, is exactly $dR_3(\sqrt d)$ below.
+For $L\ge4$ the row is bounded by
+$(1-d)^2[(1-d/96)q+(1+d/2)\sqrt d-h]$.
+After comparing the $q$ coefficients, the remaining constant differences
+are $tR_2(t)$, $dR_3(t)$, $tR_4(t)$, respectively, where $t=\sqrt d$ and
+\[
+\begin{aligned}
+ R_2(t)&=13/12-(15/14)(1-9t^2/8)^2
+    +t[(1-9t^2/8)(19/32-89t^2/32)-1/2],\\
+ R_3(t)&=1/6+(7/4)t-(4/3)t^2-t^3/4+(2/3)t^4-(5/12)t^5,\\
+ R_4(t)&=1/12-(7/96)t+(3/2)t^2-(41/48)t^3
+    +(41/96)t^5-t^6/2.
+\end{aligned}
+\]
+Their Bernstein coefficients have minima $1/84,1/6,89/1152$
+on $[0,9/20]$, $[0,1/2]$, $[0,1/2]$, respectively.
+The scaled means follow from \eqref{eq:Q184:finite-uppers} and $m\le1-d$.
+Thus the weak case of Lemma~\ref{lem:reference-coefficient-nine}
+gives curvature nine for both receiving types.
+
+The exact variance remains \eqref{eq:Q184:actual-moments} until bounded.
+For $L=2$ it is at most
+\[
+ m^4d[8/7+2D+D^2]
+ \le(8/7)d\exp[-15d/4-81d^2/32].
+\]
+This uses $\operatorname{Re}Q_3\le1$,
+$\log m\le-9d/8-81d^2/128$, and
+$1+(7/10)d+(7/50)d^2\le e^{(91/125)d}$.
+For $L=3$, each full corner minus $g_3$ has norm at most $1-g_3/2$,
+since its real part is at least $\kappa$ and
+$2\kappa-1\ge3g_3/4$.
+Adding $DG_2$ gives full norm at most
+$1-g_3/2+(6/5)D\le1+7d/16$.
+For $L\ge4$ the analogous two-loss norm is at most $1+13d/64$.
+One may now discard the nonpositive variance mean-square to get
+$d(1+7d/16)^2$ and $d(1+13d/64)^2$ before scaling by $m^4$.
+For the former keep the quadratic logarithmic gain
+$m^4\le(1-d)^4\le e^{-4d-2d^2}$, so its scaled variance is at most
+$d e^{-25d/8-2d^2}$.
+
+At $L=2$ the mean is bounded more sharply by
+\[
+ \E W\le m[1-(11027/5120)d+(9953/2560)d^2+d^4],
+ \qquad \E W\le m^2(1-7d/20).
+\]
+Indeed $D_1+D_2\le k[\delta_2+\delta_3+(53/32)d^2
++(17/16)d\delta_2+d^4]$; its $E$ term is
+$E[d^2-(1-d)\delta_2]\le d^4$.
+For $d\le3/16$, comparison with the cubic lower Taylor polynomial
+of $e^{-23d/8}$ leaves an upper difference at most
+$d[-403/1000+(109/50)d-(2/5)d^2+d^3]<0$.
+For $3/16\le d\le1/5$, the second upper has logarithm at most
+$-(13/5)d-(53/40)d^2-(15/16)d^3\le-23d/8$.
+Thus the three scaled mean bounds are
+$e^{-23d/8}$, $e^{-95d/32}$ and $e^{-275d/96}$.
+The common fourth expansion, with the signed bracket just established,
+now gives
+\[
+ \begin{array}{c|c}
+ L&\text{moment upper}\\\hline
+ 2&\mathcal U_3(d)\\
+ 3&e^{-209d/16}+9d e^{-25d/8-2d^2}
+       +(d/4+4d^2)e^{-349d/32}=\mathcal U_4(d)\\
+ \ge4&e^{-607d/48}+9de^{-115d/32}
+       +(29/16)d^2e^{-339d/32}\le\mathcal U_5(d).
+ \end{array}
+\]
+For the last inequality use $e>8/3$ and
+$\sup_{s\ge0}s e^{-cs}=1/(ce)$.
+Lemma~\ref{lem:retained-reference-payments} proves losses
+$d/160$, $d/600$ and $d/60$ on the stated low domains.
+
+\paragraph{Unit curvature and the two legal mean endpoints.}
+For the actual unit row set $\mu=\E W$.
+The relation $t\ge(1-x)s$ gives
+$|(1-t)+zs|^2\le1$, hence
+$W\le m^2(q+\sqrt d+D)$.
+If $C_0\le p+6\sqrt d/5$, $m\le1-d$, $D\le5d/12$ and
+$\mu\le m^2(1+2d/5)$, then
+\begin{equation}\label{eq:Q184:unitnine}
+ C_0[(W+\mu)^2+2\mu^2]\le9.
+\end{equation}
+To prove it, write $v=\sqrt d\le1/2$ and factor $m^4$.
+The nonnegative polynomial upper is
+$(p+6v/5)[(q+1+v+(49/60)v^2)^2+2(1+(2/5)v^2)^2]$.
+Its coefficients are bounded by
+$13/2,66/5,65/4,25/2,4,6/5$.
+The terms of degrees at least two are at most $24v^2$.
+Comparing with $9e^{4v^2}$ reduces to
+$P(v)=5/2-(66/5)v+12v^2+72v^4>0$.
+On $[0,1/4]$ it decreases to $37/160$; afterwards
+$P''\ge78$, $P'(1/4)=-27/10$, giving
+$P\ge37/160-243/5200>0$.
+The actual unit means obey the required cap: for $c=4$,
+$D_1\le7d/8$ gives $\mu/m^2\le1+7d/24$;
+for $c\ge5$, $D_1<d$ gives $\mu/m^2\le1+2d/5$.
+
+In the mean/covariance bracket after the genuine-mass compensation,
+use $h_0=1-19d/16$ and
+$f(y)=h_0y^4-(3/4)m^2dy^3$.
+Its maximum on $[0,M]$ is zero or $f(M)$.
+The following actual scaled mean bounds have $M>1/2$ and $f(M)>0$:
+\[
+\begin{array}{c|c|cc}
+ c&M&e^{-a d}\le M&M\le e^{-\lambda d}\\\hline
+ 4&(1-d)[1-(113/96)d+(19/12)d^2]&a=209/96&\lambda=129/64\\
+ \ge5&(1-9d/8)[1-(211/160)d+(373/160)d^2]&a=391/160&\lambda=35/16.
+\end{array}
+\]
+These follow by bounding $D_1$ by $k(d^2+\delta_2)$ and
+$k[\delta_2+(53/32)d^2]$, respectively.
+Write each cubic as $M=1-ad+bd^2-hd^3$.
+The log-convexity numerator is
+\[
+ MM''-(M')^2=(2b-a^2)+(2ab-6h)d-2b^2d^2+4bhd^3-3h^2d^4.
+\]
+At $(a,b,h,D)=(209/96,265/96,19/12,1/4)$ its Bernstein
+coefficients are
+\[
+ 7199/9216,\quad7689/8192,\quad414635/442368,
+ \quad41561/49152,\quad5753/8192;
+\]
+at $(391/160,4883/1280,3357/1280,1/5)$ they are
+\[
+\begin{gathered}
+ 42439/25600,\quad3693013/2048000,\quad215610671/122880000,\\
+ 163026843/102400000,\quad1395197823/1024000000.
+\end{gathered}
+\]
+They are positive. The tangent at zero gives the lower exponential;
+the endpoint chord gives the upper, using
+\[
+ M(1/4)=309/512<(2329/3840)(255/256)<e^{-129/256},
+\]
+\[
+ M(1/5)=51429/80000<1-7/16+(7/16)^2/2-(7/16)^3/6<e^{-7/16}.
+\]
+The first comparison uses the degree-five lower Taylor polynomial
+for $e^{-1/2}$ and $e^{-1/256}\ge255/256$.
+Since $h_0\ge45/64$, $M>1/2$ and $(3/4)m^2d\le3/16$,
+the positive endpoint is valid before replacing its mean factors.
+
+For $c=4$ the nonnegative unit coordinates decrease with
+$k\ge1$, so
+$|Q|^2\le(1-x^2)^2+x(1-x)^2\le1+x-3x^2\le13/12$.
+Moreover
+$\alpha=d-D_1\ge d(\kappa-2d)/m>0$. Retaining the negative square gives
+\[
+ \operatorname{Var}W\le(13/12)m^4d-m^2(\kappa-2d)^2d^2.
+\]
+For $c\ge5$, $a,b\ge x(1-x)$ give
+\[
+ |Q|^2\le1+x-4x^2+5x^3-x^4-x^5+x^6
+       \le1+x-(13/6)x^2.
+\]
+The last inequality follows since
+$4-5x+x^2+x^3-x^4\ge2279183/1048576>13/6$.
+Using $\delta_3\ge\delta_2^2/d$ and maximizing the resulting quadratic
+gives $\int|Q|^2\,d\nu\le29d/26$.
+The inequalities $m^2\ge e^{-7d/3}$ and $m^2\ge e^{-8d/3}$,
+respectively, together with the two valid mean bounds, yield moment
+uppers $\mathcal U_1(d)$ and $\mathcal U_2(d)$.
+In the second row the negative cubic term is at least
+$(3/4)d e^{-10d}$, because $8/3+3(391/160)=4799/480<10$.
+Lemma~\ref{lem:retained-reference-payments} proves losses $d/800$
+and $d/16$ for the unit low domains.
+
+\paragraph{A single high comparison in the same direction.}
+For $c\ge5$, \eqref{eq:compact-strong-path-means} gives, throughout
+$d\ge1/5$,
+\[
+ h_c\le2\mu_{c-1}\le2-(83/16)d\le77/80,
+ \qquad T^LF_c\le(77/80)T^L(qf_2).
+\]
+The genuine-$f_2$ reference for $qf_2$ is proved in
+Section~\ref{proof:Q5-C032} at $L=1$,
+Section~\ref{proof:Q5-C037} at $L=2,3,4,5$, and
+Section~\ref{proof:Q5-C033} at $L\ge6$.
+For $a\ge3$, the actual all-length proof comprises
+Section~\ref{proof:Q5-C187} at $L=1$,
+\eqref{eq:Q191:3.1} at $L=2$,
+\eqref{eq:Q191:11.1} at $L=3,4,5$ and
+\eqref{eq:q117-unified:shortone-two-tail} at $L\ge6$.
+Each is at most one. Thus all these fourth moments are at most
+$(77/80)^4<1-1/2400\le1-d/800$; the cap also covers the stated
+stronger nonunit loss.
+
+For $c=4$, $d\ge1/4$, one has $h_4\le2(1-2d)\le1$.
+At $L=2$ use \eqref{eq:Q167:T175.0}, with loss $d/16$.
+At $L=3,4,5$ the same-direction $qf_2$ bound
+\eqref{eq:Q191:11.1} has loss $9d/10$; for $L\ge6$,
+\eqref{eq:q117-unified:shortone-two-tail} has loss $3d/800$.
+All exceed the required $d/600$.
+At unit length, the actual unpropagated square gives
+\[
+ \E F_4\le H(d)=1-2d+[-2+\theta(1+\theta)/2]d^2+(9/2)d^3.
+\]
+This follows from
+$\E F_4\le m^2-m(d^2+2\delta_2)
++(d^3+2d\delta_2+\delta_3+\delta_4)/2$.
+The moment bounds imply the displayed $H$. Its derivative increases
+on $[1/4,1/3]$ and has $H'(1/3)<-3/2$, while $H(1/4)<15/32$.
+Consequently $TF_4<15/16$ and its actual reference fourth is less
+than $15/16<1-d/800$.
+
+Finally positivity inserts $0\le E_t,E_o\le1$ into the proved
+inequalities.
+All arm and connector directions are fixed throughout the host domain.
+\end{proof}

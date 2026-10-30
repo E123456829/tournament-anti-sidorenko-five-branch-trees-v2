@@ -1,0 +1,167 @@
+\subsection{Bare path eighth moments at every length at least six}\label{proof:Q5-C072-bare}
+Use $A=\allowbreak J+K$, $T=\allowbreak J-K=\allowbreak A^*$, $g=\allowbreak K\one$, $p=\allowbreak 1+g$, $q=\allowbreak 1-g$,
+$f_n=\allowbreak A^n\one$, $\bar f_n=\allowbreak T^n\one$, $d=\allowbreak \E g^2$,
+$\delta_j=\allowbreak \|K^j\one\|_2^2$, $\theta=\allowbreak 13/32$, $\kappa=\allowbreak 19/32$ and
+$\tau=\allowbreak d-\delta_2$. We prove
+\begin{equation}\tag{Q72.bare}\label{eq:Q72:bare}
+ \E[(p\bar f_n)^8]\le1-d/50\qquad(n\ge6).
+\end{equation}
+The finite calculus supplies
+$0\le\allowbreak  d\le\allowbreak 1/3$, $d^2\le\allowbreak \delta_2\le\allowbreak \theta d$,
+$\delta_{j+1}\le\allowbreak \theta\delta_j$, $\|K\|^2\le\allowbreak \theta$ and
+$|Kv(x)|\le\allowbreak \|v\|_2$. Write $G_m(z)=\allowbreak \sum_{j=\allowbreak 0}^{m-1}z^j$, with $G_0=\allowbreak 0$,
+and $\beta_1=\allowbreak \beta_2=\allowbreak 0$,
+$\beta_j=\allowbreak \sum_{i=\allowbreak 1}^{\lfloor(j-1)/2\rfloor}(-1)^{i-1}\delta_i$ for $j\ge\allowbreak 3$.
+Then
+\begin{equation}\tag{Q72.1.2}\label{eq:Q72:convolution}
+ \sum_{j=0}^n(-K)^j\one
+ =\bar f_n+\sum_{j=3}^n\beta_j\bar f_{n-j},\qquad
+ \tau\le\beta_j\le d\quad(j\ge3).
+\end{equation}
+In particular $\kappa d\le\allowbreak \tau\le\allowbreak  d-d^2\le\allowbreak 2/9$.
+The paths lie in $[0,\allowbreak 2]$ and have means
+$\mu_n=\allowbreak \E f_n=\allowbreak \E\bar f_n\in[0,\allowbreak 1]$. The finite geometric bounds are
+\begin{equation}\tag{Q72.1.4}\label{eq:Q72:finite-G}
+ \|G_m(K)\|\le1\quad(m=0,1\text{ or }m\ge3),\qquad
+ \|G_2(K)\|^2\le1+\theta.
+\end{equation}
+At $d=\allowbreak 0$ leaf integration gives equality in \eqref{eq:Q72:bare}; divisions
+by $d$ below use $d>\allowbreak 0$.
+
+\paragraph{Q72.2 Finite masks and centered paths}\label{part:Q72.2}
+For a finite polynomial with coefficients in $[0,\allowbreak 1]$, sign-separated
+geometric sums at $z=\allowbreak i\sqrt x$, $0\le\allowbreak  x\le\allowbreak \theta$, give
+\[
+ |\operatorname{Re}P(z)|\le(1-x^2)^{-1},\qquad
+ |\operatorname{Im}P(z)|\le\sqrt x(1-x^2)^{-1}.
+\]
+Thus
+\begin{equation}\tag{Q72.2.1}\label{eq:Q72:mask}
+ |P(z)|^2\le\frac{1+x}{(1-x^2)^2}
+ \le\frac{32768}{16245}<\frac{100}{49}<\frac94.
+\end{equation}
+The strict comparison uses $32768\cdot49=\allowbreak 1605632<\allowbreak 1624500$.
+Let $P_0$ be orthogonal projection onto the mean-zero subspace and
+$C_0=\allowbreak P_0KP_0$ there. This operator is skew and $\|C_0\|^2\le\allowbreak \theta$.
+For $v_n=\allowbreak \bar f_n-\mu_n\one$, the path recursion gives
+\begin{equation}\tag{Q72.2.2}\label{eq:Q72:centered-path}
+ v_{n+1}=-\mu_ng-C_0v_n,\qquad
+ v_n=-\sum_{j=0}^{n-1}\mu_{n-1-j}(-C_0)^jg.
+\end{equation}
+Since its coefficients lie in $[0,\allowbreak 1]$, \eqref{eq:Q72:mask} and reversal give
+\begin{equation}\tag{Q72.2.3}\label{eq:Q72:path-sigma}
+ \sigma(\bar f_n),\sigma(f_n)\le(3/2)\sqrt d.
+\end{equation}
+Here $\sigma$ is standard deviation under the given measure. Set
+$H_n=\allowbreak p\bar f_n$. The recursion also yields
+\[
+ H_n=\mu_{n-1}(1-g^2)-pKv_{n-1},\qquad\E H_n=\mu_{n+1}\le1.
+\]
+Comparison with the constant $\mu_{n-1}$, using $p\le\allowbreak 2$ and
+$\sqrt\theta<\allowbreak 2/3$, gives
+\begin{equation}\tag{Q72.2.5}\label{eq:Q72:mass-sigma}
+ \sigma(H_n)\le(1+3\sqrt\theta)\sqrt d<3\sqrt d.
+\end{equation}
+Likewise,
+$\bar f_af_L-\mu_a\mu_L=\allowbreak f_L(\bar f_a-\mu_a)+\mu_a(f_L-\mu_L)$ gives
+$\sigma(\bar f_af_L)\le\allowbreak (9/2)\sqrt d$.
+
+\paragraph{Q72.3.1 An exponential mass estimate}\label{part:Q72.3.1}
+Put $w_n=\allowbreak \sum_{j=\allowbreak 2}^n(-K)^j\one=\allowbreak KG_{n-1}(-K)g$.
+Retaining $\beta_n\bar f_0$ in \eqref{eq:Q72:convolution} gives
+\begin{equation}\tag{Q72.3.1}\label{eq:Q72:first-loss}
+ 0\le\bar f_n\le q+w_n-\beta_n,\qquad \E w_n=-\beta_{n+1}.
+\end{equation}
+For $n\ge\allowbreak 4$, $|w_n|\le\allowbreak \sqrt d$, $\E w_n^2\le\allowbreak \theta d$ and
+$|\E w_n|\le\allowbreak  d$. Arithmetic--geometric mean gives
+\begin{equation}\tag{Q72.3.2}\label{eq:Q72:mass-exp}
+ p\bar f_n\le[1+(w_n-\beta_n)/2]^2,\qquad
+ \E H_n^8\le e^{-8\beta_n}\E e^{8w_n}.
+\end{equation}
+Use the negative-mean lemma of Section~\ref{proof:Q5-C065}, whose
+coefficient is $\lambda(x)=\allowbreak (188/25)(2-\kappa/(1+x))^2$.
+It increases with $x$, and
+$\lambda(\sqrt d)\le\allowbreak \lambda(3/5)=\allowbreak 32691132/1638400<\allowbreak 20$.
+Consequently
+\begin{equation}\tag{Q72.3.4}\label{eq:Q72:mass-long-exp}
+ \E H_n^8\le e^{-8\beta_n-8\beta_{n+1}+20d}\le e^{21d/2}
+ \qquad(n\ge4).
+\end{equation}
+For $n=\allowbreak 3$, $w_3=\allowbreak r-s$ with $r=\allowbreak K^2\one$, $s=\allowbreak K^3\one$.
+Its squared norm is $\delta_2+\delta_3\le\allowbreak \theta(1+\theta)d$,
+$|w_3|\le\allowbreak \sqrt{(1+\theta)d}$, and $\E w_3=\allowbreak -d$.
+The same lemma with $A_0=\allowbreak 1+\theta$ gives
+\begin{equation}\tag{Q72.3.5}\label{eq:Q72:mass-three-exp}
+ \E H_3^8\le e^{[20(1+\theta)-16]d}=e^{97d/8}.
+\end{equation}
+Equation~\eqref{eq:Q72:first-loss} and $pq\le\allowbreak 1$ also imply
+$H_n\le\allowbreak 1+2\sqrt d$ for $n\ge\allowbreak 4$. Thus, using $\sqrt{1+\theta}<\allowbreak 6/5$,
+\begin{equation}\tag{Q72.3.6}\label{eq:Q72:rough-mass}
+ \E H_n^8\le e^{97d/8}\le e^{13d},\qquad
+ 0\le H_n\le1+(12/5)\sqrt d\quad(n\ge3).
+\end{equation}
+
+\paragraph{Q72.3.2 Four retained convolution losses}\label{part:Q72.3.2}
+Let $B_0=\allowbreak -K$ and $R_n=\allowbreak \sum_{j=\allowbreak 2}^nB_0^j\one$. For $n\ge\allowbreak 6$, the
+four convolution indices $n,\allowbreak n-1,\allowbreak n-2,\allowbreak n-3$ are all at least three. Retaining
+their $\tau$ multiples gives
+\begin{equation}\tag{Q72.3.7}\label{eq:Q72:four-losses}
+ \bar f_n\le q+R_n-\tau(\bar f_0+\bar f_1+\bar f_2+\bar f_3)
+ =(1-3\tau)q+\widetilde R_n-\tau(1-d),
+\end{equation}
+where
+\begin{equation}\tag{Q72.3.8}\label{eq:Q72:remainder}
+ \widetilde R_n=R_n-2\tau r+\tau s
+ =B_0Q_{n-1}(B_0)(B_0\one),\qquad
+ Q_m(z)=G_m(z)-\tau(2+z).
+\end{equation}
+Here $\bar f_0=\allowbreak 1$, $\bar f_1=\allowbreak q$, $\bar f_2=\allowbreak q+r$ and
+$\bar f_3=\allowbreak q+r-s-d$. For every $m\ge\allowbreak 5$, $0\le\allowbreak  x\le\allowbreak \theta$ and
+$z=\allowbreak i\sqrt x$,
+\begin{equation}\tag{Q72.3.9}\label{eq:Q72:weighted-G}
+ |G_m(z)|\le1,\qquad x|G_m(z)|^2\le1/3.
+\end{equation}
+The first bound is \eqref{eq:Q72:finite-G}. If $m$ is odd,
+$|G_m|^2=\allowbreak (1+x^m)/(1+x)$; the sufficient inequality
+$2x+3x^{m+1}\le\allowbreak 1$ follows from
+$13/16+1/72<\allowbreak 1$, using $\theta^2<\allowbreak 1/6$.
+If $m$ is divisible by four, $x|G_m|^2\le\allowbreak  x/(1+x)\le\allowbreak 13/45$.
+If $m\equiv2\pmod4$, then $m\ge\allowbreak 6$ and
+$|G_m|^2\le\allowbreak (1+x^3)^2/(1+x)$. Now
+$2x+6x^4+3x^7\le\allowbreak 13/16+1/6+13/2304=\allowbreak 2269/2304<\allowbreak 1$.
+
+Sign-separated sums also give
+\[
+ \operatorname{Re}[G_m(z)(2-z)]\ge2-\frac{3x}{1-x^2}\ge154/285.
+\]
+Since $\tau(4+x)\le\allowbreak 47/48<\allowbreak 308/285$,
+\begin{equation}\tag{Q72.3.10}\label{eq:Q72:Q-loss}
+ |Q_m(z)|^2=|G_m(z)|^2-2\tau\operatorname{Re}[G_m(z)(2-z)]
+                  +\tau^2(4+x)\le|G_m(z)|^2.
+\end{equation}
+The row bound and \eqref{eq:Q72:weighted-G} imply
+\begin{equation}\tag{Q72.3.11}\label{eq:Q72:remainder-data}
+ \begin{gathered}
+ |\widetilde R_n|\le\sqrt d,\qquad \E\widetilde R_n^2\le d/3,\\
+ \E\widetilde R_n=-\beta_{n+1}+2\tau d\le-\tau(1-2d).
+ \end{gathered}
+\end{equation}
+
+\paragraph{Q72.3.3 The scalar interface}\label{part:Q72.3.3}
+Apply row V of Table~\ref{tab:unit-ordinary:two-data}. For
+\(0\le d\le1/3\), put \(\eta=\kappa d\), \(B=1-3\eta\),
+\(a_0=\eta(1-2d)\), and \(a_*=\eta(1-d)\).
+The row proves \(\E H^8\le1-d\le1-d/50\) for every nonnegative
+\(H\) with \(|R|\le\sqrt d\), \(\E R\le-a_0\),
+\(\E R^2\le d/3\), and
+\begin{equation}\tag{Q72.3.12}\label{eq:Q72:scalar-interface}
+ H\le B\left(1+\frac{R-a_*}{2B}\right)^2.
+\end{equation}
+Its full-interval certificate also verifies the compatible moments
+and the positive interpolation base.
+Here \(\tau\ge\eta\) makes \eqref{eq:Q72:four-losses} at most
+\(Bq+\widetilde R_n-a_*\). Multiplying by \(p\) and applying
+AM--GM to \(Bp\) and this nonnegative upper gives the displayed square
+for \(H_n\). Equation~\eqref{eq:Q72:remainder-data}, with
+\(1-2d\ge0\), supplies its three actual moment bounds and proves
+\eqref{eq:Q72:bare}.

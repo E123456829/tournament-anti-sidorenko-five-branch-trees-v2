@@ -1,0 +1,296 @@
+\subsection{Unit-root eighth moments for the terminal \((1,2)\)}
+\label{proof:Q5-C050}
+Use the original finite probability measure, \(A=J+K\), \(T=J-K\),
+\(g=K\one\), \(p=1+g\), \(q=1-g\),
+\(r=Kg\), \(s=Kr\), \(t=Ks\), and
+\(d=\|g\|^2\), \(\delta_j=\|K^j\one\|^2\).
+Write \(\theta=13/32\), \(\kappa=19/32\),
+\(\tau=d-\delta_2\), and \(\gamma=d-\delta_2/2\).
+Lemma~\ref{q3:lem:spectral}, skew-adjointness, and the row bound give
+\[
+ 0\le d\le1/3,\qquad d^2\le\delta_2\le\theta d,
+ \qquad\delta_{j+1}\le\theta\delta_j,\qquad |Kv|\le\|v\|.
+\]
+All connector edges point from the terminal toward the receiving root,
+whose original unit arm points outward. The terminal unit arm points
+inward and its two-edge arm outward. Thus the actual message is
+\begin{equation}\tag{Q50.0.1}\label{eq:Q50:0.1}
+ F=qf_2,\qquad X_L=T^LF,\qquad H_L=pX_L.
+\end{equation}
+We shall prove the stronger estimate \(\E H_L^8\le1-d\) for \(L\ge2\);
+in particular,
+\begin{equation}\tag{Q50.0.2}\label{eq:Q50:0.2}
+ \E H_L^8\le1-d/50\qquad(L\ge2).
+\end{equation}
+The case \(L=1\) is Section~\ref{proof:Q5-C049}.
+When \(d=0\), leaf integration makes every tree message one.
+Assume \(d>0\) below.
+
+\paragraph{A common unit-root payment.}
+Suppose a nonnegative message satisfies
+\begin{equation}\label{eq:unit-ordinary:positive-square}
+ H\le B\left(1+\frac{Z-a}{2B}\right)^2,
+ \qquad |Z|\le U,\quad \E Z\le-\alpha,\quad \E Z^2\le v.
+\end{equation}
+Here \(B>0\), \(a,\alpha\ge0\), \(\alpha^2\le v\le U^2\),
+and \(2B-a>U>0\).
+Apply Lemma~\ref{lem:unit-square-hermite} with exponent eight,
+the variable \(Z/\sqrt B\), and center \((B-a/2)/\sqrt B\).
+The compatible double contact and upper probability are
+\[
+ \ell=-\frac{v+\alpha U}{U+\alpha},\qquad
+ \pi=\frac{v-\alpha^2}{U^2+2\alpha U+v}.
+\]
+Consequently,
+\begin{equation}\label{eq:unit-ordinary:compatible-sixteen}
+ \E H^8\le
+ \frac{(1-\pi)(B-a/2+\ell/2)^{16}
+             +\pi(B-a/2+U/2)^{16}}{B^8}.
+\end{equation}
+At \(v=U^2\), the same Hermite quadratic has contacts \(-U,U\),
+with upper probability \((U-\alpha)/(2U)\), so the displayed formula
+also holds.
+This uses the moments of the same $Z$.
+
+Here are five continuous payments for this formula. Put
+\(c=51/64\), \(\beta=89/64\), \(k=19/36\), and
+\[
+ v_3(d)=\theta(1-cd)^2+\theta^2\kappa^2
+                  -2\kappa^2\theta d+\kappa^2d^2.
+\]
+The table writes \(U=t u\), \(\alpha=d a_0\), \(v=d v_0\),
+where \(d=t^2\). Every row implies \(\E H^8\le1-d\).
+\begin{table}[htbp]\centering\small
+\caption{Joint moment data for the unit \((1,2)\) terminal.}
+\label{tab:unit-ordinary:two-data}
+\setlength{\tabcolsep}{3pt}
+\begin{tabular}{@{}cllllll@{}}\toprule
+Row & \(B\) & \(a\) & \(a_0\) & \(u\) & \(v_0\) & Actual \(d\)\\\midrule
+I & \(1-cd\) & \(0\) & \(\kappa\) & \(1-cd\) & \(4/27\) & \([0,1/4]\)\\
+II & \(1-\beta d\) & \(0\) & \(1-cd\) & \(\frac{43}{40}(1-\frac45d)\) & \(v_3(d)\) & \([0,1/3]\)\\
+III & \(1-\beta d\) & \(d(1-d)\) & \(\frac{777}{1024}-d\) & \(1\) & \(\theta(1-\frac{153}{128}d)\) & \([0,1/3]\)\\
+IV & \(1-3kd\) & \(kd(1-d)\) & \(k(1-2d)\) & \(1\) & \(1/4\) & \([0,1/3]\)\\
+V & \(1-3\kappa d\) & \(\kappa d(1-d)\) & \(\kappa(1-2d)\) & \(1\) & \(1/3\) & \([0,1/3]\)\\\bottomrule
+\end{tabular}
+\end{table}
+
+The single polynomial certificate for each row can be
+reconstructed as follows:
+\[
+ \begin{gathered}
+ C=B-a/2,\quad D=u+ta_0,\quad E=u^2+2tua_0+v_0,\quad
+ N=v_0+ta_0u,\quad R=v_0-t^2a_0^2,\\
+ \mathcal G(t)=\frac{
+  2^{16}D^{14}EB^8(1-t^2)
+ -(2CD-tN)^{16}-RD^{14}(2C+tu)^{16}}{t^2}.
+ \end{gathered}
+\]
+The numerator is divisible by \(t^2\), and \(\mathcal G(0)>1\) in
+every row. The denominator of the bound
+\eqref{eq:unit-ordinary:compatible-sixteen} is
+\(2^{16}D^{14}EB^8>0\).
+On the certificate intervals in the next table, every Bernstein
+coefficient of \(\mathcal G/\mathcal G(0)\) exceeds \(1/4000\).
+The six guard polynomials
+\[
+ B,\quad u,\quad a_0,\quad v_0-t^2a_0^2,
+ \quad u^2-v_0,\quad 2B-a-tu
+\]
+each have Bernstein coefficients greater than \(1/32\) on the same
+interval. In particular all the Hermite hypotheses hold strictly when
+\(t>0\). The coefficients follow from
+\eqref{eq:bernstein-coefficients}.
+\begin{table}[htbp]\centering\small
+\caption{Whole-interval certificates for Table~\ref{tab:unit-ordinary:two-data}.}
+\label{tab:unit-ordinary:two-certificates}
+\begin{tabular}{@{}cccc@{}}\toprule
+Row & Interval for \(t\) & Degree of \(\mathcal G\) & Coefficient count\\\midrule
+I & \([0,1/2]\) & \(76\) & \(77\)\\
+II & \([0,7/12]\) & \(93\) & \(94\)\\
+III--V & \([0,7/12]\) & \(107\) & \(108\) each\\\bottomrule
+\end{tabular}
+\end{table}
+Since \((7/12)^2>1/3\), these rational intervals cover every actual
+\(d\)-domain. Lemma~\ref{lem:bernstein-certificate} now proves the five
+payments, including the limiting endpoint \(d=0\).
+
+\paragraph{The finite terminal envelope.}
+The arm identity and positivity give
+\[
+ qf_2=(1+r/2)^2-(g+r/2)^2,\qquad
+ TF\le q-\gamma-s.
+\]
+Put \(B_0=-K\), \(t_j=B_0^j\one\),
+\(S'_L=\sum_{j=0}^Lt_j\), and \(\bar f_n=T^n\one\).
+Let \(\beta_1=\beta_2=0\) and
+\(\beta_j=\sum_{i=1}^{\lfloor(j-1)/2\rfloor}(-1)^{i-1}\delta_i\)
+for \(j\ge3\); alternating sums give \(\tau\le\beta_j\le d\).
+Apply \(T^{L-1}\) to the one-step bound above. The finite convolution
+\eqref{eq:Q188:conv}, or direct finite Duhamel expansion, gives for
+every \(L\ge1\)
+\begin{equation}\label{eq:unit-ordinary:two-finite}
+ \begin{gathered}
+ X_L\le\mathcal W_L:=S'_L+t_{L+2}-\gamma\bar f_{L-1}
+                    -\sum_{j=3}^L\omega_j\bar f_{L-j},\\
+ \omega_j=\begin{cases}\beta_j,&j\text{ even},\\
+                         \beta_{j+2},&j\text{ odd},\end{cases}
+ \qquad\omega_j\ge\tau.
+ \end{gathered}
+\end{equation}
+Only nonnegative indices occur. Indeed
+\(T^Lr=t_{L+2}-d\bar f_{L-1}+\delta_2\bar f_{L-3}
+-\delta_3\bar f_{L-5}+\cdots\), a finite identity.
+All retained path losses are nonnegative.
+
+\paragraph{Two and three connector edges.}
+For \(L=2\), \(X_2\le(1-\gamma)q+r+t\).
+At \(d\le1/4\), weaken \(\gamma\ge cd\) and use
+\(Z=r+t\). Its mean is \(-d+\delta_2\le-\kappa d\), and
+\[
+ \E Z^2=\delta_2-2\delta_3+\delta_4\le4d/27,
+ \qquad |Z|^2\le d-2\delta_2+\delta_3
+                  \le d(1-2cd).
+\]
+The first bound follows from
+\(4/27-x(1-x)^2=(x-1/3)^2(4/3-x)\ge0\).
+For the row bound use \(Z=K(g+s)\), center the row, and note that
+\(g+s\) is centered. Since
+\(\sqrt{1-2cd}\le1-cd\), these are row I.
+For \(d\ge1/4\), \(TF\le2\E F=2-4d\le1\), hence
+\(H_2\le(2-4d)pq\le1\) and
+\(\E H_2^8\le\E(pq)^8\le1-d\).
+
+For \(L=3\), expand \eqref{eq:unit-ordinary:two-finite} to obtain
+\[
+ X_3\le(1-\beta d)q+Z_3,\qquad
+ Z_3=(1-cd)r-s-K^4g-\kappa dg,
+ \qquad\E Z_3=-d(1-cd).
+\]
+Writing \(A_0=1-cd\), the row and spectral bounds are
+\[
+ |Z_3|^2\le dD_3(d),\quad
+ D_3=A_0^2+4/27-\kappa^2d,
+ \qquad \E Z_3^2\le d v_3(d).
+\]
+For the row estimate use
+\(Z_3=(-K)(-A_0g+r+t+\kappa d)\): its squared predecessor norm
+is at most \(A_0^2d+4d/27-\kappa^2d^2\), since
+\(\E(r+t)=-\tau\) and \(\tau\ge\kappa d\).
+For its second moment the exact spectral integrand is
+\(A_0^2x+[x(1-x)-\kappa d]^2\).
+Its derivative is at least \(A_0^2-2\kappa d>0\), so its value
+at \(x=\theta\) gives \(v_3\).
+Finally \(D_3\le(43/40)^2(1-4d/5)^2\): the three coefficients
+of the difference are
+\(1849/1600-31/27\),
+\(1993/1024-1849/1000\), and
+\(1849/2500-2601/4096\), all positive. Thus row II applies.
+
+\paragraph{Four connector edges.}
+Set \(R_L=\sum_{j=2}^Lt_j+t_{L+2}\).
+Expansion of the same finite envelope gives
+\[
+ X_4\le(1-\tau-\gamma)q+Z_4-d(1-\gamma),
+ \qquad Z_4=R_4-\gamma r+\gamma s.
+\]
+Here \(Z_4=B_0Q(B_0)g'\), \(g'=B_0\one\),
+\(Q=P_3-\gamma(1+z)\), \(P_3=1+z+z^2+z^4\).
+At \(z=i\sqrt x\),
+\[
+ |P_3|^2=1-x+x^2(3-2x+x^2)\le1,
+ \quad
+ |Q|^2\le1-2\gamma+(1+\theta)\gamma^2\le1.
+\]
+The first inequality uses
+\(1-3x+2x^2-x^3\ge1451/32768>0\).
+Consequently \(|Z_4|\le\sqrt d\), and
+\[
+ \E Z_4^2\le\theta d(1-153d/128),\qquad
+ \E Z_4\le-(777/1024)d+d^2.
+\]
+For the variance use \(\gamma\ge cd\),
+\((1+\theta)cd\le1/2\); for the mean use
+\(\tau+\delta_3\ge d[1-u+u^2]\ge(777/1024)d\),
+where \(u=\delta_2/d\le\theta\) and
+\(\delta_3\ge\delta_2^2/d\).
+Weakening only positive path losses gives
+\(X_4\le(1-\beta d)q+Z_4-d(1-d)\), namely row III.
+
+\paragraph{Five edges and all longer connectors.}
+At \(L=5\), retain the four losses already present in
+\eqref{eq:unit-ordinary:two-finite}. Expanding
+\(\bar f_4=(1-d)q-d+r-s+t\) gives
+\[
+ X_5\le[1-(3-d)\tau]q+Z_5-\tau(1-d),
+ \qquad Z_5=R_5-2\tau r+\tau s-\tau t.
+\]
+Its spectral polynomial is
+\(Q=P_4-\tau(2+z+z^2)\), \(P_4=1+z+z^2+z^3+z^5\).
+The identities
+\[
+ |P_4|^2\le1-x,\quad
+ \Re[P_4\overline{(2+z+z^2)}]=2-2x+x^3\ge19/16,
+ \quad |2+z+z^2|^2\le4
+\]
+and \(\tau\le2/9\) imply \(|Q|^2\le|P_4|^2\).
+Thus \(|Z_5|\le\sqrt d\), \(\E Z_5^2\le d/4\), and
+\(\E Z_5=-\tau+2\tau d-\tau\delta_2
+\le-\tau(1-2d)\).
+Since \((3-d)\tau\ge3kd\), row IV applies.
+
+For \(L\ge6\), retain the last four losses, whose indices are all
+at least three. They give
+\begin{equation}\label{eq:unit-ordinary:two-long}
+ X_L\le(1-3\tau)q+Z_L-\tau(1-d),
+ \qquad Z_L=R_L-2\tau r+\tau s.
+\end{equation}
+For \(m=L-1\ge5\), put
+\(P_m=G_m+z^{m+1}\), \(G_m=\sum_{j=0}^{m-1}z^j\), and
+\(Q_m=P_m-\tau(2+z)\). Direct multiplication gives
+\[
+ |P_m|^2=
+ \frac{1+x^m(1-x+x^2)-2\Re[z^m(1-x-z)]}{1+x}.
+\]
+For \(m\equiv0,1\pmod4\), the subtracted terms are respectively
+\(2x^{m/2}(1-x)\) and \(2x^{(m+1)/2}\); both dominate
+\(x^m(1-x+x^2)\). For the other residues the numerator is at most
+\(1+2x^3+x^6\) or \(1+2x^4+x^7\).
+These estimates yield \(|P_m|\le1\), \(x|P_m|^2\le1/3\).
+For the latter bound in the last two cases it suffices to use
+\(2x+6x^4+3x^7\le2269/2304<1\).
+Also
+\(\Re[P_m\overline{(2+z)}]\ge2-3x/(1-x^2)\ge154/285\).
+Together with \(\tau(4+x)\le47/48<308/285\), this proves
+\(|Q_m|^2\le|P_m|^2\).
+Therefore
+\[
+ |Z_L|\le\sqrt d,\qquad \E Z_L^2\le d/3,
+ \qquad\E Z_L\le-\tau(1-2d).
+\]
+For the last bound \(\E R_L=-\beta_{L+3}\) when \(L\) is even,
+and \(-\beta_{L+1}\) when \(L\) is odd.
+Replacing \(\tau\) by \(\kappa d\) only on the positive path
+factors in \eqref{eq:unit-ordinary:two-long} gives row V.
+In each of the five cases, multiplying the nonnegative envelope
+\(X_L\le Bq+Z-a\) by \(p\) and applying AM--GM to
+\(Bp\) and \(Bq+Z-a\) proves
+\eqref{eq:unit-ordinary:positive-square}. This completes the proof.
+
+\paragraph{A scalar estimate used by the neighbouring terminal family.}
+We retain the elementary bound
+\begin{equation}\tag{Q50.2.1}\label{eq:Q50:2.1}
+ (1+x)^{16}\le1+16x+256x^2\qquad(|x|\le1/7).
+\end{equation}
+On the negative half-interval Taylor's quadratic coefficient is at most
+\(120\); on the positive half the quotient is increasing, and at
+\(1/7\) the assertion is \(8^{16}\le417\,7^{14}\), whose margin
+is \(1344044667377>0\).
+
+Finally, actual equal-pair factors \(E_r,E_t\le1\) satisfy
+\(0\le E_rpT^L(E_tqf_2)\le H_L\) by positivity. Full reversal
+replaces \(K\) by \(-K\) and reverses every arm and connector.
+Together with Section~\ref{proof:Q5-C049}, the catalogue for all
+positive lengths retains
+\begin{equation}\tag{Q50.8.1}\label{eq:Q50:8.1}
+ \E H_L^8\le1-d/500\qquad(L\ge1).
+\end{equation}

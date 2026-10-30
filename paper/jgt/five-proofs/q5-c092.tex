@@ -1,0 +1,607 @@
+\subsection{Ordinary eighth moments for even terminals of minimum one with multiple pairs}\label{proof:Q5-C092}
+
+\paragraph{Q92.0 The terminal and the ordinary moment.}
+Work on the finite probability space of Appendix~\ref{proof:Q5-C064}, with
+\(K(x,\allowbreak y)=\allowbreak -K(y,\allowbreak x)\), \(|K(x,\allowbreak y)|\le\allowbreak 1\), and
+\begin{equation}\tag{Q92.0.1}\label{eq:Q92:0.1}
+\begin{gathered}
+Jv=(\E v)\one,\quad A=J+K,\quad T=J-K=A^*,\quad
+g=K\one,\quad p=1+g,\quad q=1-g,\\
+f_n=A^n\one,\quad\bar f_n=T^n\one,\quad h_n=Tf_{n-1},\quad
+\delta_i=\|K^i\one\|_2^2,\quad d=\delta_1,\\
+\theta=13/32,\qquad\kappa=19/32,\qquad\tau=d-\delta_2.
+\end{gathered}
+\end{equation}
+After maximal equal pairing, suppose the distinct residual arms satisfy
+\begin{equation}\tag{Q92.0.2}\label{eq:Q92:0.2}
+1=a_1<b_1<a_2<b_2<\cdots<a_j<b_j,\qquad j\ge2.
+\end{equation}
+Every integer in this list is finite and arbitrary. Set
+\begin{equation}\tag{Q92.0.3}\label{eq:Q92:0.3}
+F_\Sigma=qf_{b_1}\prod_{i=2}^jh_{a_i}f_{b_i},\qquad
+H_D=E_rpT^L(E_tF_\Sigma),\quad L\ge1.
+\end{equation}
+Here \(E_t,\allowbreak E_r\) are products of genuine equal pairs, each in \([0,\allowbreak 1]\),
+and the receiving root has an outward unit arm. Each \(f_n\)-arm points
+toward its leaf. Each \(h_n\)-arm has its first edge toward its terminal
+and all later edges toward the leaf; in particular, \(q=\allowbreak h_1\) points
+toward the terminal. The connector points from terminal to root.
+These directions are chosen from the arm lengths and hold throughout
+the parameter domains below. We prove
+\begin{equation}\tag{Q92.0.4}\label{eq:Q92:0.4}
+\boxed{\E H_D^8\le
+e^{-[1/4+16(j-2)]d}\le e^{-d/4}\le1-d/5.}
+\end{equation}
+The same assertion holds with every edge reversed.
+
+\paragraph{Q92.1.1 Finite identities and the zero boundary.}
+The finite calculus in Appendix~\ref{proof:Q5-C064} gives
+\begin{equation}\tag{Q92.1.1}\label{eq:Q92:1.1}
+\begin{gathered}
+0\le d\le1/3,\quad\|K\|^2\le\theta,\quad
+d^2\le\delta_2\le\theta d,\quad\delta_{i+1}\le\theta\delta_i,
+\quad|Kv(x)|\le\|v\|_2,\\
+\E K^{2i}\one=(-1)^i\delta_i,\quad\E K^{2i+1}\one=0,\quad
+0\le f_n,\bar f_n,h_n\le2,\quad\E f_n=\E\bar f_n\le1.
+\end{gathered}
+\end{equation}
+All expectations, adjoints and row estimates use the fixed measure.
+With \(\beta_1=\allowbreak \beta_2=\allowbreak 0\), finite positive convolution gives
+\begin{equation}\tag{Q92.1.2}\label{eq:Q92:1.2}
+\begin{gathered}
+\beta_n=\sum_{i=1}^{\lfloor(n-1)/2\rfloor}(-1)^{i-1}\delta_i
+\quad(n\ge3),\\
+S_n=\sum_{i=0}^nK^i\one
+=f_n+\sum_{i=3}^n\beta_i f_{n-i},\\
+S'_n=\sum_{i=0}^nK'^i\one
+=\bar f_n+\sum_{i=3}^n\beta_i\bar f_{n-i},\qquad K'=-K,\quad g'=-g,\\
+\tau\le\beta_n\le d\quad(n\ge3),\qquad0\le\tau\le d-d^2.
+\end{gathered}
+\end{equation}
+The index two has \(\beta_2=\allowbreak 0\). For \(G_n(z)=\allowbreak \sum_{i=\allowbreak 0}^{n-1}z^i\),
+\begin{equation}\tag{Q92.1.3}\label{eq:Q92:1.3}
+\|G_n(K)\|\le1\quad(n=0,1\text{ or }n\ge3),\qquad
+\|G_2(K)\|^2\le1+\theta.
+\end{equation}
+Genuine equal pairs satisfy
+\begin{equation}\tag{Q92.1.4}\label{eq:Q92:1.4}
+f_\ell+h_\ell=2\E f_{\ell-1},\qquad0\le f_\ell h_\ell\le1.
+\end{equation}
+After zero-mass atoms are removed, \(p(x),\allowbreak q(x)\ge\allowbreak \mu(x)>\allowbreak 0\).
+When \(d=\allowbreak 0\), \(g=\allowbreak 0\), and integration from the leaves gives one for
+every tree message, including when \(K\ne0\). Hence divisions below
+are made for \(d>\allowbreak 0\). Kernel entries may attain \(\pm1\).
+
+\paragraph{Q92.1.2 Finite masks and three coefficient patterns.}
+Write
+\begin{equation}\tag{Q92.1.5}\label{eq:Q92:1.5}
+R_0=\sum_{i=1}^j\sum_{n=a_i+1}^{b_i}K^n\one=KP(K)g.
+\end{equation}
+The disjoint intervals make \(P\) a finite polynomial with coefficients
+zero or one and \(P_0=\allowbreak 1\). At \(z=\allowbreak i\sqrt x\), \(0\le\allowbreak  x\le\allowbreak \theta\),
+put \(P(-z)=\allowbreak U(x)-zV(x)\). The residue-class estimate
+\eqref{eq:L90:masknorm} gives
+\begin{equation}\tag{Q92.1.6}\label{eq:Q92:1.6}
+|P(z)|^2\le\frac{1+x}{(1-x^2)^2}
+\le\frac{32768}{16245}<\frac{101}{50}<\frac{100}{49}.
+\end{equation}
+Thus \(\|P(K)\|<\allowbreak 10/7\), and
+\begin{equation}\tag{Q92.1.7}\label{eq:Q92:1.7}
+\frac{x}{1-x^2}\le\frac{416}{855}<\frac12,\quad
+\frac{x^2}{1-x^2}<\frac15,\quad
+\frac{x^3}{1-x^2}<\frac1{12},\quad
+\frac{x^4}{1-x^2}<\frac1{30}.
+\end{equation}
+The last two comparisons use \(2197/27360<\allowbreak 1/12\) and
+\(\theta^4/(1-\theta^2)=\allowbreak 28561/875520<\allowbreak 1/30\).
+Also \(\theta^2<\allowbreak 1/6\), \(\theta^3<\allowbreak 1/14\), \(\theta^4<\allowbreak 1/32\),
+and \(\sqrt\theta<\allowbreak 2/3\). Every mask has
+\(U\ge\allowbreak 1-x/(1-x^2)>\allowbreak 1/2\). The three patterns are
+\fitdisplay{
+\begin{array}{c|c|c|c}
+\text{class}&\text{arm conditions}&\text{forced coefficients}&|P|^2\text{ bound}\\\hline
+\mathrm I&b_1\ge3&P_0=P_1=1&100/49\\
+\mathrm {II}&b_1=2,\ a_2\ge4&P_0=1,\ P_1=P_2=0&25/16\\
+\mathrm {III}&b_1=2,\ a_2=3&P_0=P_2=1,\ P_1=0&1
+\end{array}
+}{}
+For II the first possible real and imaginary terms give
+\begin{equation}\tag{Q92.1.8}\label{eq:Q92:1.8}
+|P(z)|^2\le\frac{1+x^3}{(1-x^2)^2}<\frac{54}{35}<\frac{25}{16}.
+\end{equation}
+For III,
+\begin{equation}\tag{Q92.1.9}\label{eq:Q92:1.9}
+\begin{gathered}
+1-\frac{x}{1-x^2}\le U\le1-x+\frac{x^2}{1-x^2}\le1-x/3,\\
+-\frac{x}{1-x^2}\le V\le\frac{x^2}{1-x^2}.
+\end{gathered}
+\end{equation}
+The real coordinate is positive, and \(x\le\allowbreak 1/2\) gives
+\begin{equation}\tag{Q92.1.10}\label{eq:Q92:1.10}
+|P(z)|^2\le(1-x/3)^2+\frac{16}{9}x^3
+\le(1-x/3)^2+\frac49x\le1-x/6\le1.
+\end{equation}
+
+\paragraph{Q92.1.3 Moment inputs.}
+The unit-connector estimate of Q5-C061, in these same directions, is
+\begin{equation}\tag{Q92.1.11}\label{eq:Q92:1.11}
+\E[(pTF_\Sigma)^8]\le e^{-[16(j-2)+63/50]d}.
+\end{equation}
+The single-pair inputs \eqref{eq:Q58O:0.2} and \eqref{eq:L58:claim}
+give, for \(b\ge\allowbreak 2,\allowbreak L\ge\allowbreak 1\) and a genuine equal-pair
+factor \(E\),
+\begin{equation}\tag{Q92.1.12}\label{eq:Q92:1.12}
+\E[(pT^L(Eqf_b))^8]\le1-d/12000,\qquad
+\E[f_2\{T^L(Eqf_b)\}^4]\le1.
+\end{equation}
+The full-mean inequality of Appendix~\ref{proof:Q5-C081} is
+\begin{equation}\tag{Q92.1.13}\label{eq:Q92:1.13}
+\E e^{8K'W}\le\exp\{8\E(K'W)+17\|W\|_2^2\}
+\end{equation}
+for every real \(W\), with its signed mean.
+
+\paragraph{Q92.2.1 Stronger losses for pairs of minimum four.}
+Let \(R_{ab}=\allowbreak \sum_{n=\allowbreak a+1}^bK^n\one\). The all-index mean estimate in
+Appendix~\ref{proof:Q5-C090} is
+\begin{equation}\tag{Q92.2.1}\label{eq:Q92:2.1}
+\E f_n\le1-\frac{83}{32}d\qquad(n\ge4).
+\end{equation}
+Its proof treats \(n=\allowbreak 4,\allowbreak 5,\allowbreak 6,\allowbreak 7\) separately. For each \(n\ge\allowbreak 8\), the finite
+convolution retains \(f_0,\allowbreak \ldots,\allowbreak f_5\) and three additional losses to give
+\begin{equation}\tag{Q92.2.2}\label{eq:Q92:2.2}
+1-\E f_n\ge\tau(7-10d+3\delta_2+d^2)+3\kappa\delta_3
+\ge\kappa d(7-10d+7d^2)\ge95d/36.
+\end{equation}
+Here \(\delta_3\ge\allowbreak  d^3\). The loss divided by \(d\) for the first four
+lengths is at least \(83/32,\allowbreak 137/48,\allowbreak 89/32,\allowbreak 127/48\), respectively.
+The finite difference formula is
+\begin{equation}\tag{Q92.2.3}\label{eq:Q92:2.3}
+f_b-f_a=R_{ab}
++\sum_{i=0}^{a-3}(\beta_{a-i}-\beta_{b-i})f_i
+-\sum_{i=a-2}^{b-3}\beta_{b-i}f_i.
+\end{equation}
+The positive part of the middle sum is at most \(4\delta_2/(1-\theta^2)\).
+For \(a\ge\allowbreak 5\), this yields
+\begin{equation}\tag{Q92.2.4}\label{eq:Q92:2.4}
+\begin{aligned}
+h_a+f_b&=2\E f_{a-1}+f_b-f_a\\
+&\le2+R_{ab}-\left(\frac{83}{16}-\frac{1664}{855}\right)d
+\le2+R_{ab}-16d/5.
+\end{aligned}
+\end{equation}
+The final positive margin is \(2825/68400\). At \(a=\allowbreak 4\), retain the
+negative term in the convolution:
+\begin{equation}\tag{Q92.2.5}\label{eq:Q92:2.5}
+f_b-f_4\le R_{4b}+\delta_2(1+p)-\tau f_2.
+\end{equation}
+The row estimate \(|Kg|\le\allowbreak (1-g^2)/2\) gives \(f_2\ge\allowbreak  p^2/2\).
+Completing the square in \(p\ge\allowbreak 0\), using
+\(\delta_2\le\allowbreak  d/2\), \(\tau\ge\allowbreak  d/2\), gives
+\begin{equation}\tag{Q92.2.6}\label{eq:Q92:2.6}
+\delta_2(1+p)-\tau f_2
+\le\delta_2+\delta_2^2/(2\tau)\le3d/4.
+\end{equation}
+Since \(\E f_3=\allowbreak 1-2d\), \(h_4+f_b\le\allowbreak 2+R_{4b}-13d/4\).
+AM--GM on the nonnegative factors therefore gives, including \((a,\allowbreak b)=\allowbreak (4,\allowbreak 5)\),
+\begin{equation}\tag{Q92.2.7}\label{eq:Q92:2.7}
+\boxed{h_af_b\le e^{R_{ab}-16d/5}\qquad(4\le a<b).}
+\end{equation}
+
+\paragraph{Q92.2.2 The retained negative term for minimum three.}
+For every \(b\ge\allowbreak 4\), \eqref{eq:Q92:2.3} gives
+\begin{equation}\tag{Q92.2.8}\label{eq:Q92:2.8}
+f_b-f_3=R_{3b}+(d-\beta_b)-\sum_{i=1}^{b-3}\beta_{b-i}f_i.
+\end{equation}
+The term \(i=\allowbreak 1\) is present, \(\beta_{b-1}\ge\allowbreak \tau\), and
+\(d-\beta_b\le\allowbreak \delta_2\). Thus
+\begin{equation}\tag{Q92.2.9}\label{eq:Q92:2.9}
+h_3+f_b\le2-2d+R_{3b}+\delta_2-\tau p
+=2-3d+2\delta_2+R_{3b}-\tau g,
+\end{equation}
+and
+\begin{equation}\tag{Q92.2.10}\label{eq:Q92:2.10}
+\boxed{h_3f_b\le e^{R_{3b}-\tau g-(3d-2\delta_2)}.}
+\end{equation}
+The term \(-\tau p\) comes from the displayed finite convolution.
+We also use the coarser estimate
+\begin{equation}\tag{Q92.2.11}\label{eq:Q92:2.11}
+h_3f_b\le e^{R_{3b}-(2d-\delta_2)}.
+\end{equation}
+
+\paragraph{Q92.2.3 The three exponential envelopes.}
+Positive convolution gives \(q+f_{b_1}\le\allowbreak 2-\beta_{b_1}+R_{1b_1}\), so
+\begin{equation}\tag{Q92.2.12}\label{eq:Q92:2.12}
+qf_{b_1}\le e^{R_{1b_1}-\beta_{b_1}}.
+\end{equation}
+Apply \eqref{eq:Q92:2.7} to all remaining pairs except the second pair
+of III, where \eqref{eq:Q92:2.10} is used. Then
+\begin{equation}\tag{Q92.2.13}\label{eq:Q92:2.13}
+F_\Sigma\le e^{R-\Gamma},
+\end{equation}
+with the following functions and losses:
+\fitdisplay{
+\begin{array}{c|c|c}
+\text{class}&R&\Gamma\\\hline
+\mathrm I&R_0&\beta_{b_1}+16(j-1)d/5\\
+\mathrm {II}&R_0&16(j-1)d/5\\
+\mathrm {III}&R_0-\tau g&3d-2\delta_2+16(j-2)d/5
+\end{array}
+}{}
+Their losses are at least \(607d/160+16(j-2)d/5\),
+\(16d/5+16(j-2)d/5\), and \(35d/16+16(j-2)d/5\), respectively.
+
+\paragraph{Q92.3 Finite propagation with a signed mean.}
+For the function \(R\) in \eqref{eq:Q92:2.13}, put
+\begin{equation}\tag{Q92.3.1}\label{eq:Q92:3.1}
+e^R\le1+R+(\eta/2)R^2,\quad
+V_R=\E R^2,\quad D_i=\E K'^iR,\quad\delta=D_0+\eta V_R.
+\end{equation}
+One may take \(\eta=\allowbreak 15/14\) if \(|R|\le\allowbreak 1/5\), and \(\eta=\allowbreak 6/5\) if
+\(|R|\le\allowbreak 1/2\). Indeed, positive Taylor terms starting at degree two
+have successive ratio at most \(|R|/3\), giving remainder
+\(R^2/[2(1-|R|/3)]\); for negative \(R\), the integral remainder is
+at most \(R^2/2\). Positivity of \(T\) and \(T(R^2)\le\allowbreak 2V_R\) imply
+\begin{equation}\tag{Q92.3.2}\label{eq:Q92:3.2}
+\begin{gathered}
+0\le T^LF_\Sigma\le e^{-\Gamma}Z_L,\\
+Z_L=\bar f_L+K'^LR+\delta\bar f_{L-1}
++\sum_{i=1}^{L-1}D_i\bar f_{L-1-i}\ge0.
+\end{gathered}
+\end{equation}
+Here the exact finite identity is
+\begin{equation}\tag{Q92.3.3}\label{eq:Q92:3.3}
+T^LR=K'^LR+\sum_{i=0}^{L-1}D_i\bar f_{L-1-i}.
+\end{equation}
+For \(L\ge\allowbreak 2\), set \(\gamma_\ell=\allowbreak \beta_\ell-D_{\ell-1}\) for
+\(\ell\ge\allowbreak 3\). Then
+\begin{equation}\tag{Q92.3.4}\label{eq:Q92:3.4}
+Z_L=S'_L+K'^LR+\delta\bar f_{L-1}+D_1\bar f_{L-2}
+-\sum_{\ell=3}^L\gamma_\ell\bar f_{L-\ell}.
+\end{equation}
+Empty sums contribute zero. Write \(R=\allowbreak R_0+\xi g'\), with \(\xi=\allowbreak 0\)
+for I and II and \(\xi=\allowbreak \tau\) for III, and define
+\begin{equation}\tag{Q92.3.5}\label{eq:Q92:3.5}
+Q_n(z)=G_n(z)+z^{n+1}P(-z)+\xi z^n.
+\end{equation}
+The finite skew rotation blocks apply the frequency bounds to \(g'\).
+The quantities \(\delta_i,\allowbreak \tau\) remain global moments of the fixed model.
+We have
+\begin{equation}\tag{Q92.3.6}\label{eq:Q92:3.6}
+\begin{gathered}
+p+S'_L+K'^LR=2+N_L,\quad N_L=K'Q_{L-1}(K')g',\\
+\E N_L=-\beta_{L+1}+D_L.
+\end{gathered}
+\end{equation}
+If all \(\gamma_\ell\ge\allowbreak 0\), the bound \(0\le\allowbreak \bar f_n\le\allowbreak 2\) gives
+\begin{equation}\tag{Q92.3.7}\label{eq:Q92:3.7}
+c_2=2\delta_++(D_1)_+.
+\end{equation}
+For \(L\ge\allowbreak 3\), retain \(\bar f_0=\allowbreak 1\) when \(\gamma_L\ge\allowbreak  h_Ld\) and take
+\begin{equation}\tag{Q92.3.8}\label{eq:Q92:3.8}
+c_L=2\delta_++2(D_1)_+-h_Ld.
+\end{equation}
+These choices give \(p+Z_L\le\allowbreak 2+c_L+N_L\), a nonnegative upper bound.
+AM--GM and \eqref{eq:Q92:1.13} give
+\begin{equation}\tag{Q92.3.9}\label{eq:Q92:3.9}
+\boxed{\E[(pT^LF_\Sigma)^8]\le
+e^{-8\Gamma+8c_L+8\E N_L+17\|Q_{L-1}(K')g'\|_2^2}.}
+\end{equation}
+Both \(c_L\) and \(\E N_L\) retain their signs.
+
+\paragraph{Q92.4.1 Classes I and II for \(0<\allowbreak d\le\allowbreak 1/64\).}
+In both classes, \(|R_0|^2\le\allowbreak 100d/49<\allowbreak 1/25\), so \(\eta=\allowbreak 15/14\).
+For I the mandatory terms \(K^2\one,\allowbreak K^3\one\) give
+\begin{equation}\tag{Q92.4.1}\label{eq:Q92:4.1}
+\E R_0\le-d+\frac{\delta_2}{1-\theta^2}\le-\frac{439}{855}d,
+\qquad D_1=-\E KR_0\le-\delta_2+\frac{\delta_3}{1-\theta^2}\le0.
+\end{equation}
+Since \(V_R\le\allowbreak 325d/392\),
+\begin{equation}\tag{Q92.4.2}\label{eq:Q92:4.2}
+\delta\le\left(-\frac{439}{855}+\frac{4875}{5488}\right)d<3d/8.
+\end{equation}
+The last comparison is \(2817\cdot855=\allowbreak 2408535<\allowbreak 439\cdot5488=\allowbreak 2409232\).
+For II, \(K^3\one,\allowbreak K^4\one\) are absent, and the first possible
+positive mean term is \(K^8\one\). Consequently
+\begin{equation}\tag{Q92.4.3}\label{eq:Q92:4.3}
+\begin{gathered}
+\E R_0\le-d+\frac{\delta_4}{1-\theta^2}\le-11d/12,
+\qquad V_R\le\frac{325}{512}d,\\
+\delta\le\left(-11/12+\frac{4875}{7168}\right)d<0,
+\qquad D_1\le\frac{\delta_3}{1-\theta^2}<d/5.
+\end{gathered}
+\end{equation}
+For I, \(D_2\le\allowbreak \delta_2/(1-\theta^2)<\allowbreak d/2\). For II, the missing
+\(K^4\one\) gives
+\begin{equation}\tag{Q92.4.4}\label{eq:Q92:4.4}
+D_2\le\delta_2+\frac{\delta_4}{1-\theta^2}
+<(\theta+1/12)d<d/2.
+\end{equation}
+In both classes \(D_3\le\allowbreak \delta_3/(1-\theta^2)<\allowbreak d/5\).
+For every \(i\ge\allowbreak 4\), positive mean terms of \(K'^iR_0\) lie in one
+residue class modulo four, with first possible moment index at least three:
+\begin{equation}\tag{Q92.4.5}\label{eq:Q92:4.5}
+D_i\le\frac{\delta_3}{1-\theta^2}<d/5\qquad(i\ge4).
+\end{equation}
+Thus
+\begin{equation}\tag{Q92.4.6}\label{eq:Q92:4.6}
+\begin{gathered}
+\gamma_3\ge d/2,\quad\gamma_4\ge4d/5,\quad
+\gamma_\ell\ge(\kappa-1/5)d\ge3d/8\quad(\ell\ge5),\\
+\E N_2\le-d/2,\quad\E N_3\le-4d/5,\quad
+\E N_L\le-3d/8\quad(L\ge4).
+\end{gathered}
+\end{equation}
+
+\paragraph{Q92.4.2 All finite frequency predecessors for I and II.}
+Here \(\xi=\allowbreak 0\). Since \(U\ge\allowbreak 1/2\),
+\begin{equation}\tag{Q92.4.7}\label{eq:Q92:4.7}
+|Q_1|^2=|1-xP(-z)|^2\le1-x+(100/49)x^2\le1,
+\end{equation}
+using \((100/49)\theta=\allowbreak 325/392<\allowbreak 1\).
+For I, \(U,\allowbreak V\ge\allowbreak 1-x/(1-x^2)>\allowbreak 1/2\), and both are at most
+\(1/(1-x^2)\). Both coordinates of
+\(Q_2=\allowbreak 1-x^2V+z(1-xU)\) are nonnegative, so
+\begin{equation}\tag{Q92.4.8}\label{eq:Q92:4.8}
+|Q_2|^2\le(1-x^2/2)^2+x(1-x/2)^2
+\le1+x-\frac{29}{16}x^2\le1+\frac4{29}<\frac87.
+\end{equation}
+The middle comparison uses \(x\le\allowbreak 1/2\). For II, \(P_1=\allowbreak 0\) gives
+\(-x/(1-x^2)\le\allowbreak  V\le\allowbreak  x^2/(1-x^2)\).
+The real coordinate is positive and at most \(13/12\); the imaginary
+coordinate has modulus at most \(\sqrt x(1-x/2)\).
+The function \(x(1-x/2)^2\) increases on \([0,\allowbreak 1/2]\) to \(9/32\), whence
+\begin{equation}\tag{Q92.4.9}\label{eq:Q92:4.9}
+|Q_2|^2\le169/144+9/32=419/288<3/2.
+\end{equation}
+For both classes,
+\begin{equation}\tag{Q92.4.10}\label{eq:Q92:4.10}
+\boxed{\|Q_n(K')\|\le6/5\qquad(n\ge3).}
+\end{equation}
+At \(n=\allowbreak 3\),
+\fitdisplay{
+|G_3|\le1-x/2+x^2/2,\qquad |Q_3|\le1-x/2+(27/14)x^2.
+}{}
+The latter convex quadratic has values at most one and
+\(1+1651/14336<\allowbreak 6/5\) at \(0,\allowbreak \theta\).
+At \(n=\allowbreak 4\), \(|G_4|\le\allowbreak 1\) and the remainder is at most
+\((10/7)x^{5/2}\le\allowbreak 845/5376<\allowbreak 1/5\).
+For each \(n\ge\allowbreak 5\), \(|G_n|\le\allowbreak 1\), and the remainder is at most
+\((10/7)\theta^3<\allowbreak 5/49<\allowbreak 1/5\).
+
+\paragraph{Q92.4.3 The low-domain moment bounds for I and II.}
+First take \(j=\allowbreak 2\). Every additional pair subtracts \((128/5)d\)
+from the exponent of \eqref{eq:Q92:3.9}. For I the bounds are
+\begin{equation}\tag{Q92.4.11}\label{eq:Q92:4.11}
+\begin{array}{c|c|c|c|c}
+L&c_L/d&\E N_L/d&\|Q_{L-1}g'\|^2/d&\text{exponent}/d\\\hline
+2&3/4&-1/2&1&-227/20\\
+3&1/4&-4/5&8/7&-429/28\\
+L\ge4&3/8&-3/8&36/25&-587/100
+\end{array}
+\end{equation}
+The three exponent calculations are
+\(-607/20+6-4+17\), \(-607/20+2-32/5+136/7\), and
+\(-607/20+612/25=\allowbreak -587/100\).
+For II, \(\delta_+=\allowbreak 0\) and \((D_1)_+\le\allowbreak  d/5\), giving
+\begin{equation}\tag{Q92.4.12}\label{eq:Q92:4.12}
+\begin{array}{c|c|c|c|c}
+L&c_L/d&\E N_L/d&\|Q_{L-1}g'\|^2/d&\text{exponent}/d\\\hline
+2&1/5&-1/2&1&-11\\
+3&-1/10&-4/5&3/2&-73/10\\
+L\ge4&1/40&-3/8&36/25&-98/25
+\end{array}
+\end{equation}
+The calculations are \(-128/5+8/5-4+17\),
+\(-128/5-4/5-32/5+51/2\), and \(-128/5+1/5-3+612/25\).
+All these bounds hold throughout \(0<\allowbreak d\le\allowbreak 1/64\).
+
+\paragraph{Q92.5.1 Class III for \(0<\allowbreak d\le\allowbreak 1/6\): the same variable and its variance.}
+Here the direction is \((1,\allowbreak 2,\allowbreak 3,\allowbreak b_2,\allowbreak \ldots)\) and \(R=\allowbreak R_0-\tau g\).
+The III mask has \(\|P(K)\|\le\allowbreak 1\); its first odd coefficient is absent, so
+\begin{equation}\tag{Q92.5.1}\label{eq:Q92:5.1}
+\E[P(K)g]\ge-\frac{\delta_3}{1-\theta^2}>-d/5.
+\end{equation}
+Apply the row bound to \(R=\allowbreak K(P(K)g-\tau\one)\):
+\begin{equation}\tag{Q92.5.2}\label{eq:Q92:5.2}
+|R|^2\le d+\tau^2+(2\tau/5)d
+\le d+(7/5)d^2\le37/180<1/4.
+\end{equation}
+Thus \(\eta=\allowbreak 6/5\) throughout this domain.
+The terms \(K^2\one,\allowbreak K^4\one\) are present in \(R_0\), whereas
+\(K^3\one\) is absent. Retaining their signs gives
+\begin{equation}\tag{Q92.5.3}\label{eq:Q92:5.3}
+\E R_0\le-d+\frac{\delta_2}{1-\theta^2}\le-\frac{439}{855}d,
+\qquad\E(gR_0)\ge-\frac{\delta_4}{1-\theta^2}>-d/12.
+\end{equation}
+Since \(\tau\le\allowbreak  d-d^2\le\allowbreak 5/36\),
+\begin{equation}\tag{Q92.5.4}\label{eq:Q92:5.4}
+\begin{aligned}
+V_R&=\E R_0^2-2\tau\E(gR_0)+\tau^2d\\
+&\le\delta_2+(\tau/6)d+\tau^2d\le\frac{1163}{2592}d.
+\end{aligned}
+\end{equation}
+Consequently
+\begin{equation}\tag{Q92.5.5}\label{eq:Q92:5.5}
+\boxed{\delta=\E R+(6/5)V_R
+\le\left(-439/855+1163/2160\right)d
+=\frac{205}{8208}d<d/40.}
+\end{equation}
+The final comparison uses \(205\cdot40=\allowbreak 8200<\allowbreak 8208\).
+
+\paragraph{Q92.5.2 All signed means and convolution losses for III.}
+We have
+\begin{equation}\tag{Q92.5.6}\label{eq:Q92:5.6}
+D_1=\E(gR_0)-\tau d\le\frac{\delta_3}{1-\theta^2}-\tau d<d/5.
+\end{equation}
+Retaining the negative contribution from \(K^4\one\) gives
+\begin{equation}\tag{Q92.5.7}\label{eq:Q92:5.7}
+D_2\le\delta_2-\delta_3+\frac{\delta_4}{1-\theta^2}\le\delta_2.
+\end{equation}
+At the third step, the first possible positive contribution from \(R_0\)
+is \(K^7\one\), and \(\tau g'\) contributes \(+\tau\delta_2\). Hence
+\begin{equation}\tag{Q92.5.8}\label{eq:Q92:5.8}
+D_3\le\frac{\delta_5}{1-\theta^2}+\tau\delta_2
+<\left(\frac{13}{384}+\frac{65}{1152}\right)d
+=\frac{13}{144}d<d/10.
+\end{equation}
+For every \(i\ge\allowbreak 4\), the positive contribution from \(R_0\) is at most
+\(\delta_3/(1-\theta^2)\). The first positive contribution of
+\(\tau g'\) in this range is \(\tau\delta_4\) at \(i=\allowbreak 7\). Therefore
+\begin{equation}\tag{Q92.5.9}\label{eq:Q92:5.9}
+D_i\le\frac{\delta_3}{1-\theta^2}+\tau\delta_4
+<\left(\frac15+\frac5{504}\right)d<d/4\qquad(i\ge4).
+\end{equation}
+The complete loss and mean bounds are
+\begin{equation}\tag{Q92.5.10}\label{eq:Q92:5.10}
+\begin{gathered}
+\gamma_3\ge\kappa d,\quad\gamma_4\ge9d/10,\quad
+\gamma_\ell\ge11d/32\quad(\ell\ge5),\\
+\E N_2\le-\kappa d,\quad\E N_3\le-9d/10,\quad
+\E N_L\le-11d/32\quad(L\ge4).
+\end{gathered}
+\end{equation}
+
+\paragraph{Q92.5.3 The two short frequency predecessors for III.}
+Now \(Q_n=\allowbreak G_n+z^{n+1}P(-z)+\tau z^n\).
+For \(Q_1=\allowbreak 1-xU+z(\tau+xV)\), the real coordinate lies in
+\([0,\allowbreak 1-x/2]\). By \eqref{eq:Q92:1.9},
+\(-1/5<\allowbreak \tau+xV\le\allowbreak 5/36+1/12=\allowbreak 2/9<\allowbreak 1/4\), so
+\begin{equation}\tag{Q92.5.11}\label{eq:Q92:5.11}
+|Q_1|^2\le(1-x/2)^2+x/16\le1.
+\end{equation}
+The real coordinate of \(Q_2=\allowbreak 1-\tau x-x^2V+z(1-xU)\) is greater than
+\(1-1/16-1/30>\allowbreak 0\) and less than \(13/12\). Its imaginary coordinate
+has modulus at most \(\sqrt x(1-x/2)\). Thus
+\begin{equation}\tag{Q92.5.12}\label{eq:Q92:5.12}
+|Q_2|^2\le419/288<3/2.
+\end{equation}
+
+\paragraph{Q92.5.4 All long frequency predecessors for III.}
+First put \(\widetilde Q_n=\allowbreak G_n+z^{n+1}P(-z)\). We show
+\begin{equation}\tag{Q92.5.13}\label{eq:Q92:5.13}
+|\widetilde Q_n(z)|\le1\qquad(n\ge3,\ 0\le x\le\theta),
+\end{equation}
+using both forced coefficients of III.
+At \(n=\allowbreak 3\), both coordinates are nonnegative, and
+\begin{equation}\tag{Q92.5.14}\label{eq:Q92:5.14}
+\Re\widetilde Q_3\le\frac{1-x+x^5}{1-x^2},\qquad
+\Im\widetilde Q_3\le\frac{\sqrt x(1-x^2+x^3)}{1-x^2}.
+\end{equation}
+The sum of their squared upper bounds is at most one precisely when
+\begin{equation}\tag{Q92.5.15}\label{eq:Q92:5.15}
+G(x)=1-3x+2x^2-x^3-3x^4+4x^5-x^6-x^9\ge0.
+\end{equation}
+Since \(x+x^4<\allowbreak 7/16<\allowbreak 1/2\),
+\(G(x)\ge\allowbreak  G_*(x)=\allowbreak 1-3x+2x^2-x^3-3x^4+(7/2)x^5\).
+On \([0,\allowbreak \theta]\),
+\begin{equation}\tag{Q92.5.16}\label{eq:Q92:5.16}
+G_*'(x)\le-3+4\theta+(35/2)(1/32)=-53/64<0,
+\qquad G_*(\theta)=86987/67108864>0.
+\end{equation}
+At \(n=\allowbreak 4\),
+\begin{equation}\tag{Q92.5.17}\label{eq:Q92:5.17}
+|\widetilde Q_4|\le(1-x)\sqrt{1+x}+x^{5/2}
+\le1-x/2+x^2/6\le1.
+\end{equation}
+At \(n=\allowbreak 5\),
+\begin{equation}\tag{Q92.5.18}\label{eq:Q92:5.18}
+|G_5|\le1-x/2+x^2/2,\qquad
+|\widetilde Q_5|\le1-x/2+x^2/2+x^3\le1.
+\end{equation}
+The first squared comparison has positive difference
+\(x^2(1+2x-3x^2)/4\); the second uses \(x\le\allowbreak 1/2\).
+For every \(n\ge\allowbreak 6\), the finite geometric formula gives
+\begin{equation}\tag{Q92.5.19}\label{eq:Q92:5.19}
+|\widetilde Q_n|\le\frac{1+x^3}{\sqrt{1+x}}+x^3\le1.
+\end{equation}
+The final comparison is equivalent to \(x(1+\sqrt{1+x})\le\allowbreak 1\), whose
+left side is at most \((13/32)(11/5)=\allowbreak 143/160<\allowbreak 1\).
+At \(x=\allowbreak 0\), equality holds directly.
+Restoring the \(\tau\) term, for all \(n\ge\allowbreak 3\),
+\begin{equation}\tag{Q92.5.20}\label{eq:Q92:5.20}
+|Q_n|\le1+\tau\theta^{3/2}<1+65/1728<21/20,
+\end{equation}
+using \(\tau\le\allowbreak 5/36\) and \(\sqrt\theta<\allowbreak 2/3\).
+
+\paragraph{Q92.5.5 The low-domain moment bounds for III.}
+For \(j=\allowbreak 2\), use \(\Gamma\ge\allowbreak 35d/16\) in \eqref{eq:Q92:3.9}:
+\begin{equation}\tag{Q92.5.21}\label{eq:Q92:5.21}
+\begin{array}{c|c|c|c|c}
+L&c_L/d&\E N_L/d&\|Q_{L-1}g'\|^2/d&\text{exponent}/d\\\hline
+2&1/4&-19/32&1&-13/4\\
+3&-23/160&-9/10&3/2&-7/20\\
+L\ge4&17/160&-11/32&441/400&-263/400
+\end{array}
+\end{equation}
+These are the calculations
+\fitdisplay{
+\begin{gathered}
+-35/2+2-19/4+17=-13/4,\\
+-35/2-23/20-36/5+51/2=-7/20,\\
+-35/2+17/20-11/4+7497/400=-263/400.
+\end{gathered}
+}{}
+Each additional pair subtracts \((128/5)d\) from the exponent.
+This covers every \(b_2\ge\allowbreak 4\), every later pair and \(L\ge\allowbreak 2\) on
+\(0<\allowbreak d\le\allowbreak 1/6\).
+
+\paragraph{Q92.6 Pointwise tail comparison on the remaining domains.}
+Compare with the same-direction single-pair input \(qf_{b_1}\) in
+\eqref{eq:Q92:1.12}. Put
+\begin{equation}\tag{Q92.6.1}\label{eq:Q92:6.1}
+S=\sum_{i=2}^jR_{a_ib_i}.
+\end{equation}
+The intervals remain disjoint, so the row and mask bounds imply
+\begin{equation}\tag{Q92.6.2}\label{eq:Q92:6.2}
+|S|\le\frac{10}{7}\theta^{(a_2-1)/2}\sqrt d.
+\end{equation}
+For I and II, \(a_2\ge\allowbreak 4\), so \(|S|<\allowbreak (3/8)\sqrt d\): indeed,
+\(\sqrt\theta<\allowbreak 9/14\) gives
+\((10/7)\theta^{3/2}<\allowbreak 585/1568<\allowbreak 3/8\).
+For \(d\ge\allowbreak 1/64\), \(\sqrt d\le\allowbreak 8d\), and
+\begin{equation}\tag{Q92.6.3}\label{eq:Q92:6.3}
+\prod_{i=2}^jh_{a_i}f_{b_i}
+\le e^{S-(16/5)(j-1)d}
+\le e^{-[1/5+(16/5)(j-2)]d}.
+\end{equation}
+For III, \(|S|\le\allowbreak (65/112)\sqrt d\).
+For \(d\ge\allowbreak 1/6\), \(\sqrt d\le\allowbreak \sqrt6\,\allowbreak d<\allowbreak (5/2)d\), so
+\begin{equation}\tag{Q92.6.4}\label{eq:Q92:6.4}
+\prod_{i=2}^jh_{a_i}f_{b_i}
+\le e^{S-[2-\theta+(16/5)(j-2)]d}
+\le e^{-[1/7+(16/5)(j-2)]d},
+\end{equation}
+because \(2-\theta-325/224=\allowbreak 51/32-325/224=\allowbreak 1/7\).
+Positivity of \(T^L\) and \eqref{eq:Q92:1.12} now give, for all \(L\ge\allowbreak 1\),
+\begin{equation}\tag{Q92.6.5}\label{eq:Q92:6.5}
+\E[(pT^LF_\Sigma)^8]\le
+\begin{cases}
+e^{-[8/5+(128/5)(j-2)]d},&\text{I and II, }d\ge1/64,\\
+e^{-[8/7+(128/5)(j-2)]d},&\text{III, }d\ge1/6.
+\end{cases}
+\end{equation}
+Both adjacent domains include their common endpoint and use the directions
+of \eqref{eq:Q92:0.3}.
+
+\paragraph{Q92.7 Completion and genuine equal-pair factors.}
+Classes I--III cover \eqref{eq:Q92:0.2}. Use
+\eqref{eq:Q92:1.11} for \(L=\allowbreak 1\), and the preceding bounds for
+\(L=\allowbreak 2,\allowbreak 3\) and \(L\ge\allowbreak 4\). The weakest new basic exponent is
+\(7/20>\allowbreak 1/4\), and \(128/5>\allowbreak 16\), hence
+\begin{equation}\tag{Q92.7.1}\label{eq:Q92:7.1}
+\E[(pT^LF_\Sigma)^8]\le e^{-[1/4+16(j-2)]d}.
+\end{equation}
+Since \(d\le\allowbreak 1/3\),
+\begin{equation}\tag{Q92.7.2}\label{eq:Q92:7.2}
+e^{-d/4}\le\frac1{1+d/4}
+=1-\frac d{4+d}\le1-\frac3{13}d\le1-d/5.
+\end{equation}
+Restore \(E_t,\allowbreak E_r\le\allowbreak 1\) by positive comparison to obtain
+\eqref{eq:Q92:0.4}. Replacing \(K\) by \(-K\) reverses all terminal,
+connector and equal-pair edges together, interchanges \(p/q\) and
+\(A/T\), and preserves \(d,\allowbreak \delta_i\).
+The same directions also have the separate weighted fourth estimate
+proved in Appendix~\ref{loc:S29}:
+\begin{equation}\tag{Q92.7.3}\label{eq:Q92:7.3}
+\E[p\{T^L(E_tF_\Sigma)\}^4]\le1\qquad(L\ge1).
+\end{equation}

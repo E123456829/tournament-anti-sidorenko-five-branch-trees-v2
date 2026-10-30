@@ -1,0 +1,128 @@
+\subsection{Compatible square moments at a unit root}
+\label{sec:unit-square-payments}
+
+\begin{lemma}[A square with compatible moments]
+\label{lem:unit-square-hermite}
+Suppose $0\le H\le(c+X/2)^2$, $|X|\le U$, $c>U/2$, and
+\[
+ \E X\le-\alpha,\qquad \E X^2\le hU^2,\qquad
+ 0\le\alpha\le\sqrt h\,U,\quad U>0,\quad0\le h<1.
+\]
+Put $k=\alpha/U$ and
+\[
+ x_-=-U\frac{k+h}{1+k},\qquad
+ \pi=\frac{h-k^2}{1+2k+h}.
+\]
+Then, for every integer $j\ge2$,
+\begin{equation}\label{eq:unit-square-hermite:general}
+ \E H^j\le
+ (1-\pi)(c+x_-/2)^{2j}+\pi(c+U/2)^{2j}.
+\end{equation}
+In particular,
+\begin{equation}\label{eq:unit-square-hermite}
+ \E H^4\le
+ (1-\pi)(c+x_-/2)^8+\pi(c+U/2)^8.
+\end{equation}
+If $U=0$, the bound for the $j$th moment is $c^{2j}$.
+\end{lemma}
+\begin{proof}
+The quadratic tangent to $f(x)=(c+x/2)^{2j}$ at $x_-$ and agreeing
+with $f$ at $U$ majorizes $f$ on $[-U,U]$. Its Hermite remainder
+has the sign of $(x-x_-)^2(x-U)$, since $f'''\ge0$.
+The quadratic coefficient is nonnegative by convexity, and the linear
+coefficient is nonnegative because $x_-\le0$.
+Hence its expectation is at most its value at the moment bounds
+$\E X=-\alpha$, $\E X^2=hU^2$.
+The two points $x_-,U$, with upper probability $\pi$, have exactly
+these moments; $x_-\in[-U,0]$ and $0\le\pi\le1$.
+This proves the general bound; $j=4$ gives the displayed eighth-power
+formula. The zero case is direct.
+\end{proof}
+
+\begin{corollary}[The high-domain two-step path cost]
+\label{cor:unit-square:two-step-path}
+In the finite skew-kernel model, put \(p=1+K\one\) and
+\(\bar f_2=T^2\one\). Then
+\begin{equation}\label{eq:unit-square:two-step-path}
+ \E(p\bar f_2)^8\le
+ \begin{cases}
+  35/8,&1/5\le d\le1/4,\\
+  82/15,&1/4\le d\le1/3.
+ \end{cases}
+\end{equation}
+\end{corollary}
+\begin{proof}
+Let \(r=K^2\one\). The nonnegative factors satisfy
+\(p+\bar f_2=2+r\), so \(p\bar f_2\le(1+r/2)^2\).
+The same actual \(r\) has
+\(|r|\le\sqrt d\), \(\E r=-d\), and \(\E r^2\le\theta d\),
+where \(\theta=13/32\). Apply
+\eqref{eq:unit-square-hermite:general} with \(j=8\),
+\(c=1,U=\sqrt d,\alpha=d,h=\theta\).
+The negative atom contributes at most one, and
+\(\pi=(\theta-d)/(1+2\sqrt d+\theta)\).
+For \(d\ge1/4\), \(\pi\le5/77<1/15\) and
+\((1+\sqrt d/2)^{16}<(13/10)^{16}<67\), giving \(82/15\).
+For \(1/5\le d\le1/4\), use
+\(\pi\le33/353<3/32\) and
+\((1+\sqrt d/2)^{16}\le(5/4)^{16}<36\), giving \(35/8\).
+The two last power comparisons follow from
+\((13/10)^4<20/7\), \((20/7)^4<67\), and \((5/4)^8<6\).
+\end{proof}
+
+The following three scalar payments apply whenever the square in
+Lemma~\ref{lem:unit-square-hermite} has the displayed moment data,
+on $0\le d\le1/3$. Write $U=t\,u(d)$, $\alpha=t^2a(d)$,
+and $c=C/D$, with $D=1$.
+\Needspace{12\baselineskip}
+\begingroup\small
+\begin{longtable}{@{}clllll@{}}
+\caption{Compatible square-moment data.}
+\label{tab:unit-square-data}\\
+\toprule
+Row & $d$ & $u$ & $a$ & $c$ & $h$\\\midrule
+I & $t^2$ & $1$ & $1/2$ & $1-3d/4$ & $13/32$\\
+II & $63t^2/71$ & $1$ & $(63/71)(4/5-d)$ & $1-4d/5$ & $13/32$\\
+III & $t^2$ & $1$ & $41/96$ & $1-37d/64$ & $3/10$\\\bottomrule
+\end{longtable}
+\endgroup
+The targets are
+\[
+ \mathcal T_{\rm I}=(1-15d/32)^8,\quad
+ \mathcal T_{\rm II}=(1-9d/20)^8,\quad
+ \mathcal T_{\rm III}=(1-15d/32+3d^2/8)^8.
+\]
+
+Here is one polynomial certificate for all three targets. Define
+\[
+ \begin{split}
+ P&=u+ta,\qquad Q=(1+h)u^2+2tau,\\
+ L&=CP-\tfrac12Dtu(ta+hu),\qquad B=C+\tfrac12Dtu,\\
+ N&=L^8+(hu^2-t^2a^2)B^8P^6,\qquad
+ \mathcal D=D^8QP^6.
+ \end{split}
+\]
+Substitution into \eqref{eq:unit-square-hermite} gives exactly
+$N/\mathcal D$. The factors $P,Q,D$ are positive on each actual
+interval. Set $\mathcal G=(\mathcal T\mathcal D-N)/t^2$, dividing out its exact endpoint factor.
+Let $a_*$ be the left endpoint of the certificate interval and
+$\widehat{\mathcal G}(t)=\mathcal G(t)/\mathcal G(a_*)$.
+\Needspace{12\baselineskip}
+\begingroup\small
+\begin{longtable}{@{}cccc@{}}
+\caption{Continuous polynomial certificates for Table~\ref{tab:unit-square-data}.}
+\label{tab:unit-square-certificates}\\
+\toprule
+Row & Certificate interval for $t$ & Degree & Bernstein bound\\\midrule
+I & $[0,577351/10^6]$ & $21$ & $B_j(\widehat{\mathcal G})\ge1/10$\\
+II & $[0,612913/10^6]$ & $37$ & $B_j(\widehat{\mathcal G})\ge1/10$\\
+III & $[0,577351/10^6]$ & $37$ & $B_j(\widehat{\mathcal G})\ge1/10$\\\bottomrule
+\end{longtable}
+\endgroup
+In every row $\mathcal G(a_*)>1/2$. The coefficient formula is
+\eqref{eq:bernstein-coefficients}, with one variable. Thus Lemma~\ref{lem:bernstein-certificate}
+proves $\E H^4\le\mathcal T$ throughout the stated actual domains.
+The rational certificate intervals include those domains, as is seen
+by squaring their positive endpoints. At $d=0$, rows I--III have
+$X=0,c=1$ and give equality.
+

@@ -1,0 +1,529 @@
+% Shared two-arm terminal proof at roots of minimum one and two.
+\subsection{A two-arm terminal at roots of minimum one and two}
+\label{sec:odd-two:roots}
+
+Use the original model of Section~\ref{sec:odd-common-calculus} and put
+\(h=17/32\). All lengths below are positive integers, all ordered lists
+are finite, and all operators use the same original probability measure.
+
+\begin{lemma}[Transporting a complete constant]
+\label{lem:odd-two:constant}
+Suppose an actual positive message satisfies
+\[
+ \log H\le a+B(V+c\one)-\tfrac3{10}(u+\xi Bu)^2,
+ \qquad \xi\in\{0,1\},\quad c\in\mathbb R.
+\]
+Its two available fourth certificates are
+\begin{align}
+ J_f&=4(a+\E BV)+\tfrac{17}{4}\|V+c\one\|^2,
+       \label{eq:odd-two:full-certificate}\\
+ J_c&=4\{a+\E B(V-\xi cu)\}
+       +\tfrac{17}{4}\|V-\xi cu\|^2+\tfrac{10}{3}c^2.
+       \label{eq:odd-two:curved-certificate}
+\end{align}
+Each bounds \(\log\E H^4\). The case \(\xi=0\) uses the actual
+\(p\) curvature, and \(\xi=1\) uses the actual \(W_2\) curvature.
+\end{lemma}
+\begin{proof}
+For \(w\in[-1,1)\), \(\log(1-w)\le-w-3w^2/10\).
+Its derivative proof is the unit-arm proof applied to \(w\); the
+endpoint \(-1\) is paid by \(\log2<7/10\). Both \(w=u\) and
+\(w=u+Bu=1-W_2\) have this range. The full certificate follows by
+discarding the nonpositive square and applying
+\eqref{eq:oc:signed-moments}. For the second use the exact inequality
+\[
+ 4cu-\tfrac65(u+\xi Bu)^2
+ \le\tfrac{10}{3}c^2-4\xi cBu
+\]
+before that same signed-mean bound. In particular no mean or
+constant-vector cross term is declared zero.
+\end{proof}
+
+\begin{lemma}[The terminal packet actually needed]
+\label{lem:odd-two:packet}
+For \(t\ge3\), set \(m=t-2\), \(G_m=e+zf\) at
+\(z=i\sqrt x\), and
+\[
+ \gamma=\beta_{t-1}=\int f\,d\nu,\quad
+ \Gamma=\beta_t+\gamma=\int(e+f)\,d\nu,\quad
+ R=(\gamma+x e+zx f)u.
+\]
+The actual terminal \(F_t=\bar f_2W_t\) satisfies
+\(F_t\le e^{R-\Gamma}\). At \(t=3\) the same envelope also
+holds for the distinct terminal \(h_2f_3\).
+Put \(D_j=\E B^jR\), \(\sigma=\E R^2\),
+\(\delta=D_0+\eta\sigma\), and \(\epsilon=\delta+D_1\), where
+\(\eta=3/2\) at \(t\ge4\) and \(\eta=8/7\) at \(t=3\).
+Then
+\begin{equation}\label{eq:odd-two:packet}
+\begin{gathered}
+ TF_t\le e^{-\Gamma}(q+BR+\delta),\qquad
+ \Gamma\ge d,\quad0\le\gamma\le d,\quad\|R\|\le\tfrac45\sqrt d,\\
+ -\delta_2\le\delta\le\tfrac7{12}d,\qquad
+ -\tfrac{13}{16}d\le\epsilon\le0,\qquad D_1\le0,\\
+ \Gamma-2\delta_+\ge\tfrac35d,\qquad
+ \Gamma-(1-d)\delta\ge\tfrac45d,\qquad
+ \gamma_j:=\beta_j-D_{j-1}\ge hd\quad(j\ge3).
+\end{gathered}
+\end{equation}
+The first-row statement also holds for the stated \(h_2f_3\) choice.
+\end{lemma}
+\begin{proof}
+Retain \(\beta_{t-1}W_1\) in the positive \(A\)-image defining
+\(W_t\). Adding \(\bar f_2\) gives
+\(\bar f_2+W_t\le2-\Gamma+R\); positive AM--GM proves the
+envelope. At \(t=3\) both actual sums
+\(\bar f_2+W_3\) and \(h_2+f_3\) equal \(2-d-B^2u\).
+The exact moments are
+\begin{equation}\label{eq:odd-two:packet-moments}
+\begin{aligned}
+ \sigma&=\gamma^2d+2\gamma\int x e\,d\nu
+                +\int x^2(e^2+xf^2)\,d\nu,\\
+ D_0&=-\int xf\,d\nu,&
+ D_1&=-\gamma d-\int xe\,d\nu,\\
+ D_2&=\int x^2f\,d\nu,&
+ D_3&=\gamma\delta_2+\int x^2e\,d\nu.
+\end{aligned}
+\end{equation}
+For \(m\ge2\), \(1-x\le e,f\le1\). The row bound gives
+\(|R|\le d+\sqrt{\delta_2+\delta_3}<1\); hence
+\(e^R\le1+R+3R^2/4\) and the positive first row follows.
+The positive remainder coefficient is at most \(e-2<3/4\);
+the negative remainder is at most \(1/2\).
+Moreover
+\[
+ \sigma/d\le\tfrac19+\tfrac{2\theta}{3}+\theta^2+\theta^3
+ <\tfrac58<\tfrac{16}{25}.
+\]
+
+For fixed actual \(e,f\), \(\epsilon\) is convex in
+\(\gamma\in[0,1/3]\). At zero, its two negative linear terms
+absorb the positive squares. At \(\gamma=1/3\) it is at most
+\[
+ -d/6+\int[-x+(5/2)x^2+(3/2)x^3]\,d\nu\le0.
+\]
+Here maximize the actual \(e\)-term at one and the \(f\)-term
+at \(1-x\); the latter derivative is negative. The displayed
+convex cubic has endpoints zero and \(7007/65536<1/6\).
+Conversely \(\sigma\ge\gamma^2d+2\gamma\int xe\,d\nu\)
+gives
+\[
+ \epsilon/d\ge-2\theta+(3\theta-1)\gamma+(3/2)\gamma^2
+ \ge-13/16.
+\]
+Here \(3\gamma-1\le0\) and both first integrals are at most
+\(\delta_2\le\theta d\).
+
+We prove the joint scalar bound before using it to bound \(\delta\).
+When \(\delta\le0\), \(\Gamma\ge2\kappa d>5d/6\).
+Otherwise consider \(\Gamma-2\delta\), retaining
+\(\gamma=\int f\,d\nu\). If \(m\) is even, \(e=f\). With
+\(X=\int xf\,d\nu\), \(Y=\int x^2(1+x)f^2\,d\nu\),
+\[
+ \Gamma-2\delta=2\gamma-3\gamma^2d+(2-6\gamma)X-3Y,
+ \qquad Y\le\theta(1+\theta)X.
+\]
+If \(2-6\gamma-3\theta(1+\theta)\ge0\), the result is at
+least \(95d/96\). Otherwise use \(X\le\theta\gamma\) and
+\(a=\gamma/d\in[\kappa,1]\). The lower bound divided by \(d\) is
+\[
+ C a-\tfrac{55}{48}a^2,\qquad
+ C=2+2\theta-3\theta^2(1+\theta)>21/10.
+\]
+Its two endpoint lower bounds are \(229/240\) and
+\(207157/245760\), both exceeding \(5/6\).
+If \(m\ge3\) is odd, \(e=1-xf\) and
+\[
+ \sigma=\gamma^2d+2\gamma\delta_2-2\gamma\int x^2f\,d\nu
+ +\delta_3-\int x^3 f[2-(1+x)f]\,d\nu.
+\]
+Using \(\int xf\,d\nu\ge\kappa\delta_2\),
+\(\int x^2f\,d\nu\ge\kappa\delta_3\), and
+\(f[2-(1+x)f]\ge\kappa^2\) gives
+\[
+ \Gamma-2\delta\ge d+\gamma-3\gamma^2d+\int J_\gamma\,d\nu,
+ \quad J_\gamma=(\kappa-6\gamma)x+(6\gamma\kappa-3)x^2
+                         +3\kappa^2x^3.
+\]
+Its second derivative is at most
+\(4\kappa-6+18\kappa^2\theta<0\), and its endpoint at
+\(\theta\) is negative: the \(\gamma\)-coefficient is negative
+and the \(\gamma=0\) value is negative. After using \(d\le1/3\), its lower bound divided
+by \(d\) is
+\[
+ A+Ca-a^2/3,\quad
+ A=1+\kappa\theta-3\theta^2+3\kappa^2\theta^3>13/16,
+ \quad C=1-2\theta+2\kappa\theta^2>3/8.
+\]
+The two endpoint bounds exceed \(41/48\) and \(233/256\).
+Thus, for every finite \(m\ge2\),
+\begin{equation}\label{eq:odd-two:joint-loss}
+ \Gamma-2\delta_+\ge5d/6\qquad(t\ge4).
+\end{equation}
+Since \(\Gamma\le2d\), this already implies the sufficient
+\(\delta\le7d/12\). Also \(\delta\ge D_0\ge-\delta_2\),
+and \((1-d)\delta\le2\delta_+\) proves the other scalar bound.
+
+At \(m=1\), \((e,f,\gamma,\Gamma)=(1,0,0,d)\),
+\(R=-B^2u\), and \(|R|\le\sqrt{\delta_2}<3/8\).
+The finite factorial-tail bound for the remainder coefficient is
+\(7281/12800<4/7\). Therefore
+\[
+ \delta=8\delta_3/7<d/5,\quad
+ \epsilon=\delta-\delta_2,\quad D_2=0,\quad D_3=\delta_3.
+\]
+These values give all the stated scalar bounds.
+Finally the complete four residue classes, for every \(j\ge0\), are
+\[
+\begin{aligned}
+ D_{4j}&=-\int x^{2j+1}f\,d\nu,&
+ D_{4j+1}&=-\gamma\delta_{2j+1}-\int x^{2j+1}e\,d\nu,\\
+ D_{4j+2}&=\int x^{2j+2}f\,d\nu,&
+ D_{4j+3}&=\gamma\delta_{2j+2}+\int x^{2j+2}e\,d\nu.
+\end{aligned}
+\]
+The first two positive classes give
+\(D_2\le\delta_3\), \(D_3\le d\delta_2+\delta_3\).
+Every later positive value is at most
+\((d+\theta)\delta_4<3\delta_4/4<d/16\), and each
+subsequent member contracts by \(\theta^2\). Combining with the
+finite \(\beta_j\) bounds proves \(\gamma_j\ge17d/32\), including
+the next mean index at every connector length.
+\end{proof}
+
+\Needspace{20\baselineskip}
+\begin{theorem}[The two root minima with the exact terminal \((2,t)\)]
+\label{thm:odd-two:roots}
+Let the root residual list be
+\((r,a,b,s_1,t_1,\ldots,s_k,t_k)\), with \(r\in\{1,2\}\),
+\(3\le a<b<s_1<t_1<\cdots<s_k<t_k\), and terminal list
+\((2,t)\), \(t\ge3\). The directions are as follows:
+\begin{longtable}{@{}ccp{.40\linewidth}p{.32\linewidth}@{}}
+\caption{The two root minima and their terminal directions.}
+\label{tab:odd-two:directions}\\
+\toprule
+\(r\)&\(L\)&Root factor&Terminal factor\\
+\midrule
+1&all&\(pW_a\bar f_b\prod W_{s_i}\bar f_{t_i}\)
+ &\(h_2f_3\) if \(t=3\), otherwise \(\bar f_2W_t\)\\
+2&1&\(f_2h_af_b\prod h_{s_i}f_{t_i}\)&\(W_2\bar f_t\)\\
+2&\(\ge2\), \(a=3\)&\(W_2\bar f_3W_b\prod W_{s_i}\bar f_{t_i}\)
+ &\(\bar f_2W_t\)\\
+2&\(\ge2\), \(a\ge4\)&\(W_2W_a\bar f_b\prod W_{s_i}\bar f_{t_i}\)
+ &\(\bar f_2W_t\)\\
+\bottomrule
+\end{longtable}
+Every inner edge points terminal-to-root and every outer edge
+root-to-receiver. Let \(H_k\) be the actual root factor times the
+actual \(T^L\)-propagated terminal, with arbitrary compatible equal-pair
+decorations at both roots. Put \(z_0=0\) and, for \(k\ge1\),
+\(z_k=2737/3840+64(k-1)/5\). Then for every original host,
+\begin{equation}\label{eq:odd-two:conclusion}
+ \E H_k^4\le e^{-(6+z_k)d},\qquad
+ I_q(T^MH_k)^3\le e^{-[12+2z_k-c(M)]d}\le e^{-24d/19},
+\end{equation}
+for every independent \(L,M\ge1\), with
+\(c(1)=204/19,c(2)=10,c(3)=0,c(4)=7,c(M)=6\) for \(M\ge5\).
+\end{theorem}
+\begin{proof}
+First omit decorations and later pairs. The actual pair envelopes are
+Lemma~\ref{lem:odd-common:root-three}. Write
+\(G_{b-3}=E+zC\), \(U=(xE+zxC)u\), \(\beta=\beta_{b-1}\).
+The reversed pair is bounded by
+\(e^{-g_r+B(-U-\tau\one)}\), with
+\(g_r=3d-2\delta_2\). The exchanged pair is bounded by
+\(e^{-g_e+B(U+\beta\one)}\), where
+\(g_e=d+\beta_b+\beta\ge3d-2\delta_2\) and
+\(\kappa d\le\beta\le d\).
+At the finite boundary \(b=4\), \((E,C)=(1,0)\) and \(\beta=d\).
+For a short root arm at least four, the one-pair envelope is
+\(e^{-16d/5+BV_*}\), with
+\(\|V_*\|\le3\sqrt d/8\), \(\E BV_*\le d/12\).
+The same bounds apply in the positive direction at a unit inner edge.
+They follow from the actual pair loss and the single finite mask:
+\[
+ \|V_*\|^2\le(101/50)\theta^3d<9d/64,
+ \qquad \E BV_*\le\delta_4/(1-\theta^2)<d/12.
+\]
+
+\paragraph{The common finite root calculation.}
+Use Lemma~\ref{lem:odd-two:packet}. The positive finite Duhamel majorant is
+\[
+ Y_L=\bar f_L+\delta\bar f_{L-1}+B^LR
+                   +\sum_{j=1}^{L-1}D_j\bar f_{L-1-j}.
+\]
+For \(L\ge4\), the two actual final losses give
+\(Y_L\le1+u+2\delta_+-2hd+B[G_nu+B^nR-hd\one]\),
+where \(n=L-1\ge3\). Its next-index mean is
+\(\E B(G_nu+B^nR)=-\gamma_{L+1}\le-hd\).
+Before adding a root pair, the following table is exact:
+\[
+\begin{array}{c|c|c|c}
+L&a_L&V_L&c_L\\\hline
+1&-\Gamma+\delta&R&0\\
+2&-\Gamma+\epsilon&u+BR&\delta\\
+3&-\Gamma+\epsilon-d+D_2&(1+\delta+B)u+B^2R&\epsilon\\
+\ge4&-\Gamma+2\delta_+-2hd&G_nu+B^nR&-hd
+\end{array}
+\]
+For the actual \(p\) prefix,
+\(\log(pT^LF)\le a_L+B(V_L+c_L\one)-3u^2/10\).
+For the actual \(W_2\) prefix, at \(L\ge2\), replace only
+\(V_L\) by \(V_L-u\), and retain \(-3(u+Bu)^2/10\).
+Thus the same finite input supplies both root minima. Constants are paid
+by Lemma~\ref{lem:odd-two:constant}, not discarded from this table.
+
+The following entries record the complete payments. Here \(A\) means
+\(a+\E BV\le-Ad\); \(N\) bounds the square of the final full or
+transported vector divided by \(d\); \(C_0\) bounds the separate
+curvature expense divided by \(d\). Each loss is \(4A-17N/4-C_0\).
+\begingroup\small
+\Needspace{8\baselineskip}
+\begin{longtable}{@{}ccccc@{}}
+\caption{Complete root certificates for the nonunit packet.
+Every displayed loss exceeds six.}
+\label{tab:odd-two:payments}\\
+\toprule
+Root and length&\(A\)&\(N\)&\(C_0\)&Loss\\\midrule
+\endfirsthead
+\toprule
+Root and length&\(A\)&\(N\)&\(C_0\)&Loss\\\midrule
+\endhead
+\(pW_3\bar f_b,1\)&\(12/5\)&\(2/3\)&0&\(203/30\)\\
+\(pW_3\bar f_b,2\)&\(18/5\)&\(15/8\)&0&\(1029/160\)\\
+\(pW_3\bar f_b,3\)&\(179/40\)&\(15/8\)&\(15/4\)&\(989/160\)\\
+\(pW_3\bar f_b,\ge4\)&\(159/40\)&\(25/16\)&\(8/3\)&\(6329/960\)\\
+\(pW_a\bar f_b,1; a\ge4\)&\(247/60\)&\((47/40)^2\)&0&\(203501/19200\)\\
+\(pW_a\bar f_b,2; a\ge4\)&\(76057/15360\)&\((67/40)^2\)&0&\(75673/9600\)\\
+\(pW_a\bar f_b,3; a\ge4\)&\(349/60\)&4&0&\(94/15\)\\
+\(pW_a\bar f_b,\ge4; a\ge4\)&\(2549/480\)&\(64/25\)&\(1/3\)&\(6017/600\)\\
+\(W_2\bar f_3W_b,2\)&\(51/16\)&\(227/144\)&0&\(3485/576\)\\
+\(W_2\bar f_3W_b,3\)&\(319/80\)&\(3/2\)&0&\(383/40\)\\
+\(W_2\bar f_3W_b,\ge4\)&\(541/160\)&\(25/16\)&0&\(2203/320\)\\
+\(W_2W_a\bar f_b,2; a\ge4\)&\(79/20\)&\((53/40)^2\)&0&\(53367/6400\)\\
+\(W_2W_a\bar f_b,3; a\ge4\)&\(289/60\)&\((41/24)^2\)&0&\(79067/11520\)\\
+\(W_2W_a\bar f_b,\ge4; a\ge4\)&\(2069/480\)&\(64/25\)&0&\(3817/600\)\\
+\bottomrule
+\end{longtable}
+\endgroup
+Every entry exceeds six; the ninth has margin \(29/576\).
+We justify the entire finite table next.
+
+\paragraph{The \(p\) prefix and its reversed length-three pair.}
+\phantomsection\label{part:odd-two:p-three}
+Add \(-U-\tau\one\) to the displayed complete primitive.
+At \(L=1\), its nonconstant coordinates are
+\(\gamma+x(e-E),x(f-C)\). Because \(|e-E|\le x\) and
+\(|f-C|\le1\), its full square, including \(-\tau\one\), is at most
+\[
+ [d^2+2d\theta^2+\theta^4+\theta^3+d]d<2d/3.
+\]
+The constant cross costs at most
+\(\tau^2+2\tau\delta_2=d^2-\delta_2^2\le d^2\).
+Its scalar plus mean is at most
+\(-4d+2\delta_2+\delta+\delta_3\le-12d/5\).
+
+At \(L=2\), the nonconstant coordinates are
+\(1-x^2f-xE,\gamma+x(e-C)\), and the constant is
+\(c=\delta-\tau\in[-d,0]\).
+The real coordinate is positive and its square is at most \(1-x\);
+the imaginary absolute value is at most \(d+x<1\).
+Thus its nonconstant square is at most \(d\). Since its mean is
+at least \(-\gamma d-\delta_2\), the full square is at most
+\(\{1+d(1+2d+2\theta)\}d\le263d/144<15d/8\).
+The actual scalar plus mean is at most
+\(-5d+3\delta_2+\delta_3\le-18d/5\).
+
+At \(L=3\) the nonconstant coordinates are
+\[
+ 1+\delta-\gamma x-x^2e-xE,\qquad1-x^2f-xC.
+\]
+They are positive: the real lower bound is
+\(1-2\theta/3-\theta^2-\theta=485/3072\).
+Their square is at most \((43/36)^2+\theta<15/8\).
+The actual scalar plus mean, before the constant \(c=\epsilon-\tau\), is
+\[
+\begin{aligned}
+ &-\{\Gamma-(1-d)\delta\}-2d-g_r
+ -\gamma(d-\delta_2)-\int xe\,d\nu\\
+ &\quad+\int x^2(e+f)\,d\nu+\int xE\,d\nu\\
+ &\le-\tfrac{29}{5}d+2\delta_2+3\delta_3<-179d/40.
+\end{aligned}
+\]
+Transport the same \(c\) by the actual \(p\) curvature;
+\(|c|\le29d/16\) and its expense is below \(15d/4\).
+
+For \(L\ge4\) the nonconstant primitive is
+\(G_nu+B^nR-U\), and \(c=-hd-\tau\).
+The coordinates of \(G_nu-U\) are nonnegative and bounded by
+\(1-2x+2x^2,1\); their square is at most one, since
+\(-3+8x-8x^2+4x^3<0\) on \([0,\theta]\).
+The actual finite tail has norm below \(16\sqrt d/75\), giving
+\(\|V\|\le91\sqrt d/75<5\sqrt d/4\).
+Its scalar plus mean is at most
+\(-[3/5+3h+3-3\theta]d=-159d/40\).
+The actual \(p\) curvature pays \(c\), with expense below \(8d/3\).
+This proves the first four rows.
+
+\paragraph{The \(p\) prefix and every higher first pair.}
+\phantomsection\label{part:odd-two:p-higher}
+Add the one actual mask \(V_*\). At length one use
+\(\|R+V_*\|\le47\sqrt d/40\) and
+\(-\Gamma+\epsilon-16d/5+\E BV_*\le-247d/60\).
+At length two the whole primitive before \(V_*\) is
+\(u+BR+\delta\one\). Its square divided by \(d\) is at most
+\[
+ 1+\theta(d+\theta)^2+(7/6)d(d+\theta)+(49/144)d<(13/10)^2.
+\]
+This includes the absolute constant cross, using
+\(|\delta|\le7d/12\) and
+\(|\E(u+BR)|\le(d+\theta)d\).
+The scalar plus mean is at most
+\(-[2-\theta^2-1/12+16/5]d=-76057d/15360\).
+At length three the nonconstant coordinates are
+\(1+\delta-\gamma x-x^2e,1-x^2f\). Their square is below
+\(15d/8\), and including \(\epsilon\one\) costs at most
+\(195d/256\). Their full square is therefore below
+\(675d/256<(13/8)^2d\). Adding \(V_*\) gives norm at most
+\(2\sqrt d\). The scalar plus mean is at most
+\(-[4/5+2+16/5-1/10-1/12]d=-349d/60\), since
+\(-\int xe+\int x^2(e+f)\le-\delta_2+3\delta_3<d/10\).
+For the long rows, pay \(c=-hd\) by \(p\) curvature.
+The remaining norm is below
+\((1+16/75+3/8)\sqrt d<8\sqrt d/5\), its scalar plus mean
+is at most \(-2549d/480\), and its curvature expense is below
+\(d/3\). This proves the next four rows.
+
+\paragraph{The \(W_2\) prefix and the exchanged length-three pair.}
+\phantomsection\label{part:odd-two:w2-three}
+At length two the nonconstant coordinates are
+\(xE-x^2f,\gamma+xe+xC\), the constant is
+\(c=\delta+\beta\), and the scalar is
+\(-\Gamma+\epsilon-g_e\).
+The scalar plus mean is at most \(-51d/16\), using
+\(D_2-\int xE\le-\delta_2+2\delta_3\le0\).
+The nonconstant square is at most \(20d/27\), while
+\(0<c\le19d/12\) and its mean is nonpositive. Thus the full
+square is at most \(20d/27+361d/432=227d/144\).
+
+At length three the coordinates are
+\(\delta-\gamma x-x^2e+xE,1-x^2f+xC\), and
+\(c=\epsilon+\beta\in[-7d/32,d]\).
+Their real absolute value is below \(5/8\); their imaginary
+coefficient lies between \(5/6\) and \(17/12\).
+The nonconstant square is below \(5d/4\). If \(c\ge0\), its
+constant correction is nonpositive. If \(c<0\), that correction
+is at most \(2051d^2/3072<d/4\). The full square is therefore
+below \(3d/2\). Its exact scalar plus mean is at most
+\(-[4/5+1+35/16]d=-319d/80\); the two negative first moments
+absorb the two positive second moments before this estimate.
+
+For the long rows the nonconstant primitive is
+\((G_n-1)u+B^nR+U\), and \(c=\beta-hd\in[d/16,15d/32]\).
+Before the tail, its coordinate bounds are
+\([-x^2,x^2]\) and \([1-x,1+x]\), giving square below one.
+Its full norm before \(c\one\) is below \(5\sqrt d/4\).
+The imaginary coefficient after the actual finite tail is at least
+\(1-4\theta/3-\theta^2=901/3072>15/64\).
+Consequently \(c(c+2\E V)\le0\), so the full constant does not
+increase this square. The scalar plus mean is at most \(-541d/160\).
+This proves all three exchanged-pair rows, including \(G_1\).
+
+\paragraph{The \(W_2\) prefix and every higher first pair.}
+\phantomsection\label{part:odd-two:w2-higher}
+At length two the complete vector is \(BR+\delta\one+V_*\).
+Its norm is at most \((3/5+7/20+3/8)\sqrt d=53\sqrt d/40\),
+and its scalar plus mean is at most \(-79d/20\).
+At length three the nonconstant coordinates before \(V_*\) are
+\(\delta-\gamma x-x^2e,1-x^2f\).
+The real absolute value is below \(1/2\): bound its two signs
+separately by \(7/36\) and \(2\theta/3+\theta^2\).
+The nonconstant norm is below \(5\sqrt d/6\).
+The actual \(\epsilon\one\) has norm below \(\sqrt d/2\),
+so the complete norm is at most \(41\sqrt d/24\).
+The scalar plus mean is at most \(-289d/60\).
+For the long rows, keep \(c=-hd\) and the actual \(W_2\) curvature.
+Transporting it replaces the primitive by
+\((G_n-1+hd)u+B^nR+V_*\). Its norm is below
+\((4/5+16/75+3/8+17/96)\sqrt d<8\sqrt d/5\).
+The extra scalar correction is
+\(-4hd^2+(10/3)h^2d^2\le0\), while the uncorrected scalar
+plus mean is at most \(-2069d/480\). The last three rows follow.
+
+\paragraph{The distinct unit-length minimum-two direction.}
+\phantomsection\label{part:odd-two:unit}
+Here the actual terminal is \(W_2\bar f_t\), rather than
+\(\bar f_2W_t\). The finite convolution gives
+\[
+ W_2+\bar f_t\le2-\beta_t+B^2G_{t-2}u.
+\]
+Thus \(F\le e^{R^--\beta_t}\), with
+\(R^-=(-xe-zxf)u\), and
+\[
+ TF\le e^{-\beta_t}(q+BR^-+\delta^-),\qquad
+ \delta^-=\int xf\,d\nu+(3/2)\int x^2(e^2+xf^2)\,d\nu.
+\]
+The actual \(f_2\) cancels \(u\), leaving primitive \(u+R^-\).
+For \(a=3\), add the positive length-three pair with primitive
+\((-xE+zxC)u+\tau\one\). The full nonconstant coordinates are
+\(1-x(e+E),x(C-f)\). The true constant correction is at most
+\(\tau^2+2\tau\delta_2\le d^2\le d/3\).
+Keeping all terms in the same original spectral integral bounds the
+remaining fourth exponent by \(\int P(x)\,d\nu\), where
+\[
+ P=-63/4+7x+36x^2-(95/4)x^3+17x^4.
+\]
+Indeed use \(-4e+4xe\le-4(1-x)^2\), \(f,E\le1\),
+\(|C-f|\le1\), and
+\(0\le1-x(e+E)\le1-2x+2x^2\) in the exact fourth expansion.
+The polynomial increases on \([0,5/12]\), where its endpoint is
+\(-20189/2592\). The paid constant gives loss
+\(16517/2592>6\).
+Its nonconstant square is at most \((1+\theta^3)d<(7/6)^2d\),
+and \(\tau\le3\sqrt d/5\); its complete norm is therefore
+less than \(2\sqrt d\), as needed for later pairs.
+For \(a\ge4\), the base primitive has norm at most \(\sqrt d\),
+and its scalar plus mean is at most \(-71d/128\): its integrand
+is bounded by the increasing cubic
+\(-2+3x+x^2/2+3x^3/2\) at \(5/12\).
+The actual root mask then gives complete norm at most
+\(11\sqrt d/8\) and loss \(25537/3840>6\).
+Both calculations include \((e,f)=(1,0)\) when \(t=3\).
+
+\paragraph{All later pairs, decorations and the outer length.}
+\phantomsection\label{part:odd-two:outer}
+Every complete or transported vector above has norm at most
+\(2\sqrt d\) on the whole host domain; its already paid curvature
+constant is unchanged by a later root pair. The entire ordered list
+of \(k\ge1\) later pairs is one finite mask, with scalar loss
+\(16kd/5\), norm at most \(3\sqrt d/8\), and signed mean at most
+\(d/12\). Adding it to the same certificate costs at most
+\[
+ \left[\tfrac13+\tfrac{17}{4}
+       \{2(2)(3/8)+9/64\}\right]d.
+\]
+The resulting gain is
+\(21097/3840+64(k-1)/5>z_k\), proving the first claim.
+Equal-pair products lie in \([0,1]\) in their actual compatible
+directions, and positivity restores them at both original vertices.
+
+If \(\mathcal M\) is any original positive operator
+and \(r=\mathcal M\one\), row Cauchy and H\"older give
+\[
+ I_q(\mathcal MH)^3\le\E(r^4/q)\|\mathcal M\|^4(\E|H|^4)^2.
+\]
+This uses the original \(q\), which is positive on every retained atom.
+The operator bounds and path rows of
+Sections~\ref{proof:Q5-C084} and~\ref{proof:Q5-C164} give exactly
+the costs \(204/19,10,0,7,6\) in the five stated length ranges:
+at \(M=1\) the two costs are \(4\) and \(128/19\);
+at \(M=2\) they are \(6\) and \(4\);
+at \(M=3\) both are nonpositive; at \(M\ge4\) the operator
+norm is at most one and the path-row costs are \(7,6\).
+
+Since \(12-204/19=24/19\), it proves the second claim for every
+independent outer length.
+When \(d=0\), leaf integration makes every actual message one,
+even if \(B\ne0\).  All finite indices,
+continuous endpoints and arm directions have been retained.
+\end{proof}

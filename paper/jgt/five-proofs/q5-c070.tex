@@ -1,0 +1,380 @@
+\subsection{The unit-connector eighth moment for every triple \((2,\allowbreak b,\allowbreak c)\), \(2<\allowbreak b<\allowbreak c\)}\label{proof:Q5-C070}
+
+\paragraph{Q70.0 Statement and directions.}
+For every finite probability space and real skew kernel \(|K|\le\allowbreak 1\),
+and all finite integers \(2<\allowbreak b<\allowbreak c\), consider
+\begin{equation}\tag{Q70.0.1}\label{eq:Q70:0.1}
+F_D=E_0\bar f_2h_bf_c,\qquad H_D=E_rpT(F_D),
+\end{equation}
+where \(E_0,\allowbreak E_r\) are arbitrary finite genuine equal-pair products.
+Then the directions specified below satisfy
+\begin{equation}\tag{Q70.0.2}\label{eq:Q70:0.2}
+\boxed{\E H_D^8\le e^{-d/27}\le1-d/28.}
+\end{equation}
+The entire two-edge arm points toward the terminal, giving
+\(\bar f_2\). The \(b\)-arm has its first edge inward and its
+remaining edges outward, giving \(h_b\); the \(c\)-arm is outward,
+giving \(f_c\). The unit connector points from terminal to root,
+whose unit arm points outward. Each equal pair uses an outward arm
+and an arm first inward and then outward. Any finite number of pairs
+and repeated lengths is allowed, with empty product one.
+For \(b=\allowbreak 3,\allowbreak 4\), this direction differs from the corresponding
+positive-step weighted-fourth direction of Q4-C143.
+
+\paragraph{Q70.1 Finite model and short paths.}
+Use the finite-model definitions in Appendix~\ref{proof:Q5-C064}:
+\begin{equation}\tag{Q70.1.1}\label{eq:Q70:1.1}
+\begin{gathered}
+Jv=(\E v)\one,\quad A=J+K,\quad T=J-K=A^*,\quad
+g=K\one,\quad p=1+g,\quad q=1-g,\\
+f_n=A^n\one,\quad\bar f_n=T^n\one,\quad h_n=Tf_{n-1},
+\quad r=Kg,\quad s=Kr,\\
+\delta_j=\|K^j\one\|_2^2,\quad d=\delta_1,\quad
+\theta=13/32,\quad\kappa=19/32,\quad\tau=d-\delta_2.
+\end{gathered}
+\end{equation}
+After removing zero-mass atoms, all expectations, inner products,
+spectra and adjoints use the same measure. The kernel is real,
+skew, and bounded in absolute value by one. Its bounds are
+\begin{equation}\tag{Q70.1.2}\label{eq:Q70:1.2}
+0\le d\le1/3,\quad\|K\|^2\le\theta,\quad
+|Kv(x)|\le\|v\|_2,\quad d^2\le\delta_2\le\theta d,\quad
+\delta_{j+1}\le\theta\delta_j.
+\end{equation}
+For \(-K^2\), the spectral measure \(\nu\) of \(\one\) is
+supported on \([0,\allowbreak \theta]\), with \(\delta_j=\allowbreak \int x^j\,\allowbreak d\nu(x)\).
+Both \(A,\allowbreak T\) preserve order and \(p(x),\allowbreak q(x)\ge\allowbreak \mu(x)>\allowbreak 0\).
+The exact short identities are
+\begin{equation}\tag{Q70.1.3}\label{eq:Q70:1.3}
+\E r=-d,\quad\E s=0,\quad\E(gr)=0,\quad
+\bar f_2=q+r,\qquad\bar f_3=q+r-s-d.
+\end{equation}
+The arm and equal-pair bounds are
+\begin{equation}\tag{Q70.1.4}\label{eq:Q70:1.4}
+0\le f_n,\bar f_n,h_n\le2\quad(n\ge1),\qquad
+0\le f_\ell h_\ell\le1.
+\end{equation}
+Thus \(0\le\allowbreak  E_0,\allowbreak E_r\le\allowbreak 1\).
+
+\paragraph{Q70.2 A finite exponential bound for the long-arm pair.}
+Put
+\[
+S_n=\sum_{j=0}^nK^j\one,\qquad
+G_m(z)=\sum_{j=0}^{m-1}z^j,\qquad G_0=0,
+\]
+and
+\(\beta_1=\allowbreak \beta_2=\allowbreak 0\),
+\(\beta_n=\allowbreak \sum_{j=\allowbreak 1}^{\lfloor(n-1)/2\rfloor}(-1)^{j-1}\delta_j\).
+The finite convolution and geometric bounds are
+\begin{equation}\tag{Q70.2.1}\label{eq:Q70:2.1}
+S_n=f_n+\sum_{j=3}^n\beta_jf_{n-j},\qquad
+\tau\le\beta_n\le d\quad(n\ge3),
+\end{equation}
+\begin{equation}\tag{Q70.2.2}\label{eq:Q70:2.2}
+\|G_m(K)\|\le1\quad(m=0,1\text{ or }m\ge3),\qquad
+\|G_2(K)\|^2\le1+\theta.
+\end{equation}
+For \(3\le\allowbreak  b<\allowbreak c\), set
+\begin{equation}\tag{Q70.2.3}\label{eq:Q70:2.3}
+R=R_{bc}=\sum_{j=b}^{c-1}K^jg=K^bG_{c-b}(K)g,\qquad
+\Gamma=\begin{cases}2d-\delta_2,&b=3,\\3d,&b\ge4.\end{cases}
+\end{equation}
+The pair satisfies
+\begin{equation}\tag{Q70.2.4}\label{eq:Q70:2.4}
+0\le h_bf_c\le e^{R-\Gamma}.
+\end{equation}
+The case \(b=\allowbreak 3\) is the finite short-pair inequality of Q3-C014,
+Lemma 6.1, also displayed as (Q78.1.7) in
+Appendix~\ref{proof:Q5-C078}.
+For \(b\ge\allowbreak 4\), subtract the finite convolutions:
+\begin{equation}\tag{Q70.2.5}\label{eq:Q70:2.5}
+f_c-f_b=R+
+\sum_{i=0}^{b-3}(\beta_{b-i}-\beta_{c-i})f_i
+-\sum_{i=b-2}^{c-3}\beta_{c-i}f_i.
+\end{equation}
+The positive part of the first sum is at most
+\(4\delta_2/(1-\theta^2)\le\allowbreak 2d\).
+For every \(n\ge\allowbreak 4\), the finite path-mean bound is
+\(\E f_n\le\allowbreak 1-83d/32\le\allowbreak 1-5d/2\), proved in
+Appendix~\ref{proof:Q5-C090}. Hence for \(b\ge\allowbreak 5\),
+\(h_b+f_c=\allowbreak 2\E f_{b-1}+f_c-f_b\le\allowbreak 2+R-3d\).
+For \(b=\allowbreak 4\), retain the \(i=\allowbreak 2\) term in the last sum, including
+the shortest case \(c=\allowbreak 5\):
+\fitdisplay{f_c-f_4\le R+\delta_2(1+p)-\tau f_2.}{}
+The row bound \(|r|\le\allowbreak  pq/2\) gives \(f_2=\allowbreak p+r\ge\allowbreak  p^2/2\).
+Completing the square for \(p\ge\allowbreak 0\), and using
+\(\delta_2\le\allowbreak  d/2\), \(\tau\ge\allowbreak  d/2\), gives
+\fitdisplay{
+\delta_2(1+p)-\tau f_2
+\le\delta_2+\delta_2p-\tau p^2/2
+\le\delta_2+\frac{\delta_2^2}{2\tau}\le3d/4.
+}{}
+Thus \(h_4+f_c\le\allowbreak 2+R-13d/4\le\allowbreak 2+R-3d\).
+For \(d>\allowbreak 0\), \(\tau>\allowbreak 0\); the zero boundary is treated below.
+The arm sum is nonnegative, so AM--GM gives
+\(h_bf_c\le\allowbreak [(h_b+f_c)/2]^2\le\allowbreak  e^{R-\Gamma}\).
+Let \(J_R=\allowbreak \E R^2\). Equation~\eqref{eq:Q70:2.2} gives
+\begin{equation}\tag{Q70.2.6}\label{eq:Q70:2.6}
+|R|^2\le(1+\theta)\theta^{b-1}d,\qquad
+J_R\le(1+\theta)\theta^bd.
+\end{equation}
+In particular,
+\begin{equation}\tag{Q70.2.7}\label{eq:Q70:2.7}
+|R|^2\le7605d/32768\le7605/98304<9/100,\qquad |R|<3/10,
+\end{equation}
+where \(760500<\allowbreak 884736\).
+
+\paragraph{Q70.3 Propagation retaining the two-edge arm.}
+The negative-mean lemma \eqref{eq:Q65:2.4} applies whenever
+\(\E N\le\allowbreak 0\), \(|N|\le\allowbreak \sqrt{A_0d}\),
+\(\E N^2\le\allowbreak \theta A_0d\), and \(|\E N|\le\allowbreak \sqrt{A_0}d\):
+\begin{equation}\tag{Q70.3.1}\label{eq:Q70:3.1}
+\E e^{8N}\le\exp\{8\E N+\lambda(\sqrt d)A_0d\},\qquad
+\lambda(t)=\frac{188}{25}\left(2-\frac{\kappa}{1+t}\right)^2.
+\end{equation}
+Since \(\lambda\) increases and \(\sqrt d\le\allowbreak 1/\sqrt3<\allowbreak 3/5\),
+\begin{equation}\tag{Q70.3.2}\label{eq:Q70:3.2}
+\lambda(\sqrt d)\le\lambda(3/5)=32691132/1638400<20.
+\end{equation}
+Here \(2-\kappa/(8/5)=\allowbreak 417/256\), and
+\(188\cdot417^2=\allowbreak 32691132<\allowbreak 32768000=\allowbreak 20\cdot1638400\).
+For every real \(u\le\allowbreak 3/10\),
+\begin{equation}\tag{Q70.3.3}\label{eq:Q70:3.3}
+e^u\le1+u+(3/5)u^2.
+\end{equation}
+Indeed, \((e^u-1-u)/u^2=\allowbreak \int_0^1(1-t)e^{tu}\,\allowbreak dt\) increases
+with \(u\). At \(u=\allowbreak 3/10\), the exponential series and
+\(j!\ge\allowbreak 2\cdot3^{j-2}\) give
+\fitdisplay{
+e^u\le1+u+\frac{u^2}{2(1-u/3)}=27/20<677/500
+=1+3/10+(3/5)(3/10)^2.
+}{}
+Use the continuous extension at zero. Set
+\begin{equation}\tag{Q70.3.4}\label{eq:Q70:3.4}
+\begin{gathered}
+G=g-r,\quad\bar f_2=1-G,\quad\E G^2=d+\delta_2,\\
+V=g-r-R,\quad N=KV=r-s-KR,\\
+C=-d+\E R-\E(GR)+\sqrt{(d+\delta_2)J_R}+(12/5)J_R.
+\end{gathered}
+\end{equation}
+Positivity of \(T\), \(\bar f_2\ge\allowbreak 0\), and \eqref{eq:Q70:3.3} give
+\fitdisplay{
+T(\bar f_2e^R)\le\bar f_3+T(\bar f_2R)+(3/5)T(\bar f_2R^2).
+}{}
+The exact linear term is
+\(T(\bar f_2R)=\allowbreak \E R-\E(GR)-KR+K(GR)\), and
+\fitdisplay{
+K(GR)\le\E|GR|\le\sqrt{(d+\delta_2)J_R},\qquad
+T(\bar f_2R^2)\le2\E(\bar f_2R^2)\le4J_R.
+}{}
+Therefore
+\begin{equation}\tag{Q70.3.5}\label{eq:Q70:3.5}
+T(\bar f_2e^R)\le q+C+N.
+\end{equation}
+The right side is nonnegative. By \(p+q=\allowbreak 2\) and AM--GM,
+\(p(q+C+N)\le\allowbreak [1+(C+N)/2]^2\le\allowbreak  e^{C+N}\), with nonnegative base.
+For the undecorated \(H=\allowbreak pT(\bar f_2h_bf_c)\),
+\begin{equation}\tag{Q70.3.6}\label{eq:Q70:3.6}
+0\le H\le e^{-\Gamma+C+N}.
+\end{equation}
+The coupled mean identities are
+\begin{equation}\tag{Q70.3.7}\label{eq:Q70:3.7}
+\begin{gathered}
+\E N=-d+\E(gR),\\
+C+\E N=-2d+\E R+\E(rR)
+                +\sqrt{(d+\delta_2)J_R}+(12/5)J_R.
+\end{gathered}
+\end{equation}
+Thus \(\E(gR)\) cancels between the terms.
+If \(\|V\|^2\le\allowbreak  A_0d\) and \(\E N\le\allowbreak 0\), the row and spectral
+bounds and Cauchy give all hypotheses of \eqref{eq:Q70:3.1}.
+Using \eqref{eq:Q70:3.2} then gives
+\begin{equation}\tag{Q70.3.8}\label{eq:Q70:3.8}
+\boxed{\begin{aligned}
+\log\E H^8\le{}&-8\Gamma-16d+8\{\E R+\E(rR)\}\\
+ &+8\sqrt{(d+\delta_2)J_R}+(96/5)J_R+20A_0d.
+\end{aligned}}
+\end{equation}
+
+\paragraph{Q70.4 Mixed moments and the negative mean.}
+Put \(a_j=\allowbreak \E K^j\one\), so \(a_{2j}=\allowbreak (-1)^j\delta_j\) and
+odd \(a_j\) vanish. Skewness gives
+\begin{equation}\tag{Q70.4.1}\label{eq:Q70:4.1}
+\E(rK^jg)=a_{j+3},\qquad\E(K^jg)=a_{j+1}.
+\end{equation}
+Write \(e_n=\allowbreak \delta_n-\delta_{n+1}\). The spectral representation gives
+\begin{equation}\tag{Q70.4.2}\label{eq:Q70:4.2}
+e_n=\int x^n(1-x)\,d\nu(x)\ge0,\qquad e_{n+1}\le\theta e_n.
+\end{equation}
+For each odd \(j=\allowbreak 2n-1\), the sum in \eqref{eq:Q70:4.1} is
+\((-1)^ne_n\); for even \(j\), it is zero.
+The contiguous finite interval in \(R\) therefore gives a finite
+alternating sum of decreasing nonnegative terms, and
+\begin{equation}\tag{Q70.4.3}\label{eq:Q70:4.3}
+\E R+\E(rR)\le
+\begin{cases}\delta_2-\delta_3,&b=3,\\0,&b=4,\\\delta_4,&b\ge5.\end{cases}
+\end{equation}
+The first class begins with \(e_2\), and equals
+\(\delta_2-\delta_3\) for \((b,\allowbreak c)=\allowbreak (3,\allowbreak 4),\allowbreak (3,\allowbreak 5)\).
+The second, when nonempty, begins with \(-e_3\).
+In the third, a positive first term has index at least four and is
+at most \(e_4\le\allowbreak \delta_4\); a negative first term gives upper bound zero.
+Similarly, only even \(j\) contribute to \(\E(gK^jg)\). For \(j\ge\allowbreak 3\),
+the first possible positive term is \(j=\allowbreak 4\), with value \(\delta_3\),
+followed by decreasing alternating terms. Every finite truncation gives
+\begin{equation}\tag{Q70.4.4}\label{eq:Q70:4.4}
+\E(gR)\le\delta_3\le\theta^2d<d\qquad(d>0).
+\end{equation}
+Hence \(\E N<\allowbreak 0\) in every class.
+
+\paragraph{Q70.5 Norms for every finite \(b,\allowbreak c\).}
+On a rotation block write \(z=\allowbreak i\sqrt x\), \(0\le\allowbreak  x\le\allowbreak \theta\).
+Then \(V=\allowbreak P(K)g\), with
+\begin{equation}\tag{Q70.5.1}\label{eq:Q70:5.1}
+P(z)=1-z-\sum_{j=b}^{c-1}z^j.
+\end{equation}
+For \((b,\allowbreak c)=\allowbreak (3,\allowbreak 4)\), \(P=\allowbreak 1-z-z^3\), so
+\begin{equation}\tag{Q70.5.2}\label{eq:Q70:5.2}
+|P(i\sqrt x)|^2=1+x(1-x)^2\le1+4/27=31/27.
+\end{equation}
+On \([0,\allowbreak 1]\), the derivative of \(x(1-x)^2\) is
+\((1-x)(1-3x)\), giving maximum \(4/27\). Here \(J_R=\allowbreak \delta_4\).
+For \((b,\allowbreak c)=\allowbreak (3,\allowbreak 5)\), \(P=\allowbreak 1-z-z^3-z^4\), and
+\fitdisplay{|P|^2=(1-x^2)^2+x(1-x)^2=1+x-4x^2+x^3+x^4.}{}
+Since \(x+x^2\le\allowbreak \theta+\theta^2<\allowbreak 1\),
+\begin{equation}\tag{Q70.5.3}\label{eq:Q70:5.3}
+|P|^2\le1+x-3x^2\le13/12.
+\end{equation}
+This case has the exact second moment \(J_R=\allowbreak \delta_4+\delta_5\),
+retaining the exceptional \(G_2\) contribution.
+For \(b=\allowbreak 3,\allowbreak c\ge\allowbreak 6\), the finite sums satisfy
+\fitdisplay{
+x^2-x^3\le\operatorname{Re}\sum_{j=3}^{c-1}z^j\le x^2,
+\qquad
+-x^{3/2}\le\operatorname{Im}\sum_{j=3}^{c-1}z^j
+\le-x^{3/2}+x^{5/2}.
+}{}
+Thus \(\operatorname{Re}P>\allowbreak 0\), \(\operatorname{Im}P\le\allowbreak 0\), and
+\begin{equation}\tag{Q70.5.4}\label{eq:Q70:5.4}
+\begin{aligned}
+|P|^2&\le(1-x^2+x^3)^2+x(1-x+x^2)^2\\
+ &=1+x-4x^2+5x^3-x^4-x^5+x^6\\
+ &\le1+x-(63/32)x^2\le1+8/63=71/63.
+\end{aligned}
+\end{equation}
+Use \(-x^4-x^5+x^6\le\allowbreak 0\), \(4-5\theta=\allowbreak 63/32\).
+Here \(c-3\ge\allowbreak 3\), so \eqref{eq:Q70:2.2} gives \(J_R\le\allowbreak \delta_4\).
+For \(b=\allowbreak 4,\allowbreak c>\allowbreak 4\), the contiguous sum has real part in
+\([x^2-x^3,\allowbreak x^2]\) and imaginary part in \([0,\allowbreak x^{5/2}]\). Therefore
+\fitdisplay{
+|P|^2\le(1-x^2+x^3)^2+x(1+x^2)^2
+=1+x-2x^2+4x^3+x^4-x^5+x^6.
+}{}
+As \(x\le\allowbreak 1/2\), both \(-2x^2+4x^3\) and \(-x^5+x^6\) are nonpositive,
+so
+\begin{equation}\tag{Q70.5.5}\label{eq:Q70:5.5}
+|P|^2\le1+x+x^4<1+13/32+1/32=23/16<3/2.
+\end{equation}
+Here \(\theta^4=\allowbreak 28561/1048576<\allowbreak 1/32\), and
+\eqref{eq:Q70:2.6} also gives \(J_R<\allowbreak (3/64)d\).
+For \(b\ge\allowbreak 5,\allowbreak c>\allowbreak b\), the finite alternating sums give
+\fitdisplay{
+-x^3\le\operatorname{Re}\sum_{j=b}^{c-1}z^j\le x^4,\qquad
+\left|\operatorname{Im}\sum_{j=b}^{c-1}z^j\right|\le x^{5/2}.
+}{}
+Since \(\operatorname{Re}P>\allowbreak 0\),
+\begin{equation}\tag{Q70.5.6}\label{eq:Q70:5.6}
+|P|^2\le(1+x^3)^2+x(1+x^2)^2
+=1+x+4x^3+x^5+x^6<7/4.
+\end{equation}
+For the rational comparison use \(x\le\allowbreak \theta<\allowbreak 5/12\),
+\(4\theta^3<\allowbreak 3/10\), and
+\(\theta^5+\theta^6<\allowbreak (3/2)/90<\allowbreak 1/30\); these sum to less than \(3/4\).
+The cross-products for \(\theta^5<\allowbreak 1/90\) and \(4\theta^3<\allowbreak 3/10\)
+are \(33416370<\allowbreak 33554432\) and \(87880<\allowbreak 98304\).
+Also
+\begin{equation}\tag{Q70.5.7}\label{eq:Q70:5.7}
+J_R\le(1+\theta)\theta^5d<d/60.
+\end{equation}
+Integrating the block bounds gives \(\E V^2\le\allowbreak  A_0d\) in each class.
+
+\paragraph{Q70.6 The eighth-moment bounds on \(0<\allowbreak d\le\allowbreak 1/3\).}
+Apply \eqref{eq:Q70:3.8}, retaining the common contribution
+\(\E R+\E(rR)+(12/5)J_R\).
+For \((b,\allowbreak c)=\allowbreak (3,\allowbreak 4)\), \(J_R=\allowbreak \delta_4\le\allowbreak \theta\delta_3\), and
+\begin{equation}\tag{Q70.6.1}\label{eq:Q70:6.1}
+\E R+\E(rR)+(12/5)J_R
+\le\delta_2-\delta_3+(12/5)\delta_4
+\le\delta_2-\delta_3/40\le\delta_2.
+\end{equation}
+Moreover,
+\begin{equation}\tag{Q70.6.2}\label{eq:Q70:6.2}
+\sqrt{(d+\delta_2)J_R}
+\le\sqrt{(1+\theta)\theta^3}\,d<5d/16.
+\end{equation}
+The squared comparison is \(98865<\allowbreak 102400\), with denominator
+\(1048576\). Use \(\Gamma=\allowbreak 2d-\delta_2\), \(A_0=\allowbreak 31/27\):
+\begin{equation}\tag{Q70.6.3}\label{eq:Q70:6.3}
+\log\E H^8\le(-32+16\theta+5/2+20\cdot31/27)d=-d/27.
+\end{equation}
+The final equality is \(-23+620/27=\allowbreak -1/27\).
+For \((b,\allowbreak c)=\allowbreak (3,\allowbreak 5)\), use the exact \(J_R=\allowbreak \delta_4+\delta_5\):
+\begin{equation}\tag{Q70.6.4}\label{eq:Q70:6.4}
+\begin{aligned}
+\E R+\E(rR)+(12/5)J_R
+&\le\delta_2+[-1+(12/5)\theta(1+\theta)]\delta_3\\
+&=\delta_2+(95/256)\delta_3<\delta_2+d/16.
+\end{aligned}
+\end{equation}
+The last comparison is \(16055<\allowbreak 16384\), with denominator \(262144\).
+Also
+\begin{equation}\tag{Q70.6.5}\label{eq:Q70:6.5}
+\sqrt{(d+\delta_2)J_R}\le(1+\theta)\theta^{3/2}d<3d/8,
+\end{equation}
+where the squared comparison is \(4448925<\allowbreak 4718592\), with
+denominator \(33554432\). Using \(A_0=\allowbreak 13/12\),
+\begin{equation}\tag{Q70.6.6}\label{eq:Q70:6.6}
+\log\E H^8\le(-32+16\theta+1/2+3+20\cdot13/12)d=-d/3.
+\end{equation}
+For \(b=\allowbreak 3,\allowbreak c\ge\allowbreak 6\), \(J_R\le\allowbreak \delta_4\), so
+\eqref{eq:Q70:6.1}--\eqref{eq:Q70:6.2} apply. With \(A_0=\allowbreak 71/63\),
+\begin{equation}\tag{Q70.6.7}\label{eq:Q70:6.7}
+\log\E H^8\le(-23+20\cdot71/63)d=-(29/63)d.
+\end{equation}
+For \(b=\allowbreak 4,\allowbreak c>\allowbreak 4\), \(\Gamma=\allowbreak 3d\), \(\E R+\E(rR)\le\allowbreak 0\),
+\(A_0=\allowbreak 3/2\). From \(J_R<\allowbreak 3d/64\), \(d+\delta_2<\allowbreak (3/2)d\),
+\fitdisplay{\sqrt{(d+\delta_2)J_R}<d/3,\qquad (12/5)J_R<d/8.}{}
+The comparisons are \(9/128<\allowbreak 1/9\) and \(9/80<\allowbreak 1/8\). Hence
+\begin{equation}\tag{Q70.6.8}\label{eq:Q70:6.8}
+\log\E H^8\le(-40+30+8/3+1)d=-(19/3)d.
+\end{equation}
+For \(b\ge\allowbreak 5,\allowbreak c>\allowbreak b\), \(\Gamma=\allowbreak 3d\), \(A_0=\allowbreak 7/4\), and
+\(\E R+\E(rR)\le\allowbreak \delta_4<\allowbreak d/14\), using \(\theta^3<\allowbreak 1/14\)
+and \(30758<\allowbreak 32768\). Since \(J_R<\allowbreak d/60\),
+\fitdisplay{\sqrt{(d+\delta_2)J_R}<d/6,\qquad (12/5)J_R<d/25.}{}
+Now \(1/14+1/6+1/25=\allowbreak 146/525<\allowbreak 3/10\), giving
+\begin{equation}\tag{Q70.6.9}\label{eq:Q70:6.9}
+\log\E H^8\le(-40+35+12/5)d=-13d/5.
+\end{equation}
+The five classes cover every \(3\le\allowbreak  b<\allowbreak c\). Their common bound is
+\(\E H^8\le\allowbreak  e^{-d/27}\).
+
+\paragraph{Q70.7 Boundary, decorations and full reversal.}
+At \(d=\allowbreak 0\), \(g=\allowbreak 0\), \(A\one=\allowbreak T\one=\allowbreak \one\), and leaf integration
+makes every rooted tree message one, although \(K\) may be nonzero.
+For the decorations, positivity gives
+\fitdisplay{0\le E_rpT(E_0\bar f_2h_bf_c)\le pT(\bar f_2h_bf_c).}{}
+Full reversal replaces \(K\) by \(-K\), exchanges \(A/T\), \(p/q\),
+and changes \(\bar f_2\) to \(f_2\), \(h_b\) to
+\(W_b=\allowbreak A\bar f_{b-1}\), and \(f_c\) to \(\bar f_c\), with every
+decoration reversed as well. The value of \(d\) is unchanged.
+Finally,
+\fitdisplay{e^{-d/27}\le\frac1{1+d/27}
+=1-\frac d{27+d}\le1-d/28\qquad(d\le1/3).}{}
+This proves \eqref{eq:Q70:0.2}.
+For the direction comparison, Q4-C143, \S5.3, uses
+\(\bar f_2f_3h_c\) at \(b=\allowbreak 3\) and \(\bar f_2f_4h_c\) at \(b=\allowbreak 4\),
+whereas the present input is \(\bar f_2h_bf_c\).
+For \(b\ge\allowbreak 5\), the directions agree, so the existing all-positive-length
+\(p\)-weighted fourth and the present unit eighth can be used for the
+same input.

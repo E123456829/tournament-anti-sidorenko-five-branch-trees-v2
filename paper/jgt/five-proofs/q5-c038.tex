@@ -1,0 +1,199 @@
+\subsection{Every one-step short-one terminal with long arm at least four}\label{proof:Q5-C038}
+For every finite $b\ge4$, keep the actual orientation $F_b=qf_b$,
+one connector toward the receiving root, and its outward length-two
+arm $f_2$. We prove
+\begin{equation}\tag{L38.0.1}\label{eq:L38:claim}
+\E[f_2\{T(qf_b)\}^4]\le1-(47/65000)d.
+\end{equation}
+All quantities use the original finite measure. Write $c=\kappa=19/32$,
+$r=Kg$, and $\delta_j=\|K^j\one\|_2^2$.
+The original row constraint gives $|r|\le pq/2$ and
+$0\le f_2\le2-q^2/2$.
+Put
+$R=\sum_{j=2}^bK^j\one$, $\beta=\beta_b$,
+$a=1-\beta/2$, $t_0=\beta_{b+1}=-\E R$,
+$k_0=\E KR=d-\beta_{b+2}$, $V=\E R^2$.
+Actual positive convolution retains its $\beta_bf_0$ term and gives
+$q+f_b\le2a+R$. Thus
+\begin{equation}\tag{L38.2.1}\label{eq:L38:envelope}
+0<T(qf_b)\le Z:=a^2q-at_0-aKR+V/2.
+\end{equation}
+For $d>0$, $v=\delta_2/d\in[d,\theta]$ and
+$m:=1-d/2\le a\le A_0:=1-(1-v)d/2$, $5/6\le a\le1$.
+
+For every finite $N\ge3$ the exact geometric polynomial satisfies
+\begin{equation}\tag{L38.2.3}\label{eq:L38:finiteG}
+|G_N(i\sqrt x)|^2\le1-(7/15)x\quad(0\le x\le\theta).
+\end{equation}
+At $x=0$ equality holds. For odd $N$, the finite formula reduces to
+$x^{N-1}+(7/15)x\le8/15$, whose left side is at most
+$\theta^2+(7/15)\theta=5447/15360<8/15$.
+For $N\equiv0\pmod4$, the numerator $(1-x^{N/2})^2\le1$ and
+$(7/15)(1+x)\le21/32<1$.
+For $N\equiv2\pmod4$, $N\ge6$, it suffices that
+$2x^{N/2-1}+x^{N-1}+(7/15)x\le8/15$.
+Use $8/15-2\theta^2-(7/15)\theta=7/512$ and
+$\theta^5=371293/33554432<7/512$ (numerators $371293<458752$).
+This covers every finite integer.
+Consequently, since $b-1\ge3$,
+\[
+\begin{gathered}
+V\le\delta_2-(7/15)\delta_3,\quad
+U:=\E(KR)^2\le\delta_3-(7/15)\delta_4\le\theta_*\delta_2,\\
+\theta_*=5057/15360<1/3,\quad\theta-\theta_*=1183/15360>1/13.
+\end{gathered}
+\]
+The last endpoint bound follows from increasing $x-7x^2/15$ on
+$[0,\theta]$, and $1183\cdot13-15360=19$.
+Set $\rho=\E(rR)$ and $\sigma=\E(sR)$.
+The exact finite signed sums are
+\[
+\begin{aligned}
+\rho&=\sum_{h=0}^{\lfloor b/2\rfloor-1}(-1)^h\delta_{h+2},\\
+k_0&=\sum_{h=0}^{\lfloor(b-1)/2\rfloor-1}(-1)^h\delta_{h+2},\quad
+\sigma=\sum_{h=0}^{\lfloor(b-1)/2\rfloor-1}(-1)^h\delta_{h+3}.
+\end{aligned}
+\]
+Thus $c\delta_2\le\rho,k_0\le\delta_2$.
+For $b=2h\ge4$, $\rho+\sigma=\delta_2$, $t_0+k_0=d$;
+for $b=2h+1\ge5$,
+$\rho+\sigma=\delta_2+(-1)^{h-1}\delta_{h+2}$ and
+$t_0+k_0=d+(-1)^{h+1}\delta_{h+1}$.
+The first positive extra term is at $b=7$, so with
+$L_0=1+\theta^3=34965/32768$,
+\begin{equation}\tag{L38.2.8}\label{eq:L38:jointmeans}
+\rho+\sigma\le L_0\delta_2,\qquad t_0+k_0\ge d-\delta_3.
+\end{equation}
+
+The normalized positive bound $\widehat Z=Z/a^2$ satisfies
+$\widehat Z\le q+(4/5)\sqrt d-3d/8$,
+$\E\widehat Z\le1-5d/8$.
+Indeed $k=1/a\in[1,6/5]$, $V\le\delta_2$,
+$k\sqrt\theta\le4/5$, and
+$kt_0-k^2V/2\ge(ck-\theta k^2/2)d$.
+The last concave quadratic has endpoint values $25/64,21/50$,
+both at least $3/8$.
+The normalized mean loss is at least
+$[k(1-\theta^2)-k^2\theta/2]d$, whose endpoint values
+$647/1024,9081/12800$ exceed $5/8$.
+For any nonnegative $z,u_0$ satisfying these same bounds, the full
+continuous coefficient is
+\begin{equation}\tag{L38.3.3}\label{eq:L38:curvature}
+f_2(z^2+2u_0z+3u_0^2)\le29/3.
+\end{equation}
+To prove it put $x=\sqrt d$, $n=1-5x^2/8$,
+$t=1+4x/5-x^2$. The bracket is at most
+$(q+t)^2+2n^2$, whose exact expansion is
+\[
+q^2+2q+3+(8/5)(q+1)x-(2q+193/50)x^2
+-(8/5)x^3+(57/32)x^4.
+\]
+Since $x<3/5$, its cubic and quartic sum is nonpositive.
+Complete the square in the remaining quadratic to add at most
+$32(q+1)^2/(100q+193)$ to $q^2+2q+3$.
+The base after multiplication by $2-q^2/2$ is at most nine.
+The added part is below $2/3$ because, for $y=q-1\in[-1,1]$,
+\[
+100q+193-24(4-q^2)(q+1)^2
+=5+4y+24y^2(y+3)^2\ge1.
+\]
+All denominators are positive, including both $q$ endpoints.
+By homogeneity the actual $Z$, $\mu_0=\E Z$ has coefficient
+$Ca^4$, $C=29/3$.
+
+For $w=Z-\mu_0$, exact original skew calculations give
+\begin{equation}\tag{L38.4.1}\label{eq:L38:exact}
+\begin{gathered}
+\mu_0=a^2-a(t_0+k_0)+V/2,\quad \E[f_2w]=-a^2d+a(\rho+\sigma)-adk_0,\\
+\E w^2=a^4d-2a^3\rho+a^2(U-k_0^2).
+\end{gathered}
+\end{equation}
+The actual mean square $k_0^2$ is retained.
+Equations \eqref{eq:L38:finiteG}--\eqref{eq:L38:jointmeans} imply
+\begin{equation}\tag{L38.4.3}\label{eq:L38:M}
+\mu_0\le M(d,v):=1-[2-(1739/960)v]d
++[(1-v)(3-29v/16)/4]d^2.
+\end{equation}
+Before taking $a\le A_0$ the bound is
+$a^2-ad+(a-7/30)\delta_3+\delta_2/2$;
+$a-7/30\ge3/5$ permits $\delta_3\le\theta\delta_2$,
+and its derivative in $a$ is $2a-d+\theta\delta_2>0$.
+The weighted centered mean is at most $dH(d,v)$, where
+\[
+H=-m^2+m(L_0-cd)v<0.
+\]
+The upper expression decreases in $a$, derivative
+$-2a+(L_0-cd)v<0$, justifying $a\ge m$.
+The original variance and homogeneous curvature give
+\begin{equation}\tag{L38.4.5}\label{eq:L38:B}
+Ca^4\E w^2\le B_*(d,v):=CdA_0^6Q_*,\quad
+Q_*=A_0^2-(2A_0c-\theta_*)v-c^2dv^2.
+\end{equation}
+The bracket increases in $a$ and upper-bounds a nonnegative actual
+variance; on the full domain it is also positive, since
+$A_0\ge5/6$, $2c\theta<1/2$, $c^2dv^2<1/48$ yield
+$Q_*>25/144$.
+The exact fourth expansion therefore gives the two-endpoint bound
+\begin{equation}\tag{L38.4.7}\label{eq:L38:endpoints}
+\E[f_2Z^4]\le\max\{B_*,(1-d)N^4+4dHN^3+B_*\}
+\quad(\mu_0\le N).
+\end{equation}
+This follows because $t\mapsto(1-d)t^4+4dHt^3$ decreases then
+increases, or increases throughout, on $[0,N]$.
+
+The actual envelope has \(\mu_0=\E Z\ge0\), by
+\eqref{eq:L38:envelope}. Take \(N=M(d,v)\) from \eqref{eq:L38:M}.
+On the whole moment triangle \(0\le d\le1/3\), \(d\le v\le\theta\),
+this bound satisfies \(M\ge1-2d\ge1/3\): its remaining displayed
+terms are nonnegative. Moreover
+\(H\le m[-5/6+L_0\theta]<0\), where \(m=1-d/2\).
+For \(\phi(t)=(1-d)t^4+4dHt^3\),
+\(\phi'(t)=4t^2[(1-d)t+3dH]\).
+The bracket increases, so \(\phi\) decreases and then increases, or
+is monotone, on \([0,M]\). Its maximum is at zero or \(M\).
+Thus \eqref{eq:L38:endpoints} reduces the actual integral to
+\[
+ \max\{B_*,\ (1-d)M^4+4dHM^3+B_*\}.
+\]
+Put \(\lambda=47/65000\), and define the two polynomial gaps
+\begin{equation}\label{eq:reference-synthesis:C038-gaps}
+\begin{aligned}
+ \Phi(d,v)&=(1-d)M(d,v)^4+4dH(d,v)M(d,v)^3+B_*(d,v),\\
+ D_0(d,v)&=1-\lambda d-B_*(d,v),\\
+ D_1(d,v)&=[1-\lambda d-\Phi(d,v)]/d.
+\end{aligned}
+\end{equation}
+The second numerator vanishes identically at \(d=0\); after exact
+cancellation, \(D_1\) is a polynomial there as well.
+The substitutions
+\[
+ d=x/3,\qquad v=d+(\theta-d)y,\qquad (x,y)\in[0,1]^2
+\]
+cover the full triangle, since \(\theta-d\ge7/96>0\).
+They may include moment pairs that no kernel realizes; proving the
+polynomial bounds on this larger set is sufficient.
+Put \(\widetilde D_i(x,y)=D_i(x/3,x/3+(\theta-x/3)y)\).
+These two polynomials have the following complete-matrix Bernstein bounds:
+\begin{table}[htbp]\centering\small
+\caption{Joint-parameter payments for the genuine one-step reference.}
+\label{tab:reference-synthesis:C038}
+\begin{tabular}{@{}cccc@{}}
+\toprule
+Polynomial&bidegree&number of coefficients&coefficient lower bound\\
+\midrule
+\(\widetilde D_0\)&\((17,8)\)&162&\(1/8\)\\
+\(\widetilde D_1\)&\((16,8)\)&153&\(1/2\)\\
+\bottomrule
+\end{tabular}
+\end{table}
+Each entry is obtained from the displayed \(M,H,B_*\) by
+\eqref{eq:bernstein-coefficients}.
+All clearing denominators are positive constant integers.
+Lemma~\ref{lem:bernstein-certificate} gives \(\widetilde D_0\ge1/8\)
+and \(\widetilde D_1\ge1/2\) on the full closed square, hence the
+same gap bounds throughout the original triangle.
+For \(d>0\) these inequalities make both actual endpoint budgets
+strictly smaller than \(1-\lambda d\), proving \eqref{eq:L38:claim}.
+At $d=0$ original leaf integration gives equality without $K=0$.
+Actual equal-pair decorations decrease the positive messages; full
+reversal simultaneously reverses every original edge and its weight.

@@ -1,0 +1,568 @@
+\subsection{The remaining odd triple and two short bare-path eighth moments}\label{proof:Q5-C097}
+
+\paragraph{Q97.0 The triples and their directions.}
+Work on a nonempty finite probability space with a real skew kernel
+\(|K|\le\allowbreak 1\). The distinct residual terminal arms are \((2,\allowbreak 3,\allowbreak c)\),
+\(c\ge\allowbreak 5\); genuine equal pairs may occur at the terminal and receiving
+root. The root has an outward unit arm. Every connector edge points
+from terminal to root. Choose the terminal direction from its integer
+connector length:
+\fitdisplay{
+\begin{array}{c|c|c}
+L&F&\text{ordinary eighth bound}\\\hline
+1&\bar f_2h_3f_c&e^{-d/27}\quad\text{(Appendix~\ref{proof:Q5-C070})}\\
+\ge2&\bar f_2f_3h_c&e^{-d}
+\end{array}
+}{}
+For \(H=\allowbreak E_rpT^L(E_tF)\), with genuine equal-pair factors \(E_t,\allowbreak E_r\),
+we prove the second row:
+\begin{equation}\tag{Q97.0.1}\label{eq:Q97:0.1}
+\boxed{\E[\{E_rpT^L(E_t\bar f_2f_3h_c)\}^8]\le e^{-d}
+\qquad(c\ge5,\ L\ge2).}
+\end{equation}
+Here \(f_n\) is fully outward, \(\bar f_n\) fully inward, and
+\(h_n\) has only its first edge inward. The two directions are selected
+by \(L\), before the kernel is given; the low and high domains use the
+same nonunit direction. With the first row they yield
+\(\E H^8\le\allowbreak  e^{-d/27}\le\allowbreak 1-d/28\) for all \(L\ge\allowbreak 1\).
+We also prove, on the whole parameter domain,
+\begin{equation}\tag{Q97.0.2}\label{eq:Q97:0.2}
+\E[(p\bar f_4)^8]\le e^{3d},\qquad
+\boxed{\E[(p\bar f_5)^8]\le e^{-425d/864}.}
+\end{equation}
+
+\paragraph{Q97.1 Finite inputs and boundary cases.}
+Use the finite definitions of Appendix~\ref{proof:Q5-C064}:
+\(A=\allowbreak J+K\), \(T=\allowbreak J-K=\allowbreak A^*\), \(g=\allowbreak K\one\), \(p=\allowbreak 1+g\), \(q=\allowbreak 1-g\),
+\(f_n=\allowbreak A^n\one\), \(\bar f_n=\allowbreak T^n\one\), \(h_n=\allowbreak Tf_{n-1}\),
+\(\delta_j=\allowbreak \|K^j\one\|_2^2\), \(d=\allowbreak \delta_1\),
+\(\theta=\allowbreak 13/32\), \(\kappa=\allowbreak 19/32\), and \(\tau=\allowbreak d-\delta_2\).
+All expectations, norms, rows and adjoints use the fixed measure. We have
+\begin{equation}\tag{Q97.1.1}\label{eq:Q97:1.1}
+\begin{gathered}
+0\le d\le1/3,\quad d^2\le\delta_2\le\theta d,\quad
+\delta_{j+1}\le\theta\delta_j,\quad\|K\|^2\le\theta,\quad
+|Kv(x)|\le\|v\|_2,\\
+\E K^{2j}\one=(-1)^j\delta_j,\quad\E K^{2j+1}\one=0,\quad
+0\le f_n,\bar f_n,h_n\le2,\quad\E f_n=\E\bar f_n\le1.
+\end{gathered}
+\end{equation}
+The same spectral measure gives \(\delta_3\ge\allowbreak \delta_2^2/d\) for \(d>\allowbreak 0\).
+For a mean-zero vector \(v\), the variance of the row
+\(K(x,\allowbreak \cdot)-g(x)\) is at most \(1-g(x)^2\), hence
+\begin{equation}\tag{Q97.1.2}\label{eq:Q97:1.2}
+|Kv(x)|\le\sqrt{p(x)q(x)}\|v\|_2.
+\end{equation}
+Set \(\beta_1=\allowbreak \beta_2=\allowbreak 0\) and
+\(\beta_n=\allowbreak \sum_{j=\allowbreak 1}^{\lfloor(n-1)/2\rfloor}(-1)^{j-1}\delta_j\)
+for \(n\ge\allowbreak 3\). Then \(\tau\le\allowbreak \beta_n\le\allowbreak  d\),
+\(\beta_3=\allowbreak \beta_4=\allowbreak d\), \(\beta_5=\allowbreak \beta_6=\allowbreak \tau\), and
+\begin{equation}\tag{Q97.1.3}\label{eq:Q97:1.3}
+S_n=\sum_{j=0}^nK^j\one=f_n+\sum_{j=3}^n\beta_j f_{n-j}.
+\end{equation}
+Put \(K'=\allowbreak -K\), \(z=\allowbreak K'\), \(g'=\allowbreak -g\); the reversed convolution uses
+\(\bar f_n\). With \(G_m(z)=\allowbreak \sum_{j=\allowbreak 0}^{m-1}z^j\), \(G_0=\allowbreak 0\),
+\(\|G_m\|\le\allowbreak 1\) for \(m=\allowbreak 0,\allowbreak 1\) or \(m\ge\allowbreak 3\), whereas
+\(\|G_2\|<\allowbreak 6/5\). Frequencies have \(z=\allowbreak i\sqrt x\), \(0\le\allowbreak  x\le\allowbreak \theta\).
+The full-mean inequality in Appendix~\ref{proof:Q5-C081} gives
+\begin{equation}\tag{Q97.1.4}\label{eq:Q97:1.4}
+\boxed{\E e^{8K'V}\le e^{8\E(K'V)+17\|V\|_2^2}}
+\end{equation}
+for every real \(V\), including \(V/C\) for any scalar \(C>\allowbreak 0\).
+The bare-path bound of \eqref{eq:Q72:bare} is
+\begin{equation}\tag{Q97.1.5}\label{eq:Q97:1.5}
+\E[(p\bar f_n)^8]\le1-d/50\qquad(n\ge6).
+\end{equation}
+After zero-mass atoms are removed, \(p,\allowbreak q\ge\allowbreak \mu(x)>\allowbreak 0\).
+The all-equal labelling gives positive tree messages. If \(d=\allowbreak 0\),
+\(g=\allowbreak 0\), and leaf integration gives every message equal to one even
+when \(K\ne0\). Divisions below use \(d>\allowbreak 0\).
+Genuine equal pairs satisfy \(f_\ell+h_\ell=\allowbreak 2\E f_{\ell-1}\) and
+\(0\le\allowbreak  f_\ell h_\ell\le\allowbreak 1\), and are restored by positive comparison.
+
+\paragraph{Q97.2.1 The bare fourth path: cost at most \(3d\).}
+Finite convolution gives the exact identity
+\begin{equation}\tag{Q97.2.1}\label{eq:Q97:2.1}
+\bar f_4=(1-d)q+zG_3(z)g'-d.
+\end{equation}
+Put \(C=\allowbreak 1-d\ge\allowbreak 2/3\), \(N=\allowbreak zG_3g'\). AM--GM on \(Cp\) and
+\(\bar f_4\) gives
+\fitdisplay{
+p\bar f_4\le C\left(1+\frac{N-d}{2C}\right)^2.
+}{}
+The base is \((Cp+\bar f_4)/(2C)\ge\allowbreak 0\).
+Using \(y^{16}\le\allowbreak  e^{16(y-1)}\) and \eqref{eq:Q97:1.4},
+\begin{equation}\tag{Q97.2.2}\label{eq:Q97:2.2}
+\log\E[(p\bar f_4)^8]\le8\log C+\frac8C(-d-\tau)
++\frac{17}{C^2}(d-\delta_2+\delta_3).
+\end{equation}
+Here \(\E N=\allowbreak -\tau\) and \(\|G_3g'\|^2=\allowbreak d-\delta_2+\delta_3\).
+Let \(t=\allowbreak \delta_2/d\ge\allowbreak  d\). Since \(\delta_3\le\allowbreak \theta\delta_2\),
+the squared norm divided by \(d\) is at most \(1-\kappa t\).
+Use \(\log C\le\allowbreak -d\) and multiply the bound by \(C^2/d\):
+\begin{equation}\tag{Q97.2.3}\label{eq:Q97:2.3}
+-7+32d-8d^2-(67/32+8d)t\le-7+(957/32)d-16d^2.
+\end{equation}
+Subtracting \(3C^2\) from the last expression gives
+\(-10+(1149/32)d-19d^2\). This increases on \([0,\allowbreak 1/3]\), since its
+derivative is at least \(2231/96>\allowbreak 0\), and its endpoint value is
+\(-41/288<\allowbreak 0\). Hence \eqref{eq:Q97:2.2} is at most \(3d\).
+
+\paragraph{Q97.2.2 The bare fifth path: contraction.}
+Retaining three convolution terms gives
+\begin{equation}\tag{Q97.2.4}\label{eq:Q97:2.4}
+\bar f_5=(1-2d)q+z(G_4(z)-d)g'-\tau.
+\end{equation}
+Put \(C=\allowbreak 1-2d\ge\allowbreak 1/3\), \(V=\allowbreak (G_4-d)g'\), \(N=\allowbreak zV\).
+Then \(\E N=\allowbreak -\tau+d^2\), and the spectral blocks give
+\fitdisplay{
+\|V\|^2=(1-2d+d^2)d-(1-2d)\delta_2-\delta_3+\delta_4.
+}{}
+Using \(t=\allowbreak \delta_2/d\ge\allowbreak  d\), \(\delta_4\le\allowbreak \theta\delta_3\),
+and \(\delta_3\ge\allowbreak \delta_2^2/d\),
+\begin{equation}\tag{Q97.2.5}\label{eq:Q97:2.5}
+\|V\|^2/d\le1-2d+d^2-Ct-\kappa t^2.
+\end{equation}
+The same weighted AM--GM and exponential inequality yield
+\begin{equation}\tag{Q97.2.6}\label{eq:Q97:2.6}
+\begin{aligned}
+\log\E[(p\bar f_5)^8]\le{}&8\log C+\frac{8d}{C}(-2+2t+d)\\
+&+\frac{17d}{C^2}[1-2d+d^2-Ct-\kappa t^2].
+\end{aligned}
+\end{equation}
+The inequality \(\log C\le\allowbreak -2d-2d^2\), initially using only
+\(-2d\), gives after multiplication by \(C^2/d\)
+\(-15+70d-63d^2-Ct-17\kappa t^2\), decreasing for \(t\ge\allowbreak  d\).
+Set \(t=\allowbreak d\) and include the remaining logarithmic term
+\(-16dC^2\). The result is
+\begin{equation}\tag{Q97.2.7}\label{eq:Q97:2.7}
+P(d)=-15+53d-(227/32)d^2-64d^3.
+\end{equation}
+On \([0,\allowbreak 1/3]\), \(P'(d)\ge\allowbreak 431/16>\allowbreak 0\), and
+\(P(1/3)=\allowbreak -425/864\). Thus the exponent is at most
+\(-425d/(864C^2)\le\allowbreak -425d/864\), proving \eqref{eq:Q97:0.2}.
+
+\paragraph{Q97.3 The triple envelope and the exact first step.}
+Fix \(c\ge\allowbreak 5,\allowbreak L\ge\allowbreak 2\), \(F=\allowbreak \bar f_2f_3h_c\), and set
+\begin{equation}\tag{Q97.3.1}\label{eq:Q97:3.1}
+\begin{gathered}
+B=\beta_{c-1},\quad m=c-3\ge2,\quad
+W=\sum_{r=4}^cK^r\one=K^3G_m(K)g,\\
+R=Bg-W,\qquad\Gamma=d+\beta_c+B.
+\end{gathered}
+\end{equation}
+Since \(f_{c-1}\le\allowbreak  S_{c-1}-B\), positivity gives
+\(h_c\le\allowbreak  TS_{c-1}-Bq\). Expanding and adding \(f_3\) yields
+\begin{equation}\tag{Q97.3.2}\label{eq:Q97:3.2}
+f_3+h_c\le2-\Gamma+R,\qquad0<F\le\bar f_2e^{R-\Gamma}.
+\end{equation}
+At \(c=\allowbreak 5\), \(B=\allowbreak d\) and \(\Gamma=\allowbreak 3d-\delta_2=\allowbreak 2d+\tau\ge\allowbreak 83d/32\).
+For \(c\ge\allowbreak 6\), \(B\ge\allowbreak \tau\) and \(\Gamma\ge\allowbreak  d+2\tau\ge\allowbreak 35d/16\).
+The exponential envelope follows by AM--GM on the two nonnegative arms.
+
+First suppose \(0<\allowbreak d\le\allowbreak 1/8\). The row estimate and \(G_2\) bound give
+\(|R|\le\allowbreak  d+(6/5)\theta\sqrt d<\allowbreak 1/8+(39/80)(3/8)<\allowbreak 1/2\).
+The factorial bound \(n!\ge\allowbreak 2\cdot3^{n-2}\), \(n\ge\allowbreak 2\), bounds the
+remainder by \(R^2/[2(1-|R|/3)]\le\allowbreak 3R^2/5\).
+Write \(r=\allowbreak Kg\), \(G=\allowbreak g-r\), \(\bar f_2=\allowbreak 1-G\), so \(\E G^2=\allowbreak d+\delta_2\).
+Keeping the complete mixed mean in the first row gives
+\begin{equation}\tag{Q97.3.3}\label{eq:Q97:3.3}
+\begin{gathered}
+T(\bar f_2e^R)\le\bar f_3+zR+\delta,\\
+\boxed{\delta=\E R-\E(gR)+\E(rR)
++\sqrt{(d+\delta_2)\E R^2}+\frac{12}{5}\E R^2.}
+\end{gathered}
+\end{equation}
+Indeed, \(T(\bar f_2R)=\allowbreak \E R-\E(GR)-KR+K(GR)\),
+\(K(GR)\le\allowbreak \E|GR|\le\allowbreak \sqrt{(d+\delta_2)\E R^2}\), and
+\(T(\bar f_2R^2)\le\allowbreak 4\E R^2\).
+For \(D_i=\allowbreak \E z^iR\), finite propagation is
+\begin{equation}\tag{Q97.3.4}\label{eq:Q97:3.4}
+e^\Gamma T^LF\le Y_L=\bar f_{L+2}+z^LR+\delta\bar f_{L-1}
++\sum_{i=1}^{L-1}D_i\bar f_{L-1-i}.
+\end{equation}
+The first perturbation is \(zR\), with coefficient one.
+
+\paragraph{Q97.4.1 The first-step constant for \(c=\allowbreak 5\).}
+Put \(t=\allowbreak \delta_2/d\), \(u=\allowbreak \delta_3/d\). The exact mixed moments are
+\begin{equation}\tag{Q97.4.1}\label{eq:Q97:4.1}
+\E R-\E(gR)+\E(rR)=-\delta_2-d^2+2\delta_3,\qquad
+\E R^2=d^3+\delta_4+\delta_5-2d\delta_3.
+\end{equation}
+Since \(\theta(1+\theta)-2d>\allowbreak 0\) and \(u\le\allowbreak \theta t\),
+\(\E R^2/d\le\allowbreak  J=\allowbreak d^2+[\theta^2(1+\theta)-2\theta d]t\).
+Insert \(\sqrt{(1+t)J}\le\allowbreak (1+t)/6+(3/2)J\) into
+\eqref{eq:Q97:3.3}:
+\begin{equation}\tag{Q97.4.2}\label{eq:Q97:4.2}
+\begin{aligned}
+\delta/d\le{}&1/6-d+(39/10)d^2\\
+&+t[-1/48+(39/10)\theta^2(1+\theta)-(39/5)\theta d].
+\end{aligned}
+\end{equation}
+The \(t\)-coefficient is positive for \(d\le\allowbreak 1/8\). A lower bound,
+using \(\theta^2>\allowbreak 4/25\), \(1+\theta>\allowbreak 7/5\), \(\theta<\allowbreak 5/12\), is
+\(-1/48+(39/10)(4/25)(7/5)-(39/5)(5/12)(1/8)>\allowbreak 0\).
+Set \(t\le\allowbreak \theta\). The resulting polynomial has derivative at most
+\(-1-(39/5)\theta^2+39/40<\allowbreak 0\). Its value at zero is
+\begin{equation}\tag{Q97.4.3}\label{eq:Q97:4.3}
+81/512+(39/10)(98865/1048576)=5514615/10485760<17/32,
+\end{equation}
+with margin \(55945/10485760\). Thus \(\delta_+\le\allowbreak 17d/32\).
+
+\paragraph{Q97.4.2 The first-step constant for \(c\ge\allowbreak 6\).}
+Let \(e_j=\allowbreak \delta_j-\delta_{j+1}\). Then \(e_j\ge\allowbreak 0\) and
+\(e_{j+1}\le\allowbreak \theta e_j\). Consecutive alternating sums give
+\(\E W+\E(rW)\ge\allowbreak \kappa(\delta_2-\delta_3)\) and
+\(\kappa\delta_3\le\allowbreak \E(gW)\le\allowbreak \delta_3\).
+Together with \(B\ge\allowbreak \tau\ge\allowbreak \kappa d\),
+\begin{equation}\tag{Q97.4.4}\label{eq:Q97:4.4}
+\begin{gathered}
+\E R-\E(gR)+\E(rR)\le-\kappa\delta_2+(1+\kappa)\delta_3-Bd,\\
+\E R^2\le d^3+(\theta-2\kappa^2d)\delta_3.
+\end{gathered}
+\end{equation}
+Here \(\theta-2\kappa^2d>\allowbreak 0\). Using \(u\le\allowbreak \theta t\), the mixed mean
+divided by \(d\) is at most \((55/1024)t-\kappa d\), and
+\(J=\allowbreak \E R^2/d\le\allowbreak  d^2+[\theta^2-2\kappa^2\theta d]t\).
+Apply \(\sqrt{(1+t)J}\le\allowbreak (1+t)/8+2J\):
+\begin{equation}\tag{Q97.4.5}\label{eq:Q97:4.5}
+\begin{aligned}
+\delta/d\le{}&1/8-\kappa d+(22/5)d^2\\
+&+t[1/8+55/1024+(22/5)\theta^2-(44/5)\kappa^2\theta d].
+\end{aligned}
+\end{equation}
+The \(t\)-coefficient is positive: dropping its first two positive
+terms and using \(d\le\allowbreak 1/8\) leaves
+\((22/5)\theta^2-(11/10)\kappa^2\theta
+=(11/10)\theta(4\theta-\kappa^2)>0\).
+After \(t\le\allowbreak \theta\), the derivative in \(d\) is at most
+\(11/10-\kappa-(44/5)\kappa^2\theta^2<\allowbreak 0\).
+The exact comparison is
+\(81/160=\allowbreak 2654208/5242880<\allowbreak 2684396/5242880\).
+The value at zero is \(80709/163840<\allowbreak 1/2\), with margin
+\(1211/163840\). Hence \(\delta_+\le\allowbreak  d/2\) for every \(c\ge\allowbreak 6\).
+
+\paragraph{Q97.4.3 All signed propagation tails.}
+The positive means from \(-W\) have classes \(i\equiv2,\allowbreak 3\pmod4\),
+with first terms at most \(\delta_3,\allowbreak \delta_4\). Those from \(Bg\)
+have class \(i\equiv1\), first term \(Bd\). Increasing \(i\) by four
+increases the moment index by two. Thus every finite positive sum obeys
+\begin{equation}\tag{Q97.4.6}\label{eq:Q97:4.6}
+\sum_{i\ge1}(D_i)_+\le\frac{\delta_3+\delta_4+Bd}{1-\theta^2}
+\le\frac{169}{608}d+\frac{1024}{855}d^2.
+\end{equation}
+The individual bounds are
+\begin{equation}\tag{Q97.4.7}\label{eq:Q97:4.7}
+\begin{gathered}
+-\delta_3\le D_1\le d^2,\quad0\le D_2\le\delta_3,\quad D_3\le\delta_4,\\
+D_i\le\max(\delta_5,B\delta_3)\le\theta^4d<d/36\qquad(i\ge4).
+\end{gathered}
+\end{equation}
+For the last bound, \(d\le\allowbreak 1/8<\allowbreak \theta^2\).
+At \(i\equiv0\), both parts are nonpositive; class \(i\equiv1\)
+starts at \(i=\allowbreak 5\) with \(B\delta_3\) and a nonpositive other part;
+classes \(i\equiv2,\allowbreak 3\) start at \(i=\allowbreak 6,\allowbreak 7\) with
+\(\delta_5,\allowbreak \delta_6\) and nonpositive \(Bg\) part.
+
+\paragraph{Q97.5 Four retained path losses for \(L\ge\allowbreak 4\), \(d\le\allowbreak 1/8\).}
+Here \(n=\allowbreak L+2\ge\allowbreak 6\). Retain the four nonnegative convolution terms
+\(\tau\bar f_0,\allowbreak \tau\bar f_1,\allowbreak \tau\bar f_2,\allowbreak \tau\bar f_3\):
+\begin{equation}\tag{Q97.5.1}\label{eq:Q97:5.1}
+\bar f_n\le(1-3\tau)q
++z[G_{L+1}(z)-\tau(2+z)]g'-\tau(1-d).
+\end{equation}
+Indeed, \(\bar f_0+\bar f_1+\bar f_2+\bar f_3
+=1-d+3q+2Kg-K^3\one\).
+Set \(C=\allowbreak 1-3\tau>\allowbreak 0\), \(a=\allowbreak 1-2\tau\), and
+\begin{equation}\tag{Q97.5.2}\label{eq:Q97:5.2}
+P_{L,c}(z)=G_{L+1}(z)-\tau(2+z)-Bz^{L-1}-z^{L+2}G_m(-z).
+\end{equation}
+As \(R=\allowbreak -Bg'-z^3G_m(-z)g'\), the term \(z^LR\) in
+\eqref{eq:Q97:3.4} combines with \eqref{eq:Q97:5.1} as
+\(zP_{L,\allowbreak c}g'\). We prove
+\begin{equation}\tag{Q97.5.3}\label{eq:Q97:5.3}
+\boxed{\|P_{L,c}(K')\|\le1-2\tau=a.}
+\end{equation}
+
+\paragraph{Q97.5.1 The frequency certificate for \(L=\allowbreak 4\).}
+At \(z=\allowbreak i\sqrt x\), \(0\le\allowbreak  x\le\allowbreak \theta\), write
+\(G_m(-z)=\allowbreak U-zV\), where \(1-x\le\allowbreak  U,\allowbreak V\le\allowbreak 1\).
+With \(v=\allowbreak 1-\tau\), the coordinates are
+\fitdisplay{
+\Re P=a-x+x^2+x^3U,\qquad
+\Im P/\sqrt x=v-(1-B)x-x^3V.
+}{}
+They are nonnegative since \(a\ge\allowbreak 3/4\), \(v\ge\allowbreak 7/8\),
+and \(x+x^3<\allowbreak 1/2\), and are at most \(a-x+x^2+x^3\) and
+\(v-7x/8\), respectively. Squaring gives
+\fitdisplay{
+\begin{aligned}
+|P|^2\le{}&a^2+(-1+2\tau+\tau^2)x+(5/4-9\tau/4)x^2\\
+&+(49/64-4\tau)x^3-x^4+2x^5+x^6.
+\end{aligned}
+}{}
+Since \(\tau\le\allowbreak 1/8\), the first coefficient is at most \(-47/64\),
+and the next two positive coefficients are at most \(5/4,\allowbreak 49/64\).
+Drop \(-x^4\) and divide by \(x\), treating \(x=\allowbreak 0\) by equality.
+For \(x\le\allowbreak 5/12\), the total positive cost is at most
+\fitdisplay{
+\frac{25}{48}+\frac{1225}{9216}+\frac{625}{10368}
++\frac{3125}{248832}
+=\frac{180800}{248832}<\frac{182736}{248832}=\frac{47}{64}.
+}{}
+Thus \(|P|^2\le\allowbreak  a^2\) at every frequency and for every \(c\).
+
+\paragraph{Q97.5.2 The frequency certificate for \(L=\allowbreak 5\).}
+The real coordinate is \(a-x+(1-B)x^2+x^4V\), and the imaginary
+coordinate divided by \(\sqrt x\) is \(v-x+x^2+x^3U\), both nonnegative.
+Bound these by \(a-x+x^2+x^4\) and \(v-x+x^2+x^3\), respectively:
+\fitdisplay{
+\begin{aligned}
+|P|^2-a^2\le x[&-1+2\tau+\tau^2+(1-2\tau)x+(1-2\tau)x^2\\
+&+(3-6\tau)x^3-3x^4+4x^5+x^6+x^7].
+\end{aligned}
+}{}
+The derivative of the bracket in \(\tau\) is at least
+\(2-2x-2x^2-6x^3\ge\allowbreak 37/96>\allowbreak 0\) for \(x\le\allowbreak 5/12\).
+Take \(\tau=\allowbreak 1/8\) and drop \(-3x^4\). The remaining positive terms are
+\((3/4)x+(3/4)x^2+(9/4)x^3+4x^5+x^6+x^7\).
+Using \(x\le\allowbreak 5/12\), \(x^2<\allowbreak 7/40\), \(x^3<\allowbreak 3/40\),
+\(x^5<\allowbreak 1/72\), \(x^6<\allowbreak 1/180\), \(x^7<\allowbreak 1/400\), their sum is below
+\fitdisplay{
+49/80+1/18+1/180+1/400=1217/1800<47/64.
+}{}
+This proves \(|P|^2\le\allowbreak  a^2\).
+
+\paragraph{Q97.5.3 Every \(L\ge\allowbreak 6\).}
+For comparison with the finite geometric remainder, define the scalar
+rational function \(P_\infty(z)=\allowbreak 1/(1-z)-\tau(2+z)\). Directly,
+\fitdisplay{
+a^2-|P_\infty|^2=x\left[\frac{a}{1+x}-\tau^2\right]
+\ge\frac{559}{1088}x.
+}{}
+The last coefficient follows from \(a\ge\allowbreak 3/4\), \(x\le\allowbreak 5/12\),
+\(\tau\le\allowbreak 1/8\), giving \(9/17-1/64\).
+Also \(a+|P_\infty|\le\allowbreak 2a\le\allowbreak 2\), so
+\(|P_\infty|\le\allowbreak  a-559x/2176\le\allowbreak  a-x/4\).
+The finite \(G_{L+1}\) remainder is at most
+\(x^{(L+1)/2}/\sqrt{1+x}\le\allowbreak  x^{7/2}\).
+The other two terms in \eqref{eq:Q97:5.2} are at most
+\(x^{5/2}/8+(6/5)x^4\). After division by \(x\), their combined
+bound, using \(x\le\allowbreak 5/12\), \(\sqrt x\le\allowbreak 2/3\), is
+\fitdisplay{
+25/216+5/144+25/288=205/864<1/4.
+}{}
+Hence \(|P_{L,\allowbreak c}|\le\allowbreak  a-11x/864\le\allowbreak  a\), with equality at \(x=\allowbreak 0\).
+This completes \eqref{eq:Q97:5.3} for every finite \(L\ge\allowbreak 4,\allowbreak c\ge\allowbreak 5\).
+
+\paragraph{Q97.5.4 Weighted AM--GM and the cost.}
+Put \(P_{\rm cost}=\allowbreak 2\delta_++2\sum_{i\ge\allowbreak 1}(D_i)_+\), which bounds
+the cost of every finite propagation. From \eqref{eq:Q97:3.4},
+\eqref{eq:Q97:5.1} and \(\bar f_j\le\allowbreak 2\),
+\fitdisplay{
+0<e^\Gamma T^LF\le Cq+N+P_{\rm cost}-\tau(1-d),\qquad
+N=zP_{L,c}(z)g'.
+}{}
+Here \(C=\allowbreak 1-3\tau\ge\allowbreak 5/8\),
+\(\E N=\allowbreak -\beta_{n+1}+2\tau d+D_L\), and
+\(\|P_{L,\allowbreak c}g'\|^2\le\allowbreak (1-2\tau)^2d\).
+AM--GM on \(Cp\) and this nonnegative upper bound, followed by
+\eqref{eq:Q97:1.4} applied to \(P_{L,\allowbreak c}g'/C\), gives
+\begin{equation}\tag{Q97.5.4}\label{eq:Q97:5.4}
+\begin{aligned}
+\log\E[(pT^LF)^8]\le{}&-8\Gamma+8\log C\\
+&+\frac8C[P_{\rm cost}-\tau(1-d)-\beta_{n+1}+2\tau d+D_L]\\
+&+\frac{17}{C^2}(1-2\tau)^2d.
+\end{aligned}
+\end{equation}
+
+\paragraph{Q97.5.5 The two-variable payment for \(c\ge\allowbreak 6\).}
+The preceding bounds give
+\(P_{\rm cost}\le\allowbreak (473/304)d+(2048/855)d^2\) and \(D_L\le\allowbreak  d/36\).
+Put \(b=\allowbreak 1024/855\), \(A_0=\allowbreak 4333/2736\).
+The bracket in \eqref{eq:Q97:5.4} is at most
+\(A_0d+2bd^2-2\tau+3\tau d\), and \(\Gamma\ge\allowbreak  d+2\tau\).
+Use \(\log C\le\allowbreak -3\tau\), multiply by \(C^2/d\), and set
+\(s=\allowbreak \tau/d\in[\kappa,\allowbreak 1]\). Bound the positive costs by
+\(A=\allowbreak 8/5\), \(b=\allowbreak 6/5\), obtaining
+\begin{equation}\tag{Q97.5.5}\label{eq:Q97:5.5}
+\begin{aligned}
+F(s,d)={}&9+8A-56s+d[288s^2+(4-24A)s+16b]\\
+&-d^2[360s^3+76s^2+48bs].
+\end{aligned}
+\end{equation}
+For \(d\le\allowbreak 1/8\), the derivative of \(F_s\) in \(d\) is at least
+\(538s-270s^2+4-24A-12b\ge\allowbreak 268s+4-24A-12b>\allowbreak 0\).
+Its maximum in \(d\) is thus at \(1/8\); there it increases in
+\(s\le\allowbreak 1\) and has value \(-11/4-3A-3b/4<\allowbreak 0\) at \(s=\allowbreak 1\).
+Consequently \(F\) decreases in \(s\), with maximum at \(s=\allowbreak \kappa\).
+At this \(s\), the linear \(d\)-coefficient exceeds \(75\), and the
+absolute negative quadratic coefficient is below \(140\), using
+\(\kappa^2>\allowbreak 1/3\), \(\kappa<\allowbreak 3/5\).
+Hence the \(d\)-derivative exceeds \(75-140/4=\allowbreak 40\), and the maximum
+is at \(d=\allowbreak 1/8\). Its exact value is
+\begin{equation}\tag{Q97.5.6}\label{eq:Q97:5.6}
+\begin{aligned}
+F(\kappa,1/8)&=121/5-(306/5)\kappa+(557/16)\kappa^2-(45/8)\kappa^3\\
+&=-\frac{1365979}{1310720}<-1.
+\end{aligned}
+\end{equation}
+Thus \eqref{eq:Q97:5.4} is at most \(-d/C^2\le\allowbreak -d\).
+
+\paragraph{Q97.5.6 The payment for \(c=\allowbreak 5\).}
+Here \(P_{\rm cost}\) increases by \(d/16\), so
+\(A_0=\allowbreak 563/342<\allowbreak 5/3\), and \(\Gamma=\allowbreak 2d+\tau\).
+With \(A=\allowbreak 5/3\), \(b=\allowbreak 6/5\), the scaled expression is
+\begin{equation}\tag{Q97.5.7}\label{eq:Q97:5.7}
+\begin{aligned}
+F_5(s,d)={}&1+8A-48s+d[240s^2+(52-24A)s+16b]\\
+&-d^2[288s^3+148s^2+48bs].
+\end{aligned}
+\end{equation}
+Its \(s\)-derivative increases in \(d\), because the corresponding
+derivative is bounded below by
+\(406s-216s^2+52-24A-12b\ge\allowbreak 190s+52-24A-12b>\allowbreak 0\).
+At \(d=\allowbreak 1/8\), \((F_5)_s\) increases in \(s\le\allowbreak 1\), with value
+\(3/8-3A-3b/4<\allowbreak 0\) at \(s=\allowbreak 1\). The maximum is again at \(s=\allowbreak \kappa\).
+There the linear coefficient exceeds \(80\) and the absolute negative
+quadratic coefficient is below \(152\); the \(d\)-derivative is thus
+greater than \(80-152/4>\allowbreak 0\). At the endpoint,
+\begin{equation}\tag{Q97.5.8}\label{eq:Q97:5.8}
+\begin{aligned}
+F_5(\kappa,1/8)&=251/15-(237/5)\kappa+(443/16)\kappa^2-(9/2)\kappa^3\\
+&=-\frac{2547481}{983040}<-2.
+\end{aligned}
+\end{equation}
+This row gives \(\E H^8\le\allowbreak  e^{-2d}\). Together the last two
+calculations prove \(e^{-d}\) for all \(c\ge\allowbreak 5,\allowbreak L\ge\allowbreak 4,\allowbreak d\le\allowbreak 1/8\).
+
+\paragraph{Q97.6 The two short connectors on the low domain.}
+Fix \(\bar\delta=\allowbreak 17d/32\ge\allowbreak \delta\) and
+\(\lambda=\allowbreak d-\bar\delta=\allowbreak 15d/32\). Replacing \(\delta\) by
+\(\bar\delta\) increases the same positive upper bound. Put
+\begin{equation}\tag{Q97.6.1}\label{eq:Q97:6.1}
+Q_L(z)=G_{L+1}(z)-Bz^{L-1}-z^{L+2}G_m(-z).
+\end{equation}
+
+\paragraph{Q97.6.1 The connector \(L=\allowbreak 2\).}
+The same \(U,\allowbreak V\in[1-x,\allowbreak 1]\) give
+\(\Re Q_2=\allowbreak 1-x-x^2U\in[0,\allowbreak 1-x-x^2/2]\) and
+\(\Im Q_2/\sqrt x=\allowbreak 1-B+x^2V\in[0,\allowbreak 1+x^2]\).
+Thus \(|Q_2|^2\le\allowbreak 1-x+3x^3+x^4/4+x^5\le\allowbreak 1\), since after division
+by \(x\), the positive cost is at most \(27/32\) for \(x\le\allowbreak 1/2\).
+The exact convolution \(\bar f_4=\allowbreak S'_4-d(1+q)\) and finite propagation
+give \(p+Y\le\allowbreak 2+c+zV_{\rm tot}\), with
+\fitdisplay{
+c=\bar\delta+D_1-2d,\qquad
+V_{\rm tot}=Q_2(z)g'-\lambda\one,\qquad
+\E(zV_{\rm tot})=-\tau+D_2.
+}{}
+By \eqref{eq:Q97:4.7}, \(d\le\allowbreak 1/8\) and \(\delta_3<\allowbreak d/6\),
+\fitdisplay{
+c+\E N\le[17/32+1/8+1/6-2-19/32]d=-85d/48\le-7d/4.
+}{}
+Since \(\E(Q_2g')=\allowbreak -d+D_1\),
+\fitdisplay{
+\|V_{\rm tot}\|^2\le d+\lambda^2+2\lambda(d-D_1)
+\le d+(10/3)d^2\le17d/12<3d/2.
+}{}
+AM--GM and \eqref{eq:Q97:1.4} give exponent at most
+\(-8(35/16)d-14d+(51/2)d=\allowbreak -6d\).
+This proves the low-domain \(L=\allowbreak 2\) bound \(e^{-6d}\) for every \(c\ge\allowbreak 5\).
+
+\paragraph{Q97.6.2 The connector \(L=\allowbreak 3\).}
+The bound \(|G_4|=\allowbreak (1-x)\sqrt{1+x}\le\allowbreak 1-x/2-x^2/2\), together with
+\(B\le\allowbreak 1/8\), \(\|G_m\|\le\allowbreak 6/5\) and \(\sqrt x\le\allowbreak 13/20\), gives
+\(|Q_3|\le\allowbreak 1-3x/8+(7/25)x^2\le\allowbreak 1\).
+Also \(\Re Q_3=\allowbreak 1-x+Bx-x^3V\ge\allowbreak 1-x-x^3>\allowbreak 1/2\).
+Since \(\lambda\le\allowbreak 1/8\),
+\(|Q_3-\lambda|^2\le\allowbreak |Q_3|^2-2\lambda\Re Q_3+\lambda^2\le\allowbreak 1\).
+Use the exact convolution
+\(\bar f_5=\allowbreak S'_5-\tau-dq-d\bar f_2\). Then
+\fitdisplay{
+\begin{gathered}
+c=\bar\delta+D_1+D_2-2d-\tau,\quad
+V_{\rm tot}=(Q_3-\lambda)g'-\eta\one,\\
+\eta=2d-\bar\delta-D_1>0,\qquad
+\E(zV_{\rm tot})=-\tau+\lambda d+D_3.
+\end{gathered}
+}{}
+As \(D_1\le\allowbreak  d^2\), \(D_2\le\allowbreak \delta_3<\allowbreak d/6\), \(D_3\le\allowbreak \delta_4<\allowbreak d/14\),
+\fitdisplay{
+c+\E N\le[17/32+1/4+1/6+1/14-2-19/16]d
+=-1457d/672\le-2d.
+}{}
+On the other hand, \(D_1\ge\allowbreak -\delta_3\) gives
+\(\eta\le\allowbreak 157d/96<\allowbreak 5d/3\).
+Also \(\E[(Q_3-\lambda)g']=\allowbreak -\tau+D_2\in[-\tau,\allowbreak 0]\), since
+\(\tau\ge\allowbreak \kappa d>\allowbreak \delta_3\). Therefore
+\fitdisplay{
+\|V_{\rm tot}\|^2\le d+\eta^2+2\eta\tau
+\le d+(55/9)d^2\le127d/72<9d/5.
+}{}
+The total exponent is at most
+\(-35d/2-16d+153d/5=\allowbreak -29d/10<\allowbreak -2d\).
+Thus every \(c\ge\allowbreak 5\) has the low-domain \(L=\allowbreak 3\) bound \(e^{-2d}\).
+
+\paragraph{Q97.7 The high domain with the row mean retained.}
+Let \(1/8\le\allowbreak  d\le\allowbreak 1/3\), keeping \(F=\allowbreak \bar f_2f_3h_c\). Set
+\fitdisplay{
+U=\sum_{r=3}^{c-1}K^r\one=K^2G_m(K)g,\qquad W=KU.
+}{}
+The finite alternating sum gives \(\E U=\allowbreak d-\beta_c\), so
+\(B-\E U=\allowbreak \Gamma-2d\in[0,\allowbreak d]\).
+The centered row estimate \eqref{eq:Q97:1.2} gives
+\begin{equation}\tag{Q97.7.1}\label{eq:Q97:7.1}
+\begin{gathered}
+R=(\Gamma-2d)g-K(U-\E U),\\
+|R|^2\le(\Gamma-2d)^2+\operatorname{Var}(U)\le d^2+\|U\|^2.
+\end{gathered}
+\end{equation}
+The middle inequality is Cauchy on the two coordinates
+\(g,\allowbreak \sqrt{1-g^2}\).
+For \(c\ge\allowbreak 6\), \(m\ge\allowbreak 3\), and \(\|U\|^2\le\allowbreak \delta_3\le\allowbreak \theta^2d\).
+Thus \(|R|/d\le\allowbreak \sqrt{1+8\theta^2}=\allowbreak \sqrt{297/128}<\allowbreak 25/16\).
+Since \(\Gamma/d\ge\allowbreak 35/16\), \(\Gamma-R\ge\allowbreak 5d/8\).
+For \(c=\allowbreak 5\), \(\|U\|^2=\allowbreak \delta_3+\delta_4\le\allowbreak \theta^2(1+\theta)d\),
+so \(|R|/d\le\allowbreak \sqrt{11701/4096}<\allowbreak 7/4\).
+Now \(\Gamma/d\ge\allowbreak 83/32\) yields
+\(\Gamma-R\ge\allowbreak 27d/32\ge\allowbreak 5d/8\).
+Equation \eqref{eq:Q97:3.2} therefore gives \(f_3h_c\le\allowbreak  e^{-5d/8}\)
+for every \(c\ge\allowbreak 5\). Positivity implies
+\(H\le\allowbreak  e^{-5d/8}p\bar f_{L+2}\).
+Use the new \(n=\allowbreak 4\) cost for \(L=\allowbreak 2\), the new \(n=\allowbreak 5\) contraction for
+\(L=\allowbreak 3\), and \eqref{eq:Q97:1.5} for \(L\ge\allowbreak 4\). Uniformly,
+\begin{equation}\tag{Q97.7.2}\label{eq:Q97:7.2}
+\E H^8\le e^{-2d}\qquad(L\ge2).
+\end{equation}
+At \(d=\allowbreak 1/8\) this meets the low-domain proof with the same direction.
+The weakest low-domain bound is \(e^{-d}\), proving
+\eqref{eq:Q97:0.1}. The zero boundary, genuine decorations and full
+reversal are included by the finite positive comparison. Full reversal
+replaces \(K\) by \(-K\) and reverses all arms, connector and receiving
+unit arm together while preserving the measure and \(\delta_j\).
+
+\paragraph{Q97.8 The ordinary catalogue for minimum arm at least two.}
+For \(a<\allowbreak b_1<\allowbreak c_1<\allowbreak \cdots<\allowbreak b_k<\allowbreak c_k\), \(a\ge\allowbreak 2,\allowbreak k\ge\allowbreak 1\), the following
+choices depend on the integer structure:
+\fitdisplay{
+\begin{array}{c|c|c|c}
+\text{range}&F&Q(d)&\text{proof}\\\hline
+b_1\ge5&\bar f_a\prod_i h_{b_i}f_{c_i}&e^{-d}&\ref{proof:Q5-C093}\\
+b_1=4,\ a=2,3&\bar f_a\prod_i h_{b_i}f_{c_i}&e^{-d}
+&k=1:\ \ref{proof:Q5-C095};\ k\ge2:\ \ref{proof:Q5-C093}\\
+b_1=3,\ a=2,\ k\ge2&\bar f_2f_3h_{c_1}\prod_{i=2}^kh_{b_i}f_{c_i}
+&e^{-d}&\ref{proof:Q5-C095}\\
+(a,b_1,c_1)=(2,3,4),\ k=1&\bar f_2f_3h_4&e^{-3d/32}&\ref{proof:Q5-C095}\\
+a=2,\ k=1,\ b_1=3,\ c_1\ge5,\ L=1&\bar f_2h_3f_{c_1}&e^{-d/27}&\ref{proof:Q5-C070}\\
+a=2,\ k=1,\ b_1=3,\ c_1\ge5,\ L\ge2&\bar f_2f_3h_{c_1}&e^{-d}&\eqref{eq:Q97:0.1}
+\end{array}
+}{}
+Except for the last two rows, the listed ranges have every \(L\ge\allowbreak 1\).
+Strict integer order forces \(b_1=\allowbreak 3,\allowbreak 4\) or \(b_1\ge\allowbreak 5\), with \(a=\allowbreak 2\)
+when \(b_1=\allowbreak 3\). The rows therefore give
+\begin{equation}\tag{Q97.8.1}\label{eq:Q97:8.1}
+\boxed{\E[\{E_rpT^L(E_tF)\}^8]\le e^{-d/27}\le1-d/28.}
+\end{equation}
+The last inequality follows from \(e^x\ge\allowbreak 1+x\) and \(27+d\le\allowbreak 28\).
+Each row also retains its displayed stronger bound in its own direction.

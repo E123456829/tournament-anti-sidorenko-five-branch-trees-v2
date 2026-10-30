@@ -1,0 +1,1 @@
+The manuscript uses the same TeX Gyre Termes, TeX Gyre Heros, Latin Modern Mono, and Latin Modern Math font families as the incoming manuscript. These unchanged OpenType files are bundled for reliable filename-based loading. Distributed under the GUST Font License; see GUST-FONT-LICENSE.txt. Font credits and version information are retained in the OpenType name tables.

@@ -1,0 +1,834 @@
+\subsection{The short connectors for the reference terminal pair $(1,\allowbreak 2)$}\label{proof:Q5-C191}
+% Source: Q5-C191, lines 43--71, 103--548 and 605--944.
+\paragraph{Q191.0 The original finite model and receiving envelope}\label{part:Q191.0}
+On the original finite probability space, delete only zero-mass atoms and let
+$K(x,\allowbreak y)=\allowbreak -K(y,\allowbreak x)$ with $|K(x,\allowbreak y)|\le\allowbreak 1$. An operator kernel acts by
+$(Kv)(x)=\allowbreak \sum_y\mu(y)K(x,\allowbreak y)v(y)$, and $Jv=\allowbreak (\E v)\one$. Put
+\fitdisplay{
+B=-K,\quad T=J+B,\quad A=J-B=T^*,\quad u=B\one,
+\quad p=1-u,\quad q=1+u,
+}{}
+\fitdisplay{
+f_n=A^n\one,\quad\bar f_n=T^n\one,\quad f_0=\bar f_0=\one,
+\quad h_n=Tf_{n-1},\quad\delta_j=\|B^j\one\|_2^2,
+}{}
+\fitdisplay{
+d=\delta_1,\quad\theta=13/32,\quad\kappa=19/32,
+\quad\tau=d-\delta_2,\quad\alpha=1-d+\delta_2/2,
+\quad m=1-2d+3\delta_2/2.
+}{}
+The finite polynomials and alternating moments are
+\fitdisplay{
+G_n(z)=\sum_{j=0}^{n-1}z^j,\quad G_0=0,\quad\beta_1=\beta_2=0,
+\quad\beta_n=\sum_{j=1}^{\lfloor(n-1)/2\rfloor}(-1)^{j-1}\delta_j
+\quad(n\ge3).
+}{}
+If $G_n(z)=\allowbreak E_n(x)+zD_n(x)$ at $z=\allowbreak i\sqrt x$, then the same finite
+polynomial at $-z$ is $E_n(x)-zD_n(x)$. Bounds on the two coordinates
+refer to these real functions, with this sign convention. All means,
+rows, norms and spectral measures use the same original $\mu$.
+For the receiving envelope put
+\fitdisplay{
+S_a=\one-G_a(-B)u,\qquad C_3=f_3,
+\qquad C_a=S_a-\beta_a\one-\beta_{a-1}p\ge f_a\ge0\quad(a\ge4).
+}{}
+The finite convolution gives $\tau\le\allowbreak \beta_j\le\allowbreak  d$ for $j\ge\allowbreak 3$.
+
+\paragraph{Q191.3 Exactly two original connector edges}\label{part:Q191.3}
+For every original receiving integer $a\ge\allowbreak 3$, every original finite
+probability host and every real skew kernel $|K|\le\allowbreak 1$, the fixed actual
+terminal $F=\allowbreak qf_2$ satisfies
+\fitdisplay{
+\E\bigl[E_of_a\{T^2(E_tqf_2)\}^4\bigr]\le1-d/1000.
+\label{eq:Q191:3.1}
+}{Q191.3.1}
+The receiving arm points outward, the terminal unit arm points inward,
+its two-edge arm points outward, and both original connector edges point
+from terminal to receiver. The factors $E_o,\allowbreak E_t$ are arbitrary actual
+equal-pair products in their original locations. The undecorated $a=\allowbreak 3$
+estimate below is stronger, with deficit $d/150$.
+The proof uses the actual two-step message, rather than propagating the
+unit reference fourth moment.
+
+\paragraph{Q191.4 Actual means, covariance and simultaneous rows}\label{part:Q191.4}
+The finite framework gives $0\le\allowbreak  d\le\allowbreak 1/3$,
+$d^2\le\allowbreak \delta_2\le\allowbreak \theta d$, and the centered-row inequality
+\fitdisplay{
+|BZ(x)|\le\sqrt{p(x)q(x)}\,\|Z\|_2\qquad(\E Z=0).
+\label{eq:Q191:4.1}
+}{Q191.4.1}
+Subtract the original row mean $u(x)$ before Cauchy--Schwarz; the row
+variance is at most $1-u(x)^2$. This leaves the measure unchanged.
+The spectral measure $\nu$ of $-B^2$ at $u$ has mass $d$, support
+$[0,\allowbreak \theta]$, and $\int x^j\,\allowbreak d\nu=\allowbreak \delta_{j+1}$. For $d>\allowbreak 0$ write
+\fitdisplay{
+v=\delta_2/d,\quad s=1-v,\quad b=2-3v/2,\quad a_0=1-v/2,
+\quad\alpha=1-a_0d,\quad m=1-bd=\alpha-ds.
+}{}
+Here $a_0$ is a scalar, while $a$ remains the receiving length. The actual
+moment range is $d\le\allowbreak  v\le\allowbreak \theta$; no lower bound $x\ge\allowbreak  d$ or $x\ge\allowbreak  v$
+is imposed on the spectrum. Also $1/2\le\allowbreak  m\le\allowbreak 1$ and $\alpha\ge\allowbreak  m>\allowbreak 0$.
+With $r=\allowbreak Bu$, the exact terminal identity is
+\fitdisplay{
+qf_2=(1+r/2)^2-(-u+r/2)^2.
+}{}
+Positivity and $T(r^2)\le\allowbreak 2\delta_2$ give the one-step upper
+$q-(d-\delta_2/2)\one+B^2u$. Apply the same positive $T$ once more:
+\fitdisplay{
+X_2=T^2(qf_2)\le W=\alpha q+Bu+B^3u,\qquad \E W=m,
+}{}
+\fitdisplay{
+V=\operatorname{Var}(W)=\alpha^2d+\delta_2-2\delta_3+\delta_4-\tau^2.
+\label{eq:Q191:4.2}
+}{Q191.4.2}
+The upper $W$ is nonnegative because it dominates the actual $X_2$.
+The receiving upper is the finite-convolution expression in
+part~\ref{part:Q191.0}. For $a=\allowbreak 3$,
+$f_3=\allowbreak 1-d-u+Bu-B^2u$. For $a\ge\allowbreak 4$, set $V_a=\allowbreak G_{a-1}(-B)u$;
+then $\E V_a=\allowbreak \beta_a$ and
+\fitdisplay{
+C_a=(1-\beta_a-\beta_{a-1})p+B(V_a-\beta_a\one).
+}{}
+The exact means and covariances are
+\fitdisplay{
+\E C_3=1-2d,\qquad
+\operatorname{Cov}(C_3,W)=-(d-2\delta_2+\delta_3)-\delta_2\tau/2,
+\label{eq:Q191:4.3}
+}{Q191.4.3}
+\fitdisplay{
+\begin{aligned}
+\E C_a&=1-\beta_a-\beta_{a+1}-\beta_{a-1},\\
+\operatorname{Cov}(C_a,W)&\le-\alpha\tau+\delta_2-2\delta_3+2\delta_4-\delta_5
+-\beta_{a+1}\tau+\beta_{a-1}\alpha d.
+\end{aligned}\label{eq:Q191:4.4}
+}{Q191.4.4}
+For the latter, write $G_a(z)=\allowbreak E_a(x)+zD_a(x)$ at $z=\allowbreak i\sqrt x$.
+Then $E_a\ge\allowbreak 1-x$, and, for $a\ge\allowbreak 4$, $D_a\le\allowbreak 1-x+x^2$. Before this
+comparison the covariance equals
+\fitdisplay{
+-\int[\alpha E_a-x(1-x)D_a]\,d\nu
+-\beta_{a+1}\tau+\beta_{a-1}\alpha d.
+}{}
+Its integral upper is exactly \eqref{eq:Q191:4.4}. The positive
+$\beta_{a-1}$ covariance coefficient must be combined with its receiving mean.
+For the $a=\allowbreak 3$ simultaneous row put $Z_3=\allowbreak 2u-Bu+B^2u-d\one$. Then
+\fitdisplay{
+\E Z_3=0,\quad\|Z_3\|_2^2=4d-3\delta_2+\delta_3-d^2,
+\quad C_3+W+m\one=(3-4d+2\delta_2)\one+(\delta_2/2)u+BZ_3.
+}{}
+The uncentered symbol is $(2-x)-z$, with squared modulus $4-3x+x^2$
+and mean $d$. Maximizing $cu+\sqrt{1-u^2}\|Z_3\|_2$ and using
+$\delta_3\le\allowbreak \theta\delta_2$ gives
+\fitdisplay{
+C_3+W+m\one\le[3-(4-2v)d+\sqrt{H_0}]\one,
+\quad H_0=[4-(83/32)v]d-[1-v^2/4]d^2.
+\label{eq:Q191:4.5}
+}{Q191.4.5}
+Here $H_0\ge\allowbreak 0$ because it bounds the actual squared combined row norm.
+The square $(\sqrt{H_0}-1/2)^2\ge\allowbreak 0$ gives the joint loss
+\fitdisplay{
+C_3+W+m\one\le(13/4-\delta)\one,
+\quad\delta=(19/32)vd+(1-v^2/4)d^2.
+\label{eq:Q191:4.6}
+}{Q191.4.6}
+It is sharper in the middle range than either $13/4$ or $27/8-4d/3$,
+for the same actual direction.
+For $a\ge\allowbreak 4$ put $U=\allowbreak (I+B^2)u$ and $Z_a=\allowbreak V_a-\beta_a\one+U$.
+Since $\E U=\allowbreak 0$, also $\E Z_a=\allowbreak 0$. Using
+$\beta_a+\beta_{a-1}\ge\allowbreak 2\tau$ only against nonnegative $p$ gives
+\fitdisplay{
+C_a+W+m\one\le(3-5d+4\delta_2)\one+(d-3\delta_2/2)u+BZ_a.
+}{}
+For $n=\allowbreak a-1\ge\allowbreak 4$, both coordinates of $G_n(-z)$ lie in
+$[0,\allowbreak 1-x+x^2]$; at $n=\allowbreak 3$ they are $1-x$ and $1$. Thus the squared symbol
+of $V_a+U$ is at most
+\fitdisplay{
+\begin{aligned}
+P(x)&=(2-2x+x^2)^2+x(1-x+x^2)^2\\
+&=4-7x+6x^2-x^3-x^4+x^5\le4-(73/16)x.
+\end{aligned}
+}{}
+At $n=\allowbreak 3$ the squared symbol $4-7x+4x^2$ is smaller, because their
+difference is $x^2(2-x-x^2+x^3)\ge\allowbreak 0$. The final comparison uses
+$6x\le\allowbreak 39/16$ and $-x^3-x^4+x^5\le\allowbreak 0$. Centering subtracts
+$\beta_a^2\ge\allowbreak \tau^2$, so
+\fitdisplay{
+\begin{aligned}
+C_a+W+m\one&\le\left[3-5d+4\delta_2+
+\sqrt{4d-(73/16)\delta_2-d\delta_2+(5/4)\delta_2^2}\right]\one\\
+&\le(13/4-d)\one.
+\end{aligned}\label{eq:Q191:4.7}
+}{Q191.4.7}
+For the last comparison the positive square difference is
+\fitdisplay{
+1/16-[2-(41/16)v]d+[16-31v+(59/4)v^2]d^2.
+}{}
+Its leading coefficient is positive and its discriminant is
+$v[-5/2+(737/256)v]\le\allowbreak 0$. At $v=\allowbreak 0$ it is $(1/4-4d)^2$.
+
+\paragraph{Q191.5 A common cubic coefficient with the retained joint loss}\label{part:Q191.5}
+Put $C_0=\allowbreak 49/16$, $A_0=\allowbreak 10441/2048$ and $k_0=\allowbreak 15561/2048$.
+For $a=\allowbreak 3$ use $\delta$ from \eqref{eq:Q191:4.6}; for $a\ge\allowbreak 4$ use
+$\delta_*=\allowbreak d$. Define
+\fitdisplay{
+k_\delta=A_0+(5/2)m^2-\delta(C_0+2m^2).
+\label{eq:Q191:5.1}
+}{Q191.5.1}
+Both choices satisfy, for the same nonnegative receiver and $W$,
+\fitdisplay{
+C_a[(W+m)^2+2m^2]\le k_\delta\one.
+\label{eq:Q191:5.2}
+}{Q191.5.2}
+Indeed, for $y=\allowbreak W+m\ge\allowbreak 0$ and $C_a+y\le\allowbreak 13/4-\delta$, the left side is
+at most $(13/4-\delta-y)(y^2+2m^2)$. First take $m=\allowbreak 1,\allowbreak \delta=\allowbreak 0$ and
+$y=\allowbreak 7/4+h$. Its difference from $k_0$ is
+\fitdisplay{
+h^3+2h^2-(3/16)h+9/2048.
+}{}
+For $h\ge\allowbreak 0$ this is $h^3+2(h-3/64)^2$; for $-7/4\le\allowbreak  h\le\allowbreak 0$,
+$h^2(h+2)$ and the remaining terms are nonnegative. Retaining $m$ gives
+the bound $A_0+(5/2)m^2$. At $y\le\allowbreak 2$ the decrease from $m=\allowbreak 1$ is at
+least $(5/2)(1-m^2)$. At $y=\allowbreak 2+h\ge\allowbreak 2$ the expression is
+\fitdisplay{
+5+(5/2)m^2+(1-2m^2)h-(11/4)h^2-h^3.
+}{}
+Its excess above the constant part is at most $1/44$ since $m^2\ge\allowbreak 1/4$,
+while $A_0-5=\allowbreak 201/2048>\allowbreak 1/44$.
+At $y\ge\allowbreak 7/4$ the additional loss is at least
+$\delta(C_0+2m^2)$. On $0\le\allowbreak  y\le\allowbreak 7/4$ the cubic has its maximum at
+an endpoint if its derivative at $7/4$ is nonnegative: the derivative is
+a downward quadratic, negative at zero, so its only interior local maximum
+lies to the right of $7/4$. The endpoint derivative is
+$35/16-(7/2)\delta-2m^2$. For $\delta_*=\allowbreak d$ and $m\le\allowbreak 1-89d/64$ its
+lower bound is
+\fitdisplay{
+3/16+(33/16)d-(7921/2048)d^2>0.
+}{}
+For \eqref{eq:Q191:4.6}, use $\delta\le\allowbreak (247/1024)d+d^2$; the lower
+bound is
+\fitdisplay{
+3/16+(9663/2048)d-(15089/2048)d^2>0.
+}{}
+Both quadratics are concave on $[0,\allowbreak 1/3]$ with positive endpoint values;
+the second has right endpoint $4339/4608$. At $y=\allowbreak 7/4$ the difference
+from \eqref{eq:Q191:5.1} is $1033/2048-m^2/2\ge\allowbreak 9/2048$.
+At $y=\allowbreak 0$ it is $A_0-4m^2-C_0\delta$. For $\delta_*=\allowbreak d$ this is at least
+$475/6144>\allowbreak 0$; for the other choice,
+$\delta\le\allowbreak 1765/9216<\allowbreak 1/5$, so it is at least $A_0-4-49/80>\allowbreak 0$.
+This proves \eqref{eq:Q191:5.2} in both cases.
+All coefficients are positive and at most $k_0<\allowbreak 8$. For
+\eqref{eq:Q191:4.6} put $j=\allowbreak 5/2-2\delta>\allowbreak 21/10$. Its derivative satisfies
+\fitdisplay{
+\begin{aligned}
+\partial_vk_\delta&=3jdm-[(19/32)d-vd^2/2](C_0+2m^2)\\
+&\ge d[63/20-1539/512]=(369/2560)d\ge0.
+\end{aligned}\label{eq:Q191:5.3}
+}{Q191.5.3}
+The nonnegative coefficient derivative is retained in the continuous
+one-boundary payment.
+
+\paragraph{Q191.6 Coupled moment payment on the original spectrum}\label{part:Q191.6}
+The exact identity
+\fitdisplay{
+W^4=m^4+4m^3(W-m)+(W-m)^2[(W+m)^2+2m^2]
+}{}
+and \eqref{eq:Q191:5.2} give the two complete upper expressions
+\fitdisplay{
+R_3=(1-2d)m^4-4m^3(d-2\delta_2+\delta_3+\delta_2\tau/2)+kV,
+}{}
+\fitdisplay{
+\begin{aligned}
+R_a={}&[1-\beta_a-\beta_{a+1}-\beta_{a-1}]m^4\\
+&+4m^3[-\alpha\tau+\delta_2-2\delta_3+2\delta_4-\delta_5
+-\beta_{a+1}\tau+\beta_{a-1}\alpha d]+kV,
+\end{aligned}
+}{}
+where $k$ is the corresponding coefficient just proved, not an independent
+parameter. These are the original receiving means, covariances and
+variances, coupled before relaxation.
+For $a=\allowbreak 3$ the combined frequency polynomial in $\delta_3,\allowbreak \delta_4$ is
+\fitdisplay{
+-(4m^3+2k)x^2+kx^3.
+}{}
+Its second derivative is $-8m^3+k(-4+6x)<\allowbreak 0$ on $[0,\allowbreak \theta]$.
+Jensen for $\nu/d$ therefore bounds the combined expression by substituting
+$d v^2,\allowbreak d v^3$ for $\delta_3,\allowbreak \delta_4$. This joint substitution bounds the combined polynomial for the original host. Set
+\fitdisplay{
+n=s^2+dvs/2,\qquad H=\alpha^2+(v-d)s^2\ge0.
+}{}
+The $a=\allowbreak 3$ expression is at most
+\fitdisplay{
+F_3(d,v)=(1-2d)m^4-4dm^3n+dk_\delta H.
+\label{eq:Q191:6.1}
+}{Q191.6.1}
+For $a\ge\allowbreak 4$ the full covariance-plus-variance frequency polynomial is
+\fitdisplay{
+(4m^3+k)x-(8m^3+2k)x^2+(8m^3+k)x^3-4m^3x^4.
+}{}
+Its second derivative is
+$-16m^3(1-3x+3x^2)+k(-4+6x)<\allowbreak 0$. Jensen applies at the same first
+moment $v$, replacing $\delta_2-2\delta_3+2\delta_4-\delta_5$ by
+$dv(1-v)(1-v+v^2)$ jointly with the variance. 
+
+\paragraph{Q191.7 The $a=\allowbreak 3$ reduction increases continuously in $v$}\label{part:Q191.7}
+For fixed $d$, differentiating \eqref{eq:Q191:6.1} gives
+\fitdisplay{
+\begin{aligned}
+(\partial_vF_3)/d&=m^2P(d,s)+(\partial_vk_\delta)H+k_\delta H_v,\\
+P(d,s)&=6+8s-d(13+17s+30s^2)+d^2(5+8s+15s^2),\\
+H_v&=\alpha d+s(3s-2+2d).
+\end{aligned}\label{eq:Q191:7.1}
+}{Q191.7.1}
+The permitted interval is $19/32\le\allowbreak  s\le\allowbreak 1-d$. The polynomial $P$
+decreases with $d$ on $[0,\allowbreak 1/3]$. If $s\le\allowbreak 2/3$, then
+\fitdisplay{
+P\ge P(1/3,s)=(20+29s-75s^2)/9\ge2/3,
+}{}
+using $s^2\le\allowbreak (2/3)s$. If $s\ge\allowbreak 2/3$, use $d\le\allowbreak 1-s$:
+\fitdisplay{
+P\ge P(1-s,s)=-2+2s-9s^2+8s^3+15s^4\ge2/3.
+}{}
+The last polynomial increases on $[2/3,\allowbreak 1]$: its derivative is
+$2+6s(4s-3)+60s^3\ge\allowbreak 2-2s+60s^3>\allowbreak 0$, and its value at $2/3$ is $2/3$.
+For $d\ge\allowbreak 1/8$, $H_v\ge\allowbreak 0$ since $3s-2+2d\ge\allowbreak 1/32$; together with
+\eqref{eq:Q191:5.3}, this makes \eqref{eq:Q191:7.1} positive.
+For $d\le\allowbreak 1/8$ use $P\ge\allowbreak 43/4-60d\ge\allowbreak 13/4$ and $m\ge\allowbreak 3/4$.
+Also $H_v\ge\allowbreak  s(3s-2)\ge\allowbreak -133/1024$ and $k_\delta<\allowbreak 8$, so
+\fitdisplay{
+(\partial_vF_3)/d\ge117/64-133/128=101/128>0.
+}{}
+Both continuous subintervals and their common endpoint are covered. Hence
+\fitdisplay{
+F_3(d,v)\le F_3(d,\theta).
+\label{eq:Q191:7.2}
+}{Q191.7.2}
+
+\paragraph{Q191.8 An exact univariate certificate for $a=\allowbreak 3$}\label{part:Q191.8}
+At $v=\allowbreak \theta=\allowbreak 13/32$ put $b_0=\allowbreak 89/64$. Then
+\fitdisplay{
+\begin{aligned}
+m&=1-b_0d,\qquad n=361/1024+(247/2048)d,\\
+H&=37461/32768-(1993/1024)d+(2601/4096)d^2,\\
+\delta&=(247/1024)d+(3927/4096)d^2.
+\end{aligned}\label{eq:Q191:8.1}
+}{Q191.8.1}
+Let $F_{30}$ denote \eqref{eq:Q191:6.1} with $\delta$ set to zero only
+in the analytic coefficient, and let $P_0=\allowbreak (1-F_{30})/d$. Its coefficients are
+\fitdisplay{
+\begin{aligned}
+P_0={}&19214147/67108864-(5653367/1048576)d\\
+&+(4361211079/268435456)d^2-(833648493/67108864)d^3\\
+&+(417698093/134217728)d^4.
+\end{aligned}\label{eq:Q191:8.2}
+}{Q191.8.2}
+They give
+\fitdisplay{
+P_0\ge2/7-(27/5)d+(81/5)d^2-(25/2)d^3.
+\label{eq:Q191:8.3}
+}{Q191.8.3}
+The positive integer gaps for the first four coefficient comparisons are
+$281301,\allowbreak 44717,\allowbreak 62783459,\allowbreak 5212307$, after multiplying the two positive
+denominators. The fourth-degree coefficient is positive.
+The retained $\delta$ increases the deficit by $\delta F$, where
+$F=\allowbreak (49/16+2m^2)H$. Its first four coefficients are
+\fitdisplay{
+3034341/524288,\quad-8499885/524288,\quad
+1239002117/67108864,\quad-23194201/2097152,
+}{}
+and its degree-four coefficient is positive. Thus
+\fitdisplay{
+F\ge23/4-(65/4)d+18d^2-(45/4)d^3.
+\label{eq:Q191:8.4}
+}{Q191.8.4}
+The corresponding positive integer gaps are $19685,\allowbreak 19795,\allowbreak 31042565,\allowbreak 398759$.
+Combine \eqref{eq:Q191:8.3} with $\delta$ times \eqref{eq:Q191:8.4},
+where $\delta\ge0$, and pair degrees four and five using $d\le\allowbreak1/3$:
+\fitdisplay{
+(1-F_3(d,\theta))/d\ge Q(d),
+\quad Q(d)=2/7-(257/64)d+(71/4)d^2-(95/4)d^3+(175/16)d^4.
+\label{eq:Q191:8.5}
+}{Q191.8.5}
+Before the last simplification the coefficients of degrees one through five are
+\fitdisplay{
+-27/5+5681/4096,\quad81/5+26101/16384,\quad-388919/16384,
+\quad59571/4096,\quad-176715/16384.
+}{}
+The combined degree-four coefficient is at least $538137/49152>\allowbreak 175/16$.
+The other three comparison gaps are $53/20480$, $14116/327680$ and
+$201/16384$. To pay $Q$ continuously, its second derivative decreases on
+$[0,\allowbreak 1/3]$ to $31/12$. At $t=\allowbreak 5/32$,
+\fitdisplay{
+Q(t)=885817/117440512>3/400,\qquad
+Q'(t)=-5421/131072,\quad |Q'(t)|<1/24.
+}{}
+Taylor's lower quadratic with curvature $31/12$ gives
+\fitdisplay{
+Q(d)\ge3/400-1/2976>1/150.
+\label{eq:Q191:8.6}
+}{Q191.8.6}
+Equations~\eqref{eq:Q191:6.1}--\eqref{eq:Q191:8.6} yield
+$\E[f_3X_2^4]\le\allowbreak 1-d/150$ for all original hosts with $d>\allowbreak 0$.
+This certificate uses a continuous quadratic lower bound.
+
+\paragraph{Q191.9 Complete $\beta$ payment for every $a\ge\allowbreak 4$}\label{part:Q191.9}
+Use $k_*=\allowbreak A_0+(5/2)m^2-d(C_0+2m^2)$, justified by
+\eqref{eq:Q191:4.7} and \eqref{eq:Q191:5.2}. In the exact fourth
+expansion the $\beta_{a-1}$ coefficient is $m^3h$, where
+\fitdisplay{
+h=4\alpha d-m=-1+(6-3v/2)d-(4-2v)d^2.
+}{}
+Replace $\beta_a,\allowbreak \beta_{a+1}$ by $\tau$ only against their negative
+coefficients; replace $\beta_{a-1}$ by $\tau$ if $h\le\allowbreak 0$ and by $d$
+if $h>\allowbreak 0$. After the coupled Jensen reduction of part~\ref{part:Q191.6},
+the valid upper is
+\fitdisplay{
+\begin{aligned}
+&F_*(d,v)+dvm^3h_+,\\
+F_*={}&(1-3ds)m^4+4dm^3[-\alpha s(1-d)-ds^2+vs(1-v+v^2)]+dk_*H.
+\end{aligned}\label{eq:Q191:9.1}
+}{Q191.9.1}
+Here $h_+=\allowbreak \max(h,\allowbreak 0)$ is an analytic bound, with the actual direction fixed.
+The positive covariance part of the true $\beta$ coefficient has been retained.
+Compare this with the same $F_3$ and its stronger quadratic $\delta$.
+For $d>\allowbreak 0$, $\delta<\allowbreak d$, $H\ge\allowbreak  m^2$, and
+\fitdisplay{
+(C_0+2m^2)H/m^3\ge C_0/m+2m\ge81/16.
+}{}
+Subtraction gives
+\fitdisplay{
+F_*+dvm^3h_+\le F_3+dm^3[S(d,v)+vh_+],
+\label{eq:Q191:9.2}
+}{Q191.9.2}
+with
+\fitdisplay{
+\begin{aligned}
+S&=G_0+dL+d^2M,\qquad G_0=3v-1-4v^2(1-v)^2,\\
+L&=15/16-(2301/512)v+v^2/2,\qquad
+M=17/16+6v-(209/64)v^2.
+\end{aligned}\label{eq:Q191:9.3}
+}{Q191.9.3}
+For the subtraction, the covariance difference divided by $d$ is
+$-v^2s^2+ds(1+v)-(1-v/2)d^2s$. After division by $m^3$, the
+mean-plus-covariance part is
+\fitdisplay{
+G_0+d[6-(15/2)v+v^2/2]-4(1-v/2)sd^2.
+}{}
+Subtracting $(81/16)(d-\delta)$ gives \eqref{eq:Q191:9.3} exactly.
+
+\paragraph{Q191.9.1 The entire low domain $d\le\allowbreak 1/5$}
+Since $h$ decreases in $v$ and $v\ge\allowbreak  d$,
+\fitdisplay{
+h\le-1+6d-(11/2)d^2+2d^3\le-1/250<0.
+}{}
+The last polynomial increases up to $1/5$, so $h_+=\allowbreak 0$.
+Also $M>\allowbreak 0$, hence $S$ is convex in $d$. For the required endpoint bounds,
+$G_0$ increases on $[0,\allowbreak \theta]$ because
+$G_0'=\allowbreak 3-8v(1-v)(1-2v)\ge\allowbreak 1$, and
+\fitdisplay{
+G_0(\theta)=-3665/262144<0.
+}{}
+If $v\le\allowbreak 1/5$, the largest allowed $d$ is $v$, and
+\fitdisplay{
+\begin{aligned}
+S(v,v)&=-1+(63/16)v-(3805/512)v^2+(29/2)v^3-(465/64)v^4\\
+&\le-1+63/80+29/250=-193/2000<0.
+\end{aligned}
+}{}
+If $v\ge\allowbreak 1/5$, use $d=\allowbreak 1/5$. The function $S(1/5,\allowbreak v)$ increases in $v$,
+since $G_0'\ge\allowbreak 1$, $L'/5\ge\allowbreak -2301/2560$, and $M'>\allowbreak 0$. At $\theta$
+it is negative: $G_0(\theta)<\allowbreak 0$ and
+\fitdisplay{
+5L(\theta)+M(\theta)=23/4-(8433/512)\theta-(49/64)\theta^2
+\le-15421/16384<0.
+}{}
+Convexity proves $S\le\allowbreak 0$ throughout the low domain. Equations
+\eqref{eq:Q191:9.2} and \eqref{eq:Q191:8.6} give deficit $d/150$
+there for every $a\ge\allowbreak 4$.
+
+\paragraph{Q191.9.2 The entire high domain $1/5\le\allowbreak  d\le\allowbreak 1/3$}
+Now $v\ge\allowbreak  d\ge\allowbreak 1/5$; keep the possibly positive $\beta$ coefficient.
+For fixed $v$, the proved starting values are
+$S(1/5,\allowbreak v)\le\allowbreak 0$ and $h(1/5,\allowbreak v)<\allowbreak 0$. Throughout this domain,
+\fitdisplay{
+S_d=L+2dM\le L+(2/3)M
+=79/48-(253/512)v-(161/96)v^2<3/2,
+}{}
+\fitdisplay{
+vh_d\le v[22/5-(7/10)v]\le17121/10240<27/16.
+}{}
+For the first inequality, at $v\ge\allowbreak 1/5$ the two subtracted terms exceed
+$3/32$ and $1/16$, whose sum exceeds $7/48$; the second quadratic
+increases up to $\theta$. Integrating gives
+\fitdisplay{
+S(d,v)+vh_+(d,v)\le(51/16)(d-1/5).
+}{}
+Since $m\le\allowbreak 231/320$ and
+\fitdisplay{
+231^3\cdot85=1047743235<1048576000=32\cdot320^3,
+}{}
+we have $m^3<\allowbreak 32/85$. Thus \eqref{eq:Q191:9.2} gives
+\fitdisplay{
+F_*+dvm^3h_+\le F_3+(6/5)d(d-1/5).
+\label{eq:Q191:9.4}
+}{Q191.9.4}
+The same quartic pays this excess. Put $Q_H=\allowbreak Q-(6/5)(d-1/5)$.
+On $[1/5,\allowbreak 3/10]$ its second derivative is at least $73/16>\allowbreak 9/2$.
+At $t=\allowbreak 1/4$,
+\fitdisplay{
+Q_H(t)=2017/716800>1/360,\quad
+Q_H'(t)=-141/1280,\quad |Q_H'(t)|<1/9.
+}{}
+Taylor's lower quadratic yields
+\fitdisplay{
+Q_H\ge1/360-1/729=41/29160>1/1000.
+}{}
+On $[3/10,\allowbreak 1/3]$, $Q_H$ increases because $Q_H'(3/10)=\allowbreak 13/64>\allowbreak 0$ and
+$Q_H''>\allowbreak 0$. Therefore $Q_H>\allowbreak 1/1000$ on the whole high domain.
+Equations~\eqref{eq:Q191:8.5} and \eqref{eq:Q191:9.4} prove
+\eqref{eq:Q191:3.1} for all $a\ge\allowbreak 4$.
+
+\paragraph{Q191.11 The actual three-, four- and five-edge messages}\label{part:Q191.11}
+Under the same original assumptions and the fixed directions in
+part~\ref{part:Q191.3}, every $a\ge\allowbreak 3$ and $L\in\{3,\allowbreak 4,\allowbreak 5\}$ satisfy
+\fitdisplay{
+\E\bigl[E_of_a\{T^L(E_tqf_2)\}^4\bigr]\le1-(9/10)d.
+\label{eq:Q191:11.1}
+}{Q191.11.1}
+Thus the four lengths $2,\allowbreak 3,\allowbreak 4,\allowbreak 5$ have common deficit $d/1000$.
+We prove the three lengths by their actual finite propagation.
+Retain $\alpha,\allowbreak m,\allowbreak \tau$ and set
+\fitdisplay{
+\begin{aligned}
+M&=m-\alpha d,\qquad\rho=\alpha d-\delta_2+\delta_3,\qquad N=M-\rho,\\
+\sigma&=md-\alpha\delta_2=d(1-v)(\alpha-d),\qquad P=N-\sigma.
+\end{aligned}\label{eq:Q191:11.2}
+}{Q191.11.2}
+Starting with $W_2=\allowbreak W$, apply the original positive $T$ successively:
+$W_3=\allowbreak TW_2$, $W_4=\allowbreak TW_3$, $W_5=\allowbreak TW_4$. Explicitly,
+\fitdisplay{
+\begin{aligned}
+W_3&=m\one+Q_3(B)u,&Q_3(z)&=\alpha+\alpha z+z^2+z^4,\\
+W_4&=M\one+Q_4(B)u,&Q_4(z)&=m+\alpha z+\alpha z^2+z^3+z^5,\\
+W_5&=N\one+Q_5(B)u,&Q_5(z)&=M+mz+\alpha z^2+\alpha z^3+z^4+z^6.
+\end{aligned}
+}{}
+Their means are $M,\allowbreak N,\allowbreak P$, and their mean offsets from the displayed
+constants are $-\alpha d,\allowbreak -\rho,\allowbreak -\sigma$. Every $W_L\ge\allowbreak 0$ dominates
+the actual $T^L(qf_2)$. At $z=\allowbreak i\sqrt x$ write $Q_L=\allowbreak E_L+zD_L$:
+\fitdisplay{
+\begin{array}{c|c|c}
+L&E_L(x)&D_L(x)\\\hline
+3&\alpha-x+x^2&\alpha\\
+4&m-\alpha x&\alpha-x+x^2\\
+5&M-\alpha x+x^2-x^3&m-\alpha x
+\end{array}
+}{}
+The original moment inequalities give
+\fitdisplay{
+\begin{gathered}
+13/18\le\alpha\le1-(51/64)d\le1-3d/4,\qquad
+0\le\tau\le d(1-d)\le2/9,\\
+\alpha-2\tau=1-3d+(5/2)\delta_2\ge5/18,\qquad
+(25/96)d\le\rho\le d,\qquad\sigma=d(1-v)(\alpha-d)\ge0.
+\end{gathered}\label{eq:Q191:11.3}
+}{Q191.11.3}
+For the lower bound on $\rho$, use
+$\rho\ge\allowbreak  d(\alpha-v)\ge\allowbreak  d(1-d-v)\ge\allowbreak 25d/96$; the upper bound uses
+$\delta_3\le\allowbreak \delta_2$ and $\alpha\le\allowbreak 1$. Also
+\fitdisplay{
+M=1-[3-(3/2)v]d+(1-v/2)d^2\le1-(17/8)d\le1-2d.
+}{}
+The loss coefficient $3-3v/2-(1-v/2)d$ decreases in $d,\allowbreak v$, with value
+$17/8$ at $d=\allowbreak 1/3,\allowbreak v=\allowbreak \theta$. Positivity and $\rho,\allowbreak \sigma\ge\allowbreak 0$ yield
+\fitdisplay{
+0\le P\le N\le M\le1-2d.
+\label{eq:Q191:11.4}
+}{Q191.11.4}
+For these lengths use the single receiving-convolution loss, denoted by
+$R_a$ to distinguish it from the double-loss upper used at $L=\allowbreak 2$:
+\fitdisplay{
+0\le f_a\le R_a:=S_a-\beta_a\one,\qquad
+\E R_a=1-\beta_a-\beta_{a+1}\le1-2\tau\le1-(19/16)d.
+\label{eq:Q191:11.5}
+}{Q191.11.5}
+In particular $R_3=\allowbreak f_3$. Restore all original equal pairs after proving
+the three moment bounds for these same $R_a$.
+
+\paragraph{Q191.12 Positive coordinates and a common variance bound}\label{part:Q191.12}
+The polynomial $\phi(x)=\allowbreak 1-3x+2x^2-x^3$ decreases on $[0,\allowbreak \theta]$, and
+\fitdisplay{
+\phi(x)\ge c_0:=1451/32768>0.
+\label{eq:Q191:12.1}
+}{Q191.12.1}
+For $Q_3$, $E_3/\alpha=\allowbreak 1-x(1-x)/\alpha$ lies between $5/8$ and
+$1-x+x^2$, while the normalized imaginary coordinate is one. Hence
+\fitdisplay{
+|Q_3|^2\le\alpha^2[(1-x+x^2)^2+x]
+=\alpha^2[1-x\phi(x)]\le\alpha^2.
+\label{eq:Q191:12.2}
+}{Q191.12.2}
+Since $Q_4=\allowbreak m+zQ_3$, \eqref{eq:Q191:11.3} gives
+\fitdisplay{
+|Q_4|^2=m^2+x|Q_3|^2-2m\alpha x
+\le m^2-\alpha(2m-\alpha)x\le m^2.
+\label{eq:Q191:12.3}
+}{Q191.12.3}
+Its real coordinate satisfies
+$E_4=\allowbreak m-\alpha x\ge\allowbreak \alpha\kappa-\tau\ge\allowbreak 119/576>\allowbreak 0$, and $D_4=\allowbreak E_3>\allowbreak 0$.
+For $Q_5$, $E_5'=\allowbreak -\alpha+2x-3x^2\le\allowbreak -1/3$, and at $\theta$ it is at least
+\fitdisplay{
+(13/18)(25/96)-2/9+\theta^2\kappa
+=-59/1728+3211/32768>1/48>0.
+}{}
+Its imaginary coordinate is $E_4>\allowbreak 0$. Compare its coordinates with $m$
+times the finite polynomial having coordinates
+\fitdisplay{
+e_5(x)=1-x+x^2-x^3=(1-x)(1+x^2),\qquad1-x.
+}{}
+The imaginary comparison is $m-\alpha x\le\allowbreak  m(1-x)$ since $\alpha\ge\allowbreak  m$.
+For the real coordinate,
+\fitdisplay{
+E_5-me_5=-\alpha d-\tau x+(1-m)x^2(1-x)
+\le d(-\alpha+2\theta^2)\le0,
+}{}
+using $1-m\le\allowbreak 2d$ and $\alpha\ge\allowbreak 2/3>\allowbreak 2\theta^2$. Therefore
+\fitdisplay{
+|Q_5|^2\le m^2(1-x)^2[1+x+2x^2+x^4]\le m^2.
+\label{eq:Q191:12.4}
+}{Q191.12.4}
+The last normalized squared modulus is
+$1-x[1-x+3x^2(1-x)+x^4(2-x)]\le\allowbreak 1$, with nonnegative bracketed terms.
+These are finite polynomials of the actual messages.
+Integrate their squared symbols and subtract the actual squared mean offsets:
+\fitdisplay{
+\operatorname{Var}(W_3)\le\alpha^2d(1-d),\quad
+\operatorname{Var}(W_4)\le m^2d-\rho^2\le m^2d,\quad
+\operatorname{Var}(W_5)\le m^2d-\sigma^2\le m^2d.
+}{}
+For the last two, put $t=\allowbreak \tau/\alpha\in[0,\allowbreak 1]$. Since $t\ge\allowbreak \kappa d$,
+\fitdisplay{
+2t-t^2\ge2\kappa d-\kappa^2d^2\ge d,
+}{}
+where $2\kappa-\kappa^2/3=\allowbreak 1+215/3072>\allowbreak 1$. Thus
+$m^2\le\allowbreak \alpha^2(1-d)$ and all three actual variances obey
+\fitdisplay{
+\operatorname{Var}(W_L)\le\alpha^2d(1-d)
+\le d(1-d)(1-3d/4)^2\qquad(L=3,4,5).
+\label{eq:Q191:12.5}
+}{Q191.12.5}
+
+\paragraph{Q191.13 Three simultaneous original-row bounds}\label{part:Q191.13}
+For every $a\ge\allowbreak 3$, we prove separately
+\fitdisplay{
+R_a+W_L+(\E W_L)\one\le(13/4)\one\qquad(L=3,4,5).
+\label{eq:Q191:13.1}
+}{Q191.13.1}
+Let $V_a=\allowbreak G_{a-1}(-B)u$, with $\E V_a=\allowbreak \beta_a$. Then
+$R_a=\allowbreak (1-\beta_a)p+B(V_a-\beta_a\one)$. For $n=\allowbreak a-1\ge\allowbreak 2$ the real
+and normalized imaginary coordinates of $G_n(-z)$ lie in $[1-x,\allowbreak 1]$;
+for $n\ge\allowbreak 3$ the real coordinate is at most $1-x+x^2$.
+These are finite alternating sums; at $n=\allowbreak 2$ the coordinates are $1,\allowbreak 1$.
+
+\paragraph{Q191.13.1 $L=\allowbreak 3$, $a\ge\allowbreak 4$}
+Put $Y=\allowbreak \alpha u+Bu+B^3u$, whose mean is $-\tau$, and
+$Z=\allowbreak V_a-\beta_a\one+Y+\tau\one$. The centered-row inequality and
+$\beta_a\ge\allowbreak \tau$ give
+\fitdisplay{
+R_a+W_3+M\one\le[3-(6-4v)d+(1-v/2)d^2]\one+(\alpha-1)u+BZ.
+}{}
+The raw symbol of $V_a+Y$ has real coordinate at most $2-x+x^2$ and
+absolute normalized imaginary coordinate at most $x$. Its squared modulus is
+at most
+\fitdisplay{
+(2-x+x^2)^2+x^3=4-4x+5x^2-x^3+x^4\le4-(63/32)x.
+}{}
+Centering decreases the norm. With $a_0=\allowbreak 1-v/2$ the combined squared
+row bound is at most $[4-(63/32)v]d+a_0^2d^2$. Apply
+$\sqrt H\le\allowbreak  H+1/4$:
+\fitdisplay{
+\begin{aligned}
+R_a+W_3+M\one&\le[13/4+(-2+(65/32)v)d+(a_0+a_0^2)d^2]\one\\
+&\le[13/4-(1561/3072)d]\one\le(13/4)\one.
+\end{aligned}
+}{}
+
+\paragraph{Q191.13.2 $L=\allowbreak 3$, $a=\allowbreak 3$}
+Here $R_3=\allowbreak f_3$. The centered vector is
+$(1+\alpha)u+B^3u-\delta_2\one$, with squared norm
+$(1+\alpha)^2d+\delta_4-\delta_2^2$; the remaining $u$ coefficient is
+$-d+3\delta_2/2$. The joint sum is at most
+\fitdisplay{
+[3-(35/8)d+\sqrt{(33/8)d+d^2}]\one.
+}{}
+Indeed, the deterministic part satisfies
+$3-6d+d^2+3\delta_2-d\delta_2/2\le\allowbreak 3-(35/8)d$, and the combined
+squared row norm is at most $(4+\theta^3)d+d^2\le\allowbreak (33/8)d+d^2$.
+The positive square difference for comparison with $13/4$ is
+\fitdisplay{
+1/16-(31/16)d+(1161/64)d^2>0,
+}{}
+whose discriminant is $-25/32$.
+
+\paragraph{Q191.13.3 $L=\allowbreak 4$, every $a\ge\allowbreak 3$}
+Use the exact centered recursion $W_4=\allowbreak Mq+B(W_3-M\one)$.
+The combined centered vector is $V_a-\beta_a\one+W_3-M\one$,
+with raw symbol $G_{a-1}(-z)+Q_3(z)$. Its real coordinate is at most
+$2$; its absolute normalized imaginary coordinate is at most
+$\max(1-\alpha,\allowbreak \alpha-(1-x))\le\allowbreak \max(d,\allowbreak x)\le\allowbreak \theta$.
+Its squared norm is therefore at most $(33/8)d$.
+After $\beta_a\ge\allowbreak \tau$, the remaining $u$ coefficient is
+$M-1+\tau=\allowbreak -(1-\alpha+\alpha d)$, with absolute value at most $2d$.
+The deterministic part is at most $1-\tau+M+N\le\allowbreak 3-(147/32)d$, so
+\fitdisplay{
+R_a+W_4+N\one\le[3-(147/32)d+\sqrt{(33/8)d+4d^2}]\one
+\le(13/4)\one.
+}{}
+The positive square difference has coefficients
+$1/16,\allowbreak -117/64,\allowbreak 17513/1024$ and discriminant $-3824/4096<\allowbreak 0$.
+
+\paragraph{Q191.13.4 $L=\allowbreak 5$, every $a\ge\allowbreak 3$}
+Use $W_5=\allowbreak Nq+B(W_4-N\one)$. The raw symbol of the combined centered
+vector is $G_{a-1}(-z)+Q_4(z)$. Its real coordinate is at most $2$;
+its absolute normalized imaginary coordinate is at most
+\fitdisplay{
+1-E_3=1-\alpha+x-x^2\le d+1/4\le7/12.
+}{}
+This covers both signs: $E_3-(1-x)=\allowbreak x^2-(1-\alpha)\le\allowbreak 1-E_3$, since
+$2(1-\alpha)+x-2x^2\ge\allowbreak 0$. The squared norm is at most $(17/4)d$,
+using $x(7/12)^2<\allowbreak 1/4$ on the entire frequency interval.
+The remaining $u$ coefficient is
+$N-1+\tau=\allowbreak -(1-\alpha+\alpha d+\rho)$, of absolute value at most $3d$.
+The deterministic part obeys
+\fitdisplay{
+1-\tau+N+P\le1-\tau+2M-2\rho\le3-5d,
+}{}
+because $4+\kappa+2(25/96)=\allowbreak 491/96>\allowbreak 5$. Hence
+\fitdisplay{
+R_a+W_5+P\one\le[3-5d+\sqrt{(17/4)d+9d^2}]\one\le(13/4)\one.
+}{}
+The square difference $1/16-(7/4)d+16d^2$ has discriminant $-15/16$.
+This proves all three bounds in \eqref{eq:Q191:13.1}.
+
+\paragraph{Q191.14 Nonpositive actual receiving covariance}\label{part:Q191.14}
+The positive coordinates in part~\ref{part:Q191.12} permit the same finite
+receiving comparison for every $a\ge\allowbreak 3$. Let $\lambda_L$ be
+$\alpha d,\allowbreak \rho,\allowbreak \sigma$, respectively. With the receiving coordinates
+$E_a,\allowbreak D_a$, the exact covariance and sufficient upper are
+\fitdisplay{
+\begin{aligned}
+\operatorname{Cov}(R_a,W_L)
+&=-\int[E_aE_L-xD_aD_L]\,d\nu-\beta_{a+1}\lambda_L\\
+&\le-\int[(1-x)E_L-xD_L]\,d\nu-\tau\lambda_L.
+\end{aligned}\label{eq:Q191:14.1}
+}{Q191.14.1}
+The negative mean-offset term is retained; $E_a\ge\allowbreak 1-x$ and $D_a\le\allowbreak 1$
+are used only against positive $E_L,\allowbreak D_L$.
+
+\paragraph{Q191.14.1 $L=\allowbreak 3$}
+The bracket is $\alpha(1-2x)-x(1-x)^2$, decreasing on $[0,\allowbreak \theta]$,
+with endpoint $3\alpha/16-4693/32768$. Using $\alpha\ge\allowbreak 1-d$ gives
+\fitdisplay{
+\operatorname{Cov}(R_a,W_3)\le-c_0d-(13/32)d^2+(19/32)d^3\le0.
+\label{eq:Q191:14.2}
+}{Q191.14.2}
+The quadratic-plus-cubic coefficient is at most $-5/24$ for $d\le\allowbreak 1/3$.
+
+\paragraph{Q191.14.2 $L=\allowbreak 4$}
+The bracket in \eqref{eq:Q191:14.1} is
+\fitdisplay{
+\alpha\phi(x)+(1-\alpha)x^2(1-x)-\tau(1-x).
+}{}
+Write $\gamma=\allowbreak 1-\alpha$. Since $\rho=\allowbreak \alpha d-\delta_2+\delta_3$,
+the covariance upper becomes
+\fitdisplay{
+-\alpha d+3\alpha\delta_2-(2-\delta_2/2)\delta_3+\delta_4+\gamma\tau d.
+}{}
+The combined polynomial $-(2-\delta_2/2)x^2+x^3$ is concave because
+its second derivative is $-4+\delta_2+6x<\allowbreak 0$. Jensen for $\nu/d$ gives
+\fitdisplay{
+\operatorname{Cov}(R_a,W_4)/d\le U(d,v)
+:=-\alpha+3\alpha v-2v^2+v^3+(d/2)v^3+\gamma\tau.
+}{}
+Its $v$ derivative is
+\fitdisplay{
+3-4v+3v^2+d(-7/2+3v+3v^2/2)-d^2(3/2-v)
+\ge3-4\theta-7/6-1/6=1/24>0.
+}{}
+At $v=\allowbreak \theta$ the upper is
+\fitdisplay{
+-c_0-(9227/65536)d+(969/2048)d^2\le-7597/196608<0.
+}{}
+Use $d^2\le\allowbreak  d/3$ and then $d\le\allowbreak 1/3$ for the last bound.
+
+\paragraph{Q191.14.3 $L=\allowbreak 5$}
+The bracket in \eqref{eq:Q191:14.1} is
+\fitdisplay{
+M-(M+m+\alpha)x+(2\alpha+1)x^2-2x^3+x^4.
+}{}
+The combined polynomial $-(2\alpha+1)x^2+2x^3-x^4$ is concave:
+its second derivative is $-4\alpha-2+12x-12x^2\le\allowbreak -4\alpha+1<\allowbreak 0$.
+Jensen and $\sigma=\allowbreak d(1-v)(\alpha-d)$ yield
+\fitdisplay{
+\begin{aligned}
+\operatorname{Cov}(R_a,W_5)/d&\le-(1-v)J(d,v),\\
+J&=(\alpha-d)(1-2v)-\alpha dv+(v^2-d^2)(1-v)\\
+&=1-2v+v^2-v^3+d(-2+7v/2-v^2)+d^2(-1+2v-v^2/2).
+\end{aligned}\label{eq:Q191:14.3}
+}{Q191.14.3}
+The coefficients of $d,\allowbreak d^2$ are negative on $[0,\allowbreak \theta]$, so $J$
+decreases in $d$. If $v\le\allowbreak 1/3$, use $d\le\allowbreak  v$:
+\fitdisplay{
+J\ge J(v,v)=1-4v+(7/2)v^2-v^4/2\ge4/81>0;
+}{}
+the last polynomial decreases up to $1/3$. If $v\ge\allowbreak 1/3$, use $d\le\allowbreak 1/3$:
+\fitdisplay{
+J\ge J(1/3,v)=(4-11v+11v^2-18v^3)/18\ge2291/294912>0.
+}{}
+Its derivative is negative and the endpoint shown is its value at $\theta$.
+Thus the actual covariance is nonpositive also at $L=\allowbreak 5$.
+
+\paragraph{Q191.15 A common scalar payment for all three lengths}\label{part:Q191.15}
+The coefficient argument in part~\ref{part:Q191.5}, with $\delta=\allowbreak 0$,
+works for every actual mean $r\in[0,\allowbreak 1]$, including $M,\allowbreak N,\allowbreak P$:
+\fitdisplay{
+R_a[(W_L+r)^2+2r^2]\le[A_0+(5/2)r^2]\one.
+\label{eq:Q191:15.1}
+}{Q191.15.1}
+For $y\ge\allowbreak 2$, replace the $1/44$ upper by $1/11$, since
+$1-2r^2\le\allowbreak 1$, and use $A_0-5=\allowbreak 201/2048>\allowbreak 1/11$. The proof for $y\le\allowbreak 2$
+is unchanged. Thus \eqref{eq:Q191:15.1} follows from the actual joint
+bounds \eqref{eq:Q191:13.1} for every such $r$.
+Use the exact fourth expansion, the nonpositive covariances in
+part~\ref{part:Q191.14}, the actual mean bounds
+\eqref{eq:Q191:11.4}--\eqref{eq:Q191:11.5}, and
+\eqref{eq:Q191:12.5}. Since $A_0<\allowbreak 41/8$, all $L=\allowbreak 3,\allowbreak 4,\allowbreak 5$ and $a\ge\allowbreak 3$
+satisfy
+\fitdisplay{
+\begin{aligned}
+\E[f_a\{T^L(qf_2)\}^4]&\le\E[R_aW_L^4]\le R(d),\\
+R(d)&=[1-(19/16)d](1-2d)^4\\
+&\quad+[61/8-10d+10d^2]d(1-d)(1-3d/4)^2.
+\end{aligned}\label{eq:Q191:15.2}
+}{Q191.15.2}
+Every substitution acts on a nonnegative term. The covariance is first
+proved nonpositive for the same $R_a,\allowbreak W_L$, then discarded.
+The exact deficit polynomial is
+\fitdisplay{
+\begin{aligned}
+(1-R(d))/d&=25/16-(71/16)d+(1251/128)d^2-(523/128)d^3\\
+&\quad-(29/4)d^4+(45/8)d^5\\
+&\ge25/16-(71/16)d+(4381/576)d^2\\
+&\ge25/16-45369/70096>9/10.
+\end{aligned}\label{eq:Q191:15.3}
+}{Q191.15.3}
+The first comparison uses $d^3\le\allowbreak  d^2/3$, $d^4\le\allowbreak  d^2/9$ and drops
+the positive fifth term; the second completes the quadratic over all real
+$d$. For the last rational comparison,
+$(53/80)70096-45369=\allowbreak 85568/80>\allowbreak 0$.
+This proves \eqref{eq:Q191:11.1} continuously on $0<\allowbreak d\le\allowbreak 1/3$.
+For the $d=\allowbreak 0$ boundary and equal-pair decorations, use the common
+restoration: $B\one=\allowbreak 0$ makes every actual path and terminal message
+$\one$, while positivity and $0\le\allowbreak  E_o,\allowbreak E_t\le\allowbreak 1$ restore the original
+pairs at their own vertices. The original edge counts, same-$f_a$
+four-terminal H\"older interface, dependent joint-label KL laws and
+noninjective maps use the common assembly already stated in the article.

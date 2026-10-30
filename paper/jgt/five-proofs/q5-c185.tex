@@ -1,0 +1,327 @@
+\subsection{Odd root lists beginning (1,2,v): lifting all later pairs}\label{proof:Q5-C185}
+\paragraph{Q185.0 The original half-tree and structural direction rule}
+
+The original target fixes every original edge direction before the finite host and kernel, for a tree with at most five original vertices of degree at least three. The original skeleton, arm lengths, equal-arm multiplicities, subdivision vertices, four independent positive core lengths, edge count, correlated-law KL and all-map interpretation are retained.
+
+After maximal genuine equal pairing, the internal-root residual is
+\[
+\begin{gathered}
+(1,2,v,s_1,t_1,\ldots,s_k,t_k),\quad\\
+3\le v<s_1<t_1<\cdots<s_k<t_k,\quad k\ge0.
+\end{gathered}\tag{Q185.1}
+\]
+The empty later-pair product is allowed. The terminal residual has at least two arms; the original lengths \(L,\allowbreak \allowbreak  M\ge1\) are independent, and every genuine equal-pair decoration is allowed. Fix all additional unequal root pairs as
+\[
+ Q_k=\prod_{i=1}^k W_{s_i}\bar f_{t_i}.                      \tag{Q185.2}
+\]
+Each pair has shorter arm length at least four. The first three root arms and the terminal use the integer table below.
+
+% Replace a pure model-definition block only; keep local root/terminal data.
+Use the original finite-space model and arm messages of
+Section~\ref{sec:odd-common-calculus}.
+When the original \(K\)-notation is used, \(K=-B\) and
+\(g=K\one=-u\); in either notation
+\(\delta_j=\|B^j\one\|_2^2=\|K^j\one\|_2^2\).
+All means, norms, adjoints and spectral integrals use the same
+original probability measure.
+The four arm directions are those of Section \ref{proof:R2-C002}. Every inner edge points from terminal to root; every outer edge from root toward the receiving center. The root unit arm points outward and supplies the actual \(p\).
+
+For every listed root and every terminal residual of size at least two, the structural table below selects an actual \(F\) and first root pair \(P\) so that the full bare message
+\[
+ H_k=pP Q_k T^LF
+\]
+satisfies
+\[
+ EH_k^4\le e^{-\lambda d},\qquad \lambda\ge27/5.         \tag{Q185.3}
+\]
+The exact \(\lambda\) is given in the direction table. The same statement holds after genuine equal-pair decorations are restored. For every independent \(M\ge1\),
+\[
+\begin{gathered}
+I_q(T^MH_k)^3\le e^{-[2\lambda-c(M)]d}\le e^{-6d/95},\\
+\quad I_q(X)=E[q^{-1/3}|X|^{8/3}],
+\end{gathered}\tag{Q185.4}
+\]
+Here \(c(1)=204/19\), \(c(2)=10\), \(c(3)=0\), \(c(4)=7\), and \(c(M)=6\) for \(M\ge5\). The even multipair row uses exactly the Q5-C182 premise recorded below.
+
+
+\paragraph{Q185.1 One finite mask for all later unequal pairs}
+
+Use Section~\ref{sec:odd-common-calculus}, retaining the exact
+\(G_1,G_2\) coordinates. Thus \(|G_n|\le6/5\) at every finite
+index and \(|zG_n(\pm z)|<4/5\).
+Complete reversal of \eqref{eq:L96:long}
+gives the same actual pair bound
+\[
+ W_s\bar f_t\le
+ \exp\left\{\sum_{r=s+1}^tB^r\one-\frac{16}{5}d\right\},
+ \qquad4\le s<t.\tag{Q185.6}
+\]
+The disjoint original intervals therefore give
+\[
+ \begin{gathered}
+ R_* =BV_*=\sum_{i=1}^k\sum_{r=s_i+1}^{t_i}B^r\one,\qquad
+ V_*=\sum_{i=1}^k\sum_{r=s_i+1}^{t_i}B^{r-2}u,\\
+ Q_k\le e^{R_*-\Gamma_*},\qquad\Gamma_*=(16k/5)d.
+ \end{gathered}\tag{Q185.7}
+\]
+The lowest power in \(V_*\) is at least \(B^3\).
+Lemma~\ref{lem:odd-common:mask} yields
+\[
+ \|V_*\|^2\le(101/50)\theta^3d<9d/64.\tag{Q185.9}
+\]
+The first positive mean term of \(R_*\) is no earlier than
+\(\delta_4\), with subsequent positive moment indices two apart. Thus
+\[
+ \E R_*\le\frac{\delta_4}{1-\theta^2}
+        \le\frac{2197}{27360}d<d/12.\tag{Q185.10}
+\]
+For \(d\ge1/64\), the original row bound gives
+\[
+ |R_*|\le(3/8)\sqrt d\le3d,\qquad
+ Q_k\le e^{-(16k/5-3)d}\quad(k\ge1).\tag{Q185.11}
+\]
+
+\paragraph{Q185.2 Lifting a full exponential certificate}
+
+The low-domain input is the same actual message with a complete bound
+\(H\le e^{a+BV+W}\), \(4W\le C\), satisfying
+\[
+ \begin{gathered}
+ 4a+4\E BV+(17/4)\|V\|^2+C\le-\lambda d,\\
+ \|V\|\le(7/2)\sqrt d\qquad(0<d\le1/64).
+ \end{gathered}\tag{Q185.12}
+\]
+Here \(W=C=0\), or \(W=cu-3u^2/10\) and \(C=10c^2/3\)
+come from the same actual unit arm. Keep all constants and signed means
+in \(V\). Suppose also that the same direction has
+\(\E H^4\le e^{-\lambda d}\) on the full domain.
+The actual \(Q_k\) above meets Lemma~\ref{lem:odd-common:extra-pairs}:
+\[
+ \E(HQ_k)^4\le e^{-[\lambda+\zeta_k]d},\qquad
+ \zeta_k=\frac{2737}{3840}+\frac{64}{5}(k-1)>0
+ \quad(k\ge1).\tag{Q185.13}
+\]
+Its proof keeps the full \(V+V_*\) and the existing curvature
+payment; the same \(Q_k\) gives the high-domain gain.
+At \(d=0\), use leaf integration.
+
+\paragraph{Q185.3 Matching the full low-domain certificates}
+
+The matching below retains each exponential certificate, including its curvature payment. The lifting adds precisely the vector cost just displayed. Q5-C160 supplies the auxiliary \(L=2,\allowbreak \allowbreak  v\ge4\) certificate on \(0<d\le1/8\); Q5-C163 supplies the same-direction full-domain fourth estimate. Both are used with the weaker common loss \(\lambda=45/8\).
+
+\paragraph{Q185.3.1 Minimum-two and minimum-three single pairs}
+
+Every row has \(H\le e^{a+BV}\), \(W=C=0\), retaining all constant components. At the unit connector the terminal polynomials are
+\[
+\begin{gathered}
+R=\gamma u-B^2G_{b-2}(B)u\quad(2b),\qquad\\
+R=\gamma u-B^2[G_{b-2}(-B)-1]u\quad(3b),
+\end{gathered}
+\]
+Here \(0\le\gamma\le d\). The actual root vector is \(-BG_{v-2}(\pm B)u+\beta\one\), with \(0\le\beta\le d\), and \(\beta=0\) at \(v=3\). Both terminal tails are bounded by \((6/5)\theta\sqrt d\). On \(d\le1/64\),
+\[
+ \|V\|/\sqrt d
+ \le1/64+39/80+4/5+1/8=457/320<3/2.                \tag{Q185.14}
+\]
+The norm of \(\beta\one\), at most \(d\), is explicitly paid as \(\sqrt d/8\). This is the full vector at the unit connector.
+
+The nonunit-connector certificates have the following full-vector forms and squared-norm bounds.
+
+
+\begingroup\small
+\setlength{\tabcolsep}{3pt}
+\setlength{\LTleft}{0pt}\setlength{\LTright}{\fill}
+\begin{longtable}{@{}p{0.2200\linewidth}p{0.7000\linewidth}@{}}
+\caption{Odd root lists beginning (1,2,v): lifting all later pairs: parameter values.}\label{tab:parameters:q5-c185:1}\\
+\toprule
+Entry & Full vector, including its constant \\
+\midrule\endfirsthead
+\toprule
+Entry & Full vector, including its constant \\
+\midrule\endhead
+\bottomrule\endfoot
+\((2,\allowbreak 4),\allowbreak  L=2\) & original Q + \(\delta\one\); Squared bound divided by d: \(\le 5/3\). \\
+\addlinespace[2pt]
+\((2,\allowbreak 4),\allowbreak  L=3\) & original Q + \(\epsilon\one\); Squared bound divided by d: \(<9/4\). \\
+\addlinespace[2pt]
+\((2,\allowbreak 4),\allowbreak  L\ge 4\) & original finite base + tail + (\(\beta-hd)\one\); at \(v=3\) use -\(hd\one\); Squared bound divided by d: \(<23/10\). \\
+\addlinespace[2pt]
+general (2, b), \(L=3\) & original Q + \(\epsilon\one\); Squared bound divided by d: \(<5/2\). \\
+\addlinespace[2pt]
+general (2, b), \(L\ge 4\) & original finite base + tail + (\(\beta-hd)\one\); Squared bound divided by d: \(<23/10\). \\
+\addlinespace[2pt]
+general (2, b), \(L=2,\allowbreak  v=3\) & original Q + \(\delta\one\); \(\lVert Q\rVert ^2\le 9d/8,\allowbreak  \lvert \delta\rvert \le 8d/15\); Squared bound divided by d: <4 on the low domain. \\
+\addlinespace[2pt]
+general (2, b), \(L=2,\allowbreak  v\ge 4\) & original Q + (\(\delta+\beta)\one\); Squared bound divided by d: \ensuremath{\le}\(599/392\) for \(d\le 1/8\). \\
+\addlinespace[2pt]
+general (3, b), \(L=2\) & original Q + \(\delta\one\); Squared bound divided by d: \(\le 49/30\). \\
+\addlinespace[2pt]
+general (3, b), \(L=3\) & original Q + \(\epsilon\one\); Squared bound divided by d: \(<11/4\). \\
+\addlinespace[2pt]
+general (3, b), \(L\ge 4\) & original base + tail - \(hd\one,\allowbreak \) using the stated weaker root envelope; Squared bound divided by d: \(<17/8\). \\
+\end{longtable}
+\endgroup
+
+
+For \(v=3,\allowbreak \allowbreak  L=2\), \(\|V\|/\sqrt d\le\sqrt{9/8}+1/15<2\) on the present low domain. Every other squared bound in the table is less than four as well, so all vectors have norm less than \(2\sqrt d\). Their original combined scalar, signed-mean and norm payments give \(45/8\).
+
+\paragraph{Q185.3.2 The exceptional short pairs (2, 3) and (3, 4)}
+
+For Q5-C168, the short and long data are respectively
+\eqref{eq:odd168:short-parameters} and \eqref{eq:odd168:long-parameters}.
+They give the complete bound
+\(H\le\exp(a+BQ+cu-3u^2/10)\), with \(a+\E BQ=S\).
+The proof of \eqref{eq:odd168:statement} bounds its full certificate
+\(4S+(17/4)\|Q\|^2+(10/3)c^2\) by \(-25d/4\), using
+\eqref{eq:odd-common:curvature}. Thus this is an input to
+(Q185.12), with \(V=Q\), \(W=cu-3u^2/10\), and \(C=10c^2/3\).
+Q5-C170 uses the same curvature convention in T178.12, 14, 16, 20,
+with full-domain loss \(13/2\).
+
+In Q5-C168, the \(L=1\) coordinate \([x(1+C)-zE]u\) has squared-frequency bound less than four; at \(L=2\) its original coordinate bounds give norm less than \(2\sqrt d\); at \(L=3\) its full squared norm is at most \(d+2 \delta_2- \delta_3+77d^2/150<2d\); for later lengths its norm is at most \(131\sqrt d/100\). In Q5-C170, the squared bounds for \(L=1,\allowbreak \allowbreak  2,\allowbreak \allowbreak  3\) are respectively \(7d/5,\allowbreak \allowbreak  9d/5,\allowbreak \allowbreak  14d/5\), and for later lengths \(16d/9\). All full vectors have norm less than \(2\sqrt d\). The \(v=3,\allowbreak \allowbreak  G_1\) and \(v=4,\allowbreak \allowbreak  G_2\) boundaries are retained in those original formulas.
+
+\paragraph{Q185.3.3 Every minimum-one terminal triple}
+
+On the common low domain \(d\le1/64\), Q5-C169, Q5-C172 and Q5-C173 use the full vector
+\[
+ V=[G_L+z^{L-1}r-zG_n(\pm z)]u,\quad n=v-2,           \tag{Q185.15}
+\]
+Here \(W=\beta u-3u^2/10\), \(C=10\beta^2/3\). At \(L=1\), retain \(G_1=1\), giving the exact \(u+R\) first row. The notation \(R=r(B)u\) means a finite polynomial, with no pointwise division by \(u\). The full-frequency bounds are as follows; \(\xi=1/m\) in the first row is the reciprocal scalar of the original square envelope.
+
+
+\begingroup\small
+\setlength{\tabcolsep}{3pt}
+\setlength{\LTleft}{0pt}\setlength{\LTright}{\fill}
+\begin{longtable}{@{}p{0.2200\linewidth}p{0.7000\linewidth}@{}}
+\caption{Odd root lists beginning (1,2,v): lifting all later pairs: parameter values.}\label{tab:parameters:q5-c185:2}\\
+\toprule
+Entry & Reference and domain \\
+\midrule\endfirsthead
+\toprule
+Entry & Reference and domain \\
+\midrule\endhead
+\bottomrule\endfoot
+(1, 2, 3) & Q5-C169 Section 4, full d; \(r=-\xi\cdot\) x, \(\xi\le 6/5\); Upper bound for the modulus of r: \(\le 39/80\). \\
+\addlinespace[2pt]
+(1, 2, 4) & Q5-C169 Section 6, \(d\le 1/4\); Upper bound for the modulus of r: \(<19/20\). \\
+\addlinespace[2pt]
+\((1,\allowbreak 2,\allowbreak w),\allowbreak w\ge 5\) & Q5-C169 Section 7, \(d\le 1/5\); Upper bound for the modulus of r: \(\le 147/155<1\). \\
+\addlinespace[2pt]
+\((1,\allowbreak 3,\allowbreak w),\allowbreak w\ge 4\) & Q5-C172 Sections 3--7, \(d\le 1/4\); Upper bound for the modulus of r: \(<3/5\). \\
+\addlinespace[2pt]
+\((1,\allowbreak a,\allowbreak b),\allowbreak a\ge 4\) & Q5-C173 Sections 2--6, \(d\le 1/4\); Upper bound for the modulus of r: \(<3/10\). \\
+\end{longtable}
+\endgroup
+
+
+The finite geometric bounds give \(\|V\|/\sqrt d\le6/5+4/5+\sup|r|<3\). The original vector, mean, curvature term and joint-frequency payment remain unchanged. The common loss is \(2817/512\) for \((1,\allowbreak \allowbreak  2,\allowbreak \allowbreak  3)\), and \(705/128\) for every other row. The same-direction full-domain statements come from the corresponding original results.
+
+\paragraph{Q185.3.4 Minimum-one odd lists with several pairs}
+
+Q5-C177, equations T184.13--18, uses the same vector and original \(\beta\) curvature. The low domains of its five structural blocks I--V all contain \([0,\allowbreak \allowbreak  1/64]\); their actual modulus bounds for \(r\) are \(1/2,\allowbreak \allowbreak  2/3,\allowbreak \allowbreak  3/5,\allowbreak \allowbreak  1/2,\allowbreak \allowbreak  3/5\). Hence every pair count and \(L\) has \(\|V\|/\sqrt d<2+2/3<3\). The original low-domain loss is at least \(659/96>705/128\). The crossed row keeps exactly its fixed permutation of arms \(2,\allowbreak \allowbreak  3,\allowbreak \allowbreak  4,\allowbreak \allowbreak  \bar f_2\). Its high-domain statement uses the same crossed or ordinary direction together with the pointwise mask bound.
+
+\paragraph{Q185.3.5 Even terminal lists with large minimum}
+
+Q5-C180 has \(W=C=0\); the full vectors in equations (28)--(34) include \(\delta\one\), \(\epsilon\one\), or \(-(d/2)\one\). Their norm coefficients for the four length ranges are at most \(21/20,\allowbreak \allowbreak  47/25,\allowbreak \allowbreak  89/48,\allowbreak \allowbreak  25/16\), all below two. Its \(L=2\) joint \(\Phi\) payment retains this actual vector. Its full-domain loss is \(29/5+64(j-1)/5\).
+
+\paragraph{Q185.3.6 All nonunit-minimum odd terminal lists}
+
+For Q5-C181, apply \eqref{eq:odd-common:root-interface} to its actual positive comparison with \(\alpha=-\Gamma\), retaining \(C_0\), \(c_0\), and the propagated vector. The actual \(p\) supplies the curvature in \eqref{eq:odd-common:curvature}, and the full vector is \(V_{\rm actual}=V_{\rm propagated}-BG_n(B)u\), where \(n=v-2\). Thus \(W=(\beta+C_0-1)u-3u^2/10\), \(C=10(\beta+C_0-1)^2/3\). On our low domain, the full norm coefficient is at most \(27/16\) whenever \(b_1\ge4\). For a single pair with \(b_1=3\), the four length-range coefficients are at most \(5/3,\allowbreak \allowbreak  6/5,\allowbreak \allowbreak  5/4,\allowbreak \allowbreak  3/2\); with multiple pairs they are at most \(11/6,\allowbreak \allowbreak  13/10,\allowbreak \allowbreak  3/2,\allowbreak \allowbreak  3/2\). All are below two. Every original \(\gamma\), the actual \(\bar f_a\), and the genuine \(BR\) first row are retained. The original full-domain ordinary fourth loss is \(705/128\).
+
+\paragraph{Q185.3.7 The five even multipair blocks}
+
+This step uses the four complete propagation estimates \eqref{eq:five-even-multipair:L1}--\eqref{eq:five-even-multipair:Lge4} from Section~\ref{proof:Q5-C182}. Their vectors are
+\[
+\begin{gathered}
+R-BG_n(B)u,\quad (1-BG_n(-B))u+BR,\quad\\
+(G_2-BG_n)u+\delta u+B^2R,\quad\\
+(G_{L-1}-BG_n)u+B^{L-1}R.
+\end{gathered}\tag{Q185.16}
+\]
+The original \(\beta\) and \(\delta,\epsilon\) constant terms have been paid with the same pointwise \(p\) curvature, so these are the actual vectors used.
+
+For blocks E2, E3, UI, UII and UIII, \(\sigma/d\) is at most \(1/3,\allowbreak \allowbreak  9/64,\allowbreak \allowbreak  325/392,\allowbreak \allowbreak  325/512,\allowbreak \allowbreak  1277/2592\), all below one, and \(|\delta|\le6d/5\). Thus \(\|R\|<\sqrt d\) uniformly in the pair count. Retaining the joint-base bounds \(19/16,\allowbreak \allowbreak  23/16,\allowbreak \allowbreak  6/5\), on \(d\le1/64\) we obtain
+\[
+\begin{array}{c|c}
+L&\|V\|/\sqrt d\text{ common upper bound}\\
+1&1+4/5=9/5\\
+2&19/16+2/3=89/48\\
+3&23/16+13/32+3/160=149/80\\
+\ge4&6/5+4/15=22/15
+\end{array}                                           \tag{Q185.17}
+\]
+All four are below two. At \(L=3\), \(\delta\) is the original global scalar, bounded by \(6d/5\), so the joint polynomial optimizations remain valid for the actual vector. Retaining its full \(L=2\) positive-root exception, this supplies loss \(27/5+64(j-2)/5\).
+
+\paragraph{Q185.3.8 The exact full-root interface for a terminal pair (1, b)}
+
+This row uses the full-root statement Q5-C084, Section 0, equations (0.4)--(0.5). It already covers \((1,\allowbreak \allowbreak  2,\allowbreak \allowbreak  v,\allowbreak \allowbreak  s_1,\allowbreak \allowbreak  t_1,\allowbreak \allowbreak  \ldots,\allowbreak \allowbreak  s_k,\allowbreak \allowbreak  t_k)\), every finite \(k\), terminal \(qf_b\), and exactly the later-pair product \(Q_k\) used here. Choose \(P=h_2f_v\) precisely when \(L=1,\allowbreak \allowbreak  b\ge3,\allowbreak \allowbreak  v\ge4\); otherwise take \(P=\bar f_2W_v\). Its ordinary fourth loss is \(705/128\) for all independent \(L,\allowbreak \allowbreak  M\).
+
+Every other terminal row therefore has the required full exponential certificate, with the stronger bound \(\|V\|<3\sqrt d\) on the common low domain. The lifting uses the uniform allowance \(7\sqrt d/2\).
+
+\paragraph{Q185.4 The complete terminal direction algorithm}
+
+Put \(P_-=\bar f_2W_v\), \(P_+=h_2f_v\), \(H_0=pPT^LF\), and \(H_k=H_0Q_k\). Every original length is positive, with \(v\ge3\).
+
+
+\begingroup\small
+\setlength{\tabcolsep}{3pt}
+\setlength{\LTleft}{0pt}\setlength{\LTright}{\fill}
+\begin{longtable}{@{}p{0.2200\linewidth}p{0.7000\linewidth}@{}}
+\caption{Odd root lists beginning (1,2,v): lifting all later pairs: parameter values.}\label{tab:parameters:q5-c185:3}\\
+\toprule
+Entry & Actual F \\
+\midrule\endfirsthead
+\toprule
+Entry & Actual F \\
+\midrule\endhead
+\bottomrule\endfoot
+\((1,\allowbreak b),\allowbreak b\ge 2\) & \(qf_b\); First root pair P: \(P_+ \quad\text{if} L=1,\allowbreak  b\ge 3,\allowbreak  v\ge 4\); otherwise \(P_-\); Lambda used: \(705/128\). \\
+\addlinespace[2pt]
+\((2,\allowbreak b),\allowbreak b\ge 4\) & \(\bar f_2 W_b\); First root pair P: \(P_+ \quad\text{if} L=2\) or \(L=1,\allowbreak  v\ge 4\); otherwise \(P_-\); Lambda used: \(45/8\). \\
+\addlinespace[2pt]
+(2, 3) & \(h_2 f_3\); First root pair P: \(P_+ \quad\text{if} L=2\); otherwise \(P_-\); Lambda used: \(25/4\). \\
+\addlinespace[2pt]
+\((3,\allowbreak b),\allowbreak b\ge 5,\allowbreak L=1\) & \(h_3 f_b\); First root pair P: \(P_-\); Lambda used: \(45/8\). \\
+\addlinespace[2pt]
+\((3,\allowbreak b),\allowbreak b\ge 5,\allowbreak L=2\) & \(\bar f_3 W_b\); First root pair P: \(P_+\); Lambda used: \(45/8\). \\
+\addlinespace[2pt]
+\((3,\allowbreak b),\allowbreak b\ge 5,\allowbreak L\ge 3\) & \(\bar f_3 W_b\); First root pair P: \(P_-\); Lambda used: \(45/8\). \\
+\addlinespace[2pt]
+(3, 4) & \(h_3 f_4\); First root pair P: \(P_+ \quad\text{if} L=2\); otherwise \(P_-\); Lambda used: \(13/2\). \\
+\addlinespace[2pt]
+even \(4\le a_1<b_1<\cdots<a_j<b_j,\allowbreak  j\ge 1\) & \(\prod h_{a_i}f_{b_i}\); First root pair P: \(P_-\); Lambda used: \(29/5+64(j-1)/5\). \\
+\addlinespace[2pt]
+even multipair \(a_1\le 3,\allowbreak  j\ge 2\) & \(\prod h_{a_i}f_{b_i}\); First root pair P: \(P_+ \quad\text{if} L=2\); otherwise \(P_-\); Lambda used: \(27/5+64(j-2)/5,\allowbreak \) exact C182 premise. \\
+\addlinespace[2pt]
+(1, 2, 3) & \(qf_2 h_3\); First root pair P: \(P_+\) for every L; Lambda used: \(2817/512\). \\
+\addlinespace[2pt]
+\((1,\allowbreak 2,\allowbreak w),\allowbreak w\ge 4\) & \(qf_2 h_w\); First root pair P: \(P_-\) for every L; Lambda used: \(705/128\). \\
+\addlinespace[2pt]
+\((1,\allowbreak a,\allowbreak b),\allowbreak a\ge 3\) & \(qf_a h_b\); First root pair P: \(P_+ \quad\text{if} L=1,\allowbreak  v\ge 4\); otherwise \(P_-\); Lambda used: \(705/128\). \\
+\addlinespace[2pt]
+odd minimum one, \(j\ge 2,\allowbreak (a_1,\allowbreak  b_1,\allowbreak  a_2)=(2,\allowbreak \) 3, 4) & \(qf_2 h_{b_2}h_3 f_4 \prod_{i\ge 3}h_{a_i}f_{b_i}\); First root pair P: \(P_-\); Lambda used: \(705/128\). \\
+\addlinespace[2pt]
+odd minimum one, \(j\ge 2,\allowbreak  a_1=2,\allowbreak \) excluding the preceding row & \(qf_{a_1}h_{b_1} \prod_{i\ge 2}h_{a_i}f_{b_i}\); First root pair P: \(P_-\); Lambda used: \(705/128\). \\
+\addlinespace[2pt]
+odd minimum one, \(j\ge 2,\allowbreak  a_1\ge 3\) & same ordinary \(\prod\); First root pair P: \(P_+ \quad\text{if} L=1,\allowbreak  v\ge 4\); otherwise \(P_-\); Lambda used: \(705/128\). \\
+\addlinespace[2pt]
+\((a,\allowbreak b_1,\allowbreak c_1,\allowbreak \cdots,\allowbreak b_j,\allowbreak c_j),\allowbreak a\ge 2,\allowbreak b_1=3,\allowbreak so a=2\) & \(\bar f_2 f_3 h_{c_1} \prod_{i\ge 2}h_{b_i}f_{c_i}\); First root pair P: \(P_-\); Lambda used: \(705/128\). \\
+\addlinespace[2pt]
+nonunit odd residual, \(b_1\ge 4\) & \(\bar f_a \prod h_{b_i}f_{c_i}\); First root pair P: \(P_-\); Lambda used: \(705/128\). \\
+\end{longtable}
+\endgroup
+
+
+The residual lengths are strictly ordered. A single pair has minimum one, two, three, or at least four. Even multipair lists have minimum at most three or at least four. Odd lists split by minimum one or at least two and the stated short exceptions. Thus every finite terminal residual of size at least two appears. The low- and high-domain proofs use the same row, and \(M\) never chooses a direction.
+
+For \(k=0\), the exact original interface gives the ordinary fourth bound directly. For \(k\ge1\), the first row uses the full-root Q5-C084 statement; every other row uses the lifting lemma, with the stronger loss \(\lambda+\zeta_k\). The terminal \(qf_2h_3\) and the fixed crossed permutation are retained exactly. The smallest tabulated \(\lambda\) is \(27/5\): the differences for \(2817/512,\allowbreak \allowbreak  705/128,\allowbreak \allowbreak  45/8\) are respectively \(261/2560,\allowbreak \allowbreak  69/640,\allowbreak \allowbreak  9/40\).
+
+For the genuine equal-pair products at the root and terminal, positivity gives
+\[
+ 0<\widetilde H_k=E_r pP Q_k T^L(E_tF)\le H_k.
+\]
+Only genuine equal pairs are bounded by one; each additional unequal pair has been paid by the finite-mask argument. The ordinary fourth bound is order preserving. The Q5-C164 outlet applies to every original real input and every independent \(M\), yielding the outlet statement since \(54/5-204/19=6/95\).
+
+The whole-tree path alternatives and the join of compatible outlets
+are proved in Section~\ref{sec:five-chain}. Their kernel, tournament
+and entropy consequences are given in Section~\ref{sec:completion}.

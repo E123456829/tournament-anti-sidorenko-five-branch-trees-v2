@@ -1,0 +1,120 @@
+\subsection{Even terminals of minimum at least four}\label{loc:S27}
+Let $P=\prod_{i=1}^th_{a_i}f_{b_i}$, where
+$4\le a_1<b_1<\cdots<a_t<b_t$. We prove, for every $L\ge1$,
+\[
+ \E[p(T^LP)^4]\le e^{-d/20};\qquad
+ \E[p(T^LP)^4]\le e^{-[8(t-2)+481/1000]d}\quad(t\ge2).
+\]
+
+\proofpart{The reference weight}
+Define $U_L=p\bar f_{L}^3$, $W_L=A^LU_L$.
+Rowwise H\"older for the positive kernel $T^L$ and adjointness give
+\begin{equation}\label{eq:compact-reference-weight}
+ \E[p(T^LF)^4]\le\E[W_LF^4],\qquad \E W_L=\E[p\bar f_{L}^4].
+\end{equation}
+The following bounds will also be used for minimum three:
+\begin{center}
+\begin{tabular}{@{}cccc@{}}
+\toprule
+$L$ & $\E W_L$ & $\|W_L-\E W_L\|_2/\sqrt d$ & $\|W_L\|_\infty$\\\midrule
+1 & $1+12d/5$ & $23/10$ & $8/3$\\
+2 & $e^{27d/8}$ & $291/80$ & $4$\\
+$\ge3$ & $1$ & $10093/1280<8$ & $4$\\\bottomrule
+\end{tabular}
+\end{center}
+We prove these bounds from the path recursion.
+With $P_0=I-J$ and $B=P_0KP_0$, a finite polynomial with coefficients
+in $[0,M]$ has $L^2$ norm at most $3M/2$ on $B$.
+Indeed at $x=\lambda^2\le\theta$ its squared modulus is at most
+$M^2(1+x)/(1-x^2)^2\le32768M^2/16245<9M^2/4$.
+This is a spectral norm estimate on $B$.
+The centered recursion
+\[
+ \bar f_{n}-\E \bar f_{n}=-\sum_{j=0}^{n-1}\E \bar f_{n-1-j}(-B)^jg
+\]
+therefore has norm at most $3\sqrt d/2$.
+For $L\ge2$ the actual cubic path estimate gives $\E U_L\le1$;
+positivity implies $W_L\le4$.
+Since $|x^3-y^3|\le7|x-y|$ for $0\le x\le2$, $0\le y\le1$,
+$\|U_L-(\E \bar f_{L})^3\|\le37\sqrt d/2$.
+Centering the $A$ recursion yields
+\[
+ \|W_L-\E W_L\|\le[3+(37/2)\theta^{L/2}]\sqrt d.
+\]
+For $L\ge3$ use Section~\ref{loc:S20} for its mass.
+For $L=1$, $U_1=pq^3=1+g(-2+2g^2-g^3)$;
+the last polynomial has absolute value at most two.
+Thus its centered image has norm at most
+$(1+2\sqrt\theta)\sqrt d\le23\sqrt d/10$, and $\E U_1\le1+d$.
+The mass bound is \eqref{eq:compact-qnorm}.
+For $L=2$ use the scalar inequalities in
+\eqref{eq:compact-log-tools} and \eqref{eq:shared-exp-eighth} with $X=-3g+4r$:
+\[
+ \E[p\bar f_2^4]\le e^{26d/25}[1-11d/32+13\delta_{2}/2]
+                \le e^{5339d/1600}\le e^{27d/8}.
+\]
+For centering, $\max pq^2=32/27$ gives
+\[
+ |U_2-U_1|\le |r|(32/9+3\sqrt d+2d),\qquad
+ \|U_2-1\|<6\sqrt d.
+\]
+Expand the actual $A^2$ before centering:
+\[
+ P_0W_2=(\E U_2)g+(r+d)+P_0K^2(U_2-1).
+\]
+The first two terms are orthogonal; hence the norm is at most
+$(6/5+6\theta)\sqrt d=291\sqrt d/80$.
+Uniformly the table implies $\E W_L\le e^{27d/8}$ and
+$\E W_L\le10/3$; for the latter use
+\eqref{eq:compact-exp-remainder} at $9/8$, obtaining $251/80<10/3$.
+
+\proofpart{Finite exponential tails}
+Taylor's integral remainder for negative arguments and the positive
+series ratio for nonnegative arguments give
+\begin{equation}\label{eq:compact-small-exp}
+ e^u\le1+u+2u^2/3\ (|u|\le3/4),\qquad
+ e^u\le1+u+3u^2/4\ (|u|\le1).
+\end{equation}
+The positive remainder coefficient is at most
+$1/2+u/[6(1-u/4)]$, which is $17/26<2/3$ or $13/18<3/4$.
+For $W\ge0$, $M=\E W$, retain the mean through
+\begin{equation}\label{eq:compact-weight-tail}
+ \E[WR]\le M\E R+\|W-M\|_2\|R\|_2.
+\end{equation}
+
+For one pair, the actual envelope is
+$h_af_b\le e^{R-2d}$, $R=K^aG_{b-a}(K)g$.
+If $a=4,5$, $\E R\le0$, $\|R\|\le(507/2560)\sqrt d<\sqrt d/5$,
+and $|4R|<3/4$. Applying the first inequality in
+\eqref{eq:compact-small-exp} with the weight table gives the following
+upper exponents for $\E[W_Le^{4R}]$:
+\[
+ \begin{array}{c|ccc}
+ L&1&2&\ge3\\\hline
+ \text{cost}/d&
+ 267/50<6&404817/51200<159/20&206590332/26214400<79/10.
+ \end{array}
+\]
+The terms are respectively the mass, $4\|W_L-\E W_L\|\|R\|$,
+and $(32/3)\|W_L\|_\infty\|R\|^2$; thus every entry is specified
+by the preceding table. Multiplication by $e^{-8d}$ gives losses
+$2d,d/20,d/10$.
+For $a\ge6$, use
+$\E R\le\theta^3d$, $\|R\|\le21\sqrt d/250$.
+The mean, covariance and square costs are at most
+$14d/15$, $336d/125$, $147d/500$.
+Together with $27d/8$ their sum is $21871d/3000<15d/2$,
+leaving loss $d/2$.
+
+For $t\ge2$, $P\le e^{R-2td}$ where the exponent intervals in
+$R=\sum_iK^{a_i}G_{b_i-a_i}(K)g$ are disjoint.
+The finite coefficient bound yields
+\[
+ \|R\|\le\sqrt d/4,\quad \|R\|^2<63d/1000,
+ \quad\|R\|_\infty^2\le(9/4)\theta^3d,\quad
+ \E R\le \delta_{4}/(1-\theta^2)<21d/250.
+\]
+Now $|4R|<1$; the second inequality of \eqref{eq:compact-small-exp}
+gives mean, covariance and square costs $28d/25$, $8d$, $378d/125$.
+Including the mass cost gives $15519d/1000$.
+The actual loss $8td$ proves the stated stronger bound.

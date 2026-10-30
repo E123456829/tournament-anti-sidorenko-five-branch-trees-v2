@@ -1,0 +1,127 @@
+\subsection{Residual triples with third length at least six}\label{q3:app:longtriples}
+This continues the single-triple calculation of Section~\ref{q3:app:triples} for all remaining third lengths.
+\subsubsection{Every third length at least six}
+Fix $c\ge6$ and first assume $d\le3/16$. Let
+\[
+ \lambda=19/32,\quad\tau=d-\delta_{2},\quad R_0=S_c-S_2,\quad
+ \delta=(4-d)\tau,\quad m=1-\delta,\quad a=1-3\tau,
+\]
+\[
+ w=-ag+2\tau r+\tau k-R_0,\qquad M=1-(5/2)\tau.
+\]
+Apply $A^*$ to the positive convolution for $f_{c-1}$. The identity
+$A^*S_{c-1}=2-\beta_c-S_c$, retaining $h_1,h_2,h_3$, gives
+\[
+ h_c\le2-\tau-S_c-\tau(h_1+h_2+h_3)=m-r+w .
+\]
+Here $h_1+h_2+h_3=3-d-3g-2r-k$. We have
+$\lambda d\le\tau\le d$, $\delta\le3/4$, $1/4\le m\le1$ and $7/16\le a\le1$.
+
+Put $V=KG_{c-2}(K)g$ and $U=a\one-2\tau g-\tau r+V$.
+Then $R_0=KV$, $w=-KU$, $\norm V_2^2\le \delta_{2}$ and $\norm{R_0}_2^2\le \delta_{3}$.
+Finite alternating sums give
+\[
+\begin{gathered}
+ \E R_0\ge \delta_{2}-\delta_{3},\quad-\delta_{3}\le\E(rR_0)\le0,\quad
+ \E(gR_0)\le-\delta_{2}+\delta_{3},\quad\E(kR_0)\ge \delta_{3}-\delta_{4},\\
+ \E V\le-d+\delta_{2},\quad\E(gV)\ge-\delta_{2},\quad\E(rV)\ge \delta_{2}-\delta_{3}.
+\end{gathered}
+\]
+The indicated initial terms occur for every $c\ge6$. Therefore
+\[
+ \E w\le-2\tau d-\delta_{2}+\delta_{3},\qquad
+ 2\tau \delta_{2}\le\E(rw)\le2\tau \delta_{2}+\delta_{3},
+\]
+\[
+ \E w^2\le a^2d+[-2a+2a\tau+4\tau^2]\delta_{2}
+       +[1+2a+\tau^2+2\tau]\delta_{3}+2\tau \delta_{4}
+ \le a^2d-L(\tau)\delta_{2},
+\]
+\[
+ L(\tau)=25/32-(3433/512)\tau+(51/32)\tau^2.
+\]
+The full row expansion has the same coefficient pattern one moment lower:
+$\norm U_2^2\le a^2-L(\tau)d$. This proves $|w|\le M$. If $L\ge0$, use $\norm U_2\le a\le M$. If $L<0$, use $d\le3/16$ to obtain
+\[
+ M^2-[a^2-Ld]\ge
+ 75/512-(2107/8192)\tau-(1255/512)\tau^2\ge99/8192>0 .
+\]
+The last quadratic decreases on $[0,3/16]$.
+
+Apply \eqref{q3:eq:Yexpansion}, \eqref{q3:eq:Aenvelope} and \eqref{q3:eq:Buniform}.
+Since $3m+M\le4-(223/16)\tau\le4-(4237/512)d\le4-(123/16)d$, \eqref{q3:eq:Cuniform} also applies. Write $b_1=m(3m-2)$. Keeping the lower covariance when $b_1<0$ yields
+\[
+ \E[B(r)w]\le-2m^2\tau d+
+ [-\lambda m^2+2\tau b_1+\theta(b_1)_++(9/4)M]\delta_{2} .
+\]
+Indeed $\E(rw)=2\tau \delta_{2}+t$ with $0\le t\le \delta_{3}$. Thus its linear contribution is at most $2\tau b_1\delta_{2}+(b_1)_+\delta_{3}$. Combining terms gives
+\[
+ \E[h_c^3u^6]\le A_0(\delta)^3+(45/8)a^2d-6m^2\tau d+K(d,\tau)\delta_{2},
+\]
+\[
+ K=-3\lambda m^2+6\tau b_1+3\theta(b_1)_+
+       +(27/4)M-(45/8)L(\tau).
+\]
+Put $Q_0=(27/4)M-(45/8)L
+=603/256+(85365/4096)\tau-(2295/256)\tau^2$.
+Then $Q_0\ge603/256$, $m^2\le1$ and $b_1\ge-1/3$ imply
+$K\ge603/256-57/32-2\tau\ge51/256>0$.
+We may replace $\delta_{2}$ by $\theta d$, defining the upper bound
+\[
+ P(d,\tau)=A_0(\delta)^3+(45/8)a^2d-6m^2\tau d+\theta dK(d,\tau).
+\]
+
+For fixed $d$ this function decreases on $\lambda d\le\tau\le d$.
+Put $b=4-d$, so $m=1-b\tau$. At the only corner $m=2/3$, $K$ is continuous.
+For $m\ge2/3$,
+\[
+ \begin{gathered}
+ K=(15/8+18\tau)m^2-(39/16+12\tau)m+Q_0,\\
+ K_\tau-Q_0'=54m^2-60m+12+b[39/16-(15/4)m]\le6 .
+ \end{gathered}
+\]
+For $m\le2/3$,
+\[
+ K=(-57/32+18\tau)m^2-12\tau m+Q_0,\quad
+ K_\tau-Q_0'=54m^2-60m+12+(57/16)bm\le11/2 .
+\]
+These follow by convexity in $m$ and the endpoints $1/4,2/3,1$, using $b\le4$.
+Since $Q_0'<21$, $K_\tau\le27$. Also $A_0'(\delta)<0$ and
+$\partial_\tau(-6m^2\tau d)=-6db_1$. Hence
+\[
+ P_\tau\le d[-6(45/8)(7/16)+2+27\theta]=-(115/64)d<0 .
+\]
+Continuity at the corner proves $P(d,\tau)\le P(d,\lambda d)$.
+
+At $\tau=\lambda d$, $\delta=\lambda d(4-d)\le3477/8192<3/7$.
+The two scalar inequalities required there are
+\[
+ A_0(z)^3\le1-3z+(21/5)z^2-(11/4)z^3,\qquad
+ (1-4z+3z^2)_+\le1-(7/3)z .
+\]
+For the first, the residual coefficient
+$17/5-(42/25)z+(12/25)z^2-(8/125)z^3$ decreases and at $7/16$ is
+$11/4+97/64000$; the second follows by subtraction and nonnegativity of its right side on $[0,3/7]$.
+Substitution and collection now give
+\[
+ [\E(h_c^3u^6)-1]/d\le Q(d),
+\]
+\[
+\begin{split}
+ Q(d)={}&-6321/8192+(189543791/20971520)d\\
+ &-(1392699791/41943040)d^2+(22776573/655360)d^3\\
+ &-(9815229/1048576)d^4+(445835/524288)d^5.
+\end{split}
+\]
+The coefficients are bounded by $-77/100$, $226/25$, $-166/5$, $174/5$, $0$, $1$.
+For $d\le3/16$, $(174/5)d^3+d^5\le(33/5)d^2$, so
+\[
+ Q(d)\le-77/100+(226/25)d-(133/5)d^2\le-129/66500 .
+\]
+Together with \eqref{q3:eq:shortsquare}, this proves
+$\E H_c^3\le1-(129/66500)d$ for $d\le3/16$ and every $c\ge6$.
+
+For $d\ge3/16$, \eqref{q3:eq:uniformmean} at $n=c-1$ gives
+$h_c\le2\mu_{c-1}\le2-(83/16)d$. The decreasing-factor estimate
+\eqref{q3:eq:largetriple} therefore applies without change, proving the same fixed-direction cubic for every remaining $d$.
+All equal-length pairs may be restored using \eqref{q3:eq:equalpair}, without changing any original edge count.

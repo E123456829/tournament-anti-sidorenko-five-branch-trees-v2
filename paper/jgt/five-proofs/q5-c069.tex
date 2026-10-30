@@ -1,0 +1,256 @@
+\subsection{The actual squares for unit terminals of lengths $(2,4)$ and $(2,5)$}\label{proof:Q5-C069}
+The following square and moment calculations are used in the reference proofs. Put $r=Kg$, $s=K^2g$, $t_0=K^3g$ and $m=1-d$.
+For $(2,4)$, the actual positive paths satisfy
+$h_2=q-r$, $f_4=p+r+s+t_0-d-dp$, so
+$h_2+f_4=2m+R$, $R=s+t_0-dg$.
+The actual product is at most $F_0=(m+R/2)^2$.
+For any such square write
+\begin{equation}\tag{L69.10.square}\label{eq:L69:square}
+\begin{gathered}
+Y=TF_0=m^2+w_0+e,\quad w_0=-m^2g+mD_0-mKR,\quad D_0=\E R,\\
+e=T(R^2)/4,\quad0\le e\le V/2,\quad V=\E R^2.
+\end{gathered}
+\end{equation}
+For $(2,4)$ the exact original moments are
+$\E R=\delta_2$, $\E KR=d^2+\delta_2$,
+$\E(rR)=-\delta_3$, $\E(sR)=\delta_3+d\delta_2$.
+Consequently
+\begin{equation}\tag{L69.10.2}\label{eq:L69:firstfour}
+\E[f_2(w_0+e)]=-m^2d-md^2+\E[f_2e]
+\le-m^2d-md^2+V/2,
+\end{equation}
+where the actual adjoint gives
+$\E[f_2e]=\E[f_3R^2]/4\le V/2$.
+The complete second moment, using $m+d=1$, is
+\begin{equation}\tag{L69.10.3}\label{eq:L69:secondfour}
+\E w_0^2=m^2[m^2d+2\delta_3+\delta_4+\delta_5
+-d^2\delta_2-\delta_2^2].
+\end{equation}
+On $0<d\le1/4$ set
+$v=15/64+(13/16)d+d^2$,
+$H=m^2+17/40-(4/25)d-(2/5)d^2$.
+The exact $V=d^3+2d\delta_2+\delta_3+\delta_4$ gives
+$V\le dv$ and $V\le d(1/2+d)^2$,
+using $\theta^2+\theta^3=7605/32768<15/64$.
+For the bracket in \eqref{eq:L69:secondfour}, normalized by $d$,
+write $v_1=\delta_2/d$. Its upper bound is
+$m^2+(2\theta+\theta^2+\theta^3)v_1-d^2v_1-dv_1^2$,
+increasing on $[0,\theta]$ since its derivative is at least
+$2\theta-d^2-2d\theta>0$.
+At $v_1=\theta$ use
+$2\theta^2+\theta^3+\theta^4=444977/1048576<17/40$,
+$\theta\ge2/5$, $\theta^2\ge4/25$ to obtain
+$\E w_0^2\le m^2dH$.
+$0<H\le57/40<(6/5)^2$ and Cauchy--Schwarz with $e\le V/2$ give
+\begin{equation}\tag{L69.10.4}\label{eq:L69:fourvariance}
+\E(w_0+e)^2\le m^2dH+(6/5)md^{3/2}v+d^2v^2/4.
+\end{equation}
+
+We supply the full original-$f_2$ curvature certificate.
+With $x=\sqrt d\in[0,1/2]$, the row bound gives
+$Y\le m^2q+B_0$, $B_0/m\le x/2+(41/32)x^2
+\le C=x/2+(21/16)x^2$.
+Since $f_2\le p+x=2+x-q$, its fourth Taylor coefficient divided
+by $m^2$ is at most
+$Q(q)=(2+x-q)\{[m(q+1)+C]^2+2m^2\}$.
+Put $c=C/m\le37x/24<1$.
+$Q'(0)>0$ and $Q'(1/2)/m^2=1/4+3x+2xc-c^2>0$;
+$Q'$ is concave, while
+$Q'(1)/m^2=-2+4x+(-2+2x)c-c^2\le0$ and $Q''<0$ after one.
+Thus its maximum is in $[1/2,1]$, where $Q''\le-2m^2$.
+At $q=3/4$ the normalized derivative is
+$D=-11/16+(7/2)x+(2x-1)c-c^2$, with $|D|\le7/10$.
+For the lower bound use $c+c^2\le(3145/1152)x<(7/2)x$.
+For $x\le2/5$, use $c\ge x/2$ to get
+$D\le269/400<7/10$; for $x\ge2/5$, $c/x$ increases and is
+at least $205/168>61/50$, giving
+$D\le-11/16+(57/25)x+(2379/2500)x^2\le863/1250<7/10$.
+Strong concavity gives
+\[
+\max Q\le\Phi(x)=(5/4+x)
+\{[7/4+x/2-7x^2/16]^2+2(1-x^2)^2\}
++(49/400)(1-x^2)^2.
+\]
+Its coefficients, in ascending degree, are
+$10321/1600,\allowbreak 29/4,\allowbreak -621/128-49/200,\allowbreak -373/64,\allowbreak 
+2357/1024+49/400,\allowbreak 561/256$.
+Absorb $x^4\le x^2/4$, $x^5\le x^3/4$, using
+$459827/102400>22/5$, $5407/1024>21/4$, to get
+$\Phi\le13/2+(29/4)x-(22/5)x^2-(21/4)x^3$.
+This increases up to $2/5$ and there equals $209/25<17/2$.
+For $2/5\le x\le1/2$, use $x^3\ge(2/5)x^2$ to get the increasing
+upper bound $13/2+(29/4)x-(13/2)x^2$, equal to $17/2$ at $1/2$.
+Thus
+\begin{equation}\tag{L69.10.5}\label{eq:L69:fourcurvature}
+f_2(Y^2+2m^2Y+3m^4)\le(17/2)m^2.
+\end{equation}
+The exact fourth expansion and the above moments bound the target by
+\[
+U=m^8(1-5d)-4m^7d^2+2m^6dv+(17/2)m^4dH
++(51/5)m^3d^{3/2}v+(17/8)m^2d^2v^2.
+\]
+The positive Taylor series gives
+$[m^{-4}-m^4(1-5d)]/d\ge13-16d+54d^2+14d^3+61d^4$.
+After combining all nonsquare-root terms the normalized deficit is
+at least
+\[
+67/160+(2269/400)d+(6029/160)d^2+(227/8)d^3+55d^4
+-(51/5)(\sqrt d/m)v-(17/8)(d/m^2)v^2.
+\]
+Use $m^{-1}\le1+4d/3$, $m^{-2}\le16/9$.
+The first negative cost has $x,x^3,x^5,x^7$ coefficients
+$153/64,459/40,85/4,68/5$; the second has $d$ through $d^5$
+coefficients $425/2048,\allowbreak 1105/768,\allowbreak 4913/1152,\allowbreak 221/36,\allowbreak 34/9$.
+With $d^5\le d^4/4$, $x^5\le x^4/2$, $x^7\le x^6/2$, the
+deficit is at least
+$67/160-(153/64)x+(27/5)x^2-(459/40)x^3+25x^4$.
+The retained quadratic and quartic coefficients are at least
+$279807/51200>27/5$, $98371/3840>25$; remaining sixth and eighth
+coefficients are nonnegative.
+Since $25x^2-(459/40)x+27/5\ge4$, whose square-completion remainder
+is $13319/160000>0$, the deficit is at least
+$67/160-(153/64)x+4x^2\ge20171/327680$.
+Multiplying by $m^4\ge81/256$ proves the low-range bound
+$\E[f_2\{T(h_2f_4)\}^4]\le1-d/100$.
+The exact actual mean is
+$\E(h_2f_4)=1-3d+\delta_2-d^2+\delta_3$.
+For $d\ge1/4$ its decreasing upper bound is
+$1353/4096<2/5$, so $TF<4/5$ and the target is at most $256/625$.
+
+For $(2,5)$ keep the same $m$ but use the actual retained vector
+\begin{equation}\tag{L69.11.vector}\label{eq:L69:fivevector}
+R=\sum_{j=3}^5K^j\one-(d+\delta_2)g-\delta_2r.
+\end{equation}
+Finite positive convolution retaining $f_0,f_1$ and the actual
+$\delta_2f_2$ portion gives $h_2+f_5\le2m+R$.
+Its multiplier at $g$ is $-A-i\sqrt\xi B$, where
+$A=d+\delta_2+\xi-\xi^2$, $B=\delta_2+\xi$.
+Let $v=101/800+(13/16)d+(33/16)d^2$ and
+$H=m^2+49/128+(3/10)d-(1/2)d^2-(19/20)d^3$.
+Here $D_0=(1+d)\delta_2$ and the exact reference cancellation is
+\begin{equation}\tag{L69.11.2}\label{eq:L69:fivefirst}
+\E[f_2(w_0+e)]=-m^2d-md^2(1+\delta_2)
++m(\delta_3-\delta_4)+\E[f_2e],\quad\E[f_2e]\le V/2.
+\end{equation}
+The actual difference $\delta_3-\delta_4$ is bounded as one spectral
+term: $\xi^2(1-\xi)$ increases to $\theta^2\kappa$, with
+$4\theta^2\kappa=3211/8192<2/5$.
+The exact vector square is
+\[
+V=d(d+\delta_2)^2+[2(d+\delta_2)+\delta_2^2]\delta_2
++(1-2d)\delta_3-\delta_4+\delta_5\le dv.
+\]
+The positive $2\delta_2^2$ cancels with $-2d\delta_3$ using
+$\delta_3d\ge\delta_2^2$; the remaining frequency bound gives
+$V/d\le\theta^2-\theta^3+\theta^4+2\theta d
++[(1+\theta)^2+\theta^3]d^2$.
+Use $131313/1048576<101/800$ and
+$66997/32768<33/16$ for the two constants.
+The complete second square, writing $u_2=\delta_2$, is
+\begin{align*}
+\E w_0^2/m^2={}&m^2d+(1-2d-d^2)u_2^2-d^2u_2-2d^3u_2+u_2^3\\
+&+[2+(4+2d)u_2+u_2^2]\delta_3+(1-2d)\delta_4-\delta_5+\delta_6.
+\end{align*}
+The complete high-frequency combination
+$2\xi^2+(1-2d)\xi^3-\xi^4+\xi^5$ increases on $[0,\theta]$.
+After bounding it, the upper expression increases in $u_2/d$,
+with derivative at least $d(4\theta^2-d-2d^2)>0$ on $d\le1/4$.
+At $u_2/d=\theta$ it is bounded by
+\[
+m^2+(2\theta^2+\theta^3-\theta^4+\theta^5)
++\theta^2(1+2\theta)d
+-(2\theta^2+\theta-3\theta^3-\theta^4)d^2
+-(\theta^2+2\theta)d^3\le H.
+\]
+The four respective coefficient comparisons are $<49/128$,
+$<3/10$, $>1/2$, $>19/20$; the first and third positive differences
+have numerators $62403$ over $33554432$ and $8335$ over $1048576$.
+$H$ is positive and decreasing, $H\le177/128<(6/5)^2$, hence
+\begin{equation}\tag{L69.11.6}\label{eq:L69:fivevariance}
+\E(w_0+e)^2\le m^2dH+(6/5)md^{3/2}v+d^2v^2/4.
+\end{equation}
+
+The five-arm curvature certificate has, with $x=\sqrt d$,
+$\sqrt V\le(3/8+3d/2)\sqrt d$:
+the two squared vector constants are
+$(\theta-\theta^2)^2+\theta^3=131313/1048576<9/64$ and
+$(1+\theta)^2+\theta^3=66997/32768<9/4$.
+$D_0\le37d/64$ and $V/(2m)\le3d/8$ give
+$Y\le m^2q+B_0$, $B_0/m\le C=3x/8+109x^2/64$.
+For $Q=(2+x-q)\{[m(q+1)+C]^2+2m^2\}$ the same derivative
+argument locates the maximum in $[1/2,1]$ with $Q''\le-2m^2$.
+Now $c=C/m\le157x/96<1$; the normalized derivative at $3/4$ is
+$D=-11/16+(7/2)x+(2x-1)c-c^2$, $|D|\le7/10$.
+The lower estimate uses $c+c^2\le(54793/18432)x<(7/2)x$;
+the upper uses $c\ge3x/8$ for $x\le2/5$ to get $69/100$, and
+$c/x\ge845/672>5/4$ for $x\ge2/5$ to get $43/64$.
+The strong-concavity upper polynomial is
+\[
+\Phi=(5/4+x)\{[7/4+3x/8-3x^2/64]^2+2(1-x^2)^2\}
++(49/400)(1-x^2)^2.
+\]
+Its ascending coefficients are
+\[
+\begin{gathered}
+10321/1600,\quad429/64,\quad-1903/512-49/200,\\
+-4165/1024,\quad40429/16384+49/400,\quad8201/4096.
+\end{gathered}
+\]
+Absorb $x^4\le x^2/4$, $x^5\le x^3/4$ to get
+$\Phi\le13/2+(27/4)x-(33/10)x^2-(7/2)x^3$.
+This increases to $1056/125<35/4$ on $[0,2/5]$;
+afterward use $x^3\ge(2/5)x^2$ to obtain upper bound
+$13/2+(27/4)x-(47/10)x^2\le87/10<35/4$.
+Thus on the full low rectangle
+\begin{equation}\tag{L69.11.7}\label{eq:L69:fivecurvature}
+f_2(Y^2+2m^2Y+3m^4)\le(35/4)m^2.
+\end{equation}
+The full normalized deficit after Taylor expansion is
+at least
+\[
+\begin{gathered}
+3173/12800+(591/200)d+(14119/400)d^2+(3307/80)d^3+(423/8)d^4
+\\-(21/2)(\sqrt d/m)v-(35/16)(d/m^2)v^2.
+\end{gathered}
+\]
+The same-kernel $\delta_3-\delta_4$ contribution retains the favorable
+factor $-(2/5)m^3$ before collecting coefficients.
+Using $m^{-1}\le1+4d/3$, $m^{-2}\le16/9$, the first cost has
+$x,x^3,x^5,x^7$ coefficients
+$2121/1600,8239/800,1057/32,231/8$; the second cost has
+$d$ through $d^5$ coefficients
+$357035/5760000,\allowbreak 45955/57600,\allowbreak 132265/28800,\allowbreak 15015/1152,\allowbreak 4235/256$.
+Use $d^5\le d^4/4$.
+On $0\le x\le1/3$, absorbing $x^5\le x^4/3$, $x^7\le x^6/3$
+gives a lower polynomial
+$3173/12800-(2121/1600)x+(289/100)x^2-(8239/800)x^3+(469/20)x^4$.
+Its actual quadratic and quartic coefficients are at least
+$16663765/5760000>289/100$ and $1352981/57600>469/20$;
+the sixth and eighth remainders are nonnegative.
+The quadratic $(469/20)x^2-(8239/800)x+289/100$ is at least $7/4$:
+use $8239/800<103/10$ and $(469/5)(57/50)>10609/100$.
+The deficit is therefore at least
+$3173/12800-(2121/1600)x+(7/4)x^2$, decreasing up to $1/3$,
+with endpoint $53/115200>0$.
+On $1/3\le x\le\sqrt{1/6}<5/12$, absorb instead using $5/12$.
+The lower polynomial is
+$Q_*=3173/12800-(2121/1600)x+(289/100)x^2
+-(8239/800)x^3+(207/10)x^4$;
+the actual quartic coefficient is $1194431/57600>207/10$.
+At $1/3$, its value, derivative and second derivative are
+$431/345600,1127/4800,5113/400$, all positive, and
+$Q_*'''=-24717/400+(2484/5)x>0$ afterward.
+Hence it increases and is at least $431/345600>53/115200$.
+These overlapping continuous intervals cover $d\le1/6$.
+Since $m^4\ge81/256$, their loss proves
+$\E[f_2\{T(h_2f_5)\}^4]\le1-d/10000$.
+For $d\ge1/6$ the exact actual mean is
+\begin{equation*}\tag{L69.11.8}
+\E(h_2f_5)=1-4d+2(1+d)\delta_2
+\le1-(51/16)d+(13/16)d^2\le283/576<1/2.\label{eq:L69:mean}
+\end{equation*}
+The quadratic decreases on $[1/6,1/3]$, so $TF\le283/288<1$ and
+the reference integral is at most $1-d$.
+All stated square inputs and claims use actual fixed directions;
+at $d=0$ use original leaf integration, and restore equal pairs and
+simultaneous full reversal by original positivity.

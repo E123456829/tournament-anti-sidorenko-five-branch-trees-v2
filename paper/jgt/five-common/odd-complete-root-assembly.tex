@@ -1,0 +1,112 @@
+\subsection{Restoring the complete odd root}
+\label{sec:odd-complete:assembly}
+
+The terminal directions in Table~\ref{tab:odd186:directions}
+are shared by the two root classes, apart from the short-one
+direction \eqref{eq:odd-short:directions}. The preceding
+complete-certificate proofs give the following global rates:
+\begin{equation}\label{eq:odd-complete:catalogue}
+\begin{array}{c|c|c|l}
+ \text{terminal}&pW_a\bar f_b&f_a h_bf_c&\text{proof}\\\hline
+ (1,t)&705/128&11/2&\text{whole-message short-one packets}\\
+ (2,t),\ t\ge4&6&23/4&\text{two-arm theorem and short exceptions}\\
+ (2,3)&6&6&\text{two-arm theorem and short exceptions}\\
+ (3,t),\ t\ge4&6&6&\text{Theorem~\ref{thm:odd-three:roots}}\\
+ \text{even lists of minimum at least four}&8&11/2
+          &\text{Proposition~\ref{prop:odd-even:roots}}\\
+ \text{other even multipair lists}&11/2&11/2
+          &\text{Proposition~\ref{prop:odd-even:roots}}\\
+ \text{odd lists of minimum one}&705/128&11/2
+          &\text{Section~\ref{sec:odd-complete:q-terminals}}\\
+ \text{odd lists of nonunit minimum}&13/2&6
+          &\text{Section~\ref{sec:odd-complete:inward-anchor}}.
+\end{array}
+\end{equation}
+The positive-root entry in the first row means its actual special
+direction \eqref{eq:odd-short:directions}, including all later
+negative pairs. Every other positive root uses $f_a h_bf_c$.
+
+\begin{lemma}[The full low-domain vector]
+\label{lem:odd-complete:vector-cap}
+On $0<d\le1/64$, each base certificate used in
+\eqref{eq:odd-complete:catalogue} has its original pointwise form
+\[
+ \log H_0\le a_0+BV_0+W_0,
+ \qquad\|V_0\|<(7/2)\sqrt d,
+\]
+with its already paid complete fourth exponent at most
+$-27d/5$ at a minimum-one root and $-11d/2$ at a positive root.
+Here $W_0=0$ or the same paid unit-arm curvature term.
+\end{lemma}
+\begin{proof}
+The minimum-one short-one bound is
+\eqref{eq:odd186:short-one-certificate}, with vector norm
+$3\sqrt d/2$. Its two-arm-minimum-two counterpart is supplied
+by Theorem~\ref{thm:odd-two:roots}, with norm at most $2\sqrt d$.
+For the other minimum-one rows the transferred nonconstant root
+precursor has norm at most $\sqrt d/2$; the original constant
+or curved coefficient is the one used in its proof.
+
+For the positive root outside its short-one special direction the
+complete vector is exactly
+\[
+ V_0=Q(B)u+G_{a-1}(-B)u+V_{bc}+\gamma\one.
+\]
+The two root precursors have norms below
+$(6/5)\sqrt d$ and $(3/8)\sqrt d$.
+The following bounds for the core
+$(\|Qu\|+|\gamma|)/\sqrt d$ include the actual constant:
+\[
+\begin{array}{c|c}
+ q\text{-first-row and retained-square packets}&5/3\\
+ \text{bare-exponent packets, first three windows}
+          &1,\ 9/5,\ 147/80\\
+ \text{bare-exponent packets, long window}&167/120\\
+ \text{general inward anchor}&29/20\\
+ \text{short inward anchor, first three windows}
+          &\begin{gathered}9/5,\quad1+(13/20)(3/5)+1/16,\\
+             1+1/128+(13/32)(3/5)+1/4\end{gathered}\\
+ \text{short inward anchor, long window}&7/5.
+\end{array}
+\]
+For the exponent rows use $\rho\le1$,
+$|\delta|\le6d/5$, $|\epsilon|\le17d/10$ and $h\le1$;
+at $L=3$ the genuine $G_2$ contribution is $6/5$, the scalar
+term in $Q$ costs at most $3/160$, the attenuated remainder
+at most $13/32$, and the constant vector at most $17/80$.
+The general anchor keeps $\mu_A\le1$ and its $G_2$ exception.
+The short anchor uses its two actual $D$ values and
+\eqref{eq:odd-anchor:short-rows}--\eqref{eq:odd-anchor:multiple-long};
+its $|D-d|u$ term is distinct from $\gamma\one$.
+All entries are less than $19/10$, so
+$\|V_0\|<(19/10+6/5+3/8)\sqrt d=(139/40)\sqrt d$.
+The special short-one direction was paid directly for all its
+root pairs in \eqref{eq:odd-short:whole-pairs}.
+\end{proof}
+
+Let $k\ge1$ further ordered unequal root pairs follow the base
+root triple. At a minimum-one root they are $W_s\bar f_t$;
+at a positive root they are $h_sf_t$.
+Their disjoint original exponent intervals give one finite mask,
+with scalar loss $16kd/5$, vector norm below $3\sqrt d/8$ and
+signed mean at most $d/12$. In the positive direction its positive
+mean powers first occur at original power eight, giving
+$\delta_4/(1-\theta^2)<d/12$; complete reversal gives the
+minimum-one direction. Applying
+Lemma~\ref{lem:odd-common:extra-pairs} to the full vector above
+gives the additional rate
+\begin{equation}\label{eq:odd-complete:later-rate}
+ \zeta_k=2737/3840+64(k-1)/5.
+\end{equation}
+The high-domain estimate in that lemma uses these same products.
+For the short-one positive root, the directly proved increment
+$64k/5$ in \eqref{eq:odd-short:whole-pairs} is stronger.
+
+Genuine equal pairs are oriented as $f_\ell h_\ell$ or their
+complete reverse. Their products are at most one. Positivity
+therefore restores all root and terminal decorations in the
+actual message. Finally apply the unanchored ordinary outlet
+\eqref{eq:odd-common:outlet}, independently of the inner $L$.
+The base losses $27/5$ and $11/2$ give the respective output
+losses $6/95$ and $5/19$ for all $M\ge1$, and each later root
+pair supplies twice its additional fourth loss.

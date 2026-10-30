@@ -1,0 +1,263 @@
+\subsection{Ordinary eighth moments and the nonunit-pair outlet}\label{proof:R2-C046}
+\paragraph{R46.1 Local statements and conventions}
+Use the original finite probability space and operators of
+Section~\ref{sec:prelim}. A terminal residual has at least two distinct
+lengths. An ordinary component consists of that terminal, its connector
+of length \(L\ge1\), one existing receiving arm of length \(m\ge3\),
+and the ordered negative post block specified in
+\mbox{\hyperref[part:R46.3]{part R46.3}}. The message includes its
+root and terminal equal-pair factors. The directions in that directory
+satisfy, for every finite host,
+\fitdisplay{
+E H^8\le e^{-d/1024},\qquad d=\|K1\|^2.
+}{R46.1.2}
+
+For a root whose strict residual is \((s,m)\), \(2\le s<m\), every
+nonreducible terminal and every pair of independent positive lengths
+\(L,M\) admit the output constructed below, with
+\fitdisplay{
+I_q(U)^3\le e^{-\eta_{\rm pair}d},
+ \qquad \eta_{\rm pair}=\frac1{72}+\frac1{1024}
+                      =\frac{137}{9216}.
+}{R46.1.3}
+
+\paragraph{R46.2 Equal pairs}
+Equal-pair factors satisfy \eqref{q3:eq:equalpair} and its complete
+reversal. They may be restored inside their positive terminal connector
+or at the receiving root, where they only decrease the message.
+Unequal post pairs retain their displayed directions and ordering.
+
+
+\paragraph{R46.3 Exhaustive actual ordinary-eighth directory}\label{part:R46.3}
+
+Let \(m\ge 3\) be one existing receiving arm, \(L\ge 1\) its original connector
+to a terminal with strict residual size \(\ge2\), and
+
+\fitdisplay{
+P=\prod_{\nu=1}^k W_{u_\nu}\bar f_{v_\nu},\qquad
+ 4\le u_1<v_1<\cdots<u_k<v_k.
+}{R46.3.1}
+
+Impose \(m<u_{1}\) when \(k\ge 1.\) The restriction is imposed uniformly, even in rows where a weaker one would suffice. There
+is no restriction between the terminal lengths and the other blocks.
+Every post is an actual original pair of unequal arms.
+
+The complete message is \(H=E_rP\) times the displayed anchor/connector
+function, with the terminal equal pairs restored inside its actual
+positive connector. Empty products equal one. Canonical pairs mean
+\(h_a f_b\) for adjacent increasing residual lengths; their negatives
+are \(W_a \bar f_b.\)
+
+\paragraph{R46.3.1 Even terminal lists}
+
+Write the strict terminal list as \(a_1<b_1<\cdots<a_j<b_j.\)
+
+
+\begingroup\small
+\setlength{\tabcolsep}{3pt}
+\setlength{\LTleft}{0pt}\setlength{\LTright}{\fill}
+\begin{longtable}{@{}p{0.2200\linewidth}p{0.2333\linewidth}p{0.2333\linewidth}p{0.2333\linewidth}@{}}
+\caption{Ordinary eighth moments and the nonunit-pair outlet: parameter values.}\label{tab:parameters:r2-c046:1}\\
+\toprule
+Entry & L/anchor condition & Unpaired anchor/connector factor \(H_0\) & Eighth loss \\
+\midrule\endfirsthead
+\toprule
+Entry & L/anchor condition & Unpaired anchor/connector factor \(H_0\) & Eighth loss \\
+\midrule\endhead
+\bottomrule\endfoot
+\(j=1,\allowbreak a_{1}=1\) & \(L=1\); & \(f_m T(p \bar f_{b_1})\); & \(1/1024\). \\
+\addlinespace[2pt]
+\(j=1,\allowbreak a_{1}=1\) & \(L\ge 2\); & \(W_m T^L(q f_{b_1})\); & \(3/20\). \\
+\addlinespace[2pt]
+\(j=1,\allowbreak a_{1}=2\) & \(L=1\); & \(f_m T(f_{2} \bar f_{b_1})\); & at least \(1/4\). \\
+\addlinespace[2pt]
+\(j=1,\allowbreak a_{1}=2\) & \(L\ge 2\); & \(W_m T^L(\bar f_2 W_{b_1})\); & at least \(1/4\). \\
+\addlinespace[2pt]
+\(j=1,\allowbreak a_{1}=3\) & \(L=1\); & \(f_m T(f_{3} h_{b_1})\); & at least \(1/4\). \\
+\addlinespace[2pt]
+\(j=1,\allowbreak a_{1}=3\) & \(L\ge 2\); & \(W_m T^L(f_{3} h_{b_1})\); & at least \(1/4\). \\
+\addlinespace[2pt]
+\(j\ge 2,\allowbreak a_{1}=1\) & \(L=1\); & \(f_m T(\overline{F}),\allowbreak  F=q f_{b_1} \prod_{i\ge 2}h_{a_i} f_{b_i}\); & at least \(8/7+1/1024\). \\
+\addlinespace[2pt]
+\(j\ge 2,\allowbreak a_{1}=1\) & \(L\ge 2\); & \(W_m T^L(F),\allowbreak \) same \(F\); & at least \(8/7+1/1024\). \\
+\addlinespace[2pt]
+\(j\ge 2,\allowbreak a_{1}=2\) & \(L=1\); & \(\bar f_m A(F),\allowbreak  F=\prod_i h_{a_i} f_{b_i}\); & 2. \\
+\addlinespace[2pt]
+\(j\ge 2,\allowbreak a_{1}=2\) & \(L\ge 2\); & \(W_m T^L(F),\allowbreak \) same \(F\); & 2. \\
+\addlinespace[2pt]
+\(j\ge 2,\allowbreak a_{1}=3\) & \(m\le L\); & \(W_m T^L(F),\allowbreak  F=\prod_i h_{a_i} f_{b_i}\); & 2. \\
+\addlinespace[2pt]
+\(j\ge 2,\allowbreak a_{1}=3\) & \(m>L\); & \(\bar f_m AT^{L-1}(F),\allowbreak \) same \(F\); & 2. \\
+\addlinespace[2pt]
+\(a_{1}\ge 4,\allowbreak \text{any } j\ge 1\) & \(m\le L\); & \(W_m T^L(F),\allowbreak  F=\prod_i h_{a_i} f_{b_i}\); & 2. \\
+\addlinespace[2pt]
+\(a_{1}\ge 4,\allowbreak \text{any } j\ge 1\) & \(m>L\); & \(\bar f_m AT^{L-1}(F),\allowbreak \) same \(F\); & 2. \\
+\end{longtable}
+\endgroup
+
+
+The bar in the minimum-one \(L=1\) row reverses every terminal residual
+edge. The proof reverses the entire configuration,
+including posts and pairs, when applying its analytic comparison;
+the actual output in this table retains the prescribed negative \(P\).
+Its condition \(m<u_{1}\) is preserved. Genuine equal pairs can either
+follow that convention or be restored by \eqref{q3:eq:equalpair} and its complete reversal.
+
+The first two rows use the center input of Section~\ref{proof:Q5-C113}.
+For nonempty later-pair lists one may use rates $2005/192$ and $97/12$,
+with $m<u_1$. Rows 3--8 follow Proposition~\ref{prop:R43:catalogue},
+rows 9--12 follow Section~\ref{proof:R2-C038}, and rows 13--14
+follow Section~\ref{proof:R2-C039}, with the directions in their
+respective tables.
+
+For \(j=1\), \(a_1\) is exactly \(1\), \(2\), \(3\), or at least \(4\). For \(j\ge2\), the same
+four-way split applies. Thus every even list is covered.
+
+\paragraph{R46.3.2 Odd terminal lists of minimum at least two}
+
+Write \((\ell,\allowbreak r_1,\allowbreak t_1,\allowbreak \ldots,\allowbreak r_j,\allowbreak t_j)\), \(\ell\ge 2,\allowbreak  j\ge 1.\) Set
+
+\fitdisplay{
+F=\begin{cases}
+ \bar f_\ell\prod_i h_{r_i}f_{t_i},&r_1\ge4,\\
+ \bar f_2 f_3 h_{t_1}\prod_{i\ge2}h_{r_i}f_{t_i},&r_1=3.
+ \end{cases}
+}{R46.3.2}
+
+The latter case forces \(\ell=2.\) Use
+
+\fitdisplay{
+H_0=\begin{cases}
+ W_m T^L F,&m\le\ell+L,\\
+ \bar f_m AT^{L-1}F,&m>\ell+L.
+ \end{cases}
+}{R46.3.3}
+
+R2-C030/A014 gives eighth loss \(3\), including every permitted \(P\) and
+arbitrary cross-block overlap. The comparison is with \(\ell+L\),
+not merely \(L\). Every strict odd list with minimum at least \(2\) has second
+entry \(3\) or at least \(4\), so (R46.3.2) exhausts it.
+
+\paragraph{R46.3.3 Odd terminal lists of minimum one}
+
+Write \((1,\allowbreak r_1,\allowbreak t_1,\allowbreak \ldots,\allowbreak r_j,\allowbreak t_j)\), \(j\ge 1.\) Choose
+
+
+\begingroup\small
+\setlength{\tabcolsep}{3pt}
+\setlength{\LTleft}{0pt}\setlength{\LTright}{\fill}
+\begin{longtable}{@{}p{0.2200\linewidth}p{0.7000\linewidth}@{}}
+\caption{Ordinary eighth moments and the nonunit-pair outlet: parameter values.}\label{tab:parameters:r2-c046:2}\\
+\toprule
+Entry & Actual \(F\) \\
+\midrule\endfirsthead
+\toprule
+Entry & Actual \(F\) \\
+\midrule\endhead
+\bottomrule\endfoot
+\(r_{1}\ge 4\) & \(q \prod_i h_{r_i} f_{t_i}\). \\
+\addlinespace[2pt]
+\(r_{1}=3\) & \(q f_{3} h_{t_1} \prod_{i\ge 2}h_{r_i} f_{t_i}\). \\
+\addlinespace[2pt]
+\(r_{1}=2,\allowbreak j=1\) & \(q f_{2} h_{t_1}\). \\
+\addlinespace[2pt]
+exact \(j=2\) list \((1,2,3,4,e)\) & \(q f_{2} h_e h_{3} f_{4}\). \\
+\addlinespace[2pt]
+every other \(r_{1}=2\) & \(q f_{2} h_{t_1} \prod_{i\ge 2}h_{r_i} f_{t_i}\). \\
+\end{longtable}
+\endgroup
+
+
+The actual anchor/connector is
+
+
+\begingroup\small
+\setlength{\tabcolsep}{3pt}
+\setlength{\LTleft}{0pt}\setlength{\LTright}{\fill}
+\begin{longtable}{@{}p{0.2200\linewidth}p{0.7000\linewidth}@{}}
+\caption{Ordinary eighth moments and the nonunit-pair outlet: parameter values.}\label{tab:parameters:r2-c046:3}\\
+\toprule
+Entry & Unpaired anchor/connector factor \(H_0\) \\
+\midrule\endfirsthead
+\toprule
+Entry & Unpaired anchor/connector factor \(H_0\) \\
+\midrule\endhead
+\bottomrule\endfoot
+\(L=1,\allowbreak r_{1}=2\) & \(\bar f_m A F\). \\
+\addlinespace[2pt]
+\(L=1,\allowbreak r_{1}\ge 3\) & \(W_m T F\). \\
+\addlinespace[2pt]
+\(L\ge 2,\allowbreak m\le L+1\) & \(W_m T^L F\). \\
+\addlinespace[2pt]
+\(L\ge 2,\allowbreak m>L+1\) & \(\bar f_m AT^{L-1}F\). \\
+\end{longtable}
+\endgroup
+
+
+Proposition~\ref{prop:r40:ordinary-catalogue} supplies ordinary moment bounds of orders \(8\) and \(4\)
+for these same directions, with eighth loss
+at least \(57/400\). The direction for \((1,\allowbreak 2,\allowbreak 3)\) is \(qf_2h_3\) even at \(L=2\);
+it must not be replaced by C106's distinct ordinary-unit exception.
+The crossed five-arm row uses exactly its existing arms.
+Every unit-minimum odd list has second entry \(2\), \(3\), or at least \(4\);
+the displayed cardinality/prefix splits are exhaustive.
+
+\paragraph{R46.3.4 Proof of the common theorem and exact post scope}
+
+Each cited local theorem holds on all original finite hosts,
+all integers in its row and the stated complete finite post block.
+All its displayed eighth losses are at least \(1/1024.\) Genuine
+equal pairs only decrease the same positive message by \eqref{q3:eq:equalpair} and its complete reversal.
+This proves (R46.1.2) for the complete union.
+
+In every later
+central application, the anchor is selected before all post
+lengths in the strict central list, so \(m<u_{1}\) and \(u_{1}\ge 4\) hold
+automatically. At a nonunit-pair root there is no unequal post.
+
+
+This theorem has \(m\ge3\). It gives no general eighth-moment bound
+for \(m=2\) and no standalone \(M=2\) outlet for a singleton residual
+by itself.
+
+\paragraph{R46.4 Every nonunit pair, all inner and outer lengths}
+
+At an actual internal root with strict residual \((s,m)\), \(2\le s<m\),
+orient its \(s\)-arm inward as \(\bar f_s\). Put its distinct genuine \(m\)-arm,
+terminal, \(L\) connector and all its root/terminal equal pairs in
+the actual \(H\) of \mbox{\hyperref[part:R46.3]{part R46.3}}, with \(P=1\). Then the exact outgoing
+message along an outer connector of length \(M\ge 1\) directed toward
+the receiving center is
+
+\fitdisplay{
+U=T^M(\bar f_s H).
+}{R46.4.1}
+
+The \(m\)-arm has length at least \(3\). The \(s\)-arm is a different original arm,
+even when its length coincides with a length in the other
+terminal's table. Each actual edge is used once.
+
+The full-multiplier inequality of Section~\ref{proof:Q5-C066} holds for every real \(Y\):
+
+\fitdisplay{
+I_q(T^M(\bar f_aY))^3\le(1-d/72)E|Y|^8,\qquad a\ge2,M\ge1.
+}{R46.4.2}
+
+The multiplier \(T^M M_{\bar f_a}\) retains the inward arm in this
+operator order; its proof uses the row \(\bar f_{M+a}\). Thus \(Y\)
+may be the \(AT^{L-1}\) component of the preceding directory.
+
+Apply (R46.4.2) with \(a=s,\allowbreak  Y=H\) and use (R46.1.2):
+
+\fitdisplay{
+I_q(U)^3\le(1-d/72)e^{-d/1024}
+          \le e^{-137d/9216}.
+}{R46.4.3}
+
+The full multiplier includes every \(M\ge1\), independently of \(L\).
+The retained inward arm is the existing \(s\)-arm, distinct from the
+\(m\)-arm used in \(H\).
+
+The path construction combines this local output with the outlet
+on the other side using \eqref{eq:five-chain-close}. The tournament
+and entropy consequences are proved in Section~\ref{sec:completion}.

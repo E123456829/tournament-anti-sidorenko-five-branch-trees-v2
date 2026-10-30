@@ -1,0 +1,169 @@
+\subsection{Sixth moments for multiple canonical pairs}\label{loc:S2}
+Here $\nu_g$ is the spectral measure of $-K^2$ at $g$, of total mass $d$.
+Let $P=\prod_{i} h_{a_i}f_{b_i}$, with
+$a_1<b_1<\cdots<a_t<b_t$. We prove $\E[pP^6]\le1$ for all $t\ge2$
+and for the sole pair $(2,3)$. The empty table and $a_1\ge3$ are already
+covered by Appendix~\ref{q3:app:foundations}.
+
+\proofpart{Deficits and finite masks}
+Write $R_{ab}=S_b-S_a=K^aG_{b-a}(K)g$.
+The actual pair envelope is $h_af_b\le e^{R_{ab}-\omega_{ab}}$, with
+\[
+ \omega_{ab}=\begin{cases}
+ \beta_b,&a=1,2,\\2d-\delta_{2},&a=3,\\2d,&a\ge4.
+ \end{cases}
+\]
+For the block use $R=\sum_iR_{a_ib_i}$, $\Delta=\sum_i\omega_{a_ib_i}$.
+The common sixth-moment criterion is $D:=\Delta-\E[pR]\ge3M^2$.
+Here
+\[
+ \|R\|_\infty^2\le C_*\theta^{a_1-1}d,\quad
+ \E[pR]=\sum_i(u_{a_i+1}-u_{b_i+1}),\quad u_j=\E K^j\one.
+\]
+Distinct boundaries let each positive $\delta_{j}$ occur at most once. The mean is
+at most $d$ if $a_1\ge2$, at most zero if $a_1=1$, and more precisely
+at most $-d+\sum_{j\ge3}\delta_{j}$ if $a_1=1,b_1\ge3$, or
+$-d+\sum_{j\ge2}\delta_{j}$ for the first pair $(1,2)$.
+Use $\sum_{j\ge2}\delta_{j}\le13d/19$ and both bounds
+$\sum_{j\ge3}\delta_{j}\le169d/608$ and
+$\sum_{j\ge3}\delta_{j}\le(13/19)\delta_{2}$ in their respective forms.
+For $R=KQ(K)g$ starting with $(1,2)$, $Q$ has constant coefficient one
+and no linear term. Separating residue signs gives
+\[
+ |Q(i\sqrt x)|^2\le(1+x^3)/(1-x^2)^2<31/20,
+ \qquad M^2\le31d/20.
+\]
+For a general zero-one mask the increasing convex function
+$(1+x)/(1-x^2)^2$ lies below its endpoint chord
+$1+(816/325)x$; therefore also
+$M^2\le d+(816/325)\delta_{2}$.
+
+\proofpart{At least three pairs and minimum two}
+The table lists the ranges, with admissible lower
+and upper bounds for $D,M^2$; each row satisfies $D\ge3M^2$.
+\begin{center}\small
+\begin{tabular}{@{}ccc@{}}\toprule
+condition&$D\ge$&$M^2\le$\\\midrule
+$a_1=2,t\ge3$&$115d/32$&$C_*\theta d$\\
+$a_1=2,t=2,b_1=3,4$&$1655d/608$&$C_*\theta d$\\
+$a_1=2,t=2,b_1\ge5$&$44d/19$&$117d/200$\\
+sole $(2,3)$&$d+\delta_{2}$&$\delta_{2}$\\
+$a_1=1,t\ge4,b_1\ge3$&$211d/32$&$C_*d$\\
+$a_1=1,t\ge4,b_1=2$&$179d/32$&$31d/20$\\
+$a_1=1,t=3,b_1\ge4$&$101d/19$&$25d/16$\\
+$a_1=1,t=3,b_1=3$&$6d+6\delta_{2}/19$&$d+816\delta_{2}/325$\\
+$a_1=1,t=3,b_1=2,a_2\ge4$&$2871d/608$&$31d/20$\\
+first $(1,2),(3,4)$, $t=3$&$2377d/608$&$d$\\
+first $(1,2),(3,b_2\ge5)$, $t=3$&$2377d/608$&$289d/225$\\\bottomrule
+\end{tabular}
+\end{center}
+Here are the prefix norm comparisons needed beyond the mask bound.
+For minimum two with $b_1\ge5$ separate the two intervals: the first
+$G$ contracts and the second starts at degree at least five. This gives
+$M^2\le\theta[1+\sqrt{1+\theta}\theta^2]^2d<117d/200$.
+For $t=3,b_1\ge4$, the first $G$ contracts and the two-interval tail
+starts at degree four, giving $(1+\theta^2\sqrt{C_*})^2d<25d/16$.
+For the last two rows use
+$Q_0(z)=1+z^2G_m(z)$, $m\ge1$. It contracts: for $m=1$ this is
+$1-x$, and for $m\ge2$ its numerator
+$1-z+z^2-z^{m+2}$ has squared modulus at most
+$1-x+3x^2+x^4\le1+x$.
+The third segment then contributes less than $2/15$ in norm.
+For $(1,2),(3,4)$ its sharper bound is
+$|Q|\le1-x+x^2\sqrt{1+x}\le1$.
+The row with $b_1=3$ has margin
+$D-3M^2\ge519d/7600$; the sole-pair row uses $2\delta_{2}\le d$.
+
+\proofpart{Two pairs $(1,2),(3,b)$}
+Set $Q=1+z^2G_{b-3}(z)$.
+Then $\Delta=2d-\delta_{2}$, $\E[pR]=-d+\delta_{2}-u_{b+1}$ and
+$D=3d-2\delta_{2}+u_{b+1}$. Compare the spectral integrands of $D$ and
+$3\int|Q(i\sqrt x)|^2\,d\nu_g$.
+For $b=2k$, put $s=(-x)^{k-1}$; after multiplying their difference by
+$1+x$ one gets $x(4-5x-6s-3s^2)$.
+If $s\le0$ this is nonnegative; if $s>0$, use $s\le x^2$ and
+$4-5x-6x^2-3x^4\ge1570/2401>0$ for $x\le3/7$.
+For $b=2k+1$, put $s=(-x)^k$; the difference is
+$x(4-5x)+s(5-7x)-3s^2$.
+If $s\ge0$, $s\le x^2$ gives $5-7x-3s\ge71/49$.
+If $s<0$, $|s|\le x^3$ leaves
+$x(4-5x-5x^2-3x^5)\ge5x/32$.
+Thus the integrated criterion holds for every $b\ge4$.
+
+\proofpart{Sharper pair deficits}
+Retaining real nonnegative convolution terms yields
+\begin{gather*}
+ h_4+f_b\le2+R_{4b}-4d+3\delta_{2},\qquad
+ h_5+f_b\le2+R_{5b}-6d+6\delta_{2},\\
+ h_a+f_b\le2+R_{ab}-\omega_a,\qquad
+ \omega_6=89d/24,\quad\omega_a=11d/4\ (a\ge7).
+\end{gather*}
+For the first use $h_4=2-S_4-2d+dg$ and retain $1,p$ in $f_b$.
+For the second use $h_5=2-S_5-5d+\delta_{2}+d(f_2+p)$ and retain $1,p,f_2$.
+For the last use $f_b-f_a\le R_{ab}+2d$ and
+$h_a+f_b=2\mu_{a-1}+f_b-f_a$.
+The required means follow from
+$\mu_5\le1-137d/48$, $\mu_6\le1-89d/32$ and
+$\mu_n\le1-19d/8$ for $n\ge7$; for the last bound retain
+$f_0,\ldots,f_4$ in convolution and use
+$\sum_{j=0}^4\mu_j=5-6d+\delta_{2}\ge3$.
+AM--GM converts each displayed actual sum to the exponential envelope
+at the same $R_{ab}$.
+
+\proofpart{Two pairs $(1,m),(4,b)$}
+For $m=2$ use the sharper remainder
+\begin{gather*}
+ B=\beta_{b-2},\quad T=d-\beta_{b-1}-B\in[-d,0],\quad
+ \delta=2d+\beta_b+\beta_{b-1}+B,\\
+ R'=(1-B)r+R_{4b}+Tg,\qquad P\le e^{R'-\delta}.
+\end{gather*}
+Its exact mean is $-d+d^2-\beta_{b-1}d-u_{b+1}$, so
+$D\ge6d-3\delta_{2}-\delta_{3}-d\delta_{2}\ge13765d/3072$.
+Write $R'=K[(1-B)g+U+T\one]$, $U=K^3G_{b-4}(K)g$.
+Then $\E U\ge0$, $\langle g,U\rangle\le \delta_{3}$ and
+$\|U\|^2\le(1+\theta)\theta^3d$.
+The nonpositive $2T\E U$ may be discarded, giving
+$M^2\le[1+7/144+2\theta^2+(1+\theta)\theta^3]d<1067d/720$.
+Since $13765/3072>1067/240$, the criterion follows.
+For $m=3$, use $\Delta=5d-3\delta_{2}$ and exact mean
+$-d-\delta_{2}-u_{b+1}$, so $D\ge5143d/1024>5d$.
+The polynomial $Q=1+z+z^3G_{b-4}(z)$ has squared modulus at most $5/3$.
+The tail lengths one and two give $1+x(1-x)^2$ and $(1+x)(1+x^3)$.
+For longer tails use
+$Q=(1-z^2+z^3-z^{j+3})/(1-z)$ and the bound
+$|Q|^2\le1+x+3x^3+9x^6/4<196523/120000<5/3$.
+
+\proofpart{All remaining two-pair blocks}
+For $(1,m),(a,b)$ the norm polynomial is
+$G_{m-1}(z)+z^{a-1}G_{b-a}(z)$.
+The first factor contracts except when $m=3$, where its modulus is
+$\sqrt{1+x}$. Combining it with the enhanced deficit gives the table:
+\begin{center}\small
+\begin{tabular}{@{}ccc@{}}\toprule
+$(a;m)$&$D\ge$&$M^2\le$\\\midrule
+$(5;2)$&$73d/16$&$36d/25$\\
+$(5;4)$&$89d/16$&$36d/25$\\
+$(5;3)$&$191d/32$&$245d/128$\\
+$(6;2)$&$547d/120$&$289d/225$\\
+$(6;3)$&$137d/24$&$125d/72$\\
+$(6;4,5)$&$413d/96$&$289d/225$\\
+$(\ge7;2)$&$18d/5$&$6d/5$ (strict)\\
+$(\ge7;\ge4)$&$309d/76$&$6d/5$ (strict)\\
+$(\ge7;3)$&$19d/4+6\delta_{2}/19$&$d+3\delta_{2}/2$\\\bottomrule
+\end{tabular}
+\end{center}
+For $a=5$, the second pair has nonpositive weighted mean; its gap-two
+factor is retained, giving $(1+\theta)(1+\theta^2)^2\le245/128$ when $m=3$.
+For $a=6$, later positive boundaries start at $\delta_{4}$, with sum less than
+$3d/20$; also $\theta^{5/2}<1/9$ gives the $m=3$ norm.
+For $a\ge7$, the tail norm is at most $\sqrt{1+\theta}\theta^3$.
+In its final row retain the spectral correlation:
+\[
+ (1+x)(1+x^3)^2\le1+3x/2,
+\]
+because the bracket $1+2x^2+2x^3+x^5+x^6$ is at most
+$44697/30000<3/2$. Thus $D-3M^2\ge61d/1216$ in that row.
+The other displayed rows satisfy $D>3M^2$ directly.
+All two-pair blocks of minimum one, every larger pair count, and the
+minimum-two cases have now been covered. Equal-pair restoration and full
+reversal yield the stated complete canonical sixth moments.

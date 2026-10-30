@@ -1,0 +1,61 @@
+\section{The fixed orientation and its consequences}\label{sec:completion}
+Fix an ordering of the original vertices and arms to resolve ties.
+For $b(U)\le4$ use Theorem~\ref{thm:four-kernel}. Otherwise recognize
+the five-vertex skeleton and apply Lemma~\ref{lem:five-reduction} at
+the first qualifying vertex, if one exists. For $K_{1,4}$ or $T_5$,
+use the corresponding central allocation or empty-center construction
+of Section~\ref{sec:five-star-fork}. For $P_5$, first use the maximal
+S spine when the center is S, then the construction for a unit arm
+with a receiving connector of length one when applicable, and otherwise select the two outlet
+rows from the original integer data. Restore every previously
+oriented equal pair at its original attachment.
+
+This rule fixes one orientation of $U$ before the host is chosen and
+proves Theorem~\ref{thm:kernel}.
+
+\subsection{All maps into a tournament}\label{sec:finite-transfer}
+For a loopless tournament $\mathcal T$ on $n_T\ge1$ vertices, take
+the uniform measure and its skew sign kernel, with $K(x,x)=0$.
+For every original edge and every vertex map $\phi$,
+\[
+ \one_{\{\phi(u)\to\phi(v)\text{ in }\mathcal T\}}
+ \le\frac{1+K(\phi(u),\phi(v))}{2}.
+\]
+For distinct images this is equality; for equal images it is the
+inequality $0\le1/2$. Multiplying over the original edges and summing over all
+$n_T^{|V(U)|}$ maps gives
+\[
+ \homc(D,\mathcal T)\le
+  2^{-e(U)}n_T^{|V(U)|}Z_D(K,\mu)
+  \le2^{-e(U)}n_T^{e(U)+1},
+\]
+which proves Theorem~\ref{thm:main}.
+
+\subsection{Correlated vertex labels}
+Let $W_D$ be the product in \eqref{eq:density} and let
+$P=\mu^{V(U)}$. A constant-label assignment has positive mass and
+weight one, so $Z_D>0$.
+\begin{corollary}\label{cor:entropy}
+For the orientation in Theorem~\ref{thm:kernel} and every joint law
+$\rho$ on the original vertex labels,
+\[
+ \E_\rho\log W_D
+ \le D_{\rm KL}(\rho\Vert P)+\log Z_D
+ \le D_{\rm KL}(\rho\Vert P).
+\]
+\end{corollary}
+\begin{proof}
+When the reference entropy is finite and $\rho$ gives no mass to
+$W_D=0$, use the probability law $dP_D=(W_D/Z_D)dP$. Nonnegativity
+of $D_{\rm KL}(\rho\Vert P_D)$ gives the first inequality, and the
+kernel theorem gives the second. If $\rho$ gives positive mass to
+$W_D=0$, the left side is $-\infty$. A law outside the reference support
+has infinite reference entropy and is covered by the extended-value form
+of the inequality.
+\end{proof}
+\subsection{Boundary cases}
+Zero-mass atoms can be omitted without changing the integral. At $d=0$
+we have $K\one=0$, hence $A\one=T\one=\one$, and successive leaf
+integration gives $Z_D=1$ for every oriented tree. Reversing every
+original edge amounts to replacing $K$ by $-K$, which preserves the
+universal bound.

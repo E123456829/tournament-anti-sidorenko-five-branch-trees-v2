@@ -1,0 +1,593 @@
+\subsection{The genuine-$f_2$ reference for every short-two connector}\label{proof:Q5-C077}
+We use the finite-frequency proof of Sections 1--7. The actual terminal is always $F_b=h_2f_b$, $b\ge3$, and
+every connector edge points from it toward the receiving root.
+The claim, with decorations restored, is
+\begin{equation}\tag{L77.0.4}\label{eq:L77:claim}
+\E[f_2\{T^L(E_t h_2f_b)\}^4]\le1-d/10000
+\quad(b\ge3,L\ge1).
+\end{equation}
+The proof below treats the $L=2,3$ rows; the exact unit and
+$L\ge4$ rows are the finite square and propagation proofs of
+Q5-C069 and Q5-C073. All use the same original directions.
+
+Put $B=-K$, $u=-g$, and use the original spectral measure $\nu$,
+whose mass is $d$ and support is $[0,\theta]$.
+Suppose an actual nonnegative terminal has
+$F\le F_0=(m+R/2)^2$, $m>0$, $k=1/m$.
+Write
+\[
+\begin{gathered}
+V=\E R^2,\quad D_j=\E B^jR,\quad a_1=\E KR,\quad
+\rho_0=-\E(rR),\\
+\delta=kD_0+k^2V/2,\quad a=ka_1,\quad
+\varepsilon=\delta-a,\quad\nu_0=1+\varepsilon.
+\end{gathered}
+\]
+For $R=(A-B_0z)(B)u$, $z=i\sqrt\xi$, exact spectral integration gives
+\begin{equation}\tag{L77.1.4}\label{eq:L77:spectral}
+\begin{gathered}
+V=\int(A^2+\xi B_0^2),\quad D_0=\int B_0,\quad a_1=\int A,
+\quad\rho_0=\int\xi B_0,\\
+D_1=-a_1,\ D_2=-\rho_0,\ D_3=\int\xi A,
+\ D_4=\int\xi^2B_0,\ D_5=-\int\xi^2A.
+\end{gathered}
+\end{equation}
+Every unspecified integral here uses the same original $\nu$.
+Define finite polynomials
+$P_n=G_n+kz^n(A-B_0z)$,
+$Q_n=P_n+\delta G_{n-1}-aG_{n-2}$ and
+$Z_n^*=\nu_0+Q_n(B)u$, using only nonnegative indices.
+The bound $T(R^2)\le2V$ and finite Duhamel identity give
+\begin{equation}\tag{L77.1.6}\label{eq:L77:propagation}
+T^LF_0/m^2\le\bar f_L+kB^LR+\delta\bar f_{L-1}-a\bar f_{L-2}
++k\sum_{j=2}^{L-1}D_j\bar f_{L-1-j}.
+\end{equation}
+Thus the nonnegative actual upper bounds for $L=2,3$ are respectively
+$Z=Z_2^*$ and $Z=Z_3^*-\ell_0$, $\ell_0=d+k\rho_0$.
+If $\alpha_n=\nu_0-\E Z_n^*$, then
+\[
+\begin{gathered}
+\alpha_2=d+k\rho_0,\quad \alpha_3=d+\delta d-kD_3,\quad \alpha_4=\tau+\varepsilon d-kD_4,\\
+\alpha_5=\tau+\varepsilon d-\delta\delta_2+k\int\xi^2A.
+\end{gathered}
+\]
+The exact centered data, writing $C_Z=\E[f_2(Z-\E Z)]$, are
+\begin{equation}\tag{L77.1.8}\label{eq:L77:twomoments}
+\begin{aligned}
+L=2:\quad\mu_Z&=1-d+k\int[(1-\xi)B_0-A]+k^2V/2,\\
+C_Z&=-d+\delta_2+k(D_3+D_4)-\delta d-d^2-kd\rho_0,\\
+\operatorname{Var}Z&=\int[(1+\delta-k\xi A)^2+
+\xi(1+k\xi B_0)^2]-(d+k\rho_0)^2;
+\end{aligned}
+\end{equation}
+\begin{equation}\tag{L77.1.9}\label{eq:L77:threemoments}
+\begin{aligned}
+L=3:\quad\mu_Z&=(1+\varepsilon-d-k\rho_0)-\alpha_3,\\
+C_Z&=-d+2\delta_2-\varepsilon d+\delta\delta_2
++k\int\xi^2(B_0-A)-d\alpha_3,\\
+\operatorname{Var}Z&=\|Q_3(B)u\|_2^2-\alpha_3^2.
+\end{aligned}
+\end{equation}
+The actual row forms are
+$Z_2^*=(1+\delta)q-a+BP_1(B)u$ and
+$Z_3^*-\ell_0=\nu_0q-\ell_0+BQ_2(B)u$.
+Use the original centered fourth identity
+\[
+\E[f_2Z^4]=(1-d)\mu_Z^4+4\mu_Z^3C_Z
++\E[f_2(Z-\mu_Z)^2\{(Z+\mu_Z)^2+2\mu_Z^2\}].
+\]
+When $C_Z\le c\le0$ and $\mu_Z\le v_0$, the mean polynomial
+$t^3[(1-d)t+4c]$ has its maximum on $[0,v_0]$ at an endpoint.
+We explicitly pay both endpoints, or prove the nonzero one nonnegative.
+
+For $(2,3),L=2$, the actual square is $m=1-d/2$, $R=s=K^2g$.
+Put $a=k\delta_2$, $\delta=k^2\delta_3/2$, $\eta=a-\delta$.
+The exact data simplify to
+\begin{equation}\tag{L77.2.1}\label{eq:L77:23}
+\begin{gathered}
+Z=1-\eta+(1+\delta+B-kB^4)u,\quad\mu_Z=1-d-\eta,\\
+C_Z=-d+\delta_2+k\delta_3-\delta d-d^2,\\
+\operatorname{Var}Z=(1+\delta)^2d+\delta_2
+-2k(1+\delta)\delta_3+k^2\delta_5-d^2.
+\end{gathered}
+\end{equation}
+$\delta/a\le39/160$ implies $\delta q-a\le0$.
+The actual row tail has norm $\|1-kB^3\|\le21/20$, since
+$(36/25)\theta^3<41/400$.
+Hence $Z\le q+(21/20)\sqrt d$, $\mu_Z\le1-d$.
+For $x=\sqrt d$, $y=q+1$,
+\[
+(Z+\mu_Z)^2+2\mu_Z^2
+\le y^2+2+(21/10)yx-[2y+759/400]x^2.
+\]
+Here the negative cubic was omitted and $3x^4\le x^2$ used.
+The exact base identity and auxiliary bound are
+$9-(2-q^2/2)(y^2+2)=(q-1)^2(q^2+4q+6)/2\ge0$,
+$(2-q^2/2)y\le25/8$; the latter follows from $q^3\ge3q-2$.
+Completing the square adds at most $1225/936$ because
+$y/(2y+759/400)\le400/1053$.
+Thus the full reference coefficient is at most $31/3$.
+On $d\le1/6$, put $u_2=\delta_2/d$, $v_3=\delta_3/d$.
+Then $k\le12/11$, $\eta\ge(7/9)du_2$ since
+$\eta/(kdu_2)\ge137/176>7/9$, and
+\[
+\begin{gathered}
+\mu_Z\le1-\sigma d,\quad \sigma=1+7u_2/9,\quad C_Z\le dc-d^2,\quad c=-1+u_2+(12/11)v_3\le-2/5,\\
+\operatorname{Var}Z\le d(1+u_2-7v_3/4-d).
+\end{gathered}
+\]
+The variance uses $2k-k^2(d+\theta^2)\ge7/4$; after multiplication
+by $m^2$, its decreasing difference has value $287/9216>0$ at
+$d=1/6$. The covariance comparison uses
+$\theta+(12/11)\theta^2=1651/2816<3/5$.
+With coefficient $C=31/3$, the nonzero endpoint polynomial has
+linear coefficient at most
+$4/3+(101/9)u_2-(1811/132)u_2^2\le11/3$
+(square-completion increment $112211/48897<7/3$), quadratic at most
+$23/3+(88/9)u_2-(5582/297)u_2^2-(112/11)u_2^3\le9$
+(increment $85184/66984<4/3$), nonpositive cubic
+$\sigma[-4\sigma^2-6\sigma+12c\sigma+12]$, quartic at most
+$\sigma^2(\sigma^2+8\sigma-12)\le64/81<1$, and quintic
+$\sigma^3(4-\sigma)\le64/9<8$.
+Thus it is at most $1+(11/3)d+9d^2+d^4+8d^5$.
+Compare with the positive coefficients
+$1,4,9,15,165/8,99/4$ of $(1-d/2)^{-8}$ to get difference
+at least $d/3$.
+For the zero endpoint, $v_3\ge u_2^2$ gives
+$C\operatorname{Var}Z\le(248/21)d$.
+The inverse difference is at least
+$1-(164/21)d+9d^2+15d^3+(165/8)d^4$,
+decreasing on $[0,1/6]$ since its derivative is at most
+$-164/21+3+5/4+55/144<0$.
+At $1/6$ it is $-13/252+5/72+55/3456>1/30\ge d/5$.
+Both endpoints are paid.
+For $1/6\le d\le1/3$, the exact formulas give
+$\mu_Z\le1-d$, $C_Z\le-3d/8-d^2$,
+$\operatorname{Var}Z\le(33/28)d-d^2$.
+Use $\kappa-(6/5)\theta^2>3/8$ and combine the actual delta terms
+to get $d+\delta_2-d^2-(7/5)\delta_3$;
+$1+u_2-7u_2^2/5\le33/28$.
+The nonzero endpoint plus variance expands to
+$1+(159/28)d+d^2/6-(5/2)d^3-(11/2)d^4+3d^5$.
+Its inverse difference is at least
+$d[-47/28+(53/6)d+(35/2)d^2]\ge(47/168)d$.
+The zero endpoint difference is at least
+$1-(229/28)d+(58/3)d^2\ge24565/181888$.
+Since $m^8>(2/5)$ in the low interval and $m^8>1/5$ globally,
+these bounds prove
+\begin{equation}\tag{L77.2.8}\label{eq:L77:23result}
+\E[f_2\{T^2(h_2f_3)\}^4]\le1-d/20.
+\end{equation}
+
+For $(2,4)$ on $d\le1/4$, use the actual square of
+Module Q5-C069: $m=1-d$, $R=s+t_0-dg$,
+$A=d+\xi$, $B_0=\xi$,
+$V=d^3+2d\delta_2+\delta_3+\delta_4\le d(1/2+d)^2$.
+Then $\delta=k\delta_2+k^2V/2$,
+$\varepsilon=-kd^2+k^2V/2$, and
+$|\varepsilon|\le d/6$, $\delta\le25d/24$.
+For the upper epsilon bound multiply by $m^2$ to obtain
+$(1-4d)(1+8d)/24\ge0$; for its lower bound use $V\ge3d^3$ and
+$z=d/m\le1/3$ so $\varepsilon/d\ge-z+3z^2/2\ge-1/6$.
+The delta endpoint bound increases to $25/24$.
+At $L=2$, \eqref{eq:L77:twomoments} gives
+\[
+\mu_Z=1-d-kd^2-k\delta_3+k^2V/2\le1-d,
+\quad C_Z=-d+\delta_2+\delta_3+k\delta_4-d^2-k^2dV/2
+\le-d/3-d^2.
+\]
+The mean comparison uses
+$V-2m(d^2+\delta_3)
+\le d^2(3d-2+2\theta)+(2d-1+\theta)\delta_3\le0$;
+the covariance uses $\theta+(37/24)\theta^2=16237/24576<2/3$.
+The $P_2$ squared bound is
+$1+\xi-2kd\xi-(2/3)\xi^2$.
+Its coefficient follows from
+$2k\kappa-k^2[(d+\theta)^2+\theta^3]\ge2/3$;
+after multiplication by $m^2$, the decreasing quadratic difference
+has endpoint $587/32768>0$.
+The added real delta costs at most $2\delta+\delta^2$ and actual
+mean-square subtraction gives
+$\operatorname{Var}Z\le d+\delta_2-(2/3)\delta_3-d^2
++k^2dV+\delta^2d\le(13/10)d+(11/10)d^3$.
+Use $k^2dV\le d^2$, $\delta^2d\le625d^3/576$,
+$1+u_2-2u_2^2/3\le1991/1536<13/10$.
+The original $P_1$ row norm is below $27/20$:
+its square is at most
+$1+2k\theta^2+k^2\theta[(d+\theta)^2+\theta^3]
+<1+4/9+13/36=65/36<(27/20)^2$.
+Therefore
+\[
+Z+\mu_Z\le q+1+(27/20)\sqrt d-5d/6+\delta(q-1).
+\]
+For $d\le1/8$, if $q\le1$ omit the nonpositive last term to get
+$Z+\mu_Z\le q+7/5$, $f_2\le19/8-q$.
+The resulting cubic has $Q''\le-17/20$,
+$Q(4/5)=10773/1000$, $Q'(4/5)=9/100$, so its strong-concavity
+bound is below eleven.
+If $q\ge1$ use $\delta\le25d/24$ and complete the square to get
+$Z+\mu_Z\le(8/7)q+5/4$:
+the actual constant is at most $1243/1000<5/4$ and coefficient at
+most $217/192<8/7$.
+The cubic $(19/8-q)[((8/7)q+5/4)^2+2]$ decreases after one,
+with derivative $-161/784$, negative second derivative, and value
+$66627/6272<11$ at one.
+For the whole $d\le1/4$, a coefficient thirteen suffices.
+On $q\le1$, use $Z+\mu_Z\le q+22/15$;
+the cubic $(5/2-q)[(q+22/15)^2+2]$ has $Q''\le-13/15$,
+value below $25/2$ at $9/10$, derivative $-1/36$, so bound below
+thirteen. On $q\ge1$, use $(19/15)q+5/4$;
+the cubic has $Q''\le-3$, $Q(1)=30001/2400$,
+$|Q'(1)|=4427/3600<5/4$, giving upper bound
+$30001/2400+25/96<13$.
+With coefficient $C=11$ or thirteen, the nonzero endpoint is
+\[
+W_C=(1-d)^5-(4d/3+4d^2)(1-d)^3
++C[(13/10)d+(11/10)d^3].
+\]
+For $C=11$ its coefficients are
+$1,239/30,10,101/10,-17/3,3$, termwise below $(1-d)^{-8}$ with
+linear gap $1/30$.
+For $C=13$, the first three positive coefficients are
+$317/30,10,123/10$ and on $[1/8,1/4]$ the inverse difference is
+at least $d[-77/30+26d]\ge41d/60$.
+The zero endpoint using the larger coefficient thirteen has inverse
+difference at least $1-(89/10)d+(1297/40)d^2\ge5049/12970$.
+Since $m^8\ge(3/4)^8>1/10$, the low range gives deficit $d/300$.
+For $d\ge1/4$, the actual mean is at most $1353/4096<1/3$,
+so $TF_4\le2/3$. The direct actual bound
+$\E[f_2q^4]\le1+4d\le7/3$ gives target at most $112/243$.
+
+For $(2,4),L=3$, the exact $\alpha_3=d-k\delta_3+k^2dV/2
+\ge3d/4$ gives $\mu_Z\le1-7d/4$.
+The exact covariance cancellation is
+\[
+C_Z=-d+2\delta_2-d^2+kd^3+k\delta_2^2
++(k^2V/2)(\delta_2-d-d^2)\le-3d/16.
+\]
+The last term is nonpositive and $k(d+\theta^2)<1$ pays the others.
+The original $P_3$ contraction gives
+$\|Q_3\|\le1+27d/32$ and variance at most
+$d+(9/8)d^2+(3/4)d^3$.
+Also $\|Q_2\|^2\le(1+\delta)^2+\theta<2$, so
+$Z\le(1+d/6)q-d+(10/7)\sqrt d$ and
+$Z+\mu_Z\le q+1+(10/7)\sqrt d-(29/12)d\le q+1+3/14$.
+The pointwise base identity above gives curvature below eleven,
+since $9+2(3/14)(25/8)+2(3/14)^2<11$.
+The nonzero mean endpoint is nonnegative (bracket at $1/4$ at least
+$15/64$). Using
+$(1-7d/4)^4\le1-7d+(147/8)d^2$ and
+$(1-7d/4)^3\ge1-21d/4$ bounds the target before $m^8$ by
+$1+(9/4)d+(667/16)d^2$.
+The inverse difference is at least
+$d[23/4-(91/16)d+120d^2]>5d$, giving low loss $d/2$.
+For the high range $X_{4,3}\le(2/3)\bar f_2$.
+The original pointwise inequality
+\begin{equation}\tag{L77.3.7}\label{eq:L77:crosspath}
+f_2\bar f_2\le4p
+\end{equation}
+follows from $r\le pq/2$, since the left side is at most
+$pq(1+q/2)(1+p/2)$ and
+$q(1+q/2)(2-q/2)$ increases on $[0,2]$ to four.
+The original reversed path cube gives $\E[p\bar f_2^3]\le1$,
+so $\E[f_2\bar f_2^4]\le4$ and the high target is at most $64/81$.
+In particular the full $(2,4),L=3$ row has deficit $d/100$.
+
+For every finite $b\ge5$ on $d\le1/5$, take $m=1-9d/8$.
+For $b=5$, retain $C_1=d$, $C_2=d/4+\delta_2$, $C_3=0$;
+$C_2\le21d/32\le\beta_3$ and
+$\beta_5+C_1+C_2=9d/4$.
+For $b\ge6$, use \eqref{eq:L73:retained}.
+With $C=C_1+C_2+C_3$, $D_*=C_2+C_3$, $E=C_3$ and
+$R=\sum_{j=3}^bK^j\one-Cg-D_*r-Es$,
+the actual positive convolution subtracts
+$\beta_b,C_1f_1,C_2f_2,Ef_3$.
+Its exact constant loss is
+$\beta_b+C_1+C_2+(1-d)E=9d/4$, so
+$0\le h_2+f_b\le2m+R$.
+For $b=5$, $A=d+C_2+\xi-\xi^2$, $B_0=C_2+\xi$.
+For $b\ge6$, $A=C+\xi(a_f-E)$, $B_0=D_*+\xi b_f$,
+$G_{b-2}(i\sqrt\xi)=a_f+i\sqrt\xi\,b_f$.
+For even $N=2j\ge4$, $a_f=b_f=\sum_{i=0}^{j-1}(-\xi)^i$;
+for odd $N=2j+1\ge5$, these sums end at $j$ and $j-1$.
+Thus $1-\xi\le a_f,b_f\le1-\xi+\xi^2$ and
+$a_f-(1-\xi)b_f=[\xi+(-\xi)^j]/(1+\xi)\ge0$ in the odd case.
+Every finite case, including $N=4,5$, therefore satisfies
+\begin{equation}\tag{L77.4.1b}\label{eq:L77:positivecoordinates}
+A,B_0\ge0,\qquad A-(1-\xi)B_0\ge C_1+C_2\xi,\qquad C_1\ge\tau.
+\end{equation}
+For $b=5$ the latter difference is exactly $d+C_2\xi$.
+
+We use the full-frequency proof of
+\begin{equation}\tag{L77.4.1}\label{eq:L77:correctedfrequency}
+\sqrt{A^2+\xi B_0^2}\le u_0=3/8+9d/5,\qquad
+B_0\le z_0=\theta+13d/16.
+\end{equation}
+For $b=5$, hold the actual $\delta_2$ fixed while differentiating:
+$A'=1-2\xi\ge3/16$, $B_0'=1$, so take $\xi=\theta$ first and
+only then use $\delta_2\le\theta d$.
+The endpoint vector is bounded componentwise by
+$(\theta-\theta^2,\allowbreak \sqrt\theta\,\allowbreak \theta)
++d(53/32,\allowbreak \sqrt\theta\,\allowbreak 21/32)$.
+Their squares are $131313/1048576<9/64$ and
+$95621/32768<(9/5)^2$, the last difference
+$263683/819200>0$; also $B_0\le\theta+(21/32)d\le z_0$.
+For $b\ge6$, exact retained constants give
+$C=9d/4-\beta_b+dE$,
+$D_*=9d/4-\beta_b-\beta_{b-1}+dE$.
+Put $u(\xi)=\xi-\xi^2+\xi^3$. The true frequency upper bounds,
+with original global constants $d,\delta_2,E$ held fixed, are
+\[
+\overline A=u(\xi)+5d/4+\delta_2+E(d-\xi),\qquad
+\overline B=u(\xi)+d/4+2\delta_2+dE.
+\]
+$u'=2/3+3(\xi-1/3)^2$, so
+$\overline A'\ge2/3-E\ge7/15>0$,
+$\overline B'\ge2/3$. They start nonnegative; thus the squared
+vector increases to $\xi=\theta$. Only at this endpoint use
+$\delta_2\le\theta d$, giving
+$A_*=u+(5/4+\theta)d+E(d-\theta)$,
+$B_*=u+(1/4+2\theta)d+dE$,
+$u=10101/32768<5/16$.
+These remain nonnegative: the minimum $A_*$ on $E\in[0,d]$ is
+$u+5d/4+d^2$.
+The square $A_*^2+\theta B_*^2$ is convex in $E$, with quadratic
+coefficient $(d-\theta)^2+\theta d^2\ge0$.
+At $E=0$ its vector is
+$u(1,\allowbreak \sqrt\theta)+d(53/32,\allowbreak \sqrt\theta\,17/16)$.
+The constant norm is below $3/8$ using $1125/8192<1152/8192$;
+the $d$-square is $26229/8192<(9/5)^2$, difference $7827/204800$.
+At $E=d$ the vector is
+$u(1,\allowbreak \sqrt\theta)+d(5/4,\allowbreak \sqrt\theta\,17/16)+d^2(1,\allowbreak \sqrt\theta)$.
+The $d$-square $16557/8192<(10/7)^2$, difference $7907/401408$;
+the $d^2$ norm is below $6/5$, square difference $27/800$.
+Thus its norm is at most
+$3/8+(10/7)d+(6/5)d^2<3/8+(9/5)d$; the coefficient difference
+at $d=1/5$ is $23/175$.
+Finally the independent $B_0$ endpoint gives
+$B_0\le5/16+(17/16)d+d^2=:z$.
+$z-z_0=-3/32+d/4+d^2$ increases to $-3/800<0$ on the low interval.
+This proves \eqref{eq:L77:correctedfrequency} without ever replacing
+the global $\delta_2$ by a local frequency multiple $\xi d$.
+
+These inputs imply
+$|\varepsilon|\le3d/5$, $\delta\le6d/5$, $ku_0\le1$.
+The delta comparison, multiplied by $2m^2$, is the decreasing
+quadratic $463/320-(955/128)d+(2601/1600)d^2$, whose endpoint is
+$1577/80000>0$.
+For upper epsilon use $a_1\ge\kappa D_0+\tau d$ from
+\eqref{eq:L77:positivecoordinates}; the decreasing difference is
+$1867/2560-(64539/20480)d-(118503/51200)d^2$, endpoint
+$16519/2560000>0$.
+For lower epsilon the actual finite mean difference is
+$a_1-D_0\le d^2+\theta^3d$, giving $-\varepsilon/d\le k(d+\theta^3)<3/5$.
+For $b=5$ that difference is $d^2-\delta_3$; for $b\ge6$ use
+$A-B_0=C_1-E\xi+\xi(a_f-b_f)$ and its first possible positive
+terminal power $\xi^3$.
+The original row tail has
+$\|P_1\|^2\le1+2k\theta z_0+k^2\theta u_0^2
+<1+3/5+3/8<2<(10/7)^2$;
+the two endpoint terms are $5915/9920$ and $280917/768800$.
+The actual real-shifted $P_2$ satisfies
+\begin{equation}\tag{L77.4.3}\label{eq:L77:shiftedPtwo}
+|P_2+\delta|^2\le(1+\delta)^2+\xi.
+\end{equation}
+For its unshifted square it suffices that
+$2-4\xi-k\xi[u_0(1-\xi)+\xi z_0]\ge0$.
+The subtracted part increases in $\xi,d$, and its endpoint gap is
+$79745/3174400>0$; the real shift adds the favorable
+$-2\delta k\xi A$.
+$P_3$ has coordinates $1-\xi-k\xi^2B_0$, $1-k\xi A$,
+nonnegative and bounded by $G_3$ coordinates, hence $\|P_3\|\le1$.
+
+For $L=2$, the exact mean obeys
+$\mu_Z\le1-d-k\kappa d^2+k^2du_0^2/2\le1-7d/10$.
+The last decreasing difference after multiplication by $m^2$ is
+$147/640-(121/160)d-(12213/6400)d^2$, endpoint $337/160000>0$.
+To retain covariance cancellations, use the genuine coarse frequency
+bounds $A\le\xi+(15/8)d$, $B_0\le\xi+(101/80)d$,
+$B_0\ge\xi(1-\xi)$.
+For $b\ge6$ these follow from
+$C\le(5/4+\theta+d)d\le297d/160<15d/8$,
+$D_*\le(1/4+2\theta+d)d\le101d/80$ and the finite coordinates;
+$b=5$ has stronger constants $53/32,21/32$.
+Thus $\delta d+kd\rho_0\ge kd(\delta_2-\delta_4)$, and
+\[
+C_Z\le-d+\delta_2+k(\delta_3+\delta_4)-d^2
++kd[(7/8)\delta_2+(101/80)\delta_3+\delta_4]
+\le-d/3+d^2/5.
+\]
+The bracket coefficient is at most $103363/163840$ times $d$,
+whose product with $k$ is below $5/6$;
+$k-1\le45d/31$, $(45/31)(\theta^2+\theta^3)<7/20$ give the
+intermediate bound $-(11851/32768)d+(11/60)d^2$.
+Equation \eqref{eq:L77:shiftedPtwo}, with actual mean-square
+subtraction, gives
+$\operatorname{Var}Z\le(45/32)d+(7/5)d^2+(36/25)d^3$.
+For the continuous curvature put $x=\sqrt d<9/20$, $y=q+1$.
+The row bound is $Z+\mu_Z\le y+(10/7)x+e(q)d$, where
+$e=-1/10$ for $q\le1$ and $e=(6/5)q-13/10$ for $q\ge1$.
+With $f_2\le p+x$, the base $p(y^2+2)=6+q-q^3\le32/5$,
+the linear-$x$ coefficient is
+$61/7+(34/7)q-(13/7)q^2\le1082/91<12$.
+For $q\le1$, discard the negative $e$; later costs total at most
+$425d/49<9d$.
+For $q=1+u$, $0\le u\le1$, use
+$pye=-1/5+(5/2)u-(11/10)u^2-(6/5)u^3\le15/22$,
+by $u^3\ge3u/4-1/4$ and square completion.
+Also $pe\le121/480$, $e\le11/10$, $y\le3$.
+The complete $d,x^3,d^2,x^5$ coefficients are at most
+$765/77<10$, $121/168+100/49+33/5<19/2$,
+$3047/700<9/2$, $121/100$.
+Using $x^3\le9d/20$, $d^2\le d/5$, $(121/100)x^5<d/8$ gives
+total cost below $153d/10<31d/2$.
+Finally $x\le2/15+(15/8)d$ by square completion, proving the full
+coefficient $8+38d$.
+Take $v_0=1-7d/10$, $c=-d/3+d^2/5$.
+The upper mean bracket is $1-(91/30)d+(3/2)d^2$, at least $34/75$.
+After the variance payment the exact polynomial coefficients are
+$1,367/60,29591/400,7096/125$, then a quartic below $59$ and a
+negative quintic. The mean and variance components giving these are
+\[
+\begin{array}{c|cc}
+\text{degree}&\text{mean term}&\text{variance term}\\\hline
+1&-77/15&45/4\\2&467/50&56/5+855/16\\
+3&-994/125&1618/25\\4&97363/30000&1368/25\\5&-1029/2000&0.
+\end{array}
+\]
+The inverse positive series yields difference at least
+$d[173/60-(5683/200)d+114d^2]\ge d$;
+the square-completion integer difference is $123330660>0$.
+Its quartic inverse coefficient exceeds $500$, and all higher terms
+are nonnegative. Since $m\ge31/40$, $m^8>1/8$, the complete low
+$L=2$ row has deficit $d/8$.
+
+For $b\ge5,L=3$ on the same low interval,
+$\alpha_3\ge(1-k\theta u_0)d\ge\kappa d$ and
+$\mu_Z\le1-(7/10+\kappa)d\le1-5d/4$.
+The actual finite tail retains
+$\int\xi^2(B_0-A)\le\delta_5$.
+For $b=5$, $B_0-A=-d+\xi^2$.
+For $b\ge6$, $B_0-A=-C_1+E\xi-\xi(a_f-b_f)$;
+the first terms are at most $-(\kappa-\theta)d\le0$.
+Even $N$ has no last difference; for odd $N=2j+1\ge5$, even $j$
+is favorable, while odd $j\ge3$ gives after multiplication at most
+$\xi^6\le\xi^4$. This covers every finite $b$.
+Thus
+$C_Z\le[-3/16+k\theta^4]d+[3/5+(6/5)\theta-\kappa]d^2
+\le-211d/4000<-d/20$, using $k\theta^4\le9/250$ and quadratic
+coefficient $79/160$.
+$\|Q_3\|\le1+69d/50\le1+7d/5$ gives variance at most
+$d+(5/2)d^2+2d^3$ after actual $\alpha_3^2$ subtraction.
+$\|Q_2\|^2\le38877/20000<49/25$ gives
+$Z\le(1+3d/5)q-d+(7/5)\sqrt d$ and
+$Z+\mu_Z\le q+1+(7/5)\sqrt d-(21/20)d\le q+22/15$.
+The cubic $(49/20-q)[(q+22/15)^2+2]$ has $Q''\le-29/30$,
+$Q(9/10)=212071/18000<59/5$ and $|Q'(9/10)|=119/450<3/10$,
+so curvature is below twelve.
+The upper mean bracket is at least $14/25$.
+The exact Taylor bound is at most
+$1+(29/5)d+(361/8)d^2+(117/8)d^3$.
+The inverse first three coefficients $9,729/16,10935/64$ are larger,
+with linear gap $16/5$; $m^8>1/8$ gives deficit $2d/5$.
+
+For $1/5\le d\le1/4$, keep the original direction but use the
+other actual C128 square with $m=1-d$.
+For $b=5$ retain $C_1=d,C_2=\delta_2,C_3=0$; for $b\ge6$ use
+the finite coefficient formula above with numerator constant $2d$.
+The precise Q4-C128, Sections 2,4,6,7, inputs, retained in
+Section~\ref{loc:S25}, are
+\begin{equation}\tag{L77.6.1}\label{eq:L77:middleinputs}
+\begin{gathered}
+|\varepsilon|\le(315/512)d<2d/3,\quad
+\delta\le(61/48)d<4d/3,\quad\mu_{Z_2}\le1-2d/3,\\
+\|P_1\|\le10/7,\quad |P_2+\delta|^2\le(1+\delta)^2+\xi,
+\quad\|P_3\|\le1,\quad\alpha_3\ge\kappa d.
+\end{gathered}
+\end{equation}
+The actual coordinates remain nonnegative, $A\ge(1-\xi)B_0$,
+$B_0\ge\xi(1-\xi)$, and
+$A\le\xi+(53/32)d$, $B_0\le\xi+(17/16)d$.
+The same covariance cancellation uses
+$(21/32)\theta+(17/16)\theta^2+\theta^3=16679/32768$,
+whose product with $k$ is below $7/10$;
+$k-1\le4d/3$, $(4/3)(\theta^2+\theta^3)<1/3$.
+Hence $C_{Z_2}\le-d/3+d^2/5$ and variance at most
+$(45/32)d+(5/3)d^2+(16/9)d^3$.
+Here $\mu\le13/15$ and the row bound splits at $q=1$:
+$Z+\mu\le q+12/7$ when $q\le1$,
+$Z+\mu\le(4/3)q+29/21$ when $q\ge1$.
+The first cubic $(5/2-q)[(q+12/7)^2+338/225]$ has
+$Q''\le-13/7$, $Q(1)<27/2$, $|Q'(1)|<1$.
+The second, replacing the square by $((4/3)q+29/21)^2$, has
+$Q''\le-64/7<-9$, $Q(6/5)<68/5$, $|Q'(6/5)|<1$.
+Both give curvature below fourteen over their full intervals.
+With $v_0=1-2d/3$, $c=-d/3+d^2/5$, the upper mean bracket is
+$1-3d+(22/15)d^2>0$.
+The full polynomial coefficients are
+$1,\allowbreak 235/16,\allowbreak 482/15,\allowbreak 2384/135,\allowbreak 128/45,\allowbreak -176/405$.
+The inverse difference is at least
+$d[-107/16+3d+102d^2+327d^3]\ge d/2$,
+since its bracket increases from $1217/2000>1/2$ at $1/5$.
+$m^8>1/10$ gives middle $L=2$ deficit $d/20$.
+For middle $L=3$, $\mu_Z\le1-5d/4$ and the same finite-tail
+calculation gives
+$C_Z\le[-3/16+k\theta^4]d+(413/768)d^2
+\le-(239/15360)d<0$, using $k\theta^4\le3/80$.
+The $Q_3$ cost is
+$315/512+(13/20)(61/48)=11069/7680<3/2$,
+so variance is at most $d+(8/3)d^2+(9/4)d^3$.
+$\|Q_2\|^2\le78985/36864<9/4$ yields
+$Z\le(1+2d/3)q-d+(3/2)\sqrt d$ and
+$Z+\mu\le q+1+(3/2)\sqrt d-(11/12)d\le q+31/20$.
+$\mu\le3/4$, $f_2\le5/2-q$; the cubic has
+$Q''\le-6/5$, $Q(1)=9153/800<23/2$, $Q'(1)=9/400$, so
+curvature is below twelve.
+Discarding only the nonpositive covariance gives
+$\E[f_2Z^4]\le1+6d+(371/8)d^2+(141/8)d^3$.
+Its inverse difference is at least
+$d[2-(83/8)d+(819/8)d^2]>(3/2)d$,
+since the square-completion loss $6889/26208<1/2$.
+The middle $L=3$ deficit exceeds $3d/20$.
+
+For $d\ge1/4$ use actual terminal means $t_j=\E[h_2f_j]$:
+\begin{equation}\tag{L77.7.1}\label{eq:L77:means}
+\begin{gathered}
+t_0=1+d,\ t_1=1,\ t_2=1-d-\delta_2,\ t_3=1-2d-d^2,\\
+t_4=1-3d+\delta_2-d^2+\delta_3,\quad
+t_5=1-4d+2(1+d)\delta_2,\\
+t_6=1-5d+2d^2+d^3+(3+2d)\delta_2-\delta_3-\delta_4.
+\end{gathered}
+\end{equation}
+For every finite $b\ge7$, $\E[h_2S_b]\le1-\tau+\delta_3$;
+retain actual $t_0,\ldots,t_4$ in positive convolution and use
+$t_4\ge1-3d$. This gives
+$t_b\le1-\tau(6-5d-d^2-\delta_2)+\delta_3
+\le1-\mathcal L(d)$,
+$\mathcal L(d)=d(3479-3287d-608d^2)/1024$.
+All retained beta indices are at least three, all actual terms
+nonnegative, and $\mathcal L'\ge1085/1024>0$ on $[0,1/3]$.
+The upper bounds for $t_4,t_5,t_6$ also decrease and at $1/4$ are
+at most $1353/4096,65/256,63/256<1/3$.
+For $b\ge7$, the bound is $t_b\le5907/16384<13/36$ there.
+Thus $TF_b\le13/18$ for every $b\ge4$.
+At $d\ge4/15$, $\mathcal L(4/15)=2303308/3456000>13/20$
+improves it to $TF_b\le7/10$.
+For $L=2$, use $X_{b,2}\le(13/18)q$ and
+$\E[f_2q^4]\le7/3$ to get target at most
+$199927/314928<99/100$.
+For $L=3$ on $1/4\le d\le4/15$, the actual bare-two bound is
+$\E[f_2\bar f_2^4]\le7/2$.
+Its independent proof uses mean $1-d$, covariance
+$-d+\delta_2-d^2\le-\kappa d-d^2$, variance at most
+$45d/32-d^2$, and curvature $651/64<11$ from the same original
+square completion as the $(2,3)$ calculation above.
+The actual mean bracket $1-(35/8)d-3d^2$ is negative on this range,
+so the centered expansion gives target at most
+$11(45d/32-d^2)\le6017/1800<7/2$.
+Hence the $L=3$ target is at most
+$(13/18)^4(7/2)=199927/209952<99/100$.
+For $d\ge4/15$ instead use \eqref{eq:L77:crosspath} and the original
+path cube to get $4(7/10)^4=2401/2500<99/100$.
+All high bounds are stronger than the stated linear losses.
+
+The complete exact same-direction union is
+\begin{equation}\tag{L77.7.table}\label{eq:L77:union}
+\begin{array}{c|c|c}
+\text{terminal/connector}&\text{proof}&\text{deficit}\\\hline
+b=3,L=1&\text{Q5-C073, Section 2}&d/125\\
+b=4,L=1&\text{Q5-C069, Section 10}&d/100\\
+b=5,L=1&\text{Q5-C069, Section 11}&d/10000\\
+b\ge6,L=1&\text{Q5-C073, Section 3}&d/12\\
+b\ge3,L=2&\text{the calculations above}&d/300\\
+b=3,L=3&\text{\hyperref[proof:Q5-C073-connectors]{M.20}}&d/4\\
+b\ge4,L=3&\text{the calculations above}&d/100\\
+b\ge3,L\ge4&\text{\hyperref[proof:Q5-C073-connectors]{M.20}}&d/50.
+\end{array}
+\end{equation}
+Together with the exact unit rows in Sections~\ref{proof:Q5-C069}
+and~\ref{proof:Q5-C073} and the remaining rows in
+Section~\ref{proof:Q5-C073-connectors}, this proves \eqref{eq:L77:claim}.
+
+
+At $d=0$ all original messages are one.

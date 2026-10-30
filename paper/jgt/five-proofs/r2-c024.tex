@@ -1,0 +1,570 @@
+\subsection{Unit shortest arm and second shortest arm two}\label{proof:R2-C024}
+For the residual list $(1,2,c,s_2,t_2,\ldots,s_j,t_j)$,
+$3\le c<s_2<t_2<\cdots<s_j<t_j$, orient the receiving arm $a\ge3$
+outward and every $L\ge1$ connector edge toward its root. Fix the
+actual terminal by the following structural rule:
+\begin{equation}\tag{R24.1.table}\label{eq:R24:directions}
+\begin{array}{c|l}
+j=1,c=3,L=1&qf_2\bar f_3\\
+j=1,\text{ all other cases}&qf_2h_c\\
+j\ge2,c=3,s_2=4&qf_2h_{t_2}h_3f_4\prod_{i\ge3}h_{s_i}f_{t_i}\\
+j\ge2,\text{ all other cases}&qf_2h_c\prod_{i\ge2}h_{s_i}f_{t_i}.
+\end{array}
+\end{equation}
+The crossing in the third row exchanges roles of existing original
+arms only. Every direction is fixed by the original integers.
+For this $F$, every independent finite parameter choice satisfies
+\begin{equation}\tag{R24.1.1}\label{eq:R24:claim}
+\E[f_a(T^LF)^4]\le1-d/800.
+\end{equation}
+The $j=1$ inputs are precisely the short-directory rows;
+the proof below treats every $j\ge2$. Actual equal pairs can be restored.
+
+Use the original receiving bounds of Module R2-C007 and exact
+covariance and Taylor identities
+\eqref{eq:R17:covariance}--\eqref{eq:R17:taylor}.
+The short actual path formulas and bounds of Module R2-C021 apply
+on $d\le1/8$: means at most $1-d$, $1-2d$, $1-83d/32$,
+$1-11d/4$ for $n=2,3,4,5$; receiving covariances at most zero,
+$d/12$, $d/12$, $d/32$, respectively.
+$\|G_4-d\|\le1$, $\|G_5-d(2+z)\|\le1-2d$; the latter squared
+difference is $x[-1+2d+d^2+(1-2d)x-x^2+x^3]\le0$, here already
+implied by $-1+1/4+1/64+\theta<0$.
+The favorable covariances with $q,\bar f_2$ are nonpositive.
+The full continuous cubic inequality \eqref{eq:R12:cubic} gives
+coefficient below nine when $C_a+Y+m\le17/5$, $m\le33/32$,
+and below ten when the corresponding sum is at most $18/5$, $m\le1$.
+We use the exact exponential comparison \eqref{eq:R14:exponential}.
+
+The following scaled form of Taylor expansion is essential.
+If $X\le e^{-\Gamma}Y$, $Y\ge0$, $W=e^{-\Gamma}Y$, and
+$C_a[(W+\E W)^2+2(\E W)^2]\le M$, then
+\begin{equation}\tag{R24.2.6}\label{eq:R24:scaled}
+\E[f_aX^4]\le(\E C_a)e^{-4\Gamma}m_Y^4
++4e^{-4\Gamma}m_Y^3\operatorname{Cov}(C_a,Y)
++Me^{-2\Gamma}\operatorname{Var}Y.
+\end{equation}
+Here $m_Y=\E Y$ is the actual mean; the last exponent is $-2\Gamma$.
+
+We give the finite terminal algebra from Q5-C177, Sections 6--8,
+and the report A138, Sections 8--10.
+For every actual $4\le s<t$,
+$h_sf_t\le e^{R_{s,t}-16d/5}$,
+$R_{s,t}=\sum_{r=s+1}^tK^r\one$.
+All subsequent pairs form one finite disjoint-interval mask $S$.
+The stripped zero--one polynomial has square at most
+$(1+x)/(1-x^2)^2\le32768/16245<100/49$; in each of the four
+residue classes take the larger positive or negative finite subsum.
+When its first short arm is at least five,
+\begin{equation}\tag{R24.3.1}\label{eq:R24:mask}
+\begin{gathered}
+\|S\|_2<3\sqrt d/20,\quad|S|<\sqrt d/4,\quad
+\E S+\E(uS)\le2C_\beta\delta_4<d/6,\quad C_\beta=1024/855,\\
+S=(A_S+zC_S)(B)u,\quad
+|A_S|\le x^3/(1-x^2),\quad |C_S|\le x^2/(1-x^2).
+\end{gathered}
+\end{equation}
+If the first short arm is at least six, improve the final bound to
+$|C_S|\le x^3/(1-x^2)$. In all cases
+$\|BS\|_2<\sqrt d/10$, $\|B^2S\|_2<\sqrt d/16$,
+$\|B^3S\|_2<\sqrt d/25$, $\|B^4S\|_2<\sqrt d/40$.
+For $F\le qe^{R-\Gamma}$ and $|R|\le1/2$, the actual unit-anchor
+first row is
+\[
+T(qe^R)\le\bar f_2+BR+\delta,\quad
+\delta=\E R+\E(uR)+\sqrt d\|R\|_2+(12/5)\|R\|_2^2.
+\]
+This follows by $e^R\le1+R+3R^2/5$,
+$T(qR)=\E R+\E(uR)+BR+B(uR)$, and $T(qR^2)\le4\E R^2$.
+For $|R|\le3/4$, replace $12/5$ by $8/3$.
+Taking $D\ge\max(\delta,0)$ and $D_i=\E B^iR$, finite positive
+propagation gives
+\begin{equation}\tag{R24.3.3}\label{eq:R24:propagation}
+e^\Gamma T^LF\le Y_L=\bar f_{L+1}+B^LR+D\bar f_{L-1}
++\sum_{i=1}^{L-1}D_i\bar f_{L-1-i}\ge0.
+\end{equation}
+
+We distinguish four exhaustive structural packages.
+Package II has $c\ge4,j\ge2$ and $d\le1/64$.
+The actual first-pair convolution gives
+\[
+\begin{gathered}
+\Gamma_0=\beta_c+\beta_{c-1}\ge19d/16,\quad
+R_0=-\beta_{c-1}u-\sum_{r=3}^cK^r\one,\quad
+R=R_0+S,\quad\Gamma\ge351d/80,\\
+\mathfrak r_0=-\beta-xU+zxV,\quad
+G_{c-2}(-z)=U-zV,\quad\beta=\beta_{c-1},\quad U,V\in[1-x,1].
+\end{gathered}
+\]
+The actual first mixed mean is at most $-2\delta_2$ if $c=4$,
+and $-2\kappa\delta_2$ if $c\ge5$.
+For $v=\delta_2/d$,
+$\|R\|_2/\sqrt d\le d+C\sqrt{\theta v}$, with $C=8/5$ or $5/4$,
+respectively; the mask mixed positive mean is at most
+$2C_\beta\theta^2\delta_2$.
+Thus
+\[
+\begin{gathered}
+\delta/d\le-\lambda v+d+C\sqrt{\theta v}
++(12/5)[d+C\sqrt{\theta v}]^2,\quad \lambda_4=1372/855,\\
+\lambda_5=2\kappa-338/855.
+\end{gathered}
+\]
+As a quadratic in $\sqrt v$, the displayed linear and quadratic
+coefficients are positive, and it increases with $d$.
+At $v=\theta,d=1/64$, the two bounds are
+$221307/128000-4459/6840<11/10$ and
+$2373/2000-3/10<9/10$. Take $D=11d/10$.
+The complete original symbol obeys $|\mathfrak r|<2/3$ and
+$|R|\le d+2\sqrt d<1/2$. Its actual signed means satisfy
+\begin{equation}\tag{R24.3.5}\label{eq:R24:IImeans}
+D_1\le d^2+\delta_2+C_\beta\delta_4
+\le d^2+C_\beta\delta_2\le33d/64,\qquad
+D_i<d/4\quad(i\ge2).
+\end{equation}
+Use $C_\beta\theta=416/855<1/2$ in the first line; later four
+residue-class positive parts are at most
+$\beta\delta_2+\delta_3+C_\beta\delta_5$, with
+$\theta/64<1/128$, $\theta^2<1/6$, $C_\beta\theta^4<1/30$.
+All $\gamma_r=\beta_r-D_{r-2}\ge d/3$ for $r\ge3$, including the
+additional actual mean index $\beta_{L+2}-D_L$ for $L\ge5$.
+
+Package III has $c=3,s_2\ge5,j\ge2$ and $d\le1/8$.
+The exact identity $f_2+h_3=2-d-K^3\one$ gives
+\begin{equation}\tag{R24.3.6}\label{eq:R24:III}
+\begin{gathered}
+R=B^2u+S,\quad\Gamma\ge21d/5,\quad D=11d/10,\quad\rho=3/5,\\
+\|R\|_2<\rho\sqrt d,\quad|R|<1/2,\\
+D_1<d/2,\ D_2<d/12,\ D_i<d/10\ (i\ge3).
+\end{gathered}
+\end{equation}
+To retain the actual calculation, the mixed mean is at most
+$-(1-2C_\beta\theta^2)\delta_2$ and
+$\|R\|_2^2/d\le\theta(617/448)^2v$.
+The resulting quadratic in $\sqrt v$ increases; at $v=\theta$ its
+root bound is below $9/16$ and the negative mixed term exceeds
+$6/25$. Hence $\delta/d<9/16+243/320-6/25<11/10$.
+The pointwise bound is
+$[\sqrt\theta+(10/7)\theta^2]\sqrt d<1/2$.
+$D_1\le\delta_2+C_\beta\delta_4\le416d/855$,
+$D_2\le C_\beta\delta_4$, and later positive residue-class leading
+terms are $C_\beta\delta_5,\allowbreak C_\beta\delta_5,\allowbreak 
+\delta_4+C_\beta\delta_6,\allowbreak C_\beta\delta_6$, decaying every four powers.
+Consequently
+\[
+\gamma_3\ge d/2,\quad\gamma_4\ge11d/12,\quad
+\gamma_r\ge79d/160\ge15d/32\quad(r\ge5),
+\]
+also at the additional mean index.
+
+Package IV has $c=3,s_2=4,j=2$, $e=t_2\ge5$, $d\le1/8$,
+and the actual crossing $F=qf_2h_eh_3f_4$.
+For $e=5$ take $c_1=d,c_2=d/4+\delta_2,c_3=0$.
+For $e\ge6$ take
+\[
+\begin{gathered}
+c_1=\beta_{e-1},\quad c_2=\lambda\beta_{e-2},\quad c_3=\lambda\beta_{e-3},\\
+\lambda=\frac{9d/4-\beta_e-\beta_{e-1}}
+{\beta_{e-2}+(1-d)\beta_{e-3}}\in[0,1].
+\end{gathered}
+\]
+The denominator is positive and the total available constants are at
+least $(4-d)\tau>9d/4$. Put $C=c_1+c_2+c_3$, $D_*=c_2+c_3$,
+$E=c_3$. The original convolution gives
+$f_2+h_e\le2-9d/4-U_e$,
+$U_e=(A_{\rm old}-zB_{\rm old})(B)u$.
+For $e\ge6$,
+$A_{\rm old}=C+x(a_f-E)$, $B_{\rm old}=D_*+xb_f$,
+$G_{e-2}(-z)=a_f-zb_f$; for $e=5$ the actual coordinates are
+$A_{\rm old}=5d/4+\delta_2+x-x^2$,
+$B_{\rm old}=d/4+\delta_2+x$.
+The actual constants satisfy
+$C\ge5d/4+dE$, $d/4\le D_*\le(17/16+d)d$, $0\le E\le d$.
+Combining with $h_3+f_4=2-3d+K^4\one-dg$ gives
+\begin{equation}\tag{R24.3.8}\label{eq:R24:crosscoordinates}
+\begin{gathered}
+F\le qe^{R_c-21d/4},\quad R_c=(-A_c+zB_c)(B)u,\quad
+A_c=A_{\rm old}-d,\quad B_c=B_{\rm old}-x,\\
+0\le A_c\le19/40,\quad-x^2\le B_c\le19d/16,\quad
+A_c+B_c\ge d/2+x/16.
+\end{gathered}
+\end{equation}
+The last comparison uses $a_f+b_f\ge2(1-x)$ and
+$1-2x-E\ge1/16$; for $e=5$ it is direct.
+$A_{\rm old}\le3/8+9d/5$ follows from
+$x(1-x+x^2)\le5/16$ and the $C$ bound.
+The coordinate $B_c$ can be negative and is retained with its sign.
+The actual mixed mean is $-\int(A_c+B_c)\,d\nu\le0$ and
+$\|R_c\|_2<\sqrt d/2$.
+The row formula
+$R_c=(C-d)g+D_*Kg+(E-1)K^2g-\sum_{r=5}^eK^r\one$
+gives
+$|R_c|\le25/256+(19/128+119/125)\sqrt{1/8}<1/2$;
+here $119/125=16/25+39/125$ pays the actual third-power and continuous
+tail, and $\sqrt{1/8}<9/25$ completes the rational comparison.
+Thus
+\begin{equation}\tag{R24.3.9}\label{eq:R24:IV}
+\Gamma=21d/4,\quad D=11d/10,\quad\rho=1/2,\quad
+D_1\le19d/40,\quad D_2<d/16,\quad D_i<d/12\ (i\ge3).
+\end{equation}
+In detail $D_3\le0$, $D_4\le\delta_5$,
+$D_5<19\delta_3/40$, $D_6<19d\delta_4/16$, followed by four-class
+decay. Every $\gamma_r\ge d/2$, including the mean index.
+
+Package V is the same crossing with $j\ge3$, $d\le1/8$.
+Put all subsequent actual pairs $i\ge3$, whose short arms start at
+six, in one mask $S$. Then
+\begin{equation}\tag{R24.3.10}\label{eq:R24:V}
+\begin{gathered}
+R=R_c+S,\quad\Gamma\ge169d/20,\quad D=7d/4,\quad\rho=3/5,\\
+|R|<7/12<3/4,\quad\|R\|_2<\rho\sqrt d,\quad
+D_1<2d/3,\quad D_2<d/3,\quad D_i<d/8\ (i\ge3).
+\end{gathered}
+\end{equation}
+Here $|S|<13/224<1/12$, mixed mean at most $d/6$, and the $8/3$
+first-row version gives
+$\delta/d\le1/6+3/5+(8/3)(9/25)<7/4$.
+The mask's $D_1$ positive part is below $d/12$, and its later positive
+parts below $d/30$. Thus every $\gamma_r\ge d/3$, including the
+additional mean index.
+
+All long rows use the following actual finite bound.
+Put $n=L+1$. The index-two term $D\bar f_{L-1}$ is first paid at
+cost $2D$ since $\beta_2=0$.
+If $\gamma_r\ge h$ for all $r\ge3$ and $L\ge5$, retain the last
+four original path messages to get
+\begin{equation}\tag{R24.4.1}\label{eq:R24:long}
+e^\Gamma T^LF\le\widehat Y=1-h(4-d)
++[G_n-h(3+2z+z^2)](B)u+B^LR+2D\ge0.
+\end{equation}
+The actual mean, retaining the extra index, is
+\begin{equation}\tag{R24.4.2}\label{eq:R24:longmean}
+\E\widehat Y=1-4h+3hd-[\beta_{n+1}-D_L]+2D
+\le1-5h+3hd+2D.
+\end{equation}
+The pointwise form is $(1-3h)q+BV-h(1-d)+2D$, with
+$V=[G_L-h(2+z)](B)u+B^{L-1}R$.
+The full finite certificates \eqref{eq:R18:shiftfour} and
+\eqref{eq:R18:shifttwo} apply for every eligible $N$ and $h\le2/9$;
+their negative square-difference bounds are $-181/3888$ and
+$-231/1296$, including the shortest $N=6,5$ and $x=0$.
+
+We now pay package II on $d\le1/64$.
+The joint symbol $G_2+z\mathfrak r_0$ has coordinates
+$1-x^2V$, $1-\beta-xU$, both in $[0,1]$, and norm at most $6/5$.
+Thus $Y_1=\bar f_2+BR+D$ has variance at most $169d/100$,
+actual mean $m_1\le1+197d/320$, and covariance at most $d/3$.
+For the covariance use the negative bare-two bound and
+$\|BR\|_2<(4/9)\sqrt d$ to get
+$-3/16+\theta/64+65/144<1/3$ after normalization.
+The joint symbol $G_3+z^2\mathfrak r_0$ has positive coordinates
+$1-x+\beta x+x^2U$, $1-x^2V$.
+Its squared norm is at most $[1-(1-\beta)x+x^2]^2+x$;
+the difference from one divided by $x$ is
+$-1+2\beta+[(1-\beta)^2+2]x-2(1-\beta)x^2+x^3$.
+It increases in both $\beta\in[0,1/64]$ and $x\in[0,\theta]$;
+the upper-right value is $-2683/131072<0$.
+Therefore $Y_2=\bar f_3+B^2R+Dq+D_1$ has
+$\sigma(Y_2)<[1+11/640+1/16]\sqrt d<(11/10)\sqrt d$.
+Use the weaker common variance $36d/25$, covariance $5d/4$, and
+actual mean $m_2\le1-43d/320$.
+The pointwise sums for the two rows are at most
+\[
+3+(43/15)\sqrt d+(549/320)d<17/5,\qquad
+3+(128/45)\sqrt d+(549/320)d<17/5.
+\]
+Both means are at most $33/32$, so curvature nine and positive-term
+$m^3\le9/8$ are legitimate.
+For $L=3,4$, use the actual nonnegative upper bounds
+\[
+\begin{aligned}
+\overline Y_3&=\bar f_4+B^3R+D\bar f_2+(33d/64)q+d/4,\\
+\overline Y_4&=\bar f_5+B^4R+D\bar f_3+(33d/64)\bar f_2+(d/4)q+d/4.
+\end{aligned}
+\]
+Their actual means, including $D_L$, are at most
+$1-153d/320$, $1-123d/320$; standard deviations at most
+$[1+(33/25+33/64)d+8/45]\sqrt d<(5/4)\sqrt d$ and
+$[1+(63/32)d+1/9]\sqrt d<(6/5)\sqrt d$.
+Use centered covariance bounds $13d/10$, $5d/4$.
+Their row bounds are
+$(1+197d/320)q+(13/10)\sqrt d-3d/4$ and
+$(1-43d/320)q+(6/5)\sqrt d-\tau+d/4$.
+Adding $C_a$ and the actual mean gives sum below $17/5$ in both rows.
+For $L\ge5$ take $h=d/3$ in \eqref{eq:R24:long}.
+Then $m\le1+(8/15)d+d^2\le1+3d/5$,
+$\|B^LR\|_2<\sqrt d/12$, $\sigma\le13\sqrt d/12$,
+and covariance at most $9d/8$.
+Its pointwise $V$ tail is at most $\sqrt d/9$, so
+$C_a+\widehat Y+m\le3+(104/45)\sqrt d+(7/15)d+d^2/3<17/5$.
+All package-II payments therefore have
+$\E[f_a(T^LF)^4]\le e^{-Ad}+Bde^{-(351/20)d}$ with
+\begin{equation}\tag{R24.5.table}\label{eq:R24:IIpayments}
+\begin{array}{c|c|c|c|c|c}
+L&m\text{ upper bound}&\operatorname{Var}/d&\operatorname{Cov}/d&A&B\\\hline
+1&1+197d/320&169/100&1/3&84/5&1671/100\\
+2&1-43d/320&36/25&5/4&19&18\\
+3&1-153d/320&25/16&13/10&21&20\\
+4&1-123d/320&36/25&5/4&20&18\\
+\ge5&1+3d/5&169/144&9/8&84/5&16.
+\end{array}
+\end{equation}
+The actual remainder constants are
+$1671/100$, at most $449/25<18$, $1541/80<20$,
+$449/25<18$, and $125/8<16$.
+The exact first-term exponents are respectively
+$2699/160,\allowbreak 3179/160,\allowbreak 3399/160,\allowbreak 3339/160,\allowbreak 2709/160$, exceeding the listed
+$A$. In all rows $C\ge A/2$, $Ad/2<1$, and $A-B\ge9/100$,
+so the deficit exceeds $3d/100>d/800$.
+
+For packages III--V on $d\le1/8$ we prove two scaled continuous
+curvature certificates, with $t=\sqrt d<3/8$, $W=e^{-\Gamma}Y$.
+Certificate I assumes $\Gamma\ge21d/5$, $m_Y\le1+3d/5$, and
+\[
+Y+m_Y\le(1+\delta d)q+1+(8/5)t+(9/4)d,
+\qquad0\le\delta\le11/10.
+\]
+Then $\E W\le1$ and $C_a+W+\E W\le18/5$.
+Indeed $e^{-\Gamma}(1+\delta d)\le1-d$; the coefficient of $q$
+in the sum is nonpositive, so take $q=0,p=2$.
+After $e^{-\Gamma}\le1/(1+21d/5)$, multiplication by the positive
+denominator bounds the difference from $18/5$ below by
+\[
+3/5-(14/5)t+(647/100)t^2-(126/25)t^3+(42/5)t^4
+\ge3/5-(14/5)t+(229/50)t^2>0,
+\]
+whose discriminant is $-394/125$.
+Certificate II assumes $\Gamma\ge169d/20$, $m_Y\le1+2d$, and
+$Y+m_Y\le(1+3d)q+1+2t+(21/4)d$.
+The same conclusion holds: the maximum again occurs at $q=0$, and
+the positive-denominator difference is at least
+\[
+3/5-(16/5)t+(1027/100)t^2-(507/50)t^3+(169/10)t^4
+\ge3/5-(16/5)t+(2587/400)t^2>0,
+\]
+whose discriminant is $-2641/500$. Both give $M=10$ in
+\eqref{eq:R24:scaled} throughout the full continuous domain.
+
+For package III, $R=B^2u+S$.
+At $L=1$ the joint core is $Q_1=G_2+z^3=1+z(1-x)$,
+with $|Q_1|^2=1+x(1-x)^2\le31/27<(43/40)^2$.
+Adding $BS$ gives $\sigma(Y_1)\le6\sqrt d/5$ and
+$m_1\le1+3d/5$.
+$\operatorname{Re}(G_aQ_1)\ge(1-x)^2$ and its true scalar
+correction is at most $d^2-\tau^2$, so core covariance is at most
+$-2225d/8192$. The $BS$ cost is at most $9d/80$, hence total
+covariance is nonpositive.
+At $L=2$, the core $Q_2=G_3+z^4=(1-x+x^2)+z$ has norm at most
+one: the square difference divided by $x$ is
+$-1+3x-2x^2+x^3$, increasing to $-1451/32768$ at $\theta$.
+Adding $Du+B^2S$ gives $\sigma(Y_2)\le[1+11/80+1/16]\sqrt d
+=(6/5)\sqrt d$, and $m_2\le1-19d/60$.
+The core real product is at least $\phi=1-3x+2x^2-x^3$;
+its scalar correction is at most $d\delta_3$.
+Since $D\operatorname{Cov}(C_a,q)\le0$,
+$\operatorname{Cov}(C_a,Y_2)
+\le[-1451/32768+\theta^2/8+9/128]d<d/20$.
+The two row sums $Y+m_Y$ are bounded respectively by
+$q+1+(8/5)t+(17/10)d$ and
+$(1+D)q+1+(8/5)t-(49/60)d$, so Certificate I applies.
+
+For III at $L=3$ use
+$\overline Y_3=\bar f_4+B^3R+D\bar f_2+(d/2)q+d/12$.
+Its actual mean is at most $1-389d/480$.
+Combining $B^2u$ with all short paths gives exact core coordinates
+$1-x+(3/5)d$, $1-x+x^2+(11/10)d$.
+Their square is at most $(1+3d/5)^2$, since the difference divided
+by $x$ is at most $-1+\theta+d+(121/100)d^2<0$.
+Adding $B^3S$ gives $\sigma\le9\sqrt d/8$.
+The $D\bar f_2,(d/2)q$ covariances are nonpositive; the others cost
+$d/12+(9/8)(8/75+1/25)d<d/4$,
+using $\theta^{5/2}<(1/6)(16/25)=8/75$.
+The row bound $(1+3d/5)q+(7/5)t-11d/12$ enters Certificate I.
+For III at $L=4$ take
+$\overline Y_4=\bar f_5+B^4R+D\bar f_3+(d/2)\bar f_2
++(d/12)q+d/10$.
+Its mean is at most $1-13d/15$, and the core coordinates are exactly
+$1-x+x^2-x^3-(19/60)d-(11/10)dx$, $1-x+(3/5)d$.
+The first is positive and at most the $G_5$ real coordinate;
+the second adds $3d/5$ to its imaginary coordinate, so the core norm
+is at most $1+(2/5)d$.
+Adding $B^4S$ gives $\sigma<11\sqrt d/10$.
+The possibly positive $D\bar f_3$ covariance is retained:
+\[
+\operatorname{Cov}(C_a,\overline Y_4)
+\le[1/32+(9/8)(7/100+1/40)+11/960]d
+=359d/2400<3d/20.
+\]
+Here $\|B^4B^2u\|_2\le\theta^3\sqrt d<7\sqrt d/100$ and the
+$D\bar f_3$ cost before $d\le1/8$ is $(11/120)d^2$.
+The row bound is $q+(13/10)t$, so Certificate I applies.
+For III at $L\ge5$, take $h=15d/32$ in \eqref{eq:R24:long}.
+Then $m\le1-(23/160)d+(45/32)d^2\le1+d/30$.
+The complete tail $B^LR=B^{L+2}u+B^LS$ has norm below
+$(3/50)\sqrt d$: its two costs are below
+$27\sqrt d/625$ and $2\sqrt d/125$, totaling
+$37\sqrt d/625<3\sqrt d/50$.
+Thus $\sigma\le16\sqrt d/15$, covariance at most $6d/5$, and
+$m^3\le33/32$, since $m\le1+1/240$ and
+$(1+x)^3\le1+4x$ for $x\le1/4$.
+The $V$ tail is below $\sqrt d/10$, giving
+$\widehat Y+m\le(1-3h)q+1+(11/10)t+(9/4)d$, again Certificate I.
+For short III rows, \eqref{eq:R24:scaled} gives
+\begin{equation}\tag{R24.7.1}\label{eq:R24:IIIshort}
+\E[f_a(T^LF)^4]\le e^{-16d}+(73/5)de^{-(42/5)d}.
+\end{equation}
+The four remainder constants are at most
+$72/5,73/5,437/32,127/10$; the smallest mean exponent is
+$84/5+57/32-12/5=2589/160>16$.
+The deficit exceeds $7d/15>d/800$.
+For long III rows the remainder is at most
+$10(256/225)+4(33/32)(6/5)=2939/180<33/2$ and the mean exponent
+exceeds $84/5$, so
+$\E[f_a(T^LF)^4]\le e^{-(84/5)d}+(33/2)de^{-(42/5)d}$.
+$A-B=3/10$, $Ad/2\le21/20<2$, giving deficit $>d/30>d/800$.
+
+For package IV retain the actual signed coordinates
+\eqref{eq:R24:crosscoordinates}.
+At $L=1$, the joint coordinates $1-xB_c,1-A_c$ are positive and
+have squared norm at most $(1+x^3)^2+x<25/16$;
+use $(107/100)^2+13/32<25/16$.
+The actual mean is at most $1+23d/40$.
+The real product is at least $3/16-19d/64\ge77/512$, and actual
+scalar correction is at most
+$[(1+\theta^3)-\kappa(21/40)]d^2<47d^2/60$.
+Thus covariance is nonpositive. The row sum is at most
+$q+1+(3/2)t+(67/40)d$, so Certificate I gives $M=10$;
+variance is at most $25d/16$.
+At $L=2$, the positive coordinates are $1-x+xA_c,1-xB_c$.
+Their square is at most
+\[
+(1-21x/40)^2+x(1+x^3)^2
+\le1+(441/1600)\theta^2+2\theta^4+\theta^7<(17/16)^2.
+\]
+After $Du$, $\sigma\le17/16+11/80=6/5$ in units of $\sqrt d$.
+The actual mean is at most $1-29d/80$, covariance at most $27d/20$,
+and row sum at most $(1+D)q+1+(8/5)t$, so Certificate I applies.
+At $L=3,4$ use
+\[
+\begin{aligned}
+\overline Y_3&=\bar f_4+B^3R+D\bar f_2+(19d/40)q+d/16,\\
+\overline Y_4&=\bar f_5+B^4R+D\bar f_3+(19d/40)\bar f_2+(d/16)q+d/12.
+\end{aligned}
+\]
+Their actual means are at most $1-419d/480$, $1-227d/240$.
+Their standard deviations are at most
+$[1+(359/200)d+2/15]\sqrt d<(11/8)\sqrt d$ and,
+retaining the $P_5$ loss $-2d$,
+$[1-107d/400+1/12]\sqrt d\le(13/12)\sqrt d$.
+Covariances are at most $d/4$ and $3d/20$:
+the first is bounded by $d/12+(9/8)(2/15)d$ after favorable terms;
+the second by $d/32+3d/32+11d/960$.
+The actual row bounds are
+$(1+23d/40)q+(7/5)t-15d/16$ and $q+(5/4)t$, both in Certificate I.
+For IV at $L\ge5$ use $h=d/2$: actual mean at most $1-9d/80$,
+$\sigma\le17\sqrt d/16$, covariance at most $6d/5$;
+$\|V\|_2\le13\sqrt d/12$ gives row sum
+$\widehat Y+m\le q+1+(8/5)t+(9/4)d$.
+The IV $L=1$ remainder is at most $125/8<16$ and its mean exponent
+$21+57/32-23/10>20$, so take $(A,B,C)=(20,16,21/2)$.
+For $L=2,3,4,\ge5$, the remainders are at most
+$99/5,637/32,4441/360,10297/640$, all below twenty;
+their mean exponents exceed twenty-one. Take $(21,20,21/2)$.
+All $Ad/2<2$, giving deficit $>d/9>d/800$.
+
+For package V use the actual $R,D_i$ in \eqref{eq:R24:V}.
+The first two bounds are \eqref{eq:R24:propagation}; take additionally
+\[
+\overline Y_3=\bar f_4+B^3R+D\bar f_2+(2d/3)q+d/3,
+\quad
+\overline Y_4=\bar f_5+B^4R+D\bar f_3+(2d/3)\bar f_2+(d/3)q+d/8,
+\]
+and $h=d/3$ in the long row. Keeping all actual $D_L$ means gives
+\begin{equation}\tag{R24.9.table}\label{eq:R24:Vtable}
+\begin{array}{c|c|c|c|c}
+L&m_Y\text{ upper bound}&\sigma(Y)/\sqrt d
+&\operatorname{Cov}(C_a,Y)/d&m_Y^3\text{ upper bound}\\\hline
+1&1+17d/12&8/5&9/20&5/3\\
+2&1+3d/4&3/2&3/8&4/3\\
+3&1+9d/32&8/5&4/15&9/8\\
+4&1+d/4&5/4&1/6&9/8\\
+\ge5&1+(11/6)d+d^2\le1+2d&11/10&5/4&2.
+\end{array}
+\end{equation}
+For the first norm use $6/5+2/5$, dropping only the favorable
+bare-two covariance and paying tail $9d/20$.
+For the second use $1+\theta(3/5)+7/32<3/2$ and covariance
+$d/12+9d/32<3d/8$, retaining the negative $Dq$ term.
+For the third use $1+(83/30)d+4/25<8/5$ and covariance
+$d/12+9d/50<4d/15$.
+For the fourth retain $P_5$'s $-2d$, giving
+$1+(53/60)d+1/10<5/4$, and covariance
+$d/32+9d/80+7d/384<d/6$.
+For the long row the core norm is at most $1-d$, complete tail norm
+below $\sqrt d/12$, and centered Cauchy--Schwarz pays the covariance.
+Each actual row expands to
+$Y+m_Y\le(1+3d)q+1+2t+(21/4)d$:
+the scalar coefficients are $19/6,5/12$, negative, and at most $3/8$
+in the four short rows; the long scalar is
+$5d+(4/3)d^2\le31d/6<21d/4$.
+The respective $q$ coefficients are at most
+$1,1+7d/4,1+17d/12,1+3d/4,1-d$; every square-root coefficient is
+below two. Certificate II thus gives $M=10$.
+For V at $L=1$, the remainder is at most $143/5<29$, while the
+mean exponent $169/5+57/32-17/3>59/2$.
+Take $(A,B,C)=(59/2,29,169/10)$.
+The other row remainders are at most $49/2,134/5,131/8,221/10$,
+all at most $134/5$; their mean exponents exceed twenty-seven, even
+the weakest long exponent $169/5+57/32-8>27$.
+Take $(A,B,C)=(27,134/5,169/10)$.
+$C\ge A/2$, $Ad/2<2$, and the smallest deficit is $>d/45>d/800$.
+This pays the entire finite later mask once, independently of its size.
+
+For package II's high range $d\ge1/64$, every later short arm is at
+least five and
+$|R_{s,t}|<\sqrt d/5\le8d/5$, so $h_sf_t\le e^{-8d/5}$.
+The same $F$ is at most $e^{-8(j-1)d/5}qf_2h_c$.
+The exact $D_{\rm full}$ row gives the required $1-d/800$ for the
+remaining $qf_2h_c$, all $a\ge3,c\ge4,L\ge1$.
+For III at $d\ge1/8$, only rearrange multiplication at the same root:
+\[
+F=(qf_2h_{s_2})(h_3f_{t_2})\prod_{i\ge3}h_{s_i}f_{t_i},
+\qquad s_2\ge5,\ t_2\ge6.
+\]
+The original directions are unchanged. For $t\ge6$ put
+$\beta=\beta_{t-1}$, $\Gamma_t=d+\beta_t+\beta$,
+$U=\sum_{r=3}^{t-1}K^r\one$, and
+$\alpha=\beta-\E U=\Gamma_t-2d\ge3d/16$.
+The actual two-arm sum gives
+$h_3f_t\le e^{-\Gamma_t-R_0}$,
+$R_0=\alpha g-K(U-\E U)$.
+The centered row bound and $g^2+pq=1$ give
+\[
+|R_0|\le\sqrt{\alpha^2+\operatorname{Var}U},\quad
+\operatorname{Var}U\le\theta^2d<11d^2/8\le d^2+2\alpha d.
+\]
+Thus $|R_0|\le\alpha+d$ and $\Gamma_t-|R_0|\ge d$,
+proving $h_3f_t\le e^{-d}$.
+Pay all other pairs as above and use the same-direction
+$D_{\rm full}$ row for $qf_2h_{s_2}$.
+For IV,V at $d\ge1/8$ the original expression is already
+$(qf_2h_e)(h_3f_4)\prod_{i\ge3}h_{s_i}f_{t_i}$.
+From $h_3+f_4=2-3d+K^4\one-dg$, centered rows give
+$|K^4\one-dg|\le\sqrt{d^2+\delta_3}\le2d$,
+since $\delta_3\le\theta^2d\le3d^2$.
+Hence $h_3f_4\le e^{-d}$; pay later pairs and use the exact directory
+row for $qf_2h_e$, $e\ge5$. All high rows meet their low rows at the
+stated closed endpoints with identical original directions.
+
+For $j\ge2$, Packages II--V give the bounds at $L=1,2,3,4,\ge5$.
+For $j=1$, the original $(1,2,3),L=1$ direction $qf_2\bar f_3$ has
+deficit $d/256$; its other connectors use $qf_2h_3$ with deficit $d/16$;
+$c\ge4$ uses $qf_2h_c$ with deficit $d/800$.
+These precise short-directory rows and the table
+\eqref{eq:R24:directions} prove \eqref{eq:R24:claim}.
+At $d=0$, original leaf integration gives equality without $K=0$.
+Positivity restores equal-pair decorations in place. The crossing
+retains every original arm and subdivision vertex; full reversal
+changes every receiving, terminal, connector, and decoration edge
+together. This is a reference fourth-moment interface, to be used
+with its actual weights in the complete original-tree integral.

@@ -1,0 +1,523 @@
+\subsection{The unit-connector eighth moment for every triple \((1,\allowbreak b,\allowbreak c)\), \(3\le\allowbreak  b<\allowbreak c\)}\label{proof:Q5-C065}
+
+\paragraph{Q65.1 Directions and statement.}
+Use the finite model, operators and arm messages of
+Appendix~\ref{proof:Q5-C064}: \(K\) is real and skew, \(|K|\le\allowbreak 1\),
+\(A=\allowbreak J+K\), \(T=\allowbreak J-K=\allowbreak A^*\), \(g=\allowbreak K\one\), \(p=\allowbreak 1+g\), \(q=\allowbreak 1-g\),
+\(f_n=\allowbreak A^n\one\), \(\bar f_n=\allowbreak T^n\one\), and \(h_n=\allowbreak Tf_{n-1}\).
+Write \(\delta_j=\allowbreak \|K^j\one\|_2^2\), \(d=\allowbreak \delta_1\),
+\(\theta=\allowbreak 13/32\), \(\kappa=\allowbreak 19/32\), and \(\tau=\allowbreak d-\delta_2\).
+All expectations, norms, adjoints and spectral measures use the same
+finite probability measure after zero-mass atoms have been removed.
+The finite skew-kernel bounds are
+\begin{equation}\tag{Q65.1.1}\label{eq:Q65:1.1}
+0\le d\le1/3,\quad\|K\|^2\le\theta,\quad
+d^2\le\delta_2\le\theta d,\quad\delta_{j+1}\le\theta\delta_j,
+\quad |Kv(x)|\le\|v\|_2.
+\end{equation}
+The spectral support is \([0,\allowbreak \theta]\), and
+\(p(x),\allowbreak q(x)\ge\allowbreak \mu(x)>\allowbreak 0\) on positive-mass atoms.
+For the terminal residual \((1,\allowbreak b,\allowbreak c)\), \(3\le\allowbreak  b<\allowbreak c\), direct the
+unit arm inward, the \(b\)-arm outward, and the first edge of the
+\(c\)-arm inward with its remaining edges outward. The unit connector
+points from the terminal to a new root, whose unit arm points outward.
+For genuine equal-pair products at the terminal and root, set
+\begin{equation}\tag{Q65.1.2}\label{eq:Q65:1.2}
+E_0=\prod_jf_{\ell_j}h_{\ell_j},\qquad
+F=E_0qf_bh_c,\quad H=pTF,\quad H_D=E_rpTF.
+\end{equation}
+Each equal-pair factor belongs to \([0,\allowbreak 1]\). For all these finite
+integer parameters and decorations, the fixed directions satisfy
+\begin{equation}\tag{Q65.1.3}\label{eq:Q65:1.3}
+\boxed{\E H_D^8\le1-d/500.}
+\end{equation}
+The low-domain estimates are stronger:
+\begin{equation}\tag{Q65.1.4}\label{eq:Q65:1.4}
+\E[(pT(qf_bh_c))^8]\le e^{-d/30}
+\quad(c\ge5,\ d\le1/5),
+\end{equation}
+\begin{equation}\tag{Q65.1.5}\label{eq:Q65:1.5}
+\E[(pT(qf_3h_4))^8]\le e^{-5d}\quad(d\le1/4).
+\end{equation}
+Full reversal gives the corresponding bounds with every edge reversed.
+
+\paragraph{Q65.2 A bounded exponential estimate retaining a negative mean.}\label{part:Q65:negative-mean}
+Let \(B\) take values zero and one, with \(\Pr(B=\allowbreak 1)=\allowbreak \pi\),
+\(0<\allowbreak \pi<\allowbreak 1/2\), and put
+\(a=\allowbreak \tfrac12\log((1-\pi)/\pi)>\allowbreak 0\).
+The centered Bernoulli inequality \eqref{eq:Q102:3.5}, including
+every real \(t\), gives
+\begin{equation}\tag{Q65.2.1}\label{eq:Q65:2.1}
+\E e^{t(B-\pi)}\le
+\exp\left\{\frac{1-2\pi}{4\log((1-\pi)/\pi)}t^2\right\}.
+\end{equation}
+The coefficient \(\tanh(a)/(8a)\) increases with \(\pi\).
+For \(\pi\le\allowbreak 13/45\), it is at most \(19/[180\log(32/13)]\), and
+\begin{equation}\tag{Q65.2.2}\label{eq:Q65:2.2}
+\frac{19}{180\log(32/13)}<\frac{47}{400}.
+\end{equation}
+To verify the constant, put \(x=\allowbreak 19/45\). The positive integral or
+geometric series gives
+\fitdisplay{
+\log(32/13)=2\operatorname{arctanh}x
+\ge2(x+x^3/3+x^5/5)
+>38/45+13718/273375+64/15625>380/423.
+}{}
+The first strict substitution uses \(x>\allowbreak 2/5\). The first two terms
+sum to \(244568/273375\), whose difference from \(380/423\) is
+\(430236/115637625\); the final comparison is
+\fitdisplay{
+64\cdot115637625=7400808000>
+430236\cdot15625=6722437500.
+}{}
+At \(\pi=\allowbreak 0\), the centered variable is identically zero.
+
+Now let one finite real variable \(W\) satisfy
+\fitdisplay{\E W=\mu\le0,\quad |W|\le U,\quad
+ \E W^2\le\theta U^2.}{}
+The case \(U=\allowbreak 0\) is direct. For \(U>\allowbreak 0\), put
+\(M=\allowbreak U-\mu>\allowbreak 0\), \(v=\allowbreak \E(W-\mu)^2\ge\allowbreak 0\),
+and use the centered two-point variable \(Y\) in
+\eqref{eq:oc:matched-contacts}: its values are \(-v/M,M\), with
+probabilities \(M^2/(M^2+v),v/(M^2+v)\).
+For \(f(w)=e^{sw}\), \(s\ge0\), take \(Q=Q_{\mu-v/M}\) from
+\eqref{eq:oc:hermite-majorant}. Equation~\eqref{eq:oc:hermite-matching} gives
+\fitdisplay{\E e^{sW}\le\E Q(W)=e^{s\mu}\E e^{sY}.}{}
+Put \(L=\allowbreak M+v/M\). Its upper probability is
+\(\pi=\allowbreak v/(M^2+v)\le\allowbreak \theta/(1+\theta)=\allowbreak 13/45\), because
+\(v\le\allowbreak \theta U^2-\mu^2\le\allowbreak \theta(U-\mu)^2\).
+Apply \eqref{eq:Q65:2.1}--\eqref{eq:Q65:2.2} to
+\(Y=\allowbreak L(B-\pi)\):
+\begin{equation}\tag{Q65.2.3}\label{eq:Q65:2.3}
+\boxed{\E e^{sW}\le\exp\{s\mu+(47/400)s^2L^2\}.}
+\end{equation}
+At \(v=\allowbreak 0\), \(Y=\allowbreak 0\) and the same formula holds.
+If, further, \(U^2=\allowbreak A_0d\), \(|\mu|\le\allowbreak \sqrt{A_0}d\), \(A_0>\allowbreak 0\),
+then \(a_1=\allowbreak |\mu|/U\le\allowbreak \sqrt d\), and
+\fitdisplay{
+L\le U\left(2-\frac{\kappa}{1+a_1}\right)
+\le\sqrt{A_0d}\left(2-\frac{\kappa}{1+\sqrt d}\right).
+}{}
+For \(s=\allowbreak 8\), this gives
+\begin{equation}\tag{Q65.2.4}\label{eq:Q65:2.4}
+\boxed{\E e^{8W}\le
+ \exp\{8\E W+\lambda(\sqrt d)A_0d\},\qquad
+\lambda(x)=\frac{188}{25}
+ \left(2-\frac{\kappa}{1+x}\right)^2.}
+\end{equation}
+
+For the continuous interval \(0\le\allowbreak  x\le\allowbreak 9/20\),
+\begin{equation}\tag{Q65.2.5}\label{eq:Q65:2.5}
+\boxed{\lambda(x)\le149/10+(63/5)x-4x^2.}
+\end{equation}
+Indeed, with \(Q(x)=\allowbreak (2-\kappa/(1+x))^2\),
+\fitdisplay{
+Q(0)=2025/1024,\quad Q'(0)=855/512,\quad
+Q''(x)/2=\frac{\kappa(3\kappa-4-4x)}{(1+x)^4}.
+}{}
+Since \(Q'''(x)=\allowbreak 24\kappa(1+x-\kappa)/(1+x)^5>\allowbreak 0\), throughout
+the interval \(Q''/2\) is at most its right endpoint value
+\(-1527125/2829124\le\allowbreak -25/47\).
+The cross-products are
+\(1527125\cdot47=\allowbreak 71774875>\allowbreak 2829124\cdot25=\allowbreak 70728100\).
+Integrating twice gives
+\fitdisplay{\lambda(x)\le3807/256+(8037/640)x-4x^2.}{}
+Now \(3807/256<\allowbreak 149/10\), \(8037/640<\allowbreak 63/5\) imply
+\eqref{eq:Q65:2.5}. Also \(\lambda\) increases, so
+\begin{equation}\tag{Q65.2.6}\label{eq:Q65:2.6}
+\lambda(x)\le\frac{188}{25}(77/48)^2
+=278663/14400<20\qquad(0\le x\le1/2).
+\end{equation}
+
+\paragraph{Q65.3 Finite paths, the high domain and a positive envelope.}
+Set \(\beta_1=\allowbreak \beta_2=\allowbreak 0\),
+\(\beta_n=\allowbreak \sum_{j=\allowbreak 1}^{\lfloor(n-1)/2\rfloor}(-1)^{j-1}\delta_j\),
+\(S_n=\allowbreak \sum_{j=\allowbreak 0}^nK^j\one\), and \(G_s(z)=\allowbreak \sum_{j=\allowbreak 0}^{s-1}z^j\).
+The finite positive convolution is
+\begin{equation}\tag{Q65.3.1}\label{eq:Q65:3.1}
+S_n=f_n+\sum_{j=3}^n\beta_jf_{n-j},\qquad
+\tau\le\beta_j\le d\quad(j\ge3).
+\end{equation}
+Also \(\E S_n=\allowbreak 1-\beta_{n+1}\), \(\E(gS_n)=\allowbreak \beta_{n+2}\),
+\(\beta_3=\allowbreak \beta_4=\allowbreak d\), \(\beta_5=\allowbreak \beta_6=\allowbreak \tau\), with the finite
+alternating-sum bounds
+\fitdisplay{
+\begin{gathered}
+\beta_j\in[\tau+\kappa\delta_3,\tau+\delta_3]\quad(j\ge7),\\
+\beta_j\in[\tau+\delta_3-\delta_4,
+                 \tau+\delta_3-\delta_4+\delta_5]\quad(j\ge9).
+\end{gathered}
+}{}
+The all-index mean bound \(\E f_n\le\allowbreak 1-83d/32\), \(n\ge\allowbreak 4\),
+is proved in Appendix~\ref{proof:Q5-C090}, following Q4-C134, \S2.3.
+Together with \(h_c\le\allowbreak 2\E f_{c-1}\) and the short paths, it gives
+\begin{equation}\tag{Q65.3.2}\label{eq:Q65:3.2}
+h_c\le77/80\quad(c\ge5,d\ge1/5),\qquad
+h_4\le1\quad(d\ge1/4).
+\end{equation}
+The first bound follows from \(2(1-83d/32)\).
+For the second, \(h_4=\allowbreak 2-S_4-d-dq\) and \(S_4\ge\allowbreak  d(1+p)\)
+give \(h_4\le\allowbreak 2-4d\le\allowbreak 1\).
+In these high domains the message is bounded by \(qf_b\).
+Q5-C051 supplies the same-direction unit bound
+\(\E[(pT(qf_b))^8]\le\allowbreak 1-d/500\).
+It remains to consider \(c\ge\allowbreak 5,\allowbreak d\le\allowbreak 1/5\), and the short case
+\((b,\allowbreak c)=\allowbreak (3,\allowbreak 4)\) on \(d\le\allowbreak 1/4\).
+For fixed \(b,\allowbreak c\), set
+\begin{equation}\tag{Q65.3.3}\label{eq:Q65:3.3}
+\begin{gathered}
+\alpha=\beta_c,\quad B=\beta_{c-1},\quad
+\Delta=\beta_b+\alpha+B,\quad m=1-\Delta/2,\quad t=m-B,\\
+W=S_c-S_b=K^bG_{c-b}(K)g,\quad U=Bg-W,\quad
+H_0=q+U/m=1-(tg+W)/m.
+\end{gathered}
+\end{equation}
+Retaining \(\beta_b\) in the positive convolution for \(f_b\), and
+\(\alpha+Bq\) in that for \(h_c\), gives
+\begin{equation}\tag{Q65.3.4}\label{eq:Q65:3.4}
+f_b+h_c\le2-\Delta+Bg-W,\qquad
+P:=qf_bh_c\le q(m+U/2)^2.
+\end{equation}
+For \(c\ge\allowbreak 5,\allowbreak d\le\allowbreak 1/5\), one has \(m\ge\allowbreak 7/10\), \(t\ge\allowbreak 1/2\).
+To prove \(H_0\ge\allowbreak 0\), put \(v_0=\allowbreak K^{b-1}G_{c-b}(K)g\), so
+\(W=\allowbreak Kv_0\), \(\E v_0=\allowbreak \beta_b-\alpha\le\allowbreak \delta_2\le\allowbreak  B\).
+Every finite \(G_s\) has modulus at most \(\sqrt{1+\theta}\), and
+the row bound gives
+\fitdisplay{
+|v_0|^2\le(1+\theta)\delta_{b-1}
+\le\theta(1+\theta)d\le117/1024<1/4.
+}{}
+Thus \(z=\allowbreak t+v_0\ge\allowbreak 0\) and \(mH_0=\allowbreak Tz+B-\E v_0\ge\allowbreak 0\).
+For \((b,\allowbreak c)=\allowbreak (3,\allowbreak 4),\allowbreak d\le\allowbreak 1/4\), one has
+\(v_0=\allowbreak K^2g\), \(\E v_0=\allowbreak 0\), and
+\(|v_0|\le\allowbreak \sqrt{\theta d}<\allowbreak 3/8\le\allowbreak  t\), proving positivity there too.
+Apply \(T\) to \eqref{eq:Q65:3.4}, and put \(J_0=\allowbreak \E U^2\):
+\fitdisplay{
+TP\le m^2TH_0-m\E(gU)+mK(gU)+\tfrac14T(qU^2).
+}{}
+The bounds \(|K(gU)|\le\allowbreak \sqrt{dJ_0}\), \(T(qU^2)/4\le\allowbreak  J_0\)
+show that any nonnegative \(\delta\) satisfying
+\begin{equation}\tag{Q65.3.5}\label{eq:Q65:3.5}
+\delta d\ge m\{\sqrt{dJ_0}-\E(gU)\}+J_0
+\end{equation}
+gives \(TP\le\allowbreak  m^2TH_0+\delta d\).
+Define \(D=\allowbreak \beta_{b+2}-\beta_{c+2}=\allowbreak -\E(gW)\) and \(N=\allowbreak K(tg+W)\).
+Then
+\begin{equation}\tag{Q65.3.6}\label{eq:Q65:3.6}
+TH_0=q-\E W/m+N/m,\qquad\E N=-td+D.
+\end{equation}
+Both \(mp\) and \(mTH_0+\delta d/m\) are nonnegative. AM--GM gives
+\begin{equation}\tag{Q65.3.7}\label{eq:Q65:3.7}
+0\le pTP\le
+\left(m-\frac{\E W}{2}+\frac{\delta d}{2m}+\frac N2\right)^2.
+\end{equation}
+Suppose that this same \(N\) has an \(A_0>\allowbreak 0\) with
+\begin{equation}\tag{Q65.3.8}\label{eq:Q65:3.8}
+|N|^2\le A_0d,\quad \E N^2\le\theta A_0d,\quad
+\E N\le0,\quad|\E N|\le\sqrt{A_0}d.
+\end{equation}
+Equation~\eqref{eq:Q65:2.4}, the nonnegative base in
+\eqref{eq:Q65:3.7}, and \(\log z\le\allowbreak  z-1\) yield
+\(\E[(pTP)^8]\le\allowbreak  e^{d\Phi}\), where
+\begin{equation}\tag{Q65.3.9}\label{eq:Q65:3.9}
+\boxed{\Phi=-8\{\Delta-(D-\E W)\}/d-8t+8\delta/m
+                   +\lambda(\sqrt d)A_0.}
+\end{equation}
+At a zero base, the comparison holds directly.
+
+\paragraph{Q65.4 Bounds for all finite tails.}
+At \(z=\allowbreak i\sqrt x\), \(0\le\allowbreak  x\le\allowbreak \theta\), write
+\(G_\infty=\allowbreak (1+z)/(1+x)\). Finite summation gives
+\begin{equation}\tag{Q65.4.1}\label{eq:Q65:4.1}
+G_\infty=\frac{G_3+xG_1}{1+x},\qquad
+G_{4h+r}=(1-x^{2h})G_\infty+x^{2h}G_r
+\quad(r=1,2,3,4).
+\end{equation}
+Every finite \(G_s\) lies in the real convex hull of
+\(G_1,\allowbreak G_2,\allowbreak G_3,\allowbreak G_4\). Thus \(|A+BG_s|^2\), for fixed complex
+\(A,\allowbreak B\), is bounded by its four vertex values.
+For \(b=\allowbreak 3\), the vertices of \(t+z^3G_s\) have real parts between
+\(t\) and \(t+x^2\), with imaginary magnitude at most \(x^{3/2}\);
+the second vertex dominates. For \(b=\allowbreak 4\), the real parts lie between
+\(t+x^2-x^3\) and \(t+x^2\), and the imaginary magnitude is at most
+\(x^{5/2}\); again the second vertex dominates.
+For \(b=\allowbreak 5\), \(t\ge\allowbreak 1/2>\allowbreak x^3\), so the real parts are nonnegative
+and at most \(t\), and the imaginary magnitude is at most \(x^{5/2}\);
+the first vertex dominates. Row and spectral bounds therefore give
+the following choices in \eqref{eq:Q65:3.8}:
+\begin{equation}\tag{Q65.4.2}\label{eq:Q65:4.2}
+\begin{array}{c|c}
+b&A_0(t)\\\hline
+3&(t+\theta^2)^2+\theta^3\\
+4&(t+\theta^2)^2+\theta^5\\
+5&t^2+1/64\\
+\ge6&(t+7/250)^2+4/625.
+\end{array}
+\end{equation}
+The first two follow from the vertex bounds; the third uses
+\(\theta^5<\allowbreak 1/64\). For \(b\ge\allowbreak 6\),
+\((-D)_+\le\allowbreak \delta_5\), \(D_+\le\allowbreak \delta_4\), and
+\fitdisplay{
+\|W\|^2/d\le(1+\theta)\theta^b<4/625,\qquad
+\|tg+W\|^2/d\le t^2+2\theta^4t+4/625.
+}{}
+Use \(\theta^4<\allowbreak 7/250\) for the last row.
+In every case \(\|K(tg+W)\|^2\le\allowbreak \theta\|tg+W\|^2\).
+For the mean conditions, \(b=\allowbreak 3,\allowbreak 4\) have
+\(-\delta_3\le\allowbreak  D\le\allowbreak 0\), so
+\(\E N\le\allowbreak 0\), \(|\E N|\le\allowbreak (t+\theta^2)d\).
+For \(b=\allowbreak 5\), \(0\le\allowbreak  D\le\allowbreak \delta_4\), giving
+\(\E N<\allowbreak 0\), \(|\E N|\le\allowbreak  td\).
+For \(b\ge\allowbreak 6\), \(-\delta_5\le\allowbreak  D\le\allowbreak \delta_4\), giving
+\(\E N<\allowbreak 0\), \(|\E N|\le\allowbreak (t+\theta^4)d\); here \(t\ge\allowbreak 1/2>\allowbreak \theta^3\).
+Each upper bound is at most \(\sqrt{A_0}d\).
+For the all-index interval when \(b\ge\allowbreak 6\), at \(b=\allowbreak 6\),
+\(\beta_{b+2}=\allowbreak \beta_8=\allowbreak \tau+\delta_3\) is the upper endpoint of
+its alternating layer, hence \(D\ge\allowbreak 0\). For \(b\ge\allowbreak 7\), both indices
+are at least nine, with interval width at most \(\delta_5\).
+The common interval for all indices at least eight has width at most
+\(\delta_4\), giving \(D_+\le\allowbreak \delta_4\).
+
+For \(c\ge\allowbreak 5,\allowbreak d\le\allowbreak 1/5\), the error in \eqref{eq:Q65:3.5} may be chosen as
+\begin{equation}\tag{Q65.4.3}\label{eq:Q65:4.3}
+\begin{array}{c|c}
+b&\delta\\\hline
+3&(143/300)m+d^2+19/200\\
+4&(11/30)m+(d+1/5)^2\\
+5&m/8+(d+1/8)^2\\
+\ge6&(3/20)m+(d+2/25)^2.
+\end{array}
+\end{equation}
+Indeed \(J_0=\allowbreak \|Bg-W\|^2\), \(\E(gU)=\allowbreak Bd-\E(gW)\), \(B\le\allowbreak  d\).
+For \(b=\allowbreak 3\), \(\E(gW)\ge\allowbreak 0\) and
+\fitdisplay{
+J_0/d\le B^2+C_0,\quad
+C_0=(1+\theta)\theta^3=98865/1048576<19/200,\quad
+\sqrt{C_0}<31/100.
+}{}
+Also \(\E(gW)/d\le\allowbreak \theta^2<\allowbreak 1/6\), so
+\(\sqrt{J_0/d}-B+\E(gW)/d\le\allowbreak 31/100+1/6=\allowbreak 143/300\), proving
+the first row. For \(b=\allowbreak 4\),
+\(\|W\|/\sqrt d\le\allowbreak \theta^2\sqrt{1+\theta}<\allowbreak 1/5\), and
+\(\E(gW)/d\le\allowbreak \theta^2<\allowbreak 1/6\); Minkowski gives the second row.
+For \(b=\allowbreak 5\), \(\E(gW)\le\allowbreak 0\), and
+\((1+\theta)\theta^5=\allowbreak 16708185/1073741824<\allowbreak 1/64\), hence
+\(\|W\|/\sqrt d<\allowbreak 1/8\), proving the third.
+For \(b\ge\allowbreak 6\), \(\|W\|/\sqrt d\le\allowbreak \theta^3\sqrt{1+\theta}<\allowbreak 2/25\),
+and \(\E(gW)/d\le\allowbreak \theta^3<\allowbreak 7/100\), proving the final row.
+For the strict \(2/25\) comparison, use
+\(\theta^3<\allowbreak 269/4000\), \(\sqrt{1+\theta}<\allowbreak 19/16\), and
+\(5111/64000<\allowbreak 2/25\). Each \(\delta\) is nonnegative and uses the same \(m\).
+
+The coupled mean and convolution loss satisfy the finite identity
+\begin{equation}\tag{Q65.4.4}\label{eq:Q65:4.4}
+D-\E W=\E K^{c+1}\one-\E K^{b+1}\one.
+\end{equation}
+For \(b=\allowbreak 3,\allowbreak c\ge\allowbreak 5\), the right side is at most \(-\delta_2\) when
+\(c=\allowbreak 5,\allowbreak 6\), and at most \(\delta_4-\delta_2\) when \(c\ge\allowbreak 7\).
+In the latter case \(\alpha\ge\allowbreak \tau+\kappa\delta_3\), and
+\(\delta_4\le\allowbreak \theta\delta_3<\allowbreak \kappa\delta_3\).
+Using \(\beta_b=\allowbreak d\), \(B\ge\allowbreak \tau\), gives
+\begin{equation}\tag{Q65.4.5}\label{eq:Q65:4.5}
+\Delta-(D-\E W)\ge3d-\delta_2.
+\end{equation}
+For \(b=\allowbreak 4,\allowbreak c\ge\allowbreak 5\), \(D-\E W\le\allowbreak 0\) at \(c=\allowbreak 5,\allowbreak 6\), and
+\(D-\E W\le\allowbreak \delta_4\) at \(c\ge\allowbreak 7\).
+The extra \(\kappa\delta_3\) in the same \(\alpha\) pays this, giving
+\begin{equation}\tag{Q65.4.6}\label{eq:Q65:4.6}
+\Delta-(D-\E W)\ge3d-2\delta_2.
+\end{equation}
+For \(b=\allowbreak 5\), \(D-\E W\le\allowbreak \delta_3+\delta_4\), so
+\begin{equation}\tag{Q65.4.7}\label{eq:Q65:4.7}
+\Delta-(D-\E W)\ge3\tau-(\delta_3+\delta_4).
+\end{equation}
+For every \(b\ge\allowbreak 6\), \(D-\E W\le\allowbreak \delta_4\), giving
+\begin{equation}\tag{Q65.4.8}\label{eq:Q65:4.8}
+\Delta-(D-\E W)\ge3\tau-\delta_4.
+\end{equation}
+For this last bound, if \(b\) is even the second term in
+\eqref{eq:Q65:4.4} is zero, and the positive part of the first is
+at most \(\delta_4\). If \(b\) is odd and its second term is
+nonnegative, discard it. In the remaining class,
+\(b+1\equiv2\pmod4\) and \(b+1\ge\allowbreak 10\), so the difference is at most
+\(\delta_5+\delta_6\le\allowbreak \theta(1+\theta)\delta_4<\allowbreak \delta_4\).
+
+\paragraph{Q65.5 The continuous low-domain estimates for \(c\ge\allowbreak 5\).}
+Take \(0<\allowbreak d\le\allowbreak 1/5\), \(v=\allowbreak \delta_2/d\in[d,\allowbreak \theta]\), and
+\(x=\allowbreak \sqrt d<\allowbreak 9/20\). In dividing \eqref{eq:Q65:4.3} by \(m\), use
+\(m\ge\allowbreak 7/10\). The bounds on \(t\) are
+\begin{equation}\tag{Q65.5.1}\label{eq:Q65:5.1}
+\begin{array}{ll}
+b=3,4:&t\le1-(5/2-2v)d,\\
+b\ge5:&t\le1-(5/2)(1-v)d.
+\end{array}
+\end{equation}
+For every \(A_0\) in \eqref{eq:Q65:4.2}, the function
+\(-8t+\lambda(x)A_0(t)\) increases on \(t\ge\allowbreak 1/2\), since
+\(\lambda(x)\ge\allowbreak 3807/256>\allowbreak 14\) and \(A_0'(t)\ge\allowbreak 2t\ge\allowbreak 1\).
+Substitute \eqref{eq:Q65:5.1}. The resulting bound also increases
+in \(v\): its explicit linear term has positive derivative, the
+upper bound on \(t\) increases with \(v\), and its derivative in
+\(t\) is positive. Thus take \(v=\allowbreak \theta\).
+For \(b=\allowbreak 3,\allowbreak 4\), put \(a=\allowbreak \theta^2\), \(k=\allowbreak 27/16\),
+\(t_0=\allowbreak 1-kx^2\). For \(b=\allowbreak 5\) and \(b\ge\allowbreak 6\), use \(k=\allowbreak 95/64\)
+and \(t_0=\allowbreak 1-kx^2\).
+
+\paragraph{Q65.5.1 The class \(b=\allowbreak 3,\allowbreak c\ge\allowbreak 5\).}
+Equations~\eqref{eq:Q65:3.9}, \eqref{eq:Q65:4.3}, and
+\eqref{eq:Q65:4.5} bound the exponent coefficient by
+\begin{equation}\tag{Q65.5.2}\label{eq:Q65:5.2}
+-24+8\theta-8t_0+286/75+(80/7)(x^4+19/200)
+ +\lambda(x)\{(t_0+\theta^2)^2+\theta^3\}.
+\end{equation}
+Write \(A_0=\allowbreak A_{00}-A_{02}x^2+k^2x^4\), where
+\fitdisplay{
+\begin{gathered}
+7/5<A_{00}=1493553/1048576<57/40,\quad
+A_{02}=32211/8192,\\
+39/10<A_{02}<63/16,\qquad k^2<57/20.
+\end{gathered}
+}{}
+Expansion with \eqref{eq:Q65:2.5} gives the coefficientwise upper bound
+\begin{equation}\tag{Q65.5.3}\label{eq:Q65:5.3}
+-2+18x-50x^2-49x^3+70x^4+36x^5-4k^2x^6.
+\end{equation}
+For the constant, its part outside \(\lambda\) satisfies
+\[
+-115/4+286/75+38/35<-119/5.
+\]
+Adding \((149/10)(57/40)=\allowbreak 8493/400\) leaves a value below \(-2\).
+The linear coefficient is less than \((63/5)(57/40)<\allowbreak 18\).
+The magnitude of the negative quadratic coefficient is at least
+\((149/10)(39/10)+4(7/5)-27/2>\allowbreak 50\); the negative cubic coefficient
+has magnitude at least \((63/5)(39/10)>\allowbreak 49\).
+The positive quartic coefficient is at most
+\((149/10)(57/20)+63/4+80/7<\allowbreak 70\), and the quintic coefficient is
+less than \((63/5)(57/20)<\allowbreak 36\). The sixth-degree term is nonpositive.
+Since \(x\le\allowbreak 9/20\), the cubic through quintic terms sum to at most
+\(x^3[-49+70(9/20)+36(9/20)^2]<\allowbreak 0\). Completing the square gives
+\begin{equation}\tag{Q65.5.4}\label{eq:Q65:5.4}
+\Phi\le-2+18x-50x^2\le-2+81/50=-19/50.
+\end{equation}
+
+\paragraph{Q65.5.2 The class \(b=\allowbreak 4,\allowbreak c\ge\allowbreak 5\).}
+Using \eqref{eq:Q65:4.6}, the exponent coefficient is at most
+\begin{equation}\tag{Q65.5.5}\label{eq:Q65:5.5}
+-24+16\theta-8t_0+44/15+(80/7)(x^2+1/5)^2
+ +\lambda(x)\{(t_0+\theta^2)^2+\theta^5\}.
+\end{equation}
+Here \(A_{02}\) is unchanged, while
+\(A_{00}=\allowbreak 45915261/33554432<\allowbreak 1369/1000\) and \(A_{00}>\allowbreak 27/20\).
+The first cross-product comparison is
+\(45915261000<\allowbreak 45936017408\).
+The constant outside \(\lambda\) is exactly \(-4643/210\), so the
+total constant is at most
+\(-4643/210+203981/10000<\allowbreak -17/10\), using
+\(46406010<\allowbreak 46430000\).
+The linear coefficient is less than \((63/5)(1369/1000)<\allowbreak 173/10\).
+The negative quadratic coefficient has magnitude greater than
+\fitdisplay{(149/10)(39/10)+4(27/20)-27/2-32/7>45.}{}
+The cubic through sixth-degree bounds are those in
+\eqref{eq:Q65:5.3}, and their sum is nonpositive. Thus
+\begin{equation}\tag{Q65.5.6}\label{eq:Q65:5.6}
+\Phi\le-17/10+(173/10)x-45x^2
+ \le-671/18000<-1/30.
+\end{equation}
+This uses the coupled alternating loss in the same \(\alpha\)
+from \eqref{eq:Q65:4.6}.
+
+\paragraph{Q65.5.3 The class \(b=\allowbreak 5,\allowbreak c\ge\allowbreak 6\).}
+Put \(k=\allowbreak 95/64\), \(t_0=\allowbreak 1-kx^2\). By \eqref{eq:Q65:4.7},
+the exponent coefficient is at most
+\begin{equation}\tag{Q65.5.7}\label{eq:Q65:5.7}
+-24\kappa-8t_0+8\theta^2(1+\theta)+1
+ +(80/7)(x^2+1/8)^2+\lambda(x)(t_0^2+1/64).
+\end{equation}
+Here \(\delta_3+\delta_4\le\allowbreak \theta(1+\theta)\delta_2\), and the
+same increasing comparison in \(v\) has already set \(v=\allowbreak \theta\).
+Using \(\theta^2(1+\theta)<\allowbreak 7/30\), the constant is at most
+\fitdisplay{-57/4-7+28/15+5/28+(149/10)(65/64)<-4.}{}
+The linear coefficient is less than \(13\), and the magnitude of the
+negative quadratic coefficient is
+\fitdisplay{(109/5)k+65/16-20/7=15037/448>33.}{}
+The negative cubic coefficient has magnitude
+\((126/5)k=\allowbreak 1197/32>\allowbreak 37\). The positive quartic coefficient is less
+than \((149/10)(9/4)+12+80/7<\allowbreak 57\); the quintic coefficient is
+\((63/5)k^2=\allowbreak 568575/20480<\allowbreak 28\), and the sixth-degree term is nonpositive.
+Therefore
+\begin{equation}\tag{Q65.5.8}\label{eq:Q65:5.8}
+\Phi\le-4+13x-33x^2+x^3(-37+57x+28x^2)
+ \le-4+169/132<-2.
+\end{equation}
+The parenthesis is negative throughout \(x\le\allowbreak 9/20\).
+
+\paragraph{Q65.5.4 The class \(b\ge\allowbreak 6,\allowbreak c>\allowbreak b\).}
+With the same \(k=\allowbreak 95/64\), \(t_0=\allowbreak 1-kx^2\),
+\eqref{eq:Q65:4.8} gives
+\begin{equation}\tag{Q65.5.9}\label{eq:Q65:5.9}
+-24\kappa-8t_0+8\theta^3+6/5+(80/7)(x^2+2/25)^2
+ +\lambda(x)\{(t_0+7/250)^2+4/625\}
+\end{equation}
+as an upper bound for \(\Phi\).
+Here \(A_{00}=\allowbreak 66449/62500\), \(1<\allowbreak A_{00}<\allowbreak 107/100\), and
+\(A_{02}=\allowbreak 24415/8000\), \(61/20<\allowbreak A_{02}<\allowbreak 31/10\).
+Using \(\theta^3<\allowbreak 7/100\), the constant is at most
+\fitdisplay{-57/4-8+14/25+6/5+64/875+(149/10)(107/100)<-4.}{}
+The linear coefficient is less than \(14\).
+The magnitude of the negative quadratic coefficient is greater than
+\fitdisplay{(149/10)(61/20)+4-95/8-64/35>35.}{}
+The negative cubic coefficient has magnitude greater than
+\((63/5)(61/20)>\allowbreak 38\), the positive quartic coefficient is less than
+\((149/10)(9/4)+4(31/10)+80/7<\allowbreak 58\), the quintic coefficient remains
+less than \(28\), and the sixth-degree term is nonpositive. Thus
+\begin{equation}\tag{Q65.5.10}\label{eq:Q65:5.10}
+\Phi\le-4+14x-35x^2+x^3(-38+58x+28x^2)
+ \le-4+196/140=-13/5<-2.
+\end{equation}
+The cubic through quintic parenthesis is negative on \(x\le\allowbreak 9/20\).
+The four classes cover every \(c\ge\allowbreak 5\), proving \eqref{eq:Q65:1.4}.
+
+\paragraph{Q65.6 The short case \((1,\allowbreak 3,\allowbreak 4)\) on \(d\le\allowbreak 1/4\).}
+Here \(\Delta=\allowbreak 3d\), \(m=\allowbreak 1-3d/2\), \(t=\allowbreak 1-5d/2\ge\allowbreak 3/8\),
+\(B=\allowbreak d\), \(W=\allowbreak K^3g\). Exactly,
+\(\E W=\allowbreak \delta_2\), \(\E(gW)=\allowbreak 0\), \(D=\allowbreak 0\), and
+\(J_0=\allowbreak d^3+\delta_4\).
+Since \(\sqrt{dJ_0}-d^2\le\allowbreak \sqrt{d\delta_4}\),
+\(\theta^3<\allowbreak (13/50)^2\), and
+\(1/16+\theta^3=\allowbreak 4245/32768<\allowbreak 13/100\), one may take
+\(\delta=\allowbreak 2/5\) in \eqref{eq:Q65:3.5}.
+The positivity proof of \(H_0\) in part Q65.3 applies on this range.
+For \(N=\allowbreak K(tg+W)\), the row and spectral bounds give
+\fitdisplay{
+|N|^2\le d(t^2+\theta^3),\quad
+\E N^2\le\theta d(t^2+\theta^3),\quad\E N=-td.
+}{}
+Thus \eqref{eq:Q65:2.4} applies with \(A_0=\allowbreak t^2+\theta^3\).
+Using \eqref{eq:Q65:2.6}, \(m\ge\allowbreak 5/8\), and discarding
+\(-8\E W/d\le\allowbreak 0\) in \eqref{eq:Q65:3.9},
+\fitdisplay{\Phi\le-24-8t+128/25+20(t^2+\theta^3).}{}
+The function \(-8t+20(t^2+\theta^3)\) increases on \([3/8,\allowbreak 1]\).
+Since \(\theta^3<\allowbreak 7/100\),
+\begin{equation}\tag{Q65.6.1}\label{eq:Q65:6.1}
+\Phi\le-24-8+128/25+20(1+7/100)=-137/25<-5.
+\end{equation}
+This proves \eqref{eq:Q65:1.5}, including \(d=\allowbreak 1/4\).
+
+\paragraph{Q65.7 Completion, decorations and reversal.}
+The common low-domain estimate satisfies
+\fitdisplay{
+e^{-d/30}\le(1+d/30)^{-1}
+=1-\frac d{30+d}\le1-d/31\le1-d/500.
+}{}
+The high domains follow from \eqref{eq:Q65:3.2} and Q5-C051.
+At \(d=\allowbreak 0\), \(g=\allowbreak 0\) while \(K\) may be nonzero; leaf integration
+makes all tree messages one. Every division by \(d\) above applies
+on \(d>\allowbreak 0\). Finally \(0\le\allowbreak  E_0,\allowbreak E_r\le\allowbreak 1\) and positivity of \(T\) give
+\fitdisplay{0\le H_D=E_rpT(E_0qf_bh_c)\le pT(qf_bh_c).}{}
+Taking eighth powers and integrating proves the decorated bound.
+Apply the result to \(-K\), reversing the terminal, connector, root
+unit arm and all equal pairs together. This gives the corresponding
+ordinary eighth moment for \(qAF^-\).
+The chosen \(qf_bh_c\) direction also has the all-positive-length
+fourth-moment bound from Q4-C134, proved in Section~\ref{loc:S31}:
+\fitdisplay{\E[p(T^LF)^4]\le1\qquad(L\ge1).}{}

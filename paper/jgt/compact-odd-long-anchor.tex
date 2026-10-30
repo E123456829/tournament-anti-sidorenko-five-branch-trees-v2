@@ -1,0 +1,133 @@
+\subsection{Odd tables with a longer outward anchor}\label{loc:S16}
+Throughout this proof $\tau=d-\delta_{2}$ and $D_j=\delta_{j}/(1-\theta^2)$.
+Let $F=E_0f_aP$, where $3\le a<b_1<c_1<\cdots<b_t<c_t$, $t\ge1$,
+and $P$ is the canonical pair product. We prove
+$\E[qF^4]\le e^{-59d/200}$ for this direction.
+The ordinary cubic in Section~\ref{q3:app:odd} additionally gives
+\[
+ \E F^3\le1-101d/768,\quad
+ \E F^2\le(1-101d/768)^{2/3},\quad
+ \E[qF^3]\le e^{-177d/800}.
+\]
+These are compatible moments of one message; the fourth estimate excludes
+an empty residual tail.
+
+\proofpart{Packet data}
+Use $R=Kv$, $I,J_1$ from Section~\ref{loc:S15} with $\Delta=2td$.
+Write $t_0=\E[gv]$, $L=\E[rv]$, $W=\E[sv]$, so
+$\E R=-t_0$, $\E[gR]=-L$, $\E[rR]=-W$.
+For $K^{j-1}g$ the nonzero contributions to these three moments are
+\[
+ \begin{array}{c|c|c}
+ &j\text{ parity}&\text{value}\\\hline
+ t_0&\text{odd}&(-1)^{(j-1)/2}\delta_{(j+1)/2}\\
+ L&\text{even}&(-1)^{(j-2)/2}\delta_{j/2+1}\\
+ W&\text{odd}&(-1)^{(j-3)/2}\delta_{(j+3)/2}.
+ \end{array}
+\]
+For one interval use factor $3/2$ in $I,J_1$; for any number of intervals
+the signed-mask bound $(1+x)/(1-x)^2\le1440/361<4$ gives factor $4$.
+For a contiguous interval starting at least at four,
+$|t_0|,|L|\le \delta_{3}$, $|W|\le \delta_{4}$.
+For any positive mask starting there,
+$t_0\le D_3$, $-D_3\le L\le D_4$, $W\ge-D_4$.
+If it starts at least at six these improve to
+$t_0\le \delta_{5}$, $L\ge-\delta_{5}$, $W\ge-\delta_{6}$ for one interval,
+and the corresponding $D_j$ bounds for multiple intervals.
+
+\proofpart{One anchor increment}
+Set
+\begin{gather*}
+ A_a=\beta_a,\quad z_a=KG_{a-2}(K)g,\quad T_a=Kz_a,\quad
+ \widehat f_a=S_a-\beta_a=1+g+r+T_a-A_a.
+\end{gather*}
+Convolution gives $0<f_a\le\widehat f_a=AS_{a-1}\le2$.
+Thus $u=\widehat f_a-1\in(-1,1]$, as required by the logarithmic bound.
+For $Y_0=3g+4r+4R$ put $X=Y_0+4T_a-12A_a/5$.
+The exact decomposition is
+\[
+ X=3g/5+12u/5+KZ,\qquad Z=8(g+z_a)/5+4v.
+\]
+The Cauchy constant is again $7$, so
+$\E[q\widehat f_a^4P^4]\le e^\Xi$, with
+$\Xi=-4\Delta-8A_a/5+\|Z\|^2+\E X+3\E X^2/8$.
+Define the exact anchor data
+\begin{gather*}
+ e_a=\E T_a=d-\beta_{a+1},\quad I_a=\|z_a\|^2,\quad J_a=\|T_a\|^2,\\
+ L_a=\E[rz_a]=d-\beta_{a+2},\quad
+ W_a=\E[sz_a]=\beta_{a+3}-\tau,\\
+ C_a=\langle z_a,v\rangle,\qquad D_a=\langle Kz_a,Kv\rangle.
+\end{gather*}
+They satisfy $\tau\le A_a\le d$, $0\le e_a\le \delta_{2}$,
+$\delta_{2}-\delta_{3}\le L_a\le \delta_{2}$, $0\le W_a\le \delta_{3}$.
+If
+\[
+ \Xi_0=-4\Delta+387d/200+6\delta_{2}+16I+6J_1-9L-12W+44t_0/5,
+\]
+the complete increment, before discarding any signed term, is
+\begin{align*}
+ \Xi-\Xi_0={}&-4A_a-28e_a/25-36A_ae_a/5+64I_a/25+6J_a-9L_a-12W_a\\
+ &+64C_a/5+12D_a+36A_ad/5+36A_at_0/5+54A_a^2/25.
+\end{align*}
+It follows by expanding the two squared norms and using
+$\E z_a=-A_a$, $\E[gz_a]=-e_a$,
+$\E[gT_a]=-L_a$, $\E[rT_a]=-W_a$.
+
+\proofpart{The six anchor budgets}
+In the following substitutions retain the sharper rational bounds
+$\delta_{4}\le7d/100$, $\delta_{5}\le3d/100$, $\delta_{6}\le d/64$, $\delta_{7}\le d/128$,
+$D_3\le d/5$, $D_4\le d/12$, $D_5\le d/24$, $D_6\le d/48$.
+For $a=3$,
+\[
+ A_a=d,\ e_a=W_a=0,\ z_a=r,\ I_a=L_a=\delta_{2},\ J_a=\delta_{3},\ C_a=L.
+\]
+For one pair use $I\le3\delta_{4}/2$, $J_1\le3\delta_{5}/2$,
+$|t_0|,|L|\le \delta_{3}$, $|W|\le \delta_{4}$, $D_a\le \delta_{5}$.
+For multiple pairs use $I\le4\delta_{4}$, $J_1\le4\delta_{5}$, $t_0\le D_3$,
+$L\le D_4$, $W\ge-D_4$, $D_a\le D_5$.
+
+For $a=4$,
+\[
+ A_a=d,\quad e_a=L_a=\delta_{2},\quad z_a=r+s,\quad
+ I_a=\delta_{2}+\delta_{3},\quad J_a=\delta_{3}+\delta_{4},\quad W_a=\delta_{3}.
+\]
+For one pair use $I\le3\delta_{5}/2$, $J_1\le3\delta_{6}/2$,
+$t_0\le \delta_{3}$, $L,W\ge-\delta_{4}$,
+$C_a\le \delta_{4}+\delta_{5}$, $D_a\le \delta_{5}+\delta_{6}$.
+For multiple pairs use $I\le4\delta_{5}$, $J_1\le4\delta_{6}$,
+$t_0\le D_3$, $L\ge-D_3$, $W\ge-D_4$,
+$|C_a|\le2\delta_{3}$, $|D_a|\le2\delta_{4}$.
+The cross bounds follow from the two factors $zG_2(z)$ and
+$z^{b-1}Q(z)$, whose product is bounded by
+$(12/5)x^{b/2}<2x^2$ when $b\ge5$.
+
+For $a\ge5$, $I_a\le \delta_{2}$, $J_a\le \delta_{3}$.
+The increment is bounded by
+\begin{align*}
+ \Xi\le{}&-8td+387d/200-11\delta_{2}/25+15\delta_{3}+16I+6J_1-9L-12W\\
+ &+44t_0/5+64C_a/5+12D_a
+ -A_a[4-36d/5-54A_a/25-36t_0/5].
+\end{align*}
+For one pair use $I\le3\delta_{6}/2$, $J_1\le3\delta_{7}/2$,
+$t_0\le \delta_{5}$, $L\ge-\delta_{5}$, $W\ge-\delta_{6}$,
+$|C_a|\le6\delta_{4}/5$, $|D_a|\le6\delta_{5}/5$.
+For multiple pairs use $I\le4\delta_{6}$, $J_1\le4\delta_{7}$ and the corresponding
+$D_5,D_6$ mean bounds, with $|C_a|\le2\delta_{4}$, $|D_a|\le2\delta_{5}$.
+The bracket is respectively at least $101/125$ and $39/50$,
+so its whole contribution is nonpositive.
+The cross estimates follow from $|G_{a-2}|\le1$ and the one-interval
+or signed-mask bound, rather than independent estimates of all summands.
+
+These substitutions into the exact increment give the six rational bounds
+\[
+ \begin{array}{c|cc}
+ &t=1&t\ge2\\\hline
+ a=3&\Xi/d\le-59/200&\Xi/d\le-2813/600\\
+ a=4&\Xi/d\le-2401/4800&\Xi/d\le-373/300\\
+ a\ge5&\Xi/d\le-71279/80000&\Xi/d\le-41243/6000.
+ \end{array}
+\]
+Extra pairs contribute unused deficit $8d$. The largest entry is
+$-59/200$, proving the fourth estimate. H\"older gives the stated lower
+moments under the original probability and $q\mu$; reversal preserves
+their compatibility for the same fully reversed message.

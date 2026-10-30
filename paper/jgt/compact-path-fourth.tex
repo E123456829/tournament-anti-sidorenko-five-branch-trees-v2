@@ -1,0 +1,109 @@
+\subsection{Oppositely weighted fourth moments of paths}\label{loc:S20}
+Throughout this proof set $c=19/32$, $s=K^2g$, $\tau=d-\delta_{2}$ and $D_j=\delta_{j}/(1-\theta^2)$. Write $\nu$ for the spectral measure of $-K^2$ at $\one$.
+For every $n\ge3$ we prove $\E[qf_n^4]\le1$ and its full reversal
+$\E[p\bar f_{n}^4]\le1$. In particular, if an actual terminal message satisfies
+$0\le F\le1$, positivity gives $T^LF\le \bar f_{L}$ and hence
+$\E[p(T^LF)^4]\le1$ for $L\ge3$.
+
+\proofpart{Improved finite geometric sums}
+For all $n\ge3$ and $0\le x\le\theta$,
+\begin{equation}\label{eq:compact-G-loss}
+ |G_n(i\sqrt x)|^2\le1-7x/15,\qquad
+ \|S_n-1\|_2^2\le d-7\delta_{2}/15.
+\end{equation}
+For odd $n$ the squared modulus is $(1+x^n)/(1+x)$ and its loss divided
+by $x$ is at least $1-x\ge19/32$.
+For $n\equiv0\pmod4$ it is $(1-x^{n/2})^2/(1+x)$, with loss at least
+$x/(1+x)$. For $n\equiv2\pmod4$, $n\ge6$, the loss divided by $x$
+is at least $(1-2x^2-x^5)/(1+x)$; comparison at $\theta$ gives
+$8-7\theta-30\theta^2-15\theta^5=1311885/33554432>0$.
+Integrate at the vector $g$ for the second assertion.
+
+\proofpart{The three-edge path}
+Put $z=f_3-1=g+r+s-d$. The exact moments and row bound give
+\[
+ \E[qz]=-3d+\delta_{2},\quad \E z^2=d-\delta_{2}+\delta_{3}+3d^2,\quad
+ -1\le z\le g+\sqrt{45d/32}-d.
+\]
+On $d\le1/6$ the final correction is increasing and less than $8/25$.
+Thus $q(6+4z+z^2)\le M(q)$, where
+$M(q)=q^3-166q^2/25+8139q/625$.
+On $[0,2]$, $M''\le-32/25$, $M(3/2)=39843/5000$ and
+$M'(3/2)=-369/2500$, so its quadratic tangent gives $M<8$.
+Expansion of $(1+z)^4$ yields
+\[
+ \E[qf_3^4]\le1-4d-4\delta_{2}+8\delta_{3}+24d^2
+ \le1-4d+93d^2/4\le1-d/8.
+\]
+For the other range put $\mu=1-2d$ and $v=f_3-\mu$.
+Since $\|S_2\|_2^2=1-d+\delta_{2}\le1$, the row bound gives
+$|S_3-1|\le1$, so $v\le1+d$ and
+$\E v^2=d-\delta_{2}+\delta_{3}-d^2$.
+The inequality $v^3\le(1+d)v^2$ gives
+\[
+ \E f_3^3\le(1-2d)^3+(4-5d)(d-\delta_{2}+\delta_{3}-d^2)
+ \le1-43d/24.
+\]
+Also $\sqrt{qf_3}\le1-d/2+\sqrt{45d/32}/2<113/96$,
+so $qf_3<7/5$. For $d\ge1/6$ it follows that
+$\E[qf_3^4]\le(7/5)(1-43d/24)\le707/720$.
+
+\proofpart{Paths of length at least four, $d\le4/19$}
+For fixed $n\ge4$, let $a=\beta_n$, $b=\beta_{n-1}$,
+$\alpha=\beta_{n+1}$, $\eta=\beta_{n+2}$ and
+$Y=S_n-a-bp\ge f_n>0$. Set $\mu=\E Y$ and $w=Y-\mu$.
+All four coefficients lie in $[\tau,d]$, so
+\begin{gather*}
+ 1-3d\le\mu\le m=1-3cd,\quad
+ \E[gw]=\eta-bd\ge h_0=cd-d^2,\\
+ \E w^2\le d-7\delta_{2}/15-3\tau^2+d^3,\qquad
+ Y\le p+\sqrt d-cd-cdp.
+\end{gather*}
+Equation~\eqref{eq:compact-pathscalar} bounds the fourth coefficient by $7-10d$.
+Thus
+\[
+ \E[qY^4]\le\mu^4-4h_0\mu^3+(7-10d)\E w^2.
+\]
+The negative first-order term must be kept with the fourth power.
+The function $u^4-4h_0u^3$ increases for $\mu\le u\le m$, since
+$u-3h_0\ge1-153d/32+3d^2\ge365/2888>0$.
+With $a_1=7/15+3c^2$ this gives the polynomial upper bound
+\[
+ R(d)=m^3(1-7cd+4d^2)+(7-10d)(d-a_1d^2+d^3).
+\]
+Its expansion is
+\begin{gather*}
+ R-1=-5d/2+C_2d^2+C_3d^3+C_4d^4-108c^3d^5,\\
+ C_2=69c^2-139/15<16,\quad
+ C_3=35/3+30c^2-36c-216c^3=-544915/12288<-44,\\
+ C_4=108c^2+189c^4-10<52.
+\end{gather*}
+Hence $(R-1)/d\le-5/2+16d-(628/19)d^2$.
+This increases on $[0,4/19]$ to $-8183/13718<-1/2$,
+proving $\E[qf_n^4]\le1-d/2$.
+
+\proofpart{The remaining large parameters}
+For $n=4$, $R_4=r+s+K^3g-dg$ satisfies
+$\|R_4\|_\infty^2\le d+77d^2/32$.
+The positive quadratic
+$(1/6+2d)^2-(d+77d^2/32)=1/36-d/3+51d^2/32$
+gives $qf_4\le169/144$.
+For the ordinary cubic use $\alpha=d-\delta_{2}$, $\beta=d$, $Y=S_4-\beta$.
+The spectral integral
+\[
+ C=\|S_4-1\|_2^2
+ =\int x(1-x^2)^2/(1+x)\,d\nu\le\alpha
+\]
+and $|S_4-1|\le1$ give
+\[
+ \E f_4^3\le(1-\alpha-\beta)^3+(4-2\alpha-3\beta)(\alpha-\alpha^2)
+ \le1-4d/3.
+\]
+For the last step write $\delta=\alpha-\beta=-\delta_{2}\le0$; the extra
+terms are $\delta(1-3\beta)-3(1-\beta)\delta^2+\delta^3\le0$.
+Consequently $\E[qf_4^4]\le6929/8208$ for $d\ge4/19$.
+For every $k\ge4$ the convolution gives $\mu_k\le1-19d/8$:
+check $k=4,5$ from their exact formulas, and for $k\ge6$ retain
+$f_0,f_1,f_2,f_3$ to obtain $1-\mu_k\ge\tau(5-3d)\ge4\tau$.
+Thus $f_n\le2\mu_{n-1}\le1$ whenever $n\ge5$ and $d\ge4/19$.
+These ranges complete the path theorem and its stated propagation corollary.

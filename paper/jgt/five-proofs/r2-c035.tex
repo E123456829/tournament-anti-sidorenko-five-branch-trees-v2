@@ -1,0 +1,719 @@
+\subsection{The terminal pairs $(2,b)$ for every $b\ge4$ at a unit root}\label{proof:R2-C035}
+For every $b\ge4$ and $L\ge1$, the fixed actual direction
+\[
+H_D=E_rpT^L(E_th_2f_b),\qquad U_D=T^2H_D
+\]
+at a unit internal root and an outer path of exactly two edges satisfies $I_q(U_D)^3\le e^{-d/500}$. Here $E_t,E_r$ are the genuine equal-pair products at the indicated original vertices. The direction is the same on every analytic subdomain below. For $L\ge2$, the ordinary fourth-moment estimate is $\E[pT^L(h_2f_b)]^4\le e^{-15d/4}$ on the full domain $0\le d\le1/3$.
+
+\paragraph{R35.2 Original finite notation}
+Use the original-kernel notation and bounds of
+\eqref{eq:odd-common:inputs} and Lemma~\ref{lem:odd-common:spectral}:
+\[
+ B=-K,\quad u=-g,\quad X=-B^2,\quad
+ \tau=d-\delta_2,\quad\theta=13/32,\quad\kappa=19/32.
+\]
+Put $S_n^-=\one+G_n(B)u$. Its positive convolution is
+\eqref{eq:Q188:conv}. The original $X$-spectral measure at $u$
+is denoted by $\nu_{\rm sp}$, and its coordinate formulas are
+\eqref{eq:odd-common:coordinates}. In particular a constant-vector
+component retains its cross term with the same spectral mean.
+The genuine message means obey $\E f_n=\E\bar f_n\le1$;
+the other two arm messages can have larger means, since
+$\E h_2=\E W_2=1+d$.
+For the undecorated terminal write
+$F_b=h_2f_b$, $H_{b,L}=pT^LF_b$ and
+$I_q(Y)=\E[q^{-1/3}|Y|^{8/3}]$.
+
+\paragraph{R35.3 Signed-mean payments and bare paths}
+The common signed-mean bound gives
+\[
+ \E e^{4BV}\le e^{4\E BV+(17/4)\|V\|^2}.\tag{R35.A9}
+\]
+Corollary~\ref{cor:unit-two-step:bare-paths} gives
+\[
+ E(p\bar f_2)^4\le e^{d/4},\tag{R35.A10}
+\]
+\[
+ E(p\bar f_n)^4\le1\quad(n\ge3),\qquad pq\le1.\tag{R35.A11}
+\]
+The $n=3$ proof retains $\|G_2u\|^2=d+\delta_2$.
+
+\paragraph{R35.4 Positive square transport and signed constant-vector terms}
+
+Suppose the actual F satisfies \(0\le F\le (m+R/2)^2,\allowbreak  m>0\) and \(2m+R\ge 0.\) Set
+
+\[
+\begin{gathered}
+k=1/m,\quad V=ER^2,\quad D_i=EB^iR,\quad a_1=-D_1=EKR,\quad a=ka_1,\\
+\quad\delta=kD_0+k^2V/2,\quad\epsilon=\delta-a.
+\end{gathered}\tag{R35.A12}
+\]
+
+Use the S row of Table~\ref{tab:unit-two-step:parameters}, with
+$w=1$, $r=1$, $s_0=m^2$, $s_1=m$, $s_2=1/4$ and $\lambda=1$.
+The common finite continuation gives
+
+\[
+\begin{gathered}
+0\le T^LF/m^2\le Y_L\\
+=\bar f_L+kB^LR+\delta \bar f_{L-1}-a \bar f_{L-2}\\
++k\sum_{j=2}^{L-1}D_j\bar f_{L-1-j}\quad(L\ge2).
+\end{gathered}\tag{R35.A13}
+\]
+
+This upper bound is nonnegative as the result of the positive-square comparison, despite its signed expansion.
+
+For L1, \(TF/m^2\le q+kBR+\delta.\) The sum with p is 2+delta+kBR, yielding
+
+\[
+\log E(pTF)^4\le8\log m+4\epsilon+(17/4)k^2V. \tag{R35.A14}
+\]
+
+Suppose $R=[a_f(X)-b_f(X)B]u$ and $\rho=\int x b_f$. For $L=2$,
+
+\[
+p+Y_2=2+\epsilon+BV_2,\qquad V_2=\delta\one+u+kBR,
+\]
+\[
+EBV_2=-d-k\rho,\quad
+\|V_2\|^2=d+2k\rho+k^2\|BR\|^2+\delta^2-2\delta a.
+\]
+
+Indeed $\langle u,BR\rangle=\rho$ and $\E BR=-a_1$. The last contribution is exactly \(\epsilon^2-a^2,\allowbreak \) not \(\delta^2\) alone. Dropping only -\(a^2\) gives
+
+\[
+\begin{gathered}
+\log E(pT^2F)^4\le8\log m+d/4+4\epsilon+(9/2)k\rho\\
++(17/4)k^2\|BR\|^2+(17/4)\epsilon^2.
+\end{gathered}\tag{R35.A15}
+\]
+
+This is the canonical R calculation, without reversing the terminal pair.
+
+For L3, direct expansion gives
+
+\[
+p+Y_3=2+\epsilon-d-k\rho+BV_3,\qquad
+V_3=\epsilon\one+(1+\delta)u+Bu+kB^2R,
+\]
+\[
+EBV_3=-(1+\delta)d+kD_3.
+\]
+
+Therefore
+
+\[
+\begin{gathered}
+\log E(pT^3F)^4\le8\log m-8d+4\epsilon-4\delta d\\
++4k(D_3-\rho)+(17/4)\|V_3\|^2.
+\end{gathered}\tag{R35.A16}
+\]
+
+The nonconstant part of V3 has mean -d-k rho, so its cross term with epsilon1 is -2epsilon(d+k rho), not zero.
+
+For the first connector, Corollary~\ref{cor:unit-two-step:first-square}
+with $Z=R$ gives directly
+\[
+ pTF\le\{m+D_0/2-KR/2+V/(4m)\}^2.\tag{R35.A17}
+\]
+The square base is nonnegative.
+
+\paragraph{R35.5 Actual low-domain envelopes and whole-frequency bounds}
+
+\paragraph{R35.5.1 \(b=4\)}
+
+Let \(m=1-d\) and \(R=K^2g+K^3g-dg.\) Actual expansion gives \(h_{2}+f_{4}=2m+R\) and
+
+\[
+R=(d+X-XB)u,\quad a_f=d+x,\quad b_f=x,
+\]
+\[
+\begin{gathered}
+D_0=\delta_2,\quad a_1=d^2+\delta_2,\quad\rho=\delta_3,\quad\\
+V=d^3+2d\delta_2+\delta_3+\delta_4,\quad\\
+\|BR\|^2=d^2\delta_2+2d\delta_3+\delta_4+\delta_5.
+\end{gathered}\tag{R35.A18}
+\]
+
+For $d\le1/4$, $\theta^2(1+\theta)=7605/32768<1/4$ gives $\sqrt{a_f^2+xb_f^2}\le u_0=1/2+d$ and $ku_0\le1$. The padded $z_0=\theta+11d/16$ is valid; $b_f\le\theta$ is also available. Exactly,
+
+\[
+\begin{gathered}
+\epsilon=-kd^2+k^2V/2,\\
+|\epsilon|\le d/6,\\
+\delta\le25d/24.
+\end{gathered}\tag{R35.A19}
+\]
+
+For epsilon's upper bound,
+\(m^2/6+dm-u0^2/2=(1-4d)(1+8d)/24\ge 0.\)
+For its lower bound, \(V\ge 3d^3\); put \(z=d/m\le 1/3\) and use
+\(\epsilon/d\ge -z+3z^2/2\ge -1/6.\)
+Finally \(\delta/d\le \theta/m+u0^2/(2m^2),\allowbreak \) increasing to \(25/24.\)
+
+\paragraph{R35.5.2 Every finite $b\ge5$, $d\le1/5$}
+Use Lemma~\ref{lem:unit-retained-pair} with $n=b$, $\sigma=9/4$,
+and $m=1-9d/8$. Denote its retained coefficients by $c_i$, put
+$C=c_1+c_2+c_3$, $D=c_2+c_3$, $E=c_3$, and write $R=U$.
+Its first actual arm sum gives
+\[
+ h_2+f_b\le2m+R,\qquad h_2f_b\le(m+R/2)^2.
+\]
+At $b=5$ the coordinates of $R=(a_f-b_fB)u$ are
+$a_f=5d/4+\delta_2+x-x^2$, $b_f=d/4+\delta_2+x$.
+For $b\ge6$, write $N=b-2$ and $G_N=a_N+B b_N$. Then
+\[
+ \begin{gathered}
+ a_f=C+x(a_N-E),\qquad b_f=D+xb_N,\\
+ a_f-(1-x)b_f\ge c_1+c_2x\ge\tau.
+ \end{gathered}\tag{R35.A21}
+\]
+These are exactly the retained coordinates of R33.8.1--R33.8.3,
+whose continuous norm proof keeps the same global $d,\delta_2,E$.
+It therefore gives
+\[
+ \sqrt{a_f^2+xb_f^2}\le u_0=3/8+9d/5,\qquad
+ b_f\le z_0=\theta+13d/16.\tag{R35.A23}
+\]
+The finite propagation uses the seed $+kU$; the signed moments below
+are computed for $R=U$, before normalization.
+
+The exact signed spectral moments are
+
+\[
+\begin{gathered}
+V=\int(a_f^2+xb_f^2),\quad D_0=\int b_f,\quad a_1=\int a_f,\quad\\
+\rho=\int xb_f,\quad D_3=\int xa_f,
+\end{gathered}
+\]
+\[
+\begin{gathered}
+D_{4j+1}=-\int x^{2j}a_f,\quad D_{4j+2}=-\int x^{2j+1}b_f,\quad\\
+D_{4j+3}=\int x^{2j+1}a_f,\quad D_{4j+4}=\int x^{2j+2}b_f.
+\end{gathered}\tag{R35.A24}
+\]
+
+From (R35.A21), \(a1\ge \kappa\) D0+tau d. The finite difference
+\(a_f-b_f=c1-Ex+x(a_N-b_N)\) gives
+
+\[
+a_1-D_0\le d^2+\theta^3d,\qquad D_3-\rho\le d\delta_2+\delta_5. \tag{R35.A25}
+\]
+
+The first possible positive end term is \(x^3,\allowbreak \) or \(x^4\) after the extra x. At b5 the first integrated difference is exactly \(d^2-d3.\)
+
+The complete parameter bounds are
+
+\[
+\begin{gathered}
+|\epsilon|\le3d/5,\quad-\epsilon<7d/20,\quad\delta\le6d/5,\quad\\
+ku_0\le147/155<1,\quad k\rho<3d/10,\quad k^2\theta u_0^2<3/8.
+\end{gathered}\tag{R35.A26}
+\]
+
+For delta, the target difference after multiplication by \(2m^2\) is
+\(463/320-(955/128)d+(2601/1600)d^2,\allowbreak \) decreasing on [0, \(1/5\)], with endpoint \(1577/80000.\)
+For epsilon use \(a1\ge \kappa\) D0+tau d. The difference is
+\(1867/2560-(64539/20480)d-(118503/51200)d^2,\allowbreak \) decreasing with endpoint \(16519/2560000.\)
+The other exact endpoint bounds are
+\(k(d+\theta^3)\le 43753/126976<7/20,\allowbreak \)
+k theta \(z0\le 1183/3968<3/10,\allowbreak \) and
+\(k^2\theta u0^2\le 280917/768800<3/8.\)
+All belong to the same actual R.
+
+\paragraph{R35.5.3 L3 frequency inequality and its certificate}
+
+In both low domains,
+
+\[
+(1+\delta-kxa_f)^2+x(1+kxb_f)^2\le(1+\delta)^2+x. \tag{R35.A27}
+\]
+
+Use \(a_f^2+x b_f^2\le u0 a_f+x\) z0 \(b_f\) and \(a_f\ge (1-x)b_f.\) Since 2-kx \(u0>0,\allowbreak \) the unshifted difference is at most
+
+\[
+kx b_f[-2+4x+kx\{u_0(1-x)+xz_0\}].
+\]
+
+The quantity x[u0(1-x)+xz0] increases with x, since its derivative is \ensuremath{\ge}\(u0(1-2x)>0,\allowbreak \) and the parameters increase with d. At the upper corners, the negative-bracket margins are
+
+\[
+323/49152>0\quad(b4,\ z_0=\theta+11d/16),\qquad
+79745/3174400>0\quad(b\ge5).
+\]
+
+For $b=4$, the sharper input $b_f=x\le\theta$ gives margin $1091/24576$. With the padded input $z_0=\theta+11d/16$, the valid margin is $323/49152$. Both are positive. The scalar shift contributes $-2\delta kx a_f\le0$.
+
+The actual constant coordinate consequently gives
+
+\[
+\|V_3\|^2\le(1+\delta)^2d+\delta_2+\epsilon^2-2\epsilon(d+k\rho). \tag{R35.A28}
+\]
+
+
+
+\paragraph{R35.6 All low-domain short connectors}\label{part:R35.6}
+
+For b4, \(d\le 1/4,\allowbreak \) (R35.A14) and exact epsilon yield
+
+\[
+\log EH_{4,1}^4/d\le-8-8d+\frac{25}{4}\left(\frac{1/2+d}{1-d}\right)^2.\tag{R35.A29}
+\]
+
+Here \(8\log(1-d)\le -8d-4d^2\) and \(k\ge 1.\) The right side is convex, with endpoint values -\(103/16,\allowbreak -15/4.\) For $b\ge5$, the complete-host $L=1$ conclusion is Proposition~\ref{prop:unit-retained:whole-L1}.
+
+For canonical L2, \(b\ge 5,\allowbreak \) use \(\lVert BR\rVert ^2\le \theta\) V in (R35.A15), keeping the negative quadratic logarithm term:
+
+\[
+\begin{gathered}
+\log EH_{b,2}^4/d\\
+\le-127/20-(1413/400)d+(9/2)\theta z_0/m\\
++(17/4)\theta(u_0/m)^2.
+\end{gathered}\tag{R35.A31}
+\]
+
+This is convex. At zero the two positive terms sum to less than one, giving below -\(107/20.\) At \(d1/5,\allowbreak \) (R35.A26) gives below -\(16451/4000<-15/4.\) The coefficient -\(1413/400\) is exactly -\(81/16+(17/4)(9/25),\allowbreak \) retaining the signed constant-vector budget.
+
+For b4, L2,
+
+\[
+\|BR\|^2/d\le\theta/16+\theta^2/2+\theta^3+\theta^4
+=212017/1048576<13/64.
+\]
+
+Use \(k\le 4/3,\allowbreak  \epsilon^2/d\le 1/144\) and \(\rho/d\le \theta^2<1/6\) in (R35.A15):
+
+\[
+\log EH_{4,2}^4/d
+\le-85/12+1+221/144+17/576=-2603/576<-15/4. \tag{R35.A32}
+\]
+
+
+
+For b4, L3, the scalar shift plus the mean in (R35.A16) simplifies exactly to
+-\(2d-kd^2+kV/2.\) By (R35.A19), k \(\rho<2d/9\) and (R35.A28),
+
+\[
+\|V_3\|^2/d\le(1+25d/24)^2+\theta+(47/108)d
+\le58163/27648<17/8.
+\]
+
+The coefficient \(47/108=1/36+11/27\) pays \(\epsilon^2\) and its possible positive cross term. Also \(2kV/d\le 3/2,\allowbreak \) so
+
+\[
+\log EH_{4,3}^4/d\le-16+3/2+(17/4)(17/8)=-175/32. \tag{R35.A33}
+\]
+
+For \(b\ge 5,\allowbreak \) L3, if \(\epsilon\ge 0\) its cross term in (R35.A28) is nonpositive; if \(\epsilon<0\) it is <\(91d^2/100.\) Hence
+
+\[
+\|V_3\|^2/d\le1+\theta+(367/100)d+(36/25)d^2<9/4.
+\]
+
+Also \(4k(D3-\rho)/d\le 4k(\theta d+\theta^4)<3/5,\allowbreak \) since
+4k \(\theta<17/8,\allowbreak \) 4k \(\theta^4<3/20\) and \(d\le 1/5.\) Therefore (R35.A16) is at most
+
+\[
+[-9-8+12/5+3/5+(17/4)(9/4)]d=-71d/16. \tag{R35.A34}
+\]
+
+This completes the low-domain $L=2,3$ ordinary-fourth rows with $\E H^4\le e^{-15d/4}$, together with the $b=4,L=1$ row. For $b\ge5,L=1$, Proposition~\ref{prop:unit-retained:whole-L1} provides the required whole-domain outlet.
+
+\paragraph{R35.7 Every finite \(L\ge 4,\allowbreak \) including the real constant coordinate}
+
+Rewrite (R35.A13) using the positive convolution \eqref{eq:Q188:conv}:
+
+\[
+\begin{gathered}
+Z_L^*=S_L^-+\delta S_{L-1}^- -aS_{L-2}^-+kB^LR\\
+=\nu_0+Q_L(B)u,\quad\nu_0=1+\epsilon.
+\end{gathered}
+\]
+
+Its difference from \(Y_L\) is exactly \(\sum_{j=3}^L\gamma_j\bar f_{L-j}\), where
+
+\[
+\begin{gathered}
+\gamma_3=d-kD_2,\quad\gamma_4=d+\delta d-kD_3,\quad\\
+\gamma_j=\beta_j+\delta\beta_{j-1}-a\beta_{j-2}-kD_{j-1}\ (j\ge5).
+\end{gathered}\tag{R35.A35}
+\]
+
+Taking means gives \(\alpha_L:=nu0-EZ_L^*= \gamma_{L+1}\) for \(L\ge 4.\) This uses \(ES_n^-=1- \beta_{n+1}\), not a mean-zero assumption.
+
+The exact finite polynomials are
+
+\[
+\begin{gathered}
+P_n=G_n+kB^n(a_f-b_fB),\qquad\\
+Q_n=P_n+\epsilon G_{n-2}+\delta B^{n-2}\quad(n\ge3).
+\end{gathered}\tag{R35.A36}
+\]
+
+For every such n, \(\lVert P_n\rVert \le 1.\) At n3 the coordinates are
+\(1-x-kx^2b_f,\allowbreak \) 1-kx \(a_f,\allowbreak \) nonnegative and no larger than the G3 coordinates, because \(ku0\le 1\) and \(kz0\le 37/48\) for b4 or \(91/124\) for \(b\ge 5\); \(1-x-x^2>0.\)
+At n4,
+|\(P4|\le (1-x)(1+x/2)+x^2\le 1.\)
+At n5,
+|\(G_{5}|\le 1-x/2+x^2/2\) and \(x^{5/2}\)\ensuremath{\le}\(13x^2/20,\allowbreak \) giving
+|\(P5|\le 1-x/2+23x^2/20\le 1\) since \(\theta<10/23.\)
+The squared comparison for G5 has exact difference \(x^2(1+2x-3x^2)/4\ge 0.\)
+For every \(n\ge 6,\allowbreak \)
+
+\[
+|P_n|\le(1+x^3)/\sqrt{1+x}+x^3\le1.
+\]
+
+For \(x>0\) the last condition is equivalent to \(x(1+\sqrt{1+x})\le 1,\allowbreak \) which follows from its bound (\(13/32)(11/5)=143/160.\) The zero frequency is direct.
+
+Using (R35.A19),(R35.A26), \(\sqrt{\theta}<13/20\) and \(\lVert G_{2}\rVert <6/5\) gives
+
+\[
+\begin{gathered}
+\|Q_n\|\le1+d\quad(b4),\qquad\\
+\|Q_n\|\le1+7d/5\quad(b\ge5),\qquad n\ge3.
+\end{gathered}\tag{R35.A37}
+\]
+
+At n3 the added costs are at most 27d/32 and 69d/50. At n4 use (\(6/5)|\epsilon|+\theta\) delta; at \(n\ge 5\) use |epsilon|+\(\theta^{3/2}\)delta. Both are smaller than the stated respective budgets. These bounds cover the finite-length tails.
+
+Let \(h=1/2-6d/5>0.\) Every \(\gamma_j\ge h\) d.
+\(D2\le 0\) gives \(gamma3\ge d.\) Since \(ka1\le ku0 d\le d\) and \(D3\le \theta\) a1, \(gamma4\ge \kappa\) d.
+For \(j\ge 5,\allowbreak \) each positive \(D_{j-1}\) is \ensuremath{\le}\(\theta^2z0\) d. The first positive even class is D4; the first relevant positive odd class is \(D7\le \theta^3u0 d\le \theta^2z0\) d, and later powers decrease. The needed theta \(u0\le z0\) holds throughout both domains.
+
+For b4 the lower coefficient is kappa-ku0 d-k \(\theta^2z0.\) Subtract h and multiply by m; the result is
+
+\[
+875/32768+(40369/81920)d-(11/5)d^2,
+\]
+
+a concave quadratic with positive endpoints \(875/32768\) and \(4063/327680.\)
+For \(b\ge 5\) use \(a\le d.\) The corresponding difference is
+
+\[
+875/32768-(3241/81920)d-(9/40)d^2,
+\]
+
+decreasing with positive endpoint \(40101/4096000.\) Therefore \(\gamma_j\ge hd\) for every \(j\ge 3\) and \(\alpha_L\ge hd.\)
+
+Retain the last two actual terms \(j=L,\allowbreak \) L-1:
+
+\[
+0\le T^LF/m^2\le Z=Z_L^*-hd(1+q).
+\]
+
+The finite recurrence \(Q_L=nu0+ BQ_{L-1}\) gives
+
+\[
+\begin{gathered}
+Z=Cq-hd+N_0,\\
+C=\nu_0-hd,\\
+N_0=BQ_{L-1}u,\\
+EN_0=-\alpha_L\le-hd.
+\end{gathered}\tag{R35.A38}
+\]
+
+This displays the real constant C. Once \(C>0,\allowbreak \) weighted AM--GM between actual nonnegative p, Z/C yields
+
+\[
+\begin{gathered}
+H_{b,L}\le(c_*+N/2)^2,\quad\\
+c_*=m\sqrt C-\frac{mhd}{2\sqrt C},\quad N=\frac m{\sqrt C}N_0.
+\end{gathered}\tag{R35.A39}
+\]
+
+The base equals \(m(\sqrt{C}p+Z/\sqrt{C})/2\ge 0.\) Writing \(N=BV_*,\allowbreak \) (R35.A9) gives fourth exponent
+
+\[
+8(c_*-1)+4EN+(17/4)\|V_*\|^2. \tag{R35.A40}
+\]
+
+For b4,
+\(1-2d/3+6d^2/5\le C\le 1\) and \(C-m^2\ge 4d/3+d^2/5>0\); in particular \(C>0.\)
+By (R35.A37), \(\lVert V_*\rVert ^2\le (1-d^2)^2d/C\le 17d/16.\) The full comparison is
+
+\[
+(17/16)(1-2d/3+6d^2/5)-(1-d^2)^2
+\ge1/16-(17/24)d+(257/80)d^2>0.
+\]
+
+Here \(d^4\le d^2/16\) and the discriminant is negative because \(289/576<257/320.\)
+Also \(m/\sqrt{C}\ge 3/4\) and \(h\ge 1/5,\allowbreak \) so \(EN\le -3d/20.\)
+Using m \(\sqrt{C}\le (m^2+C)/2,\allowbreak \)
+
+\[
+c_*\le1-(65/48)d+(31/20)d^2\le1-29d/30.
+\]
+
+Thus (R35.A40) is at most
+[-\(116/15-3/5+289/64\)]\(d=-733d/192<-15d/4.\)
+
+For \(b\ge 5,\allowbreak \)
+
+\[
+C_{\rm low}=1-11d/10+6d^2/5\le C\le1+d/10+6d^2/5\le267/250,
+\]
+\[
+C-m^2\ge(23/20)d-(21/320)d^2>0.
+\]
+
+Again \(C>0.\) Expanding,
+
+\[
+m^2(1+7d/5)^2=(1+11d/40-63d^2/40)^2
+\le1+11d/20-(4919/1600)d^2.
+\]
+
+The discarded tail is \(d^3\)[-\(693/800+(3969/1600)d\)]\ensuremath{\le}0. Subtracting this upper bound from (\(5/4)C_low\) leaves
+\(1/4-(77/40)d+(7319/1600)d^2>0,\allowbreak \) whose discriminant comparison is \(5929<7319.\)
+Thus \(\lVert V_*\rVert ^2\le 5d/4.\) Moreover \(m/\sqrt{C}\ge 149/200,\allowbreak \) since
+
+\[
+961/1600-(149/200)^2(267/250)=78583/10000000>0.
+\]
+
+With \(h\ge 13/50,\allowbreak  EN\le -(149/200)(13/50)d<-19d/100.\)
+Using \(\sqrt{C}\le 1+(C-1)/2\) and dropping only a nonpositive cubic,
+
+\[
+c_*\le1-(1009/800)d+(3963/4000)d^2\le1-21d/20.
+\]
+
+The endpoint coefficient is \(10631/10000>21/20.\) Hence (R35.A40) is at most
+[-\(42/5-19/25+85/16\)]\(d=-1539d/400<-15d/4.\)
+Every finite low-domain \(L\ge 4\) is now paid.
+
+\paragraph{R35.8 Actual high-domain terminal means and every \(L\ge 2\)}
+
+\paragraph{R35.8.1 \(b=4,\allowbreak \) including the remaining L1 domain}
+
+Original adjunction and finite convolution give
+
+\[
+t_4:=E(h_2f_4)=1-3d+\delta_2-d^2+\delta_3
+\le1-(2487/1024)d-d^2.
+\]
+
+For \(d\ge 1/4\) this upper bound decreases, with value \(1353/4096<1/3\) at \(1/4.\) Thus \(TF4\le 2/3.\) Positivity gives \(H_{4,\allowbreak  2}\)\ensuremath{\le}(\(2/3)pq,\allowbreak  H_{4,\allowbreak  3}\)\ensuremath{\le}(\(2/3)p\bar f_2\) and \(H_{4,\allowbreak  L}\)\ensuremath{\le}(\(2/3) p\bar f_{L-1}\) for \(L\ge 4.\)
+Equations (R35.A10)-(R35.A11), \(4\log(2/3)\le -4/3\) and \(d\le 1/3\) prove all these ordinary-fourth bounds \ensuremath{\le}exp(-15d/4). In the only cost-bearing row L3, -\(4/3+d/4\le -15d/4\) is exactly \(d\le 1/3.\)
+
+For b4, L1 use (R35.A17) with exact \(D0=\delta_2\) and \(EZ=d^2+\delta_2.\) Applying (R35.A9) to -R cancels the linear d2 terms and gives
+
+\[
+\log EH_{4,1}^4\le-8d-4d^2+\{2/(1-d)+17/4\}V. \tag{R35.A41}
+\]
+
+The bound \(V/d\le d^2+2\theta d+\theta^2+\theta^3<5/8\) holds throughout \(d\le 1/3:\) its left side increases, and at \(1/3\) the positive cross difference is
+\(35*32768-7605*144=51760.\)
+For \(d\ge 1/4\) the coefficient in (R35.A41) is \ensuremath{\le}\(29/4,\allowbreak \) giving
+\(\log(\E H_{4,\allowbreak 1}^4)/d\le-9+145/32=-143/32<-15/4\).
+Combined with \mbox{\hyperref[part:R35.6]{part R35.6}} this proves the b4, L1 full-domain row.
+
+\paragraph{R35.8.2 Every finite \(b\ge 5\) on \(1/5\le d\le 1/3\)}
+
+Let \(t_b=E(h_{2} f_b),\allowbreak \) an actual nonnegative mean. Adjunction gives
+\(t_b=E\)[p \(f_{b+1}\)]=2\(\mu_{b+1}\)-\(\mu_{b+2}\).
+Multiply the original convolution by \(h_{2}=1-g-Kg\) to obtain
+
+\[
+\begin{gathered}
+t_b=1-\beta_{b+1}-\beta_{b+2}+\beta_{b+3}\\
+-\sum_{j=3}^b\beta_jt_{b-j}.
+\end{gathered}\tag{R35.A42}
+\]
+
+In particular actual \(t0=1+d\) is retained. Direct finite expansion gives
+
+\[
+\begin{aligned}
+t_0&=1+d,&t_1&=1,&t_2&=1-d-\delta_2,\\
+t_3&=1-2d-d^2,\\
+t_4&=1-3d+\delta_2-d^2+\delta_3,\\
+t_5&=1-4d+2(1+d)\delta_2,\\
+t_6&=1-5d+2d^2+d^3+(3+2d)\delta_2-\delta_3-\delta_4,\\
+t_7&=1-6d+5d^2+2d^3+4\delta_2-\delta_2^2-2(1+d)\delta_3,\\
+t_8&=1-7d+9d^2+2d^3+(5-4d-3d^2)\delta_2-\delta_2^2
+\\ &\quad -(3+2d)\delta_3+\delta_4+\delta_5.
+\end{aligned} \tag{R35.A43}
+\]
+
+For explicit finite-end checks, b7 has base 1-d+d2-d3 and loss
+
+\[
+d(t_4+t_3)+\tau(t_2+t_1+t_0)+\delta_3t_0
+=5d-5d^2-2d^3-3\delta_2+\delta_2^2+\delta_3+2d\delta_3.
+\]
+
+At b8 the base is 1-d+d2-d3+d4+d5 and loss is
+
+\[
+\begin{gathered}
+d(t_5+t_4)+\tau(t_3+t_2+t_1+t_0)+\delta_3(t_1+t_0)\\
+=6d-9d^2-2d^3+(4d+3d^2-4)\delta_2+\delta_2^2+2\delta_3+2d\delta_3.
+\end{gathered}
+\]
+
+The four short cases have the following upper polynomials for \(t_b-(1-d)/2:\)
+
+
+\begingroup\small
+\setlength{\tabcolsep}{3pt}
+\setlength{\LTleft}{0pt}\setlength{\LTright}{\fill}
+\begin{longtable}{@{}p{0.1200\linewidth}p{0.8000\linewidth}@{}}
+\caption{The terminal pairs $(2,b)$ for every $b\ge4$ at a unit root: parameter values.}\label{tab:parameters:r2-c035:2}\\
+\toprule
+Entry & Upper polynomial \\
+\midrule\endfirsthead
+\toprule
+Entry & Upper polynomial \\
+\midrule\endhead
+\bottomrule\endfoot
+5 & \(1/2-(43/16)d+(13/16)d^2\); Complete continuous payment: decreasing; left value -\(1/200\). \\
+\addlinespace[2pt]
+6 & \(1/2-(105/32)d+(45/16)d^2+d^3\); Complete continuous payment: derivative \ensuremath{\le}-\(103/96\); left value -\(143/4000\). \\
+\addlinespace[2pt]
+7 & \(1/2-(31/8)d+5d^2+2d^3\); Complete continuous payment: convex; endpoints -\(59/1000,\allowbreak -35/216\). \\
+\addlinespace[2pt]
+8 & \(1/2-(143/32)d+(59/8)d^2+(25/32)d^3\); Complete continuous payment: convex; endpoints -\(37/400,\allowbreak -61/432\). \\
+\end{longtable}
+\endgroup
+
+
+For b8, first group \(d4+d5\le (\theta+\theta^2)d3\le (3+2d)d3,\allowbreak \) then use the positive coefficient \(5-4d-3d^2\) with \(\delta_2\le \theta\) d. At b7 the omitted terms are explicitly nonpositive.
+
+For every finite \(b\ge 9,\allowbreak \) the seven actual coefficients of t0,..., t6 in (R35.A42) have indices at least three. The base is \ensuremath{\le}1-tau+d3, from the finite beta increments. Their exact sum is
+
+\[
+\sum_{j=0}^6t_j=7-14d+d^3+(5+4d)\delta_2-\delta_4.
+\]
+
+Thus
+
+\[
+t_b\le1-\tau[8-14d+d^3+(5+4d)\delta_2-\delta_4]+\delta_3. \tag{R35.A44}
+\]
+
+Let P be the amount subtracted from one. For the original global \(v=\delta_2/d\) in [d, theta],
+
+\[
+P\ge d[(1-v)(A+Cvd)-\theta v],\qquad
+A=8-14d+d^3,\quad C=5+4d-\theta^2.
+\]
+
+The bracket decreases in v because its derivative is
+-\(A+Cd(1-2v)-\theta<0,\allowbreak \) using \(A\ge 10/3\) and \(Cd\le 19/9.\)
+Take the legitimate global endpoint \(v=\theta,\allowbreak \) and discard only nonnegative \(d^3,\allowbreak  d^4\) terms. Then
+
+\[
+\begin{gathered}
+P-(1+d)/2\ge-1/2+(4183/1024)d-(7493391/1048576)d^2\\
+\ge-1/2+4d-(29/4)d^2>0.
+\end{gathered}\tag{R35.A45}
+\]
+
+The last concave polynomial has endpoints \(1/100,\allowbreak  1/36.\) Hence every finite \(b\ge 5\) satisfies
+
+\[
+t_b\le(1-d)/2,\qquad 0\le TF_b\le1-d. \tag{R35.A46}
+\]
+
+All finite b cases are exhausted.
+
+For \(L\ge 2,\allowbreak \) positivity gives \(H_{b,\allowbreak  L}\)\ensuremath{\le}(1-d)\(p\bar f_{L-1}\). Use \(pq\le 1\) at L2, (R35.A10) at L3, and (R35.A11) at \(L\ge 4.\) Since \(4\log(1-d)\le -4d,\allowbreak \) the exponents are respectively -4d,-15d/4,-4d. Combined with parts R35.6-7 and b4 high,
+
+\[
+EH_{b,L}^4\le e^{-15d/4}\qquad(b\ge4,\ L\ge2,\ 0\le d\le1/3). \tag{R35.A47}
+\]
+
+\paragraph{R35.9 Every $b\ge5$, $L=1$, on the complete host domain}
+Apply Proposition~\ref{prop:unit-retained:whole-L1} to the actual
+$H_{b,1}=pT(h_2f_b)$. It proves
+\[
+ I_q(T^2H_{b,1})^3\le e^{-d/500}\qquad(0\le d\le1/3).
+\]
+The same $\sigma=2$ retained vector and the same canonical direction
+are used throughout this interval. Its $b=5$ and $b\ge6$ data are
+the two integer cases in Lemma~\ref{lem:unit-retained:whole-data}.
+
+\paragraph{R35.11 Exact C094 bridge, curvature and logarithm payment}
+
+\paragraph{R35.11.1 The original outer output}
+Use Corollary~\ref{cor:unit-two-step:output} and
+paragraph~\ref{part:R29.11}. On the original measure, every real
+$Y$ satisfies
+\[
+ I_q(T^2Y)^3\le B_2(E|Y|^4)^2,\tag{R35.A61}
+\]
+\[
+ B_2=[1-2d^2+(8-2d)\delta_2](1+1024\delta_2/855)^8
+       \le e^{c_2d-5d^2},\qquad c_2=24427/3420.\tag{R35.A62}
+\]
+
+\paragraph{R35.11.2 Completion of the ordinary-fourth rows}
+Every row with $\E H^4\le e^{-15d/4}$ yields
+\[
+ \log I_q(T^2H)^3\le(c_2-15/2)d-5d^2
+ =-(1223/3420)d-5d^2\le-d/500.\tag{R35.A63}
+\]
+Equation (R35.A47) covers all $L\ge2$ and $b\ge4$.
+Paragraph R35.8.1 and the low-domain bound in R35.6 cover $b=4,L=1$.
+For $b\ge5,L=1$ use Proposition~\ref{prop:unit-retained:whole-L1}
+on its complete host domain. Hence
+\begin{equation}\tag{R35.A68}
+ I_q(T^2[pT^L(h_2f_b)])^3\le e^{-d/500}\le1
+ \qquad(b\ge4,\ L\ge1).
+\end{equation}
+
+\paragraph{R35.12 Original-tree realization, correlated KL, full reversal and all maps}
+
+The direction is fixed before (mu, K):
+the terminal b-arm points outward;
+the two-arm has first edge toward the terminal and second toward its leaf;
+the internal root's unit arm points outward;
+all L inner edges point from terminal to internal root;
+both outer edges point from internal root to receiving root.
+Every genuine equal pair uses \(f_l,\allowbreak  h_l\) at its original vertex.
+Hence the exact original output is
+
+\[
+H_D=E_rpT^L(E_t h_2f_b),\qquad U_D=T^2H_D.
+\]
+
+No analytic case changes this direction, including L2.
+Since \(0<E_t,\allowbreak  E_r\le 1\) on the positive support and T is positive,
+
+\[
+0<H_D\le pT^L(h_2f_b),\qquad
+0<U_D\le T^2[pT^L(h_2f_b)].
+\]
+
+The positive \(I_q\) weight makes (R35.A68) apply to the actual decorated output.
+The multiplier is the specified product of equal-pair factors.
+Without decorations the component has exactly L+b+5 original edges:
+terminal 2+b, inner L, root side 1, outer 2.
+Each equal pair adds its actual 2l edges and original interior vertices.
+All subdivision vertices and independently specified core lengths remain in the integral.
+The local outer length is two; other independently specified outer lengths retain their original values.
+
+The outer kernel remains
+
+\[
+T^2(x,y)=E_z[(1-K(x,z))(1-K(z,y))].
+\]
+
+Adjoints and Holder use the original mu, \(T*=A.\)
+Paragraph~\ref{part:R29.11} controls the inverse weight through the
+same-kernel centered-row bound as $q$ becomes small.
+Constants are independent of min mu; q may be arbitrarily small across finite models.
+
+At \(d=0,\allowbreak  K1=0\) on the positive support but K need not be zero.
+\(A1=T1=1,\allowbreak \) so leaf integration gives every actual original tree message one.
+Then \(H_D=U_D=q=1\) and the claimed result is equality.
+All divisions by d were confined to \(d>0.\)
+Scalar zero-variance cases and frequency \(x=0\) were also included.
+
+Complete reversal is substitution \(K\mapsto\) -K in the same fixed structure.
+The terminal becomes W2 \(\bar f_b\); inner \(T^L\) becomes \(A^L\); unit p becomes q;
+all equal pairs become \(\bar f_l W_l\); outer \(T^2\) becomes \(A^2\); \(I_q\) becomes \(I_p.\)
+The same loss follows because d is unchanged.
+Swapping only one weight or one connector while retaining other orientations is not justified.

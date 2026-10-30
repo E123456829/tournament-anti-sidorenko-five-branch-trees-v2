@@ -1,0 +1,354 @@
+\subsection{Ordinary eighth moments for odd terminals with an inward arm of length at least two}\label{proof:Q5-C093}
+
+\paragraph{Q93.0 Structures and directions.}
+After maximal equal pairing, let the distinct residual arms form
+\begin{equation}\tag{Q93.0.1}\label{eq:Q93:0.1}
+a<b_1<c_1<\cdots<b_k<c_k,\qquad a\ge2,\quad k\ge1.
+\end{equation}
+Every edge of the \(a\)-arm points toward the terminal. Each \(b_i\)-arm
+has only its first edge inward and all remaining edges outward;
+each \(c_i\)-arm points outward. All connector edges point from the
+terminal to the receiving root, which has an outward unit arm. With
+genuine equal-pair products \(E_t,E_r\), set
+\begin{equation}\tag{Q93.0.2}\label{eq:Q93:0.2}
+F=\bar f_a\prod_{i=1}^kh_{b_i}f_{c_i},\qquad
+X_D=T^L(E_tF),\qquad H_D=E_rpX_D.
+\end{equation}
+These directions depend only on the arm list. For every \(L\ge1\),
+all finite lengths and gaps, and all genuine decorations, we prove
+\begin{equation}\tag{Q93.0.3}\label{eq:Q93:0.3}
+\boxed{\E H_D^8\le Q(d)\le e^{-d}\le1-3d/4,}
+\end{equation}
+The three ranges and bounds are listed in Table~\ref{tab:oc:q93-ranges}.
+\begin{table}[htbp]
+\centering\small
+\setlength{\tabcolsep}{5pt}
+\caption{The three ordinary eighth-moment ranges in \eqref{eq:Q93:0.3}.}\label{tab:oc:q93-ranges}
+\begin{tabular}{lcl}
+\toprule
+First short arm & Pair count & $Q(d)$\\
+\midrule
+$b_1=3,\ a=2$ & $k\ge3$ & $e^{-[10+(128/5)(k-3)]d}$\\
+$b_1=4,\ a\in\{2,3\}$ & $k\ge2$ & $e^{-[17+(128/5)(k-2)]d}$\\
+$b_1\ge5,\ 2\le a<b_1$ & $k\ge1$ & $e^{-[1+(128/5)(k-1)]d}$\\
+\bottomrule
+\end{tabular}
+\end{table}
+
+
+\paragraph{Q93.1 The finite calculus.}
+Use the fixed finite probability space and operators of
+Appendix~\ref{proof:Q5-C064}, with
+\begin{equation}\tag{Q93.1.1}\label{eq:Q93:1.1}
+\begin{gathered}
+Jv=(\E v)\one,\quad A=J+K,\quad T=J-K=A^*,\quad
+g=K\one,\quad p=1+g,\quad q=1-g,\\
+f_n=A^n\one,\quad\bar f_n=T^n\one,\quad h_n=Tf_{n-1},\quad
+\delta_i=\|K^i\one\|_2^2,\quad d=\delta_1,\\
+\theta=13/32,\quad\kappa=19/32,\quad\tau=d-\delta_2.
+\end{gathered}
+\end{equation}
+The finite skew and path identities give
+\begin{equation}\tag{Q93.1.2}\label{eq:Q93:1.2}
+\begin{gathered}
+0\le d\le1/3,\quad d^2\le\delta_2\le\theta d,\quad
+\delta_{i+1}\le\theta\delta_i,\quad\|K\|^2\le\theta,\quad
+|Kv(x)|\le\|v\|_2,\\
+0\le f_n,\bar f_n,h_n\le2,\qquad
+\mu_n:=\E f_n=\E\bar f_n\in[0,1],\\
+\E K^{2i}\one=(-1)^i\delta_i,\qquad\E K^{2i+1}\one=0.
+\end{gathered}
+\end{equation}
+After zero-mass atoms are removed, \(p(x),q(x)\ge\mu(x)>0\).
+Each tree message is positive: conditional on the root label, the
+all-equal labelling has positive mass and all diagonal edge factors
+are one. At \(d=0\), \(g=0\) and leaf integration gives every message
+equal to one. We henceforth take \(d>0\) where division is used.
+For every genuine equal pair,
+\begin{equation}\tag{Q93.1.3}\label{eq:Q93:1.3}
+f_\ell+h_\ell=2\mu_{\ell-1},\qquad
+0\le f_\ell h_\ell\le\mu_{\ell-1}^2\le1.
+\end{equation}
+With \(\beta_1=\beta_2=0\),
+\begin{equation}\tag{Q93.1.4}\label{eq:Q93:1.4}
+\begin{gathered}
+\beta_n=\sum_{i=1}^{\lfloor(n-1)/2\rfloor}(-1)^{i-1}\delta_i
+\quad(n\ge3),\qquad G_n(z)=\sum_{i=0}^{n-1}z^i,\\
+S_n=\sum_{i=0}^nK^i\one=f_n+\sum_{i=3}^n\beta_i f_{n-i},
+\quad\kappa d\le\tau\le\beta_n\le d\quad(n\ge3),\\
+\beta_3=\beta_4=d,\quad
+\|G_n(K)\|\le1\quad(n=0,1\text{ or }n\ge3),\quad
+\|G_2(K)\|\le\sqrt{1+\theta}<6/5.
+\end{gathered}
+\end{equation}
+Under reversal put \(K'=-K\), \(g'=-g\), and
+\(S'_n=\sum_{i=0}^nK'^i\one\); the same convolution uses \(\bar f_n\).
+Appendix~\ref{proof:Q5-C081} proves, for every real \(V\),
+\begin{equation}\tag{Q93.1.5}\label{eq:Q93:1.5}
+\boxed{\E e^{8K'V}\le e^{8\E(K'V)+17\|V\|_2^2}.}
+\end{equation}
+
+\paragraph{Q93.2.1 Pair losses at every arm length.}
+Let \(R_{st}=\sum_{r=s+1}^tK^r\one\), \(s<t\).
+The finite difference formula gives, for \(s=3\),
+\begin{equation}\tag{Q93.2.1}\label{eq:Q93:2.1}
+h_3+f_t\le2+R_{3t}-(2d-\delta_2)
+\le2+R_{3t}-(2-\theta)d.
+\end{equation}
+For \(s=4\), retain the negative convolution term:
+\fitdisplay{
+f_t-f_4\le R_{4t}+\delta_2(1+p)-\tau f_2,\qquad f_2\ge p^2/2.
+}{}
+Completing the square in \(p\ge0\), with \(\delta_2\le d/2\) and
+\(\tau\ge d/2\), gives
+\(\delta_2(1+p)-\tau f_2\le\delta_2+\delta_2^2/(2\tau)\le3d/4\).
+Since \(h_4+f_4=2-4d\), this yields
+\(h_4+f_t\le2+R_{4t}-13d/4\), including \(t=5\).
+For \(s\ge5\), the all-index mean proof in
+Appendix~\ref{proof:Q5-C090} gives \(\mu_n\le1-83d/32\) for \(n\ge4\).
+It treats \(n=4,5,6,7\) explicitly and retains \(f_0,\ldots,f_5\) and
+three higher losses in the convolution for \(n\ge8\), giving loss at
+least \(95d/36\). The positive part of the finite difference is at
+most \(4\delta_2/(1-\theta^2)\le1664d/855\), so the pair-sum loss is
+\fitdisplay{
+83d/16-1664d/855=(16/5+113/2736)d>16d/5.
+}{}
+The sums are nonnegative. AM--GM and \(1+u\le e^u\) give
+\begin{equation}\tag{Q93.2.2}\label{eq:Q93:2.2}
+h_sf_t\le
+\begin{cases}
+e^{R_{3t}-(51/32)d},&s=3,\\
+e^{R_{4t}-(13/4)d},&s=4,\\
+e^{R_{st}-(16/5)d},&s\ge5.
+\end{cases}
+\end{equation}
+Later pairs of minimum at least four may use the weaker loss \(16d/5\).
+Thus
+\begin{equation}\tag{Q93.2.3}\label{eq:Q93:2.3}
+\begin{gathered}
+F\le\bar f_ae^{R-\Gamma},\qquad
+R=\sum_{i=1}^k\sum_{r=b_i+1}^{c_i}K^r\one,\\
+\Gamma/d=\begin{cases}
+51/32+(16/5)(k-1),&b_1=3,\\
+13/4+(16/5)(k-1),&b_1=4,\\
+16k/5,&b_1\ge5.
+\end{cases}
+\end{gathered}
+\end{equation}
+
+\paragraph{Q93.2.2 Finite masks and the exponential remainder.}
+The intervals are disjoint, so \(R=K^{b_1}P(K)g\), where \(P\) is a
+finite zero-one polynomial with arbitrary gaps. The finite mask proof
+in \eqref{eq:L90:masknorm} gives, at \(z=i\sqrt x\), \(0\le x\le\theta\),
+\begin{equation}\tag{Q93.2.4}\label{eq:Q93:2.4}
+|P(z)|^2\le\frac{1+x}{(1-x^2)^2}
+\le C_*:=\frac{32768}{16245}<\frac{100}{49}.
+\end{equation}
+The spectral and row bounds respectively imply
+\begin{equation}\tag{Q93.2.5}\label{eq:Q93:2.5}
+\|R\|^2\le\theta^{b_1}C_*d,\qquad
+|R|^2\le\theta^{b_1-1}C_*d.
+\end{equation}
+Since \(b_1\ge3\) and \(\theta^2C_*=5408/16245<1/3\),
+\(|R|^2<d/3\le1/9\). The factorial bound
+\(n!\ge2\cdot3^{n-2}\) bounds the exponential remainder by \(9R^2/16\)
+for \(|R|\le1/3\). Hence throughout the domain
+\begin{equation}\tag{Q93.2.6}\label{eq:Q93:2.6}
+e^R\le1+R+3R^2/5.
+\end{equation}
+Use the scalar norm constants
+\begin{equation}\tag{Q93.2.7}\label{eq:Q93:2.7}
+\|R\|\le\varrho\sqrt d,\qquad
+\varrho=3/8\ (b_1=3),\quad1/4\ (b_1=4),\quad3/20\ (b_1\ge5).
+\end{equation}
+Indeed,
+\[
+\begin{gathered}
+\theta^3C_*=2197/16245<9/64,\\
+\theta^4C_*=28561/519840<1/16,\\
+\theta^5C_*=371293/16634880<9/400.
+\end{gathered}
+\]
+
+\paragraph{Q93.2.3 Mean and centered part of the inward arm.}
+Put \(\mu=\E\bar f_a=\mu_a\in[0,1]\), \(v=\bar f_a-\mu\),
+\(\Pi=I-J\), and \(C_0=\Pi K\Pi\). The centered path identity is
+\begin{equation}\tag{Q93.2.8}\label{eq:Q93:2.8}
+\bar f_a-\mu_a=-\sum_{i=0}^{a-1}\mu_{a-1-i}(-C_0)^ig.
+\end{equation}
+Every coefficient is in \([0,1]\). Applying the same finite mask
+spectral bound to the skew compression gives
+\(\sigma(\bar f_a)\le\sqrt{C_*}\sqrt d<(3/2)\sqrt d\).
+For \(b_1=3,4\), only \(a=2,3\) are possible. Direct expansion gives
+\(\sigma(\bar f_2)^2=d+\delta_2-d^2\le36d/25\).
+For \(\bar f_3\), its centered expression
+\(-(g+K^3\one)+(Kg+d)\) has orthogonal summands, so
+\(\sigma(\bar f_3)^2=d-\delta_2+\delta_3-d^2\le d\).
+Consequently
+\begin{equation}\tag{Q93.2.9}\label{eq:Q93:2.9}
+\sigma(\bar f_a)\le s\sqrt d,\qquad
+s=6/5\ (b_1=3,4),\quad s=3/2\ (b_1\ge5).
+\end{equation}
+
+\paragraph{Q93.3 Positive parts of all finite propagation means.}
+Let \(D_i=\E K'^iR\) and write
+\(R=\sum_{r\ge b_1+1}c_rK^r\one\), a finite sum with \(c_r\in\{0,1\}\).
+A term with odd \(i+r\) has zero mean; otherwise its contribution is
+\((-1)^{i+(i+r)/2}c_r\delta_{(i+r)/2}\).
+Positive terms can therefore occur precisely when \(r\equiv i\pmod4\).
+For \(i=1,2,3,4\), their first possible moments are
+\begin{table}[htbp]
+\centering\small
+\setlength{\tabcolsep}{5pt}
+\caption{First possible positive moments in $D_i=\E B^iR$. Adding four to either index raises the moment index by two.}\label{tab:oc:q93-positive-starts}
+\begin{tabular}{ccccc}
+\toprule
+$b_1$ & $i=1$ & $i=2$ & $i=3$ & $i=4$\\
+\midrule
+$3$ & $\delta_3$ & $\delta_4$ & $\delta_5$ & $\delta_4$\\
+$4$ & $\delta_3$ & $\delta_4$ & $\delta_5$ & $\delta_6$\\
+$\ge5$ & $\delta_5$ & $\delta_4$ & $\delta_5$ & $\delta_6$\\
+\bottomrule
+\end{tabular}
+\end{table}
+Adding four to either index increases the moment index by two.
+Bounding both finite tails by their geometric upper sums yields
+\begin{equation}\tag{Q93.3.1}\label{eq:Q93:3.1}
+\sum_{i\ge1}(D_i)_+\le
+\begin{cases}
+\dfrac{\theta^2}{(1-\theta)^2}d=\dfrac{169}{361}d<d/2,&b_1=3,\\[1mm]
+\dfrac{\theta^2(1+\theta+\theta^2+\theta^3)}{(1-\theta^2)^2}d
+=\dfrac{201617}{519840}d<2d/5,&b_1=4,\\[1mm]
+\dfrac{\theta^3}{(1-\theta)^2}d=\dfrac{2197}{11552}d<d/5,&b_1\ge5.
+\end{cases}
+\end{equation}
+The bound applies to each finite initial sum used by Duhamel.
+The same sign calculation gives
+\begin{table}[htbp]
+\centering\small
+\setlength{\tabcolsep}{5pt}
+\caption{Upper bounds for individual propagation means.}\label{tab:oc:q93-individual-means}
+\begin{tabular}{cccc}
+\toprule
+$b_1$ & $D_0$ & $D_1$ & $D_i,\ i\ge2$\\
+\midrule
+$3$ & $d/2$ & $d/5$ & $d/12$\\
+$4$ & $d/12$ & $d/5$ & $d/12$\\
+$\ge5$ & $d/12$ & $d/30$ & $d/12$\\
+\bottomrule
+\end{tabular}
+\end{table}
+For \(D_0\), positive terms start at \(\delta_2\) or \(\delta_4\);
+for \(D_1\), at \(\delta_3\) or \(\delta_5\); for \(i\ge2\), their
+first possible moment index is at least four. The needed bounds are
+\fitdisplay{
+\begin{gathered}
+\theta/(1-\theta^2)=416/855<1/2,\quad
+\theta^2/(1-\theta^2)=169/855<1/5,\\
+\theta^3/(1-\theta^2)=2197/27360<1/12,\quad
+\theta^4/(1-\theta^2)=28561/875520<1/30.
+\end{gathered}
+}{}
+Deleting an absent positive term only improves these upper bounds.
+
+\paragraph{Q93.4 The common inward-arm propagation lemma.}
+Apply Lemma~\ref{lem:oc:anchored-eighth} with $B=K'=-K$,
+$\mu=\E\bar f_a$, and the values of $s,\varrho$ in
+\eqref{eq:Q93:2.7} and \eqref{eq:Q93:2.9}. Its first-step constant
+$c_0=2s\varrho+(12/5)\varrho^2$ equals $99/80$, $3/4$, and
+$63/125$ in the three rows. The individual mean bounds in
+Table~\ref{tab:oc:q93-individual-means} therefore give
+\begin{equation}\tag{Q93.4.2}\label{eq:Q93:4.2}
+ \delta_+\le
+ \begin{cases}7d/4,&b_1=3,\\5d/6,&b_1=4,\\3d/5,&b_1\ge5.
+ \end{cases}
+\end{equation}
+For the last row, $(D_0)_++63d/125\le881d/1500<3d/5$.
+The lemma retains the coefficient $\mu$ of every perturbation
+and gives the exact expressions \eqref{eq:Q93:4.3}--\eqref{eq:Q93:4.6}.
+
+\paragraph{Q93.5 Every nonunit connector.}
+For \(L\ge2\), \(n\ge4\), so \(G_{n-1}\) is a contraction.
+Using \(\mu\le1\) and \(\sqrt\theta<13/20\),
+\begin{equation}\tag{Q93.5.1}\label{eq:Q93:5.1}
+\|V\|\le(1+\sqrt\theta\,\varrho)\sqrt d.
+\end{equation}
+The three coefficients are smaller than \(5/4,7/6,11/10\);
+the middle one is \(1+13/80=93/80<7/6\).
+Equations \eqref{eq:Q93:3.1}, \eqref{eq:Q93:4.2} and
+\eqref{eq:Q93:4.5} give the complete cost table
+\begin{table}[htbp]
+\centering\small
+\setlength{\tabcolsep}{5pt}
+\caption{Nonunit connector costs in \eqref{eq:Q93:4.6}. The last column excludes $-8\Gamma$. All entries are upper bounds.}\label{tab:oc:q93-nonunit-cost}
+\begin{tabular}{ccccc}
+\toprule
+$b_1$ & $c_L/d$ & $\E N/d$ & $\|V\|^2/d$ & Cost divided by $d$\\
+\midrule
+$3$ & $9/2-\kappa$ & $-\kappa+1/12$ & $25/16$ & $2579/48$\\
+$4$ & $37/15-\kappa$ & $-\kappa+1/12$ & $49/36$ & $6127/180$\\
+$\ge5$ & $8/5-\kappa$ & $-\kappa+1/12$ & $121/100$ & $119/30+2057/100$\\
+\bottomrule
+\end{tabular}
+\end{table}
+The first row consists of costs \(163d/6\) and \(425d/16\), totaling
+\(2579d/48\); the second, \(109d/10\) and \(833d/36\), totaling
+\(6127d/180\); the third, \(119d/30\) and \(2057d/100\).
+At the minimum allowed pair counts, the net losses are
+\begin{equation}\tag{Q93.5.2}\label{eq:Q93:5.2}
+\begin{aligned}
+b_1=3, k=3:&\quad1279d/20-2579d/48=2453d/240>10d,\\
+b_1=4, k=2:&\quad258d/5-6127d/180=3161d/180>17d,\\
+b_1\ge5, k=1:&\quad128d/5-119d/30-2057d/100=319d/300>d.
+\end{aligned}
+\end{equation}
+Each additional pair adds \(16d/5\) to \(\Gamma\) without increasing
+the mask costs, and therefore adds \(128d/5\) to the eighth-moment loss.
+
+\paragraph{Q93.6 Unit connectors and the \(G_2\) exception.}
+For \(L=1\), retain the exact value \(\bar f_0=1\). Then
+\begin{equation}\tag{Q93.6.1}\label{eq:Q93:6.1}
+c_1+\E N\le\delta+\mu D_1-\beta_{a+1}-\beta_{a+2},\qquad
+\|V\|\le(\|G_a\|+\varrho)\sqrt d.
+\end{equation}
+For $a=2$, the two beta coefficients in \eqref{eq:Q93:6.1}
+are both $d$; for $a\ge3$, use $\beta\ge\kappa d$.
+The sole $G_2$ exception is $a=2$, when $\|G_2\|\le6/5$;
+all $G_a$ with $a\ge3$ are contractions. These observations and
+the individual means in Table~\ref{tab:oc:q93-individual-means}
+give Table~\ref{tab:oc:q93-unit-cost}. Its mean bounds are
+$(7/4+1/5-2)d=-d/20$,
+$(5/6+1/5-2\kappa)d=-37d/240$,
+$(3/5+1/30-2)d=-41d/30$, and
+$(3/5+1/30-2\kappa)d=-133d/240$, respectively.
+The first two costs are
+$-2/5+17(63/40)^2=66833/1600$ and
+$-37/30+17(29/20)^2=41411/1200$.
+In the third row the loss is
+$128/5+164/15-17(27/20)^2=6661/1200>5$.
+\begin{table}[htbp]
+\centering\small
+\setlength{\tabcolsep}{5pt}
+\caption{Unit connectors. The mean, norm and cost columns are upper bounds. The final column is the lower loss at the minimum permitted pair count; each additional pair adds $128d/5$.}\label{tab:oc:q93-unit-cost}
+\begin{tabular}{lccccc}
+\toprule
+Range & $k_{\min}$ & $(c_1+\E N)/d$ & $\|V\|/\sqrt d$ & Cost$/d$ & Loss$/d$\\
+\midrule
+$b_1=3,\ a=2$ & $3$ & $-1/20$ & $63/40$ & $66833/1600$ & $35487/1600$\\
+$b_1=4,\ a\in\{2,3\}$ & $2$ & $-37/240$ & $29/20$ & $41411/1200$ & $20509/1200$\\
+$b_1\ge5,\ a=2$ & $1$ & $-41/30$ & $27/20$ & $-164/15+17(27/20)^2$ & $6661/1200$\\
+$b_1\ge5,\ a\ge3$ & $1$ & $-133/240$ & $23/20$ & $-133/30+17(23/20)^2$ & $9061/1200$\\
+\bottomrule
+\end{tabular}
+\end{table}
+For $a\ge3$ the last-row loss is
+\begin{equation}\tag{Q93.6.2}\label{eq:Q93:6.2}
+[128/5+133/30-17(23/20)^2]d=9061d/1200>d.
+\end{equation}
+Every further pair adds the same \(128d/5\) loss in all these cases.
+Together with the nonunit calculation, this proves all three rows
+of \eqref{eq:Q93:0.3}. Positive comparison restores \(E_t,E_r\).
+Finally \(e^{-d}\le1/(1+d)\le1-3d/4\) because \(d\le1/3\).
+Replacing \(K\) by \(-K\) reverses the receiving unit arm, inward arm,
+all pairs, connector and decorations together while preserving the
+measure and every \(\delta_i\).
